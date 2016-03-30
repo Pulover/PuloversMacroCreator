@@ -1,4 +1,4 @@
-﻿# Main Window
+# Main Window
 
 **Tip**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to AutoHotkey online help.
 
@@ -65,7 +65,7 @@ To have other Macros active during Timer check the *Always Active* option or rig
 
 **Shutdown options**: Selects an optional action to execute when Playback finishes.
 
-**Context Sensitive Hotkeys**: Makes hotkeys work depending on the type of window that is active or exists. For more information see [AutoHotkey documentation](http://ahkscript.org/docs).
+**Context Sensitive Hotkeys**: Makes hotkeys and hotstrings work depending on the type of window that is active or exists, or if an expression evaluates to true. For more information see [Playback](Playback.html#context-sensitive-hotkeys) and AutoHotkey documentation: [#IfWinActive](http://autohotkey.com/docs/commands/_ifwinactive) / [#If](http://autohotkey.com/docs/commands/_if).
 
 **Windows**: If checked adds the Windows Key as modifier to the Play Hotkey.
 

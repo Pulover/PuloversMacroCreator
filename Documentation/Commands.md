@@ -1,6 +1,10 @@
-﻿# Commands
+# Commands
 
 **Tip**: Right-click on a Button in the Main Window or anywhere on a Command Window to display links to Related.
+
+### Find a Command
+
+This window allows you to easily search for a command or function. Simply type a keyword and the results will be displayed in the box below. Double-Click an item or press Enter to open the target window. You can also use the search bar in the main window toolbar.
 
 ### Common_Fields
 
@@ -9,11 +13,9 @@ The following fields appear on some of the Command Windows below and will behave
 * **Repeat**: How many times to execute action. This field accepts [Variables & Expressions](Variables.html).
 * **Delay**: Time to wait before the next command line. This field accepts [Variables & Expressions](Variables.html).
 * **Control**: Selects the target control to send the command. Use the Get button to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (window handle), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter. This field accepts [Variables & Expressions](Variables.html).
-* **Window**: Title/Class/Process/ID/ProcessID of target window for control command. The DropdowndList defines which information will be taken from a windown when using the *Get* button. **Extra Parameters**: The first parameter is WinTitle, you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. This field accepts [Variables & Expressions](Variables.html).
-
-### Find a Command
-
-This window allows you to easily search for a command or function. Simply type a keyword and the results will be displayed in the box below. Double-Click an item or press Enter to open the target window. You can also use the search bar in the main window toolbar.
+* **Window**: Select what informations to retrieve from a target window (Title/Class/Process/ID/ProcessID). Check one or more items in the list and use the *Get* button to copy the available information from the window.  
+**Extra Parameters**: The first parameter is WinTitle, you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. This field accepts [Variables & Expressions](Variables.html).  
+**Note**: The options checked only determine what the *Get* tool will retrieve, it does not affect the command.
 
 ## Table of Contents
 
