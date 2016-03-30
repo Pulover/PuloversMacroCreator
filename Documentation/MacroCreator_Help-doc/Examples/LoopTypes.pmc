@@ -1,4 +1,49 @@
-﻿[PMC Code v5.0.0]|F1||1|Window,2,Fast,0,1|1|LoopTypes
+﻿[PMC Code v5.0.0]|F7||1|Window,2,Fast,0,1|1|Loop
+Groups=Start:1
+1|[CommentBlock]|Example #1|0|1|CommentBlock|||||
+2|[LoopStart]|LoopStart|3|0|Loop|||||
+3|[MsgBox]|Iteration number is %A_Index%.|1|0|MsgBox|0||||
+4|[Pause]||1|100|Sleep|||||
+5|[LoopEnd]|LoopEnd|1|0|Loop|||||
+6|[CommentBlock]|Example #2|0|1|CommentBlock|||||
+7|[LoopStart]|LoopStart|0|0|Loop|||||
+8|Compare Variables|A_Index > 25|1|0|If_Statement|||||
+9|Break||1|0|Break|||||
+10|[End If]|EndIf|1|0|If_Statement|||||
+11|Compare Variables|A_Index < 20|1|0|If_Statement|||||
+12|Continue||1|0|Continue|||||
+13|[End If]|EndIf|1|0|If_Statement|||||
+14|[MsgBox]|a_index = %a_index%|1|0|MsgBox|0||||
+15|[LoopEnd]|LoopEnd|1|0|Loop|||||
+
+[PMC Code v5.0.0]|F6||1|Window,2,Fast,0,1|1|LoopFiles
+Groups=Start:1
+1|[LoopStart]|%A_ProgramFiles%\*.txt`, R|1|0|LoopFilePattern|||||
+2|[MsgBox]|Filename = %A_LoopFileFullPath%`n`nContinue?|1|0|MsgBox|4||||
+3|If Message Box|No|1|0|If_Statement|4||||
+4|Break||1|0|Break|||||
+5|[End If]|EndIf|1|0|If_Statement|||||
+6|[LoopEnd]|LoopEnd|1|0|Loop|||||
+
+[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|LoopParse
+Groups=Start:1
+1|[Assign Variable]|Colors := red`,green`,blue|1|0|Variable|||||
+2|[LoopStart]|Colors`, ``,`, |1|0|LoopParse|||||
+3|[MsgBox]|Color number %A_Index% is %A_LoopField%.|1|0|MsgBox|0||||
+4|[LoopEnd]|LoopEnd|1|0|Loop|||||
+
+[PMC Code v5.0.0]|F7||1|Window,2,Fast,0,1|1|LoopRead
+Groups=Start:1
+1|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
+2|[Assign Variable]|Folders := Line 1`nLine 2`nLine 3`nLine 4|1|0|Variable|||||
+3|FileAppend|%Folders%, %A_Temp%\LoopTest.txt|1|10|FileAppend|||||
+4|[LoopStart]|%A_Temp%\LoopTest.txt|1|0|LoopRead|||||
+5|[MsgBox]|%A_LoopReadLine%|1|0|MsgBox|0||||
+6|[LoopEnd]|LoopEnd|1|0|Loop|||||
+7|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
+8|[MsgBox]|Finished!|1|0|MsgBox|0||||
+
+[PMC Code v5.0.0]|F1||1|Window,2,Fast,0,1|1|Combined
 Groups=
 1|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
 2|[Assign Variable]|Folders := %A_Startup%%A_MyDocuments%`n%A_Desktop%%A_Programs%|1|0|Variable|||||
@@ -17,7 +62,10 @@ Groups=
 15|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
 16|[MsgBox]|Finished!|1|0|MsgBox|0||||
 
-[PMC Code v5.0.0]|F2||1|Window,2,Fast,0,1|1|Macro2
+[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|While
+Groups=Start:1
+
+[PMC Code v5.0.0]|F2||1|Window,2,Fast,0,1|1|ForLoop
 Groups=Start:1
 1|[Assign Variable]|MyVar := This is a variable!|1|0|Variable|||||
 2|[Assign Variable]|MyArray := ["a","b","c",MyVar,"d","e"]|1|0|Variable|Expression||||

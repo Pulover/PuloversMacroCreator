@@ -6991,7 +6991,7 @@ GoSub, WCmd
 If WinCom contains Close,Kill,Wait
 {
 	GuiControl, 11:Enable, Value
-	GuiControl, 11:, ValueT, %c_Lang019%:
+	GuiControl, 11:, ValueT, %c_Lang177% (%c_Lang019%):
 }
 Else If WinCom contains SetTitle
 {
