@@ -46,21 +46,24 @@ Groups=Start:1
 [PMC Code v5.0.0]|F5||1|Window,2,Fast,0,1|1|Combined
 Groups=
 1|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
-2|[Assign Variable]|Folders := %A_Startup%%A_MyDocuments%`n%A_Desktop%%A_Programs%|1|0|Variable|||||
+2|[Assign Variable]|Folders := %A_Startup%`,%A_MyDocuments%`n%A_Desktop%`,%A_Programs%|1|0|Variable|||||
 3|FileAppend|%Folders%, %A_Temp%\LoopTest.txt|1|10|FileAppend|||||
 4|[LoopStart]|%A_Temp%\LoopTest.txt|1|0|LoopRead|||||
-5|[LoopStart]|A_LoopReadLine`, `, |1|0|LoopParse|||||
+5|[LoopStart]|A_LoopReadLine`, ``,`, |1|0|LoopParse|||||
 6|[Assign Variable]|cFolder := %A_LoopField%|1|0|Variable|||||
 7|[LoopStart]|%A_LoopField%\*.*, FD|1|0|LoopFilePattern|||||
-8|[MsgBox]|Folder:`n%cFolder%`n`nFile %A_Index%:`n%A_LoopFileName%|1|0|MsgBox|1||||
-9|If Message Box|Cancel|1|0|If_Statement|||||
-10|Break|3|1|0|Break|||||
+8|[MsgBox]|Folder:`n%cFolder%`n`nFile %A_Index%:`n%A_LoopFileName%`n`nContinue this folder?|1|0|MsgBox|3||||
+9|If Message Box|No|1|0|If_Statement|||||
+10|Break||1|0|Break|||||
 11|[End If]|EndIf|1|0|If_Statement|||||
-12|[LoopEnd]|LoopEnd|1|0|Loop|||||
-13|[LoopEnd]|LoopEnd|1|0|Loop|||||
-14|[LoopEnd]|LoopEnd|1|0|Loop|||||
-15|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
-16|[MsgBox]|Finished!|1|0|MsgBox|0||||
+12|If Message Box|Cancel|1|0|If_Statement|||||
+13|Break|3|1|0|Break|||||
+14|[End If]|EndIf|1|0|If_Statement|||||
+15|[LoopEnd]|LoopEnd|1|0|Loop|||||
+16|[LoopEnd]|LoopEnd|1|0|Loop|||||
+17|[LoopEnd]|LoopEnd|1|0|Loop|||||
+18|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
+19|[MsgBox]|Finished!|1|0|MsgBox|0||||
 
 [PMC Code v5.0.0]|F6||1|Window,2,Fast,0,1|1|While
 Groups=Start:1

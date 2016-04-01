@@ -469,7 +469,7 @@
 					
 					If (Type = cType38)
 					{
-						Loop, Read, % Pars[1], % Pars[2]
+						Loop, Read, % Pars[1]
 						{
 							If (StopIt)
 								break 3
@@ -1998,22 +1998,11 @@ SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef 
 		Else
 			Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
 	}
+	If (InStr(FileCmdList, Type "|"))
+		Step := StrReplace(Step, "````,", _x)
 	Step := StrReplace(Step, "%A_Space%", _y)
 ,	Step := StrReplace(Step, "%A_Tab%", _z)
-	If (InStr(FileCmdList, Type "|"))
-	{
-		Step := StrReplace(Step, "````,", _x)
-	,	_Step := ""
-		Loop, Parse, Step, `,, %A_Space%%A_Tab%
-		{
-			LoopField := A_LoopField
-		,	CheckVars(CustomVars, LoopField)
-		,	_Step .= LoopField ", "
-		}
-		Step := RTrim(_Step, ", ")
-	}
-	EscCom(true, Step, TimesX, DelayX, Target, Window)
-,	CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
+,	EscCom(true, Step, TimesX, DelayX, Target, Window)
 ,	Step := StrReplace(Step, "``,", _x)
 ,	Step := StrReplace(Step, "``a", "`a")
 ,	Step := StrReplace(Step, "``b", "`b")
@@ -2052,22 +2041,9 @@ SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef 
 	,	Pars[A_Index] := StrReplace(Pars[A_Index], _y, A_Space)
 	,	Pars[A_Index] := StrReplace(Pars[A_Index], _z, A_Tab)
 	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``")
+	,	_Step .= Pars[A_Index] ", "
 	}
-	Step := StrReplace(Step, _x, ",")
-,	Step := StrReplace(Step, _y, A_Space)
-,	Step := StrReplace(Step, _z, A_Tab)
-,	Step := StrReplace(Step, "``")
-,	Step := StrReplace(Step, "``a", "`a")
-,	Step := StrReplace(Step, "``b", "`b")
-,	Step := StrReplace(Step, "``f", "`f")
-,	Step := StrReplace(Step, "``n", "`n")
-,	Step := StrReplace(Step, "``r", "`r")
-,	Step := StrReplace(Step, "``t", "`t")
-,	Step := StrReplace(Step, "``v", "`v")
-,	Step := StrReplace(Step, "``%", "%")
-,	Step := StrReplace(Step, "``;", ";")
-,	Step := StrReplace(Step, "``::", "::")
-,	Step := StrReplace(Step, "````", "``")
+	Step := SubStr(_Step, 1, -2)
 	return Pars
 }
 
