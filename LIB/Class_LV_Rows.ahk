@@ -336,7 +336,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;    Parameters:
 ;        Row:            If non-zero pastes memory contents at the specified row.
 ;        Multiline:      If true pastes the contents at every selected row.
-;    Return:             false if memory contains data or false if not.
+;    Return:             True if memory contains data or false if not.
 ;=======================================================================================
     Paste(Row := 0, Multiline := false)
     {

@@ -1,4 +1,4 @@
-﻿[PMC Code v5.0.0]|F7||1|Window,2,Fast,0,1|1|Loop
+﻿[PMC Code v5.0.0]|F1||1|Window,2,Fast,0,1|1|Loop
 Groups=Start:1
 1|[CommentBlock]|Example #1|0|1|CommentBlock|||||
 2|[LoopStart]|LoopStart|3|0|Loop|||||
@@ -16,7 +16,7 @@ Groups=Start:1
 14|[MsgBox]|a_index = %a_index%|1|0|MsgBox|0||||
 15|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
-[PMC Code v5.0.0]|F6||1|Window,2,Fast,0,1|1|LoopFiles
+[PMC Code v5.0.0]|F2||1|Window,2,Fast,0,1|1|LoopFiles
 Groups=Start:1
 1|[LoopStart]|%A_ProgramFiles%\*.txt`, R|1|0|LoopFilePattern|||||
 2|[MsgBox]|Filename = %A_LoopFileFullPath%`n`nContinue?|1|0|MsgBox|4||||
@@ -25,14 +25,14 @@ Groups=Start:1
 5|[End If]|EndIf|1|0|If_Statement|||||
 6|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
-[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|LoopParse
+[PMC Code v5.0.0]|F3||1|Window,2,Fast,0,1|1|LoopParse
 Groups=Start:1
 1|[Assign Variable]|Colors := red`,green`,blue|1|0|Variable|||||
 2|[LoopStart]|Colors`, ``,`, |1|0|LoopParse|||||
 3|[MsgBox]|Color number %A_Index% is %A_LoopField%.|1|0|MsgBox|0||||
 4|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
-[PMC Code v5.0.0]|F7||1|Window,2,Fast,0,1|1|LoopRead
+[PMC Code v5.0.0]|F4||1|Window,2,Fast,0,1|1|LoopRead
 Groups=Start:1
 1|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
 2|[Assign Variable]|Folders := Line 1`nLine 2`nLine 3`nLine 4|1|0|Variable|||||
@@ -43,7 +43,7 @@ Groups=Start:1
 7|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
 8|[MsgBox]|Finished!|1|0|MsgBox|0||||
 
-[PMC Code v5.0.0]|F1||1|Window,2,Fast,0,1|1|Combined
+[PMC Code v5.0.0]|F5||1|Window,2,Fast,0,1|1|Combined
 Groups=
 1|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
 2|[Assign Variable]|Folders := %A_Startup%%A_MyDocuments%`n%A_Desktop%%A_Programs%|1|0|Variable|||||
@@ -62,14 +62,24 @@ Groups=
 15|FileDelete|%A_Temp%\LoopTest.txt|1|10|FileDelete|||||
 16|[MsgBox]|Finished!|1|0|MsgBox|0||||
 
-[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|While
+[PMC Code v5.0.0]|F6||1|Window,2,Fast,0,1|1|While
 Groups=Start:1
+1|[MsgBox]|Press OK then click and press and drag the left mouse button to display a ToolTip with the size of the region inside the drag-area.`n|1|0|MsgBox|0||||
+2|CoordMode|Mouse, Screen|1|0|CoordMode|||||
+3|KeyWait|LButton, D|1|0|KeyWait|||||
+4|MouseGetPos|begin_x, begin_y|1|0|MouseGetPos|||||
+5|[LoopStart]|GetKeyState("LButton")|1|0|While|||||
+6|MouseGetPos|x, y|1|0|MouseGetPos|||||
+7|ToolTip|% begin_x "``, " begin_y "`n" Abs(begin_x-x) " x " Abs(begin_y-y)|1|10|ToolTip|||||
+8|[LoopEnd]|LoopEnd|1|0|Loop|||||
+9|ToolTip||1|0|ToolTip|||||
 
-[PMC Code v5.0.0]|F2||1|Window,2,Fast,0,1|1|ForLoop
+[PMC Code v5.0.0]|F7||1|Window,2,Fast,0,1|1|ForLoop
 Groups=Start:1
-1|[Assign Variable]|MyVar := This is a variable!|1|0|Variable|||||
-2|[Assign Variable]|MyArray := ["a","b","c",MyVar,"d","e"]|1|0|Variable|Expression||||
-3|[LoopStart]|MyArray`, key`, value|1|0|For|||||
-4|[MsgBox]|%key% : %value%|1|0|MsgBox|262144||||
+1|[Assign Variable]|str := |1|0|Variable|||||
+2|Object|colours := "red", 0xFF0000, "blue", 0x0000FF, "green", 0x00FF00|1|0|Function|||||
+3|[LoopStart]|colours`, k`, v|1|0|For|||||
+4|[Concatenate Variable]|str .= k "=" v "`n"|1|0|Variable|Expression||||
 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
+6|[MsgBox]|%str%|1|0|MsgBox|0||||
 

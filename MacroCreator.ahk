@@ -8284,8 +8284,12 @@ If (TabControl = 3)
 	Action := FuncName, Details := VarName " := " VarValueF, Type := IsArray ? cType46 : cType44
 Else
 {
-	Action := "[Assign Variable]", Details := VarName " " Oper " " VarValue, Type := cType21
-,	EscCom(false, TimesX, DelayX, Target, Window)
+	Details := VarName " " Oper " " VarValue, Type := cType21
+	GuiControl, 21:+AltSubmit, Oper
+	Gui, 21:Submit, NoHide
+	Action := "[" ExprOper%Oper% " Variable]"
+	GuiControl, 21:-AltSubmit, Oper
+	EscCom(false, TimesX, DelayX, Target, Window)
 	If (UseEval = 1)
 		Target := "Expression"
 	Else
@@ -11139,20 +11143,10 @@ If (A_GuiEvent == "ColClick")
 If (A_GuiEvent = "D")
 {
 	Dest_Row := LVManager.Drag(A_GuiEvent)
-	If ((Dest_Row) && (A_GuiEvent == "d"))
-	{
-		Menu, MoveCopy, Add, %w_Lang095%, MoveHere
-		Menu, MoveCopy, Add, %w_Lang096%, CopyHere
-		Menu, MoveCopy, Add
-		Menu, MoveCopy, Add, %c_Lang021%, NoKey
-		Menu, MoveCopy, Default, %w_Lang095%
-		Menu, MoveCopy, Show
-		Menu, MoveCopy, DeleteAll
-		Gui, MarkLine:Cancel
-	}
-	Dest_Row := ""
 	GoSub, RowCheck
 	GoSub, b_Start
+	If ((Dest_Row) && (A_GuiEvent == "d"))
+		SetTimer, MoveCopy, -10
 }
 If (A_GuiEvent == "RightClick")
 {
@@ -11327,6 +11321,20 @@ LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
 GuiControl, Focus, InputList%A_List%
+return
+
+MoveCopy:
+Menu, MoveCopy, Add, %w_Lang095%, MoveHere
+Menu, MoveCopy, Add, %w_Lang096%, CopyHere
+Menu, MoveCopy, Add
+Menu, MoveCopy, Add, %c_Lang021%, NoKey
+Menu, MoveCopy, Default, %w_Lang095%
+Menu, MoveCopy, Show
+Menu, MoveCopy, DeleteAll
+Gui, MarkLine:Cancel
+GoSub, RowCheck
+GoSub, b_Start
+Dest_Row := ""
 return
 
 CopyHere:

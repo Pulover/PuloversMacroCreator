@@ -118,7 +118,7 @@
 	LVLoad(List, Code)
 	{
 		Global UserDefFunctions
-		Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
+		Static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
 		
 		Critical
 		Gui, chMacro:Default
@@ -133,7 +133,7 @@
 		,	((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
 		,	((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
 		,	((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
-		,	((Col[6] = "Variable") && (Col[2] != "[Assign Variable]")) ? (Col[6] := "Function") : ""
+		,	((Col[6] = "Variable") && (!InStr(Col[2], " Variable]"))) ? (Col[6] := "Function") : ""
 		,	Col[6] := RegExReplace(Col[6], "\s", "_")
 			If (Col[6] = "UserFunction")
 			{
@@ -199,7 +199,7 @@
 
 	LVGet(List, DL := "|")
 	{
-		Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
+		Static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
 		
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%

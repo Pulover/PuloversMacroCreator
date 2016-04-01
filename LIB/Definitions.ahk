@@ -4,7 +4,7 @@
 Else
 	_s := Chr(8239)
 ,	RecentFolder := A_AppData "\Microsoft\Windows\Recent"
-_x := Chr(2), _y := Chr(3), _z := Chr(4)
+_w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
 
 ListCount1 := 0
 ,	TabCount := 1
@@ -426,6 +426,23 @@ Loop, Parse, IfCmd, `n
 
 MsgButtons := "Yes,No,OK,Cancel,Abort,Ignore,Retry,Continue,TryAgain,Timeout"
 StringSplit, IfMsg, MsgButtons, `,
+
+ExprOper := "
+(
+Assign
+Add
+Subtract
+Multiply
+Divide
+Floor divide
+Concatenate
+Bitwise inclusive OR
+Bitwise AND
+Bitwise exclusive OR
+Right shift AND
+Left shift AND
+)"
+StringSplit, ExprOper, ExprOper, `n
 
 IECmdList := "
 (Join|

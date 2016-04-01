@@ -5,7 +5,7 @@
 	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound
-	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY, TakeAction
+	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY, TakeAction, PbCoordModes
 	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult
 
 	If (LoopInfo.GetCapacity())
@@ -16,11 +16,13 @@
 	,	Loop_End := LoopInfo.Range.End
 	,	mLoopSize := LoopInfo.Count
 	,	Increment := LoopInfo.Increment
+	,	PbCoordModes := LoopInfo.CoordModes
 	}
 	Else
 	{
 		If (LoopInfo > 0)
 			Loop_Start := LoopInfo
+		PbCoordModes := {Mouse: CoordMouse, Tooltip: "Window", Pixel: "Window", Caret: "Window", Menu: "Window"}
 		CoordMode, Mouse, Screen
 		MouseGetPos, CursorX, CursorY
 		If (Record = 1)
@@ -45,7 +47,6 @@
 			GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 		mLoopSize := o_TimesG[Macro_On]
 	}
-	CoordMode, Mouse, %CoordMouse%
 	SetTitleMatchMode, %TitleMatch%
 	SetTitleMatchMode, %TitleSpeed%
 	DetectHiddenWindows, %HiddenWin%
@@ -70,6 +71,11 @@
 		cLoopIndex := A_Index + Increment
 		Loop, %m_ListCount%
 		{
+			CoordMode, Mouse, % PbCoordModes["Mouse"]
+			CoordMode, ToolTip, % PbCoordModes["Tooltip"]
+			CoordMode, Pixel, % PbCoordModes["Pixel"]
+			CoordMode, Caret, % PbCoordModes["Caret"]
+			CoordMode, Menu, % PbCoordModes["Menu"]
 			mLoopIndex := iLoopIndex ? 1 : cLoopIndex
 		,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
 		,	mListRow := A_Index
@@ -555,7 +561,8 @@
 				,	LoopInfo := {LoopDepth: LoopDepth
 							,	PlaybackVars: PlaybackVars
 							,	Range: {Start: StartMark[LoopDepth], End: A_Index}
-							,	Count: _Count + 1}
+							,	Count: _Count + 1
+							,	CoordModes: PbCoordModes}
 					If (LoopCount[LoopDepth][3] != "")
 					{
 						If (Eval(LoopCount[LoopDepth][3], PlaybackVars[LoopDepth][mLoopIndex])[1])
@@ -809,22 +816,6 @@
 					WaitFor.Key(o_ManKey[ManualKey], 0)
 				continue
 			}
-			If ((Type = cType15) || (Type = cType16))
-			{
-				Loop, 5
-					Act%A_Index% := ""
-				Loop, Parse, Action, `,,%A_Space%
-					Act%A_Index% := A_LoopField
-			}
-			Else
-			{
-				If (InStr(Step, "``n"))
-					Step := StrReplace(Step, "``n", "`n")
-				If (InStr(Step, "``t"))
-					Step := StrReplace(Step, "``t", "`t")
-				If (InStr(Step, "``,"))
-					Step := StrReplace(Step, "``,", ",")
-			}
 			If (Type = "Return")
 			{
 				If (LoopInfo.GetCapacity())
@@ -870,7 +861,7 @@
 				If Type in %cType32%,%cType33%,%cType34%,%cType43%,%cType52%,%cType53%,%cType54%,%cType55%
 				{
 					Try
-						TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, _LastError)
+						TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction, _LastError)
 					Catch e
 					{
 						If (!HideErrors)
@@ -883,7 +874,7 @@
 					}
 				}
 				Else
-					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction, _LastError)
+					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction, _LastError)
 				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := _LastError
 				If ((Type = cType15) || (Type = cType16))
 				{
@@ -893,7 +884,7 @@
 						For _each, _value in FieldsData
 							%_each% := _value
 						If !(ManualKey)
-							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction)
 						continue
 					}
 					If (TakeAction = "Break")
@@ -902,7 +893,7 @@
 						For _each, _value in FieldsData
 							%_each% := _value
 						If !(ManualKey)
-							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction)
 						break
 					}
 					Else
@@ -915,7 +906,7 @@
 				If Type in Sleep,KeyWait,MsgBox
 					continue
 				If !(ManualKey)
-					PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+					PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction)
 			}
 			If (ManualKey)
 				WaitFor.Key(o_ManKey[ManualKey], 0)
@@ -990,7 +981,7 @@
 
 ;##### Playback Commands #####
 
-PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, CustomVars, RunningFunction, ByRef _LastError := "")
+PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, CustomVars, CoordModes, RunningFunction, ByRef _LastError := "")
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
 		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction := ""
@@ -1514,8 +1505,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		_LastError := ErrorLevel
 	return
 	pb_CoordMode:
-		CoordMode, %Par1%, %Par2%
-		_LastError := ErrorLevel
+		CoordModes[Par1] := Par2
 	return
 	pb_OutputDebug:
 		OutputDebug, %Step%
@@ -1592,6 +1582,10 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		_LastError := ErrorLevel
 	return
 	pb_PixelSearch:
+		Loop, 5
+			Act%A_Index% := ""
+		Loop, Parse, Action, `,,%A_Space%
+			Act%A_Index% := A_LoopField
 		CoordMode, Pixel, %Window%
 		PixelSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%
 		_LastError := ErrorLevel, SearchResult := ErrorLevel
@@ -1599,6 +1593,10 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		GoSub, TakeAction
 	return TakeAction
 	pb_ImageSearch:
+		Loop, 5
+			Act%A_Index% := ""
+		Loop, Parse, Action, `,,%A_Space%
+			Act%A_Index% := A_LoopField
 		CoordMode, Pixel, %Window%
 		ImageSearch, FoundX, FoundY, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
 		_LastError := ErrorLevel, SearchResult := ErrorLevel
@@ -1991,32 +1989,44 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef Target, ByRef Window)
 {
 	local Pars := [], LoopField, _Step, _key, _value
-	If (Type = cType34)
-		_Step := Step
+	If ((Type = cType34) || (Type = cType43))
+		return Pars
 	If (Type = cType39)
-		Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
-	EscCom(true, Step, TimesX, DelayX, Target, Window)
-,	Step := StrReplace(Step, "%A_Space%", "ⱥ")
+	{
+		If (RegExMatch(Trim(Step), "% (.*)", _Match) = 1)
+			Step := Eval(_Match1, CutomVars)[1]
+		Else
+			Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
+	}
+	Step := StrReplace(Step, "%A_Space%", _y)
+,	Step := StrReplace(Step, "%A_Tab%", _z)
 	If (InStr(FileCmdList, Type "|"))
 	{
-		If (RegExMatch(Step, "sU)%\s([\w%]+)\((.*)\)"))
-			EscCom(true, Step)
-		_Step := ""
-		Loop, Parse, Step, `,, %A_Space%
+		Step := StrReplace(Step, "````,", _x)
+	,	_Step := ""
+		Loop, Parse, Step, `,, %A_Space%%A_Tab%
 		{
 			LoopField := A_LoopField
 		,	CheckVars(CustomVars, LoopField)
-		,	LoopField := StrReplace(LoopField, ",", _x)
 		,	_Step .= LoopField ", "
 		}
 		Step := RTrim(_Step, ", ")
 	}
-	CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
+	EscCom(true, Step, TimesX, DelayX, Target, Window)
+,	CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
 ,	Step := StrReplace(Step, "``,", _x)
+,	Step := StrReplace(Step, "``a", "`a")
+,	Step := StrReplace(Step, "``b", "`b")
+,	Step := StrReplace(Step, "``f", "`f")
 ,	Step := StrReplace(Step, "``n", "`n")
 ,	Step := StrReplace(Step, "``r", "`r")
 ,	Step := StrReplace(Step, "``t", "`t")
-	Loop, Parse, Step, `,, %A_Space%
+,	Step := StrReplace(Step, "``v", "`v")
+,	Step := StrReplace(Step, "``%", "%")
+,	Step := StrReplace(Step, "``;", ";")
+,	Step := StrReplace(Step, "``::", "::")
+,	Step := StrReplace(Step, "````", "``")
+	Loop, Parse, Step, `,, %A_Space%%A_Tab%
 	{
 		LoopField := A_LoopField
 	,	CheckVars(CustomVars, LoopField)
@@ -2027,17 +2037,37 @@ SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef 
 					LoopField := _value
 		}
 		Pars[A_Index] := LoopField
-,		Pars[A_Index] := StrReplace(Pars[A_Index], "``n", "`n")
-,		Pars[A_Index] := StrReplace(Pars[A_Index], "``r", "`r")
-,		Pars[A_Index] := StrReplace(Pars[A_Index], _x, ",")
-,		Pars[A_Index] := StrReplace(Pars[A_Index], "ⱥ", A_Space)
-,		Pars[A_Index] := StrReplace(Pars[A_Index], "``")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``a", "`a")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``b", "`b")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``f", "`f")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``n", "`n")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``r", "`r")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``t", "`t")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``v", "`v")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``%", "%")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``;", ";")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``::", "::")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "````", "``")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], _x, ",")
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], _y, A_Space)
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], _z, A_Tab)
+	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``")
 	}
 	Step := StrReplace(Step, _x, ",")
-,	Step := StrReplace(Step, "ⱥ", A_Space)
+,	Step := StrReplace(Step, _y, A_Space)
+,	Step := StrReplace(Step, _z, A_Tab)
 ,	Step := StrReplace(Step, "``")
-	If (Type = cType34)
-		Step := _Step
+,	Step := StrReplace(Step, "``a", "`a")
+,	Step := StrReplace(Step, "``b", "`b")
+,	Step := StrReplace(Step, "``f", "`f")
+,	Step := StrReplace(Step, "``n", "`n")
+,	Step := StrReplace(Step, "``r", "`r")
+,	Step := StrReplace(Step, "``t", "`t")
+,	Step := StrReplace(Step, "``v", "`v")
+,	Step := StrReplace(Step, "``%", "%")
+,	Step := StrReplace(Step, "``;", ";")
+,	Step := StrReplace(Step, "``::", "::")
+,	Step := StrReplace(Step, "````", "``")
 	return Pars
 }
 
@@ -2393,7 +2423,7 @@ class WaitFor
 
 SplitWin(Window)
 {
-	Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
+	Static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
 	
 	WinPars := []
 	Window := StrReplace(Window, "``,", _x)
@@ -2510,14 +2540,14 @@ DerefVars(v_String)
 	global
 	
 	v_String := StrReplace(v_String, "%A_Space%", "%_z%")
-	v_String := StrReplace(v_String, "``%", _y)
+	v_String := StrReplace(v_String, "``%", _w)
 	While (RegExMatch(v_String, "%(\w+)%", rMatch))
 	{
-		FoundVar := StrReplace(%rMatch1%, "%", _y)
+		FoundVar := StrReplace(%rMatch1%, "%", _w)
 	,	FoundVar := StrReplace(FoundVar, ",", "``,")
 	,	v_String := StrReplace(v_String, rMatch, FoundVar)
 	}
-	return StrReplace(v_String, _y, "%")
+	return StrReplace(v_String, _w, "%")
 }
 
 ExprGetPars(Expr)

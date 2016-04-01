@@ -743,7 +743,7 @@ Exprt(e)
 	StringReplace,e,e,%A_Space%.%A_Space%,\.,All
 	StringReplace,e,e,%A_Space%,,All
 	f:=1,f1:=1
-	While,(f:=RegExMatch(e,"S)(^|[^\w#@\$\.'])(0x\d+|\d+(?:\.\d+)?|\.\d+)(?=[^\d\.]|$)",m,f))
+	While,(f:=RegExMatch(e,"iS)(^|[^\w#@\$\.'])(0x[0-9a-fA-F]+|\d+(?:\.\d+)?|\.\d+)(?=[^\d\.]|$)",m,f))
 	{
 		If ((m1="\") && (RegExMatch(m2,"\.\d+")))
 		m1:="",m2:=SubStr(m2,2)
