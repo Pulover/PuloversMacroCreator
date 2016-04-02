@@ -107,6 +107,16 @@ In the *Evaluate Expression* option you can enter any valid expression, includin
 
 In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. A complete explanation can be found at [AHK documentation](http://autohotkey.com/docs/Variables.htm#Expressions)
 
+An *[Else](Commands/Else.html)* statement may be used inside the *If* block and you can create an *Else If* by checking the option at the bottom of the *If Statements* window. An *Else If* statement must be inside another *If* block and does not have an *EndIf* of its own. The pseudo-code below shows the basic *If* structure in PMC.
+
+> [If]
+> [...]
+> [Else If]
+> [...]
+> [Else]
+> [...]
+> [EndIf]
+
 Download Example: [Comparing Variables in Playback](Examples/CompareVars.pmc).
 
 ## Assigning And Retrieving Arrays

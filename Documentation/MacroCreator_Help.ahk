@@ -606,16 +606,29 @@
 
 /*!
 	Function: Else(F10)
-		Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces).
+		Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces). For more information see [Comparing Variables](Variables.html#comparing-variables).
 
 	Remarks:
 		Every use of ELSE must belong to (be associated with) an IF-statement above it. An ELSE always belongs to the nearest unclaimed IF-statement above it unless a block is used to change that behavior.  
 		
 		An ELSE can be followed immediately by any other single command on the same line. This is most often used for "else if" ladders.
+		
+		An *Else If* statement must be inside another *If* block and does not have an *EndIf* of its own. The pseudo-code below shows the basic *If* structure in PMC.
+
+		> [If]
+		> [...]
+		> [Else If]
+		> [...]
+		> [Else]
+		> [...]
+		> [EndIf]
 
 	Extra:
 		### Related
 			[Else](http://autohotkey.com/docs/commands/Else.htm)
+		
+		### Download example
+			[Comparing Variables in Playback](Examples/CompareVars.pmc)
 */
 
 /*!

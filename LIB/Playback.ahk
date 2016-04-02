@@ -2195,8 +2195,10 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 	{
 		If (ThisError = 1)
 			return 0
-		If (ThisError = 0)
+		Else If (ThisError = 0)
 			return 1
+		Else
+			return ThisError
 	}
 	If (InStr(Action, "[ElseIf]"))
 	{

@@ -1,22 +1,21 @@
-﻿[PMC Code]|F3||1|Window|1|CompareVars
+﻿[PMC Code v5.0.0]|F3||1|Window,2,Fast,0,1|1|CompareVars
+Groups=
 1|Compare Variables|A_Hour > 11|1|0|If_Statement|||||
 2|[MsgBox]|Good Afternoon`, %A_UserName%!|1|0|MsgBox|0||||
 3|[Else]|Else|1|0|If_Statement|||||
 4|[MsgBox]|Good Morning`, %A_UserName%!|1|0|MsgBox|0||||
 5|[End If]|EndIf|1|0|If_Statement|||||
-6|Compare Variables|A_WDay <> 1|1|0|If_Statement|||||
-7|Compare Variables|A_WDay < 7|1|0|If_Statement|||||
-8|[MsgBox]|Shouldn't you be working today?|1|0|MsgBox|0||||
-9|[Else]|Else|1|0|If_Statement|||||
-10|[MsgBox]|Enjoying the Weendend`, huh?`nHave a nice day!|1|0|MsgBox|0||||
-11|[End If]|EndIf|1|0|If_Statement|||||
-12|[Else]|Else|1|0|If_Statement|||||
-13|[MsgBox]|Enjoy the Sunday! You got work tomorrow`, don't you?|1|0|MsgBox|0||||
-14|[End If]|EndIf|1|0|If_Statement|||||
-15|If Window Exist|ahk_class Notepad|1|0|If_Statement|||||
-16|WinGet|NpID`, ID|1|0|WinGet||ahk_class Notepad|||
-17|[MsgBox]|Notepad is opened and the window ID is %NpID%.|1|0|MsgBox|0||||
-18|[Else]|Else|1|0|If_Statement|||||
-19|[MsgBox]|Notepad is not opened.|1|0|MsgBox|0||||
-20|[End If]|EndIf|1|0|If_Statement|||||
+6|Compare Variables|A_WDay = 7|1|0|If_Statement|||||
+7|[MsgBox]|Enjoying the Weendend`, huh?`nHave a nice day!|1|0|MsgBox|0||||
+8|[ElseIf] Compare Variables|A_WDay between 2`n6|1|0|If_Statement|||||
+9|[MsgBox]|Shouldn't you be working today?|1|0|MsgBox|0||||
+10|[Else]|Else|1|0|If_Statement|||||
+11|[MsgBox]|Enjoy the Sunday! You got work tomorrow`, don't you?|1|0|MsgBox|0||||
+12|[End If]|EndIf|1|0|If_Statement|||||
+13|If Window Exist|ahk_class Notepad|1|0|If_Statement|||||
+14|WinGet|NpID`, ID|1|0|WinGet||ahk_class Notepad|||
+15|[MsgBox]|Notepad is open and the window ID is %NpID%.|1|0|MsgBox|0||||
+16|[Else]|Else|1|0|If_Statement|||||
+17|[MsgBox]|Notepad is not open.|1|0|MsgBox|0||||
+18|[End If]|EndIf|1|0|If_Statement|||||
 
