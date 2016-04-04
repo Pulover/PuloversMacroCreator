@@ -339,7 +339,7 @@
 	c_Lang040 =	Canol
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Cynnal / Rhyddhau
+	c_Lang043 =	Cynnal
 	c_Lang044 =	Cliciwch Cyfrif
 	c_Lang045 =	Testun Plaen (Raw)
 	c_Lang046 =	Testun gyda gorchmynion
@@ -554,6 +554,7 @@
 	c_Lang256 =	Addaswch cyfesurynnau i ganol y llun
 	c_Lang257 =	cyfnod
 	c_Lang258 =	Dychwelyd
+	c_Lang259 =	Rhyddhau
 		
 ; 16. Other Windows		
 	t_Lang001 =	Allforio i AutoHotkey

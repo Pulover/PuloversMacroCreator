@@ -339,7 +339,7 @@
 	c_Lang040 =	Erdi
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Eutsi / oharra
+	c_Lang043 =	Eutsi
 	c_Lang044 =	Egin klik Count
 	c_Lang045 =	Testu Arrunta (Raw)
 	c_Lang046 =	Komandori Testua
@@ -554,6 +554,7 @@
 	c_Lang256 =	Egokitu koordenadak irudiaren erdian
 	c_Lang257 =	Epea
 	c_Lang258 =	Return
+	c_Lang259 =	oharra
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey

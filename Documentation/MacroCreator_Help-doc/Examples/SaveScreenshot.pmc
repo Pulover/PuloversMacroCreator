@@ -1,15 +1,18 @@
-﻿[PMC Code]|+F1||1|Window|1|EntireScreen
+﻿[PMC Code v5.0.0]|+F1||1|Window,2,Fast,0,1|1|EntireScreen
+Groups=
 1|PrintScreen|{PrintScreen}|1|333|Send|||||
 2|[Goto]|SaveScreenshot3|1|0|Gosub|||||
 
-[PMC Code]|+F2||1|Window|1|CurrentWindow
+[PMC Code v5.0.0]|+F2||1|Window,2,Fast,0,1|1|CurrentWindow
+Groups=
 1|Alt + PrintScreen|{Alt Down}{PrintScreen}{Alt Up}|1|333|Send|||||
 2|[Goto]|SaveScreenshot3|1|0|Gosub|||||
 
-[PMC Code]|+F3||1|Window|1|SaveScreenshot
-1|Gdip_Startup|pToken := |1|0|Variable|||||
-2|Gdip_CreateBitmapFromClipboard|pBitmap := |1|0|Variable|||||
-3|Gdip_SaveBitmapToFile|sBitmap := %pBitmap%, %A_MyDocuments%\%A_Now%.png, 100|1|0|Variable|||||
-4|Gdip_DisposeImage|dBitmap := %pBitmap%|1|0|Variable|||||
-5|Gdip_Shutdown|sToken := %pToken%|1|0|Variable|||||
+[PMC Code v5.0.0]|+F3||1|Window,2,Fast,0,1|1|SaveScreenshot
+Groups=
+1|Gdip_Startup|pToken := ""|1|0|Function|||||
+2|Gdip_CreateBitmapFromClipboard|pBitmap := ""|1|0|Function|||||
+3|Gdip_SaveBitmapToFile|sBitmap := pBitmap, A_MyDocuments "\" A_Now ".png", 100|1|0|Function|||||
+4|Gdip_DisposeImage|dBitmap := pBitmap|1|0|Function|||||
+5|Gdip_Shutdown|sToken := pToken|1|0|Function|||||
 

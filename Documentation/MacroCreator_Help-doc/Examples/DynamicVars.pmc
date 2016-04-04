@@ -1,4 +1,4 @@
-﻿[PMC Code]|F1||1|Window|1|DynamicVars
+﻿[PMC Code v5.0.0]|F1||1|Window,2,Fast,0,1|1|DynamicVars
 Groups=
 1|[Assign Variable]|TextVar := One-Two-Three|1|0|Variable|||||
 2|StringSplit|OutVar, TextVar, -|1|0|StringSplit|||||
@@ -7,14 +7,14 @@ Groups=
 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
 6|[MsgBox]|Finished!|1|0|MsgBox|0||||
 
-[PMC Code]|F2||1|Window|1|Arrays
+[PMC Code v5.0.0]|F2||1|Window,2,Fast,0,1|1|Arrays
 Groups=
 1|[Assign Variable]|N := ["Item 1"]|1|0|Variable|Expression||||
 2|[MsgBox]|% N[1]|1|0|MsgBox|262144||||
 3|[Assign Variable]|N[2] := []|1|0|Variable|Expression||||
 4|[Assign Variable]|N[2][1] := Item 2.1: Multi dimensional array value.|1|0|Variable|||||
 5|[MsgBox]|% N[2][1]|1|0|MsgBox|262144||||
-6|Asc|N[2][2] := A|1|0|Function|||||
+6|Asc|N[2][2] := "A"|1|0|Function|||||
 7|[Assign Variable]|ItemCopy := N[2][2]|1|0|Variable|Expression||||
 8|[MsgBox]|Item 2.2: %ItemCopy%|1|0|MsgBox|262144||||
 9|Push|_null := Item 2.3|1|0|Method|N[2]||||

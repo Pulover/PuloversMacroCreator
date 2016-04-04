@@ -339,7 +339,7 @@
 	c_Lang040 =	Mellan
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Håll / Släpp
+	c_Lang043 =	Håll
 	c_Lang044 =	Klicka på Räkna
 	c_Lang045 =	Plain Text (Raw)
 	c_Lang046 =	Text med kommandon
@@ -554,6 +554,7 @@
 	c_Lang256 =	Justera koordinater i mitten av bilden
 	c_Lang257 =	Period
 	c_Lang258 =	Lämna tillbaka
+	c_Lang259 =	Släpp
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey

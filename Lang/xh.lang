@@ -339,7 +339,7 @@
 	c_Lang040 =	Phakathi
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Bamba / Release
+	c_Lang043 =	Bamba
 	c_Lang044 =	Nqakraza Count
 	c_Lang045 =	Text Plain (raw)
 	c_Lang046 =	Okubhaliweyo imiyalelo
@@ -554,6 +554,7 @@
 	c_Lang256 =	Nyenyisa Lokasi kwiziko yomfanekiso
 	c_Lang257 =	ixesha
 	c_Lang258 =	Buya
+	c_Lang259 =	Release
 		
 ; 16. Other Windows		
 	t_Lang001 =	Rhweba AutoHotkey

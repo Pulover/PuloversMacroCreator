@@ -339,7 +339,7 @@
 	c_Lang040 =	Mëttelalter
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Stoe / Netflix
+	c_Lang043 =	Stoe
 	c_Lang044 =	Klickt Grof
 	c_Lang045 =	Text sichen (eege)
 	c_Lang046 =	Text mat commandéiert
@@ -554,6 +554,7 @@
 	c_Lang256 =	Ajustéieren Koordinate fir den Zentrum vun der Bild
 	c_Lang257 =	Period
 	c_Lang258 =	Zeréck
+	c_Lang259 =	Netflix
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export ze AutoHotkey

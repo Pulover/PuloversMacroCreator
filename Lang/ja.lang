@@ -339,7 +339,7 @@
 	c_Lang040 =	真ん中
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	放し/ホールド
+	c_Lang043 =	放し
 	c_Lang044 =	クリック数
 	c_Lang045 =	テキスト形式（RAW）
 	c_Lang046 =	コマンドを記述したテキスト
@@ -554,6 +554,7 @@
 	c_Lang256 =	画像の中心に座標を調整
 	c_Lang257 =	期間
 	c_Lang258 =	リターン
+	c_Lang259 =	ホールド
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート

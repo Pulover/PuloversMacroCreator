@@ -339,7 +339,7 @@
 	c_Lang040 =	Tengah
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Memegang / Pelepasan
+	c_Lang043 =	Memegang
 	c_Lang044 =	Klik Count
 	c_Lang045 =	Teks (mentah)
 	c_Lang046 =	Text dengan arahan
@@ -554,6 +554,7 @@
 	c_Lang256 =	Laraskan koordinat ke tengah imej
 	c_Lang257 =	tempoh
 	c_Lang258 =	Pulangan
+	c_Lang259 =	Pelepasan
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey

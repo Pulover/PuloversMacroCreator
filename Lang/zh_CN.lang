@@ -339,7 +339,7 @@
 	c_Lang040 =	中间
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	按住/释放
+	c_Lang043 =	按住
 	c_Lang044 =	点击次数
 	c_Lang045 =	普通文本（Raw）
 	c_Lang046 =	含修饰键文本
@@ -554,6 +554,7 @@
 	c_Lang256 =	调整坐标到图像的中心
 	c_Lang257 =	期
 	c_Lang258 =	返回
+	c_Lang259 =	释放
 		
 ; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey

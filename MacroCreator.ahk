@@ -1292,16 +1292,19 @@ If (A_GuiEvent = "N")
 	rbEventCode := NumGet(A_EventInfo + (A_PtrSize * 2), 0, "Int")
 	If (RbMain.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
 		ShowChevronMenu(RbMain, BandID, tbMX, tbMY)
-	Else If (RbMacro.OnNotify(A_EventInfo, tbMX, tbMY, BandID))
-		ShowChevronMenu(RbMacro, BandID, tbMX)
 	If (rbEventCode = -831) ; RBN_HEIGHTCHANGE
 	{
-		y_Values := IconSize = "Small" ? ["y55", "y30", "y83"] : ["y72", "y36", "y107"]
-	,	o_Values := IconSize = "Small" ? [88, 63, 118] : [105, 69, 140]
-	,	RowsCount := RbMain.GetRowCount()
-	,	MacroOffset := (RowsCount = 2) ? o_Values[1] : ((RowsCount = 1) ? o_Values[2] : o_Values[3])
-		GuiControl, 1:Move, cRbMacro, % (RowsCount = 2) ? y_Values[1] : (RowsCount = 1 ? y_Values[2] : y_Values[3])
-		Gosub, GuiSize
+		If (A_GuiControl = "cRbMain")
+		{
+			y_Values := IconSize = "Small" ? ["y55", "y30", "y83"] : ["y72", "y36", "y107"]
+		,	o_Values := IconSize = "Small" ? [88, 63, 118] : [105, 69, 140]
+		,	RowsCount := RbMain.GetRowCount()
+		,	MacroOffset := (RowsCount = 2) ? o_Values[1] : ((RowsCount = 1) ? o_Values[2] : o_Values[3])
+			GuiControl, 1:Move, cRbMacro, % (RowsCount = 2) ? y_Values[1] : (RowsCount = 1 ? y_Values[2] : y_Values[3])
+			Gosub, GuiSize
+		}
+		Else
+			RbMacro.OnNotify(A_EventInfo)
 	}
 	If (rbEventCode = -835) ; RBN_BEGINDRAG
 		OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
@@ -1323,6 +1326,7 @@ GoSub, BuildOSCWin
 	RbMacro := New Rebar(hRbMacro)
 ,	RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 30, "", A_ScreenWidth/2, 0, "", "", 10, 10)
 ,	RbMacro.InsertBand(hPrevCh, 0, "", 31, "", A_ScreenWidth/2, 0, "", "", 0)
+,	RbMacro.SetMaxRows(1)
 ,	(MacroLayout = "ERROR") ? "" : RbMacro.SetLayout(MacroLayout)
 ,	!ShowPrev ? RbMacro.ModifyBand(2, "Style", "Hidden")
 return
@@ -3010,7 +3014,12 @@ GuiControl, 4:Enable%RandomSleeps%, RandPercent
 GuiControl, 4:Enable%RandomSleeps%, RandPer
 GoSub, UpdateEditList
 GoSub, OptionsSub
-If A_GuiControl in CoordTip,TModeTip
+If (A_GuiControl = "CoordTip")
+{
+	GuiControl, 4:Choose, AltTab, %t_Lang090%
+	GoSub, AltTabControl
+}
+If (A_GuiControl = "TModeTip")
 {
 	GuiControl, 4:Choose, AltTab, %t_Lang035%
 	GoSub, AltTabControl
@@ -3068,12 +3077,14 @@ If (WinExist("ahk_id " PMCOSC))
 GoSub, RowCheck
 LangMan := ""
 Gui, 1:Default
+Gui, 1:+Disabled
 GoSub, KeepMenuCheck
 GoSub, LoadLangFiles
 GoSub, LoadLang
 GoSub, LangChange
 If (InEditLang != "")
 	GoSub, UpdateLang
+Gui, 1:-Disabled
 return
 
 ConfigCancel:
@@ -3989,8 +4000,10 @@ Gui, 5:Add, Radio, -Wrap yp x+5 W90 vRB R1, %c_Lang039%
 Gui, 5:Add, Radio, -Wrap yp x+5 W90 vMB R1, %c_Lang040%
 Gui, 5:Add, Radio, -Wrap yp x+5 W90 vX1 R1, %c_Lang041%
 Gui, 5:Add, Radio, -Wrap yp x+5 W90 vX2 R1, %c_Lang042%
-Gui, 5:Add, Checkbox, -Wrap Check3 y+10 xs+10 vMHold gMHold W150 R1, %c_Lang043%
-Gui, 5:Add, Text, -Wrap R1 yp x+10 vClicks W100 Right, %c_Lang044%:
+Gui, 5:Add, Radio, Group -Wrap y+10 xs+10 Checked W90 R1 vMNormal gMHold, %t_Lang108%
+Gui, 5:Add, Radio, -Wrap yp x+5 W90 R1 vMHold gMHold, %c_Lang043%
+Gui, 5:Add, Radio, -Wrap yp x+5 W90 R1 vMRelease gMHold, %c_Lang259%
+Gui, 5:Add, Text, -Wrap R1 yp x+5 vClicks W90 Right, %c_Lang044%:
 Gui, 5:Add, Edit, Limit Number yp-2 x+10 W60 R1 vCCount
 Gui, 5:Add, UpDown, 0x80 Range0-999999999, 1
 ; Repeat
@@ -4127,7 +4140,7 @@ If (s_Caller = "Edit")
 	}
 	If (InStr(Details, " Up"))
 	{
-		GuiControl, 5:, MHold, -1
+		GuiControl, 5:, MRelease, 1
 		GuiControl, 5:, CCount, 1
 		GuiControl, 5:Disable, Clicks
 		GuiControl, 5:Disable, CCount
@@ -4266,47 +4279,62 @@ If (Sec = 1)
 TimesX := InStr(EdRept, "%") ? EdRept : TimesX
 If (TimesX = 0)
 	TimesX := 1
-If (LB = 1)
+If (LB)
 	Button := "Left"
-If (RB = 1)
+If (RB)
 	Button := "Right"
-If (MB = 1)
+If (MB)
 	Button := "Middle"
-If (X1 = 1)
+If (X1)
 	Button := "X1"
-If (X2 = 1)
+If (X2)
 	Button := "X2"
 If (Click = 1)
 	GoSub, f_Click
 If (Point = 1)
 {
-	If ((IniX = "") || (IniY = ""))
+	If ((RegExMatch(IniX, "\s*%\s+")) || (RegExMatch(IniY, "\s*%\s+")))
 	{
-		MsgBox, 16, %d_Lang011%, %d_Lang016%
-			return
+		MsgBox, 16, %d_Lang011%, %d_Lang059%
+		return
 	}
-	Else
-	GoSub, f_Point
-}
-If (PClick = 1)
-{
 	If ((IniX = "") || (IniY = ""))
 	{
 		MsgBox, 16, %d_Lang011%, %d_Lang016%
 		return
 	}
 	Else
-	GoSub, f_PClick
+		GoSub, f_Point
+}
+If (PClick = 1)
+{
+	If ((RegExMatch(IniX, "\s*%\s+")) || (RegExMatch(IniY, "\s*%\s+")))
+	{
+		MsgBox, 16, %d_Lang011%, %d_Lang059%
+		return
+	}
+	If ((IniX = "") || (IniY = ""))
+	{
+		MsgBox, 16, %d_Lang011%, %d_Lang016%
+		return
+	}
+	Else
+		GoSub, f_PClick
 }
 If (Drag = 1)
 {
+	If ((RegExMatch(IniX, "\s*%\s+")) || (RegExMatch(IniY, "\s*%\s+")))
+	{
+		MsgBox, 16, %d_Lang011%, %d_Lang059%
+		return
+	}
 	If ((IniX = "") || (IniY = "") || (EndX = "") || (EndY = ""))
 	{
 		MsgBox, 16, %d_Lang011%, %d_Lang016%
 		return
 	}
 	Else
-	GoSub, f_Drag
+		GoSub, f_Drag
 }
 If (WUp = 1)
 	GoSub, f_WUp
@@ -4394,11 +4422,11 @@ return
 
 f_Click:
 Action := Button " " Action1, Details := Button
-If (MHold = 0)
+If (MNormal)
 	Details .= ", " CCount ", "
-If (MHold = 1)
+If (MHold)
 	Details .= ", , Down"
-If (MHold = -1)
+If (MRelease)
 	Details .= ", , Up"
 If (MRel = 1)
 {
@@ -4423,13 +4451,13 @@ return
 
 f_PClick:
 Action := Button " " Action3, Details := IniX ", " IniY " " Button
-If (MHold = 1)
+If (MNormal)
 	Details .= ", Down"
-If (MHold = -1)
+If (MHold)
 	Details .= ", Up"
 If (MRel = 1)
 	Details := "Rel " Details
-If (MHold = 0)
+If (MRelease)
 	Details .= ", " CCount
 If (SE = 1)
 	Details := "{Click, " Details "}", Type := cType13
@@ -4489,7 +4517,9 @@ GuiControl, 5:Enable, Ident
 GuiControl, 5:Enable, Title
 GuiControl, 5:Enable, GetWin
 GuiControl, 5:Enable, CL
+GuiControl, 5:Enable, MNormal
 GuiControl, 5:Enable, MHold
+GuiControl, 5:Enable, MRelease
 GoSub, CSend
 GuiControl, 5:Disable%SE%, CSend
 return
@@ -4519,7 +4549,9 @@ GuiControl, 5:Disable, Ident
 GuiControl, 5:Disable, Title
 GuiControl, 5:Disable, GetWin
 GuiControl, 5:Enable, CL
+GuiControl, 5:Disable, MNormal
 GuiControl, 5:Disable, MHold
+GuiControl, 5:Disable, MRelease
 GuiControl, 5:Disable, CSend
 return
 
@@ -4548,7 +4580,9 @@ GuiControl, 5:Disable, Ident
 GuiControl, 5:Disable, Title
 GuiControl, 5:Disable, GetWin
 GuiControl, 5:Enable, CL
+GuiControl, 5:Enable, MNormal
 GuiControl, 5:Enable, MHold
+GuiControl, 5:Enable, MRelease
 GuiControl, 5:Disable, CSend
 return
 
@@ -4576,7 +4610,9 @@ GuiControl, 5:Disable, Title
 GuiControl, 5:Disable, GetWin
 GuiControl, 5:, SE, 1
 GuiControl, 5:Disable, CL
+GuiControl, 5:Disable, MNormal
 GuiControl, 5:Disable, MHold
+GuiControl, 5:Disable, MRelease
 GuiControl, 5:Disable, CSend
 return
 
@@ -4604,7 +4640,9 @@ GuiControl, 5:Enable, Ident
 GuiControl, 5:Enable, Title
 GuiControl, 5:Enable, GetWin
 GuiControl, 5:Enable, CL
+GuiControl, 5:Disable, MNormal
 GuiControl, 5:Disable, MHold
+GuiControl, 5:Disable, MRelease
 GuiControl, 5:Disable%SE%, CSend
 GoSub, CSend
 return
@@ -4633,7 +4671,9 @@ GuiControl, 5:Enable, Ident
 GuiControl, 5:Enable, Title
 GuiControl, 5:Enable, GetWin
 GuiControl, 5:Enable, CL
+GuiControl, 5:Disable, MNormal
 GuiControl, 5:Disable, MHold
+GuiControl, 5:Disable, MRelease
 GuiControl, 5:Disable%SE%, CSend
 GoSub, CSend
 return
@@ -4682,17 +4722,12 @@ return
 
 MHold:
 Gui, 5:Submit, NoHide
-If (MHold = 0)
+If (MNormal)
 {
 	GuiControl, 5:Enable, Clicks
 	GuiControl, 5:Enable, CCount
 }
-If (MHold = 1)
-{
-	GuiControl, 5:Disable, Clicks
-	GuiControl, 5:Disable, CCount
-}
-If (MHold = -1)
+Else
 {
 	GuiControl, 5:Disable, Clicks
 	GuiControl, 5:Disable, CCount
@@ -6199,9 +6234,10 @@ If (s_Caller = "Edit")
 	{
 		StringReplace, Details, Details, `````,, %_x%, All
 		EscCom(true, Details, TimesX, DelayX)
-		Loop, Parse, Details, `,, %A_Space%
+		Pars := GetPars(Details)
+		For i, v in Pars
 		{
-			Par%A_Index% := A_LoopField
+			Par%A_Index% := v
 			StringReplace, Par%A_Index%, Par%A_Index%, %_x%, `,, All
 		}
 		If (Type = cType7)
@@ -6806,8 +6842,9 @@ If (s_Caller = "Edit")
 	}
 	Else If (Type = "WinMove")
 	{
-		Loop, Parse, Details, `,,%A_Space%
-			Par%A_Index% := A_LoopField
+		Pars := GetPars(Details)
+		For i, v in Pars
+			Par%A_Index% := v
 		GuiControl, 11:, PosX, %Par1%
 		GuiControl, 11:, PosY, %Par2%
 		GuiControl, 11:, SizeX, %Par3%
@@ -6815,8 +6852,9 @@ If (s_Caller = "Edit")
 	}
 	Else If (InStr(WinCom, "Get"))
 	{
-		Loop, Parse, Details, `,, %A_Space%
-			Par%A_Index% := A_LoopField
+		Pars := GetPars(Details)
+		For i, v in Pars
+			Par%A_Index% := v
 		GuiControl, 11:, VarName, %Par1%
 		GuiControl, 11:ChooseString, WCmd, %Par2%
 	}
@@ -7179,8 +7217,9 @@ If (s_Caller = "Edit")
 	GuiControl, 19:, DelayC, %DelayX%
 	Loop, 5
 		Act%A_Index% := ""
-	Loop, Parse, Action, `,,%A_Space%
-		Act%A_Index% := A_LoopField
+	Pars := GetPars(Action)
+	For i, v in Pars
+		Act%A_Index% := v
 	GuiControl, 19:ChooseString, IfFound, %Act1%
 	GuiControl, 19:ChooseString, IfNotFound, %Act2%
 	If (Act3 != "")
@@ -7189,8 +7228,9 @@ If (s_Caller = "Edit")
 		GuiControl, 19:, OutVarY, %Act4%
 	If (Act5)
 		GuiControl, 19:, FixFoundVars, 1
-	Loop, Parse, Details, `,,%A_Space%
-		Det%A_Index% := A_LoopField
+	Pars := GetPars(Details)
+	For i, v in Pars
+		Det%A_Index% := v
 	If (Type = cType16)
 	{
 		GuiControl, 19:, ImageS, 1
@@ -8774,8 +8814,9 @@ If (s_Caller = "Edit")
 	Else If ((Type = cType23)	|| (Type = cType27)
 	|| (Type = cType28) || (Type = cType31))
 	{
-		Loop, Parse, Details, `,, %A_Space%
-			Par%A_Index% := A_LoopField
+		Pars := GetPars(Details)
+		For i, v in Pars
+			Par%A_Index% := v
 		GoSub, CtlCmd
 		GuiControl, 23:, VarName, %Par1%
 		GuiControl, 23:ChooseString, Cmd, %Par2%
@@ -8785,8 +8826,9 @@ If (s_Caller = "Edit")
 	Else If (Type = cType26)
 	{
 		GoSub, CtlCmd
-		Loop, Parse, Details, `,,%A_Space%
-			Par%A_Index% := A_LoopField
+		Pars := GetPars(Details)
+		For i, v in Pars
+			Par%A_Index% := v
 		GuiControl, 23:, PosX, %Par1%
 		GuiControl, 23:, PosY, %Par2%
 		GuiControl, 23:, SizeX, %Par3%

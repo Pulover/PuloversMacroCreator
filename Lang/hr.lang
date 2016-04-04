@@ -339,7 +339,7 @@
 	c_Lang040 =	Srednji
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Držite / release
+	c_Lang043 =	Držite
 	c_Lang044 =	Kliknite Točka
 	c_Lang045 =	Običan tekst (Raw)
 	c_Lang046 =	Tekst s naredbama
@@ -554,6 +554,7 @@
 	c_Lang256 =	Podesite koordinate u središtu slike
 	c_Lang257 =	Razdoblje
 	c_Lang258 =	Povratak
+	c_Lang259 =	release
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey

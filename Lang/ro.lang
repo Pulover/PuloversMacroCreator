@@ -339,7 +339,7 @@
 	c_Lang040 =	Mijloc
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Așteptare / eliberare
+	c_Lang043 =	Așteptare
 	c_Lang044 =	Faceți clic pe Count
 	c_Lang045 =	Plain Text (Raw)
 	c_Lang046 =	Text cu comenzi
@@ -554,6 +554,7 @@
 	c_Lang256 =	Ajustați coordonatele la centrul imaginii
 	c_Lang257 =	Perioadă
 	c_Lang258 =	Întoarcere
+	c_Lang259 =	eliberare
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export către AutoHotkey

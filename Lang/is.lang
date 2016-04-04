@@ -339,7 +339,7 @@
 	c_Lang040 =	Middle
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Haldið / Release
+	c_Lang043 =	Haldið
 	c_Lang044 =	Smelltu Fjöldi
 	c_Lang045 =	Plain Text (Raw)
 	c_Lang046 =	Texti með skipunum
@@ -554,6 +554,7 @@
 	c_Lang256 =	Stilla hnit miðju myndarinnar
 	c_Lang257 =	tímabil
 	c_Lang258 =	Return
+	c_Lang259 =	Release
 		
 ; 16. Other Windows		
 	t_Lang001 =	Flytja út í AutoHotkey

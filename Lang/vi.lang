@@ -339,7 +339,7 @@
 	c_Lang040 =	Trung tâm
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Giữ / Thả
+	c_Lang043 =	Giữ
 	c_Lang044 =	Nhấp Đếm
 	c_Lang045 =	Plain Text (Nguyên)
 	c_Lang046 =	Văn bản với các lệnh
@@ -554,6 +554,7 @@
 	c_Lang256 =	Điều chỉnh tọa độ đến trung tâm của hình ảnh
 	c_Lang257 =	Giai đoạn
 	c_Lang258 =	Trở về
+	c_Lang259 =	Thả
 		
 ; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey

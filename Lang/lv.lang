@@ -339,7 +339,7 @@
 	c_Lang040 =	Vidus
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Turiet / Izdošanas
+	c_Lang043 =	Turiet
 	c_Lang044 =	Uzklikšķiniet skaits
 	c_Lang045 =	Vienkāršs teksts (Raw)
 	c_Lang046 =	Dokuments komandām
@@ -554,6 +554,7 @@
 	c_Lang256 =	Pielāgot koordinātes uz attēla centram
 	c_Lang257 =	periods
 	c_Lang258 =	Atgriešanās
+	c_Lang259 =	Izdošanas
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksports uz AutoHotkey

@@ -339,7 +339,7 @@
 	c_Lang040 =	Középső
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Tartás / release
+	c_Lang043 =	Tartás
 	c_Lang044 =	Kattintson a gróf
 	c_Lang045 =	Plain Text (Raw)
 	c_Lang046 =	Szöveg parancsok
@@ -554,6 +554,7 @@
 	c_Lang256 =	Állítsa a koordináták a kép közepén
 	c_Lang257 =	Időszak
 	c_Lang258 =	Visszatérés
+	c_Lang259 =	release
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey

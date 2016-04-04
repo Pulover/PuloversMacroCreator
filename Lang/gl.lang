@@ -339,7 +339,7 @@
 	c_Lang040 =	Medio
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Reter / Lanzamento
+	c_Lang043 =	Reter
 	c_Lang044 =	Prema Conde
 	c_Lang045 =	Plain Text (Raw)
 	c_Lang046 =	Texto comandos
@@ -554,6 +554,7 @@
 	c_Lang256 =	Axustar as coordenadas do centro da imaxe
 	c_Lang257 =	período
 	c_Lang258 =	Retorno
+	c_Lang259 =	Lanzamento
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar AutoHotkey

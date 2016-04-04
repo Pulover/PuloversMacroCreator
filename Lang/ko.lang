@@ -339,7 +339,7 @@
 	c_Lang040 =	중간
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	해제 / 기다려
+	c_Lang043 =	해제
 	c_Lang044 =	계산을 클릭합니다
 	c_Lang045 =	일반 텍스트 (원료)
 	c_Lang046 =	명령이있는 텍스트
@@ -554,6 +554,7 @@
 	c_Lang256 =	화상의 중심 좌표를 조정
 	c_Lang257 =	기간
 	c_Lang258 =	반환
+	c_Lang259 =	기다려
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기

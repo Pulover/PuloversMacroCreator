@@ -339,7 +339,7 @@
 	c_Lang040 =	Midt
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Hold / Slipp
+	c_Lang043 =	Hold
 	c_Lang044 =	Klikk Tell
 	c_Lang045 =	Ren tekst (Raw)
 	c_Lang046 =	Tekst med kommandoer
@@ -554,6 +554,7 @@
 	c_Lang256 =	Juster koordinatene til sentrum av bildet
 	c_Lang257 =	Periode
 	c_Lang258 =	Komme tilbake
+	c_Lang259 =	Slipp
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksportere til AutoHotkey

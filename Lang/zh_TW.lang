@@ -339,7 +339,7 @@
 	c_Lang040 =	中間
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	保留/釋放
+	c_Lang043 =	保留
 	c_Lang044 =	點擊數
 	c_Lang045 =	純文本（RAW）
 	c_Lang046 =	文本的命令
@@ -554,6 +554,7 @@
 	c_Lang256 =	調整坐標到圖像的中心
 	c_Lang257 =	期
 	c_Lang258 =	返回
+	c_Lang259 =	釋放
 		
 ; 16. Other Windows		
 	t_Lang001 =	導出到華民航空

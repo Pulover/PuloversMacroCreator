@@ -339,7 +339,7 @@
 	c_Lang040 =	Bližnji
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Držite / Spustite
+	c_Lang043 =	Držite
 	c_Lang044 =	Kliknite Count
 	c_Lang045 =	Golo besedilo (Raw)
 	c_Lang046 =	Besedilo z ukazi
@@ -554,6 +554,7 @@
 	c_Lang256 =	Prilagodi koordinate središča sliki
 	c_Lang257 =	obdobje
 	c_Lang258 =	Nazaj
+	c_Lang259 =	Spustite
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey

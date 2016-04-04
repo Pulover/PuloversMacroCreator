@@ -1,13 +1,20 @@
-﻿[PMC Code]|F4||1|Window|1|ControlCmd
-1|Run|notepad.exe|1|0|Run|||||
-2|WinWait||1|333|WinWait||ahk_class Notepad|||
-3|[Control]|Test Text Sample`n|1|0|ControlSetText|Edit1|ahk_class Notepad|||
-4|Control + End|{Control Down}{End}{Control Up}|1|0|Send|||||
-5|F5|{F5}|1|20|ControlSend|Edit1|ahk_class Notepad|||
-6|[Control]|noteVar|1|0|ControlGetText|Edit1|ahk_class Notepad|||
-7|[Text]|^s|1|0|ControlSend|Edit1|ahk_class Notepad|||
-8|WinWait||1|333|WinWait||ahk_class #32770|||
-9|[Control]|Test.txt|1|0|ControlSetText|Edit1|ahk_class #32770|||
-10|[Control]|Choose`, 2|1|0|Control|ComboBox3|ahk_class #32770|||
-11|[MsgBox]|%noteVar%|1|0|MsgBox|262144||||
+﻿[PMC Code v5.0.0]|F4||1|Window,2,Fast,0,1|1|ControlCmd
+Groups=
+1|[MsgBox]|All Control Commands should work with the target window on the background (but not minimized).|1|0|MsgBox|64|Control commands demonstration on NotepadControl commands demonstration on Notepad|||
+2|Run|notepad.exe|1|0|Run|||||
+3|WinWait||1|333|WinWait||ahk_class Notepad|||
+4|[MsgBox]|Setting text on notepad control...|1|0|MsgBox|64|Control commands demonstration on NotepadControl commands demonstration on Notepad|||
+5|[Control]|Test Text Sample`n|1|0|ControlSetText|Edit1|ahk_class Notepad|||
+6|[MsgBox]|Sending keys to notepad control...|1|0|MsgBox|64|Control commands demonstration on Notepad|||
+7|Control + End|{Control Down}{End}{Control Up}|1|20|ControlSend|Edit1|ahk_class Notepad|||
+8|F5|{F5}|1|20|ControlSend|Edit1|ahk_class Notepad|||
+9|[Text]|^s|1|0|ControlSend|Edit1|ahk_class Notepad|||
+10|WinWait||1|333|WinWait||ahk_class #32770|||
+11|[MsgBox]|Setting text on dialog window...|1|0|MsgBox|64|Control commands demonstration on Notepad|||
+12|[Control]|Test.txt|1|0|ControlSetText|Edit1|ahk_class #32770|||
+13|[MsgBox]|Using control to choose 2nd option in dropdown list (Unicode)...|1|0|MsgBox|64|Control commands demonstration on Notepad|||
+14|[Control]|Choose`, 2|1|0|Control|ComboBox3|ahk_class #32770|||
+15|[MsgBox]|Retrieving text from notepad control...|1|0|MsgBox|64|Control commands demonstration on Notepad|||
+16|[Control]|noteVar|1|0|ControlGetText|Edit1|ahk_class Notepad|||
+17|[MsgBox]|%noteVar%|1|0|MsgBox|262144|Control commands demonstration on Notepad|||
 

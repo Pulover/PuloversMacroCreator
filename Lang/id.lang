@@ -339,7 +339,7 @@
 	c_Lang040 =	Tengah
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Tahan / Lepas
+	c_Lang043 =	Tahan
 	c_Lang044 =	Klik Hitungan
 	c_Lang045 =	Plain Text (Raw)
 	c_Lang046 =	Teks dengan perintah
@@ -554,6 +554,7 @@
 	c_Lang256 =	Menyesuaikan koordinat ke tengah gambar
 	c_Lang257 =	Periode
 	c_Lang258 =	Kembali
+	c_Lang259 =	Lepas
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey

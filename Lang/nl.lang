@@ -339,7 +339,7 @@
 	c_Lang040 =	Midden
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Hold / Laat
+	c_Lang043 =	Hold
 	c_Lang044 =	Klik Count
 	c_Lang045 =	Tekst zonder opmaak (Raw)
 	c_Lang046 =	Tekst commando's
@@ -554,6 +554,7 @@
 	c_Lang256 =	Stel coördinaten naar het midden van het beeld
 	c_Lang257 =	Periode
 	c_Lang258 =	Terugkeer
+	c_Lang259 =	Laat
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey

@@ -98,7 +98,7 @@
 				break
 			If ((pb_Sel) && (!ActiveRows.Selected[A_Index]))
 				continue
-			Data_GetTexts(LVData, A_Index, Action, Step, TimesX, DelayX, Type, Target, Window)
+			Data_GetTexts(LVData, mListRow, Action, Step, TimesX, DelayX, Type, Target, Window)
 			If ((ShowProgBar = 1) && (RunningFunction = "") && (FlowControl.Break = 0) && (FlowControl.Continue = 0) && (FlowControl.If = 0))
 			{
 				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType42%
@@ -450,7 +450,7 @@
 						FlowControl.Continue++
 						continue
 					}
-					Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step, TimesX, DelayX, Type, Target, Window)
+					Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step)
 				,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesX)
 				,	LoopDepth++
 				,	PlaybackVars[LoopDepth] := []
@@ -479,7 +479,14 @@
 					}
 					Else If (Type = cType39)
 					{
-						Loop, Parse, % Pars[1], % Pars[2], % Pars[3]
+						If (RegExMatch(Trim(Pars[1]), "%\s+(.+)", _Match) = 1)
+							Step := Eval(_Match1, PlaybackVars[LoopDepth][mLoopIndex])[1]
+						Else
+						{
+							Step := RegExReplace(Pars[1], "\w+", "%$0%", "", 1)
+						,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Step)
+						}
+						Loop, Parse, Step, % Pars[2], % Pars[3]
 						{
 							If (StopIt)
 								break 3
@@ -846,12 +853,14 @@
 			If (Type = cType42)
 				continue
 			TimesLoop := TimesX > 1
-		,	CheckVars(TimesX)
+		,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesX)
 		,	FieldsData := {Action: Action, Step: Step, DelayX: DelayX, Type: Type, Target: Target, Window: Window}
 			While (TimesX)
 			{
-				PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := TimesLoop ? A_Index : mLoopIndex
-			,	Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step, TimesX, DelayX, Type, Target, Window)
+				Data_GetTexts(LVData, mListRow, Action, Step, TimesX, DelayX, Type, Target, Window)
+			,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := TimesLoop ? A_Index : mLoopIndex
+			,	Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step)
+			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], ((Type = cType34) || (Type = cType43)) ? "" : Step, TimesX, DelayX, Target, Window)
 				If (StopIt)
 				{
 					Try Menu, Tray, Icon, %DefaultIcon%, 1
@@ -1986,23 +1995,14 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 }
 
-SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef Target, ByRef Window)
+SplitStep(CustomVars, Step)
 {
-	local Pars := [], LoopField, _Step, _key, _value
-	If ((Type = cType34) || (Type = cType43))
-		return Pars
-	If (Type = cType39)
-	{
-		If (RegExMatch(Trim(Step), "% (.*)", _Match) = 1)
-			Step := Eval(_Match1, CutomVars)[1]
-		Else
-			Step := RegExReplace(Step, "\w+", "%$0%", "", 1)
-	}
+	local Pars := [], LoopField, _Step, _key, _value, _each, _par, _elements, pd
 	If (InStr(FileCmdList, Type "|"))
 		Step := StrReplace(Step, "````,", _x)
 	Step := StrReplace(Step, "%A_Space%", _y)
 ,	Step := StrReplace(Step, "%A_Tab%", _z)
-,	EscCom(true, Step, TimesX, DelayX, Target, Window)
+,	EscCom(true, Step)
 ,	Step := StrReplace(Step, "``,", _x)
 ,	Step := StrReplace(Step, "``a", "`a")
 ,	Step := StrReplace(Step, "``b", "`b")
@@ -2015,35 +2015,21 @@ SplitStep(CustomVars, ByRef Step, ByRef TimesX, ByRef DelayX, ByRef Type, ByRef 
 ,	Step := StrReplace(Step, "``;", ";")
 ,	Step := StrReplace(Step, "``::", "::")
 ,	Step := StrReplace(Step, "````", "``")
-	Loop, Parse, Step, `,, %A_Space%%A_Tab%
+,	Pars := GetPars(Step)
+	For, _each, _par in Pars
 	{
-		LoopField := A_LoopField
-	,	CheckVars(CustomVars, LoopField)
+		_par := StrReplace(_par, _x, ",")
+	,	_par := StrReplace(_par, _y, A_Space)
+	,	_par := StrReplace(_par, _z, A_Tab)
+	,	CheckVars(CustomVars, _par)
 		If ((InStr(Type, "String") = 1) || (Type = "SplitPath"))
 		{
 			For _key, _value in CustomVars
-				If (LoopField = _key)
-					LoopField := _value
+				If (_par = _key)
+					_par := _value
 		}
-		Pars[A_Index] := LoopField
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``a", "`a")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``b", "`b")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``f", "`f")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``n", "`n")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``r", "`r")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``t", "`t")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``v", "`v")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``%", "%")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``;", ";")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``::", "::")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "````", "``")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], _x, ",")
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], _y, A_Space)
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], _z, A_Tab)
-	,	Pars[A_Index] := StrReplace(Pars[A_Index], "``")
-	,	_Step .= Pars[A_Index] ", "
+		Pars[A_Index] := _par
 	}
-	Step := SubStr(_Step, 1, -2)
 	return Pars
 }
 
@@ -2271,7 +2257,8 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 	}
 	Else If (Action = If11)
 	{
-		Pars := SplitStep(CustomVars, Step, TimesX, DelayX, Type, Target, Window)
+		Pars := SplitStep(CustomVars, Step)
+	,	CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
 	,	VarName := Pars[1], VarName := %VarName%
 		For _key, _value in CustomVars
 			If (Pars[1] = _key)
@@ -2281,7 +2268,8 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 	}
 	Else If (Action = If12)
 	{
-		Pars := SplitStep(CustomVars, Step, TimesX, DelayX, Type, Target, Window)
+		Pars := SplitStep(CustomVars, Step)
+	,	CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
 	,	VarName := Pars[1], VarName := %VarName%
 		For _key, _value in CustomVars
 			If (Pars[1] = _key)
@@ -2484,8 +2472,19 @@ CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckV
 	{
 		If (!IsByRef(CheckVar%A_Index%))
 			continue
-		_i := A_Index
-		If (RegExMatch(CheckVar%_i%, "sU)^%\s+(.+)$", lMatch))  ; Expressions
+		EscCom(true, CheckVar%A_Index%), _i := A_Index
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``a", "`a")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``b", "`b")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``f", "`f")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``n", "`n")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``r", "`r")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``t", "`t")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``v", "`v")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``%", "%")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``;", ";")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``::", "::")
+	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "````", "``")
+		If (RegExMatch(CheckVar%_i%, "sU)^\s*%\s+(.+)$", lMatch))  ; Expressions
 		{
 			Try
 				EvalResult := Eval(lMatch1, CustomVars), CheckVar%_i% := EvalResult[1]
@@ -2510,6 +2509,18 @@ CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckV
 				CheckVar%_i% := RegExReplace(CheckVar%_i%, "U)" lMatch, _value)
 		}
 		CheckVar%_i% := DerefVars(CheckVar%_i%)
+	,	EscCom(true, CheckVar%_i%)
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``a", "`a")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``b", "`b")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``f", "`f")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``n", "`n")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``r", "`r")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``t", "`t")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``v", "`v")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``%", "%")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``;", ";")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``::", "::")
+	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "````", "``")
 	}
 }
 
@@ -2518,7 +2529,7 @@ DerefVars(v_String)
 	global
 	
 	v_String := StrReplace(v_String, "%A_Space%", "%_z%")
-	v_String := StrReplace(v_String, "``%", _w)
+,	v_String := StrReplace(v_String, "``%", _w)
 	While (RegExMatch(v_String, "%(\w+)%", rMatch))
 	{
 		FoundVar := StrReplace(%rMatch1%, "%", _w)

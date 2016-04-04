@@ -339,7 +339,7 @@
 	c_Lang040 =	Meio
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Segurar/Soltar
+	c_Lang043 =	Segurar
 	c_Lang044 =	Cliques
 	c_Lang045 =	Texto Simples (Raw)
 	c_Lang046 =	Texto com Comandos
@@ -554,6 +554,7 @@
 	c_Lang256 =	Ajustar coordenadas para o centro da imagem
 	c_Lang257 =	Período
 	c_Lang258 =	Retorno
+	c_Lang259 =	Soltar
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey

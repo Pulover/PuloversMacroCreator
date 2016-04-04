@@ -339,7 +339,7 @@
 	c_Lang040 =	Střední
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Žet / uvolnit
+	c_Lang043 =	Žet
 	c_Lang044 =	Klepněte na tlačítko Count
 	c_Lang045 =	Plain Text (Raw)
 	c_Lang046 =	Text s příkazy
@@ -554,6 +554,7 @@
 	c_Lang256 =	Nastavte souřadnic do středu obrazu
 	c_Lang257 =	Doba
 	c_Lang258 =	Vrátit se
+	c_Lang259 =	uvolnit
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export do AutoHotkey

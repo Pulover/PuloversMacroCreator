@@ -1,9 +1,13 @@
-﻿[PMC Code]|+F4||1|Window|1|Variables
-1|WinGetPos|WinPos_|1|20|WinGetPos||A|||
-2|[Assign Variable]|X_Pos := %WinPos_W% / 2|1|0|Variable|Expression||||
-3|[Assign Variable]|Y_Pos := %WinPos_H% / 2|1|0|Variable|Expression||||
-4|Move|%X_Pos%, %Y_Pos%, 0|1|10|Click|||||
-5|ToolTip|Mouse is at %X_Pos% x %Y_Pos%, %WinPos_X%, %WinPos_Y%|1|0|ToolTip|||||
-6|[MsgBox]|Today is %A_DDDD% and it's %A_Hour%:%A_Min%.|1|0|MsgBox|0||||
-7|ToolTip||1|0|ToolTip|||||
+﻿[PMC Code v5.0.0]|F1||1|Window,2,Fast,0,1|1|Variables
+Groups=
+1|CoordMode|Mouse, Window|1|0|CoordMode|||||
+2|WinGetPos|WinPos_|1|20|WinGetPos||A|||
+3|[Assign Variable]|X_Pos := WinPos_W / 2|1|0|Variable|Expression||||
+4|[Assign Variable]|Y_Pos := WinPos_H / 2|1|0|Variable|Expression||||
+5|Move|%X_Pos%, %Y_Pos%, 0|1|10|Click|||||
+6|CoordMode|Mouse, Screen|1|0|CoordMode|||||
+7|MouseGetPos|MouseX_Pos, MouseY_Pos|1|0|MouseGetPos|||||
+8|ToolTip|Mouse is at %X_Pos% x %Y_Pos%, %WinPos_X%, %WinPos_Y%|1|0|ToolTip|||||
+9|[MsgBox]|Today is %A_DDDD% and it's %A_Hour%:%A_Min%.`nThe active window is %WinPos_W% x %WinPos_H%.`nThe mouse cursor is at %MouseX_Pos% x %MouseY_Pos% relative to the screen.|1|0|MsgBox|0||||
+10|ToolTip||1|0|ToolTip|||||
 

@@ -339,7 +339,7 @@
 	c_Lang040 =	Centre
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Manteniment / sortida
+	c_Lang043 =	Manteniment
 	c_Lang044 =	Feu clic en Compte
 	c_Lang045 =	Text sense format (RAW)
 	c_Lang046 =	Text ordres
@@ -554,6 +554,7 @@
 	c_Lang256 =	Ajustar les coordenades del centre de la imatge
 	c_Lang257 =	període
 	c_Lang258 =	Retorn
+	c_Lang259 =	sortida
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey

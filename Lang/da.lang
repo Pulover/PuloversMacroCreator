@@ -339,7 +339,7 @@
 	c_Lang040 =	Middle
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Hold / Frigiv
+	c_Lang043 =	Hold
 	c_Lang044 =	Klik på Count
 	c_Lang045 =	Almindelig tekst (Raw)
 	c_Lang046 =	Tekst med kommandoer
@@ -554,6 +554,7 @@
 	c_Lang256 =	Juster koordinater til midten af billedet
 	c_Lang257 =	Periode
 	c_Lang258 =	Return
+	c_Lang259 =	Frigiv
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey

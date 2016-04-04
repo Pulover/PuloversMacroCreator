@@ -339,7 +339,7 @@
 	c_Lang040 =	Mes
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Hold / Release
+	c_Lang043 =	Hold
 	c_Lang044 =	Kliko Count
 	c_Lang045 =	Tekst Plain (Raw)
 	c_Lang046 =	Tekst me komandat
@@ -554,6 +554,7 @@
 	c_Lang256 =	Rregullo koordinatat në qendër të imazhit
 	c_Lang257 =	periudhë
 	c_Lang258 =	Kthimi
+	c_Lang259 =	Release
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporti në AutoHotkey

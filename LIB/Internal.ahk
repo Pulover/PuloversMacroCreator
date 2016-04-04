@@ -102,10 +102,11 @@ ShowTooltip()
 	return
 }
 
-ReplaceCursor(hControl, hCursor) {
-    if (A_PtrSize = 8)
+ReplaceCursor(hControl, hCursor)
+{
+    If (A_PtrSize = 8)
         DllCall("SetClassLongPtr", "Ptr", hControl, "int", -12, "Ptr", hCursor)
-    else
+    Else
         DllCall("SetClassLong", "Uint", hControl, "int", -12, "int", hCursor)
 }
 
@@ -413,11 +414,11 @@ EditCtrlHasFocus()
 	return ctrl
 }
 
-SCI_NOTIFY(wParam, lParam, msg, hwnd, sciObj) {
-
+SCI_NOTIFY(wParam, lParam, msg, hwnd, sciObj)
+{
 	line := sciObj.LineFromPosition(sciObj.position)
 
-	if (sciObj.scnCode = SCN_MARGINCLICK)
+	If (sciObj.scnCode = SCN_MARGINCLICK)
 		sciObj.ToggleFold(line)
 }
 
@@ -910,6 +911,48 @@ Receive_Params(wParam, lParam)
 FreeMemory()
 {
 	return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
+}
+
+GetPars(Param)
+{
+	Static _w := Chr(2)
+	ExprOn := false, InExpr := []
+,	Param := Trim(Param)
+,	Param := RegExReplace(Param, "(?<=^)%\s+|(?<=,)\s*%\s+", _w)
+,	r := [], i := 1
+	
+	Loop, Parse, Param
+	{
+		If (A_LoopField = _w)
+		{
+			ExprOn := true
+		,	r[i] .= "% "
+			continue
+		}
+		If ((InExpr.Length()) && (A_LoopField = InExpr[InExpr.Length()]))
+		{
+			InExpr.Pop()
+		,	r[i] .= A_LoopField
+			continue
+		}
+		If ((ExprOn) && ((A_LoopField = """") || (A_LoopField = "(") || (A_LoopField = "[") || (A_LoopField = "{")))
+		{
+			InExpr.Push(A_LoopField = "(" ? ")" : A_LoopField = "[" ? "]" : A_LoopField = "{" ? "}" : """")
+		,	r[i] .= A_LoopField
+			continue
+		}
+		If ((A_LoopField = ",") && (InExpr.Length() = 0))
+		{
+			ExprOn := false, i++
+			continue
+		}
+		r[i] .= A_LoopField
+	}
+	
+	For k, v in r
+		r[k] := Trim(v)
+	
+	return r
 }
 
 LV_ColorsMessage(wParam, lParam)

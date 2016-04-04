@@ -339,7 +339,7 @@
 	c_Lang040 =	Orta
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Bırak / Tutun
+	c_Lang043 =	Bırak
 	c_Lang044 =	Kont tıklayın
 	c_Lang045 =	Düz Metin (Raw)
 	c_Lang046 =	Komutları ile Metin
@@ -554,6 +554,7 @@
 	c_Lang256 =	Görüntünün merkezine koordinatları ayarlayın
 	c_Lang257 =	dönem
 	c_Lang258 =	Dönüş
+	c_Lang259 =	Tutun
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
