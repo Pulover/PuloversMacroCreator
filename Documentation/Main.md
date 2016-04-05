@@ -1,12 +1,10 @@
-﻿# Main Window
+# Main Window
 
 **Tip**: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.
 
 ## Table of Contents
 
 * [Hotkeys](#hotkeys)
-* [Main Loop](#main-loop)
-* [Search Bar](#search-bar)
 * [File Menu](#file-menu)
 * [Macro Menu](#macro-menu)
 * [Commands Menu](#commands-menu)
@@ -15,6 +13,8 @@
 * [Select Menu](#select-menu)
 * [View Menu](#view-menu)
 * [Options Menu](#options-menu)
+* [Main Loop](#main-loop)
+* [Search Bar](#search-bar)
 * [Modify / Insert](#modify-/-insert)
 * [Command Line Parameters](#command-line-parameters)
 
@@ -98,7 +98,12 @@ Runs currently selected Macro immediately without Hotkeys.
 
 ### Timer
 
-**Play once**: Runs currently selected Macro one time after the specified time. *Play every X (mili)seconds* runs it automatically and repeatedly at the specified time interval.  
+**Play once**: Runs currently selected Macro one time after the specified time.
+
+**Play every X (mili)seconds**: Runs it automatically and repeatedly at the specified time interval.  
+
+**Run immediately**: Runs the first time immediately instead of waiting the specified time to start.
+
 The Abort Hotkey can be used to turn the Timer off.  
 To have other Macros active during Timer check the *Always Active* option or right-click the TrayMenu icon and select **Play**.  
 
