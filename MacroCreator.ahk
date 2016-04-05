@@ -1659,7 +1659,7 @@ Tooltip
 Gui, 1:+OwnDialogs
 Gui, 1:Submit, NoHide
 StopIt := 1
-ActivateHotKeys(1, 0, 0, "", 1)
+ActivateHotKeys(1, 0, 0,, 1)
 If (HideMainWin)
 	GoSub, ShowHide
 Else
@@ -5092,7 +5092,7 @@ Draw := 0
 If (SS = 1)
 {
 	If (ScreenDir = "")
-		ScreenDir := A_AppData "\MacroCreator\Screenshots"
+		ScreenDir := SettingsFolder "\Screenshots"
 	IfNotExist, %ScreenDir%
 		FileCreateDir, %ScreenDir%
 	file := ScreenDir "\Screen_" A_Now ".png", screen := wX "|" wY "|" wW "|" wH
@@ -10998,7 +10998,7 @@ If (WinActive("ahk_id " PMCWinID))
 	WinActivate,,, ahk_id %PMCWinID%
 If !(PlayOSOn)
 {
-	ActivateHotkeys("", "", 1, 1, 1)
+	ActivateHotkeys(,, 1, 1, 1)
 	StopIt := 0
 	Tooltip
 	SetTimer, OSPlayOn, -1
@@ -12644,7 +12644,7 @@ If (RegExMatch(o_AutoKey[A_List], "i)Joy\d+$"))
 GuiControl, 1:Show, JoyKey
 aBand := RbMain.IDToIndex(7), RbMain.GetBand(aBand,,, bSize)
 ,	RbMain.ModifyBand(aBand, "Child", hJoyKey), RbMain.SetBandWidth(aBand, bSize)
-,	ActivateHotkeys("", "", "", "", "", 1), TB_Edit(TbSettings, "WinKey", 0, 0)
+,	ActivateHotkeys(,,,,, 1), TB_Edit(TbSettings, "WinKey", 0, 0)
 return
 
 SetNoJoy:

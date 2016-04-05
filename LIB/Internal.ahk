@@ -626,34 +626,47 @@ class IfCondition
 
 ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy := "")
 {
+	static LastFast, LastSlow, LastPause, LastAbort, LastRec, LatRecNew, LastPlay := {}
 	local ActiveKeys
 	
 	If (Speed != "")
 	{
+		Try Hotkey, %LastFast%, FastKeyToggle, Off
+		Try Hotkey, %LastSlow%, SlowKeyToggle, Off
 		If (FastKey !=  "None")
 			Hotkey, %FastKey%, FastKeyToggle, % (Speed) ? "On" : "Off"
 		If (SlowKey !=  "None")
 			Hotkey, %SlowKey%, SlowKeyToggle, % (Speed) ? "On" : "Off"
+		LastFast := FastKey, LastSlow := SlowKey
 	}
 	
 	If (Pause != "")
 	{
+		Try Hotkey, %LastPause%, f_PauseKey, Off
 		Try Hotkey, %PauseKey%, f_PauseKey, Off
 		If ((PauseKey != "") && (Pause = 1))
 			Hotkey, %PauseKey%, f_PauseKey, On
+		LastPause := PauseKey
 	}
 	
 	If (Stop != "")
 	{
+		Try Hotkey, %LastRec%, RecStart, Off
+		Try Hotkey, %LatRecNew%, RecStartNew, Off
+		Try Hotkey, %LastAbort%, f_AbortKey, Off
 		Try Hotkey, %AbortKey%, f_AbortKey, Off
 		If ((AbortKey != "") && (Stop = 1))
 			Hotkey, %AbortKey%, f_AbortKey, On
+		LastAbort := AbortKey
 	}
 	
 	If (Rec != "")
 	{
+		Try Hotkey, %LastRec%, RecStart, Off
+		Try Hotkey, %LatRecNew%, RecStartNew, Off
 		Try Hotkey, %RecKey%, RecStart, % (Rec) ? "On" : "Off"
 		Try Hotkey, %RecNewKey%, RecStartNew, % (Rec) ? "On" : "Off"
+		LastRec := RecKey, LatRecNew := RecNewKey
 	}
 	
 	If (Play != "")
@@ -662,15 +675,21 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 		{
 			#If !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
 			Hotkey, If, !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
+			Try Hotkey, % LastPlay.Auto[A_Index], f_AutoKey, Off
+			Try Hotkey, % LastPlay.Man[A_Index], f_ManKey, Off
 			If (ListCount%A_Index% = 0)
 				continue
 			If (o_AutoKey[A_Index] != "")
 			{
 				Hotkey, % o_AutoKey[A_Index], f_AutoKey, % (Play) ? "On" : "Off"
+				LastPlay["Auto", A_Index] := o_AutoKey[A_Index]
 				ActiveKeys++
 			}
 			If (o_ManKey[A_Index] != "")
+			{
 				Hotkey, % o_ManKey[A_Index], f_ManKey, % (Play) ? "On" : "Off"
+				LastPlay["Man", A_Index] := o_ManKey[A_Index]
+			}
 			Hotkey, If
 			#If
 		}
