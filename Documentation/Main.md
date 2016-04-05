@@ -4,29 +4,61 @@
 
 ## Table of Contents
 
-* [Files](#files)
-* [Record & Play](#record-&-play)
-* [Options](#options)
-* [Edit Commands](#edit-commands)
+* [Hotkeys](#hotkeys)
+* [Main Loop](#main-loop)
+* [Search Bar](#search-bar)
+* [File Menu](#file-menu)
+* [Macro Menu](#macro-menu)
+* [Commands Menu](#commands-menu)
+* [Function Menu](#function-menu)
+* [Edit Menu](#edit-menu)
+* [Select Menu](#select-menu)
+* [View Menu](#view-menu)
+* [Options Menu](#options)
 * [Modify / Insert](#modify-/-insert)
-* [Macros](#macros)
 * [Command Line Parameters](#command-line-parameters)
 
-## Files
+## Hotkeys
 
-**New**: Starts a new Project.
+Hotkeys are sometimes referred to as shortcut keys and are used to run/play the macros.
 
-**Open**: Opens a Project (it can be a PMC file or an AHK file containing a PMC Code).
+**Play**: Selects the Automatic Hotkey to execute the currently selected Macro. You make combinations such as `Ctrl + X`.
 
-**Save / Save As**: Saves current Project in a PMC file including all non-empty Macros.
+**Manual**: Selects the Manual Hotkey to execute the currently selected Macro step-by-step.
 
-**Export**: Opens the [Export Window](Export.html) to save Macros in AHK Script Format.
+**Stop**: Selects the Hotkey to stop execution
 
-**Preview**: Opens the [Preview Window](Preview.html) which shows the current Macro in AHK Script.
+**Pause**: Selects the Hotkey to pause execution
 
-**Options**: Opens the [Settings Window](Settings.html) where it's possible to configure various options.
+## File
 
-**List Variables**: Displays user-defined variables and their current contents.
+### New
+
+Starts a new Project.
+
+### Open
+
+Opens a Project (it can be a PMC file or an AHK file containing a PMC Code).
+
+### Save / Save As
+
+Saves current Project in a PMC file including all non-empty Macros.
+
+### Export
+
+Opens the [Export Window](Export.html) to save Macros in AHK Script Format.
+
+### Preview
+
+Opens the [Preview Window](Preview.html) which shows the current Macro in AHK Script.
+
+### Options
+
+Opens the [Settings Window](Settings.html) where it's possible to configure various options.
+
+### List Variables
+
+Displays user-defined variables and their current contents.
 
 ## Record & Play
 
@@ -70,16 +102,6 @@ To have other Macros active during Timer check the *Always Active* option or rig
 **Windows**: If checked adds the Windows Key as modifier to the Play Hotkey.
 
 **Joystick**: Sets a joystick button to run the Macro. When activated the Play Hotkey box will switch to accept only joystick buttons. Only buttons are detected (axis, pov and others are not). The number before "Joy" is the joystick number and the number after it is the button number, so 2Joy1 is the second joystick's first button.
-
-## Hotkeys
-
-**Play**: Selects the Automatic Hotkey to execute the currently selected Macro
-
-**Manual**: Selects the Manual Hotkey to execute the currently selected Macro step-by-step.
-
-**Stop**: Selects the Hotkey to stop execution
-
-**Pause**: Selects the Hotkey to pause execution
 
 ## Edit Commands
 
