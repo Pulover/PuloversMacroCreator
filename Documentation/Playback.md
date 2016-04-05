@@ -17,7 +17,7 @@ The *Play Current Macro* button will run the active Macro immediately without ac
 
 ## Hotkeys
 
-The Playback Hotkeys are selected in the boxes at the top-right of the main window.
+The Playback Hotkeys are selected in the hotkey toolbars in the main window.
 
 **Play** (Auto Hotkey): Selects the Hotkey to reproduce the currently selected Macro the amount of times set in the Repeat box at the bottom. The Win option add Win key as a modifier. During playback the tray icon will change to playing state. The executing Macro must be finished or stopped before you can execute a new one.
 
@@ -108,3 +108,4 @@ To change options click the Options button on the main window or select Options 
 **Auto Hide Controls Toolbar**: If checked the Controls Toolbar will be automatically shown when a Playback hotkey is pressed and hidden when execution finishes.
 
 **Random Sleeps**: If checked all delays during playback will be a random value for more or less of the defined percentage, e.g.: if percentage is set to 50, a command with a delay of 300ms will be set to any value between 150ms and 450ms. Percentage can be set in the counter.
+

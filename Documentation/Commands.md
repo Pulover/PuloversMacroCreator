@@ -10,11 +10,25 @@ This window allows you to easily search for a command or function. Simply type a
 
 The following fields appear on some of the Command Windows and will behave the same for all, therefore will be omitted from their parameters.
 
-* **Repeat**: How many times to execute the command. This field is ignored in some commands. This field accepts [Variables & Expressions](Variables.html).
-* **Delay**: Time to wait before the next command line, except for the *Message box* and *KeyWait* command it sets the *Timeout*, for the *Set Timer* command it sets the Period. This field is ignored in some of the commands. This field accepts [Variables & Expressions](Variables.html).
-* **Control**: Selects the target control to send the command. Use the *Get* button (...) to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (unique ID), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter. This field accepts [Variables & Expressions](Variables.html).
-* **Window**: Title, partial title or identifier of a target window. The first parameter is [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm), you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. The matching behavior is set by *Title Match Mode* and can be changed in the [Playback options](Playback.html#playback-options). This field accepts [Variables & Expressions](Variables.html).  
-* **WinTitle**: Selects what informations to retrieve from a target window (Title/Class/Process/ID/ProcessID) with the *Get* tool for the [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm) parameter. Check one or more items in the list and use the *Get* button (...) to copy the available information from the window.  
+### Repeat
+
+How many times to execute the command. This field is ignored in some commands. This field accepts [Variables & Expressions](Variables.html).
+
+### Delay
+
+Time to wait before the next command line, except for the *Message box* and *KeyWait* command it sets the *Timeout*, for the *Set Timer* command it sets the Period. This field is ignored in some of the commands. This field accepts [Variables & Expressions](Variables.html).
+
+### Control
+
+Selects the target control to send the command. Use the *Get* button (...) to easily find a control's name: Point the mouse to its location and Right-Click on it. To operate upon a control's HWND (unique ID), leave the Control parameter blank and specify ahk_id %ControlHwnd% for the WinTitle parameter. This field accepts [Variables & Expressions](Variables.html).
+
+### Window
+
+Title, partial title or identifier of a target window. The first parameter is [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm), you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. The matching behavior is set by *Title Match Mode* and can be changed in the [Playback options](Playback.html#playback-options). This field accepts [Variables & Expressions](Variables.html).  
+
+### WinTitle
+
+Selects what informations to retrieve from a target window (Title/Class/Process/ID/ProcessID) with the *Get* tool for the [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm) parameter. Check one or more items in the list and use the *Get* button (...) to copy the available information from the window.  
 **Note**: The options checked only determine what the *Get* tool will retrieve, it does not affect the command.
 
 ## Table of Contents
@@ -49,3 +63,4 @@ The following fields appear on some of the Command Windows and will behave the s
 * [Internet Explorer](Commands/Internet_Explorer.html)
 * [Expression / COM Interface](Commands/Expression.html)
 * [PostMessage / SendMessage](Commands/PostMessage_and_SendMessage.html)
+
