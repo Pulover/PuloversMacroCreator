@@ -75,6 +75,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Changed *List Variables* to display User-Defined variables only.
 * Extended Backup system to update backup file with every change.
 * Fixed corrupted pmc files saved on exit.
+* Fixed hotkeys not being automatically disabled when changed.
 * Fixed bug with recording of mouse buttons.
 * Fixed bug with WinWait timeout.
 * Fixed bugs with IE/COM Interface.

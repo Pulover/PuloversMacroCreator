@@ -91,25 +91,26 @@ Action1 := "Click"
 			,	40: ["DownloadB", "ZipB"]}
 ,	ContHTitle := {	2: ["Preview.html"]
 			,	3: ["Commands/Pause.html", "Commands/Message_Box.html", "Commands/KeyWait.html"]
-			,	4: ["Settings.html", "Settings.html#recording.", "Settings.html#playback", "Settings.html#defaults"
+			,	4: ["Settings.html", "Record.html#recording-options.", "Playback.html#playback-options", "Settings.html#defaults"
 				, "Settings.html#screenshots", "Settings.html#email-accounts", "Settings.html#language"
 				, "Settings.html#language-editor", "Settings.html#user-global-variables", "Settings.html#language-editor"]
 			,	5: ["Commands/Mouse.html"]
 			,	8: ["Commands/Text.html"]
 			,	10: ["Commands/Run.html"]
 			,	11: ["Commands/Window.html"]
-			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/Label.html", "Commands/SetTimer.html"
+			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/SetTimer.html"
+				, "Commands/Label.html"
 				, "Commands/Loop_FilePattern.html",	"Commands/Loop_Parse.html", "Commands/Loop_Read.html", "Commands/Loop_Registry.html"
-				, "Commands/While.html", "Commands/For.html", "Commands/Until.html"]
+				, "Commands/While.html", "Commands/For.html"]
 			,	14: ["Export.html"]
 			,	19: ["Commands/Image_Search.html", "Commands/Pixel_Search.html"]
 			,	21: ["Commands/If_Statements.html", "Commands/Variables.html", "Commands/Functions.html"]
 			,	22: ["Commands/PostMessage_and_SendMessage.html"]
 			,	23: ["Commands/Control.html"]
 			,	24: ["Commands/Internet_Explorer.html", "Variables.html#expressions"]
-			,	26: ["Commands/Find_a_Command.html"]
+			,	26: ["Commands.html#find-a-command"]
 			,	30: ["Variables.html#expressions"]
-			,	34: ["Commands/Find_a_Command.html"]
+			,	34: ["Commands.html#find-a-command"]
 			,	38: ["UserFunctions", "UserFunctions", "UserFunctions"]
 			,	39: ["Commands/Send_Email.html"]
 			,	40: ["Commands/Download_Files.html", "Commands/Zip_Files.html"] }

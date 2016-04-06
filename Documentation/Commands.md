@@ -1,4 +1,4 @@
-﻿# Commands
+﻿# Command Windows
 
 **Tip**: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.
 
@@ -6,7 +6,7 @@
 
 This window allows you to easily search for a command or function. Simply type a keyword and the results will be displayed in the box below. Double-Click an item or press Enter to open the target window. You can also use the search bar in the main window toolbar.
 
-### Common_Fields
+## Common Fields
 
 The following fields appear on some of the Command Windows and will behave the same for all, therefore will be omitted from their parameters.
 

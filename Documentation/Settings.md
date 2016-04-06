@@ -19,19 +19,33 @@ All settings are saved to *MacroCreator.ini*, User Global Variables are saved to
 
 ## General
 
-**Create backups automatically**: If enabled the program will automatically create a backup file of the active project everytime the user presses the *Activate Macros* button (green play button).
+### Create backups automatically
 
-**Allow Multiple Instances**: Determines whether Macro Creator is allowed to run concurrent instances.
+If enabled the program will automatically create a backup file of the active project everytime the a change is made to one of the Macro Lists.
 
-**Remove Theme from Toolbars**: Removes the current theme colors from the main window toolbars (you must restart the application to apply the changes).
+### Allow Multiple Instances
 
-**Use Expression by default for Variables Assignment**: Determines whether the *Expression* option will be enabled by default for new Variable Assignments.
+Determines whether Macro Creator is allowed to run concurrent instances.
 
-**Display confirmation when closing a macro**: Enables / Disables prompt before closing a macro.
+### Remove Theme from Toolbars
 
-**Action of main window's close button**: Determines whether to close the application or minimize it to tray when the close button on the title bar is clicked or Alt+F4 is pressed.
+Removes the current theme colors from the main window toolbars (you must restart the application to apply the changes).
 
-**Hightlight Loops and Statements**: When activated rows inside Loops and text of rows inside Statements will be shown in colors, also braces and wildcards will be placed in front of command's index as representation to help visualize which rows are nested. Braces represent Loops and Wildcards represent If Statements, so for example *N* \*>\*> is equivalent to:  
+### Use Expression by default for Variables Assignment
+
+Determines whether the *Expression* option will be enabled by default for new Variable Assignments.
+
+### Display confirmation when closing a macro
+
+Enables / Disables prompt before closing a macro.
+
+### Action of main window's close button
+
+Determines whether to close the application or minimize it to tray when the close button on the title bar is clicked or Alt+F4 is pressed.
+
+### Hightlight Loops and Statements
+
+Click on the **Index** Column Header or use the *View menu* to turn this option On/Off. When activated rows inside Loops and text of rows inside Statements will be shown in colors, also `>` and `\*` will be placed in front of command's index as representation to help visualize which rows are nested. Braces represent Loops and Wildcards represent If Statements, so for example *N* \*>\*> is equivalent to:  
 > If
 > {
 > 	Loop
@@ -46,13 +60,16 @@ All settings are saved to *MacroCreator.ini*, User Global Variables are saved to
 > 	}
 > }
 
-You can also click on the *Index* Column Header to turn this option On/Off.  
 You can change the default colors clicking on the color shown here and picking a new one from the selector.  
 
-**Show Indentation for Loops and Statements**: When activated Actions inside Loops or Statements will be shown with indentation.  
+### Show Indentation for Loops and Statements
+
+When activated Actions inside Loops or Statements will be shown with indentation.  
 You can also double-click on the *Action* Column Header to turn this option On/Off.  
 
-**Virtual Keys**: System keys and Modifiers that will be recognized during Recording and when Capture keys is enabled.
+### Virtual Keys
+
+System keys and Modifiers that will be recognized during Recording and when Capture keys is enabled. If your keyboard layout has a key that is not being captured, press it once and click the *Key History* button to see its VK and SC codes. You can add them to the list as `{VKnn}`, `{SCnn}` or `{VKnnSCnn}`.
 
 ## Recording
 
@@ -64,40 +81,70 @@ See [Playback Page](Playback.html#playback-options).
 
 ## Defaults
 
-**Mouse Coordinates**: Sets coordinate mode for Mouse commands and records to be relative to either the active window, screen or client area. This option is global and will affect both Recording and Playback so it should be set before adding any commands for the project.  
+### Mouse Coordinates
+
+Sets [coordinate mode](http://autohotkey.com/docs/commands/CoordMode.htm) for Mouse commands and records to be relative to either the active window, screen or client area. This option is global and will affect both Recording and Playback so it should be set before adding any commands for the project.  
 *Note*: This setting will be saved to the PMC file.
 
-**Default Mouse Delay**: Sets the default delay for each Mouse Command. This affects new commands added from the Mouse Command window and will only affect recording if 'Timed Intervals' is disabled.
+### Default Mouse Delay
 
-**Default Window Delay**: Sets the default delay for each Window (Set) Command. This affects new commands added from the Window Command window and Recording.
+Sets the default delay for each Mouse Command. This affects new commands added from the Mouse Command window and will only affect recording if 'Timed Intervals' is disabled.
 
-**Max History per Macro**: Sets the maximum History steps to keep for each macro. Changing this might have little impact in performance. It's recommended to restart Macro Creator after changing this setting.
+### Default Window Delay
 
-**Clear History**: Clears and resets History for all Macros.
+Sets the default delay for each Window (Set) Command. This affects new commands added from the Window Command window and Recording.
 
-**Default Script Editor**: Sets a default editor to open Script with the *Edit Script* button in the **Preview** window.
+### Max History per Macro
 
-**Default Macro File**: If a valid file with a PMC code is set it will be loaded on program start up.
+Sets the maximum History steps to keep for each macro. Changing this might have little impact in performance. It's recommended to restart Macro Creator after changing this setting.
 
-**Standard Library File**: Sets an AutoHotkey script file to be loaded automatically in the *Functions* window.
+### Clear History
+
+Clears and resets History for all Macros.
+
+### Default Script Editor
+
+Sets a default editor to open Script with the *Edit Script* button in the **Preview** window.
+
+### Default Macro File
+
+If a valid file with a PMC code is set it will be loaded on program start up.
+
+### Standard Library File
+
+Sets an AutoHotkey script file to be loaded automatically in the *Functions* window to be used as [External File Function](Functions.html#run-function-from-external-ahk-file).
 
 ## Screenshots
 
-**Draw Button**: Selects the Draw Button to be used for Screenshots tool and Get Area in Image Search.
+### Draw Button
 
-**Line Width (Px)**: Defines the pixel width of the rectangle when using the Image/Pixel Search are and Screenshots tool.
+Selects the Draw Button to be used for Screenshots tool and Get Area in Image Search.
 
-**Color**: Allows to change the color the rectangle used to define Image/Pixel Search area and Screenshots.
+### Line Width (Px)
 
-**Capture on release**: Captures Screenshots when the Draw button is released.
+Defines the pixel width of the rectangle when using the Image/Pixel Search are and Screenshots tool.
 
-**Press Enter to capture**: Waits for the user to press Enter to confirm the rectangle area of the Screenshot. Enabling this option allows you to adjust the search/capture area using hotkeys (**Ctrl + Arrow keys** to move the selection area and **Shift + Arrow keys** to resize it).
+### Color
 
-**Screenshots Directory**: Selects the default folder for Screenshots taken.
+Selects the color of the rectangle used to define Image/Pixel Search area and Screenshots.
+
+### Capture on release
+
+Captures Screenshots when the Draw button is released.
+
+### Press Enter to capture
+
+Waits for the user to press Enter to confirm the rectangle area of the Screenshot. Enabling this option allows you to adjust the search/capture area using hotkeys (**Ctrl + Arrow keys** to move the selection area and **Shift + Arrow keys** to resize it).
+
+### Screenshots Directory
+
+Selects the default folder for Screenshots taken.
 
 ## Email accounts
 
-Here you can add and test email accounts to be used with the *Send Email* feature. The information will be saved to the file *UserEmailAccounts.ini* in AppData folder, or the application folder in Portable Mode. The fields are standard email client fields so I'm not going to detail each one here.
+Here you can add and test email accounts to be used with the *Send Email* feature. The information will be saved to the file *UserEmailAccounts.ini* in AppData folder, or the application folder in Portable Mode. The fields are standard email client fields so they won't be detailed here.
+
+You can add, edit, remove and reorder the accounts here, as well as send a test message.
 
 ### Remarks
 
@@ -115,6 +162,8 @@ A new version of the language files may be released at any time independent of a
 ## User Global Variables
 
 Here you can define global variables that will be available during Playback. They may be used as constants so you can always call them from inside a command.  
+
+The variables defined here will always be available inside [User-Defined Functions](#user-defined-functions), even when scope is Local.
 
 User defined variables are saved to an INI file in the AppData\MacroCreator folder (it can also be edited in external text editors).
 

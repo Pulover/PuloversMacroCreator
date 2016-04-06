@@ -5,8 +5,8 @@
 * [Introduction](#introduction)
 * [Macros](#macros)
 * [Context Sensitive Hotkeys](#context-sensitive-hotkeys)
-* [Options](#options)
 * [Destination File](#destination-file)
+* [Options](#options)
 
 ## Introduction
 
@@ -16,33 +16,59 @@ Exports selected Macros to a working AutoHotkey Script file (*.ahk), optionally 
 
 Select Macros to be exported. Empty Macros and unchecked rows will be ignored. You can click and drag items and double-click to open the edit window.
 
-**Macro**: Name of the label used for the macro (leave blank to remove it from the exported script).
+### Macro
 
-**Hotkey**: Selects the Hotkey (AutoHotkey format) to execute the Macro. Here you can use Hotkeys that are not allowed for playback like RButton. You also edit the Hotkey directly in the list by either selecting the row and pressing F2 or you can click a row once to select it, wait at least half a second, then click the same row again to edit it.
+Name of the label used for the macro (leave blank to remove it from the exported script).
 
-**Loop**: Number of times to execute this Macro.
+### Hotkey
 
-**Block Mouse**: Adds `BlockInput, MouseMove`. The mouse cursor will not move in response to the user's physical movement of the mouse during execution.
+Selects the Hotkey (AutoHotkey format) to execute the Macro. Here you can use Hotkeys that are not allowed for playback like RButton. You also edit the Hotkey directly in the list by either selecting the row and pressing F2 or you can click a row once to select it, wait at least half a second, then click the same row again to edit it.
 
-**Stop**: Adds a Hotkey with the `ExitApp` command.
+### Loop
 
-**Pause**: Adds a Hotkey with the `Pause` command.
+Number of times to execute this Macro.
+
+### Block Mouse
+
+AddslockInput, MouseMove`. The mouse cursor will not move in response to the user's physical movement of the mouse during execution.
+
+### Stop
+
+Adds a Hotkey with the ÈxitApp`command.
+
+### Pause
+
+Adds a Hotkey with the `Pause`command.
 
 ## Destination File
 
-**Export to**: Selects the destination file to export selected Macros.
+### Export to
 
-**Indentation**: Use Tab-Indentation for Loops and If Statements.
+Selects the destination file to export selected Macros.
 
-**Comment out unchecked rows**: Keeps unchecked rows in the macro as commented out script, instead of not exporting them.
+### Indentation
 
-**Do not concatenate Send commands**: Exports sequences of Send commands in one line each and uses Loop for repeats.
+Use Tab-Indentation for Loops and If Statements.
 
-**Convert line breaks**: Converts line break symbols (\`n) in command parameters to real line breaks.
+### Comment out unchecked rows
 
-**Include PMC Code**: Includes a copy of the PMC code for each selected Macro at the end of the exported script to allow them to be loaded in **Macro Creator** by opening the ahk file from it. This will not affect the exported script execution.
+Keeps unchecked rows in the macro as commented out script, instead of not exporting them.
 
-**Create EXE File**: Runs Ahk2Exe Compiler after exporting the script to create an Executable File. The EXE file will be saved to the same folder as the script.  
+### Do not concatenate Send commands
+
+Exports sequences of Send commands in one line each and uses Loop for repeats.
+
+### Convert line breaks
+
+Converts line break symbols (\`n) in command parameters to real line breaks.
+
+### Include PMC Code
+
+Includes a copy of the PMC code for each selected Macro at the end of the exported script to allow them to be loaded in **Macro Creator** by opening the ahk file from it. This will not affect the exported script execution.
+
+### Create EXE File
+
+Runs Ahk2Exe Compiler after exporting the script to create an Executable File. The EXE file will be saved to the same folder as the script.  
 Once a script is compiled, it becomes a standalone executable; that is, it can be used even on machines where AutoHotkey is not installed (and such EXEs can be distributed or sold with no restrictions).  
 *Note*: This feature requires the latest version of [AutoHotkey](http://autohotkey.com/) installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).
 
@@ -54,13 +80,21 @@ Makes hotkeys and hotstrings work depending on the type of window that is active
 
 Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://autohotkey.com/docs).
 
-**\#Include**: Includes in the script files with external functions using the #Include directive, when they are present in one of the exported macros.
+### #Include
 
-**Global Variables**: If you have defined [User Global Variables](Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
+Includes in the script files with external functions using the #Include directive, when they are present in one of the exported macros.
 
-**Speed**: Increases or decreases the delay of Sleep (Pause) commands in exported scripts.
+### Global Variables
 
-**COM Objects**: Default behavior for the *Automatically create COM object* option in **Expression** window. [ComObjCreate](https://autohotkey.com/docs/commands/ComObjCreate.htm) will create a new COM object based with the given CLSID, while [ComObjActive](https://autohotkey.com/docs/commands/ComObjActive.htm) will try to connect to an existing instance of the application.
+If you have defined [User Global Variables](Settings.html#user-global-variables) you can select which of them will be included in the exported file. They will be added to the Auto-execute section.
+
+### Speed
+
+Increases or decreases the delay of Sleep (Pause) commands in exported scripts.
+
+### COM Objects
+
+Default behavior for the *Automatically create COM object* option in **Expression** window. [ComObjCreate](https://autohotkey.com/docs/commands/ComObjCreate.htm) will create a new COM object based with the given CLSID, while [ComObjActive](https://autohotkey.com/docs/commands/ComObjActive.htm) will try to connect to an existing instance of the application.
 
 ### Related
 

@@ -11,11 +11,17 @@ The simplest way to get started with Pulover's Macro Creator is using the record
 
 You can change record and playback options clicking on the arrows beside those buttons in the toolbar, or going to Settings.
 
-Although the recorder is a good choice for quick tasks, Pulover's Macro Creator can do many other things if you take the time to learn its commands. You can add loops, conditions, create variables and arrays, send text on a background window, search for an image or pixel and much more.
+Although the recorder is a good choice for quick tasks, **Pulover's Macro Creator** can do many other things if you take the time to learn its commands. You can add loops, conditions, create variables and arrays, send text on a background window, search for an image or pixel and much more.
 
 ### Download Examples
 
-* 
-* 
+* [Arrays](Examples/Arrays.pmc)
+* [Compare Variables](Examples/CompareVars.pmc)
+* [Control Commands](Examples/ControlCmd.pmc)
+* [Dynamic Variables](Examples/DynamicVars.pmc)
+* [Functions](Examples/Functions.pmc)
+* [Loop Types](Examples/LoopTypes.pmc)
+* [User-Defined Functions](Examples/UserFunctions.pmc)
+* [Variables](Examples/Variables.pmc)
 
 Check out the video tutorials at [www.macrocreator.com](http://macrocreator.com/help) to learn more.

@@ -58,14 +58,30 @@ Most commands and functions outputs variables with the result of its operation. 
 
 ## Expressions
 
-Check the option *Expression* to use AutoHotkey Expressions format in the value field. With expressions you can execute math operations, functions, assignments and object calls.  
-In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. A complete explanation can be found at [AHK documentation](http://autohotkey.com/docs/Variables.htm#Expressions).
+Expressions are used to perform one or more operations upon a series of variables, literal strings, and/or literal numbers. With expressions you can execute math operations, functions, assignments and object calls.
+
+In PMC you can execute expressions in the following ways:
+
+* Entering them in the Expression Window. You can enter multiple expressions separated by lines or commas.
+
+> ie := ComObjCreate("InternetExplorer.Application"), ie.Visible := true, ie.Navigate("macrocreator.com") ; This would create an InternetExplorer COM object and navigate to "macrocreator.com"
+
+* Checking the option *Expression* in the Variables Window.
 
 > MyVar := 30 * 100 / 200 ; This would assign 15 to MyVar
 > MyVar := Number + 100 ; This would assign the value from variable Number + 100 to MyVar
-> MyVar := StrLen("Some string") ; This would assign 11 to MyVar
 
-Since version 5.0.0, Expression format must be used for Function parameters and COM expressions.
+* Forcing expression in a command parameter by preceding it with a `%` and one or more spaces.
+
+> % StrLen("Some string") ; This would show 11 in a command parameter
+
+In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. A complete explanation can be found at [AHK documentation](http://autohotkey.com/docs/Variables.htm#Expressions).
+
+### Remarks
+
+Since version 5.0.0, AutoHotkey Expression format must be used for Function parameters and COM expressions. PMC files from previous versions are automatically converted.
+
+Some short variable names should be avoided in expressions as they are used internally and will not be correctly evaluated. The names are a, e, i, o, r, s, t, ac, eo, lf, lp, tt and numbered variations of them like a1, a2... tt1, tt2....
 
 ### Boolean Assignment
 

@@ -1,10 +1,9 @@
-# Main Window
+﻿# Main Window
 
 **Tip**: Right-click on an empty area of a Command Window to display links to AutoHotkey online documentation and related contents.
 
 ## Table of Contents
 
-* [Hotkeys](#hotkeys)
 * [File Menu](#file-menu)
 * [Macro Menu](#macro-menu)
 * [Commands Menu](#commands-menu)
@@ -13,32 +12,10 @@
 * [Select Menu](#select-menu)
 * [View Menu](#view-menu)
 * [Options Menu](#options-menu)
-* [Main Loop](#main-loop)
+* [Macro List](#macro-list)
 * [Search Bar](#search-bar)
-* [Modify / Insert](#modify-/-insert)
+* [Insert / Modify](#insert-/-modify)
 * [Command Line Parameters](#command-line-parameters)
-
-## Hotkeys
-
-Hotkeys are sometimes referred to as shortcut keys and are used to run/play the macros.
-
-### Play
-
-Selects the Automatic Hotkey to execute the currently selected Macro.  
-You can make combinations with modifiers such as `Ctrl + X`. To make combination with the Windows key, check the option *Add the Windows key to "Play" hotkey* in the Options menu or in the Options toolbar.  
-To use a Joystick button as the Play Hotkey, check the option *Use a joystick button as hotkey* in the Options menu or in the Options toolbar.
-
-### Manual
-
-Selects the Manual Hotkey to execute the currently selected Macro step-by-step. This hotkey cannot be a combination with modifiers.
-
-### Stop
-
-Selects the Hotkey to stop execution. You can make combinations with modifiers such as `Ctrl + X`.
-
-### Pause
-
-Selects the Hotkey to pause execution. Press the hotkey again to resume playback. You can make combinations with modifiers such as `Ctrl + X`.
 
 ## File Menu
 
@@ -125,140 +102,7 @@ If checked Playback will stop each Macro when the first selected row in its list
 
 If checked Playback will only execute selected rows in each Macro. Valid for all Playback commands.
 
-## Options
-
-### Settings
-
-Opens the [Settings Window](Settings.html) where it's possible to configure various options.
-
-### Loop
-
-Number of loops to execute the currently selected Macro. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
-
-### Minimize to Tray
-
-If checked will hide the main window when *Record* or *Play* button is pressed. You can show the window again from the Tray Menu or the button in the Controls Bar.
-
-### Display Controls
-
-If checked will display the [Controls Toolbar](Playback.html#controls-toolbar) window when *Record* or *Play* button is pressed. It's a smaller window with Playback and Record buttons allow these commands using the mouse. You can also open it from the Macro Menu and TrayIcon.
-
-### Capture Keys
-
-Enables Capturing of Key Presses on currently selected Macro List on the Main Window (this option does not affect Recording).
-
-### Always Active
-
-Keeps all valid Hotkeys always activated (including Record & Playback).
-
-### Shutdown options
-
-Selects an optional action to execute when Playback finishes.
-
-### Context Sensitive Hotkeys
-
-Makes hotkeys and hotstrings work depending on the type of window that is active or exists, or if an expression evaluates to true. For more information see [Playback](Playback.html#context-sensitive-hotkeys) and AutoHotkey documentation: [#IfWinActive](http://autohotkey.com/docs/commands/_ifwinactive) / [#If](http://autohotkey.com/docs/commands/_if).
-
-### Windows
-
-If checked adds the Windows Key as modifier to the Play Hotkey.
-
-### Joystick
-
-Sets a joystick button to run the Macro. When activated the Play Hotkey box will switch to accept only joystick buttons. Only buttons are detected (axis, pov and others are not). The number before "Joy" is the joystick number and the number after it is the button number, so 2Joy1 is the second joystick's first button.
-
-## Edit Commands
-
-### Edit
-
-When only one row is selected it has tha same behavior as a double-click on a row to enter the command's window for editing. If more then one or no row is selected it will open an edit window where you change the target Control and Window, Repeat Loops or Delay for selected rows (or all rows if none is selected). If the all checkboxes are left unchecked it will remove Control and Window from selected rows. Control and Window will only affect Send, Click and Control commands.
-
-### Cut Rows
-
-Cut selected Rows.
-
-### Copy Rows
-
-Copy selected Rows.
-
-### Paste Rows
-
-Paste copied Rows.
-
-### Delete Rows
-
-Deletes selected Rows.
-
-### Undo
-
-Undo one step in History of current Macro.
-
-### Redo
-
-Redo one step in History of current Macro.
-
-### Move Up
-
-Moves selected rows Up.
-
-### Move Down
-
-Moves selected rows Down.
-
-### Duplicate Rows
-
-Duplicates selected rows in the same list.
-
-### Copy to...
-
-Copies selected rows to a different Macro tab.
-
-### Groups
-
-Enables or disables groups in ListViews. To add a new group, select a row, click the small arrow beside the Groups button and select *Add group*. Enter a name for the group and press OK, the new group will be added above the first selected row. To rename a group, select the row immediately below it and repeat the same steps.
-
-### Edit Color Mark
-
-Opens a Color-Pick dialog to add or change a custom color mark in the first column cell of selected rows. Customized colors can be saved as a custom palette.
-
-### Edit Comment
-
-Adds / Changes the comment to be displayed to the right of the line in Exported AHK Scripts on selected rows. Click *Insert* to add a Comment Block.
-
-### Find / Replace
-
-This window helps finding and replacing parts of the commands in the *Details*, *Repeat*, *Delay*, *Control* and *Window* columns only. To select similar Command Types use the Select Menu.  
-Note: Changing parameters of certain commands may cause misbehavior in Playback. Replace should be used only when and where necessary.
-
-## Modify / Insert
-
-### Insert from Box
-
-Inserts the command in the Hotkey box at the bottom in the current selected row (or at the end of the list if no row is selected).
-
-### Repeat
-
-This field is used as a quick-edit to set the Repeat number to selected rows using the Apply buttons on the right.
-
-### Delay (ms)
-
-Default delay between commands. The number set in this box will be automatically applied to a new added command (except for Mouse and Window commands which have individual default values that can be set in the [Settings Window](Settings.html#defaults)). This field is also used as a quick-edit to set the Delay to selected rows using the Apply buttons on the right.
-
-### Insert Box
-
-This box can be used to add commands to the list. Click in the box and press the buttons to add on the keyboard then press the Insert button to add them to the list (you can also use the Insert key as a shortcut when the focus is on the ListView).
-
-### Insert Keystroke
-
-Alternative to the *Insert Box*. Opens a window where you can choose a keyboard key from a list. Double-click or click *Insert* to insert the key into the selected position. You can also choose to hold (Down) or release (Up) the key.
-
-### General Remarks
-
-When you click the Delete or Apply button (for Repeat or Delay) it will affect all selected rows, and if no row is selected it will apply to all rows in the current list.
-
-When adding a new command either by Command Window, Capturing keys or the Insert button if no row is selected they will be added to the end of the list, if one row is selected they will be added on top of that row, and if more then one row is selected a new copy of the command will be added on top of each selected row, except for Loop, and If Statements which will add a Start on top of the first selected row and an End below the last selected row, and for Goto, Label, Break, Continue, Variable Assignment and Functions, which will add only one row on top of the first selected.
-
-## Macros
+### Context Sensitve Hotkeys
 
 ### Add Macro
 
@@ -272,6 +116,10 @@ Closes the currently selected Macro tab.
 
 Copies all commands from currently selected Macro to a new tab.
 
+### Edit Macros
+
+Opens the *Edit Macros* window where you can reorder and rename macros. Double click an item to change also hotkeys and loops.
+
 ### Import Macro
 
 Imports a Project without erasing the current one. All found Macros will be appended to the tab list.
@@ -280,20 +128,258 @@ Imports a Project without erasing the current one. All found Macros will be appe
 
 Saves the currently selected Macro to a PMC file.
 
-### Edit Macros
+## Commands Menu
 
-Opens the *Edit Macros* window where you can reorder and rename macros. Double click an item to change also hotkeys and loops.
+Opens the *Command Windows* to insert commands, functions and statements. See [Command Windows](#Commands.html).
 
-### Macro Tabs
+## Function Menu
 
-Macro Creator supports multiple Macros / Hotkeys. To create a new Macro, click the **+** button (Add Macro / Ctrl+T). When you add or select a Macro in the tab list the current Hotkeys for it are displayed on the top-right part of the window, you can change them by clicking the box and pressing the keys on the keyboard. To remove a Hotkey click the box and press Backspace. Macros which have no Hotkey or no line of command will not be activated for Playback.
+Used for [User-Defined Functions](Functions.html#user-defined-functions).
 
-### Macro Lists
+### Create Function
 
-All commands of the Macros are displayed in the ListView.  
+Creates a new Function tab.
+
+### Add Parameter
+
+Adds a new Function Parameter to the currently selected Function tab. Function parameters can only be added **above** the Function Name row.
+
+### Add Return
+
+Adds a Function Return to the currently selected Function tab. Function returns can only be added **below** the Function Name row.
+
+### Convert Macro To Function
+
+Converts the currently selected Macro tab into a Function tab. The selected Macro must not contain any Label, Goto or Gosub commands.
+
+## Edit Menu
+
+This menu can also be open by right-clicking on the [Macro List](#macro-list).
+
+### Edit
+
+When only one row is selected it has tha same behavior as a double-click on a row to enter the command's window for editing. If more then one or no row is selected it will open an edit window where you change the target Control and Window, Repeat Loops or Delay for selected rows (or all rows if none is selected). If all checkboxes in the general edit window are left unchecked it will remove Control and Window from selected (or all) rows. Control and Window will only affect commands that use this column.
+
+### Cut Rows
+
+Cut selected Rows.
+
+### Copy Rows
+
+Copy selected Rows.
+
+### Paste Rows
+
+Paste copied Rows on top of selected rows. Notice that if more than one row is selected, copied content will be pasted on top of each selected row.
+
+### Delete Rows
+
+Deletes selected Rows.
+
+### Duplicate
+
+Duplicates selected rows in the same list.
+
+### Select All
+
+Selects all rows in the current list.
+
+### Copy to...
+
+Copies selected rows to a different Macro tab.
+
+### Groups
+
+Enables, disables, add and removes groups in Macro lists. To add a new group, select a row, click *Add group* (you can use the small arrow beside the Groups button in the Edit toolbar), enter a name for the group and press OK. The new group will be added above the first selected row. To rename a group, select the row immediately below it and repeat the same steps.
+
+### Move Up
+
+Moves selected rows up.
+
+### Move Down
+
+Moves selected rows down.
+
+### Undo
+
+*Undo* one step in History of current Macro.
+
+### Redo
+
+*Redo* one step in History of current Macro.
+
+### Find / Replace
+
+This window helps finding and replacing parts of the commands in the Macro List columns. Replacing can be performed in *Details*, *Repeat*, *Delay*, *Control*, *Window*, *Comment* and *Color* columns only.  
+To select similar Command Types use the Select Menu.  
+You can also select rows with the same content in a certain column: select a row and click on the **Column Header** of the column you want to search and all rows with the same text in it will be selected.  
+**Note**: Changing parameters of certain commands may cause misbehavior in Playback. Replace should be used only when and where necessary.
+
+### Edit Comment
+
+Adds / Changes the comment to be displayed to the right of the line in Exported AHK Scripts on selected rows. Click *Insert* to add a Comment Block.
+
+### Edit Color Mark
+
+Opens a Color-Pick dialog to add or change a custom color mark in the first column cell of selected rows. Customized colors can be saved as a custom palette. To remove a color mark, select *White* (#FFFFFF).
+
+### Insert from Box
+
+See [Insert / Modify](#insert-/-modify) below.
+
+### Insert Keystroke
+
+See [Insert / Modify](#insert-/-modify) below.
+
+## Select Menu
+
+### Select All
+
+Selects all rows in the current list.
+
+### Select None
+
+Deselects all rows in the current list.
+
+### Invert Selection
+
+Switches selected rows with not selected.
+
+### Check Selected
+
+Checks (activates) selected rows.
+
+### Uncheck Selected
+
+Unchecks (deactivates) selected rows.
+
+### Invert Checks
+
+Switches checked rows with unchecked in the selection.
+
+### Move Selection Up
+
+Moves the selection of rows up (without moving the rows).
+
+### Move Selection Down
+
+Moves the selection of rows down (without moving the rows).
+
+### Selected Type
+
+Selects every row with the same *Type* of the first selected row in the current list.
+
+### Command type
+
+Selects every row with a specific *Type* in the current list.
+
+## View Menu
+
+### Always On Top
+
+### Highlight Rows
+
+### Indentation
+
+Double-Click on the *Action* Column Header or use the *View menu* to turn this option On/Off. When activated Actions inside Loops or Statements will be shown with indentation.  
+You can change the default colors in Settings > Misc.
+
+### Controls Toolbar
+
+Shows or hides the [Controls Toolbar](Playback.html#controls-toolbar).
+
+### Preview
+
+Shows or hides the [Preview panel](Preview.html)
+
+### Toolbars
+
+Shows or hides and customizes Toolbars.
+
+### Hotkeys
+
+Shows or hides the Hotkey controls.
+
+### Search Bar
+
+Shows or hides the [Search Bar](#search-bar).
+
+### Reset Columns Size
+
+Resets default column sizes (default sizes are different for maximized and window mode).
+
+### Icons Size
+
+Selects the size of the icons on the toolbar. Requires restarting the application.
+
+### Reset Layout
+
+Selects/resets one of the standard toolbar layouts.
+
+## Options Menu
+
+### Settings
+
+Opens the [Settings Window](Settings.html) where it's possible to configure various options.
+
+### Minimize to Tray
+
+If checked will hide the main window when *Record* or *Play* button is pressed. You can show the window again from the Tray Menu or the button in the Controls Bar.
+
+### Display controls toolbar
+
+If checked will display the [Controls Toolbar](Playback.html#controls-toolbar) window when *Record* or *Play* button is pressed. It's a smaller window with Playback and Record buttons allow these commands using the mouse. You can also open it from the Macro Menu and TrayIcon.
+
+### Capture key presses in this window
+
+Enables or disables capturing of key presses on currently selected Macro List on the Main Window (this option does not affect Recording).
+
+### Hotkeys Always Active
+
+Keeps all valid Hotkeys always activated (including Record & Playback).
+
+### Shutdown options
+
+Selects an optional action to execute when Playback finishes.
+
+### Context Sensitive Hotkeys
+
+Opens the Context Sensitive Hotkeys window. See [Playback](Playback.html#context-sensitive-hotkeys).
+
+### Add the Windows key to *Play* hotkey
+
+If checked adds the Windows Key as modifier to the Play Hotkey. This means that if the Play hotkey is `G` the actual hotkey will be `Win + G`.
+
+### Joystick
+
+Sets a joystick button to run the Macro. When activated the Play Hotkey box will switch to accept only joystick buttons. Only buttons are detected (axis, pov and others are not). The number before "Joy" is the joystick number and the number after it is the button number, so 2Joy1 is the second joystick's first button.
+
+### Set as Default Hotkeys
+
+Sets the currently selected *Play* hotkeys as default for new projects. You can view the hotkeys in Settings > Playback.
+
+### Set as Default File
+
+Sets the currently open project as the file to be opened when the program starts. You can select the file manually in Settings > Defaults.
+
+### Remove Default File
+
+Removes the default file currently set (if any).
+
+### Default Hotkeys
+
+Resets all *Play* hotkeys in the current project to default, which are F3|F4|F5|F6|F7.
+
+### Default Settings
+
+Resets all settings to default (cannot be undone).
+
+## Macro List
+
+All commands of the Macros are displayed in the Macro List (ListView).  
 They can be added using the Command Windows, by recording your actions or by duplicating items.  
 To edit an item double-click on it or select the ones you want and press the Edit button at the bottom of the window.  
-Use the buttons on the right (or their shortcuts) to move, delete, duplicate the selected items.  
+Use the buttons on the edit toolbar (or their shortcuts) to move, delete, duplicate the selected items.  
 Uncheck the checkboxes in the first column to disable specific actions during playback (they will also be ignored in Preview and Export).
 
 **ListView Columns**:
@@ -308,11 +394,15 @@ Uncheck the checkboxes in the first column to disable specific actions during pl
 * *Comment*: Optional comment line to display in front of the command when the script is exported to AHK.
 * *Color*: Saves the color for the Color Mark set to the row (if any).
 
+**Note**: The content of each column may vary on certain type of commands.
+
 ### Quick Select
 
-This feature allows you to select similar rows based on any column from *Details* to *Comment*. Select any row (if more then one row is selected the first one will be used) and click on a column header to select similar rows based on the cell's text from that column.
+This feature allows you to select similar rows based on any column from *Action* to *Color*. Select any row (if more then one row is selected the first one will be used) and click on a **column header** to select similar rows based on the cell's text from that column.
 
-**Show Colors && Help Marks for Loops and Statements**: Click on the *Index* Column Header or use the *View menu* to turn this option On/Off. When activated rows inside Loops and text of rows inside Statements will be shown in colors, also braces and wildcards will be placed in front of command's index as representation to help visualize which rows are nested. Braces represent Loops and Wildcards represent If Statements, so for example *N* \*>\*> is equivalent to:  
+### Highlight Loops and Statements
+
+Click on the **Index** Column Header or use the *View menu* to turn this option On/Off. When activated rows inside Loops and text of rows inside Statements will be shown in colors, also `>` and `\*` will be placed in front of command's index as representation to help visualize which rows are nested. Braces represent Loops and Wildcards represent If Statements, so for example *N* \*>\*> is equivalent to:  
 > If
 > {
 > 	Loop
@@ -326,12 +416,47 @@ This feature allows you to select similar rows based on any column from *Details
 > 		}
 > 	}
 > }
-You can change the default colors in Settings > Misc.
+You can change the default colors in Settings > General.
 
-### Show Indentation for Loops and Statements
+### Macro Tabs
 
-Double-Click on the *Action* Column Header or use the *View menu* to turn this option On/Off. When activated Actions inside Loops or Statements will be shown with indentation.  
-You can change the default colors in Settings > Misc.
+**Pulover's Macro Creator** supports multiple Macros / Hotkeys. To create a new Macro, click the **+** button (Add Macro / Ctrl+T). When you add or select a Macro in the tab list the current Hotkeys for it are displayed on the top-right part of the window, you can change them by clicking the box and pressing the keys on the keyboard. To remove a Hotkey click the box and press `Backspace`. Macros which have no Hotkey or no line of command will not be activated for Playback.
+
+### Main Loop
+
+The *Loop* counter at the top-right of the main window sets the number of loops to execute the currently selected Macro. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
+
+## Search Bar
+
+Use the search bar to look for a command, function or description. Press `Enter` to go to result.  
+If you select one of the entries in the list the corresponding window will be shown. If more than one result or no specific command/function is found the [Find a Command](#find-a-command) window will be show with the results.
+
+## Insert / Modify
+
+The edit controls at the bottom of the main window can be used to make quick changes to the rows in the Macro List.
+
+### Repeat
+
+This field is used as a quick-edit to set the Repeat number to selected rows using the Apply buttons on the right.
+
+### Delay (ms)
+
+Default delay between commands. The number set in this box will be automatically applied to a new added command (except for Mouse and Window commands which have individual default values that can be set in the [Settings Window](Settings.html#defaults) and commands that ignore this parameter).  
+This field is also used as a quick-edit to set the Delay to selected rows using the Apply buttons on the right.
+
+### Insert Box
+
+This box can be used to add key (`Send`) commands to the list. Click in the box and press the keys or combinations then press the *Insert* button to add them to the list. You can also use the Insert key as a shortcut when the focus is on the ListView or *Insert from Box* in the *Edit* menu. Use `Backspace` to clear the hotkeys. Press it twice to set `Backspace` as the hotkey.
+
+### Insert Keystroke
+
+Alternative to the *Insert Box*. Opens a window where you can choose a keyboard key from a list. Double-click or click *Insert* to insert the key into the selected position. You can also choose to hold (Down) or release (Up) the key.
+
+### General Remarks
+
+When you click the Delete or Apply button (for Repeat or Delay) it will affect all selected rows, and if no row is selected it will apply to all rows in the current list.
+
+When adding a new command either by Command Window, Capturing keys or the Insert button if no row is selected they will be added to the end of the list, if one row is selected they will be added on top of that row, and if more then one row is selected a new copy of the command will be added on top of each selected row, except for Loop, and If Statements which will add a Start on top of the first selected row and an End below the last selected row, and for Goto, Label, Break, Continue, Variable Assignment and Functions, which will add only one row on top of the first selected.
 
 ## Command Line Parameters
 
@@ -378,3 +503,4 @@ To run the first iteration immediately append an ! to the interval value, e.g. *
 You can load multiple files with multiple parameters.
 
 > MacroCreator.exe File1.pmc File2.pmc File3.pmc -h -p -a3
+

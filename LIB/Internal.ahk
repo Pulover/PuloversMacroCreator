@@ -304,6 +304,11 @@ CmdHelp()
 			Else If (LFor)
 				Pag := 10
 		}
+		Else If (Pag = 2)
+		{
+			If (NewLabel)
+				Pag := 4
+		}
 	}
 	Else
 		GuiControlGet, Pag,, TabControl

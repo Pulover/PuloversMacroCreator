@@ -17,17 +17,30 @@ The *Play Current Macro* button will run the active Macro immediately without ac
 
 ## Hotkeys
 
-The Playback Hotkeys are selected in the hotkey toolbars in the main window.
+Hotkeys are sometimes referred to as shortcut keys and are used to run/play the macros. Playback Hotkeys are set in the hotkey toolbars in the main window.
 
-**Play** (Auto Hotkey): Selects the Hotkey to reproduce the currently selected Macro the amount of times set in the Repeat box at the bottom. The Win option add Win key as a modifier. During playback the tray icon will change to playing state. The executing Macro must be finished or stopped before you can execute a new one.
+Use `Backspace` to clear the hotkeys. Press it twice to set `Backspace` as the hotkey.
 
-**Manual** (Manual Hotkey): Selects the Hotkey to reproduce the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer.
+### Play
 
-**Stop**: Selects the Hotkey to stop execution and return it to start. You can also stop Playback by double-clicking the TrayIcon or right-clicking on it and selecting *Stop*.  
+Selects the Automatic Hotkey to execute the currently selected Macro.  
+You can make combinations with modifiers such as `Ctrl + X`.
 
-**Pause**: Selects the Hotkey to pause execution, press it again to resume. You can also pause/unpause Playback by Middle-Clicking the TrayIcon.  
+**Windows Key**: To make combination with the Windows key, check the option *Add the Windows key to "Play" hotkey* in the Options menu or in the Options toolbar.
 
-*Note*: Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).  
+**Joystick Buttons**: To use a Joystick button as the Play Hotkey, check the option *Use a joystick button as hotkey* in the Options menu or in the Options toolbar.
+
+### Manual
+
+Selects the Manual Hotkey to execute the currently selected Macro step-by-step. This is usually used to debug the Macro. If Show Info option is on a tooltip show the last and next steps will be shown next to the mouse pointer. This hotkey cannot be a combination with modifiers.
+
+### Stop
+
+Selects the Hotkey to stop execution and return it to start. You can also stop Playback by double-clicking the TrayIcon or right-clicking on it and selecting *Stop*. You can make combinations with modifiers such as `Ctrl + X`.
+
+### Pause
+
+Selects the Hotkey to pause execution. Press the hotkey again to resume playback. You can also pause/unpause Playback by Middle-Clicking the TrayIcon. You can make combinations with modifiers such as `Ctrl + X`.
 
 ## Controls Toolbar
 
@@ -43,11 +56,17 @@ When you press the Play Button (or when the main window is not active if "Always
 
 In addition to the Manual Hotkey you can select one of these options from the Macro menu:
 
-**Play From Selected Row**: If checked Playback will run each Macro from the first selected row in its list. Valid for all Playback commands.
+### Play From Selected Row
 
-**Play Until Selected Row**: If checked Playback will stop each Macro when the first selected row in its list is reached. Valid for all Playback commands.
+If checked Playback will run each Macro from the first selected row in its list. Valid for all Playback commands.
 
-**Play Selected Rows**: If checked Playback will only execute selected rows in each Macro. Valid for all Playback commands.
+### Play Until Selected Row
+
+If checked Playback will stop each Macro when the first selected row in its list is reached. Valid for all Playback commands.
+
+### Play Selected Rows
+
+If checked Playback will only execute selected rows in each Macro. Valid for all Playback commands.
 
 You can also view the list of variables and contents from the File menu and Tray Icon menu.
 
@@ -75,7 +94,9 @@ For more information see AutoHotkey documentation: [#IfWinActive](http://ahkscri
 
 To change options click the Options button on the main window or select Options Menu > Settings. Some of the options can also be accessible from the *Playback Options* button on the [Controls Toolbar](#controls-toolbar).
 
-**Title Match Mode**: Sets the matching behavior of the WinTitle parameter in commands such as WinWait.
+### Title Match Mode
+
+Sets the matching behavior of the WinTitle parameter in commands such as WinWait.
 
 **1**: A window's title must start with the specified WinTitle to be a match.
 **2**: A window's title can contain WinTitle anywhere inside it to be a match.
@@ -83,29 +104,51 @@ To change options click the Options button on the main window or select Options 
 
 **RegEx**: Changes WinTitle, WinText, ExcludeTitle, and ExcludeText to be regular expressions. Do not enclose such expressions in quotes when using them with commands. For example: WinActivate Untitled.*Notepad. RegEx also applies to ahk_class.
 
-**Title Match Speed**:
+### Title Match Speed
 
 **Fast**: This is the default behavior. Performance may be substantially better than Slow, but certain WinText elements for some types of windows may not be "seen" by the various window commands.
 
 **Slow**: Can be much slower, but all possible WinText is retrieved from every window as a windowing command searches through them for a match. Window Spy reveals which parts of a Window's text (if any) require the slow mode.
 
-**Detect Hidden Window**: Determines whether invisible windows are "seen" by the program.
+### Detect Hidden Window
 
-**Detect Hidden Text**: Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
+Determines whether invisible windows are "seen" by the program.
+
+### Detect Hidden Text
+
+Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
+
+### Playback Speed Hotkeys
 
 **Speed Up**: Selects the hotkey to toggle playback speed Up/Normal. When this option is on delay values will be cut by value set. Does not work when *Random Sleeps* is activated.
 
 **Slow Down**: Selects the hotkey to toggle playback speed Down/Normal. When this option is on delay values will be multiplied by value set. Does not work when *Random Sleeps* is activated.
 
-**Set As Default Hotkeys**: If checked the current Hotkeys will be loaded on each run of the program and when 'Default Settings' are loaded.
+### Set As Default Hotkeys
 
-**Display balloon tips**: Enables displaying of tooltips and traytips during Recording/Playback.
+If checked the current Hotkeys will be loaded on each run of the program and when 'Default Settings' are loaded.
 
-**Return Mouse after playback**: If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.
+### Display balloon tips
 
-**Display Controls Bar on startu-up**: If checked will display the Controls bar upon every start.
+Enables displaying of tooltips and traytips during Recording/Playback.
 
-**Auto Hide Controls Toolbar**: If checked the Controls Toolbar will be automatically shown when a Playback hotkey is pressed and hidden when execution finishes.
+### Do not display errors
 
-**Random Sleeps**: If checked all delays during playback will be a random value for more or less of the defined percentage, e.g.: if percentage is set to 50, a command with a delay of 300ms will be set to any value between 150ms and 450ms. Percentage can be set in the counter.
+Hides error messages from commands, assignments, functions and expressions.
+
+### Return Mouse after playback
+
+If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.
+
+### Display Controls Bar on start-up
+
+If checked will display the Controls bar upon every start.
+
+### Auto Hide Controls Toolbar
+
+If checked the Controls Toolbar will be automatically shown when a Playback hotkey is pressed and hidden when execution finishes.
+
+### Random Sleeps
+
+If checked all delays during playback will be a random value for more or less of the defined percentage, e.g.: if percentage is set to 50, a command with a delay of 300ms will be set to any value between 150ms and 450ms. Percentage can be set in the counter.
 

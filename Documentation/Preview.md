@@ -13,22 +13,43 @@ Unchecked rows will be removed from preview script or commented out, if this opt
 
 ## Buttons & Options
 
-**Copy**: Copies the entire currently displaying content of Preview Window to Clipboard.
+### Copy
 
-**Refresh**: Updates the content of Preview Window to the active Macro.
+Copies the entire currently displaying content of Preview Window to Clipboard.
 
-**Auto-Refresh**: Automatically refreshes the code whenever the active Macro is changed.
+### Refresh
 
-**Indentation**: Uses Tab-Indentation for Loops and If Statements.
+Updates the content of Preview Window to the active Macro.
 
-**Convert Line Breaks**: Converts line break symbols (\`n) in command parameters to real line breaks.
+### Auto-Refresh
 
-**Comment out unchecked rows**: Keeps unchecked rows in the macro as commented out script, instead of not exporting them.
+Automatically refreshes the code whenever the active Macro is changed.
 
-**Line Wrap**: Automatically add a line break to long lines.
+### Indentation
 
-**Always On Top**: Keeps this window on top. This may be useful to code creation during Recording.
+Uses Tab-Indentation for Loops and If Statements.
 
-**Edit Script**: Exports the current preview to a script in the Temp folder and opens it in the default editor. **Note**: This feature is only meant as a quick export function. PMC is not designed to be an AHK script editor.
+### Convert Line Breaks
 
-**Dock/Undock**: Docks/undocks the *Preview* window to/from the Main window.
+Converts line break symbols (\`n) in command parameters to real line breaks.
+
+### Comment out unchecked rows
+
+Keeps unchecked rows in the macro as commented out script, instead of not exporting them.
+
+### Line Wrap
+
+Automatically add a line break to long lines.
+
+### Always On Top
+
+Keeps this window on top. This may be used to watch code creation during Recording.
+
+### Edit Script**: Exports the current preview to a script in the Temp folder and opens it in the default editor. **Note
+
+This feature is only meant as a quick export function. PMC is not designed to be an AHK script editor.
+
+### Dock/Undock
+
+Docks/undocks the *Preview* window to/from the Main window.
+
