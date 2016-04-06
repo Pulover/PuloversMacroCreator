@@ -146,14 +146,13 @@
 	o_Lang004 =	&Dal gweisg allweddol yn y ffenestr hon
 	o_Lang005 =	&Hotkeys Bob amser Active
 	o_Lang006 =	&Opsiynau Shutdown (Pryd chwarae gorffen ...)
-	o_Lang007 =	&Cyd-destun Hotkeys Sensitif
-	o_Lang008 =	&Ychwanegwch yr allwedd Windows i "Chwarae" hotkey
-	o_Lang009 =	D&efnyddiwch fotwm ffon reoli fel hotkey
-	o_Lang010 =	Go&sod fel Rhagosodiad Hotkeys
-	o_Lang011 =	Gosod &fel Rhagosodiad File
-	o_Lang012 =	&Tynnu Ffeil ddiofyn
-	o_Lang013 =	Def&ault Hotkeys
-	o_Lang014 =	Gosod&iadau diofyn
+	o_Lang007 =	&Ychwanegwch yr allwedd Windows i "Chwarae" hotkey
+	o_Lang008 =	D&efnyddiwch fotwm ffon reoli fel hotkey
+	o_Lang009 =	Go&sod fel Rhagosodiad Hotkeys
+	o_Lang010 =	Gosod &fel Rhagosodiad File
+	o_Lang011 =	&Tynnu Ffeil ddiofyn
+	o_Lang012 =	Def&ault Hotkeys
+	o_Lang013 =	Gosod&iadau diofyn
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Rhodd

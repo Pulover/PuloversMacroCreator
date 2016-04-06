@@ -146,14 +146,13 @@
 	o_Lang004 =	&Atera giltza prentsak leiho honetan
 	o_Lang005 =	&Hotkeys beti aktibo
 	o_Lang006 =	&Shutdown aukera (playback bukatzen denean ...)
-	o_Lang007 =	&Testuingurua sentiberak Hotkeys
-	o_Lang008 =	&Gehitu Windows gakoa den "Play" laster
-	o_Lang009 =	E&rabili joystick botoi bat laster gisa
-	o_Lang010 =	E&zarri lehenetsi gisa Hotkeys
-	o_Lang011 =	Ezarr&i File lehenetsi gisa
-	o_Lang012 =	&'Kendu fitxategia Default
-	o_Lang013 =	H&otkeys Default
-	o_Lang014 =	Ezar&pen lehenetsiak
+	o_Lang007 =	&Gehitu Windows gakoa den "Play" laster
+	o_Lang008 =	E&rabili joystick botoi bat laster gisa
+	o_Lang009 =	E&zarri lehenetsi gisa Hotkeys
+	o_Lang010 =	Ezarr&i File lehenetsi gisa
+	o_Lang011 =	&'Kendu fitxategia Default
+	o_Lang012 =	H&otkeys Default
+	o_Lang013 =	Ezar&pen lehenetsiak
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal dohaintza

@@ -146,14 +146,13 @@
 	o_Lang004 =	&Capture key presses in this window
 	o_Lang005 =	&Hotkeys Always Active
 	o_Lang006 =	Sh&utdown options (When playback finishes...)
-	o_Lang007 =	C&ontext Sensitive Hotkeys
-	o_Lang008 =	&Add the Windows key to "Play" hotkey
-	o_Lang009 =	Us&e a joystick button as hotkey
-	o_Lang010 =	Se&t as Default Hotkeys
-	o_Lang011 =	Set as De&fault File
-	o_Lang012 =	&Remove Default File
-	o_Lang013 =	Default Hot&keys
-	o_Lang014 =	Default Sett&ings
+	o_Lang007 =	&Add the Windows key to "Play" hotkey
+	o_Lang008 =	Us&e a joystick button as hotkey
+	o_Lang009 =	Se&t as Default Hotkeys
+	o_Lang010 =	Set as De&fault File
+	o_Lang011 =	&Remove Default File
+	o_Lang012 =	Default Hot&keys
+	o_Lang013 =	Default Sett&ings
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation

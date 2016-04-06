@@ -146,14 +146,13 @@
 	o_Lang004 =	&Jäädvusta klahvivajutuste selles aknas
 	o_Lang005 =	&Kiirklahvid alati aktiivne
 	o_Lang006 =	S&eiskamisvalikuid (Kui taasesitus lõpetab ...)
-	o_Lang007 =	K&ontekstitundlik Hotkeys
-	o_Lang008 =	&Lisa Windows võti "mängida" hotkey
-	o_Lang009 =	K&asuta juhtkangi nuppu hotkey
-	o_Lang010 =	&Vaikimisi seadistatud Hotkeys
-	o_Lang011 =	Se&t as default fail
-	o_Lang012 =	Eemal&da Vaikefail
-	o_Lang013 =	Va&ikimisi Hotkeys
-	o_Lang014 =	&Vaikimisi seaded
+	o_Lang007 =	&Lisa Windows võti "mängida" hotkey
+	o_Lang008 =	K&asuta juhtkangi nuppu hotkey
+	o_Lang009 =	&Vaikimisi seadistatud Hotkeys
+	o_Lang010 =	Se&t as default fail
+	o_Lang011 =	Eemal&da Vaikefail
+	o_Lang012 =	Va&ikimisi Hotkeys
+	o_Lang013 =	&Vaikimisi seaded
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal annetus

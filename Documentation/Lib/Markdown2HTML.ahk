@@ -156,6 +156,7 @@ _MD(ByRef v)
 	t := RegExReplace(t, "P)\*(.+?)\*(?C2)", "<em>$1</em>")
 	t := RegExReplace(t, "P)``(.+?)``(?C3)", "<code>$1</code>")
 	t := RegExReplace(t, "P)!\[(.*?)\](?C4)\((.+?)\)", "<img src=""$2"" alt=""$1""/>")
+	t := RegExReplace(t, "P)\[(.+?)\](?C5)\((http.+?)\)", "<a href=""$2"" target=""_blank"">$1</a>")
 	t := RegExReplace(t, "P)\[(.+?)\](?C5)\((.+?)\)", "<a href=""$2"">$1</a>")
 	StringReplace, t, t, \*, *, All
 	StringReplace, t, t, \``, ``, All

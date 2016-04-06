@@ -146,14 +146,13 @@
 	o_Lang004 =	&Capture ukucindezela ukhiye kule iwindi
 	o_Lang005 =	&Hotkeys Active Njalo
 	o_Lang006 =	&Izinketho Cima (Uma sokudlala eqeda ...)
-	o_Lang007 =	C&ontext hotkeys olunozwela
-	o_Lang008 =	&Engeza ukhiye Windows "Dlala" hotkey
-	o_Lang009 =	&Sebenzisa inkinobho induku yokudlala njengoba hotkey
-	o_Lang010 =	Se&tha njenge Oxhu nab hotkeys
-	o_Lang011 =	Setha n&jengoba Okuzenzakalelayo yefayela
-	o_Lang012 =	S&usa ifayela
-	o_Lang013 =	Oku&zenzakalelayo hotkeys
-	o_Lang014 =	A&masethingi Okuzenzakalelayo
+	o_Lang007 =	&Engeza ukhiye Windows "Dlala" hotkey
+	o_Lang008 =	&Sebenzisa inkinobho induku yokudlala njengoba hotkey
+	o_Lang009 =	Se&tha njenge Oxhu nab hotkeys
+	o_Lang010 =	Setha n&jengoba Okuzenzakalelayo yefayela
+	o_Lang011 =	S&usa ifayela
+	o_Lang012 =	Oku&zenzakalelayo hotkeys
+	o_Lang013 =	A&masethingi Okuzenzakalelayo
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation

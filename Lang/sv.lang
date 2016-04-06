@@ -146,14 +146,13 @@
 	o_Lang004 =	&Fånga tangenttryckningar i detta fönster
 	o_Lang005 =	S&nabbtangenter Alltid Aktiva
 	o_Lang006 =	&avstängningsalternativen (När uppspelningen slutar...)
-	o_Lang007 =	Samman&hangsberoende Snabbtangenter
-	o_Lang008 =	&Lägg den Windows-tangenten till "Play" hotkey
-	o_Lang009 =	An&vänd en joystick knapp som hotkey
-	o_Lang010 =	An&ge som standard snabbtangenter
-	o_Lang011 =	Ang&e som standard fil
-	o_Lang012 =	&Ta bort standardfilen
-	o_Lang013 =	Standa&rd Snabbtangenter
-	o_Lang014 =	Standardinst&ällningar
+	o_Lang007 =	&Lägg den Windows-tangenten till "Play" hotkey
+	o_Lang008 =	An&vänd en joystick knapp som hotkey
+	o_Lang009 =	An&ge som standard snabbtangenter
+	o_Lang010 =	Ang&e som standard fil
+	o_Lang011 =	&Ta bort standardfilen
+	o_Lang012 =	Standa&rd Snabbtangenter
+	o_Lang013 =	Standardinst&ällningar
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donation

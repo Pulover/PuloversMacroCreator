@@ -145,15 +145,14 @@
 	o_Lang003 =	M&ostrar barra de herramientas de controles
 	o_Lang004 =	C&apturar pulsaciones de teclas en esta ventana
 	o_Lang005 =	&Hotkeys Always Active
-	o_Lang006 =	o&pciones de apagado (Cuando finalice la reproducción...)
-	o_Lang007 =	&Teclas de acceso directo sensibles al contexto
-	o_Lang008 =	A&gregue la clave de Windows para tecla de acceso rápido "Reproducir"
-	o_Lang009 =	&Utilizar un botón del joystick como tecla de acceso directo
-	o_Lang010 =	&Establecer como teclas de acceso rápido predeterminadas
-	o_Lang011 =	&Definir como archivo predeterminado
-	o_Lang012 =	E&liminar archivo predeterminado
-	o_Lang013 =	Tecla&s de acceso directo predeterminadas
-	o_Lang014 =	Co&nfiguración predeterminada
+	o_Lang006 =	O&pciones de apagado (Cuando finalice la reproducción...)
+	o_Lang007 =	A&gregue la clave de Windows para tecla de acceso rápido "Reproducir"
+	o_Lang008 =	&Utilizar un botón del joystick como tecla de acceso directo
+	o_Lang009 =	&Establecer como teclas de acceso rápido predeterminadas
+	o_Lang010 =	&Definir como archivo predeterminado
+	o_Lang011 =	E&liminar archivo predeterminado
+	o_Lang012 =	&Teclas de acceso directo predeterminadas
+	o_Lang013 =	Co&nfiguración predeterminada
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Donación PayPal

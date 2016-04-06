@@ -95,23 +95,28 @@ Action1 := "Click"
 				, "Settings.html#screenshots", "Settings.html#email-accounts", "Settings.html#language"
 				, "Settings.html#language-editor", "Settings.html#user-global-variables", "Settings.html#language-editor"]
 			,	5: ["Commands/Mouse.html"]
+			,	6: ["Main.html#edit"]
+			,	7: ["Main.html#insert-/-modify"]
 			,	8: ["Commands/Text.html"]
 			,	10: ["Commands/Run.html"]
 			,	11: ["Commands/Window.html"]
-			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/SetTimer.html"
+			,	12: ["Commands/Loop.html", "Commands/Goto_and_Gosub.html", "Commands/Set_Timer.html"
 				, "Commands/Label.html"
 				, "Commands/Loop_FilePattern.html",	"Commands/Loop_Parse.html", "Commands/Loop_Read.html", "Commands/Loop_Registry.html"
-				, "Commands/While.html", "Commands/For.html"]
+				, "Commands/While_Loop.html", "Commands/For_Loop.html"]
 			,	14: ["Export.html"]
+			,	16: ["Playback.html#context-sensitive-hotkeys"]
 			,	19: ["Commands/Image_Search.html", "Commands/Pixel_Search.html"]
 			,	21: ["Commands/If_Statements.html", "Commands/Variables.html", "Commands/Functions.html"]
 			,	22: ["Commands/PostMessage_and_SendMessage.html"]
 			,	23: ["Commands/Control.html"]
-			,	24: ["Commands/Internet_Explorer.html", "Variables.html#expressions"]
+			,	24: ["Commands/Internet_Explorer.html", "Commands/Expression.html"]
 			,	26: ["Commands.html#find-a-command"]
+			,	27: ["Main.html#timer"]
 			,	30: ["Variables.html#expressions"]
 			,	34: ["Commands.html#find-a-command"]
-			,	38: ["UserFunctions", "UserFunctions", "UserFunctions"]
+			,	36: ["Main.html#schedule-macros"]
+			,	38: ["Functions.html#user-defined-functions", "Functions.html#parameters", "Functions.html#return"]
 			,	39: ["Commands/Send_Email.html"]
 			,	40: ["Commands/Download_Files.html", "Commands/Zip_Files.html"] }
 

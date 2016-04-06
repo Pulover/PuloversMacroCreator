@@ -178,5 +178,5 @@ Download Example: [Assigning and retrieving Arrays](Examples/Arrays.pmc)
 
 ## Built-in Variables
 
-Built-in Variables can be used inside the program to reference dynamic information. A list of these Variables with their description can be found in the [AutoHotkey documentation](http://ahkscript.org/docs/Variables.htm#builtin).  
+Built-in Variables can be used inside the program to reference dynamic information. A list of these Variables with their description can be found in the [AutoHotkey documentation](http://autohotkey.com/docs/Variables.htm#BuiltIn).  
 You can also insert Built-in Variables into command window fields by right-clicking on any empty area and selecting the *Built-in Variables* submenu where you'll find them divided in categories. Select one of them it will be inserted in the Carater-Insert position (already enclosed in percent signs).

@@ -146,14 +146,13 @@
 	o_Lang004 =	&Tastdruck in diesem Fenster erfassen
 	o_Lang005 =	&Hotkeys Immer Aktiv
 	o_Lang006 =	&Optionen für das Herunterfahren (Wenn Wiedergabe beendet...)
-	o_Lang007 =	&Kontextabhängige Hotkeys
-	o_Lang008 =	&Windows-Taste auf "Wiederg." Hotkey fügen
-	o_Lang009 =	&Joystick-Taste als Hotkey verwenden
-	o_Lang010 =	Hotke&ys als Standard festlegen 
-	o_Lang011 =	&Als Standard-Datei festlegen
-	o_Lang012 =	Sta&ndard-Datei entfernen 
-	o_Lang013 =	Standa&rd-Hotkeys
-	o_Lang014 =	Standarde&instellungen
+	o_Lang007 =	&Windows-Taste auf "Wiederg." Hotkey fügen
+	o_Lang008 =	&Joystick-Taste als Hotkey verwenden
+	o_Lang009 =	Hotke&ys als Standard festlegen 
+	o_Lang010 =	&Als Standard-Datei festlegen
+	o_Lang011 =	Sta&ndard-Datei entfernen 
+	o_Lang012 =	Standa&rd-Hotkeys
+	o_Lang013 =	Standarde&instellungen
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Spende

@@ -146,14 +146,13 @@
 	o_Lang004 =	P&rzechwytywanie naciśnięć klawiszy w tym oknie
 	o_Lang005 =	&Hotkeys Zawsze Aktywnych
 	o_Lang006 =	&opcje wyłączania (Po zakończeniu odtwarzania...)
-	o_Lang007 =	&Kontekstowa Hotkeys
-	o_Lang008 =	&Dodaj klawisz Windows na "Zagraj" skrótu
-	o_Lang009 =	U&żyj przycisku joysticka jako skrótu
-	o_Lang010 =	U&staw jako domyślne Hotkeys
-	o_Lang011 =	Us&taw jako domyślny plik
-	o_Lang012 =	Usu&ń plik domyślny
-	o_Lang013 =	Hotk&eys Domyślnie
-	o_Lang014 =	Ust&awienia domyślne
+	o_Lang007 =	&Dodaj klawisz Windows na "Zagraj" skrótu
+	o_Lang008 =	U&żyj przycisku joysticka jako skrótu
+	o_Lang009 =	U&staw jako domyślne Hotkeys
+	o_Lang010 =	Us&taw jako domyślny plik
+	o_Lang011 =	Usu&ń plik domyślny
+	o_Lang012 =	Hotk&eys Domyślnie
+	o_Lang013 =	Ust&awienia domyślne
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Darowizna

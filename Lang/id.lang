@@ -146,14 +146,13 @@
 	o_Lang004 =	Me&nangkap penekanan tombol dalam jendela ini
 	o_Lang005 =	&Hotkeys Selalu Aktif
 	o_Lang006 =	P&ilihan Shutdown (Ketika selesai pemutaran...)
-	o_Lang007 =	&Konteks Hotkeys Sensitif
-	o_Lang008 =	&Tambahkan tombol Windows untuk "Play" hotkey
-	o_Lang009 =	&Gunakan tombol joystick sebagai hotkey
-	o_Lang010 =	&Ditetapkan sebagai Hotkeys default
-	o_Lang011 =	&Set sebagai Default Berkas
-	o_Lang012 =	H&apus file default
-	o_Lang013 =	H&otkeys standar
-	o_Lang014 =	Pengat&uran Default
+	o_Lang007 =	&Tambahkan tombol Windows untuk "Play" hotkey
+	o_Lang008 =	&Gunakan tombol joystick sebagai hotkey
+	o_Lang009 =	&Ditetapkan sebagai Hotkeys default
+	o_Lang010 =	&Set sebagai Default Berkas
+	o_Lang011 =	H&apus file default
+	o_Lang012 =	H&otkeys standar
+	o_Lang013 =	Pengat&uran Default
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Donasi PayPal

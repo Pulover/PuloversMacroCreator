@@ -146,14 +146,13 @@
 	o_Lang004 =	N&ắm bắt ép chính trong cửa sổ này
 	o_Lang005 =	&Phím nóng Luôn đăng nhập
 	o_Lang006 =	&Tắt tùy chọn (Khi phát lại kết thúc...)
-	o_Lang007 =	&Hotkeys bối cảnh nhạy cảm
-	o_Lang008 =	Th&êm phím Windows để "chơi" phím nóng
-	o_Lang009 =	&Sử dụng nút điều khiển như phím nóng
-	o_Lang010 =	Th&iết lập như Hotkeys Mặc định
-	o_Lang011 =	Thi&ết lập như mặc định file
-	o_Lang012 =	G&ỡ bỏ mặc định file
-	o_Lang013 =	C&ác phím tắt mặc định
-	o_Lang014 =	C&ài đặt mặc định
+	o_Lang007 =	Th&êm phím Windows để "chơi" phím nóng
+	o_Lang008 =	&Sử dụng nút điều khiển như phím nóng
+	o_Lang009 =	Th&iết lập như Hotkeys Mặc định
+	o_Lang010 =	Thi&ết lập như mặc định file
+	o_Lang011 =	G&ỡ bỏ mặc định file
+	o_Lang012 =	C&ác phím tắt mặc định
+	o_Lang013 =	C&ài đặt mặc định
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	Hiến PayPal

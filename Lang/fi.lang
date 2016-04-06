@@ -146,14 +146,13 @@
 	o_Lang004 =	&Capture näppäinpainallukset tässä ikkunassa
 	o_Lang005 =	P&ikanäppäimet Aina Aktiivinen
 	o_Lang006 =	&shutdown vaihtoehtoja (Kun toisto päättyy...)
-	o_Lang007 =	&Tilannekohtaisia ​​pikanäppäimet
-	o_Lang008 =	&Lisää Windows-näppäintä "Play" pikanäppäin
-	o_Lang009 =	K&äytä ohjainta painiketta kuin pikanäppäin
-	o_Lang010 =	As&eta oletukseksi pikanäppäimet
-	o_Lang011 =	Aseta &oletukseksi File
-	o_Lang012 =	Poista Tie&dostojärjestelmät
-	o_Lang013 =	Olet&us Pikanäppäimet
-	o_Lang014 =	Oletusasetukset
+	o_Lang007 =	&Lisää Windows-näppäintä "Play" pikanäppäin
+	o_Lang008 =	K&äytä ohjainta painiketta kuin pikanäppäin
+	o_Lang009 =	As&eta oletukseksi pikanäppäimet
+	o_Lang010 =	Aseta &oletukseksi File
+	o_Lang011 =	Poista Tie&dostojärjestelmät
+	o_Lang012 =	Olet&us Pikanäppäimet
+	o_Lang013 =	Oletusasetukset
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal lahjoituksen

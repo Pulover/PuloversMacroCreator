@@ -146,14 +146,13 @@
 	o_Lang004 =	&Hvatanje pritiskanje tipki u ovom prozoru
 	o_Lang005 =	H&otkeys Uvijek Aktivni
 	o_Lang006 =	sh&utdown opcije (Kad reprodukcija završi...)
-	o_Lang007 =	&Kontekstna Hotkeys
-	o_Lang008 =	&Dodaj Windows tipku "igrati" prečac
-	o_Lang009 =	Kor&istite joystick tipke kao hotkey
-	o_Lang010 =	Pos&tavi kao zadani Hotkeys
-	o_Lang011 =	Post&avljen Kao Zadani Datoteku
-	o_Lang012 =	Uk&lonite propust varalica
-	o_Lang013 =	&Zadane Hotkeys
-	o_Lang014 =	T&vorničke postavke
+	o_Lang007 =	&Dodaj Windows tipku "igrati" prečac
+	o_Lang008 =	Kor&istite joystick tipke kao hotkey
+	o_Lang009 =	Pos&tavi kao zadani Hotkeys
+	o_Lang010 =	Post&avljen Kao Zadani Datoteku
+	o_Lang011 =	Uk&lonite propust varalica
+	o_Lang012 =	&Zadane Hotkeys
+	o_Lang013 =	T&vorničke postavke
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donacija

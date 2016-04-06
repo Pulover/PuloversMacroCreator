@@ -146,14 +146,13 @@
 	o_Lang004 =	C&apturar teclas pressionadas nesta janela
 	o_Lang005 =	A&talhos Sempre Ativos
 	o_Lang006 =	&Opções de desligamento (Quando a execução terminar...)
-	o_Lang007 =	Ata&lhos Condicionais
-	o_Lang008 =	A&dicionar a tecla Windows ao atalho "Executar"
-	o_Lang009 =	&Usar um botão do joystick como atalho
-	o_Lang010 =	De&finir como Atalhos Padrão
-	o_Lang011 =	Defi&nir como Arquivo Padrão
-	o_Lang012 =	&Remover Arquivo Padrão
-	o_Lang013 =	Atal&hos Padrão
-	o_Lang014 =	Confi&guração Padrão
+	o_Lang007 =	A&dicionar a tecla Windows ao atalho "Executar"
+	o_Lang008 =	&Usar um botão do joystick como atalho
+	o_Lang009 =	De&finir como Atalhos Padrão
+	o_Lang010 =	Defi&nir como Arquivo Padrão
+	o_Lang011 =	&Remover Arquivo Padrão
+	o_Lang012 =	Atal&hos Padrão
+	o_Lang013 =	Confi&guração Padrão
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Doação via PayPal

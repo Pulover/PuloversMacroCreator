@@ -31,7 +31,7 @@ A Function parameter can be a variable, a number, a string enclosed in quotes or
 
 ## Array/Object Methods
 
-Default [object methods](https://autohotkey.com/docs/objects/Object.htm) are supported, To call a method for an array object, go to *Functions* window and check the *Array Object* option. In that field, enter the name of an object. Select the method and enter the parameters (if any). You can enter an output variable for the returned value.  
+Default [object methods](http://autohotkey.com/docs/objects/Object.htm) are supported, To call a method for an array object, go to *Functions* window and check the *Array Object* option. In that field, enter the name of an object. Select the method and enter the parameters (if any). You can enter an output variable for the returned value.  
 
 You can also call object methods inside a command's parameter:
 
@@ -66,7 +66,7 @@ To return more than one value, use ByRef parameters or an [Array/Object](Variabl
 
 Function return can only be added **below** the *[FunctionStart]* row.
 
-Download Example: [User-Defined Functions](Examples/UserFunctions.pmc)
+Download Example: [User-Defined Functions](Examples/UserFunctions.pmc)  
 Download Example: [Display random array element from a function call](Examples/RandomFunction.pmc)
 
 ### Remarks

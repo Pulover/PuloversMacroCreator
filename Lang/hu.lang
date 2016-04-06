@@ -146,14 +146,13 @@
 	o_Lang004 =	&Capture gombot megnyomja ebben az ablakban
 	o_Lang005 =	&Gyorsbillentyűk Mindig Aktív
 	o_Lang006 =	&shutdown lehetőségek (Ha a lejátszás befejeződik...)
-	o_Lang007 =	C&ontext Sensitive gyorsbillentyűk
-	o_Lang008 =	&Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
-	o_Lang009 =	&Használjon joystick gombot hotkey
-	o_Lang010 =	S&et As Default gyorsbillentyűk
-	o_Lang011 =	A&z Alapértelmezett Beállítás Fájl
-	o_Lang012 =	E&ltávolítása Alapértelmezett fájl
-	o_Lang013 =	Ala&pértelmezett gyorsbillentyűk
-	o_Lang014 =	Alap&értelmezett beállítások
+	o_Lang007 =	&Adja hozzá a Windows billentyű a "Play" gyorsbillentyű
+	o_Lang008 =	&Használjon joystick gombot hotkey
+	o_Lang009 =	S&et As Default gyorsbillentyűk
+	o_Lang010 =	A&z Alapértelmezett Beállítás Fájl
+	o_Lang011 =	E&ltávolítása Alapértelmezett fájl
+	o_Lang012 =	Ala&pértelmezett gyorsbillentyűk
+	o_Lang013 =	Alap&értelmezett beállítások
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal adomány

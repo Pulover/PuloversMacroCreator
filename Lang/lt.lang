@@ -146,14 +146,13 @@
 	o_Lang004 =	&Fiksavimo mygtuką presai Šiame lange
 	o_Lang005 =	S&partieji klavišai visada aktyvus,
 	o_Lang006 =	&Išjungimo galimybės (Kai atkūrimas baigia ...)
-	o_Lang007 =	&Konteksto Spartieji klavišai
-	o_Lang008 =	&Įdėti Windows raktą į "Play" klavišas
-	o_Lang009 =	N&audokite kreiptuką mygtuką, kaip klavišas
-	o_Lang010 =	N&ustatyti kaip numatytąją Hotkeys
-	o_Lang011 =	Nus&tatyti kaip numatytąjį failo
-	o_Lang012 =	Pa&šalinti Default File
-	o_Lang013 =	Nu&matytasis Spartieji klavišai
-	o_Lang014 =	Numat&ytieji nustatymai
+	o_Lang007 =	&Įdėti Windows raktą į "Play" klavišas
+	o_Lang008 =	N&audokite kreiptuką mygtuką, kaip klavišas
+	o_Lang009 =	N&ustatyti kaip numatytąją Hotkeys
+	o_Lang010 =	Nus&tatyti kaip numatytąjį failo
+	o_Lang011 =	Pa&šalinti Default File
+	o_Lang012 =	Nu&matytasis Spartieji klavišai
+	o_Lang013 =	Numat&ytieji nustatymai
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donorystė

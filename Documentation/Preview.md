@@ -45,9 +45,10 @@ Automatically add a line break to long lines.
 
 Keeps this window on top. This may be used to watch code creation during Recording.
 
-### Edit Script**: Exports the current preview to a script in the Temp folder and opens it in the default editor. **Note
+### Edit Script
 
-This feature is only meant as a quick export function. PMC is not designed to be an AHK script editor.
+Exports the current preview to a script in the Temp folder and opens it in the default editor.  
+**Note**: This feature is only meant as a quick export function. PMC is not designed to be an AHK script editor.
 
 ### Dock/Undock
 

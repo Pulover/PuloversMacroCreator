@@ -146,14 +146,13 @@
 	o_Lang004 =	&Zachytiť stlačení klávesov v tomto okne
 	o_Lang005 =	&Klávesové Skratky Vždy Aktívny
 	o_Lang006 =	&Vypnutie možnosti (Ak prehrávanie skončí...)
-	o_Lang007 =	Kon&textová Klávesové skratky
-	o_Lang008 =	&Pridať kláves Windows na "Play" klávesové skratky
-	o_Lang009 =	Po&užite joystick ako klávesovú skratku
-	o_Lang010 =	N&astaviť ako predvolený klávesové skratky
-	o_Lang011 =	Na&staviť ako predvolený súborový
-	o_Lang012 =	O&dstrániť predvolený súbor
-	o_Lang013 =	P&redvolené Klávesové skratky
-	o_Lang014 =	Pr&edvolené nastavenie
+	o_Lang007 =	&Pridať kláves Windows na "Play" klávesové skratky
+	o_Lang008 =	Po&užite joystick ako klávesovú skratku
+	o_Lang009 =	N&astaviť ako predvolený klávesové skratky
+	o_Lang010 =	Na&staviť ako predvolený súborový
+	o_Lang011 =	O&dstrániť predvolený súbor
+	o_Lang012 =	P&redvolené Klávesové skratky
+	o_Lang013 =	Pr&edvolené nastavenie
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Dar

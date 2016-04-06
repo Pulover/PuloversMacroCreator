@@ -146,14 +146,13 @@
 	o_Lang004 =	T&angkap tekanan kekunci dalam tetingkap ini
 	o_Lang005 =	&Hotkeys Sentiasa Aktif
 	o_Lang006 =	&Pilihan penutupan (Apabila selesai main...)
-	o_Lang007 =	K&onteks hotkeys Sensitif
-	o_Lang008 =	Tambah &utama Windows untuk "Main" hotkey
-	o_Lang009 =	&Gunakan butang joystick sebagai hotkey
-	o_Lang010 =	&Ditetapkan sebagai hotkeys lalai
-	o_Lang011 =	D&itetapkan sebagai fail lalai
-	o_Lang012 =	Bua&ng Fail Default
-	o_Lang013 =	Hotk&eys lalai
-	o_Lang014 =	Tetapan &lalai
+	o_Lang007 =	Tambah &utama Windows untuk "Main" hotkey
+	o_Lang008 =	&Gunakan butang joystick sebagai hotkey
+	o_Lang009 =	&Ditetapkan sebagai hotkeys lalai
+	o_Lang010 =	D&itetapkan sebagai fail lalai
+	o_Lang011 =	Bua&ng Fail Default
+	o_Lang012 =	Hotk&eys lalai
+	o_Lang013 =	Tetapan &lalai
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	Derma PayPal

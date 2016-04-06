@@ -803,7 +803,7 @@
 		Handle - Name of a Handle that will point to the object. You still need to use this Handle in the script to access methods and properties.
 		CLSID - CLSID or human-readable Prog ID of the COM object to create.
 		Connect - Attempts to connect the selected Handle with an existing instance of the selected CLSID.
-		Expression / COM Script - One or more expressions to be executed. You can make assingments, function and object calls, etc. You can enter multiple expressions separated by lines or commas. For details see [AHK documentation](https://autohotkey.com/docs/Variables.htm#Expressions).  
+		Expression / COM Script - One or more expressions to be executed. You can make assingments, function and object calls, etc. You can enter multiple expressions separated by lines or commas. For details see [AHK documentation](http://autohotkey.com/docs/Variables.htm#Expressions).  
 		Page Element / Index - Searches for a page element and index on an IE window.
 		Wait for page to load - Check this option when you expect the page to change after the command when running IE COM scripts. This will execute a function after it to wait for the new page to be completely loaded before continuing, avoiding errors.
 
@@ -822,7 +822,7 @@
 					
 	Extra:
 		### Related
-			[Expressions](https://autohotkey.com/docs/Variables.htm#Expressions), [Operators in Expressions](https://autohotkey.com/docs/Variables.htm#Operators), [COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
+			[Expressions](http://autohotkey.com/docs/Variables.htm#Expressions), [Operators in Expressions](http://autohotkey.com/docs/Variables.htm#Operators), [COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Basic Webpage COM Tutorial](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls), [IWebBrowser2 Interface (MSDN)](http://msdn.microsoft.com/en-us/library/aa752127)
 */
 
 /*!

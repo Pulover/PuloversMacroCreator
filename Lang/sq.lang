@@ -146,14 +146,13 @@
 	o_Lang004 =	C&apture shtyn kyçe në këtë dritare
 	o_Lang005 =	&Hotkeys Gjithmonë aktive
 	o_Lang006 =	&Opsionet mbyllje (Kur playback mbaron ...)
-	o_Lang007 =	&Konteksti Hotkeys ndjeshme
-	o_Lang008 =	&Shto butonin e Windows për të "luajtur" hotkey
-	o_Lang009 =	&Përdorni butonin levë si hotkey
-	o_Lang010 =	&Bëje si Default Hotkeys
-	o_Lang011 =	B&ëje si Default Skeda
-	o_Lang012 =	H&iq Default Skedar
-	o_Lang013 =	D&efault Hotkeys
-	o_Lang014 =	Ci&lësimet e albumit
+	o_Lang007 =	&Shto butonin e Windows për të "luajtur" hotkey
+	o_Lang008 =	&Përdorni butonin levë si hotkey
+	o_Lang009 =	&Bëje si Default Hotkeys
+	o_Lang010 =	B&ëje si Default Skeda
+	o_Lang011 =	H&iq Default Skedar
+	o_Lang012 =	D&efault Hotkeys
+	o_Lang013 =	Ci&lësimet e albumit
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation

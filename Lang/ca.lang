@@ -146,14 +146,13 @@
 	o_Lang004 =	C&aptura pulsacions de tecles en aquesta finestra
 	o_Lang005 =	&Tecles D'accés Directe Sempre Actives
 	o_Lang006 =	O&pcions d'apagada (Quan finalitzi la reproducció...)
-	o_Lang007 =	T&ecles d'accés directe sensibles al context
-	o_Lang008 =	A&fegiu la clau de Windows per "Play" tecla d'accés ràpid
-	o_Lang009 =	&Utilitzeu un botó del joystick com a tecla d'accés directe
-	o_Lang010 =	E&stablir com a tecles d'accés ràpid predeterminades
-	o_Lang011 =	Se&lecciona per defecte del fitxer
-	o_Lang012 =	Elimi&nar fitxer per defecte
-	o_Lang013 =	Tecles &d'accés ràpid predeterminades
-	o_Lang014 =	Confi&guració per defecte
+	o_Lang007 =	A&fegiu la clau de Windows per "Play" tecla d'accés ràpid
+	o_Lang008 =	&Utilitzeu un botó del joystick com a tecla d'accés directe
+	o_Lang009 =	E&stablir com a tecles d'accés ràpid predeterminades
+	o_Lang010 =	Se&lecciona per defecte del fitxer
+	o_Lang011 =	Elimi&nar fitxer per defecte
+	o_Lang012 =	Tecles &d'accés ràpid predeterminades
+	o_Lang013 =	Confi&guració per defecte
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donació

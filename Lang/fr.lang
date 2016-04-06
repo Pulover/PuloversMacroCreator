@@ -146,14 +146,13 @@
 	o_Lang004 =	C&apturez touches dans cette fenêtre
 	o_Lang005 =	Racc&ourcis Toujours Actifs
 	o_Lang006 =	O&ptions d'arrêt (Quand se termine la lecture...)
-	o_Lang007 =	&Touches sensibles au contexte
-	o_Lang008 =	A&joutez la touche Windows de "jouer" raccourci
-	o_Lang009 =	&Utilisez un bouton de la manette comme raccourci
-	o_Lang010 =	&Définir comme touches de raccourci par défaut
-	o_Lang011 =	Dé&finir comme fichier par défaut
-	o_Lang012 =	&Supprimer le fichier par défaut
-	o_Lang013 =	Raccourc&is clavier par défaut
-	o_Lang014 =	Para&mètres par défaut
+	o_Lang007 =	A&joutez la touche Windows de "jouer" raccourci
+	o_Lang008 =	&Utilisez un bouton de la manette comme raccourci
+	o_Lang009 =	&Définir comme touches de raccourci par défaut
+	o_Lang010 =	Dé&finir comme fichier par défaut
+	o_Lang011 =	&Supprimer le fichier par défaut
+	o_Lang012 =	Raccourc&is clavier par défaut
+	o_Lang013 =	Para&mètres par défaut
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&Donation PayPal

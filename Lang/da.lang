@@ -146,14 +146,13 @@
 	o_Lang004 =	&Capture tastetryk i dette vindue
 	o_Lang005 =	&Hotkeys Altid Aktive
 	o_Lang006 =	&nedlukningsvalgmulighederne (Når afspilningen er færdig...)
-	o_Lang007 =	&Kontekstafhængig genvejstaster
-	o_Lang008 =	&Tilføj på Windows-tasten på "Play" genvejen
-	o_Lang009 =	&Brug et joystick knap som genvejstast
-	o_Lang010 =	S&æt som standard genvejstaster
-	o_Lang011 =	&Angiv som standard File
-	o_Lang012 =	&Fjern Standard File
-	o_Lang013 =	Standa&rd Genvejstaster
-	o_Lang014 =	Standardindsti&llinger
+	o_Lang007 =	&Tilføj på Windows-tasten på "Play" genvejen
+	o_Lang008 =	&Brug et joystick knap som genvejstast
+	o_Lang009 =	S&æt som standard genvejstaster
+	o_Lang010 =	&Angiv som standard File
+	o_Lang011 =	&Fjern Standard File
+	o_Lang012 =	Standa&rd Genvejstaster
+	o_Lang013 =	Standardindsti&llinger
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation

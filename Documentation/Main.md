@@ -13,7 +13,7 @@
 * [View Menu](#view-menu)
 * [Options Menu](#options-menu)
 * [Macro List](#macro-list)
-* [Search Bar](#search-bar)
+* [Command Search Bar](#command-search-bar)
 * [Insert / Modify](#insert-/-modify)
 * [Command Line Parameters](#command-line-parameters)
 
@@ -45,7 +45,12 @@ Opens the [Preview Window](Preview.html) which shows the current Macro in AHK Sc
 
 ### Edit Script
 
-Exports the current preview to a script in the Temp folder and opens it in the default editor. **Note**: This feature is only meant as a quick export function. PMC is not designed to be an AHK script editor.
+Exports the current preview to a script in the Temp folder and opens it in the default editor.  
+**Note**: This feature is only meant as a quick export function. PMC is not designed to be an AHK script editor.
+
+### Schedule Macros
+
+In this window you can schedule a macro on Windows Task Scheduler. You can select the time to start and how frequent it will run. When select to target the PMC file, it will launch Macro Creator with the selected file and run it automatically in [Silent Mode](#command-line-parameters) (you can select the target macro to run from your project). When you select to target the AHK file, it will write an ahk script with the current project in the same directory of the pmc file, this script will have no hotkeys which means it will run the first macro automatically (you can run other macros in the same project using [Goto/Gosub](Commands/Goto_and_GoSub.html)).
 
 ### List Variables
 
@@ -75,6 +80,8 @@ Runs currently selected Macro immediately without Hotkeys.
 
 ### Timer
 
+In this window you can run the currently selected Macro repeatedly in a timed interval.
+
 **Play once**: Runs currently selected Macro one time after the specified time.
 
 **Play every X (mili)seconds**: Runs it automatically and repeatedly at the specified time interval.  
@@ -83,8 +90,6 @@ Runs currently selected Macro immediately without Hotkeys.
 
 The Abort Hotkey can be used to turn the Timer off.  
 To have other Macros active during Timer check the *Always Active* option or right-click the TrayMenu icon and select **Play**.  
-
-**Schedule Macros**: In this window you can schedule a macro on Windows Task Scheduler. You can select the time to start and how frequent it will run. When select to target the PMC file, it will launch Macro Creator with the selected file and run it automatically in [Silent Mode](#command-line-parameters) (you can select the target macro to run from your project). When you select to target the AHK file, it will write an ahk script with the current project in the same directory of the pmc file, this script will have no hotkeys which means it will run the first macro automatically (you can run other macros in the same project using [Goto/Gosub](Commands/Goto_and_GoSub.html)).
 
 ### Deactivate Macros
 
@@ -103,6 +108,8 @@ If checked Playback will stop each Macro when the first selected row in its list
 If checked Playback will only execute selected rows in each Macro. Valid for all Playback commands.
 
 ### Context Sensitve Hotkeys
+
+Opens the Context Sensitive Hotkeys window. See [Playback](Playback.html#context-sensitive-hotkeys).
 
 ### Add Macro
 
@@ -130,7 +137,7 @@ Saves the currently selected Macro to a PMC file.
 
 ## Commands Menu
 
-Opens the *Command Windows* to insert commands, functions and statements. See [Command Windows](#Commands.html).
+Opens the [Command Windows](Commands.html) to insert commands, functions and statements.
 
 ## Function Menu
 
@@ -277,7 +284,11 @@ Selects every row with a specific *Type* in the current list.
 
 ### Always On Top
 
+Sets the main window to stay always on top.
+
 ### Highlight Rows
+
+Enables or disables highlighting for loops and statements. See [Macro List](#highlight-loops-and-statements) below for more information.
 
 ### Indentation
 
@@ -302,7 +313,7 @@ Shows or hides the Hotkey controls.
 
 ### Search Bar
 
-Shows or hides the [Search Bar](#search-bar).
+Shows or hides the [Command Search Bar](#command-search-bar).
 
 ### Reset Columns Size
 
@@ -341,10 +352,6 @@ Keeps all valid Hotkeys always activated (including Record & Playback).
 ### Shutdown options
 
 Selects an optional action to execute when Playback finishes.
-
-### Context Sensitive Hotkeys
-
-Opens the Context Sensitive Hotkeys window. See [Playback](Playback.html#context-sensitive-hotkeys).
 
 ### Add the Windows key to *Play* hotkey
 
@@ -402,20 +409,23 @@ This feature allows you to select similar rows based on any column from *Action*
 
 ### Highlight Loops and Statements
 
-Click on the **Index** Column Header or use the *View menu* to turn this option On/Off. When activated rows inside Loops and text of rows inside Statements will be shown in colors, also `>` and `\*` will be placed in front of command's index as representation to help visualize which rows are nested. Braces represent Loops and Wildcards represent If Statements, so for example *N* \*>\*> is equivalent to:  
-> If
+Click on the **Index** Column Header or use the *View menu* to turn this option On/Off.  
+When activated, rows inside Loops and text of rows inside Statements will be shown in colors. Also `>` and `\*` will be placed in front of command's index as representation to help visualize which rows are nested.  
+`>` represents Loops and `\*` represents If Statements, so for example `*N* \*>\*>` is equivalent to:  
+> [If]
 > {
-> 	Loop
-> 	{
-> 		If
-> 		{
-> 			Loop
-> 			{
-> 				N
-> 			}
-> 		}
-> 	}
+>     [Loop]
+>     {
+> 		[If]
+>         {
+>             [Loop]
+>             {
+>                 [...]
+>             }
+>         }
+>     }
 > }
+
 You can change the default colors in Settings > General.
 
 ### Macro Tabs
@@ -426,10 +436,10 @@ You can change the default colors in Settings > General.
 
 The *Loop* counter at the top-right of the main window sets the number of loops to execute the currently selected Macro. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
 
-## Search Bar
+## Command Search Bar
 
 Use the search bar to look for a command, function or description. Press `Enter` to go to result.  
-If you select one of the entries in the list the corresponding window will be shown. If more than one result or no specific command/function is found the [Find a Command](#find-a-command) window will be show with the results.
+If you select one of the entries in the list the corresponding window will be shown. If more than one result or no specific command/function is found the [Find a Command](Commands.html#find-a-command) window will be show with the results.
 
 ## Insert / Modify
 

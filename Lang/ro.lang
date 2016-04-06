@@ -146,14 +146,13 @@
 	o_Lang004 =	&Capta prese-cheie în această fereastră
 	o_Lang005 =	&Hotkeys întotdeauna active
 	o_Lang006 =	&Opțiunile de oprire (Când se termină redarea ...)
-	o_Lang007 =	Co&ntext Hotkeys sensibile
-	o_Lang008 =	&Adăugați cheia Windows pentru a "Play" hotkey
-	o_Lang009 =	&Utilizați un buton joystick ca tastă rapidă
-	o_Lang010 =	S&etați ca implicit Hotkeys
-	o_Lang011 =	Se&tați ca fișier implicit
-	o_Lang012 =	&Implicit Fișier elimina
-	o_Lang013 =	Im&plicit Hotkeys
-	o_Lang014 =	Set&ări implicite
+	o_Lang007 =	&Adăugați cheia Windows pentru a "Play" hotkey
+	o_Lang008 =	&Utilizați un buton joystick ca tastă rapidă
+	o_Lang009 =	S&etați ca implicit Hotkeys
+	o_Lang010 =	Se&tați ca fișier implicit
+	o_Lang011 =	&Implicit Fișier elimina
+	o_Lang012 =	Im&plicit Hotkeys
+	o_Lang013 =	Set&ări implicite
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal donatie

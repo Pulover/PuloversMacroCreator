@@ -146,14 +146,13 @@
 	o_Lang004 =	&Capture taustiņu nospiešanas šajā logā
 	o_Lang005 =	&Taustiņi Vienmēr Aktīvie
 	o_Lang006 =	S&hutdown iespējas (Kad atskaņošana beidzas ...)
-	o_Lang007 =	&Konteksta jutīga taustiņi
-	o_Lang008 =	&Pievienojiet Windows taustiņu "spēlēt" Hotkey
-	o_Lang009 =	&Izmantojiet kursorsviru pogu kā Hotkey
-	o_Lang010 =	&Uzstādīt kā noklusējuma taustiņi
-	o_Lang011 =	U&zstādīt kā noklusējuma faila
-	o_Lang012 =	&Noņemt Noklusējuma File
-	o_Lang013 =	D&efault taustiņi
-	o_Lang014 =	N&oklusējuma iestatījumi
+	o_Lang007 =	&Pievienojiet Windows taustiņu "spēlēt" Hotkey
+	o_Lang008 =	&Izmantojiet kursorsviru pogu kā Hotkey
+	o_Lang009 =	&Uzstādīt kā noklusējuma taustiņi
+	o_Lang010 =	U&zstādīt kā noklusējuma faila
+	o_Lang011 =	&Noņemt Noklusējuma File
+	o_Lang012 =	D&efault taustiņi
+	o_Lang013 =	N&oklusējuma iestatījumi
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Ziedošana

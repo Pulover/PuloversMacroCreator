@@ -72,7 +72,7 @@ Follow these steps to execute an action for Pixel/Image search based on a condit
 
 ### Can I run a Macro in a timed interval?
 
-Yes, use the [Timer](Main.html#buttons-&-menus) or the [SetTimer](Commands/Set_Timer.html) command.  
+Yes, use the [Timer](Main.html#timer) or the [SetTimer](Commands/Set_Timer.html) command.  
 
 ### Can I run a Macro in a background window?
 
@@ -88,7 +88,7 @@ You can also export the Macro to an AutoHotkey script and run it using Window's 
 
 ### How do I increment/add a value in a variable on every loop iteration?
 
-You can use the [Assign Variable](Commands/Variables.html) window and the **+=** operator o the **:=** operator and the Expression option if you need to sum it to another value like the built-in variable A_Index, which contains the number of the current loop iteration.  
+You can use the [Variables](Commands/Variables.html) window and the **+=** operator o the **:=** operator and the Expression option if you need to sum it to another value like the built-in variable A_Index, which contains the number of the current loop iteration.  
 The code below is a PMC file (you can copy and save it using any text editor).
 
 > [PMC Code v5.0.0]|F3||1|Window,2,Fast,0,1|1|Macro1
@@ -117,7 +117,7 @@ All settings are saved to *MacroCreator.ini* and User Global Variables are saved
 
 ### Can I execute an action every time a certain event occurs?
 
-It's possible using the [Timer](Main.html#buttons-&-menus) and some If Statements.  
+It's possible using the [Timer](Main.html#timer) and some If Statements.  
 
 ### Can I play other Macros while Timer is running?
 
@@ -126,8 +126,8 @@ Although the Timer is limited to run one Macro at a time, you can still activate
 ### Can I save my Macros as EXE to run on any computer?
 
 Macro Creator has an option to convert exported scripts to EXE using Ahk2Exe that is installed with AutoHotkey:  
-1. Download and install [AutoHotkey](http://ahkscript.org/).  
-2. Go to [Export](Export.html#destination-file) in PMC and check *Create EXE File* option.  
+1. Download and install [AutoHotkey](http://autohotkey.com/).  
+2. Go to Export in PMC and check *[Create EXE File](Export.html#create-exe-file)* option.  
 3. Click the *Export* button.  
 
 The EXE file will be saved to the same directory as the script file.
@@ -193,7 +193,7 @@ Yes, just check the *Always Active* option in the main window.
 
 Your script must use the Send command with a higher level to execute the Hotkeys in PMC. Put these two lines on top of it.  
 
-> \#InputLevel, 1
+> #InputLevel, 1
 > SendLevel, 1
 
 \#InputLevel makes it possible to use Send command from a hotkey in another script and SendLevel allows to use Send command from a subroutine such as a gLabel.  

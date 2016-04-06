@@ -1139,6 +1139,7 @@ If (PlayHK)
 	GoSub, PlayStart
 If (RecOn)
 {
+	DontShowRec := 1, ShowStep := 0, OnScCtrl := 0
 	GoSub, Record
 	SetTimer, RecStart, -500
 }
@@ -1663,7 +1664,10 @@ ActivateHotKeys(1, 0, 0,, 1)
 If (HideMainWin)
 	GoSub, ShowHide
 Else
+{
 	WinMinimize, ahk_id %PMCWinID%
+	WinActivate,,, ahk_id %PMCWinID%
+}
 If (!DontShowRec)
 {
 	Gui 26:+LastFoundExist
@@ -1677,7 +1681,7 @@ If (!DontShowRec)
 	Gui, 26:Add, Button, -Wrap Default xs y+10 W90 H23 gTipClose, %c_Lang020%
 	Gui, 26:Show,, %AppName%
 }
-If (ShowStep = 1)
+If (ShowStep)
 	Traytip, %AppName%, %RecKey% %d_Lang026%.`n%RecNewKey% %d_Lang030%.,,1
 If (OnScCtrl)
 	GoSub, ShowControls
@@ -1722,7 +1726,7 @@ If (Record := !Record)
 	If (Strokes = 1)
 		SetTimer, KeyboardRecord, -100
 	Tooltip
-	If (ShowStep = 1)
+	If (ShowStep)
 		Traytip, %AppName%, Macro%A_List%: %d_Lang028% %RecKey% %d_Lang029%.,,1
 	Try Menu, Tray, Icon, %ResDllPath%, 54
 	Menu, Tray, Default, %w_Lang008%
@@ -1736,10 +1740,11 @@ Else
 	GoSub, b_Start
 	GoSub, PlayActive
 	ActivateHotKeys(1)
-	If (ShowStep = 1)
+	If (ShowStep)
 		Traytip, %AppName%, % d_Lang027
 		. ".`nMacro" A_List ": " o_AutoKey[A_List],,1
 	tbOSC.ModifyButtonInfo(5, "Image", 54)
+	SavePrompt(true)
 	return
 }
 return
@@ -3176,9 +3181,9 @@ return
 
 KeepMenuCheck:
 If (KeepDefKeys)
-	Menu, OptionsMenu, Check, %o_Lang010%
+	Menu, OptionsMenu, Check, %o_Lang009%
 Else
-	Menu, OptionsMenu, Uncheck, %o_Lang010%
+	Menu, OptionsMenu, Uncheck, %o_Lang009%
 return
 
 AccAdd:
@@ -11100,9 +11105,9 @@ If (OnScCtrl)
 Else
 	Menu, OptionsMenu, Uncheck, %o_Lang003%
 If (WinKey)
-	Menu, OptionsMenu, Check, %o_Lang008%
+	Menu, OptionsMenu, Check, %o_Lang007%
 Else
-	Menu, OptionsMenu, Uncheck, %o_Lang008%
+	Menu, OptionsMenu, Uncheck, %o_Lang007%
 If (HideMainWin)
 	Menu, OptionsMenu, Check, %o_Lang002%
 Else
@@ -12621,12 +12626,12 @@ If (JoyHK = 1)
 	If (JoyKey = "")
 		GuiControl, 1:, JoyKey, |%t_Lang097%
 	GuiControl, 1:Focus, JoyKey
-	Menu, OptionsMenu, Check, %o_Lang009%
+	Menu, OptionsMenu, Check, %o_Lang008%
 }
 Else
 {
 	GoSub, SetNoJoy
-	Menu, OptionsMenu, Uncheck, %o_Lang009%
+	Menu, OptionsMenu, Uncheck, %o_Lang008%
 }
 return
 
@@ -13307,14 +13312,14 @@ return
 
 FastKeyToggle:
 SlowKeyOn := 0, FastKeyOn := !FastKeyOn
-If (ShowStep = 1)
+If (ShowStep)
 	TrayTip, %AppName%, % (FastKeyOn) ? t_Lang036 " " SpeedUp "x" : t_Lang035 " 1x"
 TB_Edit(TbOSC, "SlowKeyToggle", SlowKeyOn), TB_Edit(TbOSC, "FastKeyToggle", FastKeyOn)
 return
 
 SlowKeyToggle:
 FastKeyOn := 0, SlowKeyOn := !SlowKeyOn
-If (ShowStep = 1)
+If (ShowStep)
 	TrayTip, %AppName%, % (SlowKeyOn) ? t_Lang037 " " SpeedDn "x" : t_Lang035 " 1x"
 TB_Edit(TbOSC, "SlowKeyToggle", SlowKeyOn), TB_Edit(TbOSC, "FastKeyToggle", FastKeyOn)
 return
@@ -13355,12 +13360,12 @@ ActivateHotkeys:
 If (CheckDuplicates(AbortKey, o_ManKey, o_AutoKey*))
 {
 	ActiveKeys := "Error"
-	If (ShowStep = 1)
+	If (ShowStep)
 		Traytip, %AppName%, %d_Lang032%,,3
 	return
 }
 ActiveKeys := ActivateHotkeys(0, 1, 1, 1, 1)
-If ((ActiveKeys > 0) && (ShowStep = 1))
+If ((ActiveKeys > 0) && (ShowStep))
 	Traytip, %AppName%, % ActiveKeys " " d_Lang025 ((IfDirectContext != "None") ? "`n[" RegExReplace(t_Lang009, ".*", "$u0") "]" : ""),,1
 Menu, Tray, Tip, %AppName%`n%ActiveKeys% %d_Lang025%
 return
@@ -14643,16 +14648,15 @@ Menu, OptionsMenu, Add, %o_Lang003%, OnScCtrl
 Menu, OptionsMenu, Add, %o_Lang004%, Capt
 Menu, OptionsMenu, Add, %o_Lang005%, CheckHkOn
 Menu, OptionsMenu, Add, %o_Lang006%, :OnFinishMenu
-Menu, OptionsMenu, Add, %o_Lang007%, SetWin
-Menu, OptionsMenu, Add, %o_Lang008%, WinKey
-Menu, OptionsMenu, Add, %o_Lang009%, SetJoyButton
+Menu, OptionsMenu, Add, %o_Lang007%, WinKey
+Menu, OptionsMenu, Add, %o_Lang008%, SetJoyButton
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang010%, KeepDefKeys
-Menu, OptionsMenu, Add, %o_Lang011%, DefaultMacro
-Menu, OptionsMenu, Add, %o_Lang012%, RemoveDefault
+Menu, OptionsMenu, Add, %o_Lang009%, KeepDefKeys
+Menu, OptionsMenu, Add, %o_Lang010%, DefaultMacro
+Menu, OptionsMenu, Add, %o_Lang011%, RemoveDefault
 Menu, OptionsMenu, Add
-Menu, OptionsMenu, Add, %o_Lang013%`t%_s%Alt+F6, DefaultHotkeys
-Menu, OptionsMenu, Add, %o_Lang014%`t%_s%Alt+F7, LoadDefaults
+Menu, OptionsMenu, Add, %o_Lang012%`t%_s%Alt+F6, DefaultHotkeys
+Menu, OptionsMenu, Add, %o_Lang013%`t%_s%Alt+F7, LoadDefaults
 
 Menu, HelpMenu, Add, %h_Lang001%`t%_s%F1, Help
 Menu, HelpMenu, Add, %h_Lang002%, Tutorials
@@ -14745,17 +14749,17 @@ Menu, Tray, Default, %w_Lang005%
 If (ShowGroups)
 	Menu, GroupMenu, Check, %e_Lang017%`t%_s%Ctrl+Shift+G
 If (KeepDefKeys)
-	Menu, OptionsMenu, Check, %o_Lang010%
+	Menu, OptionsMenu, Check, %o_Lang009%
 If (OnScCtrl)
 	Menu, OptionsMenu, Check, %o_Lang003%
 If (WinKey)
-	Menu, OptionsMenu, Check, %o_Lang008%
+	Menu, OptionsMenu, Check, %o_Lang007%
 If (HideMainWin)
 	Menu, OptionsMenu, Check, %o_Lang002%
 If (KeepHkOn)
 	Menu, OptionsMenu, Check, %o_Lang005%
 If (JoyHK)
-	Menu, OptionsMenu, Check, %o_Lang009%
+	Menu, OptionsMenu, Check, %o_Lang008%
 
 If (AutoUpdate)
 	Menu, HelpMenu, Check, %h_Lang008%

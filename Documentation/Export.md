@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Exports selected Macros to a working AutoHotkey Script file (*.ahk), optionally converting the script to an executable (EXE) file (requires the latest version of [AutoHotkey](https://autohotkey.com/) installed).
+Exports selected Macros to a working AutoHotkey Script file (*.ahk), optionally converting the script to an executable (EXE) file (requires the latest version of [AutoHotkey](http://autohotkey.com/) installed).
 
 ## Macros
 
@@ -74,7 +74,11 @@ Once a script is compiled, it becomes a standalone executable; that is, it can b
 
 ## Context Sensitive Hotkeys
 
-Makes hotkeys and hotstrings work depending on the type of window that is active or exists, or if an expression evaluates to true. For more information see [Playback](Playback.html#context-sensitive-hotkeys) and AutoHotkey documentation: [#IfWinActive](http://autohotkey.com/docs/commands/_ifwinactive) / [#If](http://autohotkey.com/docs/commands/_if).
+Makes hotkeys and hotstrings work depending on the type of window that is active or exists, or if an expression evaluates to true. For more information see [Playback](Playback.html#context-sensitive-hotkeys).
+
+### Related
+
+[#IfWinActive](http://autohotkey.com/docs/commands/_IfWinActive.htm), [#If](http://autohotkey.com/docs/commands/_If.htm)
 
 ## Options
 
@@ -94,8 +98,8 @@ Increases or decreases the delay of Sleep (Pause) commands in exported scripts.
 
 ### COM Objects
 
-Default behavior for the *Automatically create COM object* option in **Expression** window. [ComObjCreate](https://autohotkey.com/docs/commands/ComObjCreate.htm) will create a new COM object based with the given CLSID, while [ComObjActive](https://autohotkey.com/docs/commands/ComObjActive.htm) will try to connect to an existing instance of the application.
+Default behavior for the *Automatically create COM object* option in **Expression** window. [ComObjCreate](http://autohotkey.com/docs/commands/ComObjCreate.htm) will create a new COM object based with the given CLSID, while [ComObjActive](http://autohotkey.com/docs/commands/ComObjActive.htm) will try to connect to an existing instance of the application.
 
 ### Related
 
-[Hotkeys](http://autohotkey.com/docs/Hotkeys.htm), [Hotstrings](http://autohotkey.com/docs/Hotstrings.htm), [List of Keys](http://autohotkey.com/docs/KeyList.htm), [ComObjCreate](http://autohotkey.com/docs/commands/ComObjCreate.htm), [ComObjActive](http://autohotkey.com/docs/commands/ComObjActive.htm), [Auto-execute Section](http://autohotkey.com/docs/Scripts.htm#auto), [#ifwinactive / #ifwinexist](http://autohotkey.com/docs/commands/_ifwinactive.htm), [#if](http://autohotkey.com/docs/commands/_if.htm)
+[Hotkeys](http://autohotkey.com/docs/Hotkeys.htm), [Hotstrings](http://autohotkey.com/docs/Hotstrings.htm), [List of Keys](http://autohotkey.com/docs/KeyList.htm), [ComObjCreate](http://autohotkey.com/docs/commands/ComObjCreate.htm), [ComObjActive](http://autohotkey.com/docs/commands/ComObjActive.htm), [Auto-execute Section](http://autohotkey.com/docs/Scripts.htm#auto), [#IfWinActive / #IfWinExist](http://autohotkey.com/docs/commands/_IfWinActive.htm), [#If](http://autohotkey.com/docs/commands/_If.htm)

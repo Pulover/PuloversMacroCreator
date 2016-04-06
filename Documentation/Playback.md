@@ -88,7 +88,7 @@ You can also use [User-defined functions](Functions.html#user-defined-functions)
 
 This option affects ALL Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-right of the main window to show if it's active. To deactivate this option select *None* in the list.
 
-For more information see AutoHotkey documentation: [#IfWinActive](http://ahkscript.org/docs/commands/_IfWinActive.htm) and [#If](http://ahkscript.org/docs/commands/_If.htm).
+For more information see AutoHotkey documentation: [#IfWinActive](http://autohotkey.com/docs/commands/_IfWinActive.htm) and [#If](http://autohotkey.com/docs/commands/_If.htm).
 
 ## Playback Options
 

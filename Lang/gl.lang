@@ -146,14 +146,13 @@
 	o_Lang004 =	C&apturar teclas presionadas nesta fiestra
 	o_Lang005 =	&Teclas de atallo sempre activo
 	o_Lang006 =	&Opcións de apagado (Cando a reprodución remata ...)
-	o_Lang007 =	Co&ntexto Teclas de atallo sensibles
-	o_Lang008 =	&Engada a chave de Windows para "Play" atallo
-	o_Lang009 =	&Use o botón de mando como teclas de atallo
-	o_Lang010 =	E&stablecer por defecto Teclas de atallo
-	o_Lang011 =	&Definir como ficheiro estándar
-	o_Lang012 =	E&liminar ficheiro estándar
-	o_Lang013 =	Teclas de atallo est&ándar
-	o_Lang014 =	De&fault Settings
+	o_Lang007 =	&Engada a chave de Windows para "Play" atallo
+	o_Lang008 =	&Use o botón de mando como teclas de atallo
+	o_Lang009 =	E&stablecer por defecto Teclas de atallo
+	o_Lang010 =	&Definir como ficheiro estándar
+	o_Lang011 =	E&liminar ficheiro estándar
+	o_Lang012 =	Teclas de atallo est&ándar
+	o_Lang013 =	De&fault Settings
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Doazón

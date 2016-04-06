@@ -45,19 +45,21 @@ Determines whether to close the application or minimize it to tray when the clos
 
 ### Hightlight Loops and Statements
 
-Click on the **Index** Column Header or use the *View menu* to turn this option On/Off. When activated rows inside Loops and text of rows inside Statements will be shown in colors, also `>` and `\*` will be placed in front of command's index as representation to help visualize which rows are nested. Braces represent Loops and Wildcards represent If Statements, so for example *N* \*>\*> is equivalent to:  
-> If
+Click on the **Index** Column Header or use the *View menu* to turn this option On/Off.  
+When activated, rows inside Loops and text of rows inside Statements will be shown in colors. Also `>` and `\*` will be placed in front of command's index as representation to help visualize which rows are nested.  
+`>` represents Loops and `\*` represents If Statements, so for example `*N* \*>\*>` is equivalent to:  
+> [If]
 > {
-> 	Loop
-> 	{
-> 		If
-> 		{
-> 			Loop
-> 			{
-> 				N
-> 			}
-> 		}
-> 	}
+>     [Loop]
+>     {
+> 		[If]
+>         {
+>             [Loop]
+>             {
+>                 [...]
+>             }
+>         }
+>     }
 > }
 
 You can change the default colors clicking on the color shown here and picking a new one from the selector.  
@@ -163,7 +165,7 @@ A new version of the language files may be released at any time independent of a
 
 Here you can define global variables that will be available during Playback. They may be used as constants so you can always call them from inside a command.  
 
-The variables defined here will always be available inside [User-Defined Functions](#user-defined-functions), even when scope is Local.
+The variables defined here will always be available inside [User-Defined Functions](Functions.html#user-defined-functions), even when scope is Local.
 
 User defined variables are saved to an INI file in the AppData\MacroCreator folder (it can also be edited in external text editors).
 

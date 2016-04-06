@@ -146,14 +146,13 @@
 	o_Lang004 =	&Faka oomatshini ezingundoqo kolu window
 	o_Lang005 =	&Hotkeys Soloko Active
 	o_Lang006 =	Iin&ketho woValo (Xa umthembile kugqiba ...)
-	o_Lang007 =	&Umxholo Hotkeys ezinobuthathaka
-	o_Lang008 =	&Yongeza isitshixo Windows ukuba "Dlala" lokugqithaName
-	o_Lang009 =	&Sebenzisa iqhosha kwibar njengoko lokugqithaName
-	o_Lang010 =	S&eta njengemiyo Hotkeys
-	o_Lang011 =	&Cwangcisa Ifayile eMiselweyo
-	o_Lang012 =	Sus&a Ifayile Okwendalo
-	o_Lang013 =	En&gagqibekanga Hotkeys
-	o_Lang014 =	I&zicwangciso engagqibekanga
+	o_Lang007 =	&Yongeza isitshixo Windows ukuba "Dlala" lokugqithaName
+	o_Lang008 =	&Sebenzisa iqhosha kwibar njengoko lokugqithaName
+	o_Lang009 =	S&eta njengemiyo Hotkeys
+	o_Lang010 =	&Cwangcisa Ifayile eMiselweyo
+	o_Lang011 =	Sus&a Ifayile Okwendalo
+	o_Lang012 =	En&gagqibekanga Hotkeys
+	o_Lang013 =	I&zicwangciso engagqibekanga
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Umnikelo

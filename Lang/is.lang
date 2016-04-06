@@ -146,14 +146,13 @@
 	o_Lang004 =	&Handtaka lykill þrýsta í þessum glugga
 	o_Lang005 =	H&otkeys alltaf virk
 	o_Lang006 =	Lo&kun valkostur (Þegar spilun lýkur ...)
-	o_Lang007 =	S&amhengi næmur Hotkeys
-	o_Lang008 =	&Bæta á Windows takkann til að "leika" hotkey
-	o_Lang009 =	&Notaðu stýripinnann hnapp sem hotkey
-	o_Lang010 =	S&etja sem sjálfgefinn Hotkeys
-	o_Lang011 =	Se&tja sem sjálfgefið skrá
-	o_Lang012 =	&Fjarlægja sjálfgefið skrá
-	o_Lang013 =	S&jálfgefið Hotkeys
-	o_Lang014 =	Sj&álfgefnum stillingum
+	o_Lang007 =	&Bæta á Windows takkann til að "leika" hotkey
+	o_Lang008 =	&Notaðu stýripinnann hnapp sem hotkey
+	o_Lang009 =	S&etja sem sjálfgefinn Hotkeys
+	o_Lang010 =	Se&tja sem sjálfgefið skrá
+	o_Lang011 =	&Fjarlægja sjálfgefið skrá
+	o_Lang012 =	S&jálfgefið Hotkeys
+	o_Lang013 =	Sj&álfgefnum stillingum
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Donation

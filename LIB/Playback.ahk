@@ -112,7 +112,7 @@
 					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
 				}
 			}
-			If ((ManualKey) && (ShowStep = 1))
+			If ((ManualKey) && (ShowStep))
 			{
 				NextStep := A_Index + 1
 				If (NextStep > LVData.Length())

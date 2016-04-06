@@ -146,14 +146,13 @@
 	o_Lang004 =	&Fondplaz Schlëssel fortgeet an dëser Fënster
 	o_Lang005 =	H&otkeys Ëmmer Aktiv
 	o_Lang006 =	O&nfräiwëlleger Optiounen (Wann playback eriwwer ass ...)
-	o_Lang007 =	&Kontext empfindlech Hotkeys
-	o_Lang008 =	Fo&to vum Windows Schlëssel "Play" hotkey
-	o_Lang009 =	&Benotzt eng joystick Knäppche wéi hotkey
-	o_Lang010 =	&Set als Standard Hotkeys
-	o_Lang011 =	S&et wéi Fichiere
-	o_Lang012 =	E&wechhuelen Fichiere
-	o_Lang013 =	&Default Hotkeys
-	o_Lang014 =	Def&ault Parameteren
+	o_Lang007 =	Fo&to vum Windows Schlëssel "Play" hotkey
+	o_Lang008 =	&Benotzt eng joystick Knäppche wéi hotkey
+	o_Lang009 =	&Set als Standard Hotkeys
+	o_Lang010 =	S&et wéi Fichiere
+	o_Lang011 =	E&wechhuelen Fichiere
+	o_Lang012 =	&Default Hotkeys
+	o_Lang013 =	Def&ault Parameteren
 		
 ; 10. Donate Sub Menu		
 	p_Lang001 =	&PayPal Don
