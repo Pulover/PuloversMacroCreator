@@ -1083,6 +1083,8 @@
 		Xa SendInput ayifumaneki, oko sibuela Dlala imo (ngezantsi). Oku kuzakubangela
 		Le SendInput umyalelo ngokwayo ukuba babuyele Dlala imo xa SendInput ayifumaneki.
 		Play: Ijija kwi indlela SendPlay ngenxa Thumela, SendRaw, Nqakraza, kunye MouseMove / Nqakraza / Tsala.
+	SP_TT =	Fast: Performance kunokuba kakhulu bhetele yeSlow Food, kodwa izinto ezithile WinText ukuze "kubonwa".
+		Slow: Ngaba ingacota kakhulu, kodwa zonke WinText kunokwenzeka igcinwayo window.
 	ST_TT =	1: Isihloko A window kufuneka uqale WinTitle elikhankanyiweyo ukuba umdlalo.
 		2: Isihloko A window singaqulatha WinTitle naphi ngaphakathi ngayo umdlalo.
 		3: Isihloko A window kufuneka kanye utshatise WinTitle ukuba umdlalo.
@@ -1092,8 +1094,8 @@
 		2: Isihloko A window singaqulatha WinTitle naphi ngaphakathi ngayo umdlalo.
 		3: Isihloko A window kufuneka kanye utshatise WinTitle ukuba umdlalo.
 		RegEx: Utshintsho WinTitle, WinText, ExcludeTitle, kwaye ExcludeText ukuba amabinzana rhoqo.
-	TitleSpeed_TT =	Fast: Lo ukuziphatha okungagqibekanga. Performance kunokuba kakhulu bhetele yeSlow Food, kodwa izinto ezithile WinText ezinye iintlobo iifestile ukuze "kubonwa" by imiyalelo ezahlukeneyo window.
-		Slow: Ngaba ingacota kakhulu, kodwa zonke WinText kunokwenzeka igcinwayo zonke window njenge uphendlo windowing umyalelo ngabo omdlalo. Window Spy ityhila iindawo itekisi window (ukuba zikhona) ifuna indlela ezicothayo.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Yenza Recording Relative xa urhulumente isitshixo kwi.
 	TransC_TT =	Umbala esitransparenti
 	VarCopyA_TT =	Khuphela imixholo yangoku bume

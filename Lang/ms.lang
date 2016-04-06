@@ -1083,17 +1083,19 @@
 		apabila SendInput tidak ada, ia kembali ke mod (di bawah) Main. Ini juga menyebabkan
 		arahan SendInput itu sendiri untuk kembali ke mod Main apabila SendInput tidak ada.
 		Main: Beralih kepada kaedah SendPlay untuk Hantar, SendRaw, Klik, dan MouseMove / Klik / drag.
+	SP_TT =	Cepat: Prestasi mungkin jauh lebih baik daripada Slow, tetapi unsur-unsur WinText tertentu mungkin tidak "dilihat".
+		Lambat: Boleh menjadi lebih perlahan, tetapi semua WinText mungkin diambil dari setiap tingkap.
 	ST_TT =	1: Tajuk tingkap mesti bermula dengan WinTitle yang dinyatakan untuk menjadi perlawanan.
 		2: Tajuk tingkap boleh mengandungi mana-mana sahaja di dalam WinTitle ia menjadi perlawanan.
 		3: Tajuk tingkap betul-betul mesti sepadan WinTitle menjadi perlawanan.
 		Regex: Perubahan WinTitle, WinText, ExcludeTitle, dan ExcludeText menjadi ungkapan biasa.
 	TimeoutM_TT =	0 = tidak terhingga
-	TitleMatch_TT =	1: Tajuk Tetingkap hendaklah bermula dengan WinTitle yang dinyatakan sebagai perlawanan.
-		2: Tajuk Tetingkap ini boleh mengandungi WinTitle mana-mana sahaja di dalamnya untuk menjadi perlawanan.
-		3: Tajuk Tetingkap mesti betul-betul sepadan WinTitle menjadi perlawanan.
+	TitleMatch_TT =	1: Tajuk tingkap mesti bermula dengan WinTitle yang dinyatakan untuk menjadi perlawanan.
+		2: Tajuk tingkap boleh mengandungi mana-mana sahaja di dalam WinTitle ia menjadi perlawanan.
+		3: Tajuk tingkap betul-betul mesti sepadan WinTitle menjadi perlawanan.
 		RegEx: Perubahan WinTitle, WinText, Tidak termasuk Tajuk, dan Tidak termasuk Text menjadi ungkapan biasa.
-	TitleSpeed_TT =	Cepat: Ini adalah tindakan lalai. Prestasi mungkin jauh lebih baik daripada Slow, tetapi unsur-unsur WinText tertentu untuk beberapa jenis tingkap tidak boleh "dilihat" oleh pelbagai arahan tingkap.
-		Lambat: Boleh menjadi lebih perlahan, tetapi semua WinText mungkin diambil daripada setiap tetingkap sebagai Cari perintah windowing melalui mereka untuk perlawanan. Window Spy mendedahkan mana bahagian teks Window (jika ada) memerlukan mod yang perlahan.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktifkan Rakaman relatif apabila negeri utama dihidupkan.
 	TransC_TT =	Warna telus
 	VarCopyA_TT =	Menyalin kandungan ubah semasa

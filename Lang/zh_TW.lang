@@ -1083,17 +1083,19 @@
 		SendInput不可用時，它會恢復到播放模式（如下圖）。這也導致
 		SendInput命令本身恢復到播放模式SendInput不可用時。
 		播放：SendPlay模式方法發送，SendRaw的開關，點擊，MOUSEMOVE /點擊/拖動。
+	SP_TT =	快：性能可基本上比慢越好，但某些WinText元件可以不被“看到”。
+		慢：可以更慢，但所有可能WinText從每個窗口獲取。
 	ST_TT =	1：一個窗口的標題必須從指定WinTitle是一個比賽。
 		2：一個窗口的標題，可以包含WinTitle內的任何地方它是一個比賽。
 		3：一個窗口的標題必須完全匹配WinTitle匹配。
 		正則表達式：更改的的WinTitle，WinText，ExcludeTitle，ExcludeText是正則表達式。
 	TimeoutM_TT =	0 =無限
-	TitleMatch_TT =	1：窗口的標題必須與指定的WinTitle下手要匹配。
-		2：窗口的標題可以包含WinTitle內的任何地方這是一個比賽。
-		3：窗口標題必須準確匹配WinTitle要匹配。
+	TitleMatch_TT =	1：一個窗口的標題必須從指定WinTitle是一個比賽。
+		2：一個窗口的標題，可以包含WinTitle內的任何地方它是一個比賽。
+		3：一個窗口的標題必須完全匹配WinTitle匹配。
 		正則表達式：更改WinTitle，WinText，排除標題，並排除文本是正則表達式。
-	TitleSpeed_TT =	快速：這是默認的行為。性能可基本上比慢越好，但由各個窗口的命令對某些類型的窗口一定WinText元件可以不被“看到”。
-		慢：可以更慢，但所有可能WinText是從每一個窗口通過他們一個窗口命令搜索匹配檢索。窗口間諜揭示其中一個窗口的文本的部分（如果有的話）需要慢速模式。
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	國家重點時，激活相對錄製。
 	TransC_TT =	透明色
 	VarCopyA_TT =	複製當前變量內容

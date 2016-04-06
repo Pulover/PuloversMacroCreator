@@ -1083,17 +1083,19 @@
 		Kad SendInput nije dostupna, ona se vraća na Play (u nastavku). Također ovaj uzroci
 		SendInput naredba sama vratiti na SendInput Kad Play nije dostupna.
 		Igra: Prijelaz na SendPlay metode za Pošalji, SendRaw, kliknite i MouseMove / Kliknite / Povucite.
+	SP_TT =	Brzi: Performanse mogu biti znatno bolji od Sporo, ali određene WinText elementi ne mogu biti "vidi".
+		Slow: Može biti puno sporiji, ali sve je moguće WinText izvučen sa svakog prozora.
 	ST_TT =	1: Prozor naslov mora početi s navedenom WinTitle da se utakmica.
 		2: Prozor naslov može sadržavati bilo gdje unutar WinTitle da bude utakmica.
 		3: Prozor naslov mora biti jednak WinTitle da se utakmica.
 		RegEx: Promjene WinTitle, WinText, ExcludeTitle i ExcludeText biti regularni izrazi.
 	TimeoutM_TT =	0 = beskonačno
-	TitleMatch_TT =	1: Naslov će se prozor mora započeti s navedenom WinTitle biti utakmica.
-		2: Naslov će se prozor može sadržavati WinTitle bilo gdje unutar to biti utakmica.
-		3: Naslov će se prozor mora točno odgovarati WinTitle biti utakmica.
+	TitleMatch_TT =	1: Prozor naslov mora početi s navedenom WinTitle da se utakmica.
+		2: Prozor naslov može sadržavati bilo gdje unutar WinTitle da bude utakmica.
+		3: Prozor naslov mora biti jednak WinTitle da se utakmica.
 		RegEx: Promjene WinTitle, WinText, Isključi naslov, a Isključi tekst biti regularnih izraza.
-	TitleSpeed_TT =	Brzi: To je zadano ponašanje. Učinak može biti znatno bolji od Sporo, ali neki WinText elementi za neke vrste prozora ne može se "vidi" raznih prozor naredbi.
-		Slow: Može biti puno sporiji, ali sve je moguće WinText izvučen sa svakog prozora u obliku windowing zapovjednim pretraživanja kroz njih za utakmicu. Prozor Spy otkriva koji su dijelovi prozora teksta (ako ih ima) potrebno mod spore.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktivirajte Relativna snimanja kad Ključni državni uključen.
 	TransC_TT =	Prozirna boja
 	VarCopyA_TT =	Kopirajte trenutne varijabilne sadržaj

@@ -1083,17 +1083,19 @@
 		kiedy SendInput jest niedostępny, to powraca do trybu odtwarzania (poniżej). Powoduje to także
 		Komenda SendInput sama powrócić do trybu odtwarzania, gdy SendInput jest niedostępny.
 		Play: Przejście do metody SendPlay na Wyślij, SendRaw, kliknij i mouseMove / Kliknij / Drag.
+	SP_TT =	Szybko: Wydajność może być znacznie lepiej niż Powolny, ale pewne elementy WinText nie mogą być "widziane".
+		Powolne: Może być znacznie wolniej, ale wszystko jest możliwe WinText są pobierane z każdego okna.
 	ST_TT =	1: okno tytuł musi zaczynać się od określonej WinTitle się mecz.
 		2: okno tytuł może zawierać WinTitle gdziekolwiek się być mecz.
 		3: Okno Tytuł musi dokładnie odpowiadać WinTitle się mecz.
 		RegEx: Zmiany WinTitle, WinText, ExcludeTitle i ExcludeText aby być wyrażenia regularne.
 	TimeoutM_TT =	0 = nieskończony
-	TitleMatch_TT =	1: Tytuł okno musi zaczynać się od podanej WinTitle się mecz.
-		2: Tytuł okno może zawierać WinTitle w dowolnym miejscu, że jest to mecz.
-		3: Tytuł okno musi dokładnie odpowiadać WinTitle się mecz.
+	TitleMatch_TT =	1: okno tytuł musi zaczynać się od określonej WinTitle się mecz.
+		2: okno tytuł może zawierać WinTitle gdziekolwiek się być mecz.
+		3: Okno Tytuł musi dokładnie odpowiadać WinTitle się mecz.
 		RegEx: Zmiany WinTitle, WinText wykluczałoby tytuł i wykluczeń tekst do wyrażenia regularne.
-	TitleSpeed_TT =	Szybko: Jest to zachowanie domyślne. Wydajność może być znacznie lepiej niż Powolny, ale pewne elementy WinText dla niektórych typów okien nie mogą być "widziane" przez różne polecenia okiennych.
-		Powolne: Może być znacznie wolniej, ale wszystko jest możliwe WinText jest pobierana od każdego okno jako wyszukiwań dowodzenia okienkowy przez nich na mecz. Okno Spy pokazuje, które części tekstu okno (jeśli istnieje) wymagają tryb powolny.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktywuj krewny klawisz nagrywania, gdy stan jest włączony.
 	TransC_TT =	Kolor przezroczysty
 	VarCopyA_TT =	Skopiuj aktualnej zmiennej treści

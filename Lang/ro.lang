@@ -1083,6 +1083,8 @@
 		Când SendInput nu este disponibil, acesta revine la modul (mai jos) Play. De asemenea, acest lucru determină
 		Comanda SendInput în sine pentru a reveni la modul Redare când SendInput nu este disponibil.
 		Redare: Comută metoda SendPlay pentru Trimitere, SendRaw, Faceți clic pe, și MouseMove / Faceți clic / Drag.
+	SP_TT =	Rapid: Performanța poate fi substanțial mai bună decât lent, dar anumite elemente WinText nu poate fi "văzut".
+		Lent: Poate fi mult mai lent, dar toate WinText posibile sunt preluate de la fiecare fereastră.
 	ST_TT =	1: titlul O fereastră trebuie să înceapă cu WinTitle specificat pentru a fi un meci.
 		2: titlul O fereastră poate conține WinTitle oriunde în interiorul acestuia pentru a fi un meci.
 		3: titlul O fereastră trebuie să se potrivească exact WinTitle să fie un meci.
@@ -1092,8 +1094,8 @@
 		2: titlul O fereastră poate conține WinTitle oriunde în interiorul acestuia pentru a fi un meci.
 		3: titlul O fereastră trebuie să se potrivească exact WinTitle să fie un meci.
 		RegEx: Modificări WinTitle, WinText, ExcludeTitle, și ExcludeText să fie expresii regulate.
-	TitleSpeed_TT =	Rapid: Acesta este comportamentul implicit. Performanța poate fi substanțial mai bună decât lent, dar anumite elemente WinText pentru anumite tipuri de ferestre nu pot fi "văzute" de diversele comenzi de ferestre.
-		Lent: Poate fi mult mai lent, dar toate WinText posibile sunt recuperate din fiecare fereastră ca un utilizator caută comandă windowing prin intermediul lor pentru un meci. Fereastra Spy dezvăluie ce părți ale textului unei ferestre (dacă este cazul) necesită modul lent.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Înregistrarea activa relativă atunci când starea cheie este activată.
 	TransC_TT =	Culoare transparent
 	VarCopyA_TT =	Copiați conținutul variabil de curent

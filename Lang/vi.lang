@@ -1083,17 +1083,19 @@
 		khi SendInput không có sẵn, nó trở về với chế độ chơi (bên dưới). Điều này cũng gây
 		lệnh SendInput bản thân để trở lại để chơi chế độ khi SendInput là không có.
 		Chơi: Thiết bị chuyển mạch với phương pháp SendPlay cho Send, SendRaw, Click, và MouseMove / Click / Kéo.
+	SP_TT =	Fast: Hiệu suất có thể được tốt hơn đáng kể so với chậm, nhưng các yếu tố WinText nhất định có thể không được "nhìn thấy".
+		Chậm: có thể là chậm hơn nhiều, nhưng tất cả WinText có thể được lấy từ tất cả các cửa sổ.
 	ST_TT =	1: Một tiêu đề của cửa sổ phải bắt đầu với WinTitle quy định là một trận đấu.
 		2: tiêu đề của một cửa sổ có thể chứa WinTitle bất cứ nơi nào bên trong nó là một trận đấu.
 		3: Một tiêu đề của cửa sổ phải phù hợp chính xác WinTitle là một trận đấu.
 		Regex: Thay đổi WinTitle, WinText, ExcludeTitle, và ExcludeText được biểu thức thông thường.
 	TimeoutM_TT =	0 = vô hạn
-	TitleMatch_TT =	1: tiêu đề của một cửa sổ phải bắt đầu với WinTitle định là một trận đấu.
+	TitleMatch_TT =	1: Một tiêu đề của cửa sổ phải bắt đầu với WinTitle quy định là một trận đấu.
 		2: tiêu đề của một cửa sổ có thể chứa WinTitle bất cứ nơi nào bên trong nó là một trận đấu.
-		3: tiêu đề của một cửa sổ chính xác phải phù hợp với WinTitle là một trận đấu.
+		3: Một tiêu đề của cửa sổ phải phù hợp chính xác WinTitle là một trận đấu.
 		Regex: Thay đổi WinTitle, WinText, Loại trừ Tiêu đề, và Loại trừ các văn bản để được biểu thức thông thường.
-	TitleSpeed_TT =	Nhanh: Đây là hành vi mặc định. Hiệu suất có thể được tốt hơn đáng kể so với chậm, nhưng các yếu tố WinText nhất định đối với một số loại cửa sổ có thể không được "nhìn" bằng các lệnh cửa sổ khác nhau.
-		Chậm: có thể là chậm hơn nhiều, nhưng tất cả WinText có thể được lấy từ tất cả các cửa sổ như là một lệnh cửa sổ tìm kiếm thông qua họ cho một trận đấu. Window Spy cho thấy phần nào của văn bản của cửa sổ (nếu có) yêu cầu chế độ chậm.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
 	TransC_TT =	Màu trong suốt
 	VarCopyA_TT =	Sao chép nội dung biến hiện nay

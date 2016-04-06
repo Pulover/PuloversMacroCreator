@@ -1083,6 +1083,8 @@
 		Kai SendInput yra nepasiekiamas, jis grįžta į Play režimą (toliau). Tai taip pat sukelia
 		SendInput komanda pati grįžti į atkūrimo režimą, kai SendInput yra neprieinama.
 		Groti: Perjungia į SendPlay metodą Send SendRaw, Spauskite, ir MouseMove / Paspauskite / pasipriešinimą.
+	SP_TT =	Greitas: spektaklio gali būti žymiai geriau nei lėtas, tačiau kai WinText elementai negali būti "matomas".
+		Lėtas: Gali būti daug lėtesnis, bet įmanoma WinText gaunami iš kiekvieno lango.
 	ST_TT =	1: langas titulas turi prasidėti nurodytu WinTitle būti rungtynės.
 		2: langas titulas gali būti WinTitle bet viduje ji būtų rungtynės.
 		3: lango pavadinimas turi tiksliai atitikti WinTitle būti rungtynės.
@@ -1092,8 +1094,8 @@
 		2: langas titulas gali būti WinTitle bet viduje ji būtų rungtynės.
 		3: lango pavadinimas turi tiksliai atitikti WinTitle būti rungtynės.
 		RegEx: pokyčiai WinTitle, WinText, ExcludeTitle ir ExcludeText būti reguliarios išraiškos.
-	TitleSpeed_TT =	Greitas: Tai numatytoji elgsena. Veikimas gali būti žymiai geriau nei lėtas, tačiau kai WinText elementai kai kurių "Windows tipų negali būti" matomas "įvairių langų komandomis.
-		Lėtas: Gali būti daug lėtesnis, bet įmanoma WinText gaunami iš kiekvieno lango kaip pagrindinę okienkowe komanda ieško per juos už rungtynes. Langų spy atskleidžia, kurios dalys lango teksto (jei toks yra) reikalauja lėto režimą.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktyvuok Santykinis Filmavimas, Key valstybinis įjungtas.
 	TransC_TT =	Skaidri spalva
 	VarCopyA_TT =	Kopijuoti dabartinius kintamas turinį

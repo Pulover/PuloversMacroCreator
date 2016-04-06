@@ -1083,17 +1083,19 @@
 		ketika SendInput tidak tersedia, itu akan beralih ke modus (bawah) Play. Hal ini juga menyebabkan
 		perintah SendInput sendiri untuk kembali ke mode Putar ketika SendInput tidak tersedia.
 		Play: Beralih ke metode SendPlay untuk Kirim, SendRaw, Klik, dan mousemove / Klik / Drag.
+	SP_TT =	Cepat: Kinerja mungkin jauh lebih baik dibandingkan Lambat, tetapi unsur-unsur WinText tertentu tidak dapat "melihat".
+		Lambat: Bisa menjadi lebih lambat, tapi semua kemungkinan WinText diambil dari setiap jendela.
 	ST_TT =	1: Judul Sebuah jendela harus dimulai dengan WinTitle ditentukan untuk menjadi sebuah pertandingan.
 		2: Judul window dapat berisi WinTitle mana saja di dalamnya menjadi pertandingan.
 		3: Judul window harus sama persis WinTitle menjadi pertandingan.
 		Regex: Perubahan WinTitle, WinText, ExcludeTitle, dan ExcludeText menjadi ekspresi reguler.
 	TimeoutM_TT =	0 = tak terbatas
-	TitleMatch_TT =	1: Judul Sebuah jendela harus mulai dengan WinTitle ditentukan untuk menjadi pertandingan.
-		2: Judul Jendela ini dapat berisi WinTitle di mana saja di dalamnya menjadi pertandingan.
-		3: Judul Sebuah jendela harus sama persis dengan WinTitle menjadi pertandingan.
+	TitleMatch_TT =	1: Judul Sebuah jendela harus dimulai dengan WinTitle ditentukan untuk menjadi sebuah pertandingan.
+		2: Judul window dapat berisi WinTitle mana saja di dalamnya menjadi pertandingan.
+		3: Judul window harus sama persis WinTitle menjadi pertandingan.
 		Regex: Perubahan WinTitle, WinText, Kecualikan Judul, dan Kecualikan Text menjadi ekspresi reguler.
-	TitleSpeed_TT =	Cepat: ini adalah perilaku default. Kinerja mungkin jauh lebih baik dibandingkan Lambat, tetapi unsur-unsur WinText tertentu untuk beberapa jenis windows tidak dapat "dilihat" oleh berbagai perintah jendela.
-		Lambat: Bisa menjadi lebih lambat, tapi semua kemungkinan WinText diambil dari setiap jendela sebagai pencarian perintah windowing melalui mereka untuk pertandingan. Jendela Spy mengungkapkan bagian mana dari teks jendela (jika ada) memerlukan modus lambat.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktifkan Recording Relatif ketika negara kunci di.
 	TransC_TT =	Transparan warna
 	VarCopyA_TT =	Menyalin isi variabel saat ini

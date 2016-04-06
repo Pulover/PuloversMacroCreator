@@ -1083,6 +1083,8 @@
 		Pan SendInput ar gael, mae'n dychwelyd i Chwarae ddelw (isod). Mae hyn hefyd yn achosi
 		Gorchymyn SendInput ei hun i ddychwelyd i Chwarae modd pan SendInput ar gael.
 		Chwarae: switshis i'r dull SendPlay gyfer Anfon, SendRaw, Cliciwch, a MouseMove / Clic / Llusgwch.
+	SP_TT =	Cyflym: Gall perfformiad fod yn sylweddol well na Araf, ond efallai na fydd rhai elfennau WinText fod yn "gweld".
+		Araf: A all fod yn llawer arafach, ond mae pob WinText posibl yn cael ei adfer o bob ffenestr.
 	ST_TT =	1: Teitl Ffenestr yn rhaid dechrau gyda'r WinTitle penodedig i fod yn gêm.
 		2: Gall teitl Ffenestr yn cynnwys WinTitle unrhyw le y tu mewn iddo i fod yn gêm.
 		3: Rhaid teitl Ffenestr yn cyfateb yn union WinTitle i fod yn gêm.
@@ -1092,8 +1094,8 @@
 		2: Gall teitl Ffenestr yn cynnwys WinTitle unrhyw le y tu mewn iddo i fod yn gêm.
 		3: Rhaid teitl Ffenestr yn cyfateb yn union WinTitle i fod yn gêm.
 		Regex: Newidiadau WinTitle, WinText, ExcludeTitle, a ExcludeText i fod mynegiadau rheolaidd.
-	TitleSpeed_TT =	Fast: Mae hyn yn ymddygiad rhagosodedig. Efallai y perfformiad fod yn sylweddol well na Araf, ond efallai na fydd rhai elfennau WinText ar gyfer rhai mathau o ffenestri yn cael eu "gweld" gan yr amrywiol gorchmynion ffenestr.
-		Araf: A all fod yn llawer arafach, ond mae pob WinText posibl yn cael ei adfer o bob ffenestr fel gorchymyn windowing chwilio drwyddynt ar gyfer gêm. Ffenestr Spy yn datgelu pa rannau o'r testun Ffenestr (os oes un) ei gwneud yn ofynnol y modd araf.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Activate Cofnodi cymharol pan wladwriaeth allweddol ar.
 	TransC_TT =	Lliw tryloyw
 	VarCopyA_TT =	Copïwch cynnwys newidyn cyfredol

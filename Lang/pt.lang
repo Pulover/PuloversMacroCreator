@@ -1083,17 +1083,19 @@
 		quando SendInput não está disponível ele reverte para modo Play (abaixo). Isto também faz
 		o comando SendInput reverter para mod Play quando SendInput não está disponível.
 		Play: Utiliza o método SendPlay para Send, SendRaw, Click e MouseMove/Click/Drag.
+	SP_TT =	Rápido: O desempenho pode ser substancialmente melhor do que lento, mas certos elementos WinText não pode ser "visto".
+		Lento: Pode ser muito mais lento, mas tudo é possível WinText é recuperado de cada janela.
 	ST_TT =	1: Uma janela precisa começar com o título especificado.
 		2: Uma janela precisa conter o título especificado em qualquer lugar.
 		3: Uma janela precisa ter exatamente o título especificado.
 		RegEx: Muda WinTitle, WinText, ExcludeTitle, e ExcludeText para expressões regulares.
 	TimeoutM_TT =	0 = infinito
-	TitleMatch_TT =	1: título da janela deve começar com o WinTitle especificado para ser um jogo.
-		2: O título de um janela pode conter WinTitle qualquer lugar dentro dele para ser um jogo.
-		3: título da janela deve corresponder exatamente WinTitle ser um jogo.
+	TitleMatch_TT =	1: Uma janela precisa começar com o título especificado.
+		2: Uma janela precisa conter o título especificado em qualquer lugar.
+		3: Uma janela precisa ter exatamente o título especificado.
 		RegEx: Alterações WinTitle, WinText, Excluir título, e excluir do texto a ser expressões regulares.
-	TitleSpeed_TT =	Rápido: Este é o comportamento padrão. O desempenho pode ser substancialmente melhor do que lento, mas certos elementos WinText para alguns tipos de janelas não podem ser "visto" pelos vários comandos da janela.
-		Lento: Pode ser muito mais lento, mas tudo é possível WinText é recuperado de cada janela como um comando de janelas pesquisas através deles para uma partida. Window Spy revela que partes do texto de uma janela (se houver) exigem o modo lento.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Ativa Gravação Relativa quando a tecla estiver acionada.
 	TransC_TT =	Cor transparente
 	VarCopyA_TT =	Copy current variable contents

@@ -58,7 +58,8 @@ TB_IdealSize(tbPtr, Band)
 TB_Messages(wParam, lParam)
 {
 	tbPtr := TB_GetHwnd(lParam)
-    tbPtr.OnMessage(wParam)
+	If (tbPtr)
+		tbPtr.OnMessage(wParam)
 }
 
 TB_GetHwnd(Hwnd)

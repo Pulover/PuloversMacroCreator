@@ -1083,17 +1083,19 @@
 		quan SendInput no està disponible, es torna a la manera (baix) Reproduir. Això també provoca
 		la comanda SendInput si per tornar al mode Reproducció quan SendInput no està disponible.
 		Reproduir: Canvia al mètode SendPlay per enviar, SendRaw, clic, i mousemove / clic / Arrossegament.
+	SP_TT =	Ràpid: El rendiment pot ser substancialment millor que lent, però certs elements WinText no pot ser "vist".
+		Lent: Pot ser molt més lent, però és possible WinText està recuperat de totes les finestres.
 	ST_TT =	1: el títol d'una finestra de començar amb la WinTitle especificada a ser un partit.
 		2: el títol d'una finestra pot contenir WinTitle qualsevol lloc dins que fos una coincidència.
 		3: el títol d'una finestra ha de coincidir exactament amb WinTitle un partit.
 		Regex: Canvis WinTitle, WinText, ExcludeTitle i ExcludeText com expressions regulars.
 	TimeoutM_TT =	0 = infinit
-	TitleMatch_TT =	1: El títol d'una finestra ha de començar amb el WinTitle especificada a ser un partit.
-		2: el títol d'una finestra pot contenir qualsevol lloc dins WinTitle que sigui una coincidència.
-		3: el títol d'una finestra ha de coincidir exactament amb WinTitle a ser un partit.
+	TitleMatch_TT =	1: el títol d'una finestra de començar amb la WinTitle especificada a ser un partit.
+		2: el títol d'una finestra pot contenir WinTitle qualsevol lloc dins que fos una coincidència.
+		3: el títol d'una finestra ha de coincidir exactament amb WinTitle un partit.
 		Regex: Canvis WinTitle, WinText, Excloure Títol i Excloure text com a expressions regulars.
-	TitleSpeed_TT =	Ràpid: Aquest és el comportament per defecte. El rendiment pot ser substancialment millor que lent, però certs elements WinText per a alguns tipus de finestres no pot ser "vist" pels diferents comandaments de la finestra.
-		Lent: Pot ser molt més lent, però és possible WinText està recuperat de totes les finestres com una ordre recerca de finestres a través d'ells per a un partit. Finestra espia revela quines parts d'un text de la finestra (si n'hi ha) requereixen la manera lent.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
 	TransC_TT =	Color Transparent
 	VarCopyA_TT =	Copia contingut actual de variables

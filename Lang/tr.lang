@@ -1083,17 +1083,19 @@
 		SendInput kullanılamaz olduğunda, bu modu (aşağıda) Play döner. Bu, aynı zamanda neden
 		SendInput komut kendini SendInput kullanılamaz olduğunda Oynatma modu dönmek.
 		Play: SendRaw, Gönder için SendPlay yöntemi Anahtarlar, tıklayın ve MouseMove / tıklayın / sürükleyin.
+	SP_TT =	Hızlı: Performans Yavaş önemli ölçüde daha iyi olabilir, ancak bazı WinText elemanları "görüldü" olabilir.
+		Yavaş: daha yavaş olabilir, ama tüm olası WinText her penceresinden alınır.
 	ST_TT =	1: Bir pencerenin başlık bir maç olduğu belirtilen WinTitle ile başlamalıdır.
 		2: bir maç olmasını içindeki bir pencerenin başlık yerde WinTitle içerebilir.
 		3: Bir pencerenin başlık tam bir maç olmasını WinTitle eşleşmelidir.
 		RegEx: Değişiklikler, WinText, ExcludeTitle ve düzenli ifadeler olarak ExcludeText WinTitle.
 	TimeoutM_TT =	0 = sonsuz
-	TitleMatch_TT =	1: Belirtilen WinTitle ile başlamalıdır Bir pencerenin başlık bir maç olmasını.
-		2: Bir maç olmasını içindeki bir pencerenin başlık her yerde WinTitle içerebilir.
-		3: Bir pencerenin başlık tam bir maç olmasını WinTitle eşleşmesi gerekir.
+	TitleMatch_TT =	1: Bir pencerenin başlık bir maç olduğu belirtilen WinTitle ile başlamalıdır.
+		2: bir maç olmasını içindeki bir pencerenin başlık yerde WinTitle içerebilir.
+		3: Bir pencerenin başlık tam bir maç olmasını WinTitle eşleşmelidir.
 		RegEx: Değişiklikler WinTitle, WinText, Başlık Dışlama ve düzenli ifadeler olması Metin hariç.
-	TitleSpeed_TT =	Hızlı: Bu varsayılan davranıştır. Performans Yavaş önemli ölçüde daha iyi olabilir, ancak windows bazı türleri için belirli WinText elemanları çeşitli pencere komutları ile "görülme" olmayabilir.
-		Yavaş: daha yavaş olabilir, ama tüm olası WinText bir maç için içlerinden bir pencere komut aramalar olarak her penceresinden alınır. Pencere Spy Pencere metin parçaları (varsa) yavaş modu gerektiren ortaya koymaktadır.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Önemli devlet açıkken Bağıl Kayıt etkinleştirin.
 	TransC_TT =	Şeffaf renk
 	VarCopyA_TT =	Akım değişken içeriğini kopyalama

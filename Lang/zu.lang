@@ -1083,6 +1083,8 @@
 		Lapho SendInput ayitholakali, ibuyela Play mode (ngezansi). Lokhu futhi kubangela
 		The SendInput umyalo uqobo ukubuyela Play mode lapho SendInput ayitholakali.
 		Play: wokushintsha indlela SendPlay for Thumela, SendRaw, Chofoza, futhi MouseMove / Chofoza / Drag.
+	SP_TT =	Fast: Performance kungase kube kakhulu kangcono ukwedlula Slow, kodwa izakhi ezithile WinText angeke kube "ngimbone".
+		Slow: Ingaba kancane kakhulu, kodwa zonke WinText kungenzeka is ukubuyiswa kusuka zonke window.
 	ST_TT =	1: Isihloko A iwindi kumele kuqale WinTitle esibekiwe ukuze ube nomdlalo.
 		2: Isihloko A iwindi sika ingaqukatha WinTitle kuphi ngaphakathi ube nomdlalo.
 		3: Isihloko A iwindi kumele ahambisana WinTitle ukuba abe nomdlalo.
@@ -1092,8 +1094,8 @@
 		2: Isihloko A iwindi sika ingaqukatha WinTitle kuphi ngaphakathi ube nomdlalo.
 		3: Isihloko A iwindi kumele ahambisana WinTitle ukuba abe nomdlalo.
 		Regex: Izinguquko WinTitle, WinText, ExcludeTitle, futhi ExcludeText ukuba abe izinkulumo njalo.
-	TitleSpeed_TT =	Fast: Lona ukuziphatha okuzenzakalelayo. Performance kungase kube kakhulu kangcono ukwedlula Slow, kodwa izakhi ezithile WinText for ezinye izinhlobo emafasiteleni angeke kube 'abonwe' imiyalo ehlukahlukene iwindi.
-		Slow: Ingaba kancane kakhulu, kodwa zonke WinText kungenzeka is ukubuyiswa kusuka zonke iwindi njengoba ukusesha windowing umyalo ngokusebenzisa kwabo umdlalo. Window Spy yembula ukuthi yiziphi izingxenye umbhalo Window sika (uma ikhona) zidinga i-mode slow.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Cupha Ukuqopha isihlobo uma isimo ikhi ivuliwe.
 	TransC_TT =	Umbala esobala
 	VarCopyA_TT =	Kopisha okuqukethwe variable zamanje

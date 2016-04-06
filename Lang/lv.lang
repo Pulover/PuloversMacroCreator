@@ -1083,6 +1083,8 @@
 		Kad SendInput nav pieejama, tas atgriežas spēlēt režīmu (zemāk). Tas arī izraisa
 		SendInput komanda pati atgriezties spēlēt režīmā, kad SendInput nav pieejama.
 		Play: Pārslēdzas uz SendPlay metodi Sūtīt, SendRaw, Click, un MouseMove / Uzklikšķināt / Drag.
+	SP_TT =	Fast: Performance var būt ievērojami labāks nekā lēna, bet daži WinText elementi nevar "redzēt".
+		Slow: Var būt daudz lēnāks, taču viss ir iespējams WinText tiek iegūti no katra loga.
 	ST_TT =	1: logs nosaukumā ir jāsāk ar norādīto WinTitle būt spēles.
 		2: logs nosaukumā var saturēt WinTitle jebkur iekšpusē, ka tas ir spēles.
 		3: logs nosaukumā ir precīzi jāatbilst WinTitle būt spēles.
@@ -1092,8 +1094,8 @@
 		2: logs nosaukumā var saturēt WinTitle jebkur iekšpusē, ka tas ir spēles.
 		3: logs nosaukumā ir precīzi jāatbilst WinTitle būt spēles.
 		RegEx: Izmaiņas WinTitle, WinText, ExcludeTitle, un ExcludeText būt regulāras izteiksmes.
-	TitleSpeed_TT =	Fast: Tas ir noklusējuma uzvedība. Veiktspēja var būt ievērojami labāks nekā lēna, bet daži WinText elementi dažu logu veidiem nevar "redzēt" ar dažādu logu komandas.
-		Slow: Var būt daudz lēnāks, taču viss ir iespējams WinText tiek iegūti no katras logu, kā windowing komandu meklējumiem caur tiem, kas spēlē. Logu Spy atklāj, kuras daļas loga tekstu (ja tāds ir) pieprasīt lēns režīmā.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktivizēt Radinieks ierakstīšana kad galvenais valsts ir ieslēgts.
 	TransC_TT =	Caurspīdīga krāsa
 	VarCopyA_TT =	Kopēt pašreizējo mainīgo saturu

@@ -1083,17 +1083,19 @@
 		而不是退回到Event模式。这同时会让
 		SendInput命令自身在SendInput不可用时恢复到Play模式。
 		Play：让Send、SendRaw、Click和MouseMove/Click/Drag切换到SendPlay方法。
+	SP_TT =	快：性能可基本上比慢越好，但某些WinText元件可以不被“看到”。
+		慢：可以更慢，但所有可能WinText从每个窗口获取。
 	ST_TT =	1：窗口标题必须以指定的WinTitle开头。
 		2：窗口标题的某个位置必须包含WinTitle。
 		3：窗口标题必须准确匹配WinTitle。
 		RegEx：改变WinTitle、WinText、ExcludeTitle和ExcludeText为正则表达式。
 	TimeoutM_TT =	0 = 无限期
-	TitleMatch_TT =	1：窗口的标题必须与指定的WinTitle下手要匹配。
-		2：窗口的标题可以包含WinTitle内的任何地方这是一个比赛。
-		3：窗口标题必须准确匹配WinTitle要匹配。
+	TitleMatch_TT =	1：窗口标题必须以指定的WinTitle开头。
+		2：窗口标题的某个位置必须包含WinTitle。
+		3：窗口标题必须准确匹配WinTitle。
 		正则表达式：更改WinTitle，WinText，排除标题，并排除文本是正则表达式。
-	TitleSpeed_TT =	快速：这是默认的行为。性能可基本上比慢越好，但由各个窗口的命令对某些类型的窗口一定WinText元件可以不被“看到”。
-		慢：可以更慢，但所有可能WinText是从每一个窗口通过他们一个窗口命令搜索匹配检索。窗口间谍揭示其中一个窗口的文本的部分（如果有的话）需要慢速模式。
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	当按键状态弹起时激活相对录制。
 	TransC_TT =	透明色
 	VarCopyA_TT =	复制当前变量的内容

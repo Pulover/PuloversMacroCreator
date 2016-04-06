@@ -1083,6 +1083,8 @@
 		when SendInput is unavailable, it reverts to Play mode (below). This also causes
 		the SendInput command itself to revert to Play mode when SendInput is unavailable.
 		Play: Switches to the SendPlay method for Send, SendRaw, Click, and MouseMove/Click/Drag.
+	SP_TT =	Fast: Performance may be substantially better than Slow, but certain WinText elements may not be "seen".
+		Slow: Can be much slower, but all possible WinText is retrieved from every window.
 	ST_TT =	1: A window's title must start with the specified WinTitle to be a match.
 		2: A window's title can contain WinTitle anywhere inside it to be a match.
 		3: A window's title must exactly match WinTitle to be a match.
@@ -1092,8 +1094,8 @@
 		2: A window's title can contain WinTitle anywhere inside it to be a match.
 		3: A window's title must exactly match WinTitle to be a match.
 		RegEx: Changes WinTitle, WinText, ExcludeTitle, and ExcludeText to be regular expressions.
-	TitleSpeed_TT =	Fast: This is the default behavior. Performance may be substantially better than Slow, but certain WinText elements for some types of windows may not be "seen" by the various window commands.
-		Slow: Can be much slower, but all possible WinText is retrieved from every window as a windowing command searches through them for a match. Window Spy reveals which parts of a Window's text (if any) require the slow mode.
+	TitleSpeed_TT =	Fast: Performance may be substantially better than Slow, but certain WinText elements may not be "seen".
+		Slow: Can be much slower, but all possible WinText is retrieved from every window.
 	ToggleC_TT =	Activate Relative Recording when key state is on.
 	TransC_TT =	Transparent color
 	VarCopyA_TT =	Copy current variable contents

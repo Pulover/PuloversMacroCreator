@@ -1083,17 +1083,19 @@
 		quand SendInput n'est pas disponible, il revient au mode de lecture (ci-dessous). Cela provoque également
 		la commande SendInput lui-même pour revenir en mode Lecture lorsque SendInput n'est pas disponible.
 		Jouer: Passe à la méthode de SendPlay Envoyer, SendRaw, Cliquez, et MouseMove / cliquer / glisser.
+	SP_TT =	Rapide: Les performances peuvent être sensiblement mieux que lente, mais certains éléments de WinText ne peut pas être «vu».
+		Lente: Peut être beaucoup plus lent, mais tout WinText possible est récupéré de chaque fenêtre.
 	ST_TT =	1: titre d'une fenêtre doit commencer par la WinTitle spécifiée comme une allumette.
 		2: titre d'une fenêtre peut contenir n'importe où dans WinTitle qu'il s'agit d'un match.
 		3: titre d'une fenêtre doit correspondre exactement à WinTitle être un match.
 		RegEx: Changements WinTitle, WinText, ExcludeTitle et ExcludeText comme des expressions régulières.
 	TimeoutM_TT =	0 = infini
-	TitleMatch_TT =	1: le titre d'une fenêtre doit commencer par la WinTitle indiqué être un match.
-		2: le titre d'une fenêtre peut contenir WinTitle partout à l'intérieur que ce soit un match.
-		3: le titre d'une fenêtre doit correspondre exactement WinTitle être un match.
+	TitleMatch_TT =	1: titre d'une fenêtre doit commencer par la WinTitle spécifiée comme une allumette.
+		2: titre d'une fenêtre peut contenir n'importe où dans WinTitle qu'il s'agit d'un match.
+		3: titre d'une fenêtre doit correspondre exactement à WinTitle être un match.
 		RegEx: Changements WinTitle, WinText, Exclure Titre et Exclure texte à des expressions régulières.
-	TitleSpeed_TT =	Fast: Ceci est le comportement par défaut. Les performances peuvent être sensiblement mieux que lent, mais certains éléments de WinText pour certains types de fenêtres ne peut être "vu" par les différentes commandes de la fenêtre.
-		Lente: Peut être beaucoup plus lent, mais tout WinText possible est récupéré à partir de toutes les fenêtres comme une commande de fenêtrage recherches à travers eux pour un match. Window Spy révèle quelles parties du texte d'une fenêtre (le cas échéant) exigent le mode lent.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Activez l'enregistrement relative lorsque l'état touche est activée.
 	TransC_TT =	Couleur transparente
 	VarCopyA_TT =	Copiez le contenu des variables actuelles

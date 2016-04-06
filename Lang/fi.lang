@@ -1083,17 +1083,19 @@
 		kun SendInput ei ole käytettävissä, se palaa toistotila (alla). Tämä aiheuttaa myös
 		SendInput käskyn palata toistotilaan kun SendInput ei ole käytettävissä.
 		Play: Vaihtaa SendPlay menetelmää Lähetä, SendRaw, Click, ja mouseMove / Valitse / Vedä.
+	SP_TT =	Nopea: Suorituskyky voi olla huomattavasti parempi kuin hidas, mutta tietyt WinText osia ei saa "nähdä".
+		Hidas: Voi olla paljon hitaampi, mutta kaikki mahdolliset WinText haetaan jokaisesta ikkunasta.
 	ST_TT =	1: ikkunan otsikko on aloitettava määriteltyjen WinTitle olla ottelu.
 		2: ikkunan otsikko voi sisältää WinTitle missä sen sisällä olevan ottelun.
 		3: ikkunan otsikko on täsmälleen sama WinTitle olla ottelu.
 		RegEx: Muutokset WinTitle, WinText, ExcludeTitle ja ExcludeText olla säännöllisiä lausekkeita.
 	TimeoutM_TT =	0 = ääretön
-	TitleMatch_TT =	1: ikkunan otsikko on aloitettava määritetty WinTitle olla ottelussa.
-		2: ikkunan otsikko voi sisältää WinTitle missään sisällä sen olevan ottelussa.
-		3: ikkunan otsikko on täsmälleen WinTitle olla ottelussa.
+	TitleMatch_TT =	1: ikkunan otsikko on aloitettava määriteltyjen WinTitle olla ottelu.
+		2: ikkunan otsikko voi sisältää WinTitle missä sen sisällä olevan ottelun.
+		3: ikkunan otsikko on täsmälleen sama WinTitle olla ottelu.
 		RegEx: Muutokset WinTitle, WinText, Poissulje osaston ja poissulkevat Teksti olla säännöllisiä lausekkeita.
-	TitleSpeed_TT =	Nopea: Tämä on oletusarvo käyttäytymistä. Suorituskyky saattaa olla huomattavasti parempi kuin hidas, mutta tietyt WinText elementtejä joidenkin ikkunoita ei saa "näkee" eri käyttöjärjestelmän komentoja.
-		Hidas: Voi olla paljon hitaampi, mutta kaikki mahdolliset WinText noudetaan jokaisesta ikkunasta kuin ikkunointi komento hakee niiden kautta ottelussa. Ikkuna Spy paljastaa, mitkä osat ikkunan tekstin (jos on) vaativat hidasta tilassa.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktivoi Suhteellinen äänitystä kun avain tila on.
 	TransC_TT =	Läpinäkyvä väri
 	VarCopyA_TT =	Kopioi nykyinen muuttujan sisältö

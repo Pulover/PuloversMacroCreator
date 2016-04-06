@@ -1083,6 +1083,8 @@
 		Þegar SendInput er ekki fyrir hendi, snúa sér það að spila ham (að neðan). Þetta veldur einnig
 		Sem SendInput skipunin sjálf að snúa sér að spila ham þegar SendInput er ekki fyrir hendi.
 		Leika: Rofar til á SendPlay aðferð til Senda, SendRaw, Click og MouseMove / Smelltu / Drag.
+	SP_TT =	Fast: Performance getur verið talsvert betri en Slow, en ákveðin WinText þættir mega ekki vera "séð".
+		Slow: Getur verið mun hægari en allt mögulegt WinText er sótt úr hverjum glugga.
 	ST_TT =	1: Titill glugga verður að byrja með tilgreinda WinTitle að vera passa.
 		2: Titill glugga er hægt innihaldið WinTitle einhvers staðar inni það að vera passa.
 		3: Titill glugga verða að vera nákvæmlega eins WinTitle að vera passa.
@@ -1092,8 +1094,8 @@
 		2: Titill glugga er hægt innihaldið WinTitle einhvers staðar inni það að vera passa.
 		3: Titill glugga verða að vera nákvæmlega eins WinTitle að vera passa.
 		Ríkisstjóratíð: Breytingar WinTitle, WinText, ExcludeTitle og ExcludeText að vera venjulegur tjáning.
-	TitleSpeed_TT =	Fast: Þetta er sjálfgefinn hegðun. Flutningur getur verið verulega betri en Slow, en ákveðnir þættir WinText fyrir sumum tegundum gluggar mega ekki vera "séð" af ýmsu skipanir glugga.
-		Slow: Getur verið mun hægari en allt mögulegt WinText er sótt úr hverjum glugga Sem windowing stjórn leitar í gegnum þá til að passa. Gluggi Spy ljós hvaða hlutar textans glugga (ef einhver) krefjast hægur ham.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Virkja Hlutfallsleg upptöku þegar lykill ástand er á.
 	TransC_TT =	Gagnsæ lit
 	VarCopyA_TT =	Afrita núverandi breytilega innihald

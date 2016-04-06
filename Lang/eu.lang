@@ -1083,6 +1083,8 @@
 		Denean SendInput dago erabilgarri, Play modua (behean) itzultzen da. Hau ere eragiten
 		SendInput komando bera Play modua denean SendInput ez dago eskuragarri leheneratu.
 		Play: SendPlay Bidali metodoa aldatzen, SendRaw, klik egin, eta MouseMove / Klik / Drag.
+	SP_TT =	Fast: Performance nabarmen Slow baino hobea izan daiteke, baina zenbait elementu WinText ezingo dira "ikusi".
+		Slow: askoz motelagoa izan daiteke, baina posible WinText guztiak da leiho guztietan eskuratuko.
 	ST_TT =	1: leiho baten izenburua zehaztu WinTitle batekin hasi du partida bat izango da.
 		2: leiho bat izenburua WinTitle eduki dezake edonon barruan partida bat izan da.
 		3: leiho batek izenburu bat etorri behar WinTitle partida bat izan nahi du.
@@ -1092,8 +1094,8 @@
 		2: leiho bat izenburua WinTitle eduki dezake edonon barruan partida bat izan da.
 		3: leiho batek izenburu bat etorri behar WinTitle partida bat izan nahi du.
 		RegEx: aldaketak WinTitle, WinText, ExcludeTitle, eta ExcludeText adierazpen erregularrak izan.
-	TitleSpeed_TT =	Fast: Hau portaera lehenetsia da. Performance nabarmen Slow baino hobea izan daiteke, baina leiho mota batzuk egiteko zenbait elementu WinText ezingo dira "ikusi" Leiho hainbat komando arabera.
-		Slow: askoz motelagoa izan daiteke, baina posible da WinText guztiak bat leiho komando bilaketak horien bitartez partida bat bezala leiho guztietan eskuratuko. Leiho Spy agerian uzten horrek Leiho baten testu-zatiak (baldin badaude) motela moduan eskatzen.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktibatu Grabaketa erlatiboa gako egoera oinarritzen da.
 	TransC_TT =	Kolore gardena
 	VarCopyA_TT =	Kopiatu uneko edukiak aldakorra

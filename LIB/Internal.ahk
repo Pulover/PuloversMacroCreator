@@ -90,6 +90,8 @@ ShowTooltip()
 {
 	static CurrControl, PrevControl, _TT, TT_A
 	CurrControl := A_GuiControl
+	If (!CurrControl)
+		return
 	If (CurrControl != PrevControl && !RegExMatch(CurrControl, "\W"))
 	{
 		TT_A := WinExist("A")
@@ -104,6 +106,8 @@ ShowTooltip()
 		return
 	Try
 		ToolTip, % %CurrControl%_TT
+	Catch
+		return
 	SetTimer, RemoveToolTip, -3000
 	return
 }

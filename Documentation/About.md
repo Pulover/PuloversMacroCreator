@@ -1,4 +1,4 @@
-# Pulover's Macro Creator
+﻿# Pulover's Macro Creator
 *The Complete Automation Tool*
 
 [www.macrocreator.com](http://www.macrocreator.com)  

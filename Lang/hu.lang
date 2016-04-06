@@ -1083,17 +1083,19 @@
 		amikor SendInput nem érhető el, akkor visszatér a Lejátszás módba (lent). Ez is okoz
 		A SendInput parancsot magát, hogy visszatérjen a Lejátszás módba, amikor SendInput nem áll rendelkezésre.
 		Lejátszás: Váltás a SendPlay módszer Küldés, SendRaw, kattintson, és MouseMove / Kattints / Drag.
+	SP_TT =	Gyors: A teljesítmény lényegesen jobb, mint a lassú, de biztos WinText elemek nem "látható".
+		Lassú: Lehet, hogy sokkal lassabb, de minden lehetséges WinText lekért minden ablakot.
 	ST_TT =	1: Egy ablak címét kell kezdeni a megadott WinTitle, hogy egy meccs.
 		2: Egy ablak címét is tartalmazhat WinTitle bárhol benne, hogy a mérkőzés.
 		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy egy meccs.
 		RegEx: Változások WinTitle, WinText, ExcludeTitle és ExcludeText legyen reguláris kifejezések.
 	TimeoutM_TT =	0 = végtelen
-	TitleMatch_TT =	1: Egy ablak címét kell kezdeni a megadott WinTitle hogy a mérkőzés.
-		2: Egy ablak címét tartalmazhat WinTitle bárhova, hogy legyen a mérkőzés.
-		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy a mérkőzés.
+	TitleMatch_TT =	1: Egy ablak címét kell kezdeni a megadott WinTitle, hogy egy meccs.
+		2: Egy ablak címét is tartalmazhat WinTitle bárhol benne, hogy a mérkőzés.
+		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy egy meccs.
 		RegEx: Változások WinTitle, WinText, kizárása cím és kizárása szöveget reguláris kifejezéseket.
-	TitleSpeed_TT =	Gyors: Ez az alapértelmezett viselkedés. A teljesítmény lényegesen jobb, mint a lassú, de biztos WinText elemek bizonyos típusú ablakok nem "látható" a különböző ablak parancsokat.
-		Lassú: Lehet, hogy sokkal lassabb, de minden lehetséges WinText visszakeresődik minden ablak windowing parancs megkeresi azokat a mérkőzés. Ablak Spy kiderül mely részeit ablak szövege (ha van ilyen) megkövetelik a lassú üzemmódot.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
 	TransC_TT =	Átlátszó szín
 	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát

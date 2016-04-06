@@ -1083,6 +1083,8 @@
 		Kur SendInput është në dispozicion, ai kthehet në Play mode (më poshtë). Kjo gjithashtu shkakton
 		Vetë komandën SendInput të kthehet në Play mode kur SendInput është i padisponueshëm.
 		Play: Kalon në metodën SendPlay për Send, SendRaw, Kliko, dhe MouseMove / Kliko / Drag.
+	SP_TT =	Fast: Performance mund të jetë dukshëm më mirë se Slow, por disa elemente WinText nuk mund të "shihet".
+		Slow: A mund të jetë shumë më e ngadalshme, por të gjitha WinText mundur është marrë nga çdo dritare.
 	ST_TT =	1: Titulli Një dritare duhet të fillojë me WinTitle të caktuar të jetë një ndeshje.
 		2: Titulli Një dritare mund të përmbajnë WinTitle kudo brenda që ajo të jetë një ndeshje.
 		3: Titulli Një dritare duhet saktësisht të përputhen WinTitle të jetë një ndeshje.
@@ -1092,8 +1094,8 @@
 		2: Titulli Një dritare mund të përmbajnë WinTitle kudo brenda që ajo të jetë një ndeshje.
 		3: Titulli Një dritare duhet saktësisht të përputhen WinTitle të jetë një ndeshje.
 		Regex: Ndryshimet WinTitle, WinText, ExcludeTitle dhe ExcludeText të jetë shprehje të rregullta.
-	TitleSpeed_TT =	Fast: Kjo është sjellja e parazgjedhur. Performance mund të jetë dukshëm më mirë se Slow, por disa elemente WinText për disa lloje të dritareve nuk mund të "shihet" nga komandat e ndryshme dritare.
-		Slow: A mund të jetë shumë më e ngadalshme, por të gjitha WinText mundur është marrë nga çdo dritare si një komanduese windowing kërkimet përmes tyre për një ndeshje. Window Spy zbulon se cilat pjesë të tekstit të një Windows-it (nëse ka) të kërkojnë mënyrën e ngadaltë.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktivizo Regjistrimi relative kur shteti kyç është në.
 	TransC_TT =	Ngjyra transparente
 	VarCopyA_TT =	Kopjo përmbajtjen aktuale të ndryshueshme

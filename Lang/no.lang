@@ -1083,17 +1083,19 @@
 		når SendInput er utilgjengelig, går den tilbake til avspillingsmodus (nedenfor). Dette fører også til
 		den SendInput kommandoen selv å gå tilbake til avspillingsmodus når SendInput er utilgjengelig.
 		Spill: Bytter til SendPlay metode for sending, SendRaw, Klikk, og MouseMove / Klikk / dra.
+	SP_TT =	Rask: Ytelsen kan bli vesentlig bedre enn Sakte, men visse WinText elementer kan ikke bli "sett".
+		Slow: Kan være mye tregere, men alt mulig WinText hentes fra hvert vindu.
 	ST_TT =	1: Et vindu tittel må starte med den angitte WinTitle å være en kamp.
 		2: Et vindu tittel kan inneholde WinTitle hvor som helst innenfor det å være en kamp.
 		3: Et vindu tittel må samsvare nøyaktig WinTitle å være en kamp.
 		RegEx: Endringer WinTitle, WinText, ExcludeTitle, og ExcludeText å være faste uttrykk.
 	TimeoutM_TT =	0 = uendelig
-	TitleMatch_TT =	1: Et vindu tittel må starte med det angitte WinTitle å være en kamp.
+	TitleMatch_TT =	1: Et vindu tittel må starte med den angitte WinTitle å være en kamp.
 		2: Et vindu tittel kan inneholde WinTitle hvor som helst innenfor det å være en kamp.
 		3: Et vindu tittel må samsvare nøyaktig WinTitle å være en kamp.
 		RegEx: Endringer WinTitle, WinText, Ekskluder tittel, og Ekskluder Tekst å være regulære uttrykk.
-	TitleSpeed_TT =	Rask: Dette er standard virkemåte . Ytelsen kan bli vesentlig bedre enn Sakte, men visse WinText elementer for enkelte typer vinduer kan ikke bli "sett" av de ulike vindus kommandoer.
-		Slow: Kan være mye tregere, men alt mulig WinText hentes fra hvert vindu som en vindus kommando søker gjennom dem for en kamp. Vindu Spy avslører hvilke deler av et vindu teksten (hvis noen) krever langsom modus.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktiver Relativ opptak når nøkkelen staten er på.
 	TransC_TT =	Transparent farge
 	VarCopyA_TT =	Kopier gjeldende variabelinnhold

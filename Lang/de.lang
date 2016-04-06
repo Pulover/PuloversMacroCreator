@@ -1083,17 +1083,19 @@
 		falls SendInput nicht verfügbar ist. Bewirkt auch, dass der SendInput-Befehl auf den Play-Modus zurückgreift, 
 		falls SendInput nicht verfügbar ist.
 		Play: Wechselt auf die SendPlay-Methode für Send, SendRaw, Click und MouseMove/Click/Drag.
+	SP_TT =	Schnell: Die Leistung kann als langsame wesentlich besser sein, aber bestimmte WinText Elemente "gesehen" werden dürfen.
+		Langsam: Kann viel langsamer, aber alle möglichen WinText wird aus jedem Fenster abgerufen werden.
 	ST_TT =	1: Ein Fenster-Titel muss mit dem angegebenen WinTitle beginnen .
 		2: Ein Fenster-Titel kann WinTitle überall enthalten.
 		3: Ein Fenster-Titel muss mit WinTitle exakt übereinstimmen.
 		RegEx: Ändert WinTitle, WinText, ExcludeTitle und ExcludeText zu regulären Ausdrücken.
 	TimeoutM_TT =	0=unendlich
-	TitleMatch_TT =	1: Ein Fenstertitel  muss mit dem angegebenen Fenstertitel  zu sein ein Spiel starten.
-		2: Ein Titel des Fensters kann WinTitle enthalten überall darin eine Übereinstimmung zu sein.
-		3: Ein Fenstertitel  muss genau WinTitle passen ein Spiel zu sein.
+	TitleMatch_TT =	1: Ein Fenster-Titel muss mit dem angegebenen WinTitle beginnen .
+		2: Ein Fenster-Titel kann WinTitle überall enthalten.
+		3: Ein Fenster-Titel muss mit WinTitle exakt übereinstimmen.
 		RegEx: Änderungen WinTitle, WinText, ausschließen Titel, und Ausschließen Text regulären Ausdrücken zu sein.
-	TitleSpeed_TT =	Schnell: Dies ist das Standardverhalten . Die Leistung kann wesentlich besser als langsam, aber sicher WinText Elemente für einige Arten von Fenstern kann nicht durch die verschiedenen Fenster Befehle "gesehen" werden.
-		Langsam: Kann sein viel langsamer, aber alle möglichen WinText wird aus jedem Fenster als Fenster Befehl durchsucht  sie nach einer Übereinstimmung abgerufen. Window Spy zeigt, welche Teile eines Fensters Text (falls vorhanden) ist es der Zeitlupenmodus .
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Relative Aufzeichnung aktivieren, wenn Taste gedrückt ist.
 	TransC_TT =	Transparente Farbe
 	VarCopyA_TT =	Aktuelle Variablen-Inhalte kopieren

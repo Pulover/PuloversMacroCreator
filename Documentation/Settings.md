@@ -1,4 +1,4 @@
-# Settings
+﻿# Settings
 
 ## Table of Contents
 
@@ -152,7 +152,7 @@ You can add, edit, remove and reorder the accounts here, as well as send a test 
 
 Accounts informations are saved to *UserEmailAccounts.ini* located at %AppData%\MacroCreator or at the application folder when in Portable mode.
 		
-To use a Gmail account it's necessary to activate allow "[less secure apps access](https://www.google.com/settings/security/lesssecureapps)".
+To use a Gmail account it's necessary to activate allow ["Less secure apps access"](https://www.google.com/settings/security/lesssecureapps).
 		
 **Warning**: Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the **password**. The PMC project file does not have this information.
 

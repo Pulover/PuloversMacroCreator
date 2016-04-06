@@ -1083,17 +1083,19 @@
 		når SendInput er tilgængelig, returnerer den til afspilningstilstand (nedenfor). Dette medfører også
 		Den SendInput kommandoen selv at vende tilbage til Play-tilstand, når SendInput ikke er tilgængelig.
 		Play: Skifter til SendPlay metode til Send, SendRaw, Klik, og mouseMove / Klik / Træk.
+	SP_TT =	Hurtigt: Performance kan være væsentligt bedre end langsom, men visse WinText elementer kan ikke "ses".
+		Langsom: Kan være meget langsommere, men alle mulige WinText hentes fra alle vinduer.
 	ST_TT =	1: Et vindue titel skal starte med den angivne WinTitle at være en kamp.
 		2: Et vindue titel kan indeholde WinTitle overalt inde, at det er en kamp.
 		3: Et vindue titel skal svare nøjagtigt WinTitle at være en kamp.
 		RegEx: Ændrer WinTitle, WinText, ExcludeTitle, og ExcludeText at være regulære udtryk.
 	TimeoutM_TT =	0 = uendelig
-	TitleMatch_TT =	1: Et vindue titel skal starte med den angivne WinTitle til at være en kamp.
-		2: Et vindue titel kan indeholde WinTitle overalt inde i det at være en kamp.
+	TitleMatch_TT =	1: Et vindue titel skal starte med den angivne WinTitle at være en kamp.
+		2: Et vindue titel kan indeholde WinTitle overalt inde, at det er en kamp.
 		3: Et vindue titel skal svare nøjagtigt WinTitle at være en kamp.
 		RegEx: Ændringer WinTitle, WinText, Udeluk titel, og Udeluk tekst til at være regulære udtryk.
-	TitleSpeed_TT =	Hurtig: Dette er standard opførsel. Ydeevnen kan være væsentligt bedre end langsom, men visse WinText elementer for visse typer af vinduer kan ikke "ses" af forskellige vindue kommandoer.
-		Langsom: Kan være meget langsommere, men alle mulige WinText hentes fra hvert vindue som en vindues kommando søger gennem dem til en kamp. Window Spy afslører hvilke dele af et vindue tekst (hvis nogen) kræver langsom tilstand.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktiver Relativ optagelse, når nøglen tilstand er tændt.
 	TransC_TT =	Gennemsigtig farve
 	VarCopyA_TT =	Kopier nuværende variable indhold

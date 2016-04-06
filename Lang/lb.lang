@@ -1083,6 +1083,8 @@
 		Wann SendInput erreechbar ass, reverts et zu Play Modus (ënnen). Dëst och bewierkt
 		Der SendInput Kommando selwer ze zréckgesat Modus ze spillen wann SendInput erreechbar ass.
 		Leeschtung: Wiesselt op der SendPlay Method fir Schécken, SendRaw, Klick, an MouseMove / Klickt / Drag.
+	SP_TT =	Fast: Performance kann wéi Blannschlécher méi besser ginn, mä verschidde WinText Elementer "gesinn" kann net sinn.
+		Luesen: Kënne vill méi lues, mee all méiglech WinText ass aus all Fënster Sensor.
 	ST_TT =	1: Eng Fënster vum Titel muss mat der spezifizéierter WinTitle gin engem Match ufänken.
 		2: A Titel d'Fënster kann WinTitle enthale iwwerall bannenzeg et e Match ze ginn.
 		3: Eng Fënster vum Titel muss genee WinTitle Match engem Match ze ginn.
@@ -1092,8 +1094,8 @@
 		2: A Titel d'Fënster kann WinTitle enthale iwwerall bannenzeg et e Match ze ginn.
 		3: Eng Fënster vum Titel muss genee WinTitle Match engem Match ze ginn.
 		RegEx: Neierung WinTitle, WinText, ExcludeTitle, an ExcludeText regelméisseg Ausdrock ze ginn.
-	TitleSpeed_TT =	Fast: Dëst ass den Default gelooss. Leeschtung kënne méi besser wéi Blannschlécher, mä verschidde WinText Elementer fir e puer Zorte vun Fënsteren kann net vun de verschiddenen Fënster commandéiert "gesin" gin.
-		Luesen: Kënne vill méi lues, mee all méiglech WinText ass aus all Fënster als windowing Kommando Recherchen duerch si fir e Match Sensor. Fënster mech verréid déi Deeler vun enger Fënster vum Text (wann iwwerhaapt) Chinesen de luesen Modus.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Relativ Procès aktivéieren wann Schlëssel Staat op ass.
 	TransC_TT =	Duerchsichteg Faarf
 	VarCopyA_TT =	Copy aktuell Variabel Inhalter

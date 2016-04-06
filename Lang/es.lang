@@ -1083,17 +1083,19 @@
 		cuando SendInput no está disponible, vuelve al modo de reproducción (abajo). Esto también provoca
 		el comando SendInput sí mismo para volver al modo de reproducción cuando SendInput no está disponible.
 		Play: Cambia al método SendPlay para Enviar, SendRaw, hacer clic y MouseMove / clic / arrastrar.
+	SP_TT =	Rápido: El rendimiento puede ser sustancialmente mejor que lento, pero ciertos elementos WinText no puede ser "visto".
+		Lento: Puede ser mucho más lento, pero es posible WinText está recuperado de todas las ventanas.
 	ST_TT =	1: título de una ventana debe comenzar con el WinTitle especificado para ser una coincidencia.
 		2: título de una ventana puede contener WinTitle en cualquier lugar dentro de ella para ser una coincidencia.
 		3: título de una ventana debe coincidir exactamente con WinTitle a ser un partido.
 		RegEx: Cambios WinTitle, WinText, ExcludeTitle y ExcludeText como expresiones regulares.
 	TimeoutM_TT =	0 = infinito
-	TitleMatch_TT =	1: El título de una ventana debe comenzar con el WinTitle especificada a ser un partido.
-		2: el título de una ventana puede contener cualquier lugar dentro WinTitle que sea una coincidencia.
-		3: el título de una ventana debe coincidir exactamente con WinTitle a ser un partido.
+	TitleMatch_TT =	1: título de una ventana debe comenzar con el WinTitle especificado para ser una coincidencia.
+		2: título de una ventana puede contener WinTitle en cualquier lugar dentro de ella para ser una coincidencia.
+		3: título de una ventana debe coincidir exactamente con WinTitle a ser un partido.
 		RegEx: Cambios WinTitle, WinText, Excluir Título y Excluir texto como expresiones regulares.
-	TitleSpeed_TT =	Rápido: Este es el comportamiento por defecto. El rendimiento puede ser sustancialmente mejor que lento, pero ciertos elementos WinText para algunos tipos de ventanas no puede ser "visto" por los distintos comandos de la ventana.
-		Lento: Puede ser mucho más lento, pero es posible WinText está recuperado de todas las ventanas como un comando busca de ventanas a través de ellos para un partido. Ventana espía revela qué partes de un texto de la ventana (si lo hay) requieren el modo lento.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Activar grabación relativa al estado de la tecla.
 	TransC_TT =	Color transparente
 	VarCopyA_TT =	Copie los contenidos actuales de las variables

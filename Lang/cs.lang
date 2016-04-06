@@ -1083,17 +1083,19 @@
 		když SendInput není k dispozici, vrátí se do režimu přehrávání (viz níže). To také způsobuje
 		příkaz SendInput sama vrátit do režimu přehrávání, když SendInput není k dispozici.
 		Play: Přepíná na SendPlay metody Odeslat, SendRaw, klikněte, a mouseMove / Klikněte / Drag.
+	SP_TT =	Rychlý: Výkon může být podstatně lepší, než Pomalu, ale jisté WinText prvky nemusí být "vidět".
+		Slow: Může být mnohem pomalejší, ale to vůbec možné WinText je načteno z každého okna.
 	ST_TT =	1: okno titul musí začít s uvedenou WinTitle být zápas.
 		2: A Window titul může obsahovat WinTitle kdekoliv uvnitř to být zápas.
 		3: okno titul musí přesně odpovídat WinTitle být zápas.
 		RegEx: Změny WinTitle, WinText, ExcludeTitle, a ExcludeText být regulární výrazy.
 	TimeoutM_TT =	0 = nekonečno
-	TitleMatch_TT =	1: Název oknem musí začínat s určenou WinTitle být shoda.
-		2: Název oknem může obsahovat WinTitle kdekoliv uvnitř to být shoda.
-		3: Název oknem musí přesně odpovídat WinTitle být shoda.
+	TitleMatch_TT =	1: okno titul musí začít s uvedenou WinTitle být zápas.
+		2: A Window titul může obsahovat WinTitle kdekoliv uvnitř to být zápas.
+		3: okno titul musí přesně odpovídat WinTitle být zápas.
 		RegEx: Změny WinTitle, WinText, Vyloučit název a Vyloučit text, který bude regulární výrazy.
-	TitleSpeed_TT =	Fast: Toto je výchozí chování. Výkon může být podstatně lepší než pomalá, ale určité prvky WinText u některých typů oken nesmí být "vidět" různými příkazy oken.
-		Slow: Může být mnohem pomalejší, ale to vůbec možné WinText načtena z každého okna jako příkaz okny hledá skrze ně na zápas. Okno Spy odhalí, které části textu oknem (pokud existuje) vyžadují pomalý režim.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktivace Relativní nahrávání při stisku stav je dál.
 	TransC_TT =	Transparentní barva
 	VarCopyA_TT =	Zkopírujte aktuální proměnné obsah

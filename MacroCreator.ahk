@@ -11696,18 +11696,36 @@ return
 
 MoveSelDn:
 Gui, chMacro:Default
-LVManager.Move()
-GoSub, RowCheck
-GoSub, b_Start
-GuiControl, Focus, InputList%A_List%
+RowSelection := LV_GetCount("Selected")
+If (RowSelection = 0)
+	return
+RowNumber := 0, SelectedRows := ""
+Loop, % RowSelection
+{
+	RowNumber := LV_GetNext(RowNumber)
+,	SelectedRows := RowNumber "|" SelectedRows
+}
+SelectedRows := RTrim(SelectedRows, "|")
+Loop, Parse, SelectedRows, |
+{
+	LV_Modify(A_LoopField+1, "Select")
+,	LV_Modify(A_LoopField, "-Select")
+}
 return
 
 MoveSelUp:
 Gui, chMacro:Default
-LVManager.Move(true)
-GoSub, RowCheck
-GoSub, b_Start
-GuiControl, Focus, InputList%A_List%
+RowSelection := LV_GetCount("Selected")
+If (RowSelection = 0)
+	return
+RowNumber := 0
+Loop, % RowSelection
+{
+	RowNumber := LV_GetNext(RowNumber)
+,	LV_Modify(RowNumber, "-Select")
+	If (RowNumber > 1)
+		LV_Modify(RowNumber-1, "Select")
+}
 return
 
 InvertSel:

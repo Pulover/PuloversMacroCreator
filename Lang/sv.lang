@@ -1083,17 +1083,19 @@
 		när SendInput är tillgänglig återgår det till spelläge (nedan). Detta orsakar också
 		den SendInput kommandot själv att återgå till Play-läge när SendInput är tillgänglig.
 		Spela: Växlar till SendPlay metoden för Send, SendRaw, klicka och mouseMove / Klicka / dra.
+	SP_TT =	Snabb: Prestanda kan vara betydligt bättre än långsam, men vissa WinText element kan inte "ses".
+		Långsam: Kan vara mycket långsammare , men alla möjliga WinText hämtas från alla fönster.
 	ST_TT =	1: Ett fönster titel måste börja med den angivna WinTitle att vara en match.
 		2: Ett fönster titel kan innehålla WinTitle var som helst i att det är en match.
 		3: Ett fönster titel måste exakt matcha WinTitle vara en match.
 		RegEx: Ändringar WinTitle, WinText, ExcludeTitle och ExcludeText att vara reguljära uttryck.
 	TimeoutM_TT =	0 = oändlig
 	TitleMatch_TT =	1: Ett fönster titel måste börja med den angivna WinTitle att vara en match.
-		2: Ett fönster titel kan innehålla WinTitle helst inuti den för att vara en match.
-		3: Ett fönster titel måste överensstämma exakt WinTitle att vara en match.
+		2: Ett fönster titel kan innehålla WinTitle var som helst i att det är en match.
+		3: Ett fönster titel måste exakt matcha WinTitle vara en match.
 		RegEx: Ändringar WinTitle, WinText, Uteslut Titel och Uteslut text som reguljära uttryck.
-	TitleSpeed_TT =	Snabb: Detta är standardbeteendet . Prestanda kan vara betydligt bättre än långsam, men vissa WinText element för vissa typer av fönster kan inte "ses" av de olika Windows-kommandon.
-		Långsam: Kan vara mycket långsammare , men alla möjliga WinText hämtas från varje fönster som en fönster kommandot söker genom dem för en match. Fönster Spy avslöjar vilka delar av ett fönster text (i förekommande fall) kräver långsamt läge.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
 	TransC_TT =	Transparent färg
 	VarCopyA_TT =	Kopiera befintliga variabla innehåll

@@ -1,4 +1,4 @@
-#NoEnv
+﻿#NoEnv
 SetBatchLines -1
 SetWorkingDir %A_ScriptDir%
 

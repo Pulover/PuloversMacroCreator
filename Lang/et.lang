@@ -1083,6 +1083,8 @@
 		Kui SendInput ei ole kättesaadav, siis pöördub taasesitusreżiimi (vt allpool). See põhjustab ka
 		SendInput käsk ise tagasi taasesitusreżiimi kui SendInput on saadaval.
 		Play: lülitab SendPlay meetod saata, SendRaw, kliki ja MouseMove / Click / Drag.
+	SP_TT =	Kiire: Performance olla oluliselt parem kui aeglane, kuid teatud WinText elemendid ei tohi "näinud".
+		Aeglane: võib olla palju aeglasem, kuid kõik võimalikud WinText laaditakse iga aknas.
 	ST_TT =	1: akna pealkiri peab algama kindlaksmääratud WinTitle olla sobi.
 		2: akna pealkiri ei tohi sisaldada WinTitle kusagil sees seda mängu.
 		3: akna pealkiri peab täpselt WinTitle olla sobi.
@@ -1092,8 +1094,8 @@
 		2: akna pealkiri ei tohi sisaldada WinTitle kusagil sees seda mängu.
 		3: akna pealkiri peab täpselt WinTitle olla sobi.
 		RegEx: muutused WinTitle, WinText, ExcludeTitle ja ExcludeText olla regulaaravaldisi.
-	TitleSpeed_TT =	Kiire: See on vaikimisi. Performance olla oluliselt parem kui aeglane, kuid teatud WinText elemendid teatud tüüpi aknad ei tohi "nägid" erinevate aknas käske.
-		Aeglane: võib olla palju aeglasem, kuid kõik võimalikud WinText otsitakse igast aknast kui akendesüsteemide käsk otsib läbi nende mängu. Aken Spy näitab, milline osa Akna tekst (kui üldse) nõuda aeglane režiim.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Aktiveeri Suhteline salvestamine kui peamine riigi sees.
 	TransC_TT =	Läbipaistev värv
 	VarCopyA_TT =	Kopeeri praeguse muutuva sisuga

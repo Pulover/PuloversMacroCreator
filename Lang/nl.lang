@@ -1083,17 +1083,19 @@
 		wanneer SendInput niet beschikbaar is, keert het terug naar Play mode (zie hieronder). Dit veroorzaakt ook
 		de SendInput opdracht zelf om terug te keren naar de afspeelmodus wanneer SendInput niet beschikbaar is.
 		Speel: Schakelt naar de SendPlay methode voor het verzenden, SendRaw, Klik, en mouseMove / Klik / slepen.
+	SP_TT =	Snel: De prestaties kunnen aanzienlijk beter dan traag, maar zeker WinText elementen kunnen niet worden 'gezien'.
+		Langzaam: Kan veel trager, maar alle mogelijke WinText opgehaald vanuit elk raam.
 	ST_TT =	1: Er wordt een venster de titel moet beginnen met de opgegeven WinTitle om een ​​wedstrijd te zijn.
 		2: een venster van de titel kan bevatten WinTitle ergens in dat het een match.
 		3: een venster van de titel moet exact overeenkomen WinTitle om een ​​wedstrijd te zijn.
 		RegEx: Veranderingen WinTitle, WinText, ExcludeTitle, en ExcludeText te zijn reguliere expressies.
 	TimeoutM_TT =	0 = oneindig
-	TitleMatch_TT =	1: De titel van een venster moet beginnen met de opgegeven WinTitle om een wedstrijd te zijn.
-		2: De titel van een venster kan WinTitle overal bevatten erin om een wedstrijd te zijn.
-		3: De titel van een venster moeten exact overeenkomen WinTitle om een wedstrijd te zijn.
+	TitleMatch_TT =	1: Er wordt een venster de titel moet beginnen met de opgegeven WinTitle om een ​​wedstrijd te zijn.
+		2: een venster van de titel kan bevatten WinTitle ergens in dat het een match.
+		3: een venster van de titel moet exact overeenkomen WinTitle om een ​​wedstrijd te zijn.
 		RegEx: Wijzigingen WinTitle, WinText, Uitsluiten titel, en Uitsluiten tekst reguliere expressies zijn.
-	TitleSpeed_TT =	Snel: Dit is het standaard gedrag. Prestaties kunnen aanzienlijk beter dan traag, maar zeker WinText elementen voor bepaalde soorten ramen mag niet worden 'gezien' door de verschillende venster commando's.
-		Langzaam: Kan veel trager, maar alle mogelijke WinText wordt opgehaald uit elk raam als een windowing commando doorzoekt ze voor een wedstrijd. Venster Spy laat zien welke delen van de tekst van een venster (indien van toepassing) moet de langzame modus.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Activeer Relatieve opnemen wanneer belangrijke staat is op.
 	TransC_TT =	Transparante kleur
 	VarCopyA_TT =	Kopieer huidige variabele inhoud

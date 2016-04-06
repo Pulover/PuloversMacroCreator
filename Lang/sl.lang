@@ -1083,17 +1083,19 @@
 		ko SendInput ni na voljo, se preklopi v način (spodaj) Predvajaj. To povzroča tudi
 		Ukaz SendInput sam da se vrne na način igrati, ko SendInput ni na voljo.
 		Igrajo: Preklopi na metodi SendPlay za lji, SendRaw, kliknite in MouseMove / Kliknite / Drag.
+	SP_TT =	Fast: Uspešnost lahko bistveno bolje kot počasen, vendar nekateri WinText elementi ne smejo biti "videl".
+		Slow: Lahko je veliko počasnejši, ampak vse mogoče WinText so pridobljeni iz vsakega okna.
 	ST_TT =	1: Naslov Okno mora začeti z določeno WinTitle za tekmo.
 		2: Naslov Okno lahko vsebuje WinTitle kjerkoli v notranjosti, da je tekma.
 		3: Naslov Okno mora popolnoma ujemati WinTitle za tekmo.
 		Regex: Spremembe WinTitle, WinText, ExcludeTitle in ExcludeText biti regularne izraze.
 	TimeoutM_TT =	0 = neskončno
-	TitleMatch_TT =	1: Naslov okno, se mora začeti z določenim WinTitle biti tekmo.
-		2: Naslov oknom je lahko vsebuje WinTitle kjerkoli v notranjosti, da je ujemanje.
-		3: naslov okno, mora natančno ujemati WinTitle biti tekmo.
+	TitleMatch_TT =	1: Naslov Okno mora začeti z določeno WinTitle za tekmo.
+		2: Naslov Okno lahko vsebuje WinTitle kjerkoli v notranjosti, da je tekma.
+		3: Naslov Okno mora popolnoma ujemati WinTitle za tekmo.
 		Regularni izraz: Spremembe WinTitle, WinText, Izključi naslov, in Izključi Besedilo biti regularni izrazi.
-	TitleSpeed_TT =	Hitro: To je privzeto obnašanje. Uspešnost lahko bistveno bolje kot počasen, vendar nekateri WinText elementi za nekatere vrste oken ne sme biti "videl" z različnimi okna ukazov.
-		Slow: Lahko je veliko počasnejši, ampak vse mogoče WinText so pridobljeni iz vsakega okna kot ukaz okenski iskanj prek njih za tekmo. Okno Spy razkriva, kateri deli besedila oknom (če obstaja) zahtevajo počasen način.
+	TitleSpeed_TT =	
+		
 	ToggleC_TT =	Vključite Relativna snemanja, ko je ključ država je na.
 	TransC_TT =	Pregleden barvni
 	VarCopyA_TT =	Kopiranje trenutne spremenljive vsebine
