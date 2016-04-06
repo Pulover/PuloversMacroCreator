@@ -1,4 +1,4 @@
-﻿# Pulover's Macro Creator
+# Pulover's Macro Creator
 *The Complete Automation Tool*
 
 [www.macrocreator.com](http://www.macrocreator.com)  
@@ -42,6 +42,9 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * New feature: **Send Email**.
 * New feature: **Download Files**.
 * New feature: **Zip / Unzip Files**.
+* New feature: **While-Loop** in Loop Command window.
+* New feature: **For-Loop** in Loop Command window.
+* New feature: **Until** in Loop Command window.
 * New feature: **Listview Groups** (+WinVista).
 * Implemented real AutoHotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
 * Multiple If Statements are now supported in *Evaluate Expression* (e.g.: `var = 5 || var = "a"`).
@@ -49,9 +52,6 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added SetTimer command.
 * Added *Else If* Statement option.
 * Loops now work in Manual Playback.
-* Added While-Loop in Loop Command window.
-* Added For-Loop in Loop Command window.
-* Added Until in Loop Command window.
 * Added support for array assignment.
 * Added support for Associative Arrays assignment.
 * Added support for array methods in Functions window.
