@@ -1979,9 +1979,9 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 				%Action% := ComObjCreate(Target)
 		}
 	pb_Expression:
-		Step := StrReplace(Step, "`n", ",")
-		
-		Eval(Step, CustomVars)
+		Step := GetRealLineFeeds(Step)
+	,	Step := StrReplace(Step, "`n", ",")
+	,	Eval(Step, CustomVars)
 		
 		If (Window = "LoadWait")
 		{

@@ -800,7 +800,8 @@
 	d_Lang022 =	Anterior
 	d_Lang023 =	Mensagem
 	d_Lang024 =	Carregar configuração padrão?
-	d_Lang025 =	Macro(s) ativada(s).`nUse os Atalhos para Iniciar.
+	d_Lang025 =	Macros ativadas.
+		Use os Atalhos para Iniciar.
 	d_Lang026 =	para iniciar / parar a gravação
 	d_Lang027 =	Fim da gravação
 	d_Lang028 =	Gravando...

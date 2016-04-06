@@ -800,7 +800,8 @@
 	d_Lang022 =	Précédent
 	d_Lang023 =	Message
 	d_Lang024 =	Charger les paramètres par défaut?
-	d_Lang025 =	Macro (s) activée.`nUtilisez les raccourcis clavier pour jouer.
+	d_Lang025 =	Macros activées.
+		Utilisez les raccourcis clavier pour jouer.
 	d_Lang026 =	pour démarrer / arrêter l'enregistrement
 	d_Lang027 =	L'enregistrement s'est arrêté
 	d_Lang028 =	Enregistrement...

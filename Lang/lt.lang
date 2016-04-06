@@ -800,7 +800,8 @@
 	d_Lang022 =	ankstesnis
 	d_Lang023 =	žinutė
 	d_Lang024 =	Apkrovos numatytieji nustatymai?
-	d_Lang025 =	Makro (-ai) activated.`nUse hotkeys žaisti.
+	d_Lang025 =	Makrokomandos įjungta.
+		Naudokite klavišus žaisti.
 	d_Lang026 =	į start / stop įrašymo
 	d_Lang027 =	įrašymo sustojo
 	d_Lang028 =	Įrašymo ...

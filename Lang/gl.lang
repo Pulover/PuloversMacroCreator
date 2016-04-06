@@ -800,7 +800,8 @@
 	d_Lang022 =	anterior
 	d_Lang023 =	mensaxe
 	d_Lang024 =	Cargando configuración por defecto?
-	d_Lang025 =	Macro (s) activated.`nUse as teclas de atallo para xogar.
+	d_Lang025 =	Macros activado.
+		Use as teclas de atallo para xogar.
 	d_Lang026 =	para iniciar / deter a gravación
 	d_Lang027 =	gravación interrompida
 	d_Lang028 =	A gravación ...

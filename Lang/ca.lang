@@ -800,7 +800,8 @@
 	d_Lang022 =	Anterior
 	d_Lang023 =	Missatge
 	d_Lang024 =	Carregar configuració per defecte?
-	d_Lang025 =	Macro (s) activa. `Nuse les tecles d'accés ràpid per jugar.
+	d_Lang025 =	Macros activades.
+		Utilitza les tecles d'accés ràpid per jugar.
 	d_Lang026 =	per a iniciar / aturar la gravació
 	d_Lang027 =	L'enregistrament s'atura
 	d_Lang028 =	Enregistrament...
