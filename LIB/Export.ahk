@@ -781,7 +781,7 @@ CheckComExp(String, OutVar := "", ByRef ArrString := "", Ptr := "ie")
 						If (Loopfield = "")
 							LoopField := "%ComObjMissing()%"
 						If (RegExMatch(LoopField, "i)^" Ptr "\..*", NestStr))
-							Params .= (CheckComExp(NestStr, OutVar, "", Ptr)) ", "
+							Params .= (CheckComExp(NestStr, OutVar,, Ptr)) ", "
 						Else
 							Params .= ((CheckExp(LoopField) = """""") ? "" : CheckExp(LoopField)) ", "
 					}
@@ -797,7 +797,7 @@ CheckComExp(String, OutVar := "", ByRef ArrString := "", Ptr := "ie")
 			If (!InStr(Params, "`,"))
 			{
 				If (RegExMatch(Params, "i)^" Ptr "\..*", NestStr))
-					Params := (CheckComExp(NestStr, OutVar, "", Ptr))
+					Params := (CheckComExp(NestStr, OutVar,, Ptr))
 				Else
 					Params := (CheckExp(Params) = """""") ? "" : CheckExp(Params)
 			}

@@ -23,7 +23,7 @@ To call a Function inside a command's parameter you have to use the same method 
 > % SubStr(MyVar, 3, 7)
 > % "Result is: " RegExReplace(Variable, "_", A_Space)
 
-Download Example: [Using Functions inside Command Parameters](Examples/Functions.pmc).
+Download Example: [Using Functions inside Command Parameters](Examples/Functions.pmc)
 
 ## Function parameters
 
@@ -44,22 +44,30 @@ You can create your own functions inside PMC. They should work consistent with u
 
 To create a function, click the *Create Function* button on the toolbar. You'll be prompted to choose a name for your function. In the same you window you can define the scope (local or global), a few parameters with optional default values for them and global/local and static variables. After pressing OK a new tab will be created as a function, where you can add more parameters using the *Add Parameter* button and the commands below the Function line. You can also go to Function menu > *Convert Macro To Function* (the selected macro must not contain any Label, Goto or Gosub commands).  
 
+### Remarks
+
+In PMC default values of local and static variables must be one of the following: `True`, `False`, a string or a number (integer or float). Variables and objects are not supported.
+
 ### Parameters
 
 In the *Add Parameters* window you can insert more parameters with default values. Adding a default value to a parameter makes it optional, which means it can be skipped in the call and the default value will be used.  
 If one parameter is made optional, all following parameters must be optional too.  
-A parameter default valuemust be one of the following: `True`, `False`, a string or a number (integer or float). To set a blank string as the default value, select `_blank` in the list.  
+A parameter default value must be one of the following: `True`, `False`, a string or a number (integer or float). To set a blank string as the default value, select `_blank` in the list.  
 No need to quote strings. Variables are not allowed as default values.  
 Check the *[ByRef](http://autohotkey.com/docs/Functions.htm#ByRef)* option to make the parameter behave as an alias for the variable passed in from the caller.
+
+Function parameters can only be added **above** the *[FunctionStart]* row.
 
 ### Return
 
 Use the *Add Return* button to define return values for the function.  
 The return value must be an [expression](http://autohotkey.com/docs/Variables.htm#Expressions).  
-To return more than one value, use ByRef parameters or an [Array/Object](Variables.html#assigning-and-retrieving-arrays).  
+To return more than one value, use ByRef parameters or an [Array/Object](Variables.html#assigning-and-retrieving-arrays).
 
-Download Example: [User-Defined Functions](Examples/UserFunctions.pmc).
-Download Example: [Call array element using a random function](Examples/RandomFunction.pmc).
+Function return can only be added **below** the *[FunctionStart]* row.
+
+Download Example: [User-Defined Functions](Examples/UserFunctions.pmc)
+Download Example: [Display random array element from a function call](Examples/RandomFunction.pmc)
 
 ### Remarks
 

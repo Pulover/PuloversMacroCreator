@@ -8052,7 +8052,7 @@ If (s_Caller = "Edit")
 	{
 		If (Target != "Expression")
 			StringReplace, Details, Details, ``n, `n, All
-		AssignParse(Details, VarName, Oper, VarValue), GuiTitle := c_Lang010
+		AssignReplace(Details, VarName, Oper, VarValue), GuiTitle := c_Lang010
 		GuiControl, 21:Choose, TabControl, 2
 		GuiControl, 21:+Default, VarOK
 		GuiControl, 21:, VarName, %VarName%
@@ -8070,7 +8070,7 @@ If (s_Caller = "Edit")
 	}
 	Else If (A_ThisLabel = "EditFunc")
 	{
-		AssignParse(Details, VarName, Oper, VarValue), FuncName := Action, ArrayName := Target, GuiTitle := c_Lang011
+		AssignReplace(Details, VarName, Oper, VarValue), FuncName := Action, ArrayName := Target, GuiTitle := c_Lang011
 		GuiControl, 21:Choose, TabControl, 3
 		GuiControl, 21:+Default, FuncOK
 		If (VarName != "_null")
@@ -10097,7 +10097,7 @@ If (s_Caller = "Edit")
 	}
 	Else If (A_ThisLabel = "EditParam")
 	{
-		AssignParse(Details, VarName, Oper, VarValue)
+		AssignReplace(Details, VarName, Oper, VarValue)
 		If (VarName = "")
 			GuiControl, 38:, ParamName, %Details%
 		Else
@@ -10199,7 +10199,7 @@ If (TabControl = 1)
 		}
 		Else
 		{
-			AssignParse(A_LoopField, VarName, Oper, VarValue)
+			AssignReplace(A_LoopField, VarName, Oper, VarValue)
 			If (VarName = "")
 			{
 				Try
@@ -10227,7 +10227,7 @@ If (TabControl = 1)
 	StaticVariables := ""
 	Loop, Parse, FuncStatic, `,, %A_Space%
 	{
-		AssignParse(A_LoopField, VarName, Oper, VarValue)
+		AssignReplace(A_LoopField, VarName, Oper, VarValue)
 		If (VarName = "")
 		{
 			Try

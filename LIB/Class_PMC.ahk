@@ -151,6 +151,8 @@
 			,	Col[5] := CheckForExp(Col[5])
 			,	Col[7] := CheckForExp(Col[7])
 			,	Col[8] := CheckForExp(Col[8])
+				If ((Col[2] = "[Assign Variable]") && (Col[7] = "Expression"))
+					Col[3] := CheckComExp(Col[3])
 				If (Col[6] = "Function")
 				{
 					RegExMatch(Col[3], "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
@@ -161,7 +163,7 @@
 					Action := Col[2]
 					StringSplit, Act, Action, :
 					If (Act2 != "")
-						Details := Act2 " := " Act1 "." CheckComExp(Col[3], "", "", Act1)
+						Details := Act2 " := " Act1 "." CheckComExp(Col[3],,, Act1)
 					Else
 					{
 						Details := "", Step := StrReplace(Col[3], "``n", "`n")
@@ -169,8 +171,8 @@
 						{
 							If (A_LoopField = "")
 								continue
-							ComExp := CheckComExp(A_LoopField, "", sArray := "", Act1)
-						,	Details .= sArray . Act1 "." ComExp "``n"
+							ComExp := CheckComExp(A_LoopField,,, Act1)
+						,	Details .= Act1 "." ComExp "``n"
 						}
 					}
 					Col[2] := Act1, Col[3] := Details

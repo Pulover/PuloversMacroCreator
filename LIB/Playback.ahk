@@ -860,7 +860,7 @@
 				Data_GetTexts(LVData, mListRow, Action, Step, TimesX, DelayX, Type, Target, Window)
 			,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := TimesLoop ? A_Index : mLoopIndex
 			,	Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step)
-			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], ((Type = cType34) || (Type = cType43)) ? "" : Step, TimesX, DelayX, Target, Window)
+			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesX, DelayX, Target, Window)
 				If (StopIt)
 				{
 					Try Menu, Tray, Icon, %DefaultIcon%, 1
@@ -994,8 +994,18 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
 		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction := ""
-	For _each, _value in Pars
-		Par%_each% := _value
+	
+	
+	If Type in %cType1%,%cType2%,%cType3%,%cType13%,%cType5%,%cType6%,%cType8%,%cType9%,%cType10%,%cType12%,%cType24%,%cType20%,%cType22%,%cType23%,%cType25%,%cType31%,WinWait,WinWaitActive,WinWaitNotActive,WinWaitClose,WinGetTitle,WinGetClass,WinGetText,WinGetPos,%cType52%,%cType53%,%cType54%,%cType55%,%cType32%,%cType33%
+		CheckVars(CustomVars, Step)
+	Else If Type not in %cType34%,%cType43%
+	{
+		For _each, _value in Pars
+		{
+			CheckVars(CustomVars, _value)
+		,	Par%_each% := _value
+		}
+	}
 	
 	Goto, pb_%Type%
 	return
@@ -1124,7 +1134,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		_LastError := ErrorLevel
 	return
 	pb_Shutdown:
-		Shutdown, %Step%
+		Shutdown, %Par1%
 		_LastError := ErrorLevel
 	return
 	pb_GetKeyState:
@@ -1222,7 +1232,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		_LastError := ErrorLevel
 	return
 	pb_FileCreateDir:
-		FileCreateDir, %Step%
+		FileCreateDir, %Par1%
 		_LastError := ErrorLevel
 	return
 	pb_FileCreateShortcut:
@@ -1230,7 +1240,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		_LastError := ErrorLevel
 	return
 	pb_FileDelete:
-		FileDelete, %Step%
+		FileDelete, %Par1%
 		_LastError := ErrorLevel
 	return
 	pb_FileGetAttrib:
@@ -1287,11 +1297,11 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_FileRecycle:
-		FileRecycle, %Step%
+		FileRecycle, %Par1%
 		_LastError := ErrorLevel
 	return
 	pb_FileRecycleEmpty:
-		FileRecycleEmpty, %Step%
+		FileRecycleEmpty, %Par1%
 		_LastError := ErrorLevel
 	return
 	pb_FileRemoveDir:
@@ -1506,7 +1516,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
 	pb_BlockInput:
-		BlockInput, %Step%
+		BlockInput, %Par1%
 		_LastError := ErrorLevel
 	return
 	pb_UrlDownloadToFile:
@@ -1517,7 +1527,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		CoordModes[Par1] := Par2
 	return
 	pb_OutputDebug:
-		OutputDebug, %Step%
+		OutputDebug, %Par1%
 		_LastError := ErrorLevel
 	return
 	pb_WinMenuSelectItem:
@@ -1525,7 +1535,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		_LastError := ErrorLevel
 	return
 	pb_SendLevel:
-		SendLevel, %Step%
+		SendLevel, %Par1%
 		_LastError := ErrorLevel
 	return
 	pb_SetKeyDelay:
@@ -2021,7 +2031,6 @@ SplitStep(CustomVars, Step)
 		_par := StrReplace(_par, _x, ",")
 	,	_par := StrReplace(_par, _y, A_Space)
 	,	_par := StrReplace(_par, _z, A_Tab)
-	,	CheckVars(CustomVars, _par)
 		If ((InStr(Type, "String") = 1) || (Type = "SplitPath"))
 		{
 			For _key, _value in CustomVars

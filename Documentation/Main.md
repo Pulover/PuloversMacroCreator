@@ -142,11 +142,11 @@ Creates a new Function tab.
 
 ### Add Parameter
 
-Adds a new Function Parameter to the currently selected Function tab. Function parameters can only be added **above** the Function Name row.
+Adds a new Function Parameter to the currently selected Function tab. Function parameters can only be added **above** the *[FunctionStart]* row.
 
 ### Add Return
 
-Adds a Function Return to the currently selected Function tab. Function returns can only be added **below** the Function Name row.
+Adds a Function Return to the currently selected Function tab. Function returns can only be added **below** the *[FunctionStart]* row.
 
 ### Convert Macro To Function
 

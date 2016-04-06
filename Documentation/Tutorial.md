@@ -1,6 +1,6 @@
 ﻿# Quick Tutorial
 
-The simplest way to get started with Pulover's Macro Creator is using the recorder. Follow these steps record a macro:
+The simplest way to get started with **Pulover's Macro Creator** is using the recorder. Follow these steps record a macro:
 
 1. Start Pulover's Macro Creator.
 2. Click on the Record button on the toolbar.
@@ -21,6 +21,7 @@ Although the recorder is a good choice for quick tasks, **Pulover's Macro Creato
 * [Dynamic Variables](Examples/DynamicVars.pmc)
 * [Functions](Examples/Functions.pmc)
 * [Loop Types](Examples/LoopTypes.pmc)
+* [Random Function](Examples/RandomFunction.pmc)
 * [User-Defined Functions](Examples/UserFunctions.pmc)
 * [Variables](Examples/Variables.pmc)
 

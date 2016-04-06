@@ -1,4 +1,5 @@
 ﻿#NoEnv
+SetBatchLines -1
 SetWorkingDir %A_ScriptDir%
 SplitPath, A_AhkPath,, AhkDir
 
@@ -104,11 +105,87 @@ This file contains both x86 and x64 builds.
 
 ), Compiled\MacroCreatorPortable\ReadMe.txt
 FileDelete, Compiled\MacroCreator-Portable.zip
-Try
-	RunWait, %ProgramFiles%\7-Zip\7z.exe a -tzip MacroCreator-Portable.zip MacroCreatorPortable\*, Compiled
-Catch
-	RunWait, C:\Program Files\7-Zip\7z.exe a -tzip MacroCreator-Portable.zip MacroCreatorPortable\*, Compiled
+FileDelete, Compiled\Lang.zip
+Zip(A_ScriptDir "\Compiled\MacroCreatorPortable", A_ScriptDir "\Compiled\MacroCreator-Portable.zip")
+Zip(A_ScriptDir "\Compiled\Lang\*.lang", A_ScriptDir "\Compiled\Lang.zip")
 
 TrayTip,, Finished compiling files.
 Sleep, 2000
 return
+
+Zip(FilesToZip, OutFile, SeparateFiles := false)
+{
+	Static vOptions := 4|16
+	
+	FilesToZip := StrReplace(FilesToZip, "`n", ";")
+	FilesToZip := StrReplace(FilesToZip, ",", ";")
+	FilesToZip := Trim(FilesToZip, ";")
+	
+	objShell := ComObjCreate("Shell.Application")
+	If (SeparateFiles)
+		SplitPath, OutFile,, OutDir
+	Else
+	{
+		If (!FileExist(OutFile))
+			CreateZipFile(OutFile)
+		objTarget := objShell.Namespace(OutFile)
+	}
+	zipped := objTarget.items().Count
+	Loop, Parse, FilesToZip, `;, %A_Space%%A_Tab%
+	{
+		LoopField := RTrim(A_LoopField, "\")
+		Loop, Files, %LoopField%, FD
+		{
+			zipped++
+			If (SeparateFiles)
+			{
+				OutFile := OutDir "\" RegExReplace(A_LoopFileName, "\.(?!.*\.).*") ".zip"
+				If (!FileExist(OutFile))
+					CreateZipFile(OutFile)
+				objTarget := objShell.Namespace(OutFile)
+				zipped := 1
+			}
+			For item in objTarget.Items
+			{
+				If (item.Name = A_LoopFileDir)
+				{
+					item.InvokeVerb("Delete")
+					zipped--
+					break
+				}
+				If (item.Name = A_LoopFileName)
+				{
+					FileRemoveDir, % A_Temp "\" item.Name, 1
+					FileDelete, % A_Temp "\" item.Name
+					objShell.Namespace(A_Temp).MoveHere(item)
+					FileRemoveDir, % A_Temp "\" item.Name, 1
+					FileDelete, % A_Temp "\" item.Name
+					zipped--
+					break
+				}
+			}
+			If (A_LoopFileFullPath = OutFile)
+			{
+				zipped--
+				continue
+			}
+			objTarget.CopyHere(A_LoopFileFullPath, vOptions)
+			While (objTarget.items().Count != zipped)
+				Sleep, 10
+		}
+	}
+	ObjRelease(objShell)
+}
+
+CreateZipFile(sZip)
+{
+	CurrentEncoding := A_FileEncoding
+	FileEncoding, CP1252
+	Header1 := "PK" . Chr(5) . Chr(6)
+	VarSetCapacity(Header2, 18, 0)
+	file := FileOpen(sZip,"w")
+	file.Write(Header1)
+	file.RawWrite(Header2,18)
+	file.close()
+	FileEncoding, %CurrentEncoding%
+}

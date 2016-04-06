@@ -1,0 +1,14 @@
+﻿[PMC Code v5.0.0]|F3||0|Window,2,Fast,0,1|1|Macro1
+Groups=New Group:1
+1|[MsgBox]|% RandCity()|1|0|MsgBox|1||||
+2|If Message Box|Cancel|1|0|If_Statement|1||||
+3|Return||1|0|Return|||||
+4|[End If]|EndIf|1|0|If_Statement|||||
+
+[PMC Code v5.0.0]|||1|Window,2,Fast,0,1|1|RandCity()
+Groups=Start:1
+1|[FunctionStart]|RandCity|1|0|UserFunction|Local| / |||
+2|[Assign Variable]|Cities := ["New York", "Sao Paulo", "Tokyo", "Sydney", "Paris", "Berlin", "Beijing", "Madrid", "Buenos Aires", "Mexico City", "Tel Aviv", "Johannesburg"]|1|0|Variable|Expression||||
+3|Random|RandV, 1, % Cities.Length()|1|0|Random|||||
+4|[FuncReturn]|Cities[RandV]|1|0|FuncReturn|||||
+

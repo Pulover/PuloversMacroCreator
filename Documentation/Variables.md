@@ -44,7 +44,7 @@ Any single word enclosed in percent signs (e.g. `%MyVar%`) inside a string will 
 > Today is %A_DDDD% and it's %A_Hour%:%A_Min%.
 > Clipboard's contents are: %Clipboard%
 
-Download Example: [Using Variables inside Command Parameters](Examples/Variables.pmc).
+Download Example: [Using Variables inside Command Parameters](Examples/Variables.pmc)
 
 ## Assigning Variables
 
@@ -79,7 +79,9 @@ In expressions variables must not be enclosed in percent signs (except to defere
 
 ### Remarks
 
-Since version 5.0.0, AutoHotkey Expression format must be used for Function parameters and COM expressions. PMC files from previous versions are automatically converted.
+Since version 5.0.0, AutoHotkey Expression format must be used for Function parameters and COM expressions.
+
+PMC files from previous versions are automatically converted, however there might be errors in the converted syntax that will need to be fixed manually.
 
 Some short variable names should be avoided in expressions as they are used internally and will not be correctly evaluated. The names are a, e, i, o, r, s, t, ac, eo, lf, lp, tt and numbered variations of them like a1, a2... tt1, tt2....
 
@@ -96,7 +98,7 @@ To switch a variable's value True <> False use an exclamation in from of the val
 
 > FileAppend, % MyArray%i%, My File.txt
 
-Download Example: [Accessing a Pseudo-Array inside Command Parameters](Examples/DynamicVars.pmc).
+Download Example: [Accessing a Pseudo-Array inside Command Parameters](Examples/DynamicVars.pmc)
 
 ### Remarks
 
@@ -133,7 +135,7 @@ An *[Else](Commands/Else.html)* statement may be used inside the *If* block and 
 > [...]
 > [EndIf]
 
-Download Example: [Comparing Variables in Playback](Examples/CompareVars.pmc).
+Download Example: [Comparing Variables in Playback](Examples/CompareVars.pmc)
 
 ## Assigning And Retrieving Arrays
 
@@ -172,7 +174,7 @@ You can also get a reference to Length inside a Dynamic References:
 
 A [For-Loop](Commands/For_Loop.html) can be used to retrieve the values one by one (an example is included in the link below).
 
-Download Example: [Assigning and retrieving Arrays](Examples/Arrays.pmc).  
+Download Example: [Assigning and retrieving Arrays](Examples/Arrays.pmc)
 
 ## Built-in Variables
 

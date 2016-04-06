@@ -73,6 +73,12 @@ GetRealLineFeeds(String)
 	return String
 }
 
+AssignReplace(String, ByRef VarName, ByRef Oper, ByRef VarValue)
+{
+	RegExMatch(String, "(.*?)\s+(:=|\+=|-=|\*=|/=|//=|\.=|\|=|&=|\^=|>>=|<<=)\s+(.*)", Out)
+,	VarName := Trim(Out1), Oper := Out2, VarValue := Trim(Out3)
+}
+
 SetUserWords(Functions)
 {
 	global

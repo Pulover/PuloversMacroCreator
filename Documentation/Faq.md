@@ -45,6 +45,8 @@ No. AHK scripts are too complex to be parsed and the conversion would never be p
 
 Use the Random command in the Run / File / String / Misc. window to generate a random number. The command will save the number inside a variable of your choice. Use this variable inside commands like Sleep enclosed in percent signs, e.g. %Rand% and directly inside functions and expressions, e.g. MyArray[Rand].
 
+Download Example: [Call array element using a random function](Examples/RandomFunction.pmc)
+
 ### Can I create Graphic User Interface/Gui with Macro Creator?
 
 No, creating Guis is not in the scope of this project. But you can find some nice tools to design Gui in the [AHK forum](http://autohotkey.com/boards/viewtopic.php?f=6&t=3376). You can use the generated script along with exported scripts from PMC (the Gui's gLabel must point to a Label in the script).
@@ -89,16 +91,19 @@ You can also export the Macro to an AutoHotkey script and run it using Window's 
 You can use the [Assign Variable](Commands/Variables.html) window and the **+=** operator o the **:=** operator and the Expression option if you need to sum it to another value like the built-in variable A_Index, which contains the number of the current loop iteration.  
 The code below is a PMC file (you can copy and save it using any text editor).
 
-> [PMC Code]|F3||1|Window|1
+> [PMC Code v5.0.0]|F3||1|Window,2,Fast,0,1|1|Macro1
+> Groups=
 > 1|[Assign Variable]|Var := 0|1|0|Variable|||||
 > 2|[LoopStart]|LoopStart|10|0|Loop|||||
 > 3|[Assign Variable]|Var += 1|1|0|Variable|||||
-> 4|[Pause]|%Var%|1|0|MsgBox|262208||||
+> 4|[MsgBox]|%Var%|1|0|MsgBox|262208||||
 > 5|[LoopEnd]|LoopEnd|1|0|Loop|||||
 > 6|[LoopStart]|LoopStart|10|0|Loop|||||
-> 7|[Assign Variable]|Var := 100 + %A_Index%|1|0|Variable|Expression||||
-> 8|[Pause]|%Var%|1|0|MsgBox|262208||||
+> 7|[Assign Variable]|Var := 100 + A_Index|1|0|Variable|Expression||||
+> 8|[MsgBox]|%Var%|1|0|MsgBox|262208||||
 > 9|[LoopEnd]|LoopEnd|1|0|Loop|||||
+> 
+> 
 
 A_Index is only valid inside a Loop, but in PMC all macros are considered loops since you can set the number of repetitions for the whole macro.
 
@@ -148,9 +153,9 @@ Macro Creator has the [GDI+ Library](http://autohotkey.com/boards/viewtopic.php?
 
 The example file below allows you to save a png from the clipboard in your Documents folder. The first macro sends PrintScreen, the second sends Alt+PrintScreen, the third are the functions to save the file (you can change the destination folder in the 3rd line).
 
-Download Example: [Save PNG screenshots](Examples/SaveScreenshot.pmc).  
+Download Example: [Save PNG screenshots](Examples/SaveScreenshot.pmc)
 
-There is also an an internal function that uses GDI+ functions to make a screenshot of part of the screen.  
+There is also an an internal function that uses GDI+ functions to make a screenshot of part of the screen.
 
 * Go to Functions and type any name for the OutputVar and type **Screenshot** in the *Function Name*.
 * The first parameter is the name of the file which can be an absolute or relative path and a file with a png extension. You can use variables to have them dynamically named, e.g.: Screen_%A_Now%.png
@@ -158,7 +163,9 @@ There is also an an internal function that uses GDI+ functions to make a screens
 
 Example of PMC file:
 
->  1|Screenshot|_null := %A_MyDocuments%\Screen_%A_Now%.png, 100¢200¢50¢100|1|0|Variable||||
+>  1|Screenshot|_null := A_MyDocuments "\Screen_" A_Now ".png", "100¢200¢50¢100"|1|0|Function||||
+> 
+> 
 
 The ¢ symbol replaces the | in .pmc files and is converted when loaded.  
 
