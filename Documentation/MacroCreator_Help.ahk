@@ -717,7 +717,7 @@
 		Message - Body of the message. It can be text or HTML.
 		HTML - Check this option to use HTML format in the email body.
 		Headers - Standard Email fields.
-		Attachments - Add and edit file attachments. Add one file per line with the full path.
+		Attachments - Add and edit file attachments. Add one file per line with the full path. You can drop files in here.
 
 	Remarks:
 		You can add and edit accounts clicking on the *Email accounts* link or in the Settings window.
@@ -756,7 +756,7 @@
 	Parameters:
 		Zip files / Unzip files - Select the desired operation.
 		Destination file/folder - The name of the destination, which is assumed to be in %A_WorkingDir% if an absolute path isn't specified.
-		Files - A list of files or patterns to be compressed or uncompressed. Separate files by semicolon, comma or line.
+		Files - A list of files or patterns to be compressed or uncompressed. Separate files by semicolon, comma or line. You can drop files in here.
 		Compress/Extract each file to different archive/folder - Check this option to have each file/folder compressed or extracted to an individual file/folder.
 
 	Remarks:

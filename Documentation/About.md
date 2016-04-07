@@ -62,6 +62,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added support for *#If Expression* in Context Sensitive Hotkeys.
 * Added *GetElementsByClassName* option in InternetExplorer/COM *Get Element Tool*.
 * Added var [not] in, var [not] contains, var [not] between and var is in Compare Variables If Statement.
+* Added WinTitle, WinText, ExcludeTitle and ExcludeText to *If Window...* statements.
 * Added options to set TitleMatchMode, TitleMatchMode Speed, DetectHiddenWindows and DetectHiddenText.
 * Added *Client* mode for Mouse and Pixel/Image Search coordinates.
 * Added option to center coordinates of *ImageSearch* results.
@@ -79,6 +80,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Fixed bug with recording of mouse buttons.
 * Fixed bug with WinWait timeout.
 * Fixed bugs with IE/COM Interface.
+* Fixed bugs with commas in command parameters.
 * Fixed default editor not set correctly on first run.
 
 ## Version 4.1.3

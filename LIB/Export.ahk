@@ -297,10 +297,7 @@
 				If VarValue is not number
 				{
 					If (Target != "Expression")
-					{
-						VarValue := StrReplace(VarValue, ",", "``,")
-					,	VarValue := CheckExp(VarValue)
-					}
+						VarValue := CheckExp(VarValue, 1)
 				}
 				If ((ConvertBreaks) && (InStr(VarValue, "``n")))
 				{
@@ -437,7 +434,7 @@
 		Else If (Type = cType50)
 		{
 			Action := RegExReplace(Action, ".*\s")
-		,	RowData := "`n" Type ", " Step ", " (Action = "Once" ? (DelayX > 0 ? -DelayX : -1)
+		,	RowData := "`n" Type ", " Step ", " (Action = "Once" ? (DelayX > 0 ? -DelayX : InStr(DelayX, "%") ? DelayX : -1)
 												: Action = "Period" ? DelayX
 												: Action)
 			If (Comment != "")
@@ -469,13 +466,13 @@
 			StringSplit, Act, Action, :
 			Action := SubStr(Action, StrLen(Act1) + 2)
 			StringSplit, Tar, Target, /
-			CDO_To := CheckExp(SubStr(Tar1, 4))
-		,	CDO_Sub := CheckExp(Action)
+			CDO_To := CheckExp(SubStr(Tar1, 4), 1)
+		,	CDO_Sub := CheckExp(Action, 1)
 		,	CDO_Msg := SubStr(Step, 3)
 		,	CDO_Html := SubStr(Step, 1, 1)
-		,	CDO_Att := CheckExp(Window)
-		,	CDO_CC := CheckExp(SubStr(Tar2, 4)), CDO_CC := CDO_CC = """""" ? "" : CDO_CC
-		,	CDO_BCC := CheckExp(SubStr(Tar3, 5)), CDO_BCC := CDO_BCC = """""" ? "" : CDO_BCC
+		,	CDO_Att := Window
+		,	CDO_CC := CheckExp(SubStr(Tar2, 4), 1), CDO_CC := CDO_CC = """""" ? "" : CDO_CC
+		,	CDO_BCC := CheckExp(SubStr(Tar3, 5), 1), CDO_BCC := CDO_BCC = """""" ? "" : CDO_BCC
 		
 		,	SelAcc := ""
 		,	User_Accounts := UserMailAccounts.Get(true)
@@ -493,9 +490,13 @@
 				CDO_Msg := StrReplace(CDO_Msg, "``n", "`n")
 			,	CDO_Msg := "`n(LTrim`n" CDO_Msg "`n)"
 			}
-			CDO_Msg := StrReplace(CDO_Msg, "`````,", "```,")
-		,	RowData := "`nMsgBody := " CheckExp(CDO_Msg) . (CDO_Att = """""" ? "" : "`nAttachments := " CDO_Att)
-		,	RowData .= "`nCDO(" SelAcc ", " CDO_To ", " CDO_Sub ", MsgBody, " CDO_Html ", " (CDO_Att = """""" ? "" : Attachments) ", " CDO_CC ", " CDO_BCC
+			If ((ConvertBreaks) && (InStr(CDO_Att, "``n")))
+			{
+				CDO_Att := StrReplace(CDO_Att, "``n", "`n")
+			,	CDO_Att := "`n(LTrim`n" CDO_Att "`n)"
+			}
+			RowData := "`nMsgBody = " CDO_Msg . (CDO_Att = "" ? "" : "`nAttachments = " CDO_Att)
+		,	RowData .= "`nCDO(" SelAcc ", " CDO_To ", " CDO_Sub ", MsgBody, " CDO_Html ", " (CDO_Att = "" ? "" : "Attachments") ", " CDO_CC ", " CDO_BCC
 		,	RowData := RTrim(RowData, ", ") . ")"
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((TimesX > 1) || InStr(TimesX, "%"))
@@ -503,14 +504,14 @@
 		}
 		Else If (Type = cType53)
 		{
-			RowData := "`nWinHttpDownloadToFile(" CheckExp(Step) ", " CheckExp(Action) ")"
+			RowData := "`nWinHttpDownloadToFile(" CheckExp(Step, 1) ", " CheckExp(Action, 1) ")"
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If ((Type = cType54) || (Type = cType55))
 		{
-			RowData := "`n" Type "(" CheckExp(Step) ", " CheckExp(Action) ", " (Target ? "true" : "")
+			RowData := "`n" Type "(" CheckExp(Step, 1) ", " CheckExp(Action, 1) ", " (Target ? "true" : "")
 		,	RowData := RTrim(RowData, ", ") . ")"
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((TimesX > 1) || InStr(TimesX, "%"))
@@ -553,7 +554,8 @@
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		If (!InStr(FileCmdList, Type "|"))
-			RowData := StrReplace(RowData, "```,", "`,")
+			If Type in %cType39%,%cType15%,%cType16%,%cType21%,%cType44%
+				RowData := StrReplace(RowData, "``,", ",")
 		If ((IsChecked = A_Index) && (CommentOut))
 			LVData .= "`n*/" RowData, CommentOut := false
 		Else If ((IsChecked != A_Index) && (!CommentOut) && (Type != cType42))
@@ -699,14 +701,16 @@ CheckForExp(Field)
 	return Field
 }
 
-CheckExp(String)
+CheckExp(String, IncCommas := false)
 {
 	Static _x := Chr(2), _y := Chr(3), _z := Chr(4)
 	
 	If (String = "")
 		return """"""
 	StringReplace, String, String, ```%, %_y%, All
-	StringReplace, String, String, `````, , %_x%, All
+	StringReplace, String, String, `````,, %_x%, All
+	If (IncCommas)
+		StringReplace, String, String, `,, %_x%, All
 	Loop, Parse, String, `,, %A_Space%``
 	{
 		LoopField := (A_LoopField != """""") ? RegExReplace(A_LoopField, """", """""") : A_LoopField

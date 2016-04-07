@@ -4039,7 +4039,7 @@ Gui, 5:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom(true, Details, TimesX, DelayX, Target, Window)
+	EscCom(true, Details, TimesX, DelayX, Target)
 	GuiControl, 5:, TimesX, %TimesX%
 	GuiControl, 5:, EdRept, %TimesX%
 	GuiControl, 5:, DelayX, %DelayX%
@@ -5368,7 +5368,7 @@ SB_SetText("lines: " 0, 3)
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom(true, Details, TimesX, DelayX, Target, Window)
+	EscCom(true, Details, TimesX, DelayX, Target)
 	StringReplace, Details, Details, ``n, `n, All
 	GuiControl, 8:, TextEdit, %Details%
 	GuiControl, 8:, TimesX, %TimesX%
@@ -5520,7 +5520,7 @@ If (CtrlState = 1)
 Else
 	Target := "", Window := ""
 Action := "[Text]"
-EscCom(false, TextEdit, TimesX, DelayX, Target, Window)
+EscCom(false, TextEdit, TimesX, DelayX, Target)
 If (A_ThisLabel != "TextApply")
 {
 	Gui, 1:-Disabled
@@ -6823,7 +6823,7 @@ Gui, 11:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom(true, Details, TimesX, DelayX, Target, Window)
+	EscCom(true, Details, TimesX, DelayX, Target)
 	WinCom := Type
 	GuiControl, 11:ChooseString, WinCom, %WinCom%
 	GoSub, WinCom
@@ -6973,7 +6973,7 @@ If (InStr(WinCom, "Get"))
 }
 Else
 	DelayWX := DelayW
-EscCom(false, Details, WinCom, Title)
+EscCom(false, Details, WinCom)
 If (A_ThisLabel != "WinApply")
 {
 	Gui, 1:-Disabled
@@ -7940,7 +7940,7 @@ Gui, 21:Add, DDL, yp x+0 W105 vIfMsgB AltSubmit Disabled, %c_Lang168%$$%c_Lang16
 Gui, 21:Add, Text, yp x+5 h25 0x11
 Gui, 21:Add, Button, yp x+0 W75 vIdent gWinTitle, WinTitle
 Gui, 21:Add, Button, -Wrap yp x+5 W30 H23 vIfGet gIfGet, ...
-Gui, 21:Add, Text, -Wrap R1 y+5 xs+10 W200 vFormatTip
+Gui, 21:Add, Text, -Wrap R1 y+5 xs+10 W400 vFormatTip, %wcmd_WinSet%
 Gui, 21:Add, Edit, y+5 xs+10 W430 R4 -vScroll vTestVar
 Gui, 21:Add, Text, -Wrap R1 y+11 xs+10 W135 vFormatTip2
 Gui, 21:Add, DDL, yp-5 x+0 W100 vIfOper gCoOper Disabled, =$$==$!=$>$<$>=$<=$in$not in$contains$not contains$between$not between$is$is not
@@ -8008,7 +8008,7 @@ If (s_Caller = "Edit")
 	{
 		If (Action != If15)
 			StringReplace, Details, Details, ``n, `n, All
-		EscCom(true, Details, TimesX, DelayX, Target, Window)
+		EscCom(true, Details, TimesX, DelayX, Target)
 		If (InStr(Action, "[ElseIf] "))
 		{
 			Action := SubStr(Action, 10)
@@ -8177,6 +8177,7 @@ IfOK:
 Gui, 21:+OwnDialogs
 Gui, 21:Submit, NoHide
 Statement := IfList%Statement%, TestVar := Trim(TestVar)
+EscCom(false, TestVar2)
 If (InStr(Statement, "Image") || (Statement = "If Message Box"))
 	TestVar := ""
 Else
@@ -8213,7 +8214,6 @@ Else If (Statement = "If Message Box")
 	TestVar := IfMsg%IfMsgB%
 If (ElseIf)
 	Statement := "[ElseIf] " Statement
-EscCom(false, TestVar)
 StringReplace, TestVar, TestVar, `n, ``n, All
 If (A_ThisLabel != "IfApply")
 {
@@ -8334,7 +8334,7 @@ Else
 	Gui, 21:Submit, NoHide
 	Action := "[" ExprOper%Oper% " Variable]"
 	GuiControl, 21:-AltSubmit, Oper
-	EscCom(false, TimesX, DelayX, Target, Window)
+	EscCom(false, TimesX, DelayX, Target)
 	If (UseEval = 1)
 		Target := "Expression"
 	Else
@@ -8579,6 +8579,11 @@ Else If (InStr(Statement, "Compare"))
 	GuiControl, 21:Enable, TestVar2
 	GuiControl, 21:Enable, IfOper
 }
+Else If (InStr(Statement, "Window"))
+{
+	GuiControl, 21:, FormatTip, %wcmd_WinSet%
+	GuiControl, 21:, FormatTip2
+}
 Else
 {
 	GuiControl, 21:, FormatTip
@@ -8665,7 +8670,7 @@ Gui, 22:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom(true, Details, TimesX, DelayX, Target, Window)
+	EscCom(true, Details, Target)
 	Loop, Parse, Details, `,,%A_Space%
 	{
 		StringReplace, LoopField, A_LoopField, %_x%, `,, All
@@ -8698,12 +8703,8 @@ If (MsgNum = "")
 	GuiControl, 22:Focus, MsgNum
 	return
 }
-IfInString, wParam, `,
-	StringReplace, wParam, wParam, `,, ```,, All
-IfInString, lParam, `,
-	StringReplace, lParam, lParam, `,, ```,, All
+EscCom(false, lParam, wParam, DefCt)
 Details := MsgNum ", " wParam ", " lParam
-EscCom(false, Details, DefCt, Title)
 If (A_ThisLabel != "SendMsgApply")
 {
 	Gui, 1:-Disabled
@@ -8801,7 +8802,7 @@ Gui, 23:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom(true, Details, TimesX, DelayX, Target, Window)
+	EscCom(true, Details, TimesX, DelayX, Target)
 	ControlCmd := Type
 	GuiControl, 23:ChooseString, ControlCmd, %ControlCmd%
 	If (Type = cType24)
@@ -8913,7 +8914,7 @@ If ((ControlCmd = cType23) || (ControlCmd = cType27)
 	Else
 		Details := VarName
 }
-EscCom(false, Details, DefCt, Title)
+EscCom(false, Details, DefCt)
 If (A_ThisLabel != "ControlApply")
 {
 	Gui, 1:-Disabled
@@ -9073,7 +9074,6 @@ SB_SetText("lines: " 0, 3)
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom(true, Details, TimesX, DelayX, Target, Window)
 	StringReplace, Details, Details, ``n, `n, All
 	StringSplit, Act, Action, :
 	Action := SubStr(Action, StrLen(Act1) + 2)

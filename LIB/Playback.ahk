@@ -2180,7 +2180,7 @@ RunExtFunc(File, FuncName, Params*)
 
 IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, Window, Flow)
 {
-	local Pars, VarName, Oper, VarValue, lMatch
+	local Pars, VarName, Oper, VarValue, lMatch, Win
 	
 	If (Step = "EndIf")
 		return ThisError < 1 ? 0 : --ThisError
@@ -2213,24 +2213,25 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 ,	Step := StrReplace(Step, _z, A_Space)
 ,	Target := StrReplace(Target, _z, A_Space)
 ,	Window := StrReplace(Window, _z, A_Space)
+,	Win := SplitWin(Step)
 	If (Action = If1)
 	{
-		IfWinActive, %Step%
+		IfWinActive, % Win[1], % Win[2], % Win[3], % Win[4]
 			return 0
 	}
 	Else If (Action = If2)
 	{
-		IfWinNotActive, %Step%
+		IfWinNotActive, % Win[1], % Win[2], % Win[3], % Win[4]
 			return 0
 	}
 	Else If (Action = If3)
 	{
-		IfWinExist, %Step%
+		IfWinExist, % Win[1], % Win[2], % Win[3], % Win[4]
 			return 0
 	}
 	Else If (Action = If4)
 	{
-		IfWinNotExist, %Step%
+		IfWinNotExist, % Win[1], % Win[2], % Win[3], % Win[4]
 			return 0
 	}
 	Else If (Action = If5)
