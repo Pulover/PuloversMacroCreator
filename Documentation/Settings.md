@@ -94,11 +94,11 @@ Sets [coordinate mode](http://autohotkey.com/docs/commands/CoordMode.htm) for Mo
 
 ### Default Mouse Delay
 
-Sets the default delay for each Mouse Command. This affects new commands added from the Mouse Command window and will only affect recording if 'Timed Intervals' is disabled.
+Sets the default delay added for each new Mouse Command. This affects new commands added from the Mouse Command window and will only affect the recorder if 'Timed Intervals' is disabled.
 
 ### Default Window Delay
 
-Sets the default delay for each Window (Set) Command. This affects new commands added from the Window Command window and Recording.
+Sets the default delay added for each new Window (Set) Command. This affects new commands added from the Window Command window and the recorder.
 
 ### Max History per Macro
 
