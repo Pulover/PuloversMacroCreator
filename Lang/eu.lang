@@ -1049,11 +1049,11 @@
 	InsertKey_TT =	Txertatu Tekleatzeko (Ctrl + Insert)
 	InsertKeyT_TT =	Txertatu Tekleatzeko
 	JoyKey_TT =	Sakatu botoi bat joystick buruzko
-	KeyDelayE_TT =	atzerapena izango dela Send eta ControlSend bitartez bidaltzeko tekla bakoitzaren ondoren gertatzen ezartzen du.
+	KeyDelayE_TT =	Atzerapena izango dela Send eta ControlSend bitartez bidaltzeko tekla bakoitzaren ondoren gertatzen ezartzen du.
 	LoopLVColor_TT =	Egin klik kolorea hautatzeko
 	LUntil_TT =	Baldintza bat aplikatzen du Loop baten jarraipena edo For begizta.
 	ManKey_TT =	Hotkey jolastu Makro "urratsez urrats"
-	MouseDelayE_TT =	atzerapena izango dela saguaren mugimendu bakoitzaren ondoren gertatzen, edo egin klik ezartzen du.
+	MouseDelayE_TT =	Atzerapena izango dela saguaren mugimendu bakoitzaren ondoren gertatzen, edo egin klik ezartzen du.
 	MRel_TT =	Mugimenduak egungo posizio erlatiboa.
 		Edo Kontrol erabiltzen bada: Kargua erlatiboa kontrolatzeko.
 	OSHK_TT =	Aukeratu Makro

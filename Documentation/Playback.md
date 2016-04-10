@@ -98,25 +98,51 @@ To change options click the Options button on the main window or select Options 
 
 Sets the matching behavior of the WinTitle parameter in commands such as WinWait.
 
-**1**: A window's title must start with the specified WinTitle to be a match.
-**2**: A window's title can contain WinTitle anywhere inside it to be a match.
-**3**: A window's title must exactly match WinTitle to be a match.
-
+**1**: A window's title must start with the specified WinTitle to be a match.  
+**2**: A window's title can contain WinTitle anywhere inside it to be a match.  
+**3**: A window's title must exactly match WinTitle to be a match.  
 **RegEx**: Changes WinTitle, WinText, ExcludeTitle, and ExcludeText to be regular expressions. Do not enclose such expressions in quotes when using them with commands. For example: WinActivate Untitled.*Notepad. RegEx also applies to ahk_class.
 
-### Title Match Speed
-
-**Fast**: This is the default behavior. Performance may be substantially better than Slow, but certain WinText elements for some types of windows may not be "seen" by the various window commands.
-
+**Fast**: This is the default behavior. Performance may be substantially better than Slow, but certain WinText elements for some types of windows may not be "seen" by the various window commands.  
 **Slow**: Can be much slower, but all possible WinText is retrieved from every window as a windowing command searches through them for a match. Window Spy reveals which parts of a Window's text (if any) require the slow mode.
 
-### Detect Hidden Window
+For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SetTitleMatchMode.htm).
+
+### Detect Hidden Windows
 
 Determines whether invisible windows are "seen" by the program.
+
+For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/DetectHiddenWindows.htm).
 
 ### Detect Hidden Text
 
 Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
+
+For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/DetectHiddenText.htm).
+
+### Key send mode
+
+Sets the default method for Keyboard and Mouse actions. You can change this mid-run using the `SendMode` command available in the [Run command window](Commands/Run.html) (this will not change the default setting).
+
+For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SendMode.htm).
+
+### Key delay
+
+Sets the delay that will occur after each keystroke sent by Send and ControlSend. You can change this mid-run using the `SetKeyDelay` command available in the [Run command window](Commands/Run.html) (this will not change the default setting).
+
+For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SetKeyDelay.htm).
+
+### Mouse delay
+
+Sets the delay that will occur after each mouse movement or click. You can change this mid-run using the `SetMouseDelay` command available in the [Run command window](Commands/Run.html) (this will not change the default setting).
+
+For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SetMouseDelay.htm).
+
+### Control delay
+
+Sets the delay that will occur after each control-modifying command. You can change this mid-run using the `SetControlDelay` command available in the [Run command window](Commands/Run.html) (this will not change the default setting).
+
+For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SetControlDelay.htm).
 
 ### Playback Speed Hotkeys
 
@@ -139,10 +165,6 @@ Hides error messages from commands, assignments, functions and expressions.
 ### Return Mouse after playback
 
 If checked will return the mouse to the initial position after each Macro Playback that uses mouse movement. This will not work for Manual Playback.
-
-### Display Controls Bar on start-up
-
-If checked will display the Controls bar upon every start.
 
 ### Auto Hide Controls Toolbar
 

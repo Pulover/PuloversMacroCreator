@@ -2,7 +2,7 @@
 
 ## License for Pulover's Macro Creator
 
-Copyright 2012-2013 by Rodolfo U. Batista  
+Copyright 2012-2016 by Rodolfo U. Batista  
 
 ### GNU GENERAL PUBLIC LICENSE
 

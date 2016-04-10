@@ -297,8 +297,8 @@ IniRead, CommandLayout, %IniFilePath%, ToolbarOptions, CommandLayout
 IniRead, EditLayout, %IniFilePath%, ToolbarOptions, EditLayout
 IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1
 
-If (Version < 5)
-	ShowTips := 1, NextTip := 1
+If (Version < "5.0.0")
+	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
 
 User_Vars := new ObjIni(UserVarsPath)
 ,	User_Vars.Read()
@@ -1258,8 +1258,6 @@ If (EditLayout != "ERROR")
 	TB_Layout(TbEdit, EditLayout, TbEdit_ID)
 If (SettingsLayout != "ERROR")
 	TB_Layout(TbSettings, SettingsLayout, TbSettings_ID)
-If (Version < "5.0.0")
-	GoSub, %UserLayout%Layout
 return
 
 TbFile:

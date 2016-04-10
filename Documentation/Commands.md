@@ -31,6 +31,15 @@ Title, partial title or identifier of a target window. The first parameter is [W
 Selects what informations to retrieve from a target window (Title/Class/Process/ID/ProcessID) with the *Get* tool for the [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm) parameter. Check one or more items in the list and use the *Get* button (...) to copy the available information from the window.  
 **Note**: The options checked only determine what the *Get* tool will retrieve, it does not affect the command.
 
+**WinTitle** matching behavior is determined by [Title Match Mode](Playback.html#title-match-mode) and [Detect Hidden Windows](Playback.html#detect-hidden-windows) settings.
+
+Additionally to **WinTitle** you can also set the following parameters separated by commas:
+
+* **WinText**: If present, this parameter must be a substring from a single text element of the target window (as revealed by the included Window Spy utility). Hidden text elements are detected if DetectHiddenText is ON.
+* **ExcludeTitle**: Windows whose titles include this value will not be considered.
+* **ExcludeText**: Windows whose text include this value will not be considered.
+
+
 ## Table of Contents
 
 * [Mouse](Commands/Mouse.html)

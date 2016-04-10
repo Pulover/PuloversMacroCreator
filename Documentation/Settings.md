@@ -23,6 +23,10 @@ All settings are saved to *MacroCreator.ini*, User Global Variables are saved to
 
 If enabled the program will automatically create a backup file of the active project everytime the a change is made to one of the Macro Lists.
 
+### Display Controls Bar on start-up
+
+If checked will display the Controls bar upon every start.
+
 ### Allow Multiple Instances
 
 Determines whether Macro Creator is allowed to run concurrent instances.
