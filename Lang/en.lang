@@ -239,7 +239,7 @@
 	w_Lang054 =	Control (F4)
 	w_Lang055 =	Pause (F5)
 	w_Lang056 =	Message Box (Shift+F5)
-	w_Lang057 =	Key Wait (Ctrl+F5) 
+	w_Lang057 =	Key Wait (Ctrl+F5)
 	w_Lang058 =	Window (F6)
 	w_Lang059 =	Image / Pixel Search (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
@@ -471,7 +471,7 @@
 	c_Lang174 =	Retry
 	c_Lang175 =	Continue
 	c_Lang176 =	Try Again
-	c_Lang177 =	Timeout 
+	c_Lang177 =	Timeout
 	c_Lang178 =	Set key delay
 	c_Lang179 =	Key delay
 	c_Lang180 =	Random delay
@@ -662,7 +662,7 @@
 	t_Lang104 =	Show / Hide Title Bar
 	t_Lang105 =	Show / Hide Main Window
 	t_Lang106 =	Run immediately
-	t_Lang107 =	Random Delays 
+	t_Lang107 =	Random Delays
 	t_Lang108 =	Normal
 	t_Lang109 =	Down
 	t_Lang110 =	Up
@@ -1159,7 +1159,7 @@
 	OuterHTML	Sets or retrieves the object and its content in HTML.
 	Quit	Closes the page.
 	Refresh	Reloads the currently displayed page.
-	SelectedIndex	Sets or retrieves the index of the selected option in a select object. 
+	SelectedIndex	Sets or retrieves the index of the selected option in a select object.
 	Src	Sets or retrieves a URL to be loaded by the object.
 	Stop	Cancels a pending navigation or download.
 	Submit	Submits the form.
@@ -1403,7 +1403,7 @@
 	UrlDownloadToFile	Downloads a file from the Internet.
 	UserFunction	Creates a Function structure.
 	Variable	Assigns the specified value to a variable.
-	While	Performs a series of commands repeatedly until the specified expression evaluates to false. 
+	While	Performs a series of commands repeatedly until the specified expression evaluates to false.
 	WinActivate	Activates the specified window (makes it foremost).
 	WinActivateBottom	Same as WinActivate except that it activates the bottommost (least recently active) matching window rather than the topmost.
 	WinActive	Returns the Unique ID (HWND) of the active window if it matches the specified criteria.
