@@ -761,13 +761,17 @@
 	t_Lang203 =	Detect ascunse pentru Windows
 	t_Lang204 =	Detect text ascuns
 	t_Lang205 =	Mod de potrivire din titlu
-	t_Lang206 =	Viteză din titlu Potrivire
+	t_Lang206 =	Nu afișați erori
 	t_Lang207 =	Client
 	t_Lang208 =	G&ăsi
 	t_Lang209 =	A &inlocui
-	t_Lang210 =	Nu afișați erori
-	t_Lang211 =	File
-	t_Lang212 =	Spații
+	t_Lang210 =	File
+	t_Lang211 =	Spații
+	t_Lang212 =	Acțiuni de la tastatură și mouse
+	t_Lang213 =	Modul cheie trimitere
+	t_Lang214 =	Întârziere cheie
+	t_Lang215 =	Întârziere mouse-ul
+	t_Lang216 =	Întârziere de control
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Deschis
@@ -978,6 +982,7 @@
 	ComText_TT =	Atunci când nu este în modul brut, următoarele caractere
 		Sunt tratate ca modificatori (acești modificatori afectează
 		Numai cheia următoare):!, +, ^, #
+	ControlDelayE_TT =	Setează întârzierea care va avea loc după fiecare comandă modificator de control.
 	CoordPixel_TT =	Modul de coordonate
 	DefaultMacro_TT =	Selectați fișierul pentru a încărca la pornirea programului
 	EditPaste_TT =	Pastelor String la caret / poziția de inserție
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Inserare taste (Ctrl + Insert)
 	InsertKeyT_TT =	Inseraţi Keystroke
 	JoyKey_TT =	Apăsați un buton de pe joystick
+	KeyDelayE_TT =	Setează întârzierea care va avea loc după fiecare apăsare de tastă trimis de Trimitere și ControlSend.
 	LoopLVColor_TT =	Click pentru a alege o culoare
 	LUntil_TT =	Se aplică o condiție pentru continuarea unei bucle sau pentru buclă.
 	ManKey_TT =	Hotkey pentru a juca Macro "pas cu pas"
+	MouseDelayE_TT =	Setează întârzierea care va avea loc după fiecare mișcare al mouse-ului sau faceți clic.
 	MRel_TT =	Mișcările relative la poziția curentă.
 		Sau, dacă este utilizat cu control: Poziția față de control.
 	OSHK_TT =	Selectați Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Returnează true dacă Cheia este asociată cu o valoare.
 	If	Specifică comanda (e) pentru a efectua în cazul în care comparația unei variabile la o valoare evalutes la TRUE. Atunci când mai mult de o comandă este prezent, incadrati intr-un bloc (aparat dentar).
 	If (expression)	Specifică comanda (e) pentru a efectua în cazul în care o expresie se evaluează la TRUE.
-	If A_Index	Controale în cazul în care iterația buclă de curent matchs a specificat un număr.
-	If Clipboard	Controale în cazul în care textul Clipboard este matchs un șir de caractere specificat.
-	If ErrorLevel	În cazul în care o imagine de controale sau pixel specificat a fost găsit în ecran.
+	If A_Index	Controale în cazul în care iterația bucla de curent se potrivește cu numărul specificat.
+	If Clipboard	Controale în cazul în care textul Clipboard se potrivește cu șirul specificat.
+	If ErrorLevel	În cazul în care o imagine de controale sau pixeli specificate a fost găsită pe ecran.
 	If var [not] between	Verifică dacă conținutul unei variabile sunt prezentate numeric sau alfabetic, între două valori (inclusiv).
 	If var [not] in / If var [not] contains MatchList	Verifică dacă conținutul unei variabile se potrivesc unul dintre elementele dintr-o listă.
 	If var is [not] type	Verifică dacă conținutul unei variabile sunt numerice, litere mari, etc.
@@ -1347,10 +1354,12 @@
 	RunAs	Specifică un set de acreditări de utilizator pentru a fi utilizate pentru toate utilizările ulterioare ale alerga și RunWait. Necesită Windows 2000 / XP sau mai târziu.
 	RunWait	Se execută un program extern și așteaptă până când se termină.
 	Send / SendRaw	Trimite intrarile de la tastatura simulate și mouse-ul pentru fereastra activă.
-	SendLevel	Controale care artificiale evenimente tastatură și mouse-ul sunt ignorate de taste și hotstrings.
 	SendMessage	Trimite un mesaj într-o fereastră sau de control și așteaptă confirmare.
+	SendMode	
 	SetCapslockState	Setează starea cheii Capslock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.
+	SetControlDelay	
 	SetKeyDelay	Setează întârzierea care va avea loc după fiecare apăsare de tastă trimis de Trimitere sau ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Setează starea tastei NumLock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.
 	SetRegView	Permite comenzi de registru într-un script pe 32 de biți pentru a accesa ecranul de registru pe 64 de biți și vice-versa.
 	SetScrollLockState	Setează starea cheii ScrollLock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.

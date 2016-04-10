@@ -761,13 +761,17 @@
 	t_Lang203 =	Detectar oculto de Windows
 	t_Lang204 =	Detectar texto oculto
 	t_Lang205 =	Modo de Xogo título
-	t_Lang206 =	Título velocidade Xogo
+	t_Lang206 =	Non amosar erros
 	t_Lang207 =	Cliente
 	t_Lang208 =	A&topar
 	t_Lang209 =	S&ubstituír
-	t_Lang210 =	Non amosar erros
-	t_Lang211 =	Tabs
-	t_Lang212 =	Espazos
+	t_Lang210 =	Tabs
+	t_Lang211 =	Espazos
+	t_Lang212 =	Accións de teclado e rato
+	t_Lang213 =	Modo tecla de envío
+	t_Lang214 =	Atraso clave
+	t_Lang215 =	Atraso do rato
+	t_Lang216 =	Atraso de control
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aberto
@@ -978,6 +982,7 @@
 	ComText_TT =	Cando non está en modo RAW, o carácter seguinte
 		Son tratados como modificadores (estes modificadores afectan
 		Só a clave seguinte):!, +, ^, #
+	ControlDelayE_TT =	Define o atraso que debería ocorrer despois de cada orde de modificación de control.
 	CoordPixel_TT =	Modo de coordinar
 	DefaultMacro_TT =	Seleccione o ficheiro para cargar na inicialización do programa
 	EditPaste_TT =	Carpetas corda na posición do cursor / inserción
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Inserir Keystroke (Ctrl + Insert)
 	InsertKeyT_TT =	Inserir Keystroke
 	JoyKey_TT =	Premer un botón no mando
+	KeyDelayE_TT =	Define o atraso que debería ocorrer despois de cada chamada de tecla enviados por Enviar ControlSend.
 	LoopLVColor_TT =	Prema para escoller unha cor
 	LUntil_TT =	Aplícase unha condición para a continuación de un loop ou Para-loop.
 	ManKey_TT =	Hotkey para xogar Macro "paso a paso"
+	MouseDelayE_TT =	Define o atraso que debería ocorrer despois de cada movemento do rato ou prema.
 	MRel_TT =	Movementos relativos á posición actual.
 		Ou, se usa con control: posición en relación ao control.
 	OSHK_TT =	Select Macro
@@ -1281,8 +1288,8 @@
 	HasKey	Volve true se Key está asociada a un valor.
 	If	Especifica a orde (s) para realizar a comparación dunha variable para un valor resulte en certo. Cando máis dun comando está presente, coloque os nun bloque (aparellos).
 	If (expression)	Especifica a orde (s) para realizar unha expresión for valorada como TRUE.
-	If A_Index	Comproba se a iteración do bucle de corrente matchs un especificou un número.
-	If Clipboard	Comproba se o texto no portapapeis é matchs unha cadea especificada.
+	If A_Index	Comproba se a iteración do bucle de corrente corresponde ao número indicado.
+	If Clipboard	Comproba se o texto do portapapeis corresponde a secuencia especificada.
 	If ErrorLevel	Comproba se unha imaxe ou píxeles especificar se atopou na pantalla.
 	If var [not] between	Comproba se o contido dunha variable son numericamente ou por orde alfabética entre dous valores (e).
 	If var [not] in / If var [not] contains MatchList	Comproba se o contido dunha variable corresponder a un dos elementos nunha lista.
@@ -1347,10 +1354,12 @@
 	RunAs	Especifica un conxunto de credenciais do usuario a usar para todos os usos posteriores de Correr e RunWait. Require Windows 2000 / XP ou posterior.
 	RunWait	Executa un programa externo e agarda ata que termine.
 	Send / SendRaw	Envía teclas escritas simulados e click do rato para a fiestra activa.
-	SendLevel	Controla cales eventos de teclado e rato artificiais son ignorados polo Hotkeys e hotstrings.
 	SendMessage	Envía unha mensaxe a un diálogo ou control e agarda confirmación.
+	SendMode	
 	SetCapslockState	Define o estado da clave BloqMaius. Tamén é posible facer a clave para estar activado ou desactivado.
+	SetControlDelay	
 	SetKeyDelay	Define o atraso que debería ocorrer despois de cada keystroke enviado polo envío ou ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Define o estado da tecla BloqNum. Tamén é posible facer a clave para estar activado ou desactivado.
 	SetRegView	Permite que os comandos de rexistro nun guión de 32 bits para acceder a exhibición do rexistro de 64 bits e viceversa.
 	SetScrollLockState	Define o estado da clave BloqDespr. Tamén é posible facer a clave para estar activado ou desactivado.

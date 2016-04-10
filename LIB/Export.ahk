@@ -1,6 +1,6 @@
 ﻿LV_Export(ListID)
 {
-	local LVData, Id_LVData, Indent, RowData, Action, Match, ExpValue
+	local LVData, Id_LVData, Indent, RowData, Action, Match, ExpValue, Win
 	, Step, TimesX, DelayX, Type, Target, Window, Comment, UntilArray := []
 	, PAction, PType, PDelayX, PComment, Act, iCount, init_ie, ComExp
 	, VarsScope, FuncParams, IsFunction := false, CommentOut := false
@@ -21,6 +21,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
+			,	Step := StrReplace(Step, "```,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			If !(Send_Loop)
@@ -91,6 +92,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
+			,	Step := StrReplace(Step, "```,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			If (((TimesX > 1) || InStr(TimesX, "%")) && (Action != "[Text]"))
@@ -120,6 +122,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
+			,	Step := StrReplace(Step, "```,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			If (InStr(Window, "% ") != 1)
@@ -170,6 +173,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
+			,	Step := StrReplace(Step, "```,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			RowData := "`n" ((Step != "") ? "SavedClip := ClipboardAll`nClipboard := """"`nClipboard := " CheckExp(Step) "`nSleep, 333" : "")
@@ -302,6 +306,7 @@
 				If ((ConvertBreaks) && (InStr(VarValue, "``n")))
 				{
 					VarValue := StrReplace(VarValue, "``n", "`n")
+				,	VarValue := StrReplace(VarValue, "```,", ",")
 				,	VarValue := "`n(LTrim`n" VarValue "`n)"
 				}
 				Step := VarName " " Oper " " VarValue
@@ -319,6 +324,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
+			,	Step := StrReplace(Step, "```,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			RowData := "`nControl, EditPaste, " Step ", " Target ", " Window
@@ -446,6 +452,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")) && ((Type = cType8) || (Type = cType13)))
 			{
 				Step := StrReplace(Step, "``n", "`n")
+			,	Step := StrReplace(Step, "```,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			Step := StrReplace(Step, "`````,", "```,")
@@ -488,11 +495,13 @@
 			If ((ConvertBreaks) && (InStr(CDO_Msg, "``n")))
 			{
 				CDO_Msg := StrReplace(CDO_Msg, "``n", "`n")
+			,	CDO_Msg := StrReplace(CDO_Msg, "```,", ",")
 			,	CDO_Msg := "`n(LTrim`n" CDO_Msg "`n)"
 			}
 			If ((ConvertBreaks) && (InStr(CDO_Att, "``n")))
 			{
 				CDO_Att := StrReplace(CDO_Att, "``n", "`n")
+			,	CDO_Att := StrReplace(CDO_Att, "```,", ",")
 			,	CDO_Att := "`n(LTrim`n" CDO_Att "`n)"
 			}
 			RowData := "`nMsgBody = " CDO_Msg . (CDO_Att = "" ? "" : "`nAttachments = " CDO_Att)
@@ -522,6 +531,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")) && (Type = cType8))
 			{
 				Step := StrReplace(Step, "``n", "`n")
+			,	Step := StrReplace(Step, "```,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			Step := StrReplace(Step, "`````,", "```,")
@@ -541,7 +551,7 @@
 				. Step "W, " Step "H, " Window
 			Else If ((Type = "WinSet") || InStr(Type, "Get"))
 				RowData := "`n" Type ", " Step ", " Window
-			Else If Type contains Close,Kill,Wait
+			Else If Type contains Close,Kill,Wait,SetTitle
 			{
 				Win := SplitWin(Window)
 			,	RowData := "`n" Type ", " Win[1] ", " Win[2] ", " Step ", " Win[3] ", " Win[4]

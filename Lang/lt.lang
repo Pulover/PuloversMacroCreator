@@ -761,13 +761,17 @@
 	t_Lang203 =	Aptikti paslėptus Windows
 	t_Lang204 =	Aptikti paslėptą tekstą
 	t_Lang205 =	Pavadinimas atitikimo režimas
-	t_Lang206 =	Pavadinimas atitikimo greitis
+	t_Lang206 =	Nerodyti klaidų
 	t_Lang207 =	Klientas
 	t_Lang208 =	R&asti
 	t_Lang209 =	Pa&keisti
-	t_Lang210 =	Nerodyti klaidų
-	t_Lang211 =	Skirtukai
-	t_Lang212 =	Erdves
+	t_Lang210 =	Skirtukai
+	t_Lang211 =	Erdves
+	t_Lang212 =	Klaviatūros ir pelės veiksmai
+	t_Lang213 =	Key siųsti režimas
+	t_Lang214 =	Raktas delsimas
+	t_Lang215 =	Pelės delsimas
+	t_Lang216 =	Kontrolės vėlavimo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atviras
@@ -978,6 +982,7 @@
 	ComText_TT =	Kai nėra žaliavinio režimu, taip simboliai
 		Traktuojamos kaip modifikatorius (šie modifikatoriai įtakos
 		Tik jau kitą klavišą): +, ^, #
+	ControlDelayE_TT =	Nustato vėlavimą, kuris įvyks po kiekvieno kontrolinio keičiančių komandą.
 	CoordPixel_TT =	Koordinačių režimą
 	DefaultMacro_TT =	Pasirinkite failą įkelti į programos paleidimo
 	EditPaste_TT =	Pastos Styginių ne Žymeklis / įrašyti poziciją
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Įdėkite Klaviatūros (Ctrl + Insert)
 	InsertKeyT_TT =	Įdėkite Klaviatūros
 	JoyKey_TT =	Paspauskite mygtuką vairalazde
+	KeyDelayE_TT =	Nustato vėlavimą, kuris įvyks po kiekvieno paspaudimo atsiųstą Siųskite ir ControlSend.
 	LoopLVColor_TT =	Spustelėkite, jei norite pasirinkti spalvą
 	LUntil_TT =	Taikoma sąlyga į kilpą tęsimą, arba už-kilpa.
 	ManKey_TT =	Spartusis klavišas žaisti Makro "žingsnis po žingsnio"
+	MouseDelayE_TT =	Nustato vėlavimą, kuris įvyks po kiekvieno pelės judėjimą, arba paspausti mygtuką.
 	MRel_TT =	Judesių, susijusių su dabartinės padėties.
 		Arba, jei naudojamas su kontrolės: Pareigos, palyginti su kontrole.
 	OSHK_TT =	Pasirinkite Makro
@@ -1281,9 +1288,9 @@
 	HasKey	Grąžina true, jei raktas yra susietas su verte.
 	If	Nurodo komanda (-ai) atlikti, jei kintamojo palyginimas vertės evalutes true. Kai daugiau nei vienas komanda yra, pridėti juos į bloko (sąvaržos).
 	If (expression)	Nurodo komandą (-as) vykdyti, jei išraiška įvertina TRUE.
-	If A_Index	Patikrinimai jei srovės kilpą iteracijos kėlinio kad konkretus skaičius.
-	If Clipboard	Patikrina, ar į iškarpinę tekstas kėlinio nurodytą eilutę.
-	If ErrorLevel	Patikrinimai, jei nenurodyta vaizdo ar pikselis buvo rastas į ekraną.
+	If A_Index	Patikrinimai jei srovės kilpą iteracijos atitinka nurodytą numerį.
+	If Clipboard	Patikrina, ar į iškarpinę tekstas atitinka nurodytą eilutę.
+	If ErrorLevel	Patikrinimai, jei nenurodyta vaizdo ar pikselis buvo rastas ant ekrano.
 	If var [not] between	Tikrina, ar kintamojo turinį yra skaičiais arba pagal abėcėlę tarp dviejų verčių (imtinai).
 	If var [not] in / If var [not] contains MatchList	Tikrina, ar kintamojo turinį atitiktų vieną iš sąrašo elementus.
 	If var is [not] type	Tikrina, ar kintamojo anketa turinys yra skaitmeninis, didžiąsias ir tt
@@ -1347,10 +1354,12 @@
 	RunAs	Nurodo vartotojo kredencialus rinkinys, kuris bus naudojamas visuose vėlesniuose naudojimo Run ir RunWait. Reikalingas Windows 2000 / XP arba naujesnė versija.
 	RunWait	Veikia išorinį programą ir laukia, kol ji nesibaigė.
 	Send / SendRaw	Siunčia imituoti klaviatūros ir pelės spustelėjimų aktyviame lange.
-	SendLevel	Kontrolės, kuri dirbtiniai klaviatūros ir pelės įvykiai yra ignoruojamos klavišus ir hotstrings.
 	SendMessage	Siunčia žinutę langą arba kontrolės ir laukia pripažinimo.
+	SendMode	
 	SetCapslockState	Nustato Capslock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.
+	SetControlDelay	
 	SetKeyDelay	Nustato vėlavimą, kuris įvyks po kiekvieno paspaudimo atsiųstą siųsti arba ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Nustato NumLock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.
 	SetRegView	Leidžia registro komandas 32 bitų scenarijų ir atidarykite 64 bitų registro vaizdą ir atvirkščiai.
 	SetScrollLockState	Nustato ScrollLock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.

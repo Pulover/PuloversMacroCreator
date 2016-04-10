@@ -761,13 +761,17 @@
 	t_Lang203 =	Zbuluar Hidden Windows-
 	t_Lang204 =	Zbuluar Hidden Text
 	t_Lang205 =	Titulli Match Mode
-	t_Lang206 =	Titulli Match Speed
+	t_Lang206 =	Mos e shfaq gabimet
 	t_Lang207 =	Klient
 	t_Lang208 =	G&jej
 	t_Lang209 =	Z&ëvendësoj
-	t_Lang210 =	Mos e shfaq gabimet
-	t_Lang211 =	Tabs
-	t_Lang212 =	Hapësira
+	t_Lang210 =	Tabs
+	t_Lang211 =	Hapësira
+	t_Lang212 =	Tastierë dhe maus veprimet
+	t_Lang213 =	Mënyra kryesore dërgoni
+	t_Lang214 =	Vonesa kryesore
+	t_Lang215 =	Vonesa miu
+	t_Lang216 =	Kontrollit vonesë
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Hapur
@@ -978,6 +982,7 @@
 	ComText_TT =	Kur nuk është në mënyrë të papërpunuara, personazhet në vijim
 		Trajtohen si modifikues (këto modifiers ndikojnë
 		Vetëm çelësi shumë tjetër):, +, ^, #
+	ControlDelayE_TT =	Përcakton vonesën që do të ndodhë pas çdo komande kontrollit-modifikimin.
 	CoordPixel_TT =	Mënyrën koordinojë
 	DefaultMacro_TT =	Zgjidhni fotografi të ngarkesës në fillimin e programit
 	EditPaste_TT =	Xhel String në kursorit / insert pozicion
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Insert keystroke (Ctrl + Insert)
 	InsertKeyT_TT =	Fut keystroke
 	JoyKey_TT =	Shtypni një buton në levë
+	KeyDelayE_TT =	Përcakton vonesën që do të ndodhë pas çdo keystroke të dërguar nga të dërgoni dhe ControlSend.
 	LoopLVColor_TT =	Klikoni për të marr një ngjyrë
 	LUntil_TT =	Zbatohet një kusht për vazhdimin e një loop ose For-lak.
 	ManKey_TT =	Hotkey për të luajtur Macro "hap pas hapi"
+	MouseDelayE_TT =	Përcakton vonesën që do të ndodhë pas çdo lëvizje të miut apo klikoni.
 	MRel_TT =	Lëvizjet relative për pozitën aktuale.
 		Ose në qoftë se përdoret me Kontrollit: Pozita relative të Kontrollit.
 	OSHK_TT =	Zgjidh Macro
@@ -1281,8 +1288,8 @@
 	HasKey	Jep true nëse Key është i lidhur me një vlerë.
 	If	Specifikon komanda (s) për të kryer, nëse krahasimi i një ndryshore në një vlerë të evalutes në TRUE. Kur më shumë se një komandë është i pranishëm, mbyllni ato në një bllok (formatimin e teksteve).
 	If (expression)	Specifikon komandën (s) për të kryer në qoftë se një shprehje vlerëson për TRUE.
-	If A_Index	Kontrollon nëse Përsëritje e tanishme loop matchs një specifikuar një numër.
-	If Clipboard	Kontrollon nëse teksti Clipboard është matchs një varg të caktuar.
+	If A_Index	Kontrollon nëse Përsëritje e tanishme loop përputhet me numër të caktuar.
+	If Clipboard	Kontrollon nëse teksti Clipboard ndeshjet vargun e specifikuar.
 	If ErrorLevel	Kontrollon nëse një imazh të specifikuara ose pixel u gjet në ekran.
 	If var [not] between	Kontrollon nëse përmbajtja e një variable janë numerikisht ose alfabetike midis dy vlerave (përfshirëse).
 	If var [not] in / If var [not] contains MatchList	Kontrollon nëse përmbajtja e një variable të përputhen me një nga pikat në një listë.
@@ -1347,10 +1354,12 @@
 	RunAs	Përcakton një grup të kredencialeve të përdoruesit për të përdorur për të gjitha përdorimet e mëvonshme e Run dhe RunWait. Kërkon Windows 2000 / XP ose më vonë.
 	RunWait	Drejton një program të jashtëm dhe pret deri sa përfundon.
 	Send / SendRaw	Dërgon tasteve simuluar dhe klikime të miut në dritaren aktive.
-	SendLevel	Kontrollet e cila artificiale tastierë dhe maus ngjarje janë injoruar nga hotkeys dhe hotstrings.
 	SendMessage	Dërgon një mesazh në një dritare apo kontroll dhe pret njohjen.
+	SendMode	
 	SetCapslockState	Përcakton gjendjen e tastin capslock. Mund të detyrojë kyç për të qëndruar në ose off.
+	SetControlDelay	
 	SetKeyDelay	Përcakton vonesën që do të ndodhë pas çdo keystroke të dërguar nga të dërguar ose ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Përcakton gjendjen e çelësi NumLock. Mund të detyrojë kyç për të qëndruar në ose off.
 	SetRegView	Lejon komandat e regjistrit në një 32-bit script për të hyrë në pamjen e regjistrit të 64-bit dhe anasjelltas.
 	SetScrollLockState	Përcakton gjendjen e kyç Scrolllock. Mund të detyrojë kyç për të qëndruar në ose off.

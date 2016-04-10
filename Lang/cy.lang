@@ -761,13 +761,17 @@
 	t_Lang203 =	Canfod Ffenestri Cudd
 	t_Lang204 =	Canfod Testun Hidden
 	t_Lang205 =	Teitl Modd Match
-	t_Lang206 =	Teitl Cyflymder Match
+	t_Lang206 =	Peidiwch ag arddangos gwallau
 	t_Lang207 =	Cleient
 	t_Lang208 =	D&od o hyd i
 	t_Lang209 =	A&mnewid
-	t_Lang210 =	Peidiwch ag arddangos gwallau
-	t_Lang211 =	Tabs
-	t_Lang212 =	Lleoedd
+	t_Lang210 =	Tabs
+	t_Lang211 =	Lleoedd
+	t_Lang212 =	Camau gweithredu bysellfwrdd a llygoden
+	t_Lang213 =	Modd anfon allweddol
+	t_Lang214 =	Oedi allweddol
+	t_Lang215 =	Oedi llygoden
+	t_Lang216 =	Oedi rheoli
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Agored
@@ -978,6 +982,7 @@
 	ComText_TT =	Pan nad yw yn y modd amrwd, y nodau canlynol
 		Yn cael eu trin fel addasyddion (modifiers hyn yn effeithio ar
 		Dim ond yr allwedd nesaf iawn):!, +, ^, #
+	ControlDelayE_TT =	Yn gosod yr oedi a fydd yn digwydd ar ôl pob rheolaeth-addasu gorchymyn.
 	CoordPixel_TT =	Cydlynu modd
 	DefaultMacro_TT =	Dewiswch ffeil i lwytho wrth gychwyn y rhaglen
 	EditPaste_TT =	Pastau Llinynnol yn y caret / mewnosoder sefyllfa
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Mewnosod keystroke (Ctrl + Mewnosod)
 	InsertKeyT_TT =	Mewnosod trawiadau
 	JoyKey_TT =	Bwyso botwm ar y ffon reoli
+	KeyDelayE_TT =	Yn gosod yr oedi a fydd yn digwydd ar ôl pob keystroke a anfonwyd gan Anfon a ControlSend.
 	LoopLVColor_TT =	Cliciwch i ddewis lliw
 	LUntil_TT =	Yn berthnasol amod i barhad Loop neu I-ddolen.
 	ManKey_TT =	Hotkey i chwarae Macro "gam wrth gam"
+	MouseDelayE_TT =	Yn gosod yr oedi a fydd yn digwydd ar ôl pob symudiad llygoden neu cliciwch.
 	MRel_TT =	Symudiadau gymharu â sefyllfa bresennol.
 		Neu os cânt eu defnyddio gyda Rheoli: Swydd perthynas i Reoli.
 	OSHK_TT =	Dewiswch Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Dychwelyd wir os Allweddol yn gysylltiedig â gwerth.
 	If	Pennu'r gorchymyn (au) i berfformio os yw cymhariaeth o newidyn i werth mae evalutes i WIR. Pan fydd mwy nag un gorchymyn yn bresennol, yn eu amgáu mewn bloc (braces).
 	If (expression)	Mae hwn yn dynodi y gorchymyn (au) i berfformio os mynegiant yn gwerthuso i WIR.
-	If A_Index	Gwiriadau os yw'r iteriad ddolen bresennol matchs yn nodi nifer.
-	If Clipboard	Gwiriadau os yw'r testun Clipfwrdd yn matchs llinyn penodol.
-	If ErrorLevel	Gwiriadau os ddelwedd neu picsel penodol Daethpwyd o hyd yn y sgrîn.
+	If A_Index	Gwiriadau os yw'r iteriad ddolen bresennol yn cyfateb i'r rhif penodol.
+	If Clipboard	Gwiriadau os bydd y testun Chlipfwrdd yn cyfateb i'r llinyn penodedig.
+	If ErrorLevel	Gwiriadau os ddelwedd neu picsel penodol Daethpwyd o hyd ar y sgrin.
 	If var [not] between	Gwiriadau a yw cynnwys newidyn yw rhifiadol neu yn nhrefn yr wyddor rhwng dau werth (yn gynhwysol).
 	If var [not] in / If var [not] contains MatchList	Gwiriadau a yw cynnwys newidyn yn cyfateb un o'r eitemau mewn rhestr.
 	If var is [not] type	Gwiriadau a yw cynnwys newidyn yw rhifol, priflythyren, ac ati
@@ -1347,10 +1354,12 @@
 	RunAs	Mae hwn yn dynodi cyfres o gymwysterau defnyddiwr i'w ddefnyddio ar gyfer pob defnydd dilynol o Run a RunWait. Ei gwneud yn ofynnol Windows 2000 / XP neu ddiweddarach.
 	RunWait	Yn rhedeg rhaglen allanol ac aros nes ei fod yn dod i ben.
 	Send / SendRaw	Anfon keystrokes ffug a llygoden chleciau i ffenestr weithredol.
-	SendLevel	Rheolaethau pa ddigwyddiadau bysellfwrdd a llygoden artiffisial yn cael eu hanwybyddu gan hotkeys a hotstrings.
 	SendMessage	Yn anfon neges at ffenestr neu reolaeth ac aros am gydnabyddiaeth.
+	SendMode	
 	SetCapslockState	Setiau cyflwr yr allwedd CAPSLOCK. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.
+	SetControlDelay	
 	SetKeyDelay	Yn gosod yr oedi a fydd yn digwydd ar ôl pob keystroke a anfonwyd gan Anfon neu ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Setiau cyflwr y allweddell numlock. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.
 	SetRegView	Yn caniatáu gorchmynion registry mewn sgript 32-bit i gael mynediad i'r 64-bit farn cofrestrfa ac i'r gwrthwyneb.
 	SetScrollLockState	Setiau cyflwr yr allwedd Scrolllock. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.

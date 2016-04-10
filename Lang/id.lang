@@ -761,13 +761,17 @@
 	t_Lang203 =	Mendeteksi Jendela Tersembunyi
 	t_Lang204 =	Mendeteksi Teks Tersembunyi
 	t_Lang205 =	Modus Pertandingan Judul
-	t_Lang206 =	Kecepatan Pertandingan Judul
+	t_Lang206 =	Jangan menampilkan kesalahan
 	t_Lang207 =	Klien
 	t_Lang208 =	M&enemukan
 	t_Lang209 =	Men&ggantikan
-	t_Lang210 =	Jangan menampilkan kesalahan
-	t_Lang211 =	Tab
-	t_Lang212 =	Spasi
+	t_Lang210 =	Tab
+	t_Lang211 =	Spasi
+	t_Lang212 =	Keyboard dan mouse tindakan
+	t_Lang213 =	Modus mengirim kunci
+	t_Lang214 =	Delay kunci
+	t_Lang215 =	Delay tikus
+	t_Lang216 =	Kontrol delay
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -978,6 +982,7 @@
 	ComText_TT =	Bila tidak dalam modus baku, karakter berikut
 		diperlakukan sebagai pengubah (pengubah ini mempengaruhi
 		hanya kunci berikutnya):!, +, ^, #
+	ControlDelayE_TT =	Menetapkan penundaan yang akan terjadi setelah setiap perintah kontrol-memodifikasi.
 	CoordPixel_TT =	Modus Mengkoordinasikan
 	DefaultMacro_TT =	Pilih berkas untuk memuat pada startup program yang
 	EditPaste_TT =	Pasta String pada posisi tanda sisipan / insert
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Masukkan keystroke (Ctrl+Insert)
 	InsertKeyT_TT =	Masukkan keystroke
 	JoyKey_TT =	Tekan tombol pada joystick
+	KeyDelayE_TT =	Menetapkan penundaan yang akan terjadi setelah setiap keystroke dikirim oleh Kirim dan ControlSend.
 	LoopLVColor_TT =	Klik untuk memilih warna
 	LUntil_TT =	Berlaku kondisi untuk kelanjutan Loop atau Untuk loop.
 	ManKey_TT =	Hotkey untuk bermain Makro "langkah-demi-langkah"
+	MouseDelayE_TT =	Menetapkan penundaan yang akan terjadi setelah setiap gerakan mouse atau klik.
 	MRel_TT =	Gerakan relatif terhadap posisi saat ini.
 		Atau jika digunakan dengan Control: Posisi relatif ke Control.
 	OSHK_TT =	Pilih Makro
@@ -1281,9 +1288,9 @@
 	HasKey	Mengembalikan nilai true jika Key dikaitkan dengan nilai.
 	If	Menentukan perintah (s) untuk melakukan jika perbandingan variabel ke nilai evalutes ke TRUE. Bila lebih dari satu perintah hadir, menyertakan mereka dalam blok (kawat gigi).
 	If (expression)	Menentukan perintah (s) untuk melakukan jika ekspresi bernilai TRUE.
-	If A_Index	Cek jika iterasi loop arus matchs nomor yang ditentukan.
-	If Clipboard	Cek jika teks Clipboard adalah matchs string tertentu.
-	If ErrorLevel	Memeriksa apakah gambar tertentu atau pixel ditemukan di layar.
+	If A_Index	Cek jika loop iterasi saat sesuai dengan jumlah tertentu.
+	If Clipboard	Cek jika teks Clipboard cocok dengan string yang ditentukan.
+	If ErrorLevel	Memeriksa apakah gambar atau pixel ditentukan ditemukan di layar.
 	If var [not] between	Cek apakah isi variabel adalah numerik atau abjad antara dua nilai (inklusif).
 	If var [not] in / If var [not] contains MatchList	Cek apakah isi variabel ini sesuai dengan salah satu item dalam daftar.
 	If var is [not] type	Cek apakah isi variabel adalah angka, huruf besar, dll
@@ -1347,10 +1354,12 @@
 	RunAs	Menentukan satu set kredensial pengguna untuk menggunakan untuk semua penggunaan berikutnya Run dan RunWait. Membutuhkan Windows 2000/XP atau yang lebih baru.
 	RunWait	Menjalankan program eksternal dan menunggu sampai selesai.
 	Send / SendRaw	Mengirim keystrokes simulasi dan klik mouse untuk jendela aktif.
-	SendLevel	Kontrol yang keyboard dan mouse peristiwa buatan diabaikan oleh hotkeys dan hotstrings.
 	SendMessage	Mengirim pesan ke jendela atau kontrol dan menunggu pengakuan.
+	SendMode	
 	SetCapslockState	Mengatur keadaan tombol Capslock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
+	SetControlDelay	
 	SetKeyDelay	Mengatur penundaan yang akan terjadi setelah setiap keystroke dikirim oleh Kirim atau ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Mengatur keadaan tombol Numlock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
 	SetRegView	Memungkinkan perintah registry dalam naskah 32-bit untuk mengakses tampilan registry 64-bit dan sebaliknya.
 	SetScrollLockState	Mengatur negara dari kunci ScrollLock. Bisa juga memaksa kunci untuk tetap hidup atau mati.

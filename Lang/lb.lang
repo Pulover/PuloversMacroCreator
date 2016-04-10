@@ -761,13 +761,17 @@
 	t_Lang203 =	Detektioun Hëllef Windows
 	t_Lang204 =	Detektioun Hëllef Text
 	t_Lang205 =	Title Match Mode
-	t_Lang206 =	Title Match Speed
+	t_Lang206 =	Ecran net Feeler
 	t_Lang207 =	Client
 	t_Lang208 =	O&p ee Bléck
 	t_Lang209 =	I&gnoréieren
-	t_Lang210 =	Ecran net Feeler
-	t_Lang211 =	Tabs
-	t_Lang212 =	Freiraim
+	t_Lang210 =	Tabs
+	t_Lang211 =	Freiraim
+	t_Lang212 =	Tastatur an Maus Aktiounen
+	t_Lang213 =	Schlëssel schécken Modus
+	t_Lang214 =	Schlëssel Retard
+	t_Lang215 =	Maus Retard
+	t_Lang216 =	Kontroll Retard
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -978,6 +982,7 @@
 	ComText_TT =	Wann net am raw Modus, de folgende Charakteristiken
 		Sinn als modifiers (dës modifiers behandelt Afloss
 		Nëmmen déi ganz nächst Schlëssel):!, +, ^, #
+	ControlDelayE_TT =	Leet d 'Retard datt no all Kontroll-verbidden Kommando geschéie wäert.
 	CoordPixel_TT =	Koordinéieren Modus
 	DefaultMacro_TT =	En Fichier op Programm Startup zu Laaschten
 	EditPaste_TT =	Nuddelen Zeecheketten um Caret- / g Positioun
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Dobäizemaachen Keystroke (Ctrl + dobäizemaachen)
 	InsertKeyT_TT =	Dobäizemaachen Keystroke
 	JoyKey_TT =	Press e Knäppchen op de joystick
+	KeyDelayE_TT =	Leet d 'Retard datt no all keystroke per E- an ControlSend geschéie wäert.
 	LoopLVColor_TT =	Klickt eng Faarf ze deposéieren
 	LUntil_TT =	Trëfft eng Konditioun fir d'Weiderféieren vun enger Loop oder Fir-Glück.
 	ManKey_TT =	Hotkey ze spillen Macro "step-by-step"
+	MouseDelayE_TT =	Leet d 'Retard datt no all Maus Bewegung oder klickt geschéie wäert.
 	MRel_TT =	Beweegunge famill ze aktuell Positioun.
 		Oder wann der Kontrolkommissioun benotzt: Positioun relativ zu Control.
 	OSHK_TT =	En Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Returns richteg wann Key mat engem Wäert verbonnen ass.
 	If	Wann de Verglach vun enger Supernova an engem Wäert evalutes zu Richteg spezifizéiert de Kommando (s) ze maachen. Wa méi wéi een Kommando präsent ass, auszegin se zu enger Spär (Klameren).
 	If (expression)	Spezifizéiert de Kommando (s) ze maachen, wann en Ausdrock ze Richteg z'analyséieren.
-	If A_Index	Kontrollen ob de Compte Glück Impressioun matchs engem eng Nummer uginn.
-	If Clipboard	Kontrollen ob de Numm Text ass matchs engem spezifizéierter String.
-	If ErrorLevel	Kontrollen ob engem spezifizéierter Bild oder pixel war an der Leinwand fonnt.
+	If A_Index	Kontrollen ob de Compte Glück Impressioun Mätscher der spezifizéierter Zuel.
+	If Clipboard	Kontrollen ob de Numm Text Mätscher der spezifizéierter String.
+	If ErrorLevel	Kontrollen ob engem spezifizéierter Bild oder pixel war op der Leinwand fonnt.
 	If var [not] between	Kontrollen ob eng Variabel an d'Inhalter sinn numerically oder alphabetesch tëschent zwee Wäerter (inklusiv).
 	If var [not] in / If var [not] contains MatchList	Kontrollen ob eng Variabel an d'Inhalter Match een vun den Elementer vun enger Lëscht.
 	If var is [not] type	Kontrollen ob eng Variabel an d'Inhalter sinn da stellt, Iwwerall, etc.
@@ -1347,10 +1354,12 @@
 	RunAs	Spezifizéiert engem Set vu Benotzer Umeldungsinformatioune fir all Kierzunge Gebrauch vun Run an RunWait ze benotzen. Verlaangt Windows 2000 / Politik oder spéider.
 	RunWait	Leeft en externen Programm an Ooffahrt bis et eriwwer ass.
 	Send / SendRaw	Schéckt surfen Uschléi an Maus Avantagen fir d'aktiv Fënster.
-	SendLevel	Kontrollen déi kënschtlech Tastatur an Maus Evenementer vun hotkeys an hotstrings ignoréiert ginn.
 	SendMessage	Schéckt e Message un eng Fënster oder Kontroll an Ooffahrt fir matgedeelt.
+	SendMode	
 	SetCapslockState	Leet den Zoustand vun der CapsLockQAccel Schlëssel. Kann och de Schlëssel force op oder ugefaangen ze bleiwen.
+	SetControlDelay	
 	SetKeyDelay	Leet d 'Retard datt no all keystroke per E- oder ControlSend geschéie wäert.
+	SetMouseDelay	
 	SetNumlockState	Leet den Zoustand vun der NumLockQAccel Schlëssel. Kann och de Schlëssel force op oder ugefaangen ze bleiwen.
 	SetRegView	Erlaabt Enregistrement Befeeler an enger 32-bit Script Zougang der 64-bit Enregistrement Vue a vice versa.
 	SetScrollLockState	Leet den Zoustand vun der ScrollLockQAccel Schlëssel. Kann och de Schlëssel force op oder ugefaangen ze bleiwen.

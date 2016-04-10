@@ -761,13 +761,17 @@
 	t_Lang203 =	Ubhaqo Hidden Windows
 	t_Lang204 =	Ubhaqo umbhalo ofihliweyo
 	t_Lang205 =	Indlela Match Lomxholo
-	t_Lang206 =	Isihloko Match Isantya
+	t_Lang206 =	Musa ukubonisa iimpazamo
 	t_Lang207 =	Umxhasi
 	t_Lang208 =	F&umana
 	t_Lang209 =	Bu&yisela
-	t_Lang210 =	Musa ukubonisa iimpazamo
-	t_Lang211 =	Tabs
-	t_Lang212 =	Izithuba
+	t_Lang210 =	Tabs
+	t_Lang211 =	Izithuba
+	t_Lang212 =	Amanyathelo yezitshixo kunye ne mouse
+	t_Lang213 =	Imo ukuthumela kuye isitshixo
+	t_Lang214 =	Kokulibazisa isitshixo
+	t_Lang215 =	Mouse ngokukhawuleza
+	t_Lang216 =	Kokulibazisa ulawulo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula
@@ -978,6 +982,7 @@
 	ComText_TT =	Xa hayi kwindlela ekrwada, abalinganiswa zilandelayo
 		Baphathwa eyiyo yebug (ezi zinguqulelo kuchaphazela
 		Kuphela isitshixo esilandelayo kakhulu):!, +, ^, #
+	ControlDelayE_TT =	Icwangcisa ukulibaziseka eziya kwenzeka emva kokuba umyalelo ngamnye ulawulo-kancincane.
 	CoordPixel_TT =	Ukulungelelanisa imo
 	DefaultMacro_TT =	Khetha ifayile emayifakwe lwenkqubo yesiqalo
 	EditPaste_TT =	Intlama Umtya kwi-caret / faka isikhundla
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Faka Keystroke (Ctrl + Faka)
 	InsertKeyT_TT =	Faka Keystroke
 	JoyKey_TT =	Cofa iqhosha le desktop
+	KeyDelayE_TT =	Icwangcisa ukulibaziseka eziya kwenzeka emva keystroke ngamnye othunyelwe yi Ungathumela ControlSend.
 	LoopLVColor_TT =	Cofa sokukhetha umbala
 	LUntil_TT =	Ifaka imeko ekuqhubekekeni ephambuka okanye Kuba-lukhangelwe.
 	ManKey_TT =	Zegama ukudlala Macro "step-by-step"
+	MouseDelayE_TT =	Icwangcisa ukulibaziseka eziya kwenzeka emva intshukumo nganye mouse okanye nqakraza.
 	MRel_TT =	Iintshukumo kuthelekiswa kwindawo yangoku.
 		Okanye ukuba isetyenziswe kunye Control: Indawo nonobudlelwane ukuwulawula.
 	OSHK_TT =	Khetha Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Ubuyisela Inyaniso ukuba Key wayanyaniswe kunye nexabiso.
 	If	Ikhankanya umyalelo (s) ukuba yenze ukuba ngokuthelekisa Womendo kwixabiso evalutes kwi TRUE. Xa umyalelo ngaphezu omnye ukho, Somrhaqa kwi block (braces).
 	If (expression)	Ikhankanya umyalelo (s) ukuba yenze ukuba ibinzana ikuhluza kwi TRUE.
-	If A_Index	Kukhangela ukuba uniko loop yangoku matchs olungqalileyo inani.
-	If Clipboard	Kukhangela ukuba itekisi webhodi matchs umtya elithile.
-	If ErrorLevel	Ufundo ukuba umfanekiso oxelwe okanye pixel kwafumaneka kwikhusi.
+	If A_Index	Kukhangela ukuba uniko loop yangoku elihambelana inani elithile.
+	If Clipboard	Kukhangela ukuba okubhaliweyo eqhotyoshwayo elihambelana umtya ekhankanyiweyo.
+	If ErrorLevel	Ufundo ukuba umfanekiso oxelwe okanye pixel akwafumaneka kwikhusi.
 	If var [not] between	Ukhangela ukuba imixholo okanye umahluko zezi lwamanani okanye alfabhethi phakathi amaxabiso amabini (qukwanga).
 	If var [not] in / If var [not] contains MatchList	Ukhangela ukuba imixholo okanye umahluko Masitshatise omnye izinto kuluhlu.
 	If var is [not] type	Ukhangela ukuba imixholo okanye umahluko zithe amanani, oonobumba, njl
@@ -1347,10 +1354,12 @@
 	RunAs	Ikhankanya iseti klk umsebenzisi ukusebenzisa ngokuba yonke imisebenzi ezilandelayo Baleka RunWait. Ufuna Windows 2000 / XP okanye kamva.
 	RunWait	Iqhuba inkqubo yangaphandle kwaye ulinda de akugqiba.
 	Send / SendRaw	Uthumela yezitsixo oluye kunye konqakrazo lwe mouse kwi window esebenzayo.
-	SendLevel	Ilawula apho yezitshixo kunye ne mouse eyenziweyo iziganeko singakhathalelwanga hotkeys kunye hotstrings.
 	SendMessage	Uthumela umyalezo kwi window okanye ulawulo kwaye ulindele ulwamkelo.
+	SendMode	
 	SetCapslockState	Icwangcisa imeko isitshixo Capslock. Nako kunganyanzelisa isitshixo ukuhlala okanye off.
+	SetControlDelay	
 	SetKeyDelay	Icwangcisa ukulibaziseka eziya kwenzeka emva keystroke ngamnye othunyelwe nguye Send okanye ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Icwangcisa imeko isitshixo hex. Nako kunganyanzelisa isitshixo ukuhlala okanye off.
 	SetRegView	Ikuvumela imiyalelo irejistri kushicilelo bit-32 ukufikelela bit-64 irejistri imboniselo vice versa.
 	SetScrollLockState	Icwangcisa imeko isitshixo Bonisa. Nako kunganyanzelisa isitshixo ukuhlala okanye off.

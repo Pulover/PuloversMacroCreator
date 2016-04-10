@@ -63,7 +63,8 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added *GetElementsByClassName* option in InternetExplorer/COM *Get Element Tool*.
 * Added var [not] in, var [not] contains, var [not] between and var is in Compare Variables If Statement.
 * Added WinTitle, WinText, ExcludeTitle and ExcludeText to *If Window...* statements.
-* Added options to set TitleMatchMode, TitleMatchMode Speed, DetectHiddenWindows and DetectHiddenText.
+* Added options to set TitleMatchMode, DetectHiddenWindows and DetectHiddenText.
+* Added options to set SendMode, KeyDelay, MouseDelay and ControlDelay.
 * Added *Client* mode for Mouse and Pixel/Image Search coordinates.
 * Added option to center coordinates of *ImageSearch* results.
 * Added option to change color of the rectangle of Image/Pixel Search area and Screenshots tool.
@@ -81,6 +82,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Fixed bug with WinWait timeout.
 * Fixed bugs with IE/COM Interface.
 * Fixed bugs with commas in command parameters.
+* Fixed issues with *Schedule Macros*.
 * Fixed default editor not set correctly on first run.
 
 ## Version 4.1.3

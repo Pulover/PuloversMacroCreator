@@ -761,13 +761,17 @@
 	t_Lang203 =	Detecteren Verborgen Vensters
 	t_Lang204 =	Detecteren Verborgen Tekst
 	t_Lang205 =	Titelgelijke Mode
-	t_Lang206 =	Titelgelijke Snelheid
+	t_Lang206 =	Niet fouten weer te geven
 	t_Lang207 =	Cliënt
 	t_Lang208 =	V&inden
 	t_Lang209 =	Ve&rvang
-	t_Lang210 =	Niet fouten weer te geven
-	t_Lang211 =	Tabs
-	t_Lang212 =	Ruimten
+	t_Lang210 =	Tabs
+	t_Lang211 =	Ruimten
+	t_Lang212 =	Toetsenbord en muis acties
+	t_Lang213 =	Key send mode
+	t_Lang214 =	Key vertraging
+	t_Lang215 =	Muis vertraging
+	t_Lang216 =	Controle vertraging
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -978,6 +982,7 @@
 	ComText_TT =	Wanneer niet in raw modus, de volgende tekens
 		worden behandeld als modifiers (deze bepalingen van invloed zijn
 		alleen de volgende toets):, +, ^, #
+	ControlDelayE_TT =	Stelt de vertraging die zal plaatsvinden na elke controle modificeren commando.
 	CoordPixel_TT =	Coördineren modus
 	DefaultMacro_TT =	Selecteer bestand te laden bij het opstarten van het programma
 	EditPaste_TT =	Pasta's String op het dakje / invoegpositie
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Steek Toetsaanslag (Ctrl+Insert)
 	InsertKeyT_TT =	Steek Toetsaanslag
 	JoyKey_TT =	Druk op een knop op de joystick
+	KeyDelayE_TT =	Stelt de vertraging die zal plaatsvinden na elke toetsaanslag verzonden door Verzenden en ControlSend.
 	LoopLVColor_TT =	Klik hier om een ​​kleur te kiezen
 	LUntil_TT =	Geldt als voorwaarde voor de voortzetting van een Loop-of Voor-loop.
 	ManKey_TT =	Sneltoets naar macro "stap-voor-stap" play
+	MouseDelayE_TT =	Stelt de vertraging die zal plaatsvinden na elke beweging van de muis of klik op.
 	MRel_TT =	Bewegingen ten opzichte van de huidige positie.
 		Of samen met Control: Positie tov de controlegroep.
 	OSHK_TT =	Selecteert Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Geeft true als Key wordt geassocieerd met een waarde.
 	If	Specificeert het commando (s) uit te voeren als een vergelijking van een variabele een waarde evalutes WAAR . Wanneer meer dan een commando aanwezig is , omsluiten ze in een blok (beugels) .
 	If (expression)	Geeft het commando (s) uit te voeren als een expressie evalueert tot TRUE .
-	If A_Index	Gecontroleerd of de huidige lus iteratie matchs een opgegeven een nummer.
-	If Clipboard	Controleert of de tekst in het klembord is matchs een opgegeven tekenreeks .
-	If ErrorLevel	Controleert of een bepaald beeld of pixel werd gevonden in het scherm .
+	If A_Index	Controleert of de huidige loop iteratie overeenkomt met het opgegeven nummer.
+	If Clipboard	Controleert of de klembord tekst overeenkomt met de opgegeven tekenreeks.
+	If ErrorLevel	Controleert of een bepaald beeld of pixel werd gevonden op het scherm.
 	If var [not] between	Controleert of de inhoud van een variabele zijn numeriek of alfabetisch tussen twee waarden (inclusief) .
 	If var [not] in / If var [not] contains MatchList	Controleert of de inhoud van een variabele overeenkomt met een van de items in een lijst .
 	If var is [not] type	Controleert of de inhoud van een variabele zijn numeriek , hoofdletters , enz.
@@ -1347,10 +1354,12 @@
 	RunAs	Hiermee geeft u een set van gebruikersgegevens te gebruiken voor alle volgende vormen van gebruik van Run en RunWait. Vereist Windows 2000/XP of hoger.
 	RunWait	Loopt een extern programma en wacht tot het klaar is.
 	Send / SendRaw	Stuurt gesimuleerde toetsaanslagen en muisklikken om het actieve venster.
-	SendLevel	Controles die kunstmatige toetsenbord en muis gebeurtenissen worden genegeerd door de sneltoetsen en hotstrings.
 	SendMessage	Stuurt een bericht naar een raam of controle en wacht op bevestiging.
+	SendMode	
 	SetCapslockState	Zet de toestand van de Capslock sleutel. Kan ook dwingen de sleutel aan of uit blijven.
+	SetControlDelay	
 	SetKeyDelay	Stelt de vertraging die zal plaatsvinden na iedere toetsaanslag die door Send of ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Zet de toestand van de Numlock-toets. Kan ook dwingen de sleutel aan of uit blijven.
 	SetRegView	Laat register commando's in een 32-bits script om toegang te krijgen tot de 64-bit register uitzicht en vice versa.
 	SetScrollLockState	Zet de toestand van de ScrollLock sleutel. Kan ook dwingen de sleutel aan of uit blijven.

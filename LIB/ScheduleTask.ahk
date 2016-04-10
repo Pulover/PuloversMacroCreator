@@ -3,7 +3,7 @@
 ; Original by shajul
 ; http://www.autohotkey.com/board/topic/61042-create-a-scheduled-task-natively-ahk-l/
 ;###########################################################
-ScheduleTask(TriggerType, startTime, Path)
+ScheduleTask(TriggerType, startTime, Path, Name)
 {
 	; TriggerType := 1    ; specifies a time-based trigger.
 	ActionTypeExec := 0    ; specifies an executable action.
@@ -67,7 +67,5 @@ ScheduleTask(TriggerType, startTime, Path)
 	Action.Path := Path
 	;***********************************************************
 	; Register (create) the task.
-	SplitPath, Path, Name, Ext
-	Name := RegExReplace(Name, " -s\d+$")
 	rootFolder.RegisterTaskDefinition(Name " - PMC Macro", taskDefinition, TaskCreateOrUpdate ,"","", 3)
 }

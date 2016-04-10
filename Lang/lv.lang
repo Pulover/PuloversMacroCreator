@@ -761,13 +761,17 @@
 	t_Lang203 =	Atklāt slēptās Windows
 	t_Lang204 =	Atklāt slēpto tekstu
 	t_Lang205 =	Nosaukums Match Mode
-	t_Lang206 =	Nosaukums Match Speed
+	t_Lang206 =	Nerādīt kļūdas
 	t_Lang207 =	Klients
 	t_Lang208 =	A&trast
 	t_Lang209 =	Ai&zstāt
-	t_Lang210 =	Nerādīt kļūdas
-	t_Lang211 =	Cilnes
-	t_Lang212 =	Telpas
+	t_Lang210 =	Cilnes
+	t_Lang211 =	Telpas
+	t_Lang212 =	Tastatūras un peles darbības
+	t_Lang213 =	Taustiņš sūtīt režīms
+	t_Lang214 =	Galvenais kavēšanās
+	t_Lang215 =	Pele kavēšanās
+	t_Lang216 =	Kontrole kavēšanās
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atvērts
@@ -978,6 +982,7 @@
 	ComText_TT =	Kad nav neapstrādātā režīmā, šādi rakstzīmes
 		Tiek uzskatīti par modifikatori (šie modifikatori ietekmēt
 		Tikai jau nākamajā atslēga): +, ^, #
+	ControlDelayE_TT =	Nosaka kavēšanos, kas notiks pēc katra vadības modificēšanas komandu.
 	CoordPixel_TT =	Koordinātu režīms
 	DefaultMacro_TT =	Izvēlieties failu ielādēt par programmas startēšanas
 	EditPaste_TT =	Pastas String pie caret / ievietošanas pozīcijā
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Ievietojiet Taustiņu (Ctrl + Insert)
 	InsertKeyT_TT =	Ievietot Taustiņu
 	JoyKey_TT =	Nospiediet pogu uz kursorsviru
+	KeyDelayE_TT =	Nosaka kavēšanos, kas notiks pēc katra taustiņa nospiešanas nosūtīto Nosūtīt un ControlSend.
 	LoopLVColor_TT =	Uzklikšķiniet, lai izvēlētos krāsu
 	LUntil_TT =	Piemēro nosacījumu turpināšanu cilpas vai for-cilpas.
 	ManKey_TT =	Hotkey spēlēt Macro "soli pa solim"
+	MouseDelayE_TT =	Nosaka kavēšanos, kas notiks pēc katra peles kustību vai noklikšķiniet.
 	MRel_TT =	Kustībām saistībā ar pašreizējo pozīciju.
 		Vai, ja lieto ar Control: Amats, salīdzinot ar kontroli.
 	OSHK_TT =	Select Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Atgriež true, ja atslēga ir saistīta ar vērtību.
 	If	Norāda komanda (s), lai veiktu, ja salīdzinājums ar mainīgo vērtība evalutes līdz TRUE. Kad vairāk nekā viens komanda ir klāt, pievienot tos bloka (figūriekavas).
 	If (expression)	Norāda komandu (-iem), lai veiktu, ja izteiksme novērtē to TRUE.
-	If A_Index	Pārbauda, ​​vai pašreizējais cilpa atkārtojuma matchs konkrēts skaits.
-	If Clipboard	Pārbauda, ​​vai starpliktuvē tekstu matchs noteiktu virkni.
-	If ErrorLevel	Pārbauda, ​​vai konkrēts attēlu vai pikseļu tika atrasts ekrāna.
+	If A_Index	Pārbauda, vai pašreizējais cilpa atkārtojuma atbilst norādīto numuru.
+	If Clipboard	Pārbauda, vai Starpliktuve teksts atbilst norādīto virkni.
+	If ErrorLevel	Pārbauda, vai konkrēts attēlu vai pikseļu tika atrasts uz ekrāna.
 	If var [not] between	Pārbauda, ​​vai mainīgā saturs ir skaitliski vai alfabētiski starp divām vērtībām (ieskaitot).
 	If var [not] in / If var [not] contains MatchList	Pārbauda, ​​vai mainīgā saturs atbilstu viens no posteņiem sarakstā.
 	If var is [not] type	Pārbauda, ​​vai mainīga ir saturs ir skaitlisks, lielos, uc
@@ -1347,10 +1354,12 @@
 	RunAs	Norāda kopumu lietotāja pilnvaras izmantot visiem turpmākajiem izmantošanas Run un RunWait. Nepieciešama Windows 2000 / XP vai jaunāka.
 	RunWait	Vada ārēju programmu un gaida, līdz tas beidzas.
 	Send / SendRaw	Nosūta modelētiem taustiņsitienus un peles klikšķiem uz aktīvo logu.
-	SendLevel	Kontroli, kas mākslīgie tastatūras un peles notikumi tiek ignorētas ar hotkeys un hotstrings.
 	SendMessage	Sūta ziņu loga vai kontroli un gaida apstiprinājumu.
+	SendMode	
 	SetCapslockState	Nosaka stāvokli CapsLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.
+	SetControlDelay	
 	SetKeyDelay	Nosaka kavēšanos, kas notiks pēc katra taustiņa nospiešanas nosūtīto nosūtīt vai ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Nosaka stāvokli NumLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.
 	SetRegView	Ļauj reģistra komandas 32 bitu skriptu, lai piekļūtu 64 bitu reģistra skatu un vice versa.
 	SetScrollLockState	Nosaka stāvokli ScrollLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.

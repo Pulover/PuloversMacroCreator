@@ -761,13 +761,17 @@
 	t_Lang203 =	Gizli Pencere Algılamak
 	t_Lang204 =	Gizli Metin Tespit
 	t_Lang205 =	Başlık Maç Modu
-	t_Lang206 =	Název Rychlost Zápas
+	t_Lang206 =	hataları görüntülemek etmeyin
 	t_Lang207 =	Müşteri
 	t_Lang208 =	B&ulmak
 	t_Lang209 =	D&eğiştirmek
-	t_Lang210 =	hataları görüntülemek etmeyin
-	t_Lang211 =	Sekmeler
-	t_Lang212 =	Alanlarda
+	t_Lang210 =	Sekmeler
+	t_Lang211 =	Alanlarda
+	t_Lang212 =	Klavye ve fare eylemleri
+	t_Lang213 =	Anahtar gönderme modu
+	t_Lang214 =	Anahtar gecikme
+	t_Lang215 =	Fare gecikme
+	t_Lang216 =	Kontrol gecikmesi
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık
@@ -978,6 +982,7 @@
 	ComText_TT =	Değilken raw modunda, aşağıdaki karakterleri
 		düzenleyiciler (bu değiştiricileri etkiler olarak kabul edilir
 		Sadece çok sonraki anahtar):!, +, ^, #
+	ControlDelayE_TT =	Her bir kontrol modifiye komutundan sonra oluşacak gecikme ayarlar.
 	CoordPixel_TT =	Modu Koordinat
 	DefaultMacro_TT =	Program başlangıçta yüklemek için dosyayı seçin
 	EditPaste_TT =	Şapka / insert pozisyonunda Pastalar Dize
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Tuş Eklemek (Ctrl+Insert)
 	InsertKeyT_TT =	Tuş Eklemek
 	JoyKey_TT =	Joystick üzerindeki bir düğmeye basın
+	KeyDelayE_TT =	Gönder ve ControlSend tarafından gönderilen her basıldıktan sonra oluşacak gecikme ayarlar.
 	LoopLVColor_TT =	Bir renk seçmek için tıklayınız
 	LUntil_TT =	Bir döngü ya da için-döngünün devamı için bir koşul geçerlidir.
 	ManKey_TT =	Kısayol Makro "adım adım" oynamak
+	MouseDelayE_TT =	Her fare hareketinden sonra oluşan veya tıklama gecikme ayarlar.
 	MRel_TT =	Geçerli konuma göre Hareketleri.
 		Yoksa Kontrol kullanılırsa: Denetim göreli konumu.
 	OSHK_TT =	Makro Seçin
@@ -1281,9 +1288,9 @@
 	HasKey	Key değeri ile ilişkili true döndürür.
 	If	Bir değere bir değişkenin karşılaştırılması TRUE evalutes eğer komut (lar) gerçekleştirmek için belirtir . Birden fazla komut mevcut olduğunda , bir blok (parantez) içine alın .
 	If (expression)	Bir ifade DOĞRU olarak değerlendirirse komut (lar) gerçekleştirmek için belirtir .
-	If A_Index	Mevcut döngü tekrarında diye bakar bir belirtilen bir numarayla matchs .
-	If Clipboard	Pano metin ise Çekler belirtilen bir dize matchs .
-	If ErrorLevel	Belirli bir görüntü veya piksel diye bakarekranında bulundu .
+	If A_Index	Çekler akım döngüsü yineleme belirtilen sayıda eşleşirse.
+	If Clipboard	Çekler Pano metin belirtilen dizeyi eşleşirse.
+	If ErrorLevel	Çekler belirtilen bir görüntü ya da piksel ekranında bulunan eğer.
 	If var [not] between	Bir değişkenin içeriği olup olmadığını kontrol eder iki değeri (dahil) arasında sayısal ya da alfabetik olarak bulunmaktadır.
 	If var [not] in / If var [not] contains MatchList	Bir değişkenin içeriğini kontrol eder bir listede öğelerin bir maç .
 	If var is [not] type	Bir değişkenin içeriğini sayısal olup olmadığını kontrol eder , büyük harf, vb
@@ -1347,10 +1354,12 @@
 	RunAs	Run ve RunWait sonraki tüm kullanımlar için kullanılacak kullanıcı kimlik bilgileri kümesi belirtir. Windows 2000/XP veya sonraki sürümünü gerektirir.
 	RunWait	Harici bir program çalıştırır ve bitene kadar bekler.
 	Send / SendRaw	Etkin pencere için simüle tuş vuruşlarını ve fare tıklaması gönderir.
-	SendLevel	Yapay klavye ve fare olayları kısayol tuşları ve hotstrings tarafından göz ardı edilir Kontroller.
 	SendMessage	Bir pencere veya kontrol için bir mesaj gönderir ve onay bekler.
+	SendMode	
 	SetCapslockState	Capslock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
+	SetControlDelay	
 	SetKeyDelay	Gönder veya ControlSend tarafından gönderilen her tuş sonra oluşacak gecikme ayarlar.
+	SetMouseDelay	
 	SetNumlockState	Numlock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
 	SetRegView	32-bit komut kayıt komutları 64-bit kayıt defteri görünümü ve tersi erişmenizi sağlar.
 	SetScrollLockState	ScrollLock anahtarın durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.

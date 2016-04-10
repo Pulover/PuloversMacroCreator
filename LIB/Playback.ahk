@@ -17,12 +17,14 @@
 	,	mLoopSize := LoopInfo.Count
 	,	Increment := LoopInfo.Increment
 	,	PbCoordModes := LoopInfo.CoordModes
+	,	PbSendModes := LoopInfo.SendModes
 	}
 	Else
 	{
 		If (LoopInfo > 0)
 			Loop_Start := LoopInfo
 		PbCoordModes := {Mouse: CoordMouse, Tooltip: "Window", Pixel: "Window", Caret: "Window", Menu: "Window"}
+		PbSendModes := {Mode: KeyMode, Key: KeyDelay, Duration: "", Play: "", Mouse: MouseDelay, MPlay: "", Control: ControlDelay}
 		CoordMode, Mouse, Screen
 		MouseGetPos, CursorX, CursorY
 		If (Record = 1)
@@ -76,6 +78,12 @@
 			CoordMode, Pixel, % PbCoordModes["Pixel"]
 			CoordMode, Caret, % PbCoordModes["Caret"]
 			CoordMode, Menu, % PbCoordModes["Menu"]
+			
+			SendMode, % PbSendModes["Mode"]
+			SetKeyDelay, % PbSendModes["Key"], % PbSendModes["Duration"], % PbSendModes["Play"]
+			SetMouseDelay, % PbSendModes["Mouse"], % PbSendModes["MPlay"]
+			SetControlDelay, % PbSendModes["Control"]
+			
 			mLoopIndex := iLoopIndex ? 1 : cLoopIndex
 		,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
 		,	mListRow := A_Index
@@ -569,7 +577,8 @@
 							,	PlaybackVars: PlaybackVars
 							,	Range: {Start: StartMark[LoopDepth], End: A_Index}
 							,	Count: _Count + 1
-							,	CoordModes: PbCoordModes}
+							,	CoordModes: PbCoordModes
+							,	SendModes: PbSendModes}
 					If (LoopCount[LoopDepth][3] != "")
 					{
 						If (Eval(LoopCount[LoopDepth][3], PlaybackVars[LoopDepth][mLoopIndex])[1])
@@ -857,7 +866,7 @@
 		,	FieldsData := {Action: Action, Step: Step, DelayX: DelayX, Type: Type, Target: Target, Window: Window}
 			While (TimesX)
 			{
-				Data_GetTexts(LVData, mListRow, Action, Step, TimesX, DelayX, Type, Target, Window)
+				Data_GetTexts(LVData, mListRow, Action, Step,, DelayX,, Target, Window)
 			,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := TimesLoop ? A_Index : mLoopIndex
 			,	Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step)
 			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesX, DelayX, Target, Window)
@@ -870,7 +879,8 @@
 				If Type in %cType32%,%cType33%,%cType34%,%cType43%,%cType52%,%cType53%,%cType54%,%cType55%
 				{
 					Try
-						TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction, _LastError)
+						TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+												, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction, _LastError)
 					Catch e
 					{
 						If (!HideErrors)
@@ -883,7 +893,8 @@
 					}
 				}
 				Else
-					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction, _LastError)
+					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+											, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction, _LastError)
 				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := _LastError
 				If ((Type = cType15) || (Type = cType16))
 				{
@@ -893,7 +904,8 @@
 						For _each, _value in FieldsData
 							%_each% := _value
 						If !(ManualKey)
-							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction)
+							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+										, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 						continue
 					}
 					If (TakeAction = "Break")
@@ -902,7 +914,8 @@
 						For _each, _value in FieldsData
 							%_each% := _value
 						If !(ManualKey)
-							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction)
+							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+									, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 						break
 					}
 					Else
@@ -915,7 +928,8 @@
 				If Type in Sleep,KeyWait,MsgBox
 					continue
 				If !(ManualKey)
-					PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, RunningFunction)
+					PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+							, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 			}
 			If (ManualKey)
 				WaitFor.Key(o_ManKey[ManualKey], 0)
@@ -968,7 +982,7 @@
 	BlockInput, MouseMoveOff
 	BlockInput, Off
 	CurrentRange := ""
-	If !(aHK_Timer)
+	If !(aHK_Timer0)
 	{
 		Try Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%
@@ -982,15 +996,11 @@
 				Gui, 28:+AlwaysOntop
 		}
 	}
-	If (CloseAfterPlay)
-		ExitApp
-	If (OnFinishCode > 1)
-		GoSub, OnFinishAction
 }
 
 ;##### Playback Commands #####
 
-PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, CustomVars, CoordModes, RunningFunction, ByRef _LastError := "")
+PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, CustomVars, CoordModes, SendModes, RunningFunction, ByRef _LastError := "")
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
 		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction := ""
@@ -1534,13 +1544,20 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		WinMenuSelectItem, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%, %Par7%, %Par8%, %Par9%, %Par10%, %Par11%
 		_LastError := ErrorLevel
 	return
-	pb_SendLevel:
-		SendLevel, %Par1%
-		_LastError := ErrorLevel
+	pb_SendMode:
+		SendModes["Mode"] := Par1
 	return
 	pb_SetKeyDelay:
-		SetKeyDelay, %Par1%, %Par2%, %Par3%
-		_LastError := ErrorLevel
+		SendModes["Key"] := Par1
+	,	SendModes["Duration"] := Par2 ? Par2 : SendModes["Duration"]
+	,	SendModes["Play"] :=  Par3 ? Par3 : SendModes["Play"]
+	return
+	pb_SetMouseDelay:
+		SendModes["Mouse"] := Par1
+	,	SendModes["MPlay"] :=  Par2 ? Par2 : SendModes["MPlay"]
+	return
+	pb_SetControlDelay:
+		SendModes["Control"] := Par1
 	return
 	pb_Pause:
 		ToggleIcon()
@@ -1749,7 +1766,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 	pb_WinSetTitle:
 		Win := SplitWin(Window)
-		WinSetTitle, % Win[1], % Win[2], % Win[3], % Win[4], % Win[5]
+		WinSetTitle, % Win[1], % Win[2], %Par1%, % Win[3], % Win[4]
 		_LastError := ErrorLevel
 	return
 	pb_WinWait:
@@ -2209,7 +2226,7 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 		return -1
 	Tooltip
 	CheckVars(CustomVars, Step, Target, Window)
-,	EscCom(true, Step, TimesX, DelayX, Target, Window)
+,	EscCom(true, Step, Target, Window)
 ,	Step := StrReplace(Step, _z, A_Space)
 ,	Target := StrReplace(Target, _z, A_Space)
 ,	Window := StrReplace(Window, _z, A_Space)

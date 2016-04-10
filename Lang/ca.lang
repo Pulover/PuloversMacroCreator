@@ -761,13 +761,17 @@
 	t_Lang203 =	Detectar Les Finestres Ocultes
 	t_Lang204 =	Detectar Text Ocult
 	t_Lang205 =	La Manera De Combat Pel Títol
-	t_Lang206 =	Velocitat De Combat Pel Títol
+	t_Lang206 =	No se'n mostren els errors
 	t_Lang207 =	Client
 	t_Lang208 =	T&robar
 	t_Lang209 =	Ree&mplaçar
-	t_Lang210 =	No se'n mostren els errors
-	t_Lang211 =	Fitxes
-	t_Lang212 =	Espais
+	t_Lang210 =	Fitxes
+	t_Lang211 =	Espais
+	t_Lang212 =	Les accions del teclat i del ratolí
+	t_Lang213 =	Manera d'enviament clau
+	t_Lang214 =	Retard clau
+	t_Lang215 =	Retard del ratolí
+	t_Lang216 =	Control de retard
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert
@@ -978,6 +982,7 @@
 	ComText_TT =	Quan no està en mode sense processar, els següents caràcters
 		es tracten com a modificadors (aquests modificadors afecten
 		solament la següent clau):, +, ^, #
+	ControlDelayE_TT =	Ajusta el retard que es produirà després de cada comanda de control de modificadors.
 	CoordPixel_TT =	Mode de coordenades
 	DefaultMacro_TT =	Selecciona arxiu a carregar en l'arrencada del programa
 	EditPaste_TT =	Pastes cadena en la posició de cursor / insert
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Inserir Pulsacions (Ctrl+Insert)
 	InsertKeyT_TT =	Inserir Pulsacions
 	JoyKey_TT =	Premeu un botó a la palanca de comandament
+	KeyDelayE_TT =	Ajusta el retard que es produirà després de cada pulsació de tecla enviats per enviament i ControlSend.
 	LoopLVColor_TT =	Feu clic per seleccionar un color
 	LUntil_TT =	Aplica una condició per a la continuació d'un cicle o bucle for.
 	ManKey_TT =	Tecla d'accés directe per jugar Macro "pas a pas"
+	MouseDelayE_TT =	Ajusta el retard que es produirà després de cada moviment del ratolí o feu clic.
 	MRel_TT =	Moviments relatius a la posició actual.
 		O si s'utilitza amb control: Posició amb relació al control.
 	OSHK_TT =	Seleccioneu Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Retorna true si Key s'associa amb un valor.
 	If	Especifica la comanda (s) per dur a terme si la comparació d'una variable a un valor doni com a resultat VERDADER. Quan més d' un comando està present , tanqui en un bloc (frens) .
 	If (expression)	Especifica la comanda (s) per dur a terme si una expressió s'avalua com VERDADER.
-	If A_Index	Comprova si la interacció actual del loop matxs 1 especifiqui un nombre .
-	If Clipboard	Comprova si el text del portapapers és matxs una cadena especificada .
-	If ErrorLevel	Comprova si una imatge o píxel especificat es troben a la pantalla .
+	If A_Index	Comprova si la iteració del bucle actual coincideix amb el nombre especificat.
+	If Clipboard	Comprova si el text del portapapers coincideix amb la cadena especificada.
+	If ErrorLevel	Comprova si s'ha trobat una imatge o píxel especificat a la pantalla.
 	If var [not] between	Comprova si el contingut d'una variable són numèricament o alfabèticament entre dos valors (inclosos) .
 	If var [not] in / If var [not] contains MatchList	Comprova si el contingut d'una variable coincideixen amb un dels elements d'una llista .
 	If var is [not] type	Comprova si el contingut d'una variable són numèrics , majúscules , etc
@@ -1347,10 +1354,12 @@
 	RunAs	Especifica un conjunt de credencials d'usuari que s'utilitzarà per a tots els usos posteriors d'execució i RunWait. Requereix Windows 2000/XP o posterior.
 	RunWait	Executa un programa extern i espera fins que acabi.
 	Send / SendRaw	Envia les pulsacions de teclat i els clics del ratolí simulats a la finestra activa.
-	SendLevel	Controla quins esdeveniments de teclat i ratolí artificials són ignorats per tecles d'accés ràpid i hotstrings.
 	SendMessage	Envia un missatge a una finestra o control i espera confirmació.
+	SendMode	
 	SetCapslockState	Estableix l'estat de la tecla Bloq Maj. També es pot forçar la clau per mantenir-se encès o apagat.
+	SetControlDelay	
 	SetKeyDelay	Estableix la demora que es produirà després de cada clic d'tecla Envia o enviat per ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Estableix l'estat de la tecla Bloq Num També es pot forçar la clau per mantenir-se encès o apagat.
 	SetRegView	Permet que les ordres de registre en un script de 32 bits per accedir a la visualització del registre de 64 bits i viceversa.
 	SetScrollLockState	Estableix l'estat de la tecla Bloq Despl. També es pot forçar la clau per mantenir-se encès o apagat.

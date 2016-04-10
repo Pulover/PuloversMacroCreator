@@ -761,13 +761,17 @@
 	t_Lang203 =	檢測隱藏的窗口
 	t_Lang204 =	檢測隱藏文本
 	t_Lang205 =	標題匹配模式
-	t_Lang206 =	冠軍比賽速度
+	t_Lang206 =	不顯示錯誤
 	t_Lang207 =	客戶
 	t_Lang208 =	發現(&I)
 	t_Lang209 =	更換(&E)
-	t_Lang210 =	不顯示錯誤
-	t_Lang211 =	標籤
-	t_Lang212 =	空間
+	t_Lang210 =	標籤
+	t_Lang211 =	空間
+	t_Lang212 =	鍵盤和鼠標操作
+	t_Lang213 =	鍵發送模式
+	t_Lang214 =	關鍵延遲
+	t_Lang215 =	鼠標延遲
+	t_Lang216 =	控制延遲
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開
@@ -978,6 +982,7 @@
 	ComText_TT =	而不是在原始模式時，下列字符
 		被視為修飾符（這些修飾符影響
 		只有在第二天的關鍵）：！+ ^，＃
+	ControlDelayE_TT =	將每個控制修改命令後會發生延遲。
 	CoordPixel_TT =	協調模式
 	DefaultMacro_TT =	選擇要加載的文件在程序啟動
 	EditPaste_TT =	免燒磚字符串在插入符號/插入位置
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	插入擊鍵 (Ctrl+Insert)
 	InsertKeyT_TT =	插入擊鍵
 	JoyKey_TT =	按下操縱桿上的按鈕
+	KeyDelayE_TT =	設置由發送和ControlSend發送的每個按鍵後會發生延遲。
 	LoopLVColor_TT =	點擊挑顏色
 	LUntil_TT =	適用條件迴路或For循環的延續。
 	ManKey_TT =	熱鍵玩宏“一步一步”
+	MouseDelayE_TT =	將每個鼠標移動之後將發生或單擊延遲。
 	MRel_TT =	相對於當前位置的變動。
 		或者，如果使用控制：相對位置的控制。
 	OSHK_TT =	選擇“宏”
@@ -1281,9 +1288,9 @@
 	HasKey	返回true如果密鑰與一個值相關聯。
 	If	指定命令（S）來執行，如果一個變量的值比較evalutes TRUE。當一個以上的命令是，把它們括在一個塊（大括號）。
 	If (expression)	指定執行命令（S），如果表達式的計算結果為TRUE。
-	If A_Index	的檢查，如果在當前循環的迭代配指定了一些。
-	If Clipboard	檢查如果剪貼板文本配指定的字符串。
-	If ErrorLevel	如果指定的圖像或像素的檢查，發現在屏幕上。
+	If A_Index	檢查當前循環迭代指定數目的匹配。
+	If Clipboard	檢查剪貼板文本指定的字符串相匹配。
+	If ErrorLevel	檢查是否有指定的圖像或像素在屏幕上被發現。
 	If var [not] between	檢查變量的內容是數字或字母，兩個值之間（含）。
 	If var [not] in / If var [not] contains MatchList	檢查變量的內容是否匹配列表中的項目之一。
 	If var is [not] type	檢查變量的內容是否是數字，大寫等。
@@ -1347,10 +1354,12 @@
 	RunAs	指定一組用戶憑據用於所有後續的運行和RunWait用途。需要Windows 2000/XP或更高版本。
 	RunWait	運行一個外部程序和等待，直到它完成。
 	Send / SendRaw	模擬鍵盤和鼠標操作發送到活動窗口。
-	SendLevel	控制熱鍵和熱字串人工鍵盤和鼠標事件被忽略。
 	SendMessage	一個窗口或控制發送消息，並等待確認。
+	SendMode	
 	SetCapslockState	設置CapsLock鍵的狀態。也可以強制鑰匙留在或關閉。
+	SetControlDelay	
 	SetKeyDelay	設置發送或至於ControlSend發送每個按鍵後會發生延遲。
+	SetMouseDelay	
 	SetNumlockState	設置的NumLock鍵的狀態。也可以強制鑰匙留在或關閉。
 	SetRegView	允許一個32位註冊表中的命令腳本訪問64位註冊表視圖，反之亦然。
 	SetScrollLockState	設置ScrollLock鍵鍵的狀態。也可以強制鑰匙留在或關閉。

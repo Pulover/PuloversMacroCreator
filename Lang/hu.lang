@@ -761,13 +761,17 @@
 	t_Lang203 =	Felismerni Rejtett Ablakok
 	t_Lang204 =	Felismerni Rejtett Szöveg
 	t_Lang205 =	Cím Egyezik Mód
-	t_Lang206 =	Cím Egyezik Sebesség
+	t_Lang206 =	Ne jelenjen meg a hibákat
 	t_Lang207 =	Ügyfél
 	t_Lang208 =	T&alál
 	t_Lang209 =	C&serélje
-	t_Lang210 =	Ne jelenjen meg a hibákat
-	t_Lang211 =	Lapok
-	t_Lang212 =	Terek
+	t_Lang210 =	Lapok
+	t_Lang211 =	Terek
+	t_Lang212 =	Billentyűzet és egér akciók
+	t_Lang213 =	Kulcs küldési mód
+	t_Lang214 =	Kulcs késleltetés
+	t_Lang215 =	Egér késleltetés
+	t_Lang216 =	Vezérlés késleltetés
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva
@@ -978,6 +982,7 @@
 	ComText_TT =	Ha nem nyers módban, a következő karakterek
 		kezelni módosítók (ezek a módosítók befolyásolhatják
 		Csak a nagyon következő gomb):!, +, ^, #
+	ControlDelayE_TT =	Beállítja a késleltetést követően alakul ki minden kontroll-módosító parancsot.
 	CoordPixel_TT =	Koordináta mód
 	DefaultMacro_TT =	Válassza ki a fájlt betölteni a program indításakor
 	EditPaste_TT =	Paszták karakterlánc a kalap / betét pozíció
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Be Gombnyomás (Ctrl+Insert)
 	InsertKeyT_TT =	Be Gombnyomás
 	JoyKey_TT =	Nyomja meg a gombot a joystick
+	KeyDelayE_TT =	Beállítja a késleltetést fog bekövetkezni minden gombnyomás után küldött üzenetek küldése és ControlSend.
 	LoopLVColor_TT =	Kattintson válasszon egy színt
 	LUntil_TT =	Alkalmaz feltétele a folytatása a hurok vagy-loop.
 	ManKey_TT =	Gyorsgomb játszani Macro "lépésről-lépésre"
+	MouseDelayE_TT =	Beállítja a késleltetést követően alakul ki minden egér mozgását, vagy kattintson.
 	MRel_TT =	Mozgásokat képest aktuális pozícióját.
 		Vagy ha használt Control: Pozíció a kontrollhoz képest.
 	OSHK_TT =	Makró Kiválasztása
@@ -1281,9 +1288,9 @@
 	HasKey	True, ha Key társított értéket.
 	If	Meghatározza a parancs (ek) azon képessége, ha az összehasonlítás egy változó értékre evalutes TRUE. Ha több, mint egy parancs aktív, tegye őket egy blokkban (fogszabályozó).
 	If (expression)	Megadja a parancs (ok), hogy végre, ha a kifejezés értéke TRUE.
-	If A_Index	Ellenőrzi, hogy az aktuális iteráció beleillik a megadott számot.
-	If Clipboard	Ellenőrzi, hogy a vágólapról szöveget beleillik a megadott string.
-	If ErrorLevel	Ellenőrzi, hogy a megadott képet vagy pixel találtak a képernyőn.
+	If A_Index	Ellenőrzi, hogy az aktuális iteráció egyezik a megadott számot.
+	If Clipboard	Ellenőrzi, hogy a vágólap szövege megegyezik a megadott karakterláncot.
+	If ErrorLevel	Ellenőrzi, hogy a megadott kép vagy pixel találták meg a képernyőn.
 	If var [not] between	Ellenőrzi, hogy a változó tartalmát számszerint vagy ABC két érték között (bezárólag).
 	If var [not] in / If var [not] contains MatchList	Ellenőrzi, hogy a változó tartalmát egyezik az egyik elem a listában.
 	If var is [not] type	Ellenőrzi, hogy a változó tartalma numerikus, nagybetűs, stb
@@ -1347,10 +1354,12 @@
 	RunAs	Megadja a sor felhasználói hitelesítő adatokat használja minden további felhasználására Run és RunWait. Szükséges Windows 2000/XP vagy újabb verzió.
 	RunWait	Egy külsõ programot futtat, és megvárja, amíg befejezi.
 	Send / SendRaw	Elküldi szimulált billentyűleütéseket, és egérkattintással az aktív ablak.
-	SendLevel	Vezérli, hogy mely mesterséges billentyűzet és egér eseményeket figyelmen kívül hagyja a gyorsbillentyűk és hotstrings.
 	SendMessage	Üzenetet küld egy ablak, vagy szabályozás és vár elismerést.
+	SendMode	
 	SetCapslockState	Állítja az állam a CapsLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
+	SetControlDelay	
 	SetKeyDelay	Megadja a késleltetést, ami történik minden gombnyomás után küldött küldése vagy ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Állítja az állam a NumLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
 	SetRegView	Lehetővé teszi a regisztrációs parancsokat egy 32 bites script eléréséhez a 64 bites adatbázis nézet, és fordítva.
 	SetScrollLockState	Állítja az állam a ScrollLock gombot. Is kényszeríti a legfontosabb, hogy maradni vagy ki.

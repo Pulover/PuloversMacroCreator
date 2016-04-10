@@ -114,10 +114,10 @@ ShowTooltip()
 
 ReplaceCursor(hControl, hCursor)
 {
-    If (A_PtrSize = 8)
-        DllCall("SetClassLongPtr", "Ptr", hControl, "int", -12, "Ptr", hCursor)
-    Else
-        DllCall("SetClassLong", "Uint", hControl, "int", -12, "int", hCursor)
+	If (A_PtrSize = 8)
+		DllCall("SetClassLongPtr", "Ptr", hControl, "int", -12, "Ptr", hCursor)
+	Else
+		DllCall("SetClassLong", "Uint", hControl, "int", -12, "int", hCursor)
 }
 
 SBShowTip(Command)
@@ -807,17 +807,17 @@ GetElIndex(elwb, GetBy)
 	}
 }
 
-EscCom(Reverse, ByRef Item1 := "", ByRef Item2 := "", ByRef Item3 := "", ByRef Item4 := "", ByRef Item5 := "")
+EscCom(Reverse, ByRef Item1 := "", ByRef Item2 := "", ByRef Item3 := "", ByRef Item4 := "")
 {
 	If (Reverse)
 	{
-		Loop, 5
+		Loop, 4
 			If (IsByRef(Item%A_Index%))
 				Item%A_Index% := StrReplace(Item%A_Index%, "``,", ",")
 	}
 	Else
 	{
-		Loop, 5
+		Loop, 4
 			If (IsByRef(Item%A_Index%))
 				Item%A_Index% := StrReplace(Item%A_Index%, ",", "``,")
 	}
@@ -1043,12 +1043,12 @@ ShowMenu(Menu, mX, mY)
 	}
 	Else If (Menu = "TabIndent")
 	{
-		Menu, TbMenu, Add, %t_Lang212%, IndentWith, Radio
 		Menu, TbMenu, Add, %t_Lang211%, IndentWith, Radio
+		Menu, TbMenu, Add, %t_Lang210%, IndentWith, Radio
 		If (IndentWith = "Tab")
-			Menu, TbMenu, Check, %t_Lang211%
+			Menu, TbMenu, Check, %t_Lang210%
 		Else
-			Menu, TbMenu, Check, %t_Lang212%
+			Menu, TbMenu, Check, %t_Lang211%
 		Menu, TbMenu, Show, %mX%, %mY%
 		Menu, TbMenu, DeleteAll
 	}
@@ -1089,11 +1089,11 @@ LVCallback(Func, Hwnd)
 	If Func in Copy,Cut,Paste,Duplicate,Delete,Move,Drag
 	{
 		LV_Row := 0
-        Loop
-        {
-            LV_Row := LV_GetNext(LV_Row)
-            If (!LV_Row)
-                break
+		Loop
+		{
+			LV_Row := LV_GetNext(LV_Row)
+			If (!LV_Row)
+				break
 			LV_GetText(Type, LV_Row, 6)
 			If (Type = cType47)
 				return false

@@ -761,13 +761,17 @@
 	t_Lang203 =	Rilevare Finestre Nascoste
 	t_Lang204 =	Rilevare Testo Nascosto
 	t_Lang205 =	Modalità Match Per Il Titolo
-	t_Lang206 =	Partita Di Titolo Velocità
+	t_Lang206 =	Non visualizzare gli errori
 	t_Lang207 =	Cliente
 	t_Lang208 =	T&rovare
 	t_Lang209 =	S&ostituire
-	t_Lang210 =	Non visualizzare gli errori
-	t_Lang211 =	Schede
-	t_Lang212 =	Spazi
+	t_Lang210 =	Schede
+	t_Lang211 =	Spazi
+	t_Lang212 =	Azioni di tastiera e mouse
+	t_Lang213 =	Modalità di invio chiave
+	t_Lang214 =	Tasto del ritardo
+	t_Lang215 =	Ritardo del mouse
+	t_Lang216 =	Ritardo di controllo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aperto
@@ -978,6 +982,7 @@
 	ComText_TT =	Quando non è in modalità raw, i seguenti caratteri
 		sono trattati come modificatori (questi modificatori influiscono
 		solo la chiave molto prossimo):, +, ^, #
+	ControlDelayE_TT =	Imposta il ritardo che si verifica dopo ogni comando di controllo modificanti.
 	CoordPixel_TT =	Modalità di coordinare
 	DefaultMacro_TT =	Seleziona il file da caricare all'avvio del programma
 	EditPaste_TT =	String Paste al punto di inserimento / inserto posizione
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Inserire Battitura (Ctrl+Insert)
 	InsertKeyT_TT =	Inserire Battitura
 	JoyKey_TT =	Premere un pulsante sul joystick
+	KeyDelayE_TT =	Imposta il ritardo che si verifica dopo ogni pressione del tasto inviato dal Send e ControlSend.
 	LoopLVColor_TT =	Fare clic per selezionare un colore
 	LUntil_TT =	Applica una condizione per la continuazione di un loop o ciclo for.
 	ManKey_TT =	Tasti di scelta rapida per riprodurre macro "passo-passo"
+	MouseDelayE_TT =	Imposta il ritardo che si verifica dopo ogni movimento del mouse o fare clic su.
 	MRel_TT =	Movimenti relativi alla posizione corrente.
 		Oppure, se usato con controllo: posizione rispetto al controllo.
 	OSHK_TT =	Selezionare Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Restituisce true se il tasto è associato un valore.
 	If	Specifica il comando (s) da eseguire se il confronto di una variabile ad un valore evalutes su TRUE . Quando più di un comando è presente, racchiuderli in un blocco (parentesi graffe) .
 	If (expression)	Specifica il comando (s) da eseguire se l'espressione restituisce TRUE.
-	If A_Index	Controlla se l' iterazione corrente del ciclo di partite specificato un numero.
-	If Clipboard	Controlla se il testo Appunti sono partite una stringa specificata .
-	If ErrorLevel	Verifica se un immagine o pixel specificato è stato trovato nella schermata .
+	If A_Index	Controlla se l'attuale iterazione del ciclo corrisponde al numero specificato.
+	If Clipboard	Controlla se il testo Appunti corrisponde alla stringa specificata.
+	If ErrorLevel	Controlla se un immagine o pixel specificato è stato trovato sullo schermo.
 	If var [not] between	Controlla se il contenuto di una variabile sono numericamente o alfabeticamente tra due valori (compreso) .
 	If var [not] in / If var [not] contains MatchList	Controlla se il contenuto di una variabile corrispondono a una delle voci di un elenco .
 	If var is [not] type	Verifica se il contenuto di una variabile vengono numerico , maiuscole, ecc
@@ -1347,10 +1354,12 @@
 	RunAs	Specifica un set di credenziali utente da utilizzare per tutti gli usi successivi di Run e RunWait. Richiede Windows 2000/XP o successivo.
 	RunWait	Esegue un programma esterno e aspetta fino a quando non finisce.
 	Send / SendRaw	Invia sequenze di tasti e click del mouse simulato alla finestra attiva.
-	SendLevel	Controlli che gli eventi della tastiera e del mouse artificiali vengono ignorati da tasti di scelta rapida e hotstrings.
 	SendMessage	Invia un messaggio a una finestra o di controllo e attende il riconoscimento.
+	SendMode	
 	SetCapslockState	Imposta lo stato del tasto Capslock. Può anche forzare la chiave per rimanere acceso o spento.
+	SetControlDelay	
 	SetKeyDelay	Imposta il ritardo che si verifica dopo ogni pressione del tasto inviato Invia o ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Imposta lo stato del tasto Bloc Num. Può anche forzare la chiave per rimanere acceso o spento.
 	SetRegView	Consente comandi Registro di sistema in uno script a 32 bit di accedere alla visualizzazione del Registro di 64 bit e viceversa.
 	SetScrollLockState	Imposta lo stato del tasto Scrolllock. Può anche forzare la chiave per rimanere acceso o spento.

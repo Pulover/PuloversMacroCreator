@@ -761,13 +761,17 @@
 	t_Lang203 =	Wykrywanie Ukrytych Okien
 	t_Lang204 =	Wykrywania Ukrytego Tekstu
 	t_Lang205 =	Tryb Mecz Tytuł
-	t_Lang206 =	Tytułowy Dopasowanie Prędkości
+	t_Lang206 =	Nie wyświetlaj błędów
 	t_Lang207 =	Klient
 	t_Lang208 =	O&dnaleźć
 	t_Lang209 =	Z&astąpić
-	t_Lang210 =	Nie wyświetlaj błędów
-	t_Lang211 =	Zakładki
-	t_Lang212 =	Obowiązuje
+	t_Lang210 =	Zakładki
+	t_Lang211 =	Obowiązuje
+	t_Lang212 =	Klawiatury i myszy działania
+	t_Lang213 =	Tryb wyślij klucz
+	t_Lang214 =	Kluczem opóźnienia
+	t_Lang215 =	Opóźnienie myszki
+	t_Lang216 =	Opóźnienie sterowania
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwarte
@@ -978,6 +982,7 @@
 	ComText_TT =	Kiedy nie są w trybie RAW, następujące znaki
 		są traktowane jako modyfikatory (te modyfikatory wpływu
 		tylko bardzo następnego key):, +, ^ #
+	ControlDelayE_TT =	Ustawia opóźnienie, które nastąpi po każdym poleceniu modyfikujących.
 	CoordPixel_TT =	Tryb współrzędnych
 	DefaultMacro_TT =	Wybierz plik do załadowania przy starcie programu
 	EditPaste_TT =	String pasty na karetki / insert pozycji
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Włóż Klawiszy (Ctrl+Insert)
 	InsertKeyT_TT =	Włóż Klawiszy
 	JoyKey_TT =	Naciśnij przycisk na joysticku
+	KeyDelayE_TT =	Ustawia opóźnienie, które pojawi się po każdym naciśnięciu klawisza wysłanego przez wysyłanie i ControlSend.
 	LoopLVColor_TT =	Kliknij, aby wybrać kolor
 	LUntil_TT =	Obowiązuje warunek do kontynuacji pętli lub pętli for.
 	ManKey_TT =	Skrót grać makro "krok po kroku"
+	MouseDelayE_TT =	Ustawia opóźnienie, które nastąpi po każdym ruchu myszy lub kliknąć.
 	MRel_TT =	Zmiany w stosunku do aktualnej pozycji.
 		Lub jeśli używane z regulacją: położenie w stosunku do sterowania.
 	OSHK_TT =	Wybierz Makro
@@ -1281,9 +1288,9 @@
 	HasKey	Zwraca true, jeśli klucz jest związane z wartością.
 	If	Określapolecenie (y) do wykonania , jeśliporównanie zmiennej do wartości evalutes TRUE . Jeżeli więcej niż jedno polecenie jest obecny , należy ująć je w bloku (szelki) .
 	If (expression)	Określapolecenie (y) do wykonania , jeśliwyrażenie ma wartość TRUE .
-	If A_Index	Sprawdza, czy aktualnej iteracji pętli mecze na określony numer.
-	If Clipboard	Sprawdza, czytekst Schowek jest mecze określony ciąg .
-	If ErrorLevel	Sprawdza, czy określony obraz lub piksela znaleziono na ekranie .
+	If A_Index	Sprawdza czy iteracji pętli prądowej odpowiada określona liczba.
+	If Clipboard	Sprawdza, czy tekst Schowek mecze określony ciąg.
+	If ErrorLevel	Sprawdza, czy określony obraz lub piksel został znaleziony na ekranie.
 	If var [not] between	Sprawdza, czy zmienna jest zawartość są numerycznie lub alfabetycznie pomiędzy dwoma wartościami (włącznie) .
 	If var [not] in / If var [not] contains MatchList	Sprawdza, czy zmienna jest zawartość dopasować jedną z pozycji na liście.
 	If var is [not] type	Sprawdza, czy zmienna jest zawartość jest numeryczny , duże , itp.
@@ -1347,10 +1354,12 @@
 	RunAs	Określa zestaw poświadczeń użytkownika do korzystania dla wszystkich kolejnych zastosowań Run i RunWait. Wymaga systemu Windows 2000/XP lub nowszy.
 	RunWait	Uruchamia zewnętrzny program i czeka aż zakończy.
 	Send / SendRaw	Wysyła symulowanych naciśnięć klawiszy i kliknięć myszką do aktywnego okna.
-	SendLevel	Kontrole, które sztuczne zdarzenia myszy i klawiatury są ignorowane przez klawisze i hotstrings.
 	SendMessage	Wysyła komunikat do okna lub kontroli i czeka na potwierdzenie.
+	SendMode	
 	SetCapslockState	Ustawia stan klawisza CapsLock. Można także wymusić, aby zatrzymać lub wyłączyć.
+	SetControlDelay	
 	SetKeyDelay	Ustawia opóźnienie, które pojawią się po każdym naciśnięciu klawisza wysłana przez Wyślij lub ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Ustawia stan klawisza NumLock. Można także wymusić, aby zatrzymać lub wyłączyć.
 	SetRegView	Pozwala rejestru poleceń w skrypcie 32-bitowym, aby przejść do widoku 64-bitowego rejestru i vice versa.
 	SetScrollLockState	Ustawia stan klawisza ScrollLock. Można także wymusić, aby zatrzymać lub wyłączyć.

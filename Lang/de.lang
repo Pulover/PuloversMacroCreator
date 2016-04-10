@@ -761,13 +761,17 @@
 	t_Lang203 =	Erkennen Versteckte Fenster
 	t_Lang204 =	Erkennung Verborgener Text
 	t_Lang205 =	Titelmatch -Modus
-	t_Lang206 =	Titelmatch Geschwindigkeit
+	t_Lang206 =	Keine Anzeige von Fehlern
 	t_Lang207 =	Klient
 	t_Lang208 =	S&uchen
 	t_Lang209 =	E&rsetzen
-	t_Lang210 =	Keine Anzeige von Fehlern
-	t_Lang211 =	Tabs
-	t_Lang212 =	Räume
+	t_Lang210 =	Tabs
+	t_Lang211 =	Räume
+	t_Lang212 =	Tastatur- und Mausaktionen
+	t_Lang213 =	Taste-Sendemodus
+	t_Lang214 =	Taste Verzögerung
+	t_Lang215 =	Maus Verzögerung
+	t_Lang216 =	Steuerverzögerung
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öffnen
@@ -978,6 +982,7 @@
 	ComText_TT =	Ist der Raw-Modus nicht aktiv, werden folgende Zeichen als 
 		Modifikatoren behandelt (diese Modifikatoren beeinflussen 
 		nur die nachfolgende Taste)::, +, ^, #
+	ControlDelayE_TT =	Stellt die Verzögerung, die nach jeder Steuer modifizierenden Befehl auftreten.
 	CoordPixel_TT =	Koordinaten-Modus
 	DefaultMacro_TT =	Datei wählen, die beim Programmstart geladen werden soll
 	EditPaste_TT =	String am Cursor einfügen/Einfügeposition
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Tastendruck einfügen (Strg+Insert)
 	InsertKeyT_TT =	Tastendruck einfügen
 	JoyKey_TT =	Drücken Sie eine Taste auf dem Joystick
+	KeyDelayE_TT =	Stellt die Verzögerung, die nach jedem Tastendruck  gesendet durch Senden und Control auftreten.
 	LoopLVColor_TT =	Klicken, um eine Farbe auswählen
 	LUntil_TT =	Wendet eine Bedingung für die Fortsetzung einer Schleife oder eines For-Schleife.
 	ManKey_TT =	Hotkey zu spielen Macro "Schritt-für-Schritt"
+	MouseDelayE_TT =	Stellt die Verzögerung, die nach jeder Mausbewegung  oder klicken auftreten.
 	MRel_TT =	Bewegungen relativ zur aktuellen Position.
 		Oder bei Verwendung mit Steuerelement: Position relativ zum Steuerelement.
 	OSHK_TT =	Makro wählen
@@ -1281,9 +1288,9 @@
 	HasKey	Liefert true, wenn Key wird mit einem Wert verbunden.
 	If	Gibt das Kommando (s), um , wenn der Vergleich einer Variablen auf einen Wert evalutes auf TRUE . Wenn mehr als ein Befehl vorhanden ist, schließen Sie sie in einem Block (Zahnspangen) .
 	If (expression)	Gibt der Befehl (en) durchführen, wenn ein Ausdruck TRUE .
-	If A_Index	Überprüft, ob die aktuelle Iteration matchs eine Angabe eine Nummer.
-	If Clipboard	Prüft, ob der Text in der Zwischenablage ist matchs eine angegebene Zeichenfolge .
-	If ErrorLevel	Prüft, ob eine angegebene Bild oder Pixel wurde auf dem Bildschirm gefunden.
+	If A_Index	Überprüft , ob die aktuelle Iteration entspricht die angegebene Nummer.
+	If Clipboard	Prüft, ob der Text in der Zwischenablage übereinstimmt  mit der angegebenen Zeichenfolge.
+	If ErrorLevel	Überprüft , ob ein angegebenes  Bild oder Pixel wurde auf dem Bildschirm gefunden.
 	If var [not] between	Prüft, ob eine Variable Inhalte sind numerisch oder alphabetisch zwischen zwei Werten (einschließlich) .
 	If var [not] in / If var [not] contains MatchList	Prüft, ob eine Variable den Inhalt übereinstimmen eines der Elemente in einer Liste.
 	If var is [not] type	Prüft, ob eine Variable den Inhalt numerisch sind , Großbuchstaben usw.
@@ -1347,10 +1354,12 @@
 	RunAs	Gibt einen Satz von Anmeldeinformationen des Benutzers an für alle nachfolgenden Anwendungen von Run und RunWait verwenden. Benötigt Windows 2000/XP oder höher.
 	RunWait	Führt ein externes Programm aus und wartet, bis es fertig ist.
 	Send / SendRaw	Sendet simulierte Tastatureingaben und Mausklicks auf das aktive Fenster.
-	SendLevel	Steuert, welche künstliche Tastatur-und Mausereignisse durch Hotkeys und Hotstrings ignoriert.
 	SendMessage	Sendet eine Nachricht an ein Fenster oder Kontrolle und wartet auf Bestätigung.
+	SendMode	
 	SetCapslockState	Legt den Zustand der Feststelltaste drücken. Kann auch erzwingen, dass der Schlüssel zu bleiben oder aus.
+	SetControlDelay	
 	SetKeyDelay	Legt die Verzögerung, die sich nach jedem Tastendruck oder durch Senden ControlSend gesendet auftreten.
+	SetMouseDelay	
 	SetNumlockState	Legt den Zustand der Num-Taste. Kann auch erzwingen, dass der Schlüssel zu bleiben oder aus.
 	SetRegView	Ermöglicht registry-Befehle in einer 32-Bit-Skript, um die 64-Bit-Register Ansicht und umgekehrt übersetzen.
 	SetScrollLockState	Legt den Zustand des Scrolllock Taste. Kann auch erzwingen, dass der Schlüssel zu bleiben oder aus.

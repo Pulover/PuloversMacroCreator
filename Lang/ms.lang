@@ -761,13 +761,17 @@
 	t_Lang203 =	Mengesan Windows Tersembunyi
 	t_Lang204 =	Mengesan Teks Tersembunyi
 	t_Lang205 =	Mod Perlawanan Tajuk
-	t_Lang206 =	Kelajuan Perlawanan Tajuk
+	t_Lang206 =	Jangan paparkan kesilapan
 	t_Lang207 =	Pelanggan
 	t_Lang208 =	C&ari
 	t_Lang209 =	Ga&nti
-	t_Lang210 =	Jangan paparkan kesilapan
-	t_Lang211 =	Tab
-	t_Lang212 =	Ruang
+	t_Lang210 =	Tab
+	t_Lang211 =	Ruang
+	t_Lang212 =	Papan kekunci dan tetikus tindakan
+	t_Lang213 =	Mod send utama
+	t_Lang214 =	Kelewatan utama
+	t_Lang215 =	Kelewatan tetikus
+	t_Lang216 =	Kelewatan kawalan
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
@@ -978,6 +982,7 @@
 	ComText_TT =	Apabila tidak dalam mod mentah, watak-watak berikut
 		dianggap sebagai pengubah (ini pengubah menjejaskan
 		hanya kunci yang akan datang):, +, ^, #
+	ControlDelayE_TT =	Set kelewatan yang akan berlaku selepas setiap arahan kawalan mengubah suai.
 	CoordPixel_TT =	Mod menyelaras
 	DefaultMacro_TT =	Pilih fail untuk memuatkan pada permulaan program
 	EditPaste_TT =	Rentetan Pes pada kedudukan tanda sisipan / memasukkan
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Memasukkan keystroke (Ctrl+Sisipan)
 	InsertKeyT_TT =	Memasukkan keystroke
 	JoyKey_TT =	Tekan butang pada kayu bedik
+	KeyDelayE_TT =	Set kelewatan yang akan berlaku selepas setiap keystroke yang dihantar oleh Hantar dan ControlSend.
 	LoopLVColor_TT =	Klik untuk memilih warna yang
 	LUntil_TT =	Menggunakan keadaan untuk meneruskan kesinambungan daripada Loop atau Bagi gelung.
 	ManKey_TT =	Hotkey bermain Macro "langkah demi langkah"
+	MouseDelayE_TT =	Set kelewatan yang akan berlaku selepas setiap pergerakan tetikus atau klik.
 	MRel_TT =	Pergerakan relatif kepada kedudukan semasa.
 		Atau jika digunakan dengan kawalan: Kedudukan relatif Kawalan.
 	OSHK_TT =	Pilih Makro
@@ -1281,9 +1288,9 @@
 	HasKey	Pulangan benar jika Key dikaitkan dengan nilai.
 	If	Menyatakan arahan (s) untuk melaksanakan jika perbandingan pembolehubah kepada nilai evalutes ke TRUE. Apabila lebih daripada satu arahan hadir, letakkan mereka dalam satu blok (penyokong).
 	If (expression)	Menyatakan arahan (s) untuk melaksanakan jika ungkapan untuk menilai BENAR.
-	If A_Index	Pemeriksaan jika lelaran gelung semasa matchs beberapa yang ditetapkan.
-	If Clipboard	Pemeriksaan jika teks klipbod adalah matchs rentetan tertentu.
-	If ErrorLevel	Pemeriksaan jika imej yang dinyatakan atau pixel ditemui di skrin.
+	If A_Index	Cek jika lelaran gelung semasa sepadan dengan nombor yang dinyatakan.
+	If Clipboard	Cek jika teks yang klipbod perlawanan rentetan yang dinyatakan.
+	If ErrorLevel	Cek jika imej atau pixel yang ditetapkan ditemui pada skrin.
 	If var [not] between	Cek sama ada kandungan yang berubah-ubah adalah berangka atau abjad antara dua nilai (termasuk).
 	If var [not] in / If var [not] contains MatchList	Cek sama ada kandungan yang berubah-ubah yang sesuai dengan salah satu perkara-perkara dalam senarai.
 	If var is [not] type	Cek sama ada kandungan yang berubah-ubah adalah angka, huruf besar, dan lain-lain
@@ -1347,10 +1354,12 @@
 	RunAs	Menetapkan satu set kelayakan pengguna untuk menggunakan untuk semua kegunaan seterusnya Run dan RunWait. Memerlukan Windows 2000/XP atau kemudian.
 	RunWait	Menjalankan program luar dan menunggu sehingga ia selesai.
 	Send / SendRaw	Menghantar simulasi ketukan kekunci dan klik tetikus untuk tetingkap aktif.
-	SendLevel	Kawalan yang papan kekunci dan tetikus peristiwa tiruan diabaikan oleh hotkeys dan hotstrings.
 	SendMessage	Menghantar mesej kepada tingkap atau kawalan dan menunggu pengakuan.
+	SendMode	
 	SetCapslockState	Set negeri utama CapsLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
+	SetControlDelay	
 	SetKeyDelay	Set kelewatan yang akan berlaku selepas setiap kali kekunci ditekan dihantar oleh Hantar atau ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Menetapkan keadaan NumLock utama itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
 	SetRegView	Membolehkan arahan pendaftaran dalam skrip 32-bit untuk mengakses pandangan pendaftaran 64-bit dan sebaliknya.
 	SetScrollLockState	Set negeri utama ScrollLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.

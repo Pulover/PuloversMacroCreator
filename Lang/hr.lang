@@ -761,13 +761,17 @@
 	t_Lang203 =	Otkriti Skrivene Prozore
 	t_Lang204 =	Otkriti Skriveni Tekst
 	t_Lang205 =	Način Naslov Utakmica
-	t_Lang206 =	Naslov Brzina Utakmica
+	t_Lang206 =	Ne prikazati pogreške
 	t_Lang207 =	Klijent
 	t_Lang208 =	P&ronaći
 	t_Lang209 =	Z&amijeniti
-	t_Lang210 =	Ne prikazati pogreške
-	t_Lang211 =	Kartice
-	t_Lang212 =	Prostori
+	t_Lang210 =	Kartice
+	t_Lang211 =	Prostori
+	t_Lang212 =	Tipkovnica i miš akcije
+	t_Lang213 =	Tipka načina slanja
+	t_Lang214 =	Ključ kašnjenje
+	t_Lang215 =	Miš kašnjenje
+	t_Lang216 =	Kontrola kašnjenje
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno
@@ -978,6 +982,7 @@
 	ComText_TT =	Kad nije u RAW formatu, znakova Slijedeće
 		su liječeni su modifikatori (ovi parametri utjecati
 		Samo vrlo sljedeći ključ)!, +, ^, #
+	ControlDelayE_TT =	Postavlja kašnjenje koje će se dogoditi nakon svake kontrolne modificiraju naredbe.
 	CoordPixel_TT =	Koordinacija rada
 	DefaultMacro_TT =	Odaberite datoteku za učitavanje na pokretanju programa
 	EditPaste_TT =	Lijepi string na znak za umetanje / insert položaju
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Umetnite Pritisak Na Tipku (Ctrl+Insert)
 	InsertKeyT_TT =	Umetnite Pritisak Na Tipku
 	JoyKey_TT =	Pritisnite tipku na palici
+	KeyDelayE_TT =	Postavlja kašnjenje koje će se dogoditi nakon svakog pritiska poslao Pošalji i ControlSend.
 	LoopLVColor_TT =	Kliknite da odaberete boju
 	LUntil_TT =	Odnosi uvjet za nastavak petlje ili for-petlje.
 	ManKey_TT =	Hotkey igrati Makro "korak po korak"
+	MouseDelayE_TT =	Postavlja kašnjenje koje će se dogoditi nakon svakog pokreta miša ili pritisak.
 	MRel_TT =	Promjene u odnosu na trenutnu poziciju.
 		Ili, ako se koristi s kontrola: Položaj u odnosu na kontrolu.
 	OSHK_TT =	Odabir Makro
@@ -1281,9 +1288,9 @@
 	HasKey	Vraća TRUE ako Ključ je povezana s vrijednošću.
 	If	Određujenaredba (e) za izvođenje ako seusporedba varijable na vrijednost evalutes na TRUE . Kada je više od jedan naredbeni je prisutan, ih priložiti u blok (proteza) .
 	If (expression)	Određujenaredba (e) za izvođenje ako seizraz vrednuje na TRUE .
-	If A_Index	Provjerava ako je trenutni petlje iteraciji matchs je naveden niz .
-	If Clipboard	Provjerava da likorpa tekst matchs zadani niz .
-	If ErrorLevel	Provjerava ako je navedeni slike ili piksela pronađen je na zaslonu .
+	If A_Index	Provjerava ako je trenutni petlje iteracija odgovara određeni broj.
+	If Clipboard	Provjerava ako je Međuspremnik tekst odgovara određeni niz.
+	If ErrorLevel	Provjerava da li je pronađen određeni slika ili piksela na zaslonu.
 	If var [not] between	Provjerava je li varijabla sadržaju su numerički ili po abecednom redu između dvije vrijednosti (uključivo) .
 	If var [not] in / If var [not] contains MatchList	Provjerava je li varijabla sadržaju odgovaraju jednu od stavki na popisu .
 	If var is [not] type	Provjerava je li varijabla je sadržaji su numerički , velikih , itd.
@@ -1347,10 +1354,12 @@
 	RunAs	Određuje skup korisničkih vjerodajnica koristiti za sve sljedeće namjene Run i RunWait. Zahtijeva Windows 2000/XP ili noviji.
 	RunWait	Pokreće vanjski program i čeka dok se ne završi.
 	Send / SendRaw	Šalje simulirane tipke i klikova mišem na aktivnom prozoru.
-	SendLevel	Kontrole koje umjetne tipkovnica i miš događanja su ignorirali hotkeys i hotstrings.
 	SendMessage	Šalje poruku na prozor ili kontrolu i čeka potvrdu.
+	SendMode	
 	SetCapslockState	Postavlja stanje CapsLock tipku. Može se također prisiliti ključna ostati ili isključiti.
+	SetControlDelay	
 	SetKeyDelay	Postavlja kašnjenja do kojega će doći nakon svakog pritiska poslao Pošaljite ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Postavlja stanje NumLock ključ. Može se također prisiliti ključna ostati ili isključiti.
 	SetRegView	Omogućuje registra naredbe u 32-bitnom skriptu za pristup 64-bitnog registra pogled i obrnuto.
 	SetScrollLockState	Postavlja stanje ScrollLock ključ. Može se također prisiliti ključna ostati ili isključiti.

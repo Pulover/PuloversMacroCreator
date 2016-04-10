@@ -84,7 +84,7 @@
 				
 				If (Opt[5] != "")
 				{
-					Loop, 5
+					Loop, 9
 						Mode%A_Index% := ""
 					Loop, Parse, % Opt[5], `,, %A_Space%
 						Mode%A_Index% := A_LoopField
@@ -93,6 +93,10 @@
 				,	TitleSpeed := (Mode3 != "") ? Mode3 : TitleSpeed
 				,	HiddenWin := (Mode4 != "") ? Mode4 : HiddenWin
 				,	HiddenText := (Mode5 != "") ? Mode5 : HiddenText
+				,	KeyMode := (Mode6 != "") ? Mode6 : KeyMode
+				,	KeyDelay := (Mode7 != "") ? Mode7 : KeyDelay
+				,	MouseDelay := (Mode8 != "") ? Mode8 : MouseDelay
+				,	ControlDelay := (Mode9 != "") ? Mode9 : ControlDelay
 				}
 				
 				OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
@@ -112,6 +116,7 @@
 		GoSub, SetFinishButtom
 		GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
+		GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
 		Gui, 1:-Disabled
 	}
 
@@ -192,6 +197,10 @@
 					If (Col[7] = "Continue")
 						Col[7] := "UntilNotFound"
 				}
+				If (InStr(Col[6], "Win") = 1)
+					Col[3] := StrReplace(Col[3], "``,", ",")
+				If ((Col[6] != "MsgBox") && (Col[6] != "PixelSearch") && (Col[6] != "ImageSearch"))
+					Col[8] := StrReplace(Col[8], "``,", ",")
 			}
 			LV_Add("Check" chk, Col*)
 		}

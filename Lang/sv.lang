@@ -761,13 +761,17 @@
 	t_Lang203 =	Detektera Dolda Fönster
 	t_Lang204 =	Upptäcka Dold Text
 	t_Lang205 =	Titelmatch Läge
-	t_Lang206 =	Titelmatch Hastighet
+	t_Lang206 =	Inte visa fel
 	t_Lang207 =	Klient
 	t_Lang208 =	H&itta
 	t_Lang209 =	E&rsätt
-	t_Lang210 =	Inte visa fel
-	t_Lang211 =	Flikar
-	t_Lang212 =	Utrymmen
+	t_Lang210 =	Flikar
+	t_Lang211 =	Utrymmen
+	t_Lang212 =	Tangentbord och mus åtgärder
+	t_Lang213 =	Nyckelsändningsläge
+	t_Lang214 =	Nyckel fördröjning
+	t_Lang215 =	Fördröjning mus
+	t_Lang216 =	Fördröjningsstyrning
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet
@@ -978,6 +982,7 @@
 	ComText_TT =	När den inte rå läge följande tecken
 		behandlas som modifierare (dessa modifierare påverkar
 		endast mycket nästa tangent):, +, ^, #
+	ControlDelayE_TT =	Ställer in fördröjning som sker efter varje kontroll modifiera kommandot.
 	CoordPixel_TT =	Koordinat-läge
 	DefaultMacro_TT =	Välj fil att ladda om programmet startar
 	EditPaste_TT =	Klistrar sträng vid cirkumflex / insättningspunkten
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Infoga Tangenttryckning (Ctrl+Insert)
 	InsertKeyT_TT =	Infoga Tangenttryckning
 	JoyKey_TT =	Tryck på en knapp på joysticken
+	KeyDelayE_TT =	Ställer in fördröjning som sker efter varje knapptryckning skickas med Send och ControlSend.
 	LoopLVColor_TT =	Klicka här för att välja en färg
 	LUntil_TT =	Gäller ett tillstånd till en fortsättning av en slinga eller for-loop.
 	ManKey_TT =	Snabbknappen till spela Macro "steg-för-steg"
+	MouseDelayE_TT =	Ställer in fördröjning som sker efter varje mus rörelse eller klicka.
 	MRel_TT =	Rörelser i förhållande till nuvarande position.
 		Eller om de används med Kontroll: position i förhållande till Control.
 	OSHK_TT =	Välj Makro
@@ -1281,9 +1288,9 @@
 	HasKey	Returnerar true om Key är förknippad med ett värde.
 	If	Anger kommandot (er) för att utföra om jämförelsen av en variabel till ett värde utvärderar moduler till TRUE. När mer än ett kommando är närvarande , bifoga dem i ett block (hängslen) .
 	If (expression)	Anger kommando (s) att utföra om ett uttryck utvärderas till true .
-	If A_Index	Kontrollerar om det aktuella slingiteration matchs ett specificerat ett antal .
-	If Clipboard	Kontrollerar om Urklipp text är matchs en angiven sträng .
-	If ErrorLevel	Kontrollerar om en angiven bild eller pixel hittades i skärmen .
+	If A_Index	Kontrollerar om strömslingan  iteration matchar det angivna numret.
+	If Clipboard	Kontrollerar om Urklipp text matchar den angivna strängen.
+	If ErrorLevel	Kontrollerar om en viss bild eller pixel hittades på skärmen.
 	If var [not] between	Kontrollerar om en variabel innehåll är numeriskt eller alfabetiskt mellan två värden (inklusive) .
 	If var [not] in / If var [not] contains MatchList	Kontrollerar om en variabel innehåll matchar ett av objekten i en lista .
 	If var is [not] type	Kontrollerar om en variabel innehåll är numeriska , versaler etc.
@@ -1347,10 +1354,12 @@
 	RunAs	Anger en uppsättning inloggningsuppgifter för att använda för alla efterföljande användning av Run och RunWait. Kräver Windows 2000/XP eller senare.
 	RunWait	Körs ett externt program och väntar tills den är klar.
 	Send / SendRaw	Skickar simulerade tangenttryckningar och musklick till det aktiva fönstret.
-	SendLevel	Kontroller som konstgjorda tangentbord och mus händelser ignoreras av snabbtangenter och hotstrings.
 	SendMessage	Skickar ett meddelande till ett fönster eller kontroll och väntar på bekräftelse.
+	SendMode	
 	SetCapslockState	Ställer in tillståndet för CapsLock-tangenten. Kan också tvinga nyckeln för att stanna på eller av.
+	SetControlDelay	
 	SetKeyDelay	Ställer in fördröjningen som sker efter varje knapptryckning skickas med Sänd eller ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Ställer in tillståndet för NumLock. Kan också tvinga nyckeln för att stanna på eller av.
 	SetRegView	Tillåter registret kommandon i en 32-bitars script för att få tillgång till 64-bitars register vy och vice versa.
 	SetScrollLockState	Ställer in tillståndet för ScrollLock tangenten. Kan också tvinga nyckeln för att stanna på eller av.

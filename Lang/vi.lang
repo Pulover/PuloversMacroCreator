@@ -761,13 +761,17 @@
 	t_Lang203 =	Phát Hiện Các Cửa Sổ Ẩn
 	t_Lang204 =	Phát Hiện Văn Bản Ẩn
 	t_Lang205 =	Chế Độ Trận Tranh Đai
-	t_Lang206 =	Tốc Độ Trận Đấu Tiêu Đề
+	t_Lang206 =	Không hiển thị lỗi
 	t_Lang207 =	Khách hàng
 	t_Lang208 =	T&ìm
 	t_Lang209 =	Th&ay thế
-	t_Lang210 =	Không hiển thị lỗi
-	t_Lang211 =	Tab
-	t_Lang212 =	Không gian
+	t_Lang210 =	Tab
+	t_Lang211 =	Không gian
+	t_Lang212 =	Hành động bàn phím và chuột
+	t_Lang213 =	Chế độ gửi chủ chốt
+	t_Lang214 =	Chậm trễ chính
+	t_Lang215 =	Chậm trễ chuột
+	t_Lang216 =	Chậm trễ kiểm soát
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở
@@ -978,6 +982,7 @@
 	ComText_TT =	Khi không trong chế độ thô, các ký tự sau
 		được đối xử như một biến (những thứ sau ảnh hưởng đến
 		chỉ có chìa khóa tiếp theo):, +, ^, #
+	ControlDelayE_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi lệnh điều khiển thay đổi.
 	CoordPixel_TT =	Chế độ phối hợp
 	DefaultMacro_TT =	Chọn tập tin để tải về khởi động chương trình
 	EditPaste_TT =	Bột nhão dây ở vị trí dấu nháy / chèn
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Chèn Tổ hợp phím (Ctrl+Insert)
 	InsertKeyT_TT =	Chèn Tổ hợp phím
 	JoyKey_TT =	Nhấn một nút trên điều khiển
+	KeyDelayE_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi một phím gửi bởi Gửi và ControlSend.
 	LoopLVColor_TT =	Nhấn vào đây để chọn một màu
 	LUntil_TT =	Áp dụng một điều kiện để việc tiếp tục một vòng hoặc Đối với vòng lặp.
 	ManKey_TT =	Phím nóng để chơi vĩ mô "từng bước"
+	MouseDelayE_TT =	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi lần di chuyển chuột hoặc nhấn chuột.
 	MRel_TT =	Chuyển động tương đối so với vị trí hiện tại.
 		Hoặc nếu được sử dụng với điều khiển: Vị trí tương đối vào Control.
 	OSHK_TT =	Chọn Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Trả về true nếu chính là liên kết với một giá trị.
 	If	Quy định cụ thể các lệnh (s) để thực hiện nếu so sánh của một biến với một giá trị evalutes đúng sự thật. Khi có nhiều hơn một lệnh là hiện tại, đặt chúng trong một khối (niềng răng).
 	If (expression)	Quy định cụ thể các lệnh (s) để thực hiện nếu biểu thức đánh giá này đúng.
-	If A_Index	Kiểm tra nếu vòng lặp hiện tại Đá một quy định một số.
-	If Clipboard	Kiểm tra nếu văn bản Clipboard là Đá chuỗi đã xác định.
-	If ErrorLevel	Kiểm tra nếu một hình ảnh hoặc điểm ảnh quy định đã được tìm thấy trong màn hình.
+	If A_Index	Kiểm tra nếu vòng lặp hiện hành phù hợp với số lượng quy định.
+	If Clipboard	Kiểm tra nếu các văn bản Clipboard phù hợp với chuỗi quy định.
+	If ErrorLevel	Kiểm tra nếu một hình ảnh hoặc điểm ảnh định đã được tìm thấy trên màn hình.
 	If var [not] between	Kiểm tra xem nội dung của một biến có số lượng hoặc theo bảng chữ cái giữa hai giá trị (bao gồm).
 	If var [not] in / If var [not] contains MatchList	Kiểm tra xem nội dung của một biến phù hợp với một trong các mục trong một danh sách.
 	If var is [not] type	Kiểm tra xem nội dung của một biến là số, chữ hoa, vv
@@ -1347,10 +1354,12 @@
 	RunAs	Xác định một tập hợp các thông tin người dùng để sử dụng cho tất cả các ứng dụng tiếp theo của Run và RunWait. Yêu cầu Windows 2000/XP hoặc sau đó.
 	RunWait	Chạy một chương trình bên ngoài và chờ đợi cho đến khi nó kết thúc.
 	Send / SendRaw	Gửi tổ hợp phím mô phỏng và nhấp chuột vào cửa sổ hoạt động.
-	SendLevel	Điều khiển thiết bị bàn phím và chuột sự kiện nhân tạo được bỏ qua bởi các phím nóng và hotstrings.
 	SendMessage	Gửi tin nhắn đến một cửa sổ hoặc điều khiển và chờ đợi sự thừa nhận.
+	SendMode	
 	SetCapslockState	Thiết lập trạng thái của phím Capslock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
+	SetControlDelay	
 	SetKeyDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi một phím thường gửi Gửi hoặc ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Thiết lập trạng thái của phím NumLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
 	SetRegView	Cho phép lệnh đăng ký trong một kịch bản 32-bit để truy cập vào xem đăng ký 64-bit và ngược lại.
 	SetScrollLockState	Thiết lập trạng thái của phím ScrollLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.

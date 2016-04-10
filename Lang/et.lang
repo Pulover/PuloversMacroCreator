@@ -761,13 +761,17 @@
 	t_Lang203 =	Avastada Hidden Windows
 	t_Lang204 =	Avastada peidetud teksti
 	t_Lang205 =	Pealkiri Match režiim
-	t_Lang206 =	Pealkiri Match Speed
+	t_Lang206 =	Ära näita vigu
 	t_Lang207 =	Klient
 	t_Lang208 =	L&eidma
 	t_Lang209 =	A&sendama
-	t_Lang210 =	Ära näita vigu
-	t_Lang211 =	Klapid
-	t_Lang212 =	Ruumid
+	t_Lang210 =	Klapid
+	t_Lang211 =	Ruumid
+	t_Lang212 =	Klaviatuur ja hiir tegevusi
+	t_Lang213 =	Key Kirjuta režiimil
+	t_Lang214 =	Võti viivitus
+	t_Lang215 =	Hiire viivitus
+	t_Lang216 =	Kontrolli hilinemine
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avatud
@@ -978,6 +982,7 @@
 	ComText_TT =	Kui ei Toorrežiimis järgmisi märke
 		Käsitletakse modifikaatoreid (need modifikaatoreid mõjutada
 		Ainult juba järgmisel võti):!, +, ^, #
+	ControlDelayE_TT =	Määrab viivituse, mis toimub pärast iga kontrolli modifitseerivad käsk.
 	CoordPixel_TT =	Koordinaatide režiimil
 	DefaultMacro_TT =	Valige fail laadimiseks programmi käivitamisel
 	EditPaste_TT =	Pastad stringi katus / Lisamispositsiooni
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Sisestage Klahvivajutustoon (Ctrl + Insert)
 	InsertKeyT_TT =	Sisestage Klahvivajutustoon
 	JoyKey_TT =	Vajutage nuppu juhtkangi
+	KeyDelayE_TT =	Määrab viivituse, mis toimub pärast iga klahvivajutuse saadetud Saada ja ControlSend.
 	LoopLVColor_TT =	Kliki vali värv
 	LUntil_TT =	Kehtib tingimus, et jätkuks Loop või ahela.
 	ManKey_TT =	Kiirklahv mängida Macro "samm-sammult"
+	MouseDelayE_TT =	Määrab viivituse, mis toimub pärast iga hiire liigutamine või klõpsata.
 	MRel_TT =	Liikumised võrreldes praeguse positsiooni.
 		Või kui kasutada Kontroll: asend kontrolli all.
 	OSHK_TT =	Vali Macro
@@ -1281,8 +1288,8 @@
 	HasKey	Tagastab'tõene'kui Key seostatakse väärtus.
 	If	Määrab käsu (s) täita kui võrdlus muutuva väärtusega evalutes TRUE. Rohkem kui ühe mälus ei ole, pange need plokk (traksid).
 	If (expression)	Määrab käsu (s) täita, kui väljendus tulemus on tõsi.
-	If A_Index	Kontrollib, kas praegune loop iteratsiooni matchs määratud number.
-	If Clipboard	Kontrollib, kas lõikelauale tekst on matchs määratud stringi.
+	If A_Index	Kontrollib, kas praegune loop iteratsiooni vastab kindlale arvule.
+	If Clipboard	Kontrollib, kas lõikelaua teksti vastab määratud stringi.
 	If ErrorLevel	Kontroll kui konkreetne pilt või piksel leiti ekraanil.
 	If var [not] between	Kontrollib, kas muutuja sisu on arvuliselt või tähestikulises kahe väärtuse vahel (kaasa arvatud).
 	If var [not] in / If var [not] contains MatchList	Kontrollib, kas muutuja sisu sobi üks loendielemente.
@@ -1347,10 +1354,12 @@
 	RunAs	Määrab komplekt kasutaja andmed kasutada kogu järgneva kasutusalad Run ja RunWait. Vajab Windows 2000 / XP või hiljem.
 	RunWait	Töötab välise programmi ja ootab, kuni ta lõpetab.
 	Send / SendRaw	Saadab simuleeritud klahvivajutused ja hiireklõpsuga aktiivseks aken.
-	SendLevel	Controls mis kunstlik klaviatuur ja hiir sündmuste ignoreerib kiirklahvid ja hotstrings.
 	SendMessage	Saadab sõnumi akna või kontrolli ja ootab kinnitust.
+	SendMode	
 	SetCapslockState	Määrab seisund Capslock võti. Kas ka sundida võti jääda sisse või välja.
+	SetControlDelay	
 	SetKeyDelay	Määrab viivituse, mis toimub pärast iga klahvivajutuse saadetud Saada või ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Määrab seisund NumLock klahvi. Kas ka sundida võti jääda sisse või välja.
 	SetRegView	Võimaldab registri käskude 32-bitine skripti juurde 64-bitise registri arvates ja vastupidi.
 	SetScrollLockState	Määrab seisund ScrollLock võti. Kas ka sundida võti jääda sisse või välja.

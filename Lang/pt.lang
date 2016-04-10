@@ -761,13 +761,17 @@
 	t_Lang203 =	Detectar Janelas Ocultas
 	t_Lang204 =	Detectar Texto Oculto
 	t_Lang205 =	Modo De Correspondência De Título
-	t_Lang206 =	Velocidade De Correspondência De Título
+	t_Lang206 =	Não exibir erros
 	t_Lang207 =	Cliente
 	t_Lang208 =	L&ocalizar
 	t_Lang209 =	S&ubstituir
-	t_Lang210 =	Não exibir erros
-	t_Lang211 =	Tabs
-	t_Lang212 =	Espaços
+	t_Lang210 =	Tabs
+	t_Lang211 =	Espaços
+	t_Lang212 =	Ações de teclado e mouse
+	t_Lang213 =	Modo de envio de tecla
+	t_Lang214 =	Intervalo de tecla
+	t_Lang215 =	Intervalo de mous
+	t_Lang216 =	Intervalo de controle
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir
@@ -978,6 +982,7 @@
 	ComText_TT =	Quando não está em modo raw, os seguintes caracteres
 		são tradados como modificadores (estes modificadores afetam
 		somente o texto próximo à tecla): !, +, ^, #
+	ControlDelayE_TT =	Define o atraso que irá ocorrer após cada comando de modificação de controle.
 	CoordPixel_TT =	Modo de coordenada
 	DefaultMacro_TT =	Selecione um arquivo para abrir ao iniciar
 	EditPaste_TT =	Cola o Texto no ponto de inserção
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Inserir Tecla (Ctrl+Insert)
 	InsertKeyT_TT =	Inserir Tecla
 	JoyKey_TT =	Pressione um botão no joystick
+	KeyDelayE_TT =	Define o atraso que irá ocorrer após cada toque de tecla enviados por Enviar e ControlSend.
 	LoopLVColor_TT =	Clique para selecionar uma cor
 	LUntil_TT =	Aplica-se uma condição para a continuação de um loop ou For-loop.
 	ManKey_TT =	Atalho para executar uma Macro "passo-a-passo"
+	MouseDelayE_TT =	Define o atraso que irá ocorrer após cada movimento do mouse ou clique.
 	MRel_TT =	Movimentos relativos à posição atual.
 		Ou se usado em Controle: Posição relativa ao Controle.
 	OSHK_TT =	Selecionar Macro
@@ -1281,8 +1288,8 @@
 	HasKey	Retorna verdadeira se uma Chave está associada à um valor.
 	If	Especifica o comando (s) a ser executada se a comparação de uma variável para um valor resulte em VERDADEIRO. Quando mais de um comando está presente, coloque-os em um bloco (chaves).
 	If (expression)	Especifica o comando (s) para executar se a expressão for avaliada como VERDADEIRO.
-	If A_Index	Verifica se a iteração do loop atual é igual a um número específico.
-	If Clipboard	Verifica se o texto da área de transferência  é igual a uma sequência de caracteres especificada.
+	If A_Index	Verifica se a iteração do loop de corrente corresponde ao número especificado.
+	If Clipboard	Verifica se o texto da área de transferência corresponde a seqüência especificada.
 	If ErrorLevel	Verifica se uma imagem ou pixel especificado foi encontrado na tela.
 	If var [not] between	Verifica se o conteúdo de uma variável é numérica ou alfabeticamente entre dois valores (inclusive).
 	If var [not] in / If var [not] contains MatchList	Verifica se o conteúdo de uma variável corresponder a um dos itens em uma lista.
@@ -1347,10 +1354,12 @@
 	RunAs	Especifica um conjunto de credenciais de usuário a ser usado para todos os usos posteriores da Run e RunWait. Requer Windows 2000/XP ou posterior.
 	RunWait	Executa um programa externo e espera até que ele termine.
 	Send / SendRaw	Envia teclas simuladas e cliques do mouse para a janela ativa.
-	SendLevel	Controla quais eventos de teclado e mouse artificiais são ignorados por hotkeys e hotsequência de caracteres s.
 	SendMessage	Envia uma mensagem para uma janela ou controle e aguarda reconhecimento.
+	SendMode	
 	SetCapslockState	Define o estado da tecla Capslock. Também é possível forçar a chave para permanecer ligado ou desligado.
+	SetControlDelay	
 	SetKeyDelay	Define o atraso que irá ocorrer após cada keystroke enviado por enviar ou ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Define o estado da tecla NumLock. Também é possível forçar a chave para permanecer ligado ou desligado.
 	SetRegView	Permite que os comandos de registro em um roteiro de 32 bits para acessar a exibição do registro de 64-bit e vice-versa.
 	SetScrollLockState	Define o estado da chave ScrollLock. Também é possível forçar a chave para permanecer ligado ou desligado.

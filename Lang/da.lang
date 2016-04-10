@@ -761,13 +761,17 @@
 	t_Lang203 =	Opdage Skjulte Vinduer
 	t_Lang204 =	Opdage Skjult Tekst
 	t_Lang205 =	Title Match-Tilstand
-	t_Lang206 =	Title Match Hastighed
+	t_Lang206 =	Vis ikke fejl
 	t_Lang207 =	Klient
 	t_Lang208 =	F&ind
 	t_Lang209 =	E&rstat
-	t_Lang210 =	Vis ikke fejl
-	t_Lang211 =	Faner
-	t_Lang212 =	Rum
+	t_Lang210 =	Faner
+	t_Lang211 =	Rum
+	t_Lang212 =	Tastatur og mus handlinger
+	t_Lang213 =	Nøgle send tilstand
+	t_Lang214 =	Nøgle forsinkelse
+	t_Lang215 =	Mus forsinkelse
+	t_Lang216 =	Kontrol forsinkelse
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent
@@ -978,6 +982,7 @@
 	ComText_TT =	Når du ikke i rå tilstand, følgende tegn
 		behandles som modifikatorer (disse modifikatorer påvirker
 		kun den meget næste tast):!, +, ^, #
+	ControlDelayE_TT =	Indstiller forsinkelse, som vil opstå efter hver kontrol-modificerende kommando.
 	CoordPixel_TT =	Koordinere tilstand
 	DefaultMacro_TT =	Vælg fil at indlæse på programmets opstart
 	EditPaste_TT =	Indsætter String på indskudsmærke / indsæt position
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Indsæt Tastetryk (Ctrl+Insert)
 	InsertKeyT_TT =	Indsæt Tastetryk
 	JoyKey_TT =	Tryk på en knap på joysticket
+	KeyDelayE_TT =	Indstiller forsinkelse, som vil opstå efter hvert tastetryk sendt af Send og ControlSend.
 	LoopLVColor_TT =	Klik for at vælge en farve
 	LUntil_TT =	Anvender en betingelse for videreførelse af en Loop eller For-løkke.
 	ManKey_TT =	Genvejstast for at spille Macro "step-by-step"
+	MouseDelayE_TT =	Indstiller forsinkelse, som vil opstå efter hver mus bevægelse eller klik.
 	MRel_TT =	Bevægelser i forhold til den aktuelle position.
 		Eller hvis de bruges med Control: Position i forhold til kontrol.
 	OSHK_TT =	Vælge Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Returnerer true hvis Key er forbundet med en værdi.
 	If	Angiver kommandoen (r) at udføre, hvis sammenligningen af en variabel til en værdi evalutes til TRUE . Når mere end én kommando er til stede, vedlægge dem i en blok (seler) .
 	If (expression)	Angiver kommandoen (s) til at udføre, hvis et udtryk evalueres til SAND .
-	If A_Index	Kontrollerer om den aktuelle løkke iteration kampe et angivet et nummer.
-	If Clipboard	Kontrollerer om Udklipsholder teksten kampe den angivne streng .
-	If ErrorLevel	Tjekker, om en bestemt billede eller pixel blev fundet i skærmen.
+	If A_Index	Kontrollerer, om den aktuelle løkke iteration matcher det angivne antal.
+	If Clipboard	Kontrollerer om Udklipsholder tekst matcher den angivne streng.
+	If ErrorLevel	Tjekker om den angivne billede eller pixel er fundet på skærmen.
 	If var [not] between	Kontrollerer, om en variabels indhold er numerisk eller alfabetisk mellem to værdier (inklusive).
 	If var [not] in / If var [not] contains MatchList	Kontrollerer, om en variabels indhold matcher et af elementerne på en liste.
 	If var is [not] type	Kontrollerer , om en variabels indhold er numerisk , store osv.
@@ -1347,10 +1354,12 @@
 	RunAs	Angiver et sæt brugerlegitimationsoplysninger til brug for alle efterfølgende anvendelser af Run-og RunWait. Kræver Windows 2000/XP eller nyere.
 	RunWait	Kører et eksternt program, og venter, indtil den er færdig.
 	Send / SendRaw	Sender simulerede tastetryk og museklik til det aktive vindue.
-	SendLevel	Controls som kunstige tastatur og mus begivenheder ignoreret af genvejstaster og hotstrings.
 	SendMessage	Sender en besked til et vindue eller kontrol og venter på anerkendelse.
+	SendMode	
 	SetCapslockState	Indstiller tilstand Capslock tasten. Kan også tvinge nøglen til at blive på eller fra.
+	SetControlDelay	
 	SetKeyDelay	Indstiller forsinkelse, som vil opstå efter hvert tastetryk sendes af Send eller ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Indstiller tilstand Numlock-tasten. Kan også tvinge nøglen til at blive på eller fra.
 	SetRegView	Giver indskrive kommandoer i en 32-bit script at få adgang til 64-bit register visning og vice versa.
 	SetScrollLockState	Indstiller tilstand ScrollLock tasten. Kan også tvinge nøglen til at blive på eller fra.

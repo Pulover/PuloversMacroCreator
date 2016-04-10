@@ -761,13 +761,17 @@
 	t_Lang203 =	Odkrivanje Skritih Oken
 	t_Lang204 =	Odkriti Skrito Besedilo
 	t_Lang205 =	Način Tekmo Naslov
-	t_Lang206 =	Hitrost Tekmo Naslov
+	t_Lang206 =	Ne prikazati napak
 	t_Lang207 =	Client
 	t_Lang208 =	N&ajdi
 	t_Lang209 =	Za&menjajte
-	t_Lang210 =	Ne prikazati napak
-	t_Lang211 =	Zavihki
-	t_Lang212 =	Prostori
+	t_Lang210 =	Zavihki
+	t_Lang211 =	Prostori
+	t_Lang212 =	Tipkovnico in miško ukrepi
+	t_Lang213 =	Ključni način za pošiljanje
+	t_Lang214 =	Ključ zamudo
+	t_Lang215 =	Zamuda miške
+	t_Lang216 =	Nadzor zamudo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite
@@ -978,6 +982,7 @@
 	ComText_TT =	Ko ni v surovem načinu naslednje znake
 		se obravnavajo kot modifikatorji (ti modifikatorji vplivajo
 		samo že naslednji ključ)!, +, ^ #
+	ControlDelayE_TT =	Nastavi zakasnitev, da se bo zgodilo po vsakem ukazu-kontrolno spremembo.
 	CoordPixel_TT =	Način usklajuje
 	DefaultMacro_TT =	Izberite datoteko za nalaganje ob zagonu programa
 	EditPaste_TT =	Paste String na položaju strešica / vstaviti
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Vstavite Keystroke (Ctrl+Insert)
 	InsertKeyT_TT =	Vstavite Keystroke
 	JoyKey_TT =	Pritisnite gumb na ročici
+	KeyDelayE_TT =	Nastavi zakasnitev, da se bo zgodilo po vsakem pritisku, ki ga Pošlji in ControlSend poslano.
 	LoopLVColor_TT =	Kliknite, da izberete barvo
 	LUntil_TT =	Velja pogoj za nadaljevanje Loop ali za-loop.
 	ManKey_TT =	Bližnjica za predvajanje makrov "korak za korakom"
+	MouseDelayE_TT =	Nastavi zakasnitev, da se bo zgodilo po vsakem premiku miške ali pa kliknite.
 	MRel_TT =	Premikanje glede na trenutni položaj.
 		Ali pa, če se uporablja z regulacijo: lega glede na kontrolo.
 	OSHK_TT =	Izberite makro
@@ -1281,9 +1288,9 @@
 	HasKey	Vrne true, če je Key povezana z vrednostjo.
 	If	Določa ukaz (s) izvaja, če primerjava spremenljivko na vrednost evalutes na TRUE. Če je prisoten več kot en ukaz, jih priloži v bloku (oporniki).
 	If (expression)	Določa ukaz (s) izvaja, če je vrednost izraza TRUE.
-	If A_Index	Preveri, če trenutni iteraciji zanke matchs na določeno številko.
-	If Clipboard	Preveri, ali je besedilo odložišče je matchs določen niz.
-	If ErrorLevel	Preveri, če je določeno podobo ali pikslom je bilo na zaslonu.
+	If A_Index	Preveri, ali tokovno zanko ponovitev ujema z določeno številko.
+	If Clipboard	Preveri, ali je odložišče besedilo ujema določen niz.
+	If ErrorLevel	Preveri, če je bilo ugotovljeno določen slika ali pik na zaslonu.
 	If var [not] between	Preverièe vsebine s spremenljivo so številčno ali abecedno med dvema vrednostma (vključno).
 	If var [not] in / If var [not] contains MatchList	Preverièe vsebine s spremenljivo ujemajo enega od elementov na seznamu.
 	If var is [not] type	Preveri, ali so vsebina spremenljivka je številčna, z velikimi črkami, itd
@@ -1347,10 +1354,12 @@
 	RunAs	Določa vrsto uporabniških poverilnic za uporabo pri vseh nadaljnjih uporabah Run RunWait. Zahteva Windows 2000/XP ali novejšo.
 	RunWait	Zažene zunanji program in čaka, dokler se ne konča.
 	Send / SendRaw	Pošlje simulirane tipkanja in klikov z miško na aktivnem oknu.
-	SendLevel	Nadzor, ki so umetno tipkovnica in miška dogodkov ignorira bližnjice in hotstrings.
 	SendMessage	Pošlje sporočilo na okno ali nadzora in čaka na potrditev.
+	SendMode	
 	SetCapslockState	Nastavi stanje tipke CapsLock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
+	SetControlDelay	
 	SetKeyDelay	Nastavi zakasnitev, da se bo zgodilo po vsakem pritisku, ki ga pošiljate ali ControlSend poslano.
+	SetMouseDelay	
 	SetNumlockState	Nastavi stanje tipke NumLock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
 	SetRegView	Omogoča registra ukazi v 32-bitnem scenarij za dostop do 64-bitni pogled registra in obratno.
 	SetScrollLockState	Nastavi stanje tipke za Scrolllock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.

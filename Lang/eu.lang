@@ -761,13 +761,17 @@
 	t_Lang203 =	Detektatu Ezkutuko Windows
 	t_Lang204 =	Detektatu Ezkutuko Testua
 	t_Lang205 =	Izenburua Match modua
-	t_Lang206 =	Izenburua Match Abiadura
+	t_Lang206 =	Ez bistaratu erroreak
 	t_Lang207 =	Bezeroa
 	t_Lang208 =	A&urkitu
 	t_Lang209 =	O&rdeztu
-	t_Lang210 =	Ez bistaratu erroreak
-	t_Lang211 =	Tabs
-	t_Lang212 =	Espazioak
+	t_Lang210 =	Tabs
+	t_Lang211 =	Espazioak
+	t_Lang212 =	Teklatua eta saguaren ekintzak
+	t_Lang213 =	Gakoa bidali modua
+	t_Lang214 =	Gakoa atzerapena
+	t_Lang215 =	Saguaren atzerapena
+	t_Lang216 =	Kontrola atzerapena
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -978,6 +982,7 @@
 	ComText_TT =	Noiz ez modu gordinean, pertsonaiak honako
 		Modifikatzaile gisa tratatzen dira (modifikatzaile horiek eraginik
 		Bakarrik oso hurrengo tekla):!, +, ^, #
+	ControlDelayE_TT =	Atzerapena izango duten kontrol-aldatzea komando bakoitzaren ondoren gertatzen ezartzen du.
 	CoordPixel_TT =	Koordenatuen modua
 	DefaultMacro_TT =	Aukera ezazu fitxategi-programarik abioan kargatu
 	EditPaste_TT =	Pastak du kurtsore / txertatze posizioan String
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Txertatu Tekleatzeko (Ctrl + Insert)
 	InsertKeyT_TT =	Txertatu Tekleatzeko
 	JoyKey_TT =	Sakatu botoi bat joystick buruzko
+	KeyDelayE_TT =	atzerapena izango dela Send eta ControlSend bitartez bidaltzeko tekla bakoitzaren ondoren gertatzen ezartzen du.
 	LoopLVColor_TT =	Egin klik kolorea hautatzeko
 	LUntil_TT =	Baldintza bat aplikatzen du Loop baten jarraipena edo For begizta.
 	ManKey_TT =	Hotkey jolastu Makro "urratsez urrats"
+	MouseDelayE_TT =	atzerapena izango dela saguaren mugimendu bakoitzaren ondoren gertatzen, edo egin klik ezartzen du.
 	MRel_TT =	Mugimenduak egungo posizio erlatiboa.
 		Edo Kontrol erabiltzen bada: Kargua erlatiboa kontrolatzeko.
 	OSHK_TT =	Aukeratu Makro
@@ -1281,9 +1288,9 @@
 	HasKey	Egia itzultzen gakoa balio bat lotuta.
 	If	Zehazten komandoa (k) egin nahi izanez gero, aldagai baten konparazioa balio TRUE evalutes izateko. Noiz komando bat baino gehiago da, erantsi horiek bloke bat (giltza) ere.
 	If (expression)	Komandoa (k) adierazpen bat TRUE bada burutzeko zehazten.
-	If A_Index	Checks uneko begizta-iterazio betetzen dituen zenbaki bat zehaztu bada.
-	If Clipboard	Checks Arbela testua bada zehaztutako katea bat betetzen dituen.
-	If ErrorLevel	Egiaztatzen bada edo irudia pixel bat zehaztu pantailan aurkitu zen.
+	If A_Index	Checks uneko begizta-iterazio kopuruaren badatoz.
+	If Clipboard	Oztopoen Clipboard testu zehaztutako katea badatoz.
+	If ErrorLevel	Egiaztatzen bada irudi edo pixel berezi bateko pantailan ageri zen.
 	If var [not] between	Checks aldagai baten edukiak ala zenbakiz edo alfabetikoki bi balioak (biak barne) arteko daude.
 	If var [not] in / If var [not] contains MatchList	Checks aldagai baten edukiak ala etortzeko zerrenda bateko elementu bat.
 	If var is [not] type	Checks aldagai baten edukien ote diren zenbaki, maiuskulaz, etc.
@@ -1347,10 +1354,12 @@
 	RunAs	Erabiltzaile kredentzial multzo bat ondorengo Run eta RunWait erabilera guztiak erabili behar den zehazten. Eskatzen Windows 2000 / XP edo geroago.
 	RunWait	Kanpoko programaren bat exekutatzen, eta itxaroten amaitu arte.
 	Send / SendRaw	Simulatu zanpatze eta sagu klik bidaltzen du lehio aktiboan.
-	SendLevel	Teklatua eta saguaren artifizial ekitaldiak teklak eta hotstrings arabera ez ikusi egingo zaie Kontrolak.
 	SendMessage	Mezu bat bidaltzen leiho bat edo kontrol eta aitortzea itxaroten.
+	SendMode	
 	SetCapslockState	BlokMaius gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.
+	SetControlDelay	
 	SetKeyDelay	Atzerapena izango dela Send edo ControlSend bitartez bidaltzeko tekla bakoitzaren ondoren gertatzen ezartzen du.
+	SetMouseDelay	
 	SetNumlockState	Blok zenb gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.
 	SetRegView	Erregistroko 32-bit gidoi batean komandoak 64-bit erregistroan ikuspegia sartzeko eta alderantziz ahalbidetzen du.
 	SetScrollLockState	Korr gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.

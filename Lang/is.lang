@@ -761,13 +761,17 @@
 	t_Lang203 =	Uppgötva falinn Windows
 	t_Lang204 =	Greina falinn texti
 	t_Lang205 =	Title Match Mode
-	t_Lang206 =	Title Match Speed
+	t_Lang206 =	Ekki sýna villur
 	t_Lang207 =	Viðskiptavinur
 	t_Lang208 =	F&inna
 	t_Lang209 =	S&kipta
-	t_Lang210 =	Ekki sýna villur
-	t_Lang211 =	Flipar
-	t_Lang212 =	Rými
+	t_Lang210 =	Flipar
+	t_Lang211 =	Rými
+	t_Lang212 =	Lyklaborð og mús aðgerðir
+	t_Lang213 =	Lykillinn senda ham
+	t_Lang214 =	Lykillinn seinkun
+	t_Lang215 =	Mús seinkun
+	t_Lang216 =	Stjórn seinkun
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -978,6 +982,7 @@
 	ComText_TT =	Þegar það er ekki í hrár ham, eftirfarandi stafi
 		Eru meðhöndlaðar sem breytilyklum (þessir breytilykillinn áhrif
 		Aðeins mjög næsta lykill):, +, ^, #
+	ControlDelayE_TT =	Setur töf sem mun eiga sér stað eftir hverja stjórnstöð-breyta stjórn.
 	CoordPixel_TT =	Samræma ham
 	DefaultMacro_TT =	Veldu skrá til að hlaða á dagskrá ræsingu
 	EditPaste_TT =	Deig String á bendillinn / insert stöðu
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Setja Ásláttur (Ctrl + Insert)
 	InsertKeyT_TT =	Setja inn Ásláttur
 	JoyKey_TT =	Ýta á hnapp á stýripinna
+	KeyDelayE_TT =	Setur töf sem mun eiga sér stað eftir hverja ásláttur sendi Senda og ControlSend.
 	LoopLVColor_TT =	Smelltu til að velja lit
 	LUntil_TT =	Gildir skilyrði til áframhaldandi lykkju eða For-lykkju.
 	ManKey_TT =	Hotkey til að spila Macro "skref-fyrir-skref"
+	MouseDelayE_TT =	Setur töf sem mun eiga sér stað eftir hverja mús hreyfing eða smelltu.
 	MRel_TT =	Hreyfingar miðað við núverandi stöðu.
 		Eða ef það er notað með Control: Position miðað við Stjórna.
 	OSHK_TT =	Veldu Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Skilar True ef Key tengist gildi.
 	If	Tilgreinir stjórn (s) til að framkvæma ef samanburður á breytu að verðmæti evalutes að sanna. Þegar fleiri en einn stjórn er til staðar, láta þá í blokk (axlabönd).
 	If (expression)	Tilgreinir skipunina (s) til að framkvæma ef tjáning metur að SATT.
-	If A_Index	Eftirlit ef núverandi lykkja endurtekning matchs tiltekinn fjölda.
-	If Clipboard	Eftirlit ef Klemmuspjald textinn er matchs tiltekinn streng.
-	If ErrorLevel	Athugar ef tilgreindur mynd eða pixla fannst í skjáinn.
+	If A_Index	Eftirlit ef núverandi lykkja endurtekning passar tiltekinn fjölda.
+	If Clipboard	Eftirlit ef Klemmuspjald textinn passar tilgreint band.
+	If ErrorLevel	Athugar ef tilgreindur mynd eða pixla fannst á skjánum.
 	If var [not] between	Athugar hvort innihald breytilegum eru tölulega eða í stafrófsröð milli tveggja gilda (innifalið).
 	If var [not] in / If var [not] contains MatchList	Athugar hvort innihald breytilegum samsvara eitt af þeim atriðum í listanum.
 	If var is [not] type	Athugar hvort innihald breytilegum eru tölustafir, hástafir, o.fl.
@@ -1347,10 +1354,12 @@
 	RunAs	Skilgreinir sett af notanda persónuskilríki til að nota fyrir allar síðari notkun Run og RunWait. Krefst Windows 2000 / XP eða nýrri.
 	RunWait	Rekur utanaðkomandi forrit og bíður þangað til það lýkur.
 	Send / SendRaw	Sendir endurprentanir mínútum og mús smelli til virks glugga.
-	SendLevel	Controls sem gervi lyklaborð og mús viðburðir eru hunsuð af hotkeys og hotstrings.
 	SendMessage	Sendir skilaboð til glugga eða stjórn og bíður eftir staðfestingu.
+	SendMode	
 	SetCapslockState	Setur ástand CapsLock takkanum. Einnig er hægt að þvinga lykilinn til að vera á eða burt.
+	SetControlDelay	
 	SetKeyDelay	Setur töf sem mun eiga sér stað eftir hverja ásláttur sendi Senda eða ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Setur ástand NumLock takkann. Einnig er hægt að þvinga lykilinn til að vera á eða burt.
 	SetRegView	Leyfir skrásetning skipanir í 32-bita handrit að opna 64-bita skrásetning sýn og öfugt.
 	SetScrollLockState	Setur ástand ScrollLock takkann. Einnig er hægt að þvinga lykilinn til að vera á eða burt.

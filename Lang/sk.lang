@@ -761,13 +761,17 @@
 	t_Lang203 =	Odhaliť Skryté Okná
 	t_Lang204 =	Odhaliť Skrytý Text
 	t_Lang205 =	Režim O Titul Zápas
-	t_Lang206 =	Názov Rýchlosť Zápas
+	t_Lang206 =	Nezobrazujú chyby
 	t_Lang207 =	Zákazník
 	t_Lang208 =	N&ájsť
 	t_Lang209 =	Na&hradiť
-	t_Lang210 =	Nezobrazujú chyby
-	t_Lang211 =	Karty
-	t_Lang212 =	Priestory
+	t_Lang210 =	Karty
+	t_Lang211 =	Priestory
+	t_Lang212 =	Klávesnicu a myš akcie
+	t_Lang213 =	Key mode send
+	t_Lang214 =	Kľúčovým oneskorenie
+	t_Lang215 =	Oneskorenie myš
+	t_Lang216 =	Ovládanie meškanie
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené
@@ -978,6 +982,7 @@
 	ComText_TT =	Ak nie je v režime RAW, nasledujúce znaky
 		sa zaobchádza ako modifikátory (tieto modifikátory ovplyvňujú
 		len to ďalší kľúč):!, +, ^ #
+	ControlDelayE_TT =	Nastavuje oneskorenie, ktoré nastane po každom príkaze riadiaceho modifikujúce.
 	CoordPixel_TT =	Koordinovať režim
 	DefaultMacro_TT =	Vyberte súbor, ktorý chcete nahrať na štarte programu
 	EditPaste_TT =	Pasty String na striešky / vlož pozície
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Vložte stlačenie klávesy (Ctrl+Insert)
 	InsertKeyT_TT =	Vložte stlačenie klávesy
 	JoyKey_TT =	Stlačte tlačidlo na joysticku
+	KeyDelayE_TT =	Nastavuje oneskorenie, ktoré nastane po každom stlačení tlačidla zaslanej odosielať a ControlSend.
 	LoopLVColor_TT =	Kliknutím vyberte farbu
 	LUntil_TT =	Platí podmienku pre pokračovanie Loop alebo cyklus for.
 	ManKey_TT =	Klávesová skratka pre prehrávanie makra "krok-za-krokom"
+	MouseDelayE_TT =	Nastavuje oneskorenie, ktoré nastane po každom pohybe myši alebo.
 	MRel_TT =	Pohyby vzhľadom k aktuálnej pozícii.
 		Alebo, ak sú použité s ovládaním: Pozícia v porovnaní s kontrolou.
 	OSHK_TT =	Vyberte makro
@@ -1281,9 +1288,9 @@
 	HasKey	Vracia true, ak kľúč je spojený s hodnotou.
 	If	Určuje príkaz (y) na vykonanie, ak porovnanie premennej na hodnotu evalutes na TRUE. Pri viac ako jeden príkaz je k dispozícii, je uzavrieť do bloku (rovnátka).
 	If (expression)	Určuje príkaz (y) na vykonanie, pokiaľ výraz vyhodnotený ako PRAVDA.
-	If A_Index	Kontroluje, či aktuálna iterácii slučky matchs na zadané číslo.
-	If Clipboard	Skontroluje, či je schránka text je matchs zadaný reťazec.
-	If ErrorLevel	Skontroluje, či zadané obrázku alebo pixelu bol nájdený na obrazovke.
+	If A_Index	Kontroluje, či je aktuálny slučky iterácie zodpovedá určitý počet.
+	If Clipboard	Skontroluje, či je v schránke texte zodpovedá zadanému reťazcu.
+	If ErrorLevel	Kontroluje, či bolo nájdené určité imidž alebo pixel na obrazovke.
 	If var [not] between	Kontroly, či premenná je obsahom sú číselne alebo abecedne medzi dvoma hodnotami (vrátane).
 	If var [not] in / If var [not] contains MatchList	Kontroly, či premenná je obsahom zodpovedať na jednu z položiek v zozname.
 	If var is [not] type	Skontroluje, či premenná je obsah sú číselné, veľká, atď
@@ -1347,10 +1354,12 @@
 	RunAs	Určuje sadu užívateľských poverenia použiť pre všetky ďalšie použitie jazdy a RunWait. Vyžaduje systém Windows 2000/XP alebo novší.
 	RunWait	Spustí externý program, a čaká, až to skončí.
 	Send / SendRaw	Odošle simulované stlačenia klávesov a kliknutí myšou na aktívne okno.
-	SendLevel	Ovládacie prvky, ktoré umelé klávesnice a myši udalosti sú ignorované klávesové skratky a hotstrings.
 	SendMessage	Odošle správu do okna alebo ovládací prvok a čaká na potvrdenie.
+	SendMode	
 	SetCapslockState	Nastaví stav klávesu CapsLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
+	SetControlDelay	
 	SetKeyDelay	Nastavuje oneskorenie, dôjde po každom stlačení tlačidla Odoslať alebo zaslanej ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Nastaví stav klávesu NumLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
 	SetRegView	Umožňuje registra príkazy v 32-bitovej skript pre prístup k 64-bit registra názor a naopak.
 	SetScrollLockState	Nastaví stav klávesy ScrollLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.

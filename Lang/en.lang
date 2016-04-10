@@ -761,13 +761,17 @@
 	t_Lang203 =	Detect Hidden Windows
 	t_Lang204 =	Detect Hidden Text
 	t_Lang205 =	Title Match Mode
-	t_Lang206 =	Title Match Speed
+	t_Lang206 =	Do not display errors
 	t_Lang207 =	Client
 	t_Lang208 =	F&ind
 	t_Lang209 =	R&eplace
-	t_Lang210 =	Do not display errors
-	t_Lang211 =	Tabs
-	t_Lang212 =	Spaces
+	t_Lang210 =	Tabs
+	t_Lang211 =	Spaces
+	t_Lang212 =	Keyboard and mouse actions
+	t_Lang213 =	Key send mode
+	t_Lang214 =	Key delay
+	t_Lang215 =	Mouse delay
+	t_Lang216 =	Control delay
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
@@ -978,6 +982,7 @@
 	ComText_TT =	When not in raw mode, the following characters
 		are treated as modifiers (these modifiers affect
 		only the very next key): !, +, ^, #
+	ControlDelayE_TT =	Sets the delay that will occur after each control-modifying command.
 	CoordPixel_TT =	Coordinate mode
 	DefaultMacro_TT =	Select file to load on program startup
 	EditPaste_TT =	Pastes String at the caret/insert position
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Insert Keystroke (Ctrl+Insert)
 	InsertKeyT_TT =	Insert Keystroke
 	JoyKey_TT =	Press a button on the joystick
+	KeyDelayE_TT =	Sets the delay that will occur after each keystroke sent by Send and ControlSend.
 	LoopLVColor_TT =	Click to pick a color
 	LUntil_TT =	Applies a condition to the continuation of a Loop or For-loop.
 	ManKey_TT =	Hotkey to play Macro "step-by-step"
+	MouseDelayE_TT =	Sets the delay that will occur after each mouse movement or click.
 	MRel_TT =	Movements relative to current position.
 		Or if used with Control: Position relative to Control.
 	OSHK_TT =	Select Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Returns true if Key is associated with a value.
 	If	Specifies the command(s) to perform if the comparison of a variable to a value evalutes to TRUE. When more than one command is present, enclose them in a block (braces).
 	If (expression)	Specifies the command(s) to perform if an expression evaluates to TRUE.
-	If A_Index	Checks if the current loop iteration matchs a specified a number.
-	If Clipboard	Checks if the Clipboard text is matchs a specified string.
-	If ErrorLevel	Checks if a specified image or pixel was found in the screen.
+	If A_Index	Checks if the current loop iteration matches the specified number.
+	If Clipboard	Checks if the Clipboard text matches the specified string.
+	If ErrorLevel	Checks if a specified image or pixel was found on the screen.
 	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
 	If var [not] in / If var [not] contains MatchList	Checks whether a variable's contents match one of the items in a list.
 	If var is [not] type	Checks whether a variable's contents are numeric, uppercase, etc.
@@ -1347,10 +1354,12 @@
 	RunAs	Specifies a set of user credentials to use for all subsequent uses of Run and RunWait. Requires Windows 2000/XP or later.
 	RunWait	Runs an external program and waits until it finishes.
 	Send / SendRaw	Sends simulated keystrokes and mouse clicks to the active window.
-	SendLevel	Controls which artificial keyboard and mouse events are ignored by hotkeys and hotstrings.
 	SendMessage	Sends a message to a window or control and waits for acknowledgement.
+	SendMode	Makes Send synonymous with SendInput or SendPlay rather than the default (SendEvent). Also makes Click and MouseMove/Click/Drag use the specified method.
 	SetCapslockState	Sets the state of the Capslock key. Can also force the key to stay on or off.
+	SetControlDelay	Sets the delay that will occur after each control-modifying command.
 	SetKeyDelay	Sets the delay that will occur after each keystroke sent by Send or ControlSend.
+	SetMouseDelay	Sets the delay that will occur after each mouse movement or click.
 	SetNumlockState	Sets the state of the Numlock key. Can also force the key to stay on or off.
 	SetRegView	Allows registry commands in a 32-bit script to access the 64-bit registry view and vice versa.
 	SetScrollLockState	Sets the state of the Scrolllock key. Can also force the key to stay on or off.

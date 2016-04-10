@@ -761,13 +761,17 @@
 	t_Lang203 =	Thola Hidden Windows
 	t_Lang204 =	Thola Umbhalo Ofihlekile
 	t_Lang205 =	Isihloko Match Mode
-	t_Lang206 =	Isihloko Match Speed
+	t_Lang206 =	Musa ukubonisa amaphutha
 	t_Lang207 =	Client
 	t_Lang208 =	T&hola
 	t_Lang209 =	M&iselela
-	t_Lang210 =	Musa ukubonisa amaphutha
-	t_Lang211 =	Amathebhu
-	t_Lang212 =	Izikhala
+	t_Lang210 =	Amathebhu
+	t_Lang211 =	Izikhala
+	t_Lang212 =	Ikhibhodi and mouse nezenzo
+	t_Lang213 =	Ukhiye imodi yokuthumela
+	t_Lang214 =	Kokulibala key
+	t_Lang215 =	Mouse kokulibala
+	t_Lang216 =	Isilawuli kokulibala
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula
@@ -978,6 +982,7 @@
 	ComText_TT =	Lapho cha kwimodi eluhlaza, lokhu okulandelayo abalingiswa
 		Ziphathwa njengoba modifiers (lezi modifiers ezithinta
 		Kuphela ikhi olulandelayo):, +, ^ #
+	ControlDelayE_TT =	Imisa kokulibala ezizokwenzeka ngemva ngamunye myalo control-ukulungisa.
 	CoordPixel_TT =	Ukudidiyela mode
 	DefaultMacro_TT =	Khetha ifayela ukulayisha ohlelweni sokuqalisa
 	EditPaste_TT =	Ayinhlama String at the lokufaka / yokufaka isikhundla
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Faka Keystroke (Ctrl + Faka)
 	InsertKeyT_TT =	Faka Keystroke
 	JoyKey_TT =	Cindezela inkinobho on the induku yokudlala
+	KeyDelayE_TT =	Imisa kokulibala ezizokwenzeka ngemva keystroke ngamunye wathumela by Thumela bese ControlSend.
 	LoopLVColor_TT =	Chofoza ukuze ukhethe umbala
 	LUntil_TT =	Kusebenza a isimo ukuqhubeka Loop noma For-loop.
 	ManKey_TT =	Hotkey ukudlala Macro "step-by-step"
+	MouseDelayE_TT =	Imisa kokulibala ezizokwenzeka ngemva ukunyakaza igundane ngamunye noma chofoza.
 	MRel_TT =	Ukunyakaza mayelana nesimo samanje.
 		Noma uma lusetshenziswa Control: Isikhundla isihlobo Ukulawula.
 	OSHK_TT =	Khetha Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Returns true if Key is associated with a value.
 	If	Specifies the command(s) to perform if the comparison of a variable to a value evalutes to TRUE. When more than one command is present, enclose them in a block (braces).
 	If (expression)	Specifies the command(s) to perform if an expression evaluates to TRUE.
-	If A_Index	Checks if the current loop iteration matchs a specified a number.
-	If Clipboard	Checks if the Clipboard text is matchs a specified string.
-	If ErrorLevel	Checks if a specified image or pixel was found in the screen.
+	If A_Index	Amasheke uma wamanje loop kuphindelelwa ifanelana inombolo ebekiwe.
+	If Clipboard	Amasheke uma umbhalo lokunamathisela ifanelana string ecacisiwe.
+	If ErrorLevel	Amasheke uma isithombe noma i-pixel ye esibekiwe watholakala esibukweni.
 	If var [not] between	Checks whether a variable's contents are numerically or alphabetically between two values (inclusive).
 	If var [not] in / If var [not] contains MatchList	Checks whether a variable's contents match one of the items in a list.
 	If var is [not] type	Checks whether a variable's contents are numeric, uppercase, etc.
@@ -1347,10 +1354,12 @@
 	RunAs	Specifies a set of user credentials to use for all subsequent uses of Run and RunWait. Requires Windows 2000/XP or later.
 	RunWait	Runs an external program and waits until it finishes.
 	Send / SendRaw	Sends simulated keystrokes and mouse clicks to the active window.
-	SendLevel	Controls which artificial keyboard and mouse events are ignored by hotkeys and hotstrings.
 	SendMessage	Sends a message to a window or control and waits for acknowledgement.
+	SendMode	
 	SetCapslockState	Sets the state of the Capslock key. Can also force the key to stay on or off.
+	SetControlDelay	
 	SetKeyDelay	Sets the delay that will occur after each keystroke sent by Send or ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Sets the state of the Numlock key. Can also force the key to stay on or off.
 	SetRegView	Allows registry commands in a 32-bit script to access the 64-bit registry view and vice versa.
 	SetScrollLockState	Sets the state of the Scrolllock key. Can also force the key to stay on or off.

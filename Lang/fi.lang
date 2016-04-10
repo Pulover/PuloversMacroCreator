@@ -761,13 +761,17 @@
 	t_Lang203 =	Piileviä Ikkunat
 	t_Lang204 =	Havaita Piilotekstiä
 	t_Lang205 =	Title Vastaavuustila
-	t_Lang206 =	Title Ottelu Nopeus
+	t_Lang206 =	Älä näytä virheitä
 	t_Lang207 =	Asiakas
 	t_Lang208 =	L&öytää
 	t_Lang209 =	K&orvata
-	t_Lang210 =	Älä näytä virheitä
-	t_Lang211 =	Välilehdet
-	t_Lang212 =	Tilat
+	t_Lang210 =	Välilehdet
+	t_Lang211 =	Tilat
+	t_Lang212 =	Näppäimistö ja hiiri toimia
+	t_Lang213 =	Key lähetystilan
+	t_Lang214 =	Key viive
+	t_Lang215 =	Hiiri viive
+	t_Lang216 =	Ohjaus viive
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata
@@ -978,6 +982,7 @@
 	ComText_TT =	Kun se ei ole raaka-tilassa, seuraavat merkit
 		käsitellään määritteet (nämä määritteet vaikuttavat
 		vain hyvin seuraava näppäin):!, +, ^, #
+	ControlDelayE_TT =	Asettaa viive, joka tapahtuu jokaisen valvonta-muokkaamalla komento.
 	CoordPixel_TT =	Koordinoida tilassa
 	DefaultMacro_TT =	Valitse ladattava tiedosto on ohjelman käynnistyessä
 	EditPaste_TT =	Tahnat String at sirkumfleksi / insertti asentoon
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Aseta Näppäilyn (Ctrl+Insert)
 	InsertKeyT_TT =	Aseta Näppäilyn
 	JoyKey_TT =	Paina painiketta joystick
+	KeyDelayE_TT =	Asettaa viive, joka tapahtuu jokaisen näppäinpainalluksen jälkeen lähettämät Lähetä ja ControlSend.
 	LoopLVColor_TT =	Klikkaa valita värin
 	LUntil_TT =	Koskee kunnossa jatkoa Loop tai silmukan.
 	ManKey_TT =	Pikanäppäin pelata Macro "askel-askeleelta"
+	MouseDelayE_TT =	Asettaa viive, joka tapahtuu jokaisen hiiren liikkeitä tai napsauttamalla.
 	MRel_TT =	Liikkeet suhteessa nykyiseen asentoon.
 		Tai jos käytetään ohjaus: Asema suhteessa kontrolliin.
 	OSHK_TT =	Valitse Makro
@@ -1281,9 +1288,9 @@
 	HasKey	Palauttaa true jos Key liittyy arvo.
 	If	Määrittääkomennon (t) suorittaa , josvertailumuuttujanarvo evalutes TOSI . Kun useampi kuin yksi komento on läsnä , kirjoita nelohko (olkaimet) .
 	If (expression)	Määrittääkomennon (t) suorittaa , joslauseke on TOSI .
-	If A_Index	Tarkastukset josvirtasilmukkaan iteraatio matchsmääritettynumero.
-	If Clipboard	Tarkastukset josleikepöydälle teksti on matchsmääritettyä merkkijonoa .
-	If ErrorLevel	Tarkistaa, onko tietyn kuvan tai pikseli havaittiin näytöllä .
+	If A_Index	Tarkistukset jos virtasilmukan iteraation vastaa tietty määrä.
+	If Clipboard	Tarkistaa, onko leikepöydälle teksti vastaa määritettyä merkkijonoa.
+	If ErrorLevel	Tarkistaa, onko tietyn kuvan tai pikseli todettiin näytöllä.
 	If var [not] between	Tarkistaa, onkomuuttujan sisältöä ovat numeerisesti tai aakkosjärjestyksessä kahden arvon välillä (mukaan lukien) .
 	If var [not] in / If var [not] contains MatchList	Tarkistaa, onkomuuttujan sisältö vastaa yksiluettelon kohteita .
 	If var is [not] type	Tarkistaa, onkomuuttujan sisältöä ovat numeerisia , isoja, jne.
@@ -1347,10 +1354,12 @@
 	RunAs	Määrittelee joukon käyttäjän kirjautumistiedot myöhempiä käyttökertoja Run ja RunWait. Vaatii Windows 2000/XP tai uudempi.
 	RunWait	Toimii ulkoinen ohjelma ja odottaa kunnes se on valmis.
 	Send / SendRaw	Lähettää simuloituja näppäimistön ja hiiren klikkauksella aktiivisen ikkunan.
-	SendLevel	Valvontaa, joka keinotekoinen näppäimistön ja hiiren tapahtumia ohitetaan pikanäppäimiä ja hotstrings.
 	SendMessage	Lähettää viestin ikkuna tai valvontaa ja odottaa kuittausta.
+	SendMode	
 	SetCapslockState	Asettaa tilan Capslock-näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
+	SetControlDelay	
 	SetKeyDelay	Asettaa viive, joka esiintyy jokaisen näppäilyn jälkeen lähetetään Lähetä tai ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Asettaa tila Numlock-näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
 	SetRegView	Mahdollistaa rekisterin komennot 32-bittinen script käyttää 64-bittinen rekisterin mieltä ja päinvastoin.
 	SetScrollLockState	Asettaa tila ScrollLock näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.

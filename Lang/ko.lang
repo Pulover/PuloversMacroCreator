@@ -761,13 +761,17 @@
 	t_Lang203 =	숨겨진 창을 검출
 	t_Lang204 =	숨겨진 텍스트를 검색
 	t_Lang205 =	타이틀 매치 모드
-	t_Lang206 =	타이틀 매치 속도
+	t_Lang206 =	오류를 표시하지 않음
 	t_Lang207 =	고객
 	t_Lang208 =	발견(&I)
 	t_Lang209 =	교체(&E)
-	t_Lang210 =	오류를 표시하지 않음
-	t_Lang211 =	탭
-	t_Lang212 =	공간
+	t_Lang210 =	탭
+	t_Lang211 =	공간
+	t_Lang212 =	키보드 및 마우스 동작
+	t_Lang213 =	키 전송 모드
+	t_Lang214 =	키 지연
+	t_Lang215 =	마우스 지연
+	t_Lang216 =	제어 지연
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기
@@ -978,6 +982,7 @@
 	ComText_TT =	하지 않을 경우 원시 모드 (Raw Mode)에서, 다음 문자
 		수식 (이 수식 영향으로 처리됩니다
 		만 매우 다음 키):!, +, ^, #
+	ControlDelayE_TT =	각 컨트롤 - 변경 명령 후에 발생합니다 지연을 설정합니다.
 	CoordPixel_TT =	모드를 조정
 	DefaultMacro_TT =	프로그램 시작시로드 할 파일을 선택
 	EditPaste_TT =	캐럿 / 삽입 위치에 붙여 넣 문자열
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	키를 삽입 (Ctrl+Insert)
 	InsertKeyT_TT =	키를 삽입
 	JoyKey_TT =	조이스틱 버튼을 눌러
+	KeyDelayE_TT =	보내기 및 ControlSend에 의해 전송 된 각각의 키를 누른 후 발생 지연을 설정합니다.
 	LoopLVColor_TT =	색상을 선택하려면 클릭하십시오
 	LUntil_TT =	루프 또는 루프의 지속에 조건을 적용합니다.
 	ManKey_TT =	단축키 매크로 "단계별"를 재생
+	MouseDelayE_TT =	각 마우스 이동 후 발생하거나 클릭합니다 지연을 설정합니다.
 	MRel_TT =	현재 위치를 기준으로 움직임.
 		또는 제어와 함께 사용하는 경우: 컨트롤에 상대적인 위치.
 	OSHK_TT =	매크로를 선택
@@ -1281,9 +1288,9 @@
 	HasKey	키가 값과 연관되어있는 경우에 true를 돌려줍니다.
 	If	값으로 변수의 비교는 TRUE로 evalutes 경우 명령 (들)을 수행하도록 지정합니다. 하나 이상의 명령이있을 때, 블록 (중괄호)로 묶습니다.
 	If (expression)	표현식이 TRUE로 평가되면 명령 (들)을 수행하도록 지정합니다.
-	If A_Index	현재 루프 반복하면 검사는 지정된 숫자를하는 matchs.
-	If Clipboard	클립 보드에 텍스트가 있는지 검사는 지정된 문자열을하는 matchs.
-	If ErrorLevel	지정된 이미지 또는 픽셀 경우 검사가 화면에 발견되었다.
+	If A_Index	확인합니다 현재 루프 반복 지정된 번호와 일치합니다.
+	If Clipboard	체크 클립 보드 텍스트는 지정된 문자열과 일치합니다.
+	If ErrorLevel	검사는 소정의 이미지 또는 픽셀은 스크린에서 발견 된 경우.
 	If var [not] between	변수의 내용 여부를 검사 두 개의 값 (포함) 사이의 숫자 또는 알파벳입니다.
 	If var [not] in / If var [not] contains MatchList	변수의 내용 여부를 점검 목록에있는 항목 중 하나를 일치합니다.
 	If var is [not] type	변수의 내용이 숫자인지 검사, 대문자 등
@@ -1347,10 +1354,12 @@
 	RunAs	실행 및 RunWait 이후의 모든 용도에 사용할 사용자 자격 증명 집합을 지정합니다. 윈도우 2000/XP 이상이 필요합니다.
 	RunWait	외부 프로그램을 실행하고 완료 될 때까지 기다립니다.
 	Send / SendRaw	활성 창에 시뮬레이션 키 입력과 마우스 클릭을 보냅니다.
-	SendLevel	인공 키보드와 마우스 이벤트가 핫키 단축 문에 의해 무시되는 컨트롤.
 	SendMessage	창이나 컨트롤에 메시지를 보내고 승인을 기다립니다.
+	SendMode	
 	SetCapslockState	CAPSLOCK 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
+	SetControlDelay	
 	SetKeyDelay	보내기 또는 ControlSend에 의해 전송 된 각 키 입력 후 발생하는 지연을 설정합니다.
+	SetMouseDelay	
 	SetNumlockState	숫자 잠금 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
 	SetRegView	32 비트 스크립트에서 레지스트리 명령은 64 비트 레지스트리보기 및 그 반대에 액세스 할 수 있습니다.
 	SetScrollLockState	ScrollLock이 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.

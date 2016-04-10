@@ -761,13 +761,17 @@
 	t_Lang203 =	Détecter Les Fenêtres Masquées
 	t_Lang204 =	Détecter Texte Caché
 	t_Lang205 =	Mode De Match Pour Le Titre
-	t_Lang206 =	Titre Vitesse De Jeu
+	t_Lang206 =	Ne pas afficher les erreurs
 	t_Lang207 =	Client
 	t_Lang208 =	T&rouver
 	t_Lang209 =	Re&mplacer
-	t_Lang210 =	Ne pas afficher les erreurs
-	t_Lang211 =	Onglets
-	t_Lang212 =	Les espaces
+	t_Lang210 =	Onglets
+	t_Lang211 =	Les espaces
+	t_Lang212 =	Clavier et souris actions
+	t_Lang213 =	Mode d'émission clé
+	t_Lang214 =	Retard clé
+	t_Lang215 =	Retard souris
+	t_Lang216 =	Retard de commande
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert
@@ -978,6 +982,7 @@
 	ComText_TT =	Quand il n'est pas en mode brut, les caractères suivants
 		sont traités comme des modificateurs (ces modificateurs agissent
 		seule la clé très prochaine):, +, ^, #
+	ControlDelayE_TT =	Définit le délai qui aura lieu après chaque commande de contrôle de modification.
 	CoordPixel_TT =	Mode coordonner
 	DefaultMacro_TT =	Sélectionnez le fichier à charger au démarrage du programme
 	EditPaste_TT =	Chaîne pâtes à la position du curseur / insert
@@ -1044,9 +1049,11 @@
 	InsertKey_TT =	Insérer Frappe (Ctrl+Insert)
 	InsertKeyT_TT =	Insérer Frappe
 	JoyKey_TT =	Appuyez sur un bouton sur la manette
+	KeyDelayE_TT =	Définit le délai qui aura lieu après chaque frappe envoyée par envoi et ControlSend.
 	LoopLVColor_TT =	Cliquez pour choisir une couleur
 	LUntil_TT =	S'applique une condition à la poursuite d'une boucle ou boucle for.
 	ManKey_TT =	Hotkey à jouer Macro "par étape par étape"
+	MouseDelayE_TT =	Définit le délai qui se produira après chaque mouvement de la souris ou cliquez sur.
 	MRel_TT =	Mouvements relatifs à la position actuelle.
 		Ou si elle est utilisée avec la commande: position par rapport au témoin.
 	OSHK_TT =	Sélectionner Macro
@@ -1281,9 +1288,9 @@
 	HasKey	Retourne vrai si la clé est associée à une valeur.
 	If	Indique la commande (s) à exécuter si la comparaison d'une variable à une valeur s'évalue à TRUE. Lorsque plus d'une commande est présente , mettez-les dans un bloc (accolades) .
 	If (expression)	Indique la commande (s) à exécuter si une expression est évaluée à TRUE.
-	If A_Index	Vérifie si l' itération courante de la boucle match a un nombre spécifié .
-	If Clipboard	Vérifie si le texte du presse-papiers est Matchs une chaîne spécifiée.
-	If ErrorLevel	Vérifie si une image ou pixel spécifié a été trouvé dans l'écran.
+	If A_Index	Vérifie si l'itération courante correspond au nombre spécifié.
+	If Clipboard	Vérifie si le texte Clipboard correspond à la chaîne spécifiée.
+	If ErrorLevel	Vérifie si une image ou pixel spécifié a été trouvé sur l'écran.
 	If var [not] between	Vérifie si le contenu d'une variable sont numérique ou alphabétique entre deux valeurs (inclus) .
 	If var [not] in / If var [not] contains MatchList	Vérifie si le contenu d'une variable correspond à l'un des éléments d'une liste .
 	If var is [not] type	Vérifie si le contenu d'une variable sont numérique , majuscules , etc
@@ -1347,10 +1354,12 @@
 	RunAs	Indique un ensemble d'informations d'identification de l'utilisateur à utiliser pour toutes les utilisations ultérieures de Run et RunWait. Nécessite Windows 2000/XP ou version ultérieure.
 	RunWait	Exécute un programme externe et attend jusqu'à ce qu'elle se termine.
 	Send / SendRaw	Envoie frappes simulées et les clics de souris sur la fenêtre active.
-	SendLevel	Contrôles laquelle les événements de clavier et de souris artificiels sont ignorés par les raccourcis et les substitutions de chaînes.
 	SendMessage	Il envoie un message à une fenêtre ou une commande et attend l'accusé de réception.
+	SendMode	
 	SetCapslockState	Définit l'état de la touche verrouillage majuscule. Pouvez également forcer la clé pour rester allumé ou éteint.
+	SetControlDelay	
 	SetKeyDelay	Définit le délai qui aura lieu après chaque frappe envoyée par envoi ou ControlSend.
+	SetMouseDelay	
 	SetNumlockState	Définit l'état de la touche Verr Num. Pouvez également forcer la clé pour rester allumé ou éteint.
 	SetRegView	Permet commandes de registre dans un script 32 bits pour accéder à la vue de Registre 64 bits et vice versa.
 	SetScrollLockState	Définit l'état de la touche Arrêt défil. Pouvez également forcer la clé pour rester allumé ou éteint.
