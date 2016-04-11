@@ -3,7 +3,7 @@
 ; Original by shajul
 ; http://www.autohotkey.com/board/topic/61042-create-a-scheduled-task-natively-ahk-l/
 ;###########################################################
-ScheduleTask(TriggerType, startTime, Path, Name)
+ScheduleTask(TriggerType, startTime, Path, Args, Name)
 {
 	; TriggerType := 1    ; specifies a time-based trigger.
 	ActionTypeExec := 0    ; specifies an executable action.
@@ -65,6 +65,7 @@ ScheduleTask(TriggerType, startTime, Path, Name)
 	; Add an action to the task to run notepad.exe.
 	Action := taskDefinition.Actions.Create(ActionTypeExec)
 	Action.Path := Path
+	Action.Arguments := Args
 	;***********************************************************
 	; Register (create) the task.
 	rootFolder.RegisterTaskDefinition(Name " - PMC Macro", taskDefinition, TaskCreateOrUpdate ,"","", 3)

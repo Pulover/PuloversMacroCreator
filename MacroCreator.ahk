@@ -2221,7 +2221,7 @@ If (IfDirectContext != "None")
 }
 LV_Delete()
 Loop, %TabCount%
-	LV_Add("Check", TabGetText(TabSel, A_Index), o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
+	LV_Add("Check", TabGetText(TabSel, A_Index), (A_GuiControl = "SchedOK") ? "" : o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
 	LV_ModifyCol(1, 120)	; Macros
 ,	LV_ModifyCol(2, 120)	; Hotkeys
 ,	LV_ModifyCol(3, 80)		; Loop
@@ -2229,7 +2229,7 @@ Loop, %TabCount%
 ,	LV_Modify(0, "Check")
 If (CurrentFileName = "")
 	GuiControl, 14:, ExpFile, %A_MyDocuments%\MyScript.ahk
-Gui, 14:Show,, %t_Lang001%
+Gui, 14:Show, % (A_GuiControl = "SchedOK") ? "Hide" : "", %t_Lang001%
 ChangeIcon(hIL_Icons, CmdWin, IconsNames["export"])
 Tooltip
 return
@@ -10651,7 +10651,7 @@ Gui, 36:Add, Text, -Wrap R1 x+15 ys+20 W150, %t_Lang165%:
 Gui, 36:Add, Edit, W75 vSchedEd Number
 Gui, 36:Add, UpDown, vSchedHK 0x80 Range1-%TabCount%, %A_List%
 Gui, 36:Add, Text, -Wrap R1 xs+10 y+5 W300 cRed vWarning
-Gui, 36:Add, Button, -Wrap Section Default xm W75 H23 gSchedOK, %c_Lang020%
+Gui, 36:Add, Button, -Wrap Section Default xm W75 H23 vSchedOK gSchedOK, %c_Lang020%
 Gui, 36:Add, Button, -Wrap ys W75 H23 gSchedCancel, %c_Lang021%
 Gui, 36:Add, Link, -Wrap ys+5 W160 R1, <a href="taskschd.msc">%t_Lang160%</a>
 Gui, 36:Add, StatusBar, gStatusBarHelp
@@ -10669,36 +10669,28 @@ FormatTime, StartTime, %ScheduleTime%, yyyy-MM-ddTHH`:mm`:ss
 FormatTime, SchedDate, %ScheduleTime%
 If (TargetAHK)
 {
-	_IncPmc := IncPmc, _Exe_Exp := Exe_Exp
-,	IncPmc := 0, Exe_Exp := 0, Ex_BM := 0, Ex_AutoKey := ""
-	SplitPath, CurrentFileName,, dir,, name_no_ext
-	TaskRun := dir "\" name_no_ext ".ahk"
-	Header := Script_Header(), LV_Export(RowNumber)
-	Loop, %TabCount%
-	{
-		If !(ListCount%A_Index%)
-			continue
-		Ex_TimesX := o_TimesG[A_Index], Body := LV_Export(A_Index)
-		GoSub, ExportOpt
-		AllScripts .= Body
-	}
-	IfExist %TaskRun%
-		FileDelete %TaskRun%
-	Body := AllScripts
-,	Script := Header . Body, Body := "", AllScripts := ""
-,	IncPmc := _IncPmc, Exe_Exp := _Exe_Exp
-	FileAppend, %Script%, %TaskRun%
+	GoSub, Export
+	GoSub, ExpButton
+	GoSub, ExpClose
+	TaskRun := """" ExpFile """"
+	TaskArgs := ""
 }
 Else
-	TaskRun := """" A_ScriptFullPath """ """ CurrentFileName """ -s" SchedHK
+{
+	TaskRun := """" A_ScriptFullPath """"
+	TaskArgs := """" CurrentFileName """ -s" SchedHK
+}
 Try
 {
 	SplitPath, CurrentFileName, Name
-	ScheduleTask(Sched_%ScheduleType%, StartTime, TaskRun, Name)
+	ScheduleTask(Sched_%ScheduleType%, StartTime, TaskRun, TaskArgs, Name)
 	MsgBox, 64, %AppName%, %t_Lang161%`n`n'%SchedDate%'
 }
 Catch
+{
 	MsgBox, 16, %AppName%, %t_Lang162%
+	return
+}
 SchedCancel:
 36GuiClose:
 36GuiEscape:
@@ -13276,7 +13268,13 @@ If (CheckDuplicateLabels())
 If (aHK_On := Playback(aHK_On*))
 	Goto, f_RunMacro
 If (CloseAfterPlay)
+{
+	IL_Destroy(hIL_Icons), IL_Destroy(hIL_IconsHi)
+	FileDelete, %SettingsFolder%\~ActiveProject.pmc
+	Loop, %A_Temp%\PMC_*.ahk
+		FileDelete, %A_LoopFileFullPath%
 	ExitApp
+}
 If (OnFinishCode > 1)
 	GoSub, OnFinishAction
 return
@@ -13457,7 +13455,13 @@ return
 
 OnFinishAction:
 If (OnFinishCode =  2)
+{
+	IL_Destroy(hIL_Icons), IL_Destroy(hIL_IconsHi)
+	FileDelete, %SettingsFolder%\~ActiveProject.pmc
+	Loop, %A_Temp%\PMC_*.ahk
+		FileDelete, %A_LoopFileFullPath%
 	ExitApp
+}
 If (OnFinishCode =  3)
 	Shutdown, 1
 If (OnFinishCode =  4)
