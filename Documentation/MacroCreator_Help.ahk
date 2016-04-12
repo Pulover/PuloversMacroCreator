@@ -94,20 +94,18 @@
 		Clicks a mouse button at the specified coordinates. It can also hold down a mouse button, turn the mouse wheel, or move the mouse.
 
 	Parameters:
-		Actions - Selects the Mouse action to execute.
-		Coordinates - Defines the coordinates of the window or screen where the action will be executed.
-			This field accepts [Variables](Variables.html), functions may also work but are not recommended due to incompatibility with exported scripts.  
-			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).  
+		Action - Selects the Mouse action to execute.
+		Coordinates - Defines the coordinates of the window or screen where the action will be executed. This field accepts [Variables](Variables.html), functions and expressions are not supported.  
+			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).
 		Click - Uses the *Click*. This usually works for most cases.
 		Send - Uses *SendEvent*. Use this in case the Click Command doesn't work.
 		Relative - **If not used with Control**: Coordinates will be treated as an offset from mouse current position.  
 			**If used with Control**: *Unchecked*: Click coordinates relative to the target window. *Checked*: Click coordinates relative to Control's position.
-		Button - Selects the Mouse Button to send.
-		Hold/Release - *Unchecked*: Send a normal click.  
-			*First check*: Click and hold.  
-			*Second check*: Release button.
-		Click Count - The number of times to click the mouse.  
-			This is not affected by Delay.
+		Button - Selects the Mouse Button to send and the event type.  
+			**Normal**: Sends a normal click.  
+			**Hold**: Clicks and holds the button.  
+			**Release**: Releases the button.
+		Click Count - The number of times to click the mouse. This is not affected by Delay. This field accepts [Variables](Variables.html).
 
 	Extra:
 		### Related
@@ -729,7 +727,7 @@
 		
 	Extra:
 		### Related
-			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [CDO (Microsoft MSDN)](http://msdn.microsoft.com/en-us/library/ms988614(v=exchg.65).aspx)
+			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [CDO (Microsoft MSDN)](http://msdn.microsoft.com/en-us/library/ms988614)
 */
 
 /*!
@@ -745,7 +743,7 @@
 		
 	Extra:
 		### Related
-			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [WinHttpRequest object (Microsoft MSDN)](http://msdn.microsoft.com/pt-br/library/windows/desktop/aa384106(v=vs.85).aspx)
+			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [WinHttpRequest object (Microsoft MSDN)](http://msdn.microsoft.com/pt-br/library/windows/desktop/aa384106)
 */
 
 /*!
@@ -767,7 +765,7 @@
 		
 	Extra:
 		### Related
-			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Shell object (Microsoft MSDN)](http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094(v=vs.85).aspx)
+			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [Shell object (Microsoft MSDN)](http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094)
 */
 
 /*!

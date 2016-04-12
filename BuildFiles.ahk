@@ -100,10 +100,12 @@ Source: "{#WorkDir}\Compiled\MacroCreator-x64.exe"; DestDir: "{app}"; DestName: 
 Source: "{#WorkDir}\Compiled\MacroCreator.exe"; DestDir: "{app}"; DestName: "MacroCreator.exe"; Flags: ignoreversion; Tasks: install32bit
 Source: "{#WorkDir}\Compiled\SciLexer-x64.dll"; DestDir: "{app}"; DestName: "SciLexer.dll"; Flags: ignoreversion; Tasks: install64bit
 Source: "{#WorkDir}\Compiled\SciLexer-x86.dll"; DestDir: "{app}"; DestName: "SciLexer.dll"; Flags: ignoreversion; Tasks: install32bit
-Source: "{#WorkDir}\Compiled\MacroCreator.ini"; DestDir: "{app}"; DestName: "MacroCreator.ini"; Flags: ignoreversion; Tasks: portableinstall
+Source: "{#WorkDir}\Compiled\MacroCreator.ini"; DestDir: "{app}"; Flags: ignoreversion; Tasks: portableinstall
 Source: "{#WorkDir}\Compiled\Resources.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#WorkDir}\Compiled\Lang\*.lang"; DestDir: "{app}\Lang"; Flags: ignoreversion
 Source: "{#WorkDir}\Compiled\MacroCreator_Help.chm"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#WorkDir}\Compiled\Demo.pmc"; DestDir: "{userappdata}\MacroCreator"; Flags: ignoreversion; Tasks: not portableinstall
+Source: "{#WorkDir}\Compiled\Demo.pmc"; DestDir: "{app}"; Flags: ignoreversion; Tasks: portableinstall
 %CNHelp%
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

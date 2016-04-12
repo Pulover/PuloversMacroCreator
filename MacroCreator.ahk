@@ -284,7 +284,7 @@ IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
 IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
-IniRead, AutoRefresh, %IniFilePath%, WindowOptions, AutoRefresh, 0
+IniRead, AutoRefresh, %IniFilePath%, WindowOptions, AutoRefresh, 1
 IniRead, ShowGroups, %IniFilePath%, WindowOptions, ShowGroups, 0
 IniRead, IconSize, %IniFilePath%, ToolbarOptions, IconSize, Large
 IniRead, UserLayout, %IniFilePath%, ToolbarOptions, UserLayout
@@ -3730,11 +3730,11 @@ If (A_ThisMenuItem = "Basic Webpage COM Tutorial")
 If (A_ThisMenuItem = "IWebBrowser2 Interface (MSDN)")
 	Run, http://msdn.microsoft.com/en-us/library/aa752127
 If (A_ThisMenuItem = "WinHttpRequest Object (Microsoft MSDN)")
-	Run, http://msdn.microsoft.com/pt-br/library/windows/desktop/aa384106(v=vs.85).aspx
+	Run, http://msdn.microsoft.com/pt-br/library/windows/desktop/aa384106
 If (A_ThisMenuItem = "CDO (Microsoft MSDN)")
-	Run, http://msdn.microsoft.com/en-us/library/ms988614(v=exchg.65).aspx
+	Run, http://msdn.microsoft.com/en-us/library/ms988614
 If (A_ThisMenuItem = "Shell Object (Microsoft MSDN)")
-	Run, http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094(v=vs.85).aspx
+	Run, http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094
 return
 
 SendMsgB:
@@ -4027,7 +4027,7 @@ Gui, 5:Add, Radio, Group -Wrap y+10 xs+10 Checked W90 R1 vMNormal gMHold, %t_Lan
 Gui, 5:Add, Radio, -Wrap yp x+5 W90 R1 vMHold gMHold, %c_Lang043%
 Gui, 5:Add, Radio, -Wrap yp x+5 W90 R1 vMRelease gMHold, %c_Lang259%
 Gui, 5:Add, Text, -Wrap R1 yp x+5 vClicks W90 Right, %c_Lang044%:
-Gui, 5:Add, Edit, yp-2 x+10 W90 R1 vCCountE
+Gui, 5:Add, Edit, yp-2 x+10 W100 R1 vCCountE
 Gui, 5:Add, UpDown, vCCount 0x80 Range0-999999999, 1
 ; Repeat
 Gui, 5:Add, GroupBox, Section xm W250 H125
@@ -4944,6 +4944,10 @@ StopIt := 1
 return
 
 GetCtrl:
+StringSplit, Ident, GetWinTitle, `,
+Loop, 5
+	Ident%A_Index% := Ident%A_Index% ? 1 : 0
+
 CoordMode, Mouse, %CoordMouse%
 Hotkey, RButton, NoKey, On
 Hotkey, Esc, EscNoKey, On
@@ -4960,8 +4964,23 @@ WinActivate, ahk_id %CmdWin%
 If (StopIt)
 	Exit
 GuiControl,, DefCt, %control%
-GuiControl,, Title, ahk_class %class%
-FoundTitle := "ahk_class " class, Window := "ahk_class " class, StopIt := 1
+FoundTitle := ""
+If (Ident1)
+	FoundTitle .= Title
+If (Ident2)
+	FoundTitle .= " ahk_class " class
+If (Ident3)
+	FoundTitle .= " ahk_exe " pname
+If (Ident4)
+	FoundTitle .= " ahk_id " id
+If (Ident5)
+	FoundTitle .= " ahk_pid " pid
+FoundTitle := Trim(FoundTitle)
+If (FoundTitle = "")
+	FoundTitle := " ahk_class " class
+Window := FoundTitle
+GuiControl,, Title, %FoundTitle%
+StopIt := 1
 return
 
 WinTitle:
@@ -4998,6 +5017,10 @@ Loop, 5
 return
 
 GetWin:
+StringSplit, Ident, GetWinTitle, `,
+Loop, 5
+	Ident%A_Index% := Ident%A_Index% ? 1 : 0
+
 CoordMode, Mouse, %CoordMouse%
 Gui, Submit, NoHide
 Hotkey, RButton, NoKey, On
@@ -10517,6 +10540,8 @@ If (Default = 1)
 	UserLayout := "Default"
 SetTimer, LangChange, -1
 Sleep, 500
+Files := SettingsFolder "\Demo.pmc"
+GoSub, OpenFile
 If (ShowTips)
 	GoSub, ShowTips
 If (AutoUpdate)
