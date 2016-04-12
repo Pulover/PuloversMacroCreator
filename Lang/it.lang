@@ -1103,8 +1103,8 @@
 		2: titolo di una finestra può contenere WinTitle ovunque al suo interno per essere una partita.
 		3: titolo di una finestra deve corrispondere esattamente WinTitle essere una partita.
 		RegEx: Modifiche WinTitle, WinText, Escludi titolo ed escludere testo da espressioni regolari.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Veloce: Le prestazioni possono essere sostanzialmente meglio di lento, ma alcuni elementi WinText non può essere "visto".
+		Lento: Può essere molto più lento, ma tutti i possibili WinText viene recuperato da ogni finestra.
 	ToggleC_TT =	Attivare la registrazione relativo quando la chiave è stato acceso.
 	TransC_TT =	Colore trasparente
 	VarCopyA_TT =	Copiare il contenuto delle variabili correnti
@@ -1357,11 +1357,11 @@
 	RunWait	Esegue un programma esterno e aspetta fino a quando non finisce.
 	Send / SendRaw	Invia sequenze di tasti e click del mouse simulato alla finestra attiva.
 	SendMessage	Invia un messaggio a una finestra o di controllo e attende il riconoscimento.
-	SendMode	
+	SendMode	Rende Invia sinonimo di SendInput o SendPlay piuttosto che il default (SendEvent). Inoltre rende Fare clic e MouseSpostato / Clicca / trascinare utilizzare il metodo specificato.
 	SetCapslockState	Imposta lo stato del tasto Capslock. Può anche forzare la chiave per rimanere acceso o spento.
-	SetControlDelay	
+	SetControlDelay	Imposta il ritardo che si verifica dopo ogni comando di controllo modificanti.
 	SetKeyDelay	Imposta il ritardo che si verifica dopo ogni pressione del tasto inviato Invia o ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Imposta il ritardo che si verifica dopo ogni movimento del mouse o fare clic su.
 	SetNumlockState	Imposta lo stato del tasto Bloc Num. Può anche forzare la chiave per rimanere acceso o spento.
 	SetRegView	Consente comandi Registro di sistema in uno script a 32 bit di accedere alla visualizzazione del Registro di 64 bit e viceversa.
 	SetScrollLockState	Imposta lo stato del tasto Scrolllock. Può anche forzare la chiave per rimanere acceso o spento.

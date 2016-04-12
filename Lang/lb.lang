@@ -1103,8 +1103,8 @@
 		2: A Titel d'Fënster kann WinTitle enthale iwwerall bannenzeg et e Match ze ginn.
 		3: Eng Fënster vum Titel muss genee WinTitle Match engem Match ze ginn.
 		RegEx: Neierung WinTitle, WinText, ExcludeTitle, an ExcludeText regelméisseg Ausdrock ze ginn.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Fast: Performance kann wéi Blannschlécher méi besser ginn, mä verschidde WinText Elementer "gesinn" kann net sinn.
+		Luesen: Kënne vill méi lues, mee all méiglech WinText ass aus all Fënster Sensor.
 	ToggleC_TT =	Relativ Procès aktivéieren wann Schlëssel Staat op ass.
 	TransC_TT =	Duerchsichteg Faarf
 	VarCopyA_TT =	Copy aktuell Variabel Inhalter
@@ -1357,11 +1357,11 @@
 	RunWait	Leeft en externen Programm an Ooffahrt bis et eriwwer ass.
 	Send / SendRaw	Schéckt surfen Uschléi an Maus Avantagen fir d'aktiv Fënster.
 	SendMessage	Schéckt e Message un eng Fënster oder Kontroll an Ooffahrt fir matgedeelt.
-	SendMode	
+	SendMode	Mécht Schécken Zifferen SendInput oder SendPlay anstatt de standard (SendEvent). Och mécht Klickt an MouseMove / Klickt / Drag der spezifizéierter Method benotzen.
 	SetCapslockState	Leet den Zoustand vun der CapsLockQAccel Schlëssel. Kann och de Schlëssel force op oder ugefaangen ze bleiwen.
-	SetControlDelay	
+	SetControlDelay	Leet d 'Retard datt no all Kontroll-verbidden Kommando geschéie wäert.
 	SetKeyDelay	Leet d 'Retard datt no all keystroke per E- oder ControlSend geschéie wäert.
-	SetMouseDelay	
+	SetMouseDelay	Leet d 'Retard datt no all Maus Bewegung oder klickt geschéie wäert.
 	SetNumlockState	Leet den Zoustand vun der NumLockQAccel Schlëssel. Kann och de Schlëssel force op oder ugefaangen ze bleiwen.
 	SetRegView	Erlaabt Enregistrement Befeeler an enger 32-bit Script Zougang der 64-bit Enregistrement Vue a vice versa.
 	SetScrollLockState	Leet den Zoustand vun der ScrollLockQAccel Schlëssel. Kann och de Schlëssel force op oder ugefaangen ze bleiwen.

@@ -1103,8 +1103,8 @@
 		2: Naslov Okno lahko vsebuje WinTitle kjerkoli v notranjosti, da je tekma.
 		3: Naslov Okno mora popolnoma ujemati WinTitle za tekmo.
 		Regularni izraz: Spremembe WinTitle, WinText, Izključi naslov, in Izključi Besedilo biti regularni izrazi.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Fast: Uspešnost lahko bistveno bolje kot počasen, vendar nekateri WinText elementi ne smejo biti "videl".
+		Slow: Lahko je veliko počasnejši, ampak vse mogoče WinText so pridobljeni iz vsakega okna.
 	ToggleC_TT =	Vključite Relativna snemanja, ko je ključ država je na.
 	TransC_TT =	Pregleden barvni
 	VarCopyA_TT =	Kopiranje trenutne spremenljive vsebine
@@ -1357,11 +1357,11 @@
 	RunWait	Zažene zunanji program in čaka, dokler se ne konča.
 	Send / SendRaw	Pošlje simulirane tipkanja in klikov z miško na aktivnem oknu.
 	SendMessage	Pošlje sporočilo na okno ali nadzora in čaka na potrditev.
-	SendMode	
+	SendMode	Naredi Pošlji sinonim SendInput ali SendPlay namesto privzetega (SendEvent). Prav tako omogoča Kliknite in MouseMove / Kliknite / Drag uporabljajte predpisano metodo.
 	SetCapslockState	Nastavi stanje tipke CapsLock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
-	SetControlDelay	
+	SetControlDelay	Nastavi zakasnitev, da se bo zgodilo po vsakem ukazu-kontrolno spremembo.
 	SetKeyDelay	Nastavi zakasnitev, da se bo zgodilo po vsakem pritisku, ki ga pošiljate ali ControlSend poslano.
-	SetMouseDelay	
+	SetMouseDelay	Nastavi zakasnitev, da se bo zgodilo po vsakem premiku miške ali pa kliknite.
 	SetNumlockState	Nastavi stanje tipke NumLock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.
 	SetRegView	Omogoča registra ukazi v 32-bitnem scenarij za dostop do 64-bitni pogled registra in obratno.
 	SetScrollLockState	Nastavi stanje tipke za Scrolllock. More prisiliti tudi ključ, da ostanejo vklopite ali izklopite.

@@ -1103,8 +1103,8 @@
 		2: leiho bat izenburua WinTitle eduki dezake edonon barruan partida bat izan da.
 		3: leiho batek izenburu bat etorri behar WinTitle partida bat izan nahi du.
 		RegEx: aldaketak WinTitle, WinText, ExcludeTitle, eta ExcludeText adierazpen erregularrak izan.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Fast: Performance nabarmen Slow baino hobea izan daiteke, baina zenbait elementu WinText ezingo dira "ikusi".
+		Slow: askoz motelagoa izan daiteke, baina posible WinText guztiak da leiho guztietan eskuratuko.
 	ToggleC_TT =	Aktibatu Grabaketa erlatiboa gako egoera oinarritzen da.
 	TransC_TT =	Kolore gardena
 	VarCopyA_TT =	Kopiatu uneko edukiak aldakorra
@@ -1357,11 +1357,11 @@
 	RunWait	Kanpoko programaren bat exekutatzen, eta itxaroten amaitu arte.
 	Send / SendRaw	Simulatu zanpatze eta sagu klik bidaltzen du lehio aktiboan.
 	SendMessage	Mezu bat bidaltzen leiho bat edo kontrol eta aitortzea itxaroten.
-	SendMode	
+	SendMode	Makes Bidali sinonimo SendInput edo SendPlay baino lehenetsia (SendEvent) batera. Halaber, horrek klik eta MouseMove / Klik / Drag zehaztutako metodoa erabili.
 	SetCapslockState	BlokMaius gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.
-	SetControlDelay	
+	SetControlDelay	atzerapena izango duten kontrol-aldatzea komando bakoitzaren ondoren gertatzen ezartzen du.
 	SetKeyDelay	Atzerapena izango dela Send edo ControlSend bitartez bidaltzeko tekla bakoitzaren ondoren gertatzen ezartzen du.
-	SetMouseDelay	
+	SetMouseDelay	atzerapena izango dela saguaren mugimendu bakoitzaren ondoren gertatzen, edo egin klik ezartzen du.
 	SetNumlockState	Blok zenb gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.
 	SetRegView	Erregistroko 32-bit gidoi batean komandoak 64-bit erregistroan ikuspegia sartzeko eta alderantziz ahalbidetzen du.
 	SetScrollLockState	Korr gakoaren egoera ezartzen du. Ezin ere gakoa behartzeko on edo off egoteko.

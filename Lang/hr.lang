@@ -1103,8 +1103,8 @@
 		2: Prozor naslov može sadržavati bilo gdje unutar WinTitle da bude utakmica.
 		3: Prozor naslov mora biti jednak WinTitle da se utakmica.
 		RegEx: Promjene WinTitle, WinText, Isključi naslov, a Isključi tekst biti regularnih izraza.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Brzi: Performanse mogu biti znatno bolji od Sporo, ali određene WinText elementi ne mogu biti "vidi".
+		Slow: Može biti puno sporiji, ali sve je moguće WinText izvučen sa svakog prozora.
 	ToggleC_TT =	Aktivirajte Relativna snimanja kad Ključni državni uključen.
 	TransC_TT =	Prozirna boja
 	VarCopyA_TT =	Kopirajte trenutne varijabilne sadržaj
@@ -1357,11 +1357,11 @@
 	RunWait	Pokreće vanjski program i čeka dok se ne završi.
 	Send / SendRaw	Šalje simulirane tipke i klikova mišem na aktivnom prozoru.
 	SendMessage	Šalje poruku na prozor ili kontrolu i čeka potvrdu.
-	SendMode	
+	SendMode	Čini Pošalji sinonim SendInput ili SendPlay a od zadane (SendEvent). Isto tako čini Kliknite i MouseMove / klik / Drag koristiti navedenu metodu.
 	SetCapslockState	Postavlja stanje CapsLock tipku. Može se također prisiliti ključna ostati ili isključiti.
-	SetControlDelay	
+	SetControlDelay	Postavlja kašnjenje koje će se dogoditi nakon svake kontrolne modificiraju naredbe.
 	SetKeyDelay	Postavlja kašnjenja do kojega će doći nakon svakog pritiska poslao Pošaljite ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Postavlja kašnjenje koje će se dogoditi nakon svakog pokreta miša ili pritisak.
 	SetNumlockState	Postavlja stanje NumLock ključ. Može se također prisiliti ključna ostati ili isključiti.
 	SetRegView	Omogućuje registra naredbe u 32-bitnom skriptu za pristup 64-bitnog registra pogled i obrnuto.
 	SetScrollLockState	Postavlja stanje ScrollLock ključ. Može se također prisiliti ključna ostati ili isključiti.

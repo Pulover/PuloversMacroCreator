@@ -1103,8 +1103,8 @@
 		2: langas titulas gali būti WinTitle bet viduje ji būtų rungtynės.
 		3: lango pavadinimas turi tiksliai atitikti WinTitle būti rungtynės.
 		RegEx: pokyčiai WinTitle, WinText, ExcludeTitle ir ExcludeText būti reguliarios išraiškos.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Greitas: spektaklio gali būti žymiai geriau nei lėtas, tačiau kai WinText elementai negali būti "matomas".
+		Lėtas: Gali būti daug lėtesnis, bet įmanoma WinText gaunami iš kiekvieno lango.
 	ToggleC_TT =	Aktyvuok Santykinis Filmavimas, Key valstybinis įjungtas.
 	TransC_TT =	Skaidri spalva
 	VarCopyA_TT =	Kopijuoti dabartinius kintamas turinį
@@ -1357,11 +1357,11 @@
 	RunWait	Veikia išorinį programą ir laukia, kol ji nesibaigė.
 	Send / SendRaw	Siunčia imituoti klaviatūros ir pelės spustelėjimų aktyviame lange.
 	SendMessage	Siunčia žinutę langą arba kontrolės ir laukia pripažinimo.
-	SendMode	
+	SendMode	Modelių Siųsti sinonimas SendInput ar SendPlay o ne pagal nutylėjimą (SendEvent). Taip pat daro Spustelėkite ir MouseMove / Paspauskite / Vilkite naudokite nurodytą metodą.
 	SetCapslockState	Nustato Capslock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.
-	SetControlDelay	
+	SetControlDelay	Nustato vėlavimą, kuris įvyks po kiekvieno kontrolinio keičiančių komandą.
 	SetKeyDelay	Nustato vėlavimą, kuris įvyks po kiekvieno paspaudimo atsiųstą siųsti arba ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Nustato vėlavimą, kuris įvyks po kiekvieno pelės judėjimą, arba paspausti mygtuką.
 	SetNumlockState	Nustato NumLock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.
 	SetRegView	Leidžia registro komandas 32 bitų scenarijų ir atidarykite 64 bitų registro vaizdą ir atvirkščiai.
 	SetScrollLockState	Nustato ScrollLock Key valstybinis. taip pat gali priversti raktą likti įjungti arba išjungti.

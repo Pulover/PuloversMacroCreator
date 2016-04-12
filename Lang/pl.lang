@@ -1103,8 +1103,8 @@
 		2: okno tytuł może zawierać WinTitle gdziekolwiek się być mecz.
 		3: Okno Tytuł musi dokładnie odpowiadać WinTitle się mecz.
 		RegEx: Zmiany WinTitle, WinText wykluczałoby tytuł i wykluczeń tekst do wyrażenia regularne.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Szybko: Wydajność może być znacznie lepiej niż Powolny, ale pewne elementy WinText nie mogą być "widziane".
+		Powolne: Może być znacznie wolniej, ale wszystko jest możliwe WinText są pobierane z każdego okna.
 	ToggleC_TT =	Aktywuj krewny klawisz nagrywania, gdy stan jest włączony.
 	TransC_TT =	Kolor przezroczysty
 	VarCopyA_TT =	Skopiuj aktualnej zmiennej treści
@@ -1357,11 +1357,11 @@
 	RunWait	Uruchamia zewnętrzny program i czeka aż zakończy.
 	Send / SendRaw	Wysyła symulowanych naciśnięć klawiszy i kliknięć myszką do aktywnego okna.
 	SendMessage	Wysyła komunikat do okna lub kontroli i czeka na potwierdzenie.
-	SendMode	
+	SendMode	Sprawia Wyślij synonimem SendInput lub SendPlay zamiast domyślnego (SendEvent). Także sprawia Kliknij i mousemove / kliknij / przeciągnij użyć określonej metody.
 	SetCapslockState	Ustawia stan klawisza CapsLock. Można także wymusić, aby zatrzymać lub wyłączyć.
-	SetControlDelay	
+	SetControlDelay	Ustawia opóźnienie, które nastąpi po każdym poleceniu modyfikujących.
 	SetKeyDelay	Ustawia opóźnienie, które pojawią się po każdym naciśnięciu klawisza wysłana przez Wyślij lub ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Ustawia opóźnienie, które nastąpi po każdym ruchu myszy lub kliknąć.
 	SetNumlockState	Ustawia stan klawisza NumLock. Można także wymusić, aby zatrzymać lub wyłączyć.
 	SetRegView	Pozwala rejestru poleceń w skrypcie 32-bitowym, aby przejść do widoku 64-bitowego rejestru i vice versa.
 	SetScrollLockState	Ustawia stan klawisza ScrollLock. Można także wymusić, aby zatrzymać lub wyłączyć.

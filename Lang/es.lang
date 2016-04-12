@@ -1103,8 +1103,8 @@
 		2: título de una ventana puede contener WinTitle en cualquier lugar dentro de ella para ser una coincidencia.
 		3: título de una ventana debe coincidir exactamente con WinTitle a ser un partido.
 		RegEx: Cambios WinTitle, WinText, Excluir Título y Excluir texto como expresiones regulares.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Rápido: El rendimiento puede ser sustancialmente mejor que lento, pero ciertos elementos WinText no puede ser "visto".
+		Lento: Puede ser mucho más lento, pero es posible WinText está recuperado de todas las ventanas.
 	ToggleC_TT =	Activar grabación relativa al estado de la tecla.
 	TransC_TT =	Color transparente
 	VarCopyA_TT =	Copie los contenidos actuales de las variables
@@ -1357,11 +1357,11 @@
 	RunWait	Ejecuta un programa externo y espera hasta que termine.
 	Send / SendRaw	Envía las pulsaciones de teclado y los clics del ratón simulados a la ventana activa.
 	SendMessage	Envía un mensaje a una ventana o control y espera confirmación.
-	SendMode	
+	SendMode	Hace Enviar sinónimo de SendInput o SendPlay en lugar de la opción predeterminada (SendEvent). También hace Click y MouseMove / click / Drag utilizar el método especificado.
 	SetCapslockState	Establece el estado de la tecla Bloq Mayús. También se puede forzar la clave para mantenerse encendido o apagado.
-	SetControlDelay	
+	SetControlDelay	Ajusta el retardo que se producirá después de cada comando de control de modificadores.
 	SetKeyDelay	Establece la demora que se producirá después de cada pulsación de tecla Enviar o enviado por ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Ajusta el retardo que se producirá después de cada movimiento del ratón o haga clic.
 	SetNumlockState	Establece el estado de la tecla Bloq Num. También se puede forzar la clave para mantenerse encendido o apagado.
 	SetRegView	Permite que los comandos de registro en una secuencia de comandos de 32 bits para acceder a la vista del registro de 64 bits y viceversa.
 	SetScrollLockState	Establece el estado de la tecla Bloq Despl. También se puede forzar la clave para mantenerse encendido o apagado.

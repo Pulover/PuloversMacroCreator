@@ -1103,8 +1103,8 @@
 		2: Et vindue titel kan indeholde WinTitle overalt inde, at det er en kamp.
 		3: Et vindue titel skal svare nøjagtigt WinTitle at være en kamp.
 		RegEx: Ændringer WinTitle, WinText, Udeluk titel, og Udeluk tekst til at være regulære udtryk.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Hurtigt: Performance kan være væsentligt bedre end langsom, men visse WinText elementer kan ikke "ses".
+		Langsom: Kan være meget langsommere, men alle mulige WinText hentes fra alle vinduer.
 	ToggleC_TT =	Aktiver Relativ optagelse, når nøglen tilstand er tændt.
 	TransC_TT =	Gennemsigtig farve
 	VarCopyA_TT =	Kopier nuværende variable indhold
@@ -1357,11 +1357,11 @@
 	RunWait	Kører et eksternt program, og venter, indtil den er færdig.
 	Send / SendRaw	Sender simulerede tastetryk og museklik til det aktive vindue.
 	SendMessage	Sender en besked til et vindue eller kontrol og venter på anerkendelse.
-	SendMode	
+	SendMode	Gør Send synonym med SendInput eller SendPlay snarere end standarden (SendEvent). Også gør Klik og mouseMove / klik / Træk bruge den angivne metode.
 	SetCapslockState	Indstiller tilstand Capslock tasten. Kan også tvinge nøglen til at blive på eller fra.
-	SetControlDelay	
+	SetControlDelay	Indstiller forsinkelse, som vil opstå efter hver kontrol-modificerende kommando.
 	SetKeyDelay	Indstiller forsinkelse, som vil opstå efter hvert tastetryk sendes af Send eller ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Indstiller forsinkelse, som vil opstå efter hver mus bevægelse eller klik.
 	SetNumlockState	Indstiller tilstand Numlock-tasten. Kan også tvinge nøglen til at blive på eller fra.
 	SetRegView	Giver indskrive kommandoer i en 32-bit script at få adgang til 64-bit register visning og vice versa.
 	SetScrollLockState	Indstiller tilstand ScrollLock tasten. Kan også tvinge nøglen til at blive på eller fra.

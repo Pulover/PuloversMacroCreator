@@ -1103,8 +1103,8 @@
 		2: Ein Fenster-Titel kann WinTitle überall enthalten.
 		3: Ein Fenster-Titel muss mit WinTitle exakt übereinstimmen.
 		RegEx: Änderungen WinTitle, WinText, ausschließen Titel, und Ausschließen Text regulären Ausdrücken zu sein.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Schnell: Die Leistung kann als langsame wesentlich besser sein, aber bestimmte WinText Elemente "gesehen" werden dürfen.
+		Langsam: Kann viel langsamer, aber alle möglichen WinText wird aus jedem Fenster abgerufen werden.
 	ToggleC_TT =	Relative Aufzeichnung aktivieren, wenn Taste gedrückt ist.
 	TransC_TT =	Transparente Farbe
 	VarCopyA_TT =	Aktuelle Variablen-Inhalte kopieren
@@ -1357,11 +1357,11 @@
 	RunWait	Führt ein externes Programm aus und wartet, bis es fertig ist.
 	Send / SendRaw	Sendet simulierte Tastatureingaben und Mausklicks auf das aktive Fenster.
 	SendMessage	Sendet eine Nachricht an ein Fenster oder Kontrolle und wartet auf Bestätigung.
-	SendMode	
+	SendMode	Bildet senden gleichbedeutend mit Send oder Sendplay  statt der Standard (Sendevent ). Auch macht das Klicken und Mousemove  / Click / Drag die angegebene Methode verwenden.
 	SetCapslockState	Legt den Zustand der Feststelltaste drücken. Kann auch erzwingen, dass der Schlüssel zu bleiben oder aus.
-	SetControlDelay	
+	SetControlDelay	Stellt die Verzögerung, die nach jeder Steuer modifizierenden Befehl auftreten.
 	SetKeyDelay	Legt die Verzögerung, die sich nach jedem Tastendruck oder durch Senden ControlSend gesendet auftreten.
-	SetMouseDelay	
+	SetMouseDelay	Stellt die Verzögerung, die nach jeder Mausbewegung  oder klicken auftreten.
 	SetNumlockState	Legt den Zustand der Num-Taste. Kann auch erzwingen, dass der Schlüssel zu bleiben oder aus.
 	SetRegView	Ermöglicht registry-Befehle in einer 32-Bit-Skript, um die 64-Bit-Register Ansicht und umgekehrt übersetzen.
 	SetScrollLockState	Legt den Zustand des Scrolllock Taste. Kann auch erzwingen, dass der Schlüssel zu bleiben oder aus.

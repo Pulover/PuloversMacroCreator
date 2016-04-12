@@ -1103,8 +1103,8 @@
 		2: Titill glugga er hægt innihaldið WinTitle einhvers staðar inni það að vera passa.
 		3: Titill glugga verða að vera nákvæmlega eins WinTitle að vera passa.
 		Ríkisstjóratíð: Breytingar WinTitle, WinText, ExcludeTitle og ExcludeText að vera venjulegur tjáning.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Fast: Performance getur verið talsvert betri en Slow, en ákveðin WinText þættir mega ekki vera "séð".
+		Slow: Getur verið mun hægari en allt mögulegt WinText er sótt úr hverjum glugga.
 	ToggleC_TT =	Virkja Hlutfallsleg upptöku þegar lykill ástand er á.
 	TransC_TT =	Gagnsæ lit
 	VarCopyA_TT =	Afrita núverandi breytilega innihald
@@ -1357,11 +1357,11 @@
 	RunWait	Rekur utanaðkomandi forrit og bíður þangað til það lýkur.
 	Send / SendRaw	Sendir endurprentanir mínútum og mús smelli til virks glugga.
 	SendMessage	Sendir skilaboð til glugga eða stjórn og bíður eftir staðfestingu.
-	SendMode	
+	SendMode	Gerir Senda samheiti SendInput eða SendPlay frekar en sjálfgefið (SendEvent). Einnig gerir Smelltu og MouseMove / Click / Drag nota tilgreint aðferð.
 	SetCapslockState	Setur ástand CapsLock takkanum. Einnig er hægt að þvinga lykilinn til að vera á eða burt.
-	SetControlDelay	
+	SetControlDelay	Setur töf sem mun eiga sér stað eftir hverja stjórnstöð-breyta stjórn.
 	SetKeyDelay	Setur töf sem mun eiga sér stað eftir hverja ásláttur sendi Senda eða ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Setur töf sem mun eiga sér stað eftir hverja mús hreyfing eða smelltu.
 	SetNumlockState	Setur ástand NumLock takkann. Einnig er hægt að þvinga lykilinn til að vera á eða burt.
 	SetRegView	Leyfir skrásetning skipanir í 32-bita handrit að opna 64-bita skrásetning sýn og öfugt.
 	SetScrollLockState	Setur ástand ScrollLock takkann. Einnig er hægt að þvinga lykilinn til að vera á eða burt.

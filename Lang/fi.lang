@@ -1103,8 +1103,8 @@
 		2: ikkunan otsikko voi sisältää WinTitle missä sen sisällä olevan ottelun.
 		3: ikkunan otsikko on täsmälleen sama WinTitle olla ottelu.
 		RegEx: Muutokset WinTitle, WinText, Poissulje osaston ja poissulkevat Teksti olla säännöllisiä lausekkeita.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Nopea: Suorituskyky voi olla huomattavasti parempi kuin hidas, mutta tietyt WinText osia ei saa "nähdä".
+		Hidas: Voi olla paljon hitaampi, mutta kaikki mahdolliset WinText haetaan jokaisesta ikkunasta.
 	ToggleC_TT =	Aktivoi Suhteellinen äänitystä kun avain tila on.
 	TransC_TT =	Läpinäkyvä väri
 	VarCopyA_TT =	Kopioi nykyinen muuttujan sisältö
@@ -1357,11 +1357,11 @@
 	RunWait	Toimii ulkoinen ohjelma ja odottaa kunnes se on valmis.
 	Send / SendRaw	Lähettää simuloituja näppäimistön ja hiiren klikkauksella aktiivisen ikkunan.
 	SendMessage	Lähettää viestin ikkuna tai valvontaa ja odottaa kuittausta.
-	SendMode	
+	SendMode	Tekee Lähetä synonyymi SendInput tai SendPlay sijaan oletus (SendEvent). Tekee myös napsauttamalla ja MouseMove / napsauttamalla / Vedä käyttää määritettyä menetelmää.
 	SetCapslockState	Asettaa tilan Capslock-näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
-	SetControlDelay	
+	SetControlDelay	Asettaa viive, joka tapahtuu jokaisen valvonta-muokkaamalla komento.
 	SetKeyDelay	Asettaa viive, joka esiintyy jokaisen näppäilyn jälkeen lähetetään Lähetä tai ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Asettaa viive, joka tapahtuu jokaisen hiiren liikkeitä tai napsauttamalla.
 	SetNumlockState	Asettaa tila Numlock-näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.
 	SetRegView	Mahdollistaa rekisterin komennot 32-bittinen script käyttää 64-bittinen rekisterin mieltä ja päinvastoin.
 	SetScrollLockState	Asettaa tila ScrollLock näppäintä. Myös pakottaa avain jäädä päälle tai pois päältä.

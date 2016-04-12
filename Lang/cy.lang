@@ -1103,8 +1103,8 @@
 		2: Gall teitl Ffenestr yn cynnwys WinTitle unrhyw le y tu mewn iddo i fod yn gêm.
 		3: Rhaid teitl Ffenestr yn cyfateb yn union WinTitle i fod yn gêm.
 		Regex: Newidiadau WinTitle, WinText, ExcludeTitle, a ExcludeText i fod mynegiadau rheolaidd.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Cyflym: Gall perfformiad fod yn sylweddol well na Araf, ond efallai na fydd rhai elfennau WinText fod yn "gweld".
+		Araf: A all fod yn llawer arafach, ond mae pob WinText posibl yn cael ei adfer o bob ffenestr.
 	ToggleC_TT =	Activate Cofnodi cymharol pan wladwriaeth allweddol ar.
 	TransC_TT =	Lliw tryloyw
 	VarCopyA_TT =	Copïwch cynnwys newidyn cyfredol
@@ -1357,11 +1357,11 @@
 	RunWait	Yn rhedeg rhaglen allanol ac aros nes ei fod yn dod i ben.
 	Send / SendRaw	Anfon keystrokes ffug a llygoden chleciau i ffenestr weithredol.
 	SendMessage	Yn anfon neges at ffenestr neu reolaeth ac aros am gydnabyddiaeth.
-	SendMode	
+	SendMode	Gwneud Anfon gyfystyr â SendInput neu SendPlay yn hytrach na 'r ball (SendEvent). Hefyd yn gwneud Cliciwch a MouseMove / Clic / Llusgwch defnyddiwch y dull a nodir.
 	SetCapslockState	Setiau cyflwr yr allwedd CAPSLOCK. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.
-	SetControlDelay	
+	SetControlDelay	Yn gosod yr oedi a fydd yn digwydd ar ôl pob rheolaeth-addasu gorchymyn.
 	SetKeyDelay	Yn gosod yr oedi a fydd yn digwydd ar ôl pob keystroke a anfonwyd gan Anfon neu ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Yn gosod yr oedi a fydd yn digwydd ar ôl pob symudiad llygoden neu cliciwch.
 	SetNumlockState	Setiau cyflwr y allweddell numlock. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.
 	SetRegView	Yn caniatáu gorchmynion registry mewn sgript 32-bit i gael mynediad i'r 64-bit farn cofrestrfa ac i'r gwrthwyneb.
 	SetScrollLockState	Setiau cyflwr yr allwedd Scrolllock. Gall hefyd yn gorfodi yr allwedd i aros ymlaen neu i ffwrdd.

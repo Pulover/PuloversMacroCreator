@@ -1103,8 +1103,8 @@
 		2: akna pealkiri ei tohi sisaldada WinTitle kusagil sees seda mängu.
 		3: akna pealkiri peab täpselt WinTitle olla sobi.
 		RegEx: muutused WinTitle, WinText, ExcludeTitle ja ExcludeText olla regulaaravaldisi.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Kiire: Performance olla oluliselt parem kui aeglane, kuid teatud WinText elemendid ei tohi "näinud".
+		Aeglane: võib olla palju aeglasem, kuid kõik võimalikud WinText laaditakse iga aknas.
 	ToggleC_TT =	Aktiveeri Suhteline salvestamine kui peamine riigi sees.
 	TransC_TT =	Läbipaistev värv
 	VarCopyA_TT =	Kopeeri praeguse muutuva sisuga
@@ -1357,11 +1357,11 @@
 	RunWait	Töötab välise programmi ja ootab, kuni ta lõpetab.
 	Send / SendRaw	Saadab simuleeritud klahvivajutused ja hiireklõpsuga aktiivseks aken.
 	SendMessage	Saadab sõnumi akna või kontrolli ja ootab kinnitust.
-	SendMode	
+	SendMode	Teeb Saada sünonüümiks SendInput või SendPlay mitte vaikimisi (SendEvent). Samuti muudab Kliki ja MouseMove / Click / Drag kasuta kindlat meetodit.
 	SetCapslockState	Määrab seisund Capslock võti. Kas ka sundida võti jääda sisse või välja.
-	SetControlDelay	
+	SetControlDelay	Määrab viivituse, mis toimub pärast iga kontrolli modifitseerivad käsk.
 	SetKeyDelay	Määrab viivituse, mis toimub pärast iga klahvivajutuse saadetud Saada või ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Määrab viivituse, mis toimub pärast iga hiire liigutamine või klõpsata.
 	SetNumlockState	Määrab seisund NumLock klahvi. Kas ka sundida võti jääda sisse või välja.
 	SetRegView	Võimaldab registri käskude 32-bitine skripti juurde 64-bitise registri arvates ja vastupidi.
 	SetScrollLockState	Määrab seisund ScrollLock võti. Kas ka sundida võti jääda sisse või välja.

@@ -1103,8 +1103,8 @@
 		2: Judul window dapat berisi WinTitle mana saja di dalamnya menjadi pertandingan.
 		3: Judul window harus sama persis WinTitle menjadi pertandingan.
 		Regex: Perubahan WinTitle, WinText, Kecualikan Judul, dan Kecualikan Text menjadi ekspresi reguler.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Cepat: Kinerja mungkin jauh lebih baik dibandingkan Lambat, tetapi unsur-unsur WinText tertentu tidak dapat "melihat".
+		Lambat: Bisa menjadi lebih lambat, tapi semua kemungkinan WinText diambil dari setiap jendela.
 	ToggleC_TT =	Aktifkan Recording Relatif ketika negara kunci di.
 	TransC_TT =	Transparan warna
 	VarCopyA_TT =	Menyalin isi variabel saat ini
@@ -1357,11 +1357,11 @@
 	RunWait	Menjalankan program eksternal dan menunggu sampai selesai.
 	Send / SendRaw	Mengirim keystrokes simulasi dan klik mouse untuk jendela aktif.
 	SendMessage	Mengirim pesan ke jendela atau kontrol dan menunggu pengakuan.
-	SendMode	
+	SendMode	Membuat Kirim identik dengan SendInput atau SendPlay bukan default (SendEvent). Juga membuat Klik dan MouseMove / Klik / Drag menggunakan metode tertentu.
 	SetCapslockState	Mengatur keadaan tombol Capslock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
-	SetControlDelay	
+	SetControlDelay	Menetapkan penundaan yang akan terjadi setelah setiap perintah kontrol-memodifikasi.
 	SetKeyDelay	Mengatur penundaan yang akan terjadi setelah setiap keystroke dikirim oleh Kirim atau ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Menetapkan penundaan yang akan terjadi setelah setiap gerakan mouse atau klik.
 	SetNumlockState	Mengatur keadaan tombol Numlock. Bisa juga memaksa kunci untuk tetap hidup atau mati.
 	SetRegView	Memungkinkan perintah registry dalam naskah 32-bit untuk mengakses tampilan registry 64-bit dan sebaliknya.
 	SetScrollLockState	Mengatur negara dari kunci ScrollLock. Bisa juga memaksa kunci untuk tetap hidup atau mati.

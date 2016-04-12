@@ -1103,8 +1103,8 @@
 		2: názov okna môže obsahovať WinTitle kdekoľvek vo vnútri, že je to zápas.
 		3: názov okna sa musí presne zhodovať WinTitle byť zhoda.
 		Regex: Zmeny WinTitle, WinText, Vylúčiť názov a Vylúčiť text, ktorý bude regulárne výrazy.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Rýchly: Výkon môže byť podstatne lepší, než Pomaly, ale isté WinText prvky nemusia byť "vidieť".
+		Slow: Môže byť oveľa pomalší, ale to vôbec možné WinText je načítané z každého okna.
 	ToggleC_TT =	Aktivácia Relatívna nahrávania pri stlačení stav je ďalej.
 	TransC_TT =	Transparentná farba
 	VarCopyA_TT =	Skopírujte bežný variabilný obsah
@@ -1357,11 +1357,11 @@
 	RunWait	Spustí externý program, a čaká, až to skončí.
 	Send / SendRaw	Odošle simulované stlačenia klávesov a kliknutí myšou na aktívne okno.
 	SendMessage	Odošle správu do okna alebo ovládací prvok a čaká na potvrdenie.
-	SendMode	
+	SendMode	Robí Odoslať synonymom SendInput alebo SendPlay skôr ako predvolené (SendEvent). Tiež robí Kliknutím a MouseMove / Kliknutie / Drag použiť špecifikovanú metódu.
 	SetCapslockState	Nastaví stav klávesu CapsLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
-	SetControlDelay	
+	SetControlDelay	Nastavuje oneskorenie, ktoré nastane po každom príkaze riadiaceho modifikujúce.
 	SetKeyDelay	Nastavuje oneskorenie, dôjde po každom stlačení tlačidla Odoslať alebo zaslanej ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Nastavuje oneskorenie, ktoré nastane po každom pohybe myši alebo.
 	SetNumlockState	Nastaví stav klávesu NumLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.
 	SetRegView	Umožňuje registra príkazy v 32-bitovej skript pre prístup k 64-bit registra názor a naopak.
 	SetScrollLockState	Nastaví stav klávesy ScrollLock. Môžete tiež vynútiť kľúč zostať zapnutý alebo vypnutý.

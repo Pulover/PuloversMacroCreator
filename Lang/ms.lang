@@ -1103,8 +1103,8 @@
 		2: Tajuk tingkap boleh mengandungi mana-mana sahaja di dalam WinTitle ia menjadi perlawanan.
 		3: Tajuk tingkap betul-betul mesti sepadan WinTitle menjadi perlawanan.
 		RegEx: Perubahan WinTitle, WinText, Tidak termasuk Tajuk, dan Tidak termasuk Text menjadi ungkapan biasa.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Cepat: Prestasi mungkin jauh lebih baik daripada Slow, tetapi unsur-unsur WinText tertentu mungkin tidak "dilihat".
+		Lambat: Boleh menjadi lebih perlahan, tetapi semua WinText mungkin diambil dari setiap tingkap.
 	ToggleC_TT =	Aktifkan Rakaman relatif apabila negeri utama dihidupkan.
 	TransC_TT =	Warna telus
 	VarCopyA_TT =	Menyalin kandungan ubah semasa
@@ -1357,11 +1357,11 @@
 	RunWait	Menjalankan program luar dan menunggu sehingga ia selesai.
 	Send / SendRaw	Menghantar simulasi ketukan kekunci dan klik tetikus untuk tetingkap aktif.
 	SendMessage	Menghantar mesej kepada tingkap atau kawalan dan menunggu pengakuan.
-	SendMode	
+	SendMode	Menjadikan Menghantar sinonim dengan SendInput atau SendPlay bukannya lalai (SendEvent). Juga membuat Klik dan MouseMove / Klik / Drag menggunakan kaedah yang dinyatakan.
 	SetCapslockState	Set negeri utama CapsLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
-	SetControlDelay	
+	SetControlDelay	Set kelewatan yang akan berlaku selepas setiap arahan kawalan mengubah suai.
 	SetKeyDelay	Set kelewatan yang akan berlaku selepas setiap kali kekunci ditekan dihantar oleh Hantar atau ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Set kelewatan yang akan berlaku selepas setiap pergerakan tetikus atau klik.
 	SetNumlockState	Menetapkan keadaan NumLock utama itu. Juga boleh memaksa utama untuk kekal hidup atau mati.
 	SetRegView	Membolehkan arahan pendaftaran dalam skrip 32-bit untuk mengakses pandangan pendaftaran 64-bit dan sebaliknya.
 	SetScrollLockState	Set negeri utama ScrollLock itu. Juga boleh memaksa utama untuk kekal hidup atau mati.

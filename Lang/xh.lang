@@ -1103,8 +1103,8 @@
 		2: Isihloko A window singaqulatha WinTitle naphi ngaphakathi ngayo umdlalo.
 		3: Isihloko A window kufuneka kanye utshatise WinTitle ukuba umdlalo.
 		RegEx: Utshintsho WinTitle, WinText, ExcludeTitle, kwaye ExcludeText ukuba amabinzana rhoqo.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Fast: Performance kunokuba kakhulu bhetele yeSlow Food, kodwa izinto ezithile WinText ukuze "kubonwa".
+		Slow: Ngaba ingacota kakhulu, kodwa zonke WinText kunokwenzeka igcinwayo window.
 	ToggleC_TT =	Yenza Recording Relative xa urhulumente isitshixo kwi.
 	TransC_TT =	Umbala esitransparenti
 	VarCopyA_TT =	Khuphela imixholo yangoku bume
@@ -1357,11 +1357,11 @@
 	RunWait	Iqhuba inkqubo yangaphandle kwaye ulinda de akugqiba.
 	Send / SendRaw	Uthumela yezitsixo oluye kunye konqakrazo lwe mouse kwi window esebenzayo.
 	SendMessage	Uthumela umyalezo kwi window okanye ulawulo kwaye ulindele ulwamkelo.
-	SendMode	
+	SendMode	Uchaza Thumela ntonye SendInput okanye SendPlay kunokuba kungagqibekanga (SendEvent). Bayazenza Nqakraza kwaye MouseMove / Nqakraza / Tsala ukusebenzisa indlela ekhankanyiweyo.
 	SetCapslockState	Icwangcisa imeko isitshixo Capslock. Nako kunganyanzelisa isitshixo ukuhlala okanye off.
-	SetControlDelay	
+	SetControlDelay	Icwangcisa ukulibaziseka eziya kwenzeka emva kokuba umyalelo ngamnye ulawulo-kancincane.
 	SetKeyDelay	Icwangcisa ukulibaziseka eziya kwenzeka emva keystroke ngamnye othunyelwe nguye Send okanye ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Icwangcisa ukulibaziseka eziya kwenzeka emva intshukumo nganye mouse okanye nqakraza.
 	SetNumlockState	Icwangcisa imeko isitshixo hex. Nako kunganyanzelisa isitshixo ukuhlala okanye off.
 	SetRegView	Ikuvumela imiyalelo irejistri kushicilelo bit-32 ukufikelela bit-64 irejistri imboniselo vice versa.
 	SetScrollLockState	Icwangcisa imeko isitshixo Bonisa. Nako kunganyanzelisa isitshixo ukuhlala okanye off.

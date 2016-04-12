@@ -1103,8 +1103,8 @@
 		2: titre d'une fenêtre peut contenir n'importe où dans WinTitle qu'il s'agit d'un match.
 		3: titre d'une fenêtre doit correspondre exactement à WinTitle être un match.
 		RegEx: Changements WinTitle, WinText, Exclure Titre et Exclure texte à des expressions régulières.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Rapide: Les performances peuvent être sensiblement mieux que lente, mais certains éléments de WinText ne peut pas être «vu».
+		Lente: Peut être beaucoup plus lent, mais tout WinText possible est récupéré de chaque fenêtre.
 	ToggleC_TT =	Activez l'enregistrement relative lorsque l'état touche est activée.
 	TransC_TT =	Couleur transparente
 	VarCopyA_TT =	Copiez le contenu des variables actuelles
@@ -1357,11 +1357,11 @@
 	RunWait	Exécute un programme externe et attend jusqu'à ce qu'elle se termine.
 	Send / SendRaw	Envoie frappes simulées et les clics de souris sur la fenêtre active.
 	SendMessage	Il envoie un message à une fenêtre ou une commande et attend l'accusé de réception.
-	SendMode	
+	SendMode	Rend Envoyer synonyme de SendInput ou SendPlay plutôt que la valeur par défaut (SendEvent). Aussi rend Cliquez et MouseMove / Cliquez / Drag utiliser la méthode spécifiée.
 	SetCapslockState	Définit l'état de la touche verrouillage majuscule. Pouvez également forcer la clé pour rester allumé ou éteint.
-	SetControlDelay	
+	SetControlDelay	Définit le délai qui aura lieu après chaque commande de contrôle de modification.
 	SetKeyDelay	Définit le délai qui aura lieu après chaque frappe envoyée par envoi ou ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Définit le délai qui se produira après chaque mouvement de la souris ou cliquez sur.
 	SetNumlockState	Définit l'état de la touche Verr Num. Pouvez également forcer la clé pour rester allumé ou éteint.
 	SetRegView	Permet commandes de registre dans un script 32 bits pour accéder à la vue de Registre 64 bits et vice versa.
 	SetScrollLockState	Définit l'état de la touche Arrêt défil. Pouvez également forcer la clé pour rester allumé ou éteint.

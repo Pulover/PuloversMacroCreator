@@ -1103,8 +1103,8 @@
 		2: Uma janela precisa conter o título especificado em qualquer lugar.
 		3: Uma janela precisa ter exatamente o título especificado.
 		RegEx: Alterações WinTitle, WinText, Excluir título, e excluir do texto a ser expressões regulares.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Rápido: O desempenho pode ser substancialmente melhor do que lento, mas certos elementos WinText não pode ser "visto".
+		Lento: Pode ser muito mais lento, mas tudo é possível WinText é recuperado de cada janela.
 	ToggleC_TT =	Ativa Gravação Relativa quando a tecla estiver acionada.
 	TransC_TT =	Cor transparente
 	VarCopyA_TT =	Copy current variable contents
@@ -1357,11 +1357,11 @@
 	RunWait	Executa um programa externo e espera até que ele termine.
 	Send / SendRaw	Envia teclas simuladas e cliques do mouse para a janela ativa.
 	SendMessage	Envia uma mensagem para uma janela ou controle e aguarda reconhecimento.
-	SendMode	
+	SendMode	Faz Enviar sinônimo de SendInput ou SendPlay em vez do padrão (SendEvent). Também faz Clique e MouseMove / clicar / arrastar usar o método especificado.
 	SetCapslockState	Define o estado da tecla Capslock. Também é possível forçar a chave para permanecer ligado ou desligado.
-	SetControlDelay	
+	SetControlDelay	Define o atraso que irá ocorrer após cada comando de modificação de controle.
 	SetKeyDelay	Define o atraso que irá ocorrer após cada keystroke enviado por enviar ou ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Define o atraso que irá ocorrer após cada movimento do mouse ou clique.
 	SetNumlockState	Define o estado da tecla NumLock. Também é possível forçar a chave para permanecer ligado ou desligado.
 	SetRegView	Permite que os comandos de registro em um roteiro de 32 bits para acessar a exibição do registro de 64-bit e vice-versa.
 	SetScrollLockState	Define o estado da chave ScrollLock. Também é possível forçar a chave para permanecer ligado ou desligado.

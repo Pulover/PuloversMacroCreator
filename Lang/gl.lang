@@ -1103,8 +1103,8 @@
 		2: O título dun diálogo pode conter WinTitle calquera lugar dentro del para ser un xogo.
 		3: Título da fiestra debe corresponder exactamente WinTitle ser un xogo.
 		Expresión regular: Cambios WinTitle, WinText, ExcludeTitle e ExcludeText ser expresións regulares.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Rápido: O rendemento pode ser substancialmente mellor que lento, pero certos elementos WinText non pode ser "visto".
+		Lento: Pode ser moito máis lento, pero todo é posible WinText é recuperado de cada xanela.
 	ToggleC_TT =	Active a gravación relativa ao estado clave está ligada.
 	TransC_TT =	Cor transparente
 	VarCopyA_TT =	Copiar o contido de variables actuais
@@ -1357,11 +1357,11 @@
 	RunWait	Executa un programa externo e agarda ata que termine.
 	Send / SendRaw	Envía teclas escritas simulados e click do rato para a fiestra activa.
 	SendMessage	Envía unha mensaxe a un diálogo ou control e agarda confirmación.
-	SendMode	
+	SendMode	Fai Enviar sinónimo de SendInput ou SendPlay no canto do estándar (SendEvent). Tamén fai aquí e MouseMove / clic / arrastrar usar o método especificado.
 	SetCapslockState	Define o estado da clave BloqMaius. Tamén é posible facer a clave para estar activado ou desactivado.
-	SetControlDelay	
+	SetControlDelay	Define o atraso que debería ocorrer despois de cada orde de modificación de control.
 	SetKeyDelay	Define o atraso que debería ocorrer despois de cada keystroke enviado polo envío ou ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Define o atraso que debería ocorrer despois de cada movemento do rato ou prema.
 	SetNumlockState	Define o estado da tecla BloqNum. Tamén é posible facer a clave para estar activado ou desactivado.
 	SetRegView	Permite que os comandos de rexistro nun guión de 32 bits para acceder a exhibición do rexistro de 64 bits e viceversa.
 	SetScrollLockState	Define o estado da clave BloqDespr. Tamén é posible facer a clave para estar activado ou desactivado.

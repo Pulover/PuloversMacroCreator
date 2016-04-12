@@ -1103,8 +1103,8 @@
 		2: logs nosaukumā var saturēt WinTitle jebkur iekšpusē, ka tas ir spēles.
 		3: logs nosaukumā ir precīzi jāatbilst WinTitle būt spēles.
 		RegEx: Izmaiņas WinTitle, WinText, ExcludeTitle, un ExcludeText būt regulāras izteiksmes.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Fast: Performance var būt ievērojami labāks nekā lēna, bet daži WinText elementi nevar "redzēt".
+		Slow: Var būt daudz lēnāks, taču viss ir iespējams WinText tiek iegūti no katra loga.
 	ToggleC_TT =	Aktivizēt Radinieks ierakstīšana kad galvenais valsts ir ieslēgts.
 	TransC_TT =	Caurspīdīga krāsa
 	VarCopyA_TT =	Kopēt pašreizējo mainīgo saturu
@@ -1357,11 +1357,11 @@
 	RunWait	Vada ārēju programmu un gaida, līdz tas beidzas.
 	Send / SendRaw	Nosūta modelētiem taustiņsitienus un peles klikšķiem uz aktīvo logu.
 	SendMessage	Sūta ziņu loga vai kontroli un gaida apstiprinājumu.
-	SendMode	
+	SendMode	Padara Nosūtīt sinonīms SendInput vai SendPlay nevis noklusējuma (SendEvent). Arī padara noklikšķiniet un MouseMove / Uzklikšķināt / Drag izmantojiet norādīto metodi.
 	SetCapslockState	Nosaka stāvokli CapsLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.
-	SetControlDelay	
+	SetControlDelay	Nosaka kavēšanos, kas notiks pēc katra vadības modificēšanas komandu.
 	SetKeyDelay	Nosaka kavēšanos, kas notiks pēc katra taustiņa nospiešanas nosūtīto nosūtīt vai ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Nosaka kavēšanos, kas notiks pēc katra peles kustību vai noklikšķiniet.
 	SetNumlockState	Nosaka stāvokli NumLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.
 	SetRegView	Ļauj reģistra komandas 32 bitu skriptu, lai piekļūtu 64 bitu reģistra skatu un vice versa.
 	SetScrollLockState	Nosaka stāvokli ScrollLock taustiņu. Var arī piespiestu taustiņu, lai paliktu uz vai izslēgtu.

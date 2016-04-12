@@ -1103,8 +1103,8 @@
 		2: een venster van de titel kan bevatten WinTitle ergens in dat het een match.
 		3: een venster van de titel moet exact overeenkomen WinTitle om een ​​wedstrijd te zijn.
 		RegEx: Wijzigingen WinTitle, WinText, Uitsluiten titel, en Uitsluiten tekst reguliere expressies zijn.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Snel: De prestaties kunnen aanzienlijk beter dan traag, maar zeker WinText elementen kunnen niet worden 'gezien'.
+		Langzaam: Kan veel trager, maar alle mogelijke WinText opgehaald vanuit elk raam.
 	ToggleC_TT =	Activeer Relatieve opnemen wanneer belangrijke staat is op.
 	TransC_TT =	Transparante kleur
 	VarCopyA_TT =	Kopieer huidige variabele inhoud
@@ -1357,11 +1357,11 @@
 	RunWait	Loopt een extern programma en wacht tot het klaar is.
 	Send / SendRaw	Stuurt gesimuleerde toetsaanslagen en muisklikken om het actieve venster.
 	SendMessage	Stuurt een bericht naar een raam of controle en wacht op bevestiging.
-	SendMode	
+	SendMode	Maakt Stuur synoniem met SendInput of SendPlay plaats van de standaard (sendEvent). Ook maakt Klik en MouseMove / Klik / Drag gebruik van de voorgeschreven methode.
 	SetCapslockState	Zet de toestand van de Capslock sleutel. Kan ook dwingen de sleutel aan of uit blijven.
-	SetControlDelay	
+	SetControlDelay	Stelt de vertraging die zal plaatsvinden na elke controle modificeren commando.
 	SetKeyDelay	Stelt de vertraging die zal plaatsvinden na iedere toetsaanslag die door Send of ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Stelt de vertraging die zal plaatsvinden na elke beweging van de muis of klik op.
 	SetNumlockState	Zet de toestand van de Numlock-toets. Kan ook dwingen de sleutel aan of uit blijven.
 	SetRegView	Laat register commando's in een 32-bits script om toegang te krijgen tot de 64-bit register uitzicht en vice versa.
 	SetScrollLockState	Zet de toestand van de ScrollLock sleutel. Kan ook dwingen de sleutel aan of uit blijven.

@@ -1103,8 +1103,8 @@
 		2：ウィンドウのタイトルが一致しているとその中のどこWinTitleを含めることができます。
 		3：ウィンドウのタイトルは正確に一致する必要WinTitle一致している必要があります。
 		正規表現：変更WinTitle、WinTextは、タイトルを除外し、正規表現されるテキストを除外します。
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	速い：パフォーマンスが遅いよりも実質的に良好であってもよいが、特定のWinText要素は「見」することはできません。
+		スロー：非常に遅いことはできますが、すべての可能なWinTextは、すべてのウィンドウから取得されます。
 	ToggleC_TT =	キーの状態がオンのときに相対録音を有効にします。
 	TransC_TT =	透明色
 	VarCopyA_TT =	現在の変数の内容をコピーします
@@ -1357,11 +1357,11 @@
 	RunWait	外部プログラムを実行し、それが終了するまで待機します。
 	Send / SendRaw	アクティブなウィンドウにキーストロークをシミュレートし、マウスクリックを送信します。
 	SendMessage	ウィンドウまたはコントロールにメッセージを送信し、承認を待ちます。
-	SendMode	
+	SendMode	SendInputまたはSendPlayではなく、デフォルト（のSendEvent）と同義送ることができます。また、クリックしてのMouseMove/クリック/ドラッグして指定したメソッドを使うようになります。
 	SetCapslockState	CapsLockキーのキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。
-	SetControlDelay	
+	SetControlDelay	各コントロール修飾コマンドの後に発生する遅延時間を設定します。
 	SetKeyDelay	送信のcontrolSendによって送られた各キーストロークの後に発生する遅延時間を設定します。
-	SetMouseDelay	
+	SetMouseDelay	各マウスの移動後に発生するか、をクリックします遅延時間を設定します。
 	SetNumlockState	NUMLOCKキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。
 	SetRegView	32ビットスクリプトでレジストリのコマンドは、64ビットのレジストリビュー、およびその逆へのアクセスを許可します。
 	SetScrollLockState	Scrolllockキーの状態を設定します。また、キーをオンまたはオフに滞在するように強制することができます。

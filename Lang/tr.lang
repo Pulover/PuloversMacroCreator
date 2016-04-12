@@ -1103,8 +1103,8 @@
 		2: bir maç olmasını içindeki bir pencerenin başlık yerde WinTitle içerebilir.
 		3: Bir pencerenin başlık tam bir maç olmasını WinTitle eşleşmelidir.
 		RegEx: Değişiklikler WinTitle, WinText, Başlık Dışlama ve düzenli ifadeler olması Metin hariç.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Hızlı: Performans Yavaş önemli ölçüde daha iyi olabilir, ancak bazı WinText elemanları "görüldü" olabilir.
+		Yavaş: daha yavaş olabilir, ama tüm olası WinText her penceresinden alınır.
 	ToggleC_TT =	Önemli devlet açıkken Bağıl Kayıt etkinleştirin.
 	TransC_TT =	Şeffaf renk
 	VarCopyA_TT =	Akım değişken içeriğini kopyalama
@@ -1357,11 +1357,11 @@
 	RunWait	Harici bir program çalıştırır ve bitene kadar bekler.
 	Send / SendRaw	Etkin pencere için simüle tuş vuruşlarını ve fare tıklaması gönderir.
 	SendMessage	Bir pencere veya kontrol için bir mesaj gönderir ve onay bekler.
-	SendMode	
+	SendMode	SendInput veya SendPlay yerine varsayılan (SendEvent) ile eş anlamlı Gönder yapar. Ayrıca tıklayın ve MouseMove / tıklayın / Drag belirtilen yöntemi kullanın yapar.
 	SetCapslockState	Capslock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
-	SetControlDelay	
+	SetControlDelay	Her bir kontrol modifiye komutundan sonra oluşacak gecikme ayarlar.
 	SetKeyDelay	Gönder veya ControlSend tarafından gönderilen her tuş sonra oluşacak gecikme ayarlar.
-	SetMouseDelay	
+	SetMouseDelay	Her fare hareketinden sonra oluşan veya tıklama gecikme ayarlar.
 	SetNumlockState	Numlock tuşunun durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.
 	SetRegView	32-bit komut kayıt komutları 64-bit kayıt defteri görünümü ve tersi erişmenizi sağlar.
 	SetScrollLockState	ScrollLock anahtarın durumunu ayarlar. Ayrıca anahtar açık veya kapalı kalmak zorlayabilir.

@@ -1,51 +1,52 @@
 ﻿[PMC Code v5.0.0]|F3||1|Window,2,Fast,0,1,Input,-1,-1,1|1|BasicDemo
 Groups=New Group:1
-1|SetKeyDelay|10|1|0|SetKeyDelay|||||
-2|Run|Notepad, , , Npid|1|0|Run|||||
-3|WinWait||1|333|WinWait||ahk_pid %Npid%|||
-4|WinMove|400, 400, 800, 600|1|333|WinMove||ahk_pid %Npid%|||
-5|[Text]|Hello`,`n`nThis is the demonstration macro for Pulover's Macro Creator.`n`n|1|0|SendRaw|||||
-6|Run|Notepad, , , Npid2|1|0|Run|||||
-7|WinWait||1|333|WinWait||ahk_pid %Npid2%|||
-8|WinActivate||1|333|WinActivate||ahk_pid %Npid%|||
-9|WinMove|0, 0, 800, 600|1|333|WinMove||ahk_pid %Npid2%|||
-10|[Text]|Here we're using commonly used commands`, such as [Run]`, [WinActivate]`, [Send] and [Click].`n`nThis text was sent directly to the active window using [Send] from the [Text] command window.`n`n|1|10|SendEvent|||||
-11|[Pause]||1|2000|Sleep|||||
-12|[Text]|While this one was sent directly to the target control of a background window.`nCheck [Control] in the command window and use the [...] button to copy the information`nfrom a window to send commands directly to it.`n`n|1|0|ControlSendRaw|Edit1|ahk_pid %Npid2%|||
-13|[Pause]||1|2000|Sleep|||||
-14|[Text]|You can also set the text of the entire control...|1|0|ControlSendRaw|Edit1|ahk_pid %Npid2%|||
-15|[Pause]||1|2000|Sleep|||||
-16|[Text]|...LIKE THIS!!!|1|0|ControlSetText|Edit1|ahk_pid %Npid2%|||
-17|[Pause]||1|2000|Sleep|||||
-18|[Text]|{Control Down}{End}{Control UP}{Enter 2}You can also send move and click with the mouse{!}|1|0|ControlSend|Edit1|ahk_pid %Npid2%|||
-19|Left Move & Click|-6, -122 Left, 1|1|10|Click|||||
-20|[Pause]||1|2000|Sleep|||||
-21|Left Move & Click|693, 293 Left, Down|1|10|Click|||||
-22|[Pause]||1|300|Sleep|||||
-23|Left Move & Click|12, 62 Left, Up|1|10|Click|||||
-24|[Pause]||1|2000|Sleep|||||
-25|[Text]|You can also use [ControlClick] by checking the [Control] option`nin the [Mouse] command window to click on windows on the background...|1|10|SendEvent|||||
-26|[Pause]||1|2000|Sleep|||||
-27|Run|charmap|1|0|Run|||||
-28|WinWait||1|333|WinWait||ahk_exe charmap.exe|||
-29|WinMove|800, 0, , |1|333|WinMove||ahk_exe charmap.exe|||
-30|WinActivate||1|333|WinActivate||ahk_pid %Npid2%|||
-31|Left Click|Left, 1,  x175 y63 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
-32|Left Click|Left, 1,  x106 y61 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
-33|Left Click|Left, 1,  x335 y36 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
-34|[Pause]||1|2000|Sleep|||||
-35|[Text]|`n`n...and the [Control] command window can be used to change`ndifferent things in a control or get informations from it...|1|10|SendEvent|||||
-36|[Pause]||1|2000|Sleep|||||
-37|[Control]|ChooseString`, Arial|1|0|Control|ComboBox3|ahk_exe charmap.exe|||
-38|[Pause]||1|2000|Sleep|||||
-39|[Control]|ChooseString`, Verdana|1|0|Control|ComboBox3|ahk_exe charmap.exe|||
-40|[Pause]||1|2000|Sleep|||||
-41|[Control]|Disable`, |1|0|Control|RICHEDIT50W1|ahk_exe charmap.exe|||
-42|[Pause]||1|2000|Sleep|||||
-43|[Control]|StaticText|1|0|ControlGetText|Static1|ahk_exe charmap.exe|||
-44|[MsgBox]|Text from charmap static control:`n`n%StaticText%|1|0|MsgBox|0||||
-45|[MsgBox]|Too fast? Play it again!`n`nYou can choose what commands you want to execute by unchecking the ones you don't want in the macro list.`n`nYou can also select to run only selected rows in [Macro > Playback options] and set a hotkey to play this macro step-by-step.`n`nThis was just a small demonstration`, PMC can do a lot more! Take some time to study the commands in this macro and learn what each one does.`n`nDownload more examples from the Help file in the [Tutorial] section and check out the video tutorials at http://macrocreator.com/help.`n`nWould like to see the videos now?`n|1|0|MsgBox|36||||
-46|If Message Box|Yes|1|0|If_Statement|36||||
-47|Run|http://macrocreator.com/help|1|0|Run|||||
-48|[End If]|EndIf|1|0|If_Statement|||||
+1|SendMode|Event|1|0|SendMode|||||
+2|SetKeyDelay|10|1|0|SetKeyDelay|||||
+3|Run|Notepad, , , Npid|1|0|Run|||||
+4|WinWait||1|333|WinWait||ahk_pid %Npid%|||
+5|WinMove|400, 400, 800, 600|1|333|WinMove||ahk_pid %Npid%|||
+6|[Text]|Hello`,`n`nThis is the demonstration macro for Pulover's Macro Creator.`n`n|1|0|SendRaw|||||
+7|Run|Notepad, , , Npid2|1|0|Run|||||
+8|WinWait||1|333|WinWait||ahk_pid %Npid2%|||
+9|WinActivate||1|333|WinActivate||ahk_pid %Npid%|||
+10|WinMove|0, 0, 800, 600|1|333|WinMove||ahk_pid %Npid2%|||
+11|[Text]|Here we're using commonly used commands`, such as [Run]`, [WinActivate]`, [Send] and [Click].`n`nThis text was sent directly to the active window using [Send] from the [Text] command window.`n`n|1|0|SendRaw|||||
+12|[Pause]||1|2000|Sleep|||||
+13|[Text]|While this one was sent directly to the target control of a background window.`nCheck [Control] in the command window and use the [...] button to copy the information`nfrom a window to send commands directly to it.`n`n|1|0|ControlSendRaw|Edit1|ahk_pid %Npid2%|||
+14|[Pause]||1|2000|Sleep|||||
+15|[Text]|You can also set the text of the entire control...|1|0|ControlSendRaw|Edit1|ahk_pid %Npid2%|||
+16|[Pause]||1|2000|Sleep|||||
+17|[Text]|...LIKE THIS!!!|1|0|ControlSetText|Edit1|ahk_pid %Npid2%|||
+18|[Pause]||1|2000|Sleep|||||
+19|[Text]|{Control Down}{End}{Control UP}{Enter 2}You can also send move and click with the mouse{!}|1|0|ControlSend|Edit1|ahk_pid %Npid2%|||
+20|Left Move & Click|-6, -122 Left, 1|1|10|Click|||||
+21|[Pause]||1|2000|Sleep|||||
+22|Left Move & Click|693, 293 Left, Down|1|10|Click|||||
+23|[Pause]||1|300|Sleep|||||
+24|Left Move & Click|12, 62 Left, Up|1|10|Click|||||
+25|[Pause]||1|2000|Sleep|||||
+26|[Text]|You can also use [ControlClick] by checking the [Control] option`nin the [Mouse] command window to click on windows on the background...|1|0|SendRaw|||||
+27|[Pause]||1|2000|Sleep|||||
+28|Run|charmap|1|0|Run|||||
+29|WinWait||1|333|WinWait||ahk_exe charmap.exe|||
+30|WinMove|800, 0, , |1|333|WinMove||ahk_exe charmap.exe|||
+31|WinActivate||1|333|WinActivate||ahk_pid %Npid2%|||
+32|Left Click|Left, 1,  x175 y63 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
+33|Left Click|Left, 1,  x106 y61 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
+34|Left Click|Left, 1,  x335 y36 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
+35|[Pause]||1|2000|Sleep|||||
+36|[Text]|`n`n...and the [Control] command window can be used to change`ndifferent things in a control or get informations from it...|1|0|SendRaw|||||
+37|[Pause]||1|2000|Sleep|||||
+38|[Control]|ChooseString`, Arial|1|0|Control|ComboBox3|ahk_exe charmap.exe|||
+39|[Pause]||1|2000|Sleep|||||
+40|[Control]|ChooseString`, Verdana|1|0|Control|ComboBox3|ahk_exe charmap.exe|||
+41|[Pause]||1|2000|Sleep|||||
+42|[Control]|Disable`, |1|0|Control|RICHEDIT50W1|ahk_exe charmap.exe|||
+43|[Pause]||1|2000|Sleep|||||
+44|[Control]|StaticText|1|0|ControlGetText|Static1|ahk_exe charmap.exe|||
+45|[MsgBox]|Text from charmap static control:`n`n%StaticText%|1|0|MsgBox|0||||
+46|[MsgBox]|Too fast? Play it again!`n`nYou can choose what commands you want to execute by unchecking the ones you don't want in the macro list.`n`nYou can also select to run only selected rows in [Macro > Playback options] and set a hotkey to play this macro step-by-step.`n`nThis was just a small demonstration`, PMC can do a lot more! Take some time to study the commands in this macro and learn what each one does.`n`nDownload more examples from the Help file in the [Tutorial] section and check out the video tutorials at http://macrocreator.com/help.`n`nWould like to see the videos now?`n|1|0|MsgBox|36||||
+47|If Message Box|Yes|1|0|If_Statement|36||||
+48|Run|http://macrocreator.com/help|1|0|Run|||||
+49|[End If]|EndIf|1|0|If_Statement|||||
 

@@ -1103,8 +1103,8 @@
 		2：窗口标题的某个位置必须包含WinTitle。
 		3：窗口标题必须准确匹配WinTitle。
 		正则表达式：更改WinTitle，WinText，排除标题，并排除文本是正则表达式。
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	快：性能可基本上比慢越好，但某些WinText元件可以不被“看到”。
+		慢：可以更慢，但所有可能WinText从每个窗口获取。
 	ToggleC_TT =	当按键状态弹起时激活相对录制。
 	TransC_TT =	透明色
 	VarCopyA_TT =	复制当前变量的内容
@@ -1357,11 +1357,11 @@
 	RunWait	运行外部程序并等待其结束。
 	Send / SendRaw	发送模拟键击和鼠标点击到活动窗口。
 	SendMessage	发送消息到窗口或控件并等待确认。
-	SendMode	
+	SendMode	使发送的代名词SendInput或SendPlay而不是默认的（的SendEvent）。也使得点击和mousemove/点击/拖动使用指定的方法。
 	SetCapslockState	设置Capslock键的状态。还可以强制此键保持打开或关闭状态。
-	SetControlDelay	
+	SetControlDelay	将每个控制修改命令后会发生延迟。
 	SetKeyDelay	设置每次Send或ControlSend发送键击后自动的延时。
-	SetMouseDelay	
+	SetMouseDelay	将每个鼠标移动之后将发生或单击延迟。
 	SetNumlockState	设置Numlock键的状态。还可以强制此键保持打开或关闭状态。
 	SetRegView	允许32位脚本中的注册表命令访问64位注册表视图，反之亦然。
 	SetScrollLockState	设置Scrolllock键的状态。还可以强制此键保持打开或关闭状态。

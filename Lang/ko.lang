@@ -1103,8 +1103,8 @@
 		2: 그것이 일치하는 내부 창의 제목이 어느 WinTitle 포함 할 수 있습니다.
 		3: 창의 제목은 정확히 일치하는 WinTitle 일치해야합니다.
 		정규식 : 변경 윈도우 제목, WinText는 제목을 제외하고 정규 표현식으로 텍스트를 제외합니다.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	빠른 : 성능이 느린보다 실질적으로 더 좋을 수 있지만, 특정 WinText 요소 "볼"수 없습니다.
+		느린 : 매우 느릴 수 있지만, 모든 가능한 WinText 모든 창에서 검색됩니다.
 	ToggleC_TT =	키 상태에있을 때 상대 기록을 활성화합니다.
 	TransC_TT =	투명한 색깔
 	VarCopyA_TT =	현재 변수 내용을 복사
@@ -1357,11 +1357,11 @@
 	RunWait	외부 프로그램을 실행하고 완료 될 때까지 기다립니다.
 	Send / SendRaw	활성 창에 시뮬레이션 키 입력과 마우스 클릭을 보냅니다.
 	SendMessage	창이나 컨트롤에 메시지를 보내고 승인을 기다립니다.
-	SendMode	
+	SendMode	SendInput을 또는 SendPlay보다는 기본 (SendEvent)와 동의어로 전송한다. 또한 클릭하고 MouseMove 이벤트 / 클릭 / 드래그하여 지정된 방법을 사용합니다.
 	SetCapslockState	CAPSLOCK 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
-	SetControlDelay	
+	SetControlDelay	각 컨트롤 - 변경 명령 후에 발생합니다 지연을 설정합니다.
 	SetKeyDelay	보내기 또는 ControlSend에 의해 전송 된 각 키 입력 후 발생하는 지연을 설정합니다.
-	SetMouseDelay	
+	SetMouseDelay	각 마우스 이동 후 발생하거나 클릭합니다 지연을 설정합니다.
 	SetNumlockState	숫자 잠금 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.
 	SetRegView	32 비트 스크립트에서 레지스트리 명령은 64 비트 레지스트리보기 및 그 반대에 액세스 할 수 있습니다.
 	SetScrollLockState	ScrollLock이 키의 상태를 설정합니다. 또한 키가 on 또는 off 유지하도록 할 수 있습니다.

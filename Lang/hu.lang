@@ -1103,8 +1103,8 @@
 		2: Egy ablak címét is tartalmazhat WinTitle bárhol benne, hogy a mérkőzés.
 		3: Egy ablak címét pontosan meg kell egyeznie WinTitle hogy egy meccs.
 		RegEx: Változások WinTitle, WinText, kizárása cím és kizárása szöveget reguláris kifejezéseket.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Gyors: A teljesítmény lényegesen jobb, mint a lassú, de biztos WinText elemek nem "látható".
+		Lassú: Lehet, hogy sokkal lassabb, de minden lehetséges WinText lekért minden ablakot.
 	ToggleC_TT =	Aktiválja Relatív felvételt, ha kulcsfontosságú állami be van kapcsolva.
 	TransC_TT =	Átlátszó szín
 	VarCopyA_TT =	Másolása a jelenlegi változó tartalmát
@@ -1357,11 +1357,11 @@
 	RunWait	Egy külsõ programot futtat, és megvárja, amíg befejezi.
 	Send / SendRaw	Elküldi szimulált billentyűleütéseket, és egérkattintással az aktív ablak.
 	SendMessage	Üzenetet küld egy ablak, vagy szabályozás és vár elismerést.
-	SendMode	
+	SendMode	Teszi küldése szinonimája SendInput vagy SendPlay hanem az alapértelmezett (SendEvent). Is teszi Kattintson és MouseMove / Click / Drag az előírt módszerrel.
 	SetCapslockState	Állítja az állam a CapsLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
-	SetControlDelay	
+	SetControlDelay	Beállítja a késleltetést követően alakul ki minden kontroll-módosító parancsot.
 	SetKeyDelay	Megadja a késleltetést, ami történik minden gombnyomás után küldött küldése vagy ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Beállítja a késleltetést követően alakul ki minden egér mozgását, vagy kattintson.
 	SetNumlockState	Állítja az állam a NumLock gomb. Is kényszeríti a legfontosabb, hogy maradni vagy ki.
 	SetRegView	Lehetővé teszi a regisztrációs parancsokat egy 32 bites script eléréséhez a 64 bites adatbázis nézet, és fordítva.
 	SetScrollLockState	Állítja az állam a ScrollLock gombot. Is kényszeríti a legfontosabb, hogy maradni vagy ki.

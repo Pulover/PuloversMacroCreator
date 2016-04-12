@@ -1103,8 +1103,8 @@
 		2: Ett fönster titel kan innehålla WinTitle var som helst i att det är en match.
 		3: Ett fönster titel måste exakt matcha WinTitle vara en match.
 		RegEx: Ändringar WinTitle, WinText, Uteslut Titel och Uteslut text som reguljära uttryck.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Snabb: Prestanda kan vara betydligt bättre än långsam, men vissa WinText element kan inte "ses".
+		Långsam: Kan vara mycket långsammare , men alla möjliga WinText hämtas från alla fönster.
 	ToggleC_TT =	Aktivera Relativ inspelning när nyckeln staten är på.
 	TransC_TT =	Transparent färg
 	VarCopyA_TT =	Kopiera befintliga variabla innehåll
@@ -1357,11 +1357,11 @@
 	RunWait	Körs ett externt program och väntar tills den är klar.
 	Send / SendRaw	Skickar simulerade tangenttryckningar och musklick till det aktiva fönstret.
 	SendMessage	Skickar ett meddelande till ett fönster eller kontroll och väntar på bekräftelse.
-	SendMode	
+	SendMode	Gör Skicka synonymt med Send eller SendPlay snarare än standard (SendEvent). Dessutom gör Klicka och mouse / Klicka / Drag använda den angivna metoden.
 	SetCapslockState	Ställer in tillståndet för CapsLock-tangenten. Kan också tvinga nyckeln för att stanna på eller av.
-	SetControlDelay	
+	SetControlDelay	Ställer in fördröjning som sker efter varje kontroll modifiera kommandot.
 	SetKeyDelay	Ställer in fördröjningen som sker efter varje knapptryckning skickas med Sänd eller ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Ställer in fördröjning som sker efter varje mus rörelse eller klicka.
 	SetNumlockState	Ställer in tillståndet för NumLock. Kan också tvinga nyckeln för att stanna på eller av.
 	SetRegView	Tillåter registret kommandon i en 32-bitars script för att få tillgång till 64-bitars register vy och vice versa.
 	SetScrollLockState	Ställer in tillståndet för ScrollLock tangenten. Kan också tvinga nyckeln för att stanna på eller av.

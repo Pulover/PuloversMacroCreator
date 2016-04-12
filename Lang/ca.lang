@@ -1103,8 +1103,8 @@
 		2: el títol d'una finestra pot contenir WinTitle qualsevol lloc dins que fos una coincidència.
 		3: el títol d'una finestra ha de coincidir exactament amb WinTitle un partit.
 		Regex: Canvis WinTitle, WinText, Excloure Títol i Excloure text com a expressions regulars.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Ràpid: El rendiment pot ser substancialment millor que lent, però certs elements WinText no pot ser "vist".
+		Lent: Pot ser molt més lent, però és possible WinText està recuperat de totes les finestres.
 	ToggleC_TT =	Activa gravació relativa a l'estat de la tecla.
 	TransC_TT =	Color Transparent
 	VarCopyA_TT =	Copia contingut actual de variables
@@ -1357,11 +1357,11 @@
 	RunWait	Executa un programa extern i espera fins que acabi.
 	Send / SendRaw	Envia les pulsacions de teclat i els clics del ratolí simulats a la finestra activa.
 	SendMessage	Envia un missatge a una finestra o control i espera confirmació.
-	SendMode	
+	SendMode	Fa Enviar sinònim de SendInput o SendPlay en lloc de l'opció per defecte (SendEvent). També fa Click i MouseMove / clic / Drag utilitzar el mètode especificat.
 	SetCapslockState	Estableix l'estat de la tecla Bloq Maj. També es pot forçar la clau per mantenir-se encès o apagat.
-	SetControlDelay	
+	SetControlDelay	Ajusta el retard que es produirà després de cada comanda de control de modificadors.
 	SetKeyDelay	Estableix la demora que es produirà després de cada clic d'tecla Envia o enviat per ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Ajusta el retard que es produirà després de cada moviment del ratolí o feu clic.
 	SetNumlockState	Estableix l'estat de la tecla Bloq Num També es pot forçar la clau per mantenir-se encès o apagat.
 	SetRegView	Permet que les ordres de registre en un script de 32 bits per accedir a la visualització del registre de 64 bits i viceversa.
 	SetScrollLockState	Estableix l'estat de la tecla Bloq Despl. També es pot forçar la clau per mantenir-se encès o apagat.

@@ -1103,8 +1103,8 @@
 		2：一個窗口的標題，可以包含WinTitle內的任何地方它是一個比賽。
 		3：一個窗口的標題必須完全匹配WinTitle匹配。
 		正則表達式：更改WinTitle，WinText，排除標題，並排除文本是正則表達式。
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	快：性能可基本上比慢越好，但某些WinText元件可以不被“看到”。
+		慢：可以更慢，但所有可能WinText從每個窗口獲取。
 	ToggleC_TT =	國家重點時，激活相對錄製。
 	TransC_TT =	透明色
 	VarCopyA_TT =	複製當前變量內容
@@ -1357,11 +1357,11 @@
 	RunWait	運行一個外部程序和等待，直到它完成。
 	Send / SendRaw	模擬鍵盤和鼠標操作發送到活動窗口。
 	SendMessage	一個窗口或控制發送消息，並等待確認。
-	SendMode	
+	SendMode	使發送的代名詞SendInput或SendPlay而不是默認的（的SendEvent）。也使得點擊和mousemove/點擊/拖動使用指定的方法。
 	SetCapslockState	設置CapsLock鍵的狀態。也可以強制鑰匙留在或關閉。
-	SetControlDelay	
+	SetControlDelay	將每個控制修改命令後會發生延遲。
 	SetKeyDelay	設置發送或至於ControlSend發送每個按鍵後會發生延遲。
-	SetMouseDelay	
+	SetMouseDelay	將每個鼠標移動之後將發生或單擊延遲。
 	SetNumlockState	設置的NumLock鍵的狀態。也可以強制鑰匙留在或關閉。
 	SetRegView	允許一個32位註冊表中的命令腳本訪問64位註冊表視圖，反之亦然。
 	SetScrollLockState	設置ScrollLock鍵鍵的狀態。也可以強制鑰匙留在或關閉。

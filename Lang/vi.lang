@@ -1103,8 +1103,8 @@
 		2: tiêu đề của một cửa sổ có thể chứa WinTitle bất cứ nơi nào bên trong nó là một trận đấu.
 		3: Một tiêu đề của cửa sổ phải phù hợp chính xác WinTitle là một trận đấu.
 		Regex: Thay đổi WinTitle, WinText, Loại trừ Tiêu đề, và Loại trừ các văn bản để được biểu thức thông thường.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Fast: Hiệu suất có thể được tốt hơn đáng kể so với chậm, nhưng các yếu tố WinText nhất định có thể không được "nhìn thấy".
+		Chậm: có thể là chậm hơn nhiều, nhưng tất cả WinText có thể được lấy từ tất cả các cửa sổ.
 	ToggleC_TT =	Kích hoạt ghi âm tương đối khi nhà nước chính là trên.
 	TransC_TT =	Màu trong suốt
 	VarCopyA_TT =	Sao chép nội dung biến hiện nay
@@ -1357,11 +1357,11 @@
 	RunWait	Chạy một chương trình bên ngoài và chờ đợi cho đến khi nó kết thúc.
 	Send / SendRaw	Gửi tổ hợp phím mô phỏng và nhấp chuột vào cửa sổ hoạt động.
 	SendMessage	Gửi tin nhắn đến một cửa sổ hoặc điều khiển và chờ đợi sự thừa nhận.
-	SendMode	
+	SendMode	Làm cho Gửi đồng nghĩa với SendInput hoặc SendPlay thay vì mặc định (SendEvent). Cũng làm cho Click và MouseMove / Click / Kéo sử dụng phương pháp quy định.
 	SetCapslockState	Thiết lập trạng thái của phím Capslock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
-	SetControlDelay	
+	SetControlDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi lệnh điều khiển thay đổi.
 	SetKeyDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi một phím thường gửi Gửi hoặc ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Thiết lập sự chậm trễ đó sẽ xảy ra sau mỗi lần di chuyển chuột hoặc nhấn chuột.
 	SetNumlockState	Thiết lập trạng thái của phím NumLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.
 	SetRegView	Cho phép lệnh đăng ký trong một kịch bản 32-bit để truy cập vào xem đăng ký 64-bit và ngược lại.
 	SetScrollLockState	Thiết lập trạng thái của phím ScrollLock. Cũng có thể buộc chìa khóa để ở trên hoặc tắt.

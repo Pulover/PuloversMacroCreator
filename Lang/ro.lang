@@ -1103,8 +1103,8 @@
 		2: titlul O fereastră poate conține WinTitle oriunde în interiorul acestuia pentru a fi un meci.
 		3: titlul O fereastră trebuie să se potrivească exact WinTitle să fie un meci.
 		RegEx: Modificări WinTitle, WinText, ExcludeTitle, și ExcludeText să fie expresii regulate.
-	TitleSpeed_TT =	
-		
+	TitleSpeed_TT =	Rapid: Performanța poate fi substanțial mai bună decât lent, dar anumite elemente WinText nu poate fi "văzut".
+		Lent: Poate fi mult mai lent, dar toate WinText posibile sunt preluate de la fiecare fereastră.
 	ToggleC_TT =	Înregistrarea activa relativă atunci când starea cheie este activată.
 	TransC_TT =	Culoare transparent
 	VarCopyA_TT =	Copiați conținutul variabil de curent
@@ -1357,11 +1357,11 @@
 	RunWait	Se execută un program extern și așteaptă până când se termină.
 	Send / SendRaw	Trimite intrarile de la tastatura simulate și mouse-ul pentru fereastra activă.
 	SendMessage	Trimite un mesaj într-o fereastră sau de control și așteaptă confirmare.
-	SendMode	
+	SendMode	Trimite sinonim cu a face SendInput sau SendPlay, mai degrabă decât implicit (SendEvent). De asemenea, face clic pe și MouseMove / Faceți clic / Trageți utilizați metoda specificată.
 	SetCapslockState	Setează starea cheii Capslock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.
-	SetControlDelay	
+	SetControlDelay	Setează întârzierea care va avea loc după fiecare comandă modificator de control.
 	SetKeyDelay	Setează întârzierea care va avea loc după fiecare apăsare de tastă trimis de Trimitere sau ControlSend.
-	SetMouseDelay	
+	SetMouseDelay	Setează întârzierea care va avea loc după fiecare mișcare al mouse-ului sau faceți clic.
 	SetNumlockState	Setează starea tastei NumLock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.
 	SetRegView	Permite comenzi de registru într-un script pe 32 de biți pentru a accesa ecranul de registru pe 64 de biți și vice-versa.
 	SetScrollLockState	Setează starea cheii ScrollLock. De asemenea, poate forța cheia pentru a rămâne activată sau dezactivată.
