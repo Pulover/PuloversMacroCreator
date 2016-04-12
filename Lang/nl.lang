@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Macro opnemen
-	r_Lang002 =	&Activeer Macro's
-	r_Lang003 =	&Speel huidige macro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Deactiveren Macro's
-	r_Lang006 =	A&fspelen vanaf geselecteerde rij
-	r_Lang007 =	S&peel tot geselecteerde rij
-	r_Lang008 =	Sp&elen Geselecteerde Rijen
-	r_Lang009 =	&Context gevoelige sneltoetsen
-	r_Lang010 =	&Voeg Macro
-	r_Lang011 =	S&luiten Macro
-	r_Lang012 =	D&ubbele Macro
-	r_Lang013 =	Mac&ro's Bewerken
-	r_Lang014 =	&Import Macro
-	r_Lang015 =	Save &huidige Macro
+	r_Lang002 =	&Opnamemogelijkheden
+	r_Lang003 =	&Activeer Macro's
+	r_Lang004 =	a&fspelen Opties
+	r_Lang005 =	&Speel huidige macro
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Deactiveren Macro's
+	r_Lang008 =	Afs&pelen vanaf geselecteerde rij
+	r_Lang009 =	Sp&eel tot geselecteerde rij
+	r_Lang010 =	Spe&len Geselecteerde Rijen
+	r_Lang011 =	&Context gevoelige sneltoetsen
+	r_Lang012 =	&Voeg Macro
+	r_Lang013 =	Sl&uiten Macro
+	r_Lang014 =	Du&bbele Macro
+	r_Lang015 =	Mac&ro's Bewerken
+	r_Lang016 =	&Import Macro
+	r_Lang017 =	Save &huidige Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Maak Functie

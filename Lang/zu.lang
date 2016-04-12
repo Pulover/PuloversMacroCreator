@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Record Macro
-	r_Lang002 =	&Cupha Amamakhro
-	r_Lang003 =	&Play Macro yamanje
-	r_Lang004 =	&Isikhathi
-	r_Lang005 =	&Yekisa Amamakhro
-	r_Lang006 =	P&lay kusuka Umugqa Okukhethiwe
-	r_Lang007 =	Pl&ay kuze Umugqa Okukhethiwe
-	r_Lang008 =	Play i&migqa ekhethiwe
-	r_Lang009 =	C&ontext hotkeys olunozwela
-	r_Lang010 =	&Engeza Macro
-	r_Lang011 =	&Vala Macro
-	r_Lang012 =	Macro &Duplicate
-	r_Lang013 =	&Hlela Amamakhro
-	r_Lang014 =	&Ngenisa Macro
-	r_Lang015 =	Londolo&za Macro yamanje
+	r_Lang002 =	&Izinketho Ukuqopha
+	r_Lang003 =	&Cupha Amamakhro
+	r_Lang004 =	I&zinketho Ukudlala
+	r_Lang005 =	&Play Macro yamanje
+	r_Lang006 =	I&sikhathi
+	r_Lang007 =	&Yekisa Amamakhro
+	r_Lang008 =	P&lay kusuka Umugqa Okukhethiwe
+	r_Lang009 =	Pl&ay kuze Umugqa Okukhethiwe
+	r_Lang010 =	Play i&migqa ekhethiwe
+	r_Lang011 =	C&ontext hotkeys olunozwela
+	r_Lang012 =	&Engeza Macro
+	r_Lang013 =	&Vala Macro
+	r_Lang014 =	Macro &Duplicate
+	r_Lang015 =	&Hlela Amamakhro
+	r_Lang016 =	&Ngenisa Macro
+	r_Lang017 =	Londoloza Macro yaman&je
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Dala Umsebenzi

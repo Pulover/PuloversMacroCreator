@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Indspil makro
-	r_Lang002 =	&Aktiver makroer
-	r_Lang003 =	A&fspil aktuelle Macro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Deaktiver Makroer
-	r_Lang006 =	Af&spil fra valgte række
-	r_Lang007 =	S&pille, indtil valgte række
-	r_Lang008 =	Spi&l valgte rækker
-	r_Lang009 =	&Kontekstafhængig genvejstaster
-	r_Lang010 =	Tilf&øj Makro
-	r_Lang011 =	L&uk Makro
-	r_Lang012 =	Du&blet Makro
-	r_Lang013 =	&Rediger Makroer
-	r_Lang014 =	I&mport Macro
-	r_Lang015 =	&Gem nuværende Macro
+	r_Lang002 =	&Optagemuligheder
+	r_Lang003 =	&Aktiver makroer
+	r_Lang004 =	i&ndstillinger til afspilning
+	r_Lang005 =	A&fspil aktuelle Macro
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Deaktiver Makroer
+	r_Lang008 =	Af&spil fra valgte række
+	r_Lang009 =	S&pille, indtil valgte række
+	r_Lang010 =	Spi&l valgte rækker
+	r_Lang011 =	&Kontekstafhængig genvejstaster
+	r_Lang012 =	Tilf&øj Makro
+	r_Lang013 =	L&uk Makro
+	r_Lang014 =	Du&blet Makro
+	r_Lang015 =	&Rediger Makroer
+	r_Lang016 =	I&mport Macro
+	r_Lang017 =	&Gem nuværende Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Opret Funktion

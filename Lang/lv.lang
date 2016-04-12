@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Record Macro
-	r_Lang002 =	&Aktivizēt Makro
-	r_Lang003 =	&Spēlēt Current Macro
-	r_Lang004 =	&Taimeris
-	r_Lang005 =	&Deaktivizēt Makro
-	r_Lang006 =	S&pēlēt no izvēlētās Row
-	r_Lang007 =	Sp&ēlēt līdz Selected Row
-	r_Lang008 =	Spē&lēt atlasītās rindas
-	r_Lang009 =	&Konteksta jutīga taustiņi
-	r_Lang010 =	P&ievienot Macro
-	r_Lang011 =	&Close Macro
-	r_Lang012 =	D&ublikāts Macro
-	r_Lang013 =	R&ediģēt Makro
-	r_Lang014 =	I&mport Macro
-	r_Lang015 =	Sa&glabāt pašreizējo Macro
+	r_Lang002 =	&Ierakstīšanas iespējas
+	r_Lang003 =	&Aktivizēt Makro
+	r_Lang004 =	A&tskaņošanas opcijas
+	r_Lang005 =	&Spēlēt Current Macro
+	r_Lang006 =	Tai&meris
+	r_Lang007 =	&Deaktivizēt Makro
+	r_Lang008 =	S&pēlēt no izvēlētās Row
+	r_Lang009 =	Sp&ēlēt līdz Selected Row
+	r_Lang010 =	Spē&lēt atlasītās rindas
+	r_Lang011 =	&Konteksta jutīga taustiņi
+	r_Lang012 =	Pi&evienot Macro
+	r_Lang013 =	&Close Macro
+	r_Lang014 =	D&ublikāts Macro
+	r_Lang015 =	Redi&ģēt Makro
+	r_Lang016 =	Imp&ort Macro
+	r_Lang017 =	Sa&glabāt pašreizējo Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Izveidot funkcija

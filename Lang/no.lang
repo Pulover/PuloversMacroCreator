@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Registrer makro
-	r_Lang002 =	&Aktivere makroer
-	r_Lang003 =	&Spille Gjeldende Macro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Deaktiver Makroer
-	r_Lang006 =	S&pille fra utvalgte rad
-	r_Lang007 =	Sp&ille til valgt rad
-	r_Lang008 =	Spi&lle valgte rader
-	r_Lang009 =	&Kontekstsensitiv Hurtigtaster
-	r_Lang010 =	L&egg Makro
-	r_Lang011 =	L&ukk Makro
-	r_Lang012 =	Duplisere &Makro
-	r_Lang013 =	Redi&gere Makroer
-	r_Lang014 =	Imp&ort Macro
-	r_Lang015 =	Lagre g&jeldende Macro
+	r_Lang002 =	&Innspillingsalternativer
+	r_Lang003 =	&Aktivere makroer
+	r_Lang004 =	&Videoavspillingsalternativer
+	r_Lang005 =	&Spille Gjeldende Macro
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Deaktiver Makroer
+	r_Lang008 =	S&pille fra utvalgte rad
+	r_Lang009 =	Spi&lle til valgt rad
+	r_Lang010 =	Spill&e valgte rader
+	r_Lang011 =	&Kontekstsensitiv Hurtigtaster
+	r_Lang012 =	Le&gg Makro
+	r_Lang013 =	L&ukk Makro
+	r_Lang014 =	Duplisere &Makro
+	r_Lang015 =	Redigere Makr&oer
+	r_Lang016 =	Import Ma&cro
+	r_Lang017 =	Lagre g&jeldende Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Opprett Funksjon

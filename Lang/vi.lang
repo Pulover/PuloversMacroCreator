@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Record Macro
-	r_Lang002 =	&Kích hoạt Macro
-	r_Lang003 =	&Chơi vĩ mô hiện tại
-	r_Lang004 =	&Hẹn giờ
-	r_Lang005 =	&Tắt Macros
-	r_Lang006 =	Ch&ơi từ Row chọn
-	r_Lang007 =	Chơ&i cho đến khi hàng được chọn
-	r_Lang008 =	Chơi &dòng chọn
-	r_Lang009 =	H&otkeys bối cảnh nhạy cảm
-	r_Lang010 =	Th&êm vĩ mô
-	r_Lang011 =	&Gần vĩ mô
-	r_Lang012 =	&Bản sao vĩ mô
-	r_Lang013 =	Ch&ỉnh Sửa Macro
-	r_Lang014 =	&Nhập khẩu vĩ mô
-	r_Lang015 =	&Lưu vĩ mô hiện tại
+	r_Lang002 =	&Tùy chọn ghi âm
+	r_Lang003 =	&Kích hoạt Macro
+	r_Lang004 =	T&ùy chọn phát lại
+	r_Lang005 =	&Chơi vĩ mô hiện tại
+	r_Lang006 =	&Hẹn giờ
+	r_Lang007 =	T&ắt Macros
+	r_Lang008 =	Ch&ơi từ Row chọn
+	r_Lang009 =	Chơ&i cho đến khi hàng được chọn
+	r_Lang010 =	Chơi &dòng chọn
+	r_Lang011 =	H&otkeys bối cảnh nhạy cảm
+	r_Lang012 =	Th&êm vĩ mô
+	r_Lang013 =	&Gần vĩ mô
+	r_Lang014 =	&Bản sao vĩ mô
+	r_Lang015 =	Ch&ỉnh Sửa Macro
+	r_Lang016 =	&Nhập khẩu vĩ mô
+	r_Lang017 =	&Lưu vĩ mô hiện tại
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Tạo Chức năng

@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Makro Rekod
-	r_Lang002 =	&Aktifkan Makro
-	r_Lang003 =	Ma&in Makro Semasa
-	r_Lang004 =	&Pemasa
-	r_Lang005 =	&Nyahaktifkan Makro
-	r_Lang006 =	Main &dari Row Terpilih
-	r_Lang007 =	&Bermain sehingga Row Terpilih
-	r_Lang008 =	Main Ba&ris Terpilih
-	r_Lang009 =	&Konteks hotkeys Sensitif
-	r_Lang010 =	&Tambah Makro
-	r_Lang011 =	T&utup Makro
-	r_Lang012 =	&Gandakan Makro
-	r_Lang013 =	&Edit Makro
-	r_Lang014 =	Imp&ort Makro
-	r_Lang015 =	&Simpan Makro Semasa
+	r_Lang002 =	&Rakaman Pilihan
+	r_Lang003 =	&Aktifkan Makro
+	r_Lang004 =	&Pilihan main balik
+	r_Lang005 =	Ma&in Makro Semasa
+	r_Lang006 =	P&emasa
+	r_Lang007 =	&Nyahaktifkan Makro
+	r_Lang008 =	Main &dari Row Terpilih
+	r_Lang009 =	&Bermain sehingga Row Terpilih
+	r_Lang010 =	Main Bari&s Terpilih
+	r_Lang011 =	&Konteks hotkeys Sensitif
+	r_Lang012 =	&Tambah Makro
+	r_Lang013 =	T&utup Makro
+	r_Lang014 =	&Gandakan Makro
+	r_Lang015 =	Edit Makr&o
+	r_Lang016 =	&Import Makro
+	r_Lang017 =	&Simpan Makro Semasa
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Buat Fungsi

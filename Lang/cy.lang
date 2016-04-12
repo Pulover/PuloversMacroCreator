@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Macro cofnod
-	r_Lang002 =	&Activate Macros
-	r_Lang003 =	&Chwarae Macro Cyfredol
-	r_Lang004 =	Am&serydd
-	r_Lang005 =	&Deactivate Macros
-	r_Lang006 =	C&hwarae o Row Selected
-	r_Lang007 =	Ch&waraewch hyd nes Row Selected
-	r_Lang008 =	Chwa&rae Rhesi Dethol
-	r_Lang009 =	C&yd-destun Hotkeys Sensitif
-	r_Lang010 =	Ychwa&negu Macro
-	r_Lang011 =	Macr&o Close
-	r_Lang012 =	Macro dy&blyg
-	r_Lang013 =	&Golygu Macros
-	r_Lang014 =	Macro m&ewnforio
-	r_Lang015 =	Arbed Macro Cy&fredol
+	r_Lang002 =	&Dewisiadau cofnodi
+	r_Lang003 =	&Activate Macros
+	r_Lang004 =	D&ewisiadau Playback
+	r_Lang005 =	&Chwarae Macro Cyfredol
+	r_Lang006 =	Am&serydd
+	r_Lang007 =	Deac&tivate Macros
+	r_Lang008 =	C&hwarae o Row Selected
+	r_Lang009 =	Ch&waraewch hyd nes Row Selected
+	r_Lang010 =	Chwa&rae Rhesi Dethol
+	r_Lang011 =	C&yd-destun Hotkeys Sensitif
+	r_Lang012 =	Ychwa&negu Macro
+	r_Lang013 =	Macr&o Close
+	r_Lang014 =	Macro dy&blyg
+	r_Lang015 =	&Golygu Macros
+	r_Lang016 =	Macro mewn&forio
+	r_Lang017 =	Arbed Macro Cyfredo&l
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Creu Swyddogaeth

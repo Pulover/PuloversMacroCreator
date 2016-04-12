@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Makro Kaydet
-	r_Lang002 =	M&akrolar etkinleştirin
-	r_Lang003 =	&Güncel Makro oyna
-	r_Lang004 =	&Kronometre
-	r_Lang005 =	Mak&roları Devre Dışı Bırakmak
-	r_Lang006 =	&Seçilen satırdaki oyna
-	r_Lang007 =	S&eçili satır kadar oyna
-	r_Lang008 =	Se&çilen Satırlar oyna
-	r_Lang009 =	&Bağlam Duyarlı Hotkeys
-	r_Lang010 =	Makr&o Ekle
-	r_Lang011 =	Ka&pat Makro
-	r_Lang012 =	Makro ço&ğaltın
-	r_Lang013 =	Makro&lar Düzenle
-	r_Lang014 =	&İthalat Makro
-	r_Lang015 =	G&üncel Makro Kaydet
+	r_Lang002 =	&Kayıt Seçenekleri
+	r_Lang003 =	M&akrolar etkinleştirin
+	r_Lang004 =	&Yürütme Seçenekleri
+	r_Lang005 =	&Güncel Makro oyna
+	r_Lang006 =	K&ronometre
+	r_Lang007 =	Makr&oları Devre Dışı Bırakmak
+	r_Lang008 =	&Seçilen satırdaki oyna
+	r_Lang009 =	S&eçili satır kadar oyna
+	r_Lang010 =	Se&çilen Satırlar oyna
+	r_Lang011 =	&Bağlam Duyarlı Hotkeys
+	r_Lang012 =	Makro Ek&le
+	r_Lang013 =	Ka&pat Makro
+	r_Lang014 =	Makro ço&ğaltın
+	r_Lang015 =	Makrolar &Düzenle
+	r_Lang016 =	&İthalat Makro
+	r_Lang017 =	G&üncel Makro Kaydet
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Fonksiyon oluşturma

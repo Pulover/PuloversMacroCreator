@@ -358,13 +358,12 @@ Loop, Parse, WinList, `n
 	{
 		If (A_Index = 1)
 			WinCmdList .= A_LoopField "|", Par := A_LoopField
-		Else
-			wcmd_%Par% := A_LoopField
 	}
 	If (A_Index = 1)
 		WinCmdList .= "|"
 }
-wcmd_All := "Title, Text, ExclTitle, ExclText"
+Wcmd_All := "WinTitle, WinText, ExcludeTitle, ExcludeText"
+,	Wcmd_Short := "Title, Text, ExclTitle, ExclText"
 
 ,	WinCmd := "
 (Join|

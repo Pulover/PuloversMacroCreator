@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Record Macro
-	r_Lang002 =	&Virkja Fjölvi
-	r_Lang003 =	&Play Current Macro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Slökkva á Fjölvi
-	r_Lang006 =	Sp&ila frá völdum Row
-	r_Lang007 =	Spi&la þar til röðina
-	r_Lang008 =	Spil&a valdar línur
-	r_Lang009 =	Sa&mhengi næmur Hotkeys
-	r_Lang010 =	&Bæta Macro
-	r_Lang011 =	L&oka Macro
-	r_Lang012 =	A&frit Macro
-	r_Lang013 =	Br&eyta Fjölvi
-	r_Lang014 =	I&nnflutningur Macro
-	r_Lang015 =	Vista&ðu Núverandi Macro
+	r_Lang002 =	R&ecording Valkostir
+	r_Lang003 =	&Virkja Fjölvi
+	r_Lang004 =	&Spilun Options
+	r_Lang005 =	&Play Current Macro
+	r_Lang006 =	&Timer
+	r_Lang007 =	S&lökkva á Fjölvi
+	r_Lang008 =	Sp&ila frá völdum Row
+	r_Lang009 =	Spil&a þar til röðina
+	r_Lang010 =	Spila val&dar línur
+	r_Lang011 =	Sa&mhengi næmur Hotkeys
+	r_Lang012 =	&Bæta Macro
+	r_Lang013 =	L&oka Macro
+	r_Lang014 =	A&frit Macro
+	r_Lang015 =	Bre&yta Fjölvi
+	r_Lang016 =	I&nnflutningur Macro
+	r_Lang017 =	Vista&ðu Núverandi Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Búa Virka

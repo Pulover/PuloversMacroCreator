@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Makro aufzeichnen
-	r_Lang002 =	M&akros aktivieren
-	r_Lang003 =	A&ktuelles Makro abspielen 
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Deaktivieren Von Makros
-	r_Lang006 =	&Wiedergabe von ausgewählter Zeile
-	r_Lang007 =	W&iedergabe bis zur ausgewählten Zeile
-	r_Lang008 =	A&usgewählte Zeilen wiedergeben
-	r_Lang009 =	K&ontextsensitive Hotkeys
-	r_Lang010 =	Mak&ro hinzufügen
-	r_Lang011 =	Makro &schließen 
-	r_Lang012 =	Makro du&plizieren
-	r_Lang013 =	Makros &Bearbeiten
-	r_Lang014 =	Makro importi&eren
-	r_Lang015 =	Aktue&lles Makro speichern
+	r_Lang002 =	Au&fnahme-Optionen
+	r_Lang003 =	M&akros aktivieren
+	r_Lang004 =	Wieder&gabe-Optionen
+	r_Lang005 =	A&ktuelles Makro abspielen 
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Deaktivieren Von Makros
+	r_Lang008 =	&Wiedergabe von ausgewählter Zeile
+	r_Lang009 =	W&iedergabe bis zur ausgewählten Zeile
+	r_Lang010 =	A&usgewählte Zeilen wiedergeben
+	r_Lang011 =	K&ontextsensitive Hotkeys
+	r_Lang012 =	Mak&ro hinzufügen
+	r_Lang013 =	Makro &schließen 
+	r_Lang014 =	Makro du&plizieren
+	r_Lang015 =	Makros &Bearbeiten
+	r_Lang016 =	Makro importi&eren
+	r_Lang017 =	Aktue&lles Makro speichern
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Erstellen Funktion

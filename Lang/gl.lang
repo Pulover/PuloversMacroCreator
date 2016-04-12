@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Gardar Macro
-	r_Lang002 =	&Activar macros
-	r_Lang003 =	&Xogar Macro actual
-	r_Lang004 =	&Cronómetro
-	r_Lang005 =	&Desactivar macros
-	r_Lang006 =	&Reproducir desde liña seleccionada
-	r_Lang007 =	X&ogar ata liña seleccionada
-	r_Lang008 =	Xogar &liñas seleccionadas
-	r_Lang009 =	Co&ntexto Teclas de atallo sensibles
-	r_Lang010 =	Agr&egar Macro
-	r_Lang011 =	&Pechar Macro
-	r_Lang012 =	&Macro duplicado
-	r_Lang013 =	Ed&itar macros
-	r_Lang014 =	Impor&t Macro
-	r_Lang015 =	Gardar Macro act&ual
+	r_Lang002 =	&Opcións de gravación
+	r_Lang003 =	&Activar macros
+	r_Lang004 =	O&pcións de reprodución
+	r_Lang005 =	&Xogar Macro actual
+	r_Lang006 =	&Cronómetro
+	r_Lang007 =	&Desactivar macros
+	r_Lang008 =	&Reproducir desde liña seleccionada
+	r_Lang009 =	Xogar a&ta liña seleccionada
+	r_Lang010 =	Xogar &liñas seleccionadas
+	r_Lang011 =	Co&ntexto Teclas de atallo sensibles
+	r_Lang012 =	Agr&egar Macro
+	r_Lang013 =	Pec&har Macro
+	r_Lang014 =	&Macro duplicado
+	r_Lang015 =	Ed&itar macros
+	r_Lang016 =	&Import Macro
+	r_Lang017 =	Gardar Macro act&ual
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Crear Función

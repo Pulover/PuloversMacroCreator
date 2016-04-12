@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Nauhoita makro
-	r_Lang002 =	&Aktivoi Makrot
-	r_Lang003 =	&Pelaa Nyt Macro
-	r_Lang004 =	A&jastin
-	r_Lang005 =	&Deaktivoida Makrot
-	r_Lang006 =	&Toista valitun rivin
-	r_Lang007 =	P&elaa kunnes valittu rivi
-	r_Lang008 =	Pe&laa valitut rivit
-	r_Lang009 =	T&ilannekohtaisia ​​pikanäppäimet
-	r_Lang010 =	Li&sää Makro
-	r_Lang011 =	S&ulje Makro
-	r_Lang012 =	&Monista Makro
-	r_Lang013 =	Mu&okkaa Makrot
-	r_Lang014 =	Tuo Ma&cro
-	r_Lang015 =	Tallenna N&ykyinen Macro
+	r_Lang002 =	&Tallennusmahdollisuudet
+	r_Lang003 =	&Aktivoi Makrot
+	r_Lang004 =	T&oistoasetukset
+	r_Lang005 =	&Pelaa Nyt Macro
+	r_Lang006 =	A&jastin
+	r_Lang007 =	&Deaktivoida Makrot
+	r_Lang008 =	To&ista valitun rivin
+	r_Lang009 =	P&elaa kunnes valittu rivi
+	r_Lang010 =	Pe&laa valitut rivit
+	r_Lang011 =	Tilanne&kohtaisia ​​pikanäppäimet
+	r_Lang012 =	Li&sää Makro
+	r_Lang013 =	S&ulje Makro
+	r_Lang014 =	&Monista Makro
+	r_Lang015 =	Muokkaa Mak&rot
+	r_Lang016 =	Tuo Ma&cro
+	r_Lang017 =	Tallenna N&ykyinen Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Luo Toiminto

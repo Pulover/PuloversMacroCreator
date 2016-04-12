@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Záznam makra
-	r_Lang002 =	&Aktivace makra
-	r_Lang003 =	&Hrát Aktuální makro
-	r_Lang004 =	&Časový spínač
-	r_Lang005 =	&Deaktivovat Makra
-	r_Lang006 =	&Přehrávání z vybraný řádek
-	r_Lang007 =	H&rát, dokud vybraný řádek
-	r_Lang008 =	P&řehrát vybrané řádky
-	r_Lang009 =	&Kontextová Klávesové zkratky
-	r_Lang010 =	Př&idat makro
-	r_Lang011 =	Za&vřít Makro
-	r_Lang012 =	D&uplicitní makro
-	r_Lang013 =	&Úprava Makra
-	r_Lang014 =	D&ovoz Makro
-	r_Lang015 =	U&ložit aktuální makro
+	r_Lang002 =	&Volby pro Záznam
+	r_Lang003 =	&Aktivace makra
+	r_Lang004 =	&Možnosti přehrávání
+	r_Lang005 =	&Hrát Aktuální makro
+	r_Lang006 =	&Časový spínač
+	r_Lang007 =	&Deaktivovat Makra
+	r_Lang008 =	&Přehrávání z vybraný řádek
+	r_Lang009 =	H&rát, dokud vybraný řádek
+	r_Lang010 =	P&řehrát vybrané řádky
+	r_Lang011 =	&Kontextová Klávesové zkratky
+	r_Lang012 =	Př&idat makro
+	r_Lang013 =	Zavř&ít Makro
+	r_Lang014 =	D&uplicitní makro
+	r_Lang015 =	&Úprava Makra
+	r_Lang016 =	D&ovoz Makro
+	r_Lang017 =	U&ložit aktuální makro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Vytvoření funkce

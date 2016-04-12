@@ -39,17 +39,17 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 ## Version 5.0.0
 
 * New feature: **User Defined Functions**.
-* New feature: **Send Email**.
-* New feature: **Download Files**.
-* New feature: **Zip / Unzip Files**.
+* New feature: **SetTimer** command.
 * New feature: **While-Loop** in Loop Command window.
 * New feature: **For-Loop** in Loop Command window.
 * New feature: **Until** in Loop Command window.
+* New feature: **Send Email** function.
+* New feature: **Download Files** function.
+* New feature: **Zip / Unzip Files** function.
 * New feature: **Listview Groups** (+WinVista).
 * Implemented real AutoHotkey format expressions in Functions, Methods, Variable Assignment, Evaluate Expression, COM Interface and command parameters started with % .
 * Multiple If Statements are now supported in *Evaluate Expression* (e.g.: `var = 5 || var = "a"`).
 * Function parameter can now be another function, array, array element or expression.
-* Added SetTimer command.
 * Added *Else If* Statement option.
 * Loops now work in Manual Playback.
 * Added support for array assignment.

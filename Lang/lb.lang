@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Rekord Macro
-	r_Lang002 =	&Aktivéiert Macros
-	r_Lang003 =	&Leeschtung Aktuell Macro
-	r_Lang004 =	&Timer
-	r_Lang005 =	L&ieszeeche Macros
-	r_Lang006 =	L&eeschtung vun Ausgewielten erlaben, Russland,
-	r_Lang007 =	Lee&schtung bis Ausgewielten erlaben, Russland,
-	r_Lang008 =	Lees&chtung Ausgewielten Zeile
-	r_Lang009 =	&Kontext empfindlech Hotkeys
-	r_Lang010 =	&Foto Macro
-	r_Lang011 =	&Zoumaachen Macro
-	r_Lang012 =	Z&weete Macro
-	r_Lang013 =	E&dit Macros
-	r_Lang014 =	I&mport Macro
-	r_Lang015 =	S&päichert Aktuell Macro
+	r_Lang002 =	&Opnahmen Optiounen
+	r_Lang003 =	&Aktivéiert Macros
+	r_Lang004 =	&Playback Optiounen
+	r_Lang005 =	&Leeschtung Aktuell Macro
+	r_Lang006 =	&Timer
+	r_Lang007 =	L&ieszeeche Macros
+	r_Lang008 =	L&eeschtung vun Ausgewielten erlaben, Russland,
+	r_Lang009 =	Lee&schtung bis Ausgewielten erlaben, Russland,
+	r_Lang010 =	Lees&chtung Ausgewielten Zeile
+	r_Lang011 =	&Kontext empfindlech Hotkeys
+	r_Lang012 =	&Foto Macro
+	r_Lang013 =	&Zoumaachen Macro
+	r_Lang014 =	Z&weete Macro
+	r_Lang015 =	E&dit Macros
+	r_Lang016 =	I&mport Macro
+	r_Lang017 =	Sp&äichert Aktuell Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Schafen Funktioun

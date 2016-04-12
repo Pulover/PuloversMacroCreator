@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Spela in makro
-	r_Lang002 =	&Aktivera makron
-	r_Lang003 =	S&pela Aktuell Makro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Inaktivera Makron
-	r_Lang006 =	Sp&ela upp från vald rad
-	r_Lang007 =	Spe&la tills utvalda raden
-	r_Lang008 =	Spela &markerade rader
-	r_Lang009 =	Samma&nhangsberoende Snabbtangenter
-	r_Lang010 =	L&ägg Makro
-	r_Lang011 =	Stän&g Makro
-	r_Lang012 =	&Duplicera makro
-	r_Lang013 =	&Redigera Makron
-	r_Lang014 =	Imp&ortera Makro
-	r_Lang015 =	Spara a&ktuell Makro
+	r_Lang002 =	&Inspelningsalternativen
+	r_Lang003 =	&Aktivera makron
+	r_Lang004 =	&Visningsalternativ
+	r_Lang005 =	S&pela Aktuell Makro
+	r_Lang006 =	&Timer
+	r_Lang007 =	I&naktivera Makron
+	r_Lang008 =	Sp&ela upp från vald rad
+	r_Lang009 =	Spe&la tills utvalda raden
+	r_Lang010 =	Spela &markerade rader
+	r_Lang011 =	Samman&hangsberoende Snabbtangenter
+	r_Lang012 =	L&ägg Makro
+	r_Lang013 =	Stän&g Makro
+	r_Lang014 =	&Duplicera makro
+	r_Lang015 =	&Redigera Makron
+	r_Lang016 =	Imp&ortera Makro
+	r_Lang017 =	Spara a&ktuell Makro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Skapa Funktion

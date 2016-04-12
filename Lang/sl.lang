@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Snemaj makro
-	r_Lang002 =	&Vključite Makri
-	r_Lang003 =	&Igraj trenutni makro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Deaktivovať Makrá
-	r_Lang006 =	&Predvajaj izbrano vrstico
-	r_Lang007 =	I&grajo dokler izbrano vrstico
-	r_Lang008 =	P&redvajanje izbrane vrstice
-	r_Lang009 =	&Konteksta Bližnjice
-	r_Lang010 =	D&odaj makro
-	r_Lang011 =	&Zapri Makro
-	r_Lang012 =	Dvo&jnik makro
-	r_Lang013 =	&Uredi Makri
-	r_Lang014 =	Uvoz &Makro
-	r_Lang015 =	S&hrani trenutni makro
+	r_Lang002 =	&Možnosti snemanja
+	r_Lang003 =	&Vključite Makri
+	r_Lang004 =	M&ožnosti predvajanja
+	r_Lang005 =	&Igraj trenutni makro
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Deaktivovať Makrá
+	r_Lang008 =	&Predvajaj izbrano vrstico
+	r_Lang009 =	I&grajo dokler izbrano vrstico
+	r_Lang010 =	P&redvajanje izbrane vrstice
+	r_Lang011 =	&Konteksta Bližnjice
+	r_Lang012 =	Dod&aj makro
+	r_Lang013 =	&Zapri Makro
+	r_Lang014 =	Dvo&jnik makro
+	r_Lang015 =	&Uredi Makri
+	r_Lang016 =	&Uvoz Makro
+	r_Lang017 =	S&hrani trenutni makro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Ustvarite Funkcija

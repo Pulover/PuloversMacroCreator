@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Irekhodi Macro
-	r_Lang002 =	&Vule zesikocan
-	r_Lang003 =	&Dlala Macro yangoku
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Sukuzikhupha zesikocan
-	r_Lang006 =	D&lala kwimiqolo Ekhethiweyo
-	r_Lang007 =	Dl&ala de Umqolo Ekhethiweyo
-	r_Lang008 =	Dlala I&miqolo Ekhethiweyo
-	r_Lang009 =	&Umxholo Hotkeys ezinobuthathaka
-	r_Lang010 =	&Yongeza Macro
-	r_Lang011 =	Vala Ma&cro
-	r_Lang012 =	Mac&ro oluphindwe
-	r_Lang013 =	&Hlela zesikocan
-	r_Lang014 =	Rh&weba Macro
-	r_Lang015 =	&Gcina Macro yangoku
+	r_Lang002 =	Ii&nketho recording
+	r_Lang003 =	&Vule zesikocan
+	r_Lang004 =	&Kicker Iinketho
+	r_Lang005 =	&Dlala Macro yangoku
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Sukuzikhupha zesikocan
+	r_Lang008 =	D&lala kwimiqolo Ekhethiweyo
+	r_Lang009 =	Dl&ala de Umqolo Ekhethiweyo
+	r_Lang010 =	Dlala I&miqolo Ekhethiweyo
+	r_Lang011 =	&Umxholo Hotkeys ezinobuthathaka
+	r_Lang012 =	&Yongeza Macro
+	r_Lang013 =	Vala Ma&cro
+	r_Lang014 =	Mac&ro oluphindwe
+	r_Lang015 =	&Hlela zesikocan
+	r_Lang016 =	Rh&weba Macro
+	r_Lang017 =	&Gcina Macro yangoku
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Yenza Umsebenzi

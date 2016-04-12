@@ -15,6 +15,8 @@ Although the recorder is a good choice for quick tasks, **Pulover's Macro Creato
 
 ### Download Examples
 
+* [PMC Demonstration File](Examples/Demo.pmc)
+
 * [Arrays](Examples/Arrays.pmc)
 * [Compare Variables](Examples/CompareVars.pmc)
 * [Control Commands](Examples/ControlCmd.pmc)

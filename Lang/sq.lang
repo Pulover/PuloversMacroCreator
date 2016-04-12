@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Macro Record
-	r_Lang002 =	&Aktivizo macros
-	r_Lang003 =	&Luaj Macro aktual
-	r_Lang004 =	&Kohëmatës
-	r_Lang005 =	&Çaktivizo macros
-	r_Lang006 =	L&uaj nga Row zgjedhura
-	r_Lang007 =	Lua&j deri Row zgjedhura
-	r_Lang008 =	Luaj &Rreshta zgjedhura
-	r_Lang009 =	K&onteksti Hotkeys ndjeshme
-	r_Lang010 =	&Shto Macro
-	r_Lang011 =	&Close Macro
-	r_Lang012 =	Macro &Duplicate
-	r_Lang013 =	&Edit Macros
-	r_Lang014 =	&Import Macro
-	r_Lang015 =	Ruaj Macro ak&tual
+	r_Lang002 =	&Options regjistrimi
+	r_Lang003 =	&Aktivizo macros
+	r_Lang004 =	&Rishikim Options
+	r_Lang005 =	&Luaj Macro aktual
+	r_Lang006 =	&Kohëmatës
+	r_Lang007 =	&Çaktivizo macros
+	r_Lang008 =	L&uaj nga Row zgjedhura
+	r_Lang009 =	Lua&j deri Row zgjedhura
+	r_Lang010 =	Luaj Rr&eshta zgjedhura
+	r_Lang011 =	Ko&nteksti Hotkeys ndjeshme
+	r_Lang012 =	&Shto Macro
+	r_Lang013 =	&Close Macro
+	r_Lang014 =	Macro &Duplicate
+	r_Lang015 =	Ed&it Macros
+	r_Lang016 =	Im&port Macro
+	r_Lang017 =	Ruaj Macro ak&tual
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Krijo Funksioni

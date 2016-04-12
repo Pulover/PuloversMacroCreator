@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Record Macro
-	r_Lang002 =	&Activate Macros
-	r_Lang003 =	&Play Current Macro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Deactivate Macros
-	r_Lang006 =	P&lay from Selected Row
-	r_Lang007 =	Pla&y until Selected Row
-	r_Lang008 =	Play &Selected Rows
-	r_Lang009 =	&Context Sensitive Hotkeys
-	r_Lang010 =	Add &Macro
-	r_Lang011 =	Cl&ose Macro
-	r_Lang012 =	D&uplicate Macro
-	r_Lang013 =	&Edit Macros
-	r_Lang014 =	&Import Macro
-	r_Lang015 =	Sa&ve Current Macro
+	r_Lang002 =	Recordi&ng Options
+	r_Lang003 =	&Activate Macros
+	r_Lang004 =	Play&back Options
+	r_Lang005 =	&Play Current Macro
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Deactivate Macros
+	r_Lang008 =	P&lay from Selected Row
+	r_Lang009 =	Pla&y until Selected Row
+	r_Lang010 =	Play &Selected Rows
+	r_Lang011 =	&Context Sensitive Hotkeys
+	r_Lang012 =	Add &Macro
+	r_Lang013 =	Cl&ose Macro
+	r_Lang014 =	D&uplicate Macro
+	r_Lang015 =	&Edit Macros
+	r_Lang016 =	&Import Macro
+	r_Lang017 =	Sa&ve Current Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	Create &Function

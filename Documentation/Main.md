@@ -66,9 +66,17 @@ Closes the application (same effect as the window's Close Button).
 
 Activates [Recording](Record.html) Hotkeys. You can change the hotkeys in the [Recording options](Record.html#recording-options)
 
+### Recording options
+
+See [Record](Record.html).
+
 ### Activate Macros
 
 Activates [Playback](Playback.html) Hotkeys. You can change the hotkeys for Play, Manual for each macro, as well as Stop and Pause, in the Hotkey Toolbars.
+
+### Playback options
+
+See [Playback](Playback.html).
 
 ### Play Current Macro
 

@@ -446,8 +446,7 @@
 			If (Comment != "")
 				RowData .= "  " "; " Comment
 		}
-		Else If ((Type = cType3) || (Type = cType8) || (Type = cType11)
-		|| (Type = cType13) || (Type = cType14))
+		Else If ((Type = cType3) || (Type = cType8) || (Type = cType13))
 		{
 			If ((ConvertBreaks) && (InStr(Step, "``n")) && ((Type = cType8) || (Type = cType13)))
 			{
@@ -459,14 +458,14 @@
 		,	RowData := "`n" Type ", " Step
 			If (!RegExMatch(Step, "```,\s*?$"))
 				RowData := RTrim(RowData, ", ")
-			If (Action != "[Text]")
+			If ((Type = cType8) || (Action != "[Text]"))
 				RowData := Add_CD(RowData, Comment, DelayX)
 			Else If (Comment != "")
 				RowData .= "  " "; " Comment
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-			If (Action = "[Text]")
-				RowData := "`nSetKeyDelay, " DelayX RowData
+			If ((Type = cType13) && (Action = "[Text]"))
+				RowData := "`nCurrentKeyDelay := A_KeyDelay`nSetKeyDelay, " DelayX RowData "`nSetKeyDelay, %CurrentKeyDelay%"
 		}
 		Else If (Type = cType52)
 		{
@@ -528,12 +527,12 @@
 		}
 		Else If (InStr(FileCmdList, Type "|"))
 		{
-			If ((ConvertBreaks) && (InStr(Step, "``n")) && (Type = cType8))
-			{
-				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "```,", ",")
-			,	Step := "`n(LTrim`n" Step "`n)"
-			}
+			; If ((ConvertBreaks) && (InStr(Step, "``n")) && (Type = cType8))
+			; {
+				; Step := StrReplace(Step, "``n", "`n")
+			; ,	Step := StrReplace(Step, "```,", ",")
+			; ,	Step := "`n(LTrim`n" Step "`n)"
+			; }
 			Step := StrReplace(Step, "`````,", "```,")
 		,	RowData := "`n" Type ", " Step
 			If (!RegExMatch(Step, "```,\s*?$"))

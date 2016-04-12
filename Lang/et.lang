@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Record Macro
-	r_Lang002 =	&Aktiveeri Makrod
-	r_Lang003 =	&Mängi Praegune Macro
-	r_Lang004 =	&Taimer
-	r_Lang005 =	&Lülita välja Makrod
-	r_Lang006 =	M&ängi alates valitud rea
-	r_Lang007 =	Mä&ngi kuni valitud rea
-	r_Lang008 =	Män&gi valitud read
-	r_Lang009 =	&Kontekstitundlik Hotkeys
-	r_Lang010 =	L&isa Macro
-	r_Lang011 =	&Sule Macro
-	r_Lang012 =	&Duplicate Macro
-	r_Lang013 =	&Edit Makrod
-	r_Lang014 =	Im&port Macro
-	r_Lang015 =	Säästa Praeg&une Macro
+	r_Lang002 =	&Salvestamismäärangud
+	r_Lang003 =	&Aktiveeri Makrod
+	r_Lang004 =	&Taasesitussuvandid
+	r_Lang005 =	&Mängi Praegune Macro
+	r_Lang006 =	Ta&imer
+	r_Lang007 =	&Lülita välja Makrod
+	r_Lang008 =	M&ängi alates valitud rea
+	r_Lang009 =	Mä&ngi kuni valitud rea
+	r_Lang010 =	Män&gi valitud read
+	r_Lang011 =	&Kontekstitundlik Hotkeys
+	r_Lang012 =	Lisa Ma&cro
+	r_Lang013 =	S&ule Macro
+	r_Lang014 =	&Duplicate Macro
+	r_Lang015 =	&Edit Makrod
+	r_Lang016 =	Im&port Macro
+	r_Lang017 =	Säästa Praegune Macr&o
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Loo Function

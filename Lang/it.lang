@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Registra macro
-	r_Lang002 =	&Attiva macro
-	r_Lang003 =	&Gioca Macro corrente
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Disattivare Macro
-	r_Lang006 =	G&ioca da riga selezionata
-	r_Lang007 =	Gi&oca fino a riga selezionata
-	r_Lang008 =	Gio&ca righe selezionate
-	r_Lang009 =	Ta&sti di scelta rapida sensibili al contesto
-	r_Lang010 =	Aggi&ungi Macro
-	r_Lang011 =	C&hiudere Macro
-	r_Lang012 =	Du&plica macro
-	r_Lang013 =	&Modifica Macro
-	r_Lang014 =	Importa Macro
-	r_Lang015 =	Sa&lva Macro corrente
+	r_Lang002 =	&Opzioni di Registrazione
+	r_Lang003 =	&Attiva macro
+	r_Lang004 =	O&pzioni di riproduzione
+	r_Lang005 =	&Gioca Macro corrente
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Disattivare Macro
+	r_Lang008 =	G&ioca da riga selezionata
+	r_Lang009 =	Gio&ca fino a riga selezionata
+	r_Lang010 =	Gioca rig&he selezionate
+	r_Lang011 =	Ta&sti di scelta rapida sensibili al contesto
+	r_Lang012 =	Aggi&ungi Macro
+	r_Lang013 =	Chiud&ere Macro
+	r_Lang014 =	Dup&lica macro
+	r_Lang015 =	&Modifica Macro
+	r_Lang016 =	&Importa Macro
+	r_Lang017 =	Sal&va Macro corrente
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Creare Funzione

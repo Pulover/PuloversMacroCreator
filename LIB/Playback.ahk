@@ -876,7 +876,7 @@
 					Menu, Tray, Default, %w_Lang005%
 					break 3
 				}
-				If Type in %cType32%,%cType33%,%cType34%,%cType43%,%cType52%,%cType53%,%cType54%,%cType55%
+				If Type in %cType12%,%cType32%,%cType33%,%cType34%,%cType43%,%cType52%,%cType53%,%cType54%,%cType55%
 				{
 					Try
 						TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
@@ -1781,7 +1781,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 	,	WaitFor.WinActive(SplitWin(Window), Step)
-		_LastError := ErrorLevel
+	,	_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
@@ -1789,7 +1789,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 	,	WaitFor.WinNotActive(SplitWin(Window), Step)
-		_LastError := ErrorLevel
+	,	_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
@@ -1797,7 +1797,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try Menu, Tray, Icon, %ResDllPath%, 77
 		ChangeProgBarColor("Blue", "OSCProg", 28)
 	,	WaitFor.WinClose(SplitWin(Window), Step)
-		_LastError := ErrorLevel
+	,	_LastError := ErrorLevel
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
@@ -2197,7 +2197,7 @@ RunExtFunc(File, FuncName, Params*)
 
 IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, Window, Flow)
 {
-	local Pars, VarName, Oper, VarValue, lMatch, Win
+	local Pars, VarName, Oper, VarValue, lMatch, Win, ClipContents
 	
 	If (Step = "EndIf")
 		return ThisError < 1 ? 0 : --ThisError
@@ -2263,7 +2263,7 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 	}
 	Else If (Action = If7)
 	{
-		ClipContents := Clipboard
+		Try ClipContents := Clipboard
 		If (ClipContents = Step)
 			return 0
 	}

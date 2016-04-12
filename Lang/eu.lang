@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Grabatu Macro
-	r_Lang002 =	&Aktibatu Makroak
-	r_Lang003 =	&Play Oraingo Makro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Desaktibatu Makroak
-	r_Lang006 =	P&lay Aukeratutako gaineko batetik
-	r_Lang007 =	Pla&y Aukeratutako il arte
-	r_Lang008 =	Play &Hautatutako lerroak
-	r_Lang009 =	T&estuingurua sentiberak Hotkeys
-	r_Lang010 =	Geh&itu makroa
-	r_Lang011 =	It&xi Makro
-	r_Lang012 =	D&uplicate Makro
-	r_Lang013 =	Editatu &Makroak
-	r_Lang014 =	I&nportatu Makro
-	r_Lang015 =	G&orde uneko makro
+	r_Lang002 =	G&rabaketa Aukerak
+	r_Lang003 =	&Aktibatu Makroak
+	r_Lang004 =	&Playback Aukerak
+	r_Lang005 =	P&lay Oraingo Makro
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Desaktibatu Makroak
+	r_Lang008 =	Pla&y Aukeratutako gaineko batetik
+	r_Lang009 =	Play A&ukeratutako il arte
+	r_Lang010 =	Play &Hautatutako lerroak
+	r_Lang011 =	T&estuingurua sentiberak Hotkeys
+	r_Lang012 =	Geh&itu makroa
+	r_Lang013 =	It&xi Makro
+	r_Lang014 =	Dupli&cate Makro
+	r_Lang015 =	Editatu &Makroak
+	r_Lang016 =	I&nportatu Makro
+	r_Lang017 =	G&orde uneko makro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Sortu Funtzioa

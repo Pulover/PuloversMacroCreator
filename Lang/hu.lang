@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Makró rögzítése
-	r_Lang002 =	&Aktiválása Makrók
-	r_Lang003 =	&Játssz Current Macro
-	r_Lang004 =	&Időzítő
-	r_Lang005 =	&Kikapcsolása Makrók
-	r_Lang006 =	&Lejátszás kiválasztott sor
-	r_Lang007 =	J&átssz, amíg a kijelölt sor
-	r_Lang008 =	L&ejátszás kijelölt sorok
-	r_Lang009 =	&Context Sensitive gyorsbillentyűk
-	r_Lang010 =	Ke&dvencek Macro
-	r_Lang011 =	&Bezárás Macro
-	r_Lang012 =	I&smétlődő Macro
-	r_Lang013 =	S&zerkeszteni Makrók
-	r_Lang014 =	Im&port Macro
-	r_Lang015 =	Me&ntse el az aktuális makró
+	r_Lang002 =	&Felvételi Mód
+	r_Lang003 =	&Aktiválása Makrók
+	r_Lang004 =	&Lejátszási opciók
+	r_Lang005 =	&Játssz Current Macro
+	r_Lang006 =	&Időzítő
+	r_Lang007 =	&Kikapcsolása Makrók
+	r_Lang008 =	L&ejátszás kiválasztott sor
+	r_Lang009 =	J&átssz, amíg a kijelölt sor
+	r_Lang010 =	Lejá&tszás kijelölt sorok
+	r_Lang011 =	&Context Sensitive gyorsbillentyűk
+	r_Lang012 =	Ke&dvencek Macro
+	r_Lang013 =	&Bezárás Macro
+	r_Lang014 =	I&smétlődő Macro
+	r_Lang015 =	S&zerkeszteni Makrók
+	r_Lang016 =	Im&port Macro
+	r_Lang017 =	Me&ntse el az aktuális makró
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Hozzon létre Funkció

@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Įrašų Makro
-	r_Lang002 =	&Aktyvuok makrokomandas
-	r_Lang003 =	&Žaisti Aktualus Macro
-	r_Lang004 =	&Laikrodis
-	r_Lang005 =	&Išjungti makrokomandas
-	r_Lang006 =	Žai&sti iš pasirinktos eilutės
-	r_Lang007 =	Žais&ti iki pasirinktos eilutės
-	r_Lang008 =	Žaisti &pasirinktas eilutes
-	r_Lang009 =	&Konteksto Spartieji klavišai
-	r_Lang010 =	P&ridėti Makro
-	r_Lang011 =	&Uždaryti Makro
-	r_Lang012 =	&Dubliuoti Makro
-	r_Lang013 =	R&edaguoti Makrokomandos
-	r_Lang014 =	I&mportas Makro
-	r_Lang015 =	I&šsaugoti Aktualus Macro
+	r_Lang002 =	Į&rašymo nustatymai
+	r_Lang003 =	&Aktyvuok makrokomandas
+	r_Lang004 =	A&tkūrimo parinktys
+	r_Lang005 =	&Žaisti Aktualus Macro
+	r_Lang006 =	&Laikrodis
+	r_Lang007 =	&Išjungti makrokomandas
+	r_Lang008 =	Žai&sti iš pasirinktos eilutės
+	r_Lang009 =	Žaisti i&ki pasirinktos eilutės
+	r_Lang010 =	Žaisti &pasirinktas eilutes
+	r_Lang011 =	K&onteksto Spartieji klavišai
+	r_Lang012 =	Pri&dėti Makro
+	r_Lang013 =	&Uždaryti Makro
+	r_Lang014 =	Du&bliuoti Makro
+	r_Lang015 =	R&edaguoti Makrokomandos
+	r_Lang016 =	I&mportas Makro
+	r_Lang017 =	I&šsaugoti Aktualus Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Sukurti funkcija

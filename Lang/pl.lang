@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Macro Record
-	r_Lang002 =	&Aktywuj Makra
-	r_Lang003 =	&Zagraj w bieżącym makrze
-	r_Lang004 =	&Regulator czasowy
-	r_Lang005 =	&Wyłączyć Makra
-	r_Lang006 =	Za&graj z wybranego wiersza
-	r_Lang007 =	Gra&ć do wybranego wiersza
-	r_Lang008 =	&Odtwórz wybrane wiersze
-	r_Lang009 =	&Kontekstowa Hotkeys
-	r_Lang010 =	&Dodaj Macro
-	r_Lang011 =	Zamk&nij makro
-	r_Lang012 =	&Powiel makro
-	r_Lang013 =	&Edytowanie Makra
-	r_Lang014 =	&Import Makro
-	r_Lang015 =	Zapi&sz bieżące makro
+	r_Lang002 =	&Opcje Nagrywania
+	r_Lang003 =	&Aktywuj Makra
+	r_Lang004 =	O&pcje odtwarzania
+	r_Lang005 =	&Zagraj w bieżącym makrze
+	r_Lang006 =	&Regulator czasowy
+	r_Lang007 =	&Wyłączyć Makra
+	r_Lang008 =	Za&graj z wybranego wiersza
+	r_Lang009 =	Gra&ć do wybranego wiersza
+	r_Lang010 =	O&dtwórz wybrane wiersze
+	r_Lang011 =	&Kontekstowa Hotkeys
+	r_Lang012 =	Doda&j Macro
+	r_Lang013 =	Zamk&nij makro
+	r_Lang014 =	Pow&iel makro
+	r_Lang015 =	&Edytowanie Makra
+	r_Lang016 =	Impor&t Makro
+	r_Lang017 =	Zapi&sz bieżące makro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Tworzenie funkcji

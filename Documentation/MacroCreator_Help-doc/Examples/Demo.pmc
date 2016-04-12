@@ -1,0 +1,37 @@
+﻿[PMC Code v5.0.0]|F3||1|Window,2,Fast,0,1,Input,-1,-1,1|1|BasicDemo
+Groups=New Group:1
+1|SetKeyDelay|10|1|0|SetKeyDelay|||||
+2|Run|Notepad, , , Npid|1|0|Run|||||
+3|WinWait||1|333|WinWait||ahk_pid %Npid%|||
+4|WinMove|400, 400, 800, 600|1|333|WinMove||ahk_pid %Npid%|||
+5|[Text]|Hello`,`n`nThis is the demonstration macro for Pulover's Macro Creator.`n`n|1|0|SendRaw|||||
+6|Run|Notepad, , , Npid2|1|0|Run|||||
+7|WinWait||1|333|WinWait||ahk_pid %Npid2%|||
+8|WinActivate||1|333|WinActivate||ahk_pid %Npid%|||
+9|WinMove|0, 0, 800, 600|1|333|WinMove||ahk_pid %Npid2%|||
+10|[Text]|This text was sent directly to the active window.`n`n|1|10|SendEvent|||||
+11|[Text]|While this one was sent directly to the target control of a background window.`n`n|1|0|ControlSendRaw|Edit1|ahk_pid %Npid2%|||
+12|[Pause]||1|2000|Sleep|||||
+13|[Text]|You can also set the text of the entire control...|1|0|ControlSendRaw|Edit1|ahk_pid %Npid2%|||
+14|[Pause]||1|2000|Sleep|||||
+15|[Text]|...LIKE THIS!!!|1|0|ControlSetText|Edit1|ahk_pid %Npid2%|||
+16|[Pause]||1|2000|Sleep|||||
+17|[Text]|{Control Down}{End}{Control UP}{Enter 2}You can also send move and click with the mouse{!}|1|0|ControlSend|Edit1|ahk_pid %Npid2%|||
+18|Left Move & Click|-6, -122 Left, 1|1|10|Click|||||
+19|[Pause]||1|2000|Sleep|||||
+20|Left Move & Click|693, 293 Left, Down|1|10|Click|||||
+21|[Pause]||1|300|Sleep|||||
+22|Left Move & Click|12, 62 Left, Up|1|10|Click|||||
+23|[Pause]||1|2000|Sleep|||||
+24|[Text]|You can also use [ControlClick] by checking the [Control] option`nin the [Mouse] command window to click on windows on the background...|1|10|SendEvent|||||
+25|[Pause]||1|2000|Sleep|||||
+26|Run|charmap|1|0|Run|||||
+27|WinWait||1|333|WinWait||ahk_exe charmap.exe|||
+28|WinMove|800, 0, , |1|333|WinMove||ahk_exe charmap.exe|||
+29|WinActivate||1|333|WinActivate||ahk_pid %Npid2%|||
+30|Left Click|Left, 2,  x175 y63 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
+31|Left Click|Left, 2,  x106 y61 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
+32|Left Click|Left, 2,  x335 y36 NA|1|1000|ControlClick|CharGridWClass1|ahk_exe charmap.exe|||
+33|[Pause]||1|2000|Sleep|||||
+34|[MsgBox]|Too fast? You can select the commands you want to execute by unchecking the ones you don't want in the list.`n`nYou can also select to run only selected rows in [Macro > Playback options] and set a hotkey to play this macro step-by-step.`n`nPMC can do a lot more! Take some time to study the commands in it and learn what each one does.|1|0|MsgBox|32||||
+

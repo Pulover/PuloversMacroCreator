@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Snimanje makro
-	r_Lang002 =	&Aktivirajte Makronaredbe
-	r_Lang003 =	&Igrajte Trenutna Macro
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Deaktivacija Makronaredbe
-	r_Lang006 =	I&grati na odabrani redak
-	r_Lang007 =	Ig&raj dok odabrani redak
-	r_Lang008 =	Igra&jte odabrane retke
-	r_Lang009 =	&Kontekstna Hotkeys
-	r_Lang010 =	D&odaj Macro
-	r_Lang011 =	&Makro Zatvori
-	r_Lang012 =	D&vostruki Macro
-	r_Lang013 =	&Uredi Makronaredbe
-	r_Lang014 =	Uvo&z Makro
-	r_Lang015 =	S&premi Trenutni Macro
+	r_Lang002 =	&Opcije Snimanja
+	r_Lang003 =	&Aktivirajte Makronaredbe
+	r_Lang004 =	&Playback Options
+	r_Lang005 =	&Igrajte Trenutna Macro
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Deaktivacija Makronaredbe
+	r_Lang008 =	I&grati na odabrani redak
+	r_Lang009 =	Ig&raj dok odabrani redak
+	r_Lang010 =	Igra&jte odabrane retke
+	r_Lang011 =	&Kontekstna Hotkeys
+	r_Lang012 =	Dodaj &Macro
+	r_Lang013 =	Makro &Zatvori
+	r_Lang014 =	D&vostruki Macro
+	r_Lang015 =	&Uredi Makronaredbe
+	r_Lang016 =	&Uvoz Makro
+	r_Lang017 =	Spr&emi Trenutni Macro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Napravite Function

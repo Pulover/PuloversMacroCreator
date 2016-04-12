@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Grabar macro
-	r_Lang002 =	&Activar Macros
-	r_Lang003 =	&Reproducir macro actual
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Desactivar Macros
-	r_Lang006 =	R&eproducir desde la fila seleccionada
-	r_Lang007 =	Re&producir hasta la fila seleccionada
-	r_Lang008 =	Repr&oducir las filas seleccionadas
-	r_Lang009 =	Te&clas de acceso directo sensibles al contexto
-	r_Lang010 =	A&ñadir Macro
-	r_Lang011 =	Cerrar &Macro
-	r_Lang012 =	D&uplicar macro
-	r_Lang013 =	Ed&itar Macros
-	r_Lang014 =	Importar Macro
-	r_Lang015 =	Guardar macro actua&l
+	r_Lang002 =	Opcio&nes de Grabación
+	r_Lang003 =	&Activar Macros
+	r_Lang004 =	Opcione&s de reproducción
+	r_Lang005 =	&Reproducir macro actual
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Desactivar Macros
+	r_Lang008 =	R&eproducir desde la fila seleccionada
+	r_Lang009 =	Re&producir hasta la fila seleccionada
+	r_Lang010 =	Repr&oducir las filas seleccionadas
+	r_Lang011 =	Te&clas de acceso directo sensibles al contexto
+	r_Lang012 =	A&ñadir Macro
+	r_Lang013 =	Cerrar &Macro
+	r_Lang014 =	D&uplicar macro
+	r_Lang015 =	Ed&itar Macros
+	r_Lang016 =	Importar Macro
+	r_Lang017 =	Guardar macro actua&l
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Crear Función

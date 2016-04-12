@@ -24,21 +24,18 @@ Selects the target control to send the command. Use the *Get* button (...) to ea
 
 ### Window
 
-Title, partial title or identifier of a target window. The first parameter is [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm), you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. The matching behavior is set by *Title Match Mode* and can be changed in the [Playback options](Playback.html#playback-options). This field accepts [Variables & Expressions](Variables.html).  
-
-### WinTitle
-
-Selects what informations to retrieve from a target window (Title/Class/Process/ID/ProcessID) with the *Get* tool for the [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm) parameter. Check one or more items in the list and use the *Get* button (...) to copy the available information from the window.  
-**Note**: The options checked only determine what the *Get* tool will retrieve, it does not affect the command.
+Title, partial title or identifier of a target window. The first parameter is [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm), you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. This field accepts [Variables & Expressions](Variables.html).
 
 **WinTitle** matching behavior is determined by [Title Match Mode](Playback.html#title-match-mode) and [Detect Hidden Windows](Playback.html#detect-hidden-windows) settings.
 
-Additionally to **WinTitle** you can also set the following parameters separated by commas:
+The *WinTitle* button selects what informations to retrieve from a target window (Title/Class/Process/ID/ProcessID) with the *Get* tool for the WinTitle parameter. Check one or more items in the list and use the *Get* button (...) to copy the available information from the window.  
+**Note**: The options checked only determine what the *Get* tool will retrieve, it does not affect the command.
+
+Additionally to **WinTitle** you can also add the following parameters separated by commas:
 
 * **WinText**: If present, this parameter must be a substring from a single text element of the target window (as revealed by the included Window Spy utility). Hidden text elements are detected if DetectHiddenText is ON.
 * **ExcludeTitle**: Windows whose titles include this value will not be considered.
 * **ExcludeText**: Windows whose text include this value will not be considered.
-
 
 ## Table of Contents
 

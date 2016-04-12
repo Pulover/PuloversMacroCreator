@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Gravar Macro
-	r_Lang002 =	&Ativar Macros
-	r_Lang003 =	&Executar Macro Atual
-	r_Lang004 =	&Temporizador
-	r_Lang005 =	&Desativar Macros
-	r_Lang006 =	E&xecutar a Partir da Linha Selecionada
-	r_Lang007 =	Exe&cutar Até a Linha Selecionada
-	r_Lang008 =	Exec&utar Linhas Selecionadas
-	r_Lang009 =	Ata&lhos Condicionais
-	r_Lang010 =	Ad&icionar Macro
-	r_Lang011 =	&Fechar Macro
-	r_Lang012 =	Du&plicar Macro
-	r_Lang013 =	Edita&r Macros
-	r_Lang014 =	I&mportar Macro
-	r_Lang015 =	&Salvar Macro Atual
+	r_Lang002 =	&Opções de Gravação
+	r_Lang003 =	&Ativar Macros
+	r_Lang004 =	Op&ções de Execução
+	r_Lang005 =	&Executar Macro Atual
+	r_Lang006 =	&Temporizador
+	r_Lang007 =	&Desativar Macros
+	r_Lang008 =	E&xecutar a Partir da Linha Selecionada
+	r_Lang009 =	Exe&cutar Até a Linha Selecionada
+	r_Lang010 =	Exec&utar Linhas Selecionadas
+	r_Lang011 =	Ata&lhos Condicionais
+	r_Lang012 =	Ad&icionar Macro
+	r_Lang013 =	&Fechar Macro
+	r_Lang014 =	Du&plicar Macro
+	r_Lang015 =	Edita&r Macros
+	r_Lang016 =	I&mportar Macro
+	r_Lang017 =	&Salvar Macro Atual
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	Criar &Função

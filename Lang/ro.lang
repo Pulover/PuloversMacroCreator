@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Înregistrare Macro
-	r_Lang002 =	&Activa Macrocomenzi
-	r_Lang003 =	&Macro juca curent
-	r_Lang004 =	&Timer
-	r_Lang005 =	&Dezactivarea Macrocomenzi
-	r_Lang006 =	&Juca din Rând selectat
-	r_Lang007 =	J&uca până la Rând selectat
-	r_Lang008 =	Ju&ca rândurile selectate
-	r_Lang009 =	C&ontext Hotkeys sensibile
-	r_Lang010 =	&Se adaugă Macro
-	r_Lang011 =	Mac&ro Închide
-	r_Lang012 =	Macro du&blură
-	r_Lang013 =	&Edita Macrocomenzi
-	r_Lang014 =	&Import Macro
-	r_Lang015 =	Macro sa&lva curent
+	r_Lang002 =	&Opțiuni de înregistrare
+	r_Lang003 =	&Activa Macrocomenzi
+	r_Lang004 =	O&pțiuni de redare
+	r_Lang005 =	&Macro juca curent
+	r_Lang006 =	&Timer
+	r_Lang007 =	&Dezactivarea Macrocomenzi
+	r_Lang008 =	&Juca din Rând selectat
+	r_Lang009 =	J&uca până la Rând selectat
+	r_Lang010 =	Ju&ca rândurile selectate
+	r_Lang011 =	Co&ntext Hotkeys sensibile
+	r_Lang012 =	&Se adaugă Macro
+	r_Lang013 =	Mac&ro Închide
+	r_Lang014 =	Macro du&blură
+	r_Lang015 =	&Edita Macrocomenzi
+	r_Lang016 =	&Import Macro
+	r_Lang017 =	Macro sa&lva curent
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Creați Funcție

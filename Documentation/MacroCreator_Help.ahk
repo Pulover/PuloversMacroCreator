@@ -613,8 +613,7 @@
 		
 		An ELSE can be followed immediately by any other single command on the same line. This is most often used for "else if" ladders.
 		
-		An *Else If* statement must be inside another *If* block and does not have an *EndIf* of its own. The pseudo-code below shows the basic *If* structure in PMC.
-
+		An *Else If* statement must be inside another *If* block and does not have an *EndIf* of its own. The pseudo-code below shows the basic *If* structure in PMC.  
 		> [If]
 		> [...]
 		> [Else If]

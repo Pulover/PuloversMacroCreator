@@ -30,20 +30,22 @@
 		
 ; 03. Macro Sub Menu		
 	r_Lang001 =	&Enregistrer une macro
-	r_Lang002 =	&Activer les macros
-	r_Lang003 =	&Jouer Macro actuelle
-	r_Lang004 =	&Minuteur
-	r_Lang005 =	&Désactiver Les Macros
-	r_Lang006 =	J&ouez à partir de la ligne sélectionnée
-	r_Lang007 =	Jo&uez jusqu'à ce que la ligne sélectionnée
-	r_Lang008 =	Joue&z Lignes sélectionnées
-	r_Lang009 =	&Touches sensibles au contexte
-	r_Lang010 =	Ajoute&r une macro
-	r_Lang011 =	&Fermer Macro
-	r_Lang012 =	Du&pliquer Macro
-	r_Lang013 =	Mod&ifier Macros
-	r_Lang014 =	Importer Ma&cro
-	r_Lang015 =	E&nregistrer la macro actuelle
+	r_Lang002 =	&Options d'enregistrement
+	r_Lang003 =	&Activer les macros
+	r_Lang004 =	O&ptions de lecture
+	r_Lang005 =	&Jouer Macro actuelle
+	r_Lang006 =	&Minuteur
+	r_Lang007 =	&Désactiver Les Macros
+	r_Lang008 =	Jo&uez à partir de la ligne sélectionnée
+	r_Lang009 =	Joue&z jusqu'à ce que la ligne sélectionnée
+	r_Lang010 =	Jouez &Lignes sélectionnées
+	r_Lang011 =	&Touches sensibles au contexte
+	r_Lang012 =	Ajoute&r une macro
+	r_Lang013 =	&Fermer Macro
+	r_Lang014 =	Dupl&iquer Macro
+	r_Lang015 =	Modifier Ma&cros
+	r_Lang016 =	&Importer Macro
+	r_Lang017 =	E&nregistrer la macro actuelle
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Créer Fonction
