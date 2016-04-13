@@ -33,7 +33,7 @@ Loop
 		#If
 		Hold%ScK% := 1, sKey .= " Down"
 	}
-	Else If (!GetKeyState("CapsLock", "T"))
+	Else If ((StrLen(sKey) = 1) && (!GetKeyState("CapsLock", "T")))
 		StringLower, sKey, sKey
 	tKey := sKey, sKey := "{" sKey "}"
 	If (Record = 0)
