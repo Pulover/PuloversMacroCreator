@@ -72,7 +72,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Added new translations.
 * Added Language editor in *Settings* window with submit form.
 * Languages files are now kept in the Lang folder and can be added, modified or removed.
-* Updated *Loop, File* and *Loop, Reg* to new format with *Mode/ parameter.
+* Updated *Loop, File* and *Loop, Reg* to new format with *Mode* parameter.
 * Changed *List Variables* to display User-Defined variables only.
 * Extended Backup system to update backup file with every change.
 * Fixed corrupted pmc files saved on exit.
