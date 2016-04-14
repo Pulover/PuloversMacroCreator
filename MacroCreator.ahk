@@ -6318,54 +6318,61 @@ If (s_Caller = "Edit")
 				GuiControl, 12:, EdRept, %TimesX%
 			Else
 				GuiControl, 12:, TimesL, %TimesX%
+			GoSub, LoopType
 		}
 		If (Type = cType38)
 		{
-			GuiControl, 12:, LParamsFile, %Details%
 			GuiControl, 12:, LRead, 1
+			GoSub, LoopType
+			GuiControl, 12:, LParamsFile, %Details%
 		}
 		If (Type = cType39)
 		{
+			GuiControl, 12:, LParse, 1
+			GoSub, LoopType
 			GuiControl, 12:, LParamsFile, %Par1%
 			GuiControl, 12:, Delim, %Par2%
 			GuiControl, 12:, Omit, %Par3%
-			GuiControl, 12:, LParse, 1
 		}
 		If (Type = cType40)
 		{
+			GuiControl, 12:, LFilePattern, 1
+			GoSub, LoopType
 			GuiControl, 12:, LParamsFile, %Par1%
 			GuiControl, 12:, IncFiles, % InStr(Par2, "F") ? 1 : 0
 			GuiControl, 12:, IncFolders, % InStr(Par2, "D") ? 1 : 0
 			GuiControl, 12:, Recurse, % InStr(Par2, "R") ? 1 : 0
-			GuiControl, 12:, LFilePattern, 1
 		}
 		If (Type = cType41)
 		{
+			GuiControl, 12:, LRegistry, 1
+			GoSub, LoopType
 			GuiControl, 12:, LParamsFile, %Par1%
 			GuiControl, 12:, IncFiles, % InStr(Par2, "V") ? 1 : 0
 			GuiControl, 12:, IncFolders, % InStr(Par2, "K") ? 1 : 0
 			GuiControl, 12:, Recurse, % InStr(Par2, "R") ? 1 : 0
-			GuiControl, 12:, LRegistry, 1
 		}
 		If (Type = cType45)
 		{
+			GuiControl, 12:, LFor, 1
+			GoSub, LoopType
 			GuiControl, 12:, LParamsFile, %Par1%
 			GuiControl, 12:, Delim, %Par2%
 			GuiControl, 12:, Omit, %Par3%
-			GuiControl, 12:, LFor, 1
 		}
 		If (Type = cType51)
 		{
-			GuiControl, 12:, LParamsFile, %Details%
 			GuiControl, 12:, LWhile, 1
+			GoSub, LoopType
+			GuiControl, 12:, LParamsFile, %Details%
 		}
 		If (Target != "")
 		{
 			GuiControl, 12:, LUntil, 1
+			GoSub, LoopType
 			GuiControl, 12:Enable, UntilExpr
 			GuiControl, 12:, UntilExpr, %Target%
 		}
-		GoSub, LoopType
 		GoSub, ClearPars
 	}
 	GuiControl, 12:Enable, LoopApply
@@ -6457,6 +6464,20 @@ Else If (LFor = 1)
 		GuiControl, 12:Font, Field1
 		GuiControl, 12:Font, Field2
 		GuiControl, 12:Focus, LParamsFile
+		return
+	}
+	Try
+		z_Check := VarSetCapacity(%Delim%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%Delim%
+		return
+	}
+	Try
+		z_Check := VarSetCapacity(%Omit%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%Omit%
 		return
 	}
 	EscCom(false, LParamsFile)
@@ -6763,8 +6784,6 @@ GuiControl, 12:Enable%LUntil%, UntilExpr
 return
 
 LoopType:
-If (%A_GuiControl%)
-	return
 Gui, 12:Submit, NoHide
 GuiControl, 12:Enable%Loop%, EdRept
 GuiControl, 12:Disable%Loop%, LParamsFile
@@ -6796,7 +6815,7 @@ If (LFor)
 	GuiControl, 12:, Field2, %c_Lang208%
 	GuiControl, 12:, Field3, %c_Lang209%
 	GuiControl, 12:, Delim, % Par2 ? Par2 : "key"
-	GuiControl, 12:, Omit, % s_Caller = "Edit" ? Par3 : "value"
+	GuiControl, 12:, Omit, % Par3 ? Par3 : "value"
 }
 Else
 {
