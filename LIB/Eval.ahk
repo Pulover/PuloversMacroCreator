@@ -388,29 +388,29 @@ ParseObjects(v_String, _CustomVars := "", ByRef v_levels := "", o_Oper := "", o_
 			Try
 			{
 				If (o_Oper = ":=")
-					_ArrayObject := _ArrayObject[_Key*] := o_Value
+					_ArrayObject := _ArrayObject[_Key*] := o_Value ? o_Value : false
 				Else If (o_Oper = "+=")
-					_ArrayObject := _ArrayObject[_Key*] += o_Value
+					_ArrayObject := _ArrayObject[_Key*] += o_Value ? o_Value : false
 				Else If (o_Oper = "-=")
-					_ArrayObject := _ArrayObject[_Key*] -= o_Value
+					_ArrayObject := _ArrayObject[_Key*] -= o_Value ? o_Value : false
 				Else If (o_Oper = "*=")
-					_ArrayObject := _ArrayObject[_Key*] *= o_Value
+					_ArrayObject := _ArrayObject[_Key*] *= o_Value ? o_Value : false
 				Else If (o_Oper = "/=")
-					_ArrayObject := _ArrayObject[_Key*] /= o_Value
+					_ArrayObject := _ArrayObject[_Key*] /= o_Value ? o_Value : false
 				Else If (o_Oper = "//=")
-					_ArrayObject := _ArrayObject[_Key*] //= o_Value
+					_ArrayObject := _ArrayObject[_Key*] //= o_Value ? o_Value : false
 				Else If (o_Oper = ".=")
-					_ArrayObject := _ArrayObject[_Key*] .= o_Value
+					_ArrayObject := _ArrayObject[_Key*] .= o_Value ? o_Value : false
 				Else If (o_Oper = "|=")
-					_ArrayObject := _ArrayObject[_Key*] |= o_Value
+					_ArrayObject := _ArrayObject[_Key*] |= o_Value ? o_Value : false
 				Else If (o_Oper = "&=")
-					_ArrayObject := _ArrayObject[_Key*] &= o_Value
+					_ArrayObject := _ArrayObject[_Key*] &= o_Value ? o_Value : false
 				Else If (o_Oper = "^=")
-					_ArrayObject := _ArrayObject[_Key*] ^= o_Value
+					_ArrayObject := _ArrayObject[_Key*] ^= o_Value ? o_Value : false
 				Else If (o_Oper = ">>=")
-					_ArrayObject := _ArrayObject[_Key*] >>= o_Value
+					_ArrayObject := _ArrayObject[_Key*] >>= o_Value ? o_Value : false
 				Else If (o_Oper = "<<=")
-					_ArrayObject := _ArrayObject[_Key*] <<= o_Value
+					_ArrayObject := _ArrayObject[_Key*] <<= o_Value ? o_Value : false
 			}
 		}
 		Else If ($i > 1)
