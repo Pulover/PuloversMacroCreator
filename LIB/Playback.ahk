@@ -468,6 +468,15 @@
 				,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := FlowControl.ErrorLevel
 				,	LoopCount[LoopDepth] := ""
 				
+					If Type not in %cType45%,%cType51%
+					{
+						For _each, _value in Pars
+						{
+							CheckVars(CustomVars, _value)
+						,	Pars[_each] := _value
+						}
+					}
+					
 					For _depth, _pair in PlaybackVars
 					{
 						If (_depth = LoopDepth)
@@ -2229,22 +2238,26 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 	Else If (Action = If11)
 	{
 		Pars := SplitStep(CustomVars, Step)
-	,	CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
+		For _each, _value in Pars
+		{
+			CheckVars(CustomVars, _value)
+		,	Par[_each] := _value
+		}
+		CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
 	,	VarName := Pars[1], VarName := %VarName%
-		For _key, _value in CustomVars
-			If (Pars[1] = _key)
-				VarName := _value
 		If (InStr(VarName, Pars[2]))
 			return 0
 	}
 	Else If (Action = If12)
 	{
 		Pars := SplitStep(CustomVars, Step)
-	,	CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
+		For _each, _value in Pars
+		{
+			CheckVars(CustomVars, _value)
+		,	Par[_each] := _value
+		}
+		CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
 	,	VarName := Pars[1], VarName := %VarName%
-		For _key, _value in CustomVars
-			If (Pars[1] = _key)
-				VarName := _value
 		If (!InStr(VarName, Pars[2]))
 			return 0
 	}

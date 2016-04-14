@@ -21,7 +21,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "```,", ",")
+			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			If !(Send_Loop)
@@ -92,7 +92,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "```,", ",")
+			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			If (((TimesX > 1) || InStr(TimesX, "%")) && (Action != "[Text]"))
@@ -122,7 +122,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "```,", ",")
+			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			If (InStr(Window, "% ") != 1)
@@ -136,6 +136,10 @@
 		Else If ((Type = cType7) || (Type = cType38) || (Type = cType39)
 		|| (Type = cType40) || (Type = cType41) || (Type = cType45) || (Type = cType51))
 		{
+			Loop, 3
+				Stp%A_Index% := ""
+			Step := StrReplace(Step, "````,", _x)
+		,	Step := StrReplace(Step, "``,", ",")
 			If (Action = "[LoopStart]")
 			{
 				If (Type = cType7)
@@ -143,7 +147,7 @@
 				Else If (Type = cType45)
 				{
 					StringSplit, Stp, Step, `,, %A_Space%``
-					RowData := "`nFor " Stp2 ", " Stp3 " in " Stp1
+					RowData := "`nFor " Stp2 (Stp3 != "" ? ", " Stp3 : "") " in " Stp1
 				}
 				Else
 				{
@@ -167,13 +171,17 @@
 				If (Target != "")
 					RowData .= "`nUntil, " Target
 			}
+			If (Type = cType45)
+				RowData := StrReplace(RowData, _x, ",")
+			Else
+				RowData := StrReplace(RowData, _x, "``,")
 		}
 		Else If (Type = cType12)
 		{
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "```,", ",")
+			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			RowData := "`n" ((Step != "") ? "SavedClip := ClipboardAll`nClipboard := """"`nClipboard := " CheckExp(Step) "`nSleep, 333" : "")
@@ -191,6 +199,8 @@
 		{
 			Loop, 5
 				Act%A_Index% := ""
+			Loop, 5
+				Stp%A_Index% := ""
 			Loop, Parse, Action, `,,%A_Space%
 				Act%A_Index% := A_LoopField
 			OutVarX := Act3 != "" ? Act3 : "FoundX"
@@ -306,7 +316,7 @@
 				If ((ConvertBreaks) && (InStr(VarValue, "``n")))
 				{
 					VarValue := StrReplace(VarValue, "``n", "`n")
-				,	VarValue := StrReplace(VarValue, "```,", ",")
+				,	VarValue := StrReplace(VarValue, "``,", ",")
 				,	VarValue := "`n(LTrim`n" VarValue "`n)"
 				}
 				Step := VarName " " Oper " " VarValue
@@ -324,7 +334,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "```,", ",")
+			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			RowData := "`nControl, EditPaste, " Step ", " Target ", " Window
@@ -451,7 +461,7 @@
 			If ((ConvertBreaks) && (InStr(Step, "``n")) && ((Type = cType8) || (Type = cType13)))
 			{
 				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "```,", ",")
+			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
 			Step := StrReplace(Step, "`````,", "```,")
@@ -494,13 +504,13 @@
 			If ((ConvertBreaks) && (InStr(CDO_Msg, "``n")))
 			{
 				CDO_Msg := StrReplace(CDO_Msg, "``n", "`n")
-			,	CDO_Msg := StrReplace(CDO_Msg, "```,", ",")
+			,	CDO_Msg := StrReplace(CDO_Msg, "``,", ",")
 			,	CDO_Msg := "`n(LTrim`n" CDO_Msg "`n)"
 			}
 			If ((ConvertBreaks) && (InStr(CDO_Att, "``n")))
 			{
 				CDO_Att := StrReplace(CDO_Att, "``n", "`n")
-			,	CDO_Att := StrReplace(CDO_Att, "```,", ",")
+			,	CDO_Att := StrReplace(CDO_Att, "``,", ",")
 			,	CDO_Att := "`n(LTrim`n" CDO_Att "`n)"
 			}
 			RowData := "`nMsgBody = " CDO_Msg . (CDO_Att = "" ? "" : "`nAttachments = " CDO_Att)
@@ -530,7 +540,7 @@
 			; If ((ConvertBreaks) && (InStr(Step, "``n")) && (Type = cType8))
 			; {
 				; Step := StrReplace(Step, "``n", "`n")
-			; ,	Step := StrReplace(Step, "```,", ",")
+			; ,	Step := StrReplace(Step, "``,", ",")
 			; ,	Step := "`n(LTrim`n" Step "`n)"
 			; }
 			Step := StrReplace(Step, "`````,", "```,")

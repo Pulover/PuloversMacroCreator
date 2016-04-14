@@ -6451,16 +6451,17 @@ Else If (LParse = 1)
 }
 Else If (LFor = 1)
 {
-	If ((LParamsFile = "") || (Delim == "") || (Omit == ""))
+	If ((LParamsFile = "") || (Delim == ""))
 	{
 		Gui, 12:Font, cRed
 		GuiControl, 12:Font, Field1
 		GuiControl, 12:Font, Field2
-		GuiControl, 12:Font, Field3
 		GuiControl, 12:Focus, LParamsFile
 		return
 	}
-	Details := LParamsFile ", " Delim ", " Omit
+	EscCom(false, LParamsFile)
+,	Details := LParamsFile ", " Delim ", " Omit
+,	Details := RTrim(Details, ", ")
 ,	TimesL := 1, Type := cType45
 }
 Else If (LWhile = 1)
@@ -6795,7 +6796,7 @@ If (LFor)
 	GuiControl, 12:, Field2, %c_Lang208%
 	GuiControl, 12:, Field3, %c_Lang209%
 	GuiControl, 12:, Delim, % Par2 ? Par2 : "key"
-	GuiControl, 12:, Omit, % Par3 ? Par3 : "value"
+	GuiControl, 12:, Omit, % s_Caller = "Edit" ? Par3 : "value"
 }
 Else
 {
