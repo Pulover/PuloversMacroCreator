@@ -10167,7 +10167,7 @@ If (s_Caller = "Edit")
 			GuiControl, 38:Disable, ByRef%A_Index%
 		}
 		GoSub, FuncScope
-		SBShowTip("Function")
+		SBShowTip("UserFunction")
 	}
 	Else If (A_ThisLabel = "EditParam")
 	{
@@ -10199,7 +10199,7 @@ If (s_Caller = "Edit")
 If (A_ThisLabel = "UserFunction")
 {
 	GuiTitle := c_Lang212
-	SBShowTip("Function")
+	SBShowTip("UserFunction")
 }
 Else If (A_ThisLabel = "FuncParameter")
 {
