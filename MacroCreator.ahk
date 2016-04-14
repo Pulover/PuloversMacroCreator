@@ -8867,11 +8867,13 @@ Gui, 23:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom(true, Details, Target)
-	ControlCmd := Type
+	Details := StrReplace(Details, "``,", _x)
+,	EscCom(true, Details, Target)
+,	ControlCmd := Type
 	GuiControl, 23:ChooseString, ControlCmd, %ControlCmd%
 	If (Type = cType24)
 	{
+		Details := StrReplace(Details, _x, ",")
 		GuiControl, 23:ChooseString, Cmd, % cmd := RegExReplace(Details, "(^\w*).*", "$1")
 		GuiControl, 23:, Value, % RegExReplace(Details, "^\w*, ?(.*)", "$1")
 		GoSub, Cmd
@@ -8880,6 +8882,7 @@ If (s_Caller = "Edit")
 	Else If (Type = cType10)
 	{
 		GoSub, CtlCmd
+		Details := StrReplace(Details, _x, ",")
 		GuiControl, 23:, Value, %Details%
 	}
 	Else If ((Type = cType23)	|| (Type = cType27)
@@ -8887,7 +8890,7 @@ If (s_Caller = "Edit")
 	{
 		Pars := GetPars(Details)
 		For i, v in Pars
-			Par%A_Index% := v
+			Par%A_Index% := StrReplace(v, _x, ",")
 		GoSub, CtlCmd
 		GuiControl, 23:, VarName, %Par1%
 		GuiControl, 23:ChooseString, Cmd, %Par2%
@@ -8899,7 +8902,7 @@ If (s_Caller = "Edit")
 		GoSub, CtlCmd
 		Pars := GetPars(Details)
 		For i, v in Pars
-			Par%A_Index% := v
+			Par%A_Index% := StrReplace(v, _x, ",")
 		GuiControl, 23:, PosX, %Par1%
 		GuiControl, 23:, PosY, %Par2%
 		GuiControl, 23:, SizeX, %Par3%
@@ -8947,6 +8950,7 @@ GuiControlGet, VState, 23:Enabled, Value
 If (VState = 0)
 	Value := ""
 GuiControlGet, VState, 23:Enabled, VarName
+EscCom(false, Value)
 If (VState = 0)
 	VarName := ""
 If (ControlCmd = cType24)
@@ -8979,7 +8983,7 @@ If ((ControlCmd = cType23) || (ControlCmd = cType27)
 	Else
 		Details := VarName
 }
-EscCom(false, Details, DefCt)
+EscCom(false, DefCt)
 If (A_ThisLabel != "ControlApply")
 {
 	Gui, 1:-Disabled

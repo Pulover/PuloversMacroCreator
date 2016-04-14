@@ -18,6 +18,8 @@
 			Step := StrReplace(Step, "```,", "`,")
 		If (Type = cType1)
 		{
+			If (RegExMatch(Step, "^\s*%\s"))
+				Step := StrReplace(Step, "``,", ",")
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
@@ -89,6 +91,8 @@
 			RowData := "`nreturn " Step
 		Else If ((Type = cType2) || (Type = cType9) || (Type = cType10))
 		{
+			If (RegExMatch(Step, "^\s*%\s"))
+				Step := StrReplace(Step, "``,", ",")
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
@@ -119,13 +123,15 @@
 		}
 		Else If (Type = cType6)
 		{
+			If (RegExMatch(Step, "^\s*%\s"))
+				Step := StrReplace(Step, "``,", ",")
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
 			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
-			If (InStr(Window, "% ") != 1)
+			If (!RegExMatch(Window, "^\s*%\s"))
 				Window := StrReplace(Window, "```,", "`````,")
 			RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
 			If (Comment != "")
@@ -331,6 +337,8 @@
 		}
 		Else If (Type = cType22)
 		{
+			If (RegExMatch(Step, "^\s*%\s"))
+				Step := StrReplace(Step, "``,", ",")
 			If ((ConvertBreaks) && (InStr(Step, "``n")))
 			{
 				Step := StrReplace(Step, "``n", "`n")
@@ -351,7 +359,12 @@
 		}
 		Else If ((Type = cType24) || (Type = cType28))
 		{
-			RowData := "`n" Type ", " Step ", " Target ", " Window
+			Stp := StrReplace(Step, "``,", _x)
+		,	Step := ""
+			Loop, Parse, Stp, `,, %A_Space%
+				Step .= (RegExMatch(A_LoopField, "^\s*%\s") ? StrReplace(A_LoopField, _x, ",") : StrReplace(A_LoopField, _x, "``,")) ", "
+			Step := RTrim(Step, ", ")
+		,	RowData := "`n" Type ", " Step ", " Target ", " Window
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
@@ -458,13 +471,15 @@
 		}
 		Else If ((Type = cType3) || (Type = cType8) || (Type = cType13))
 		{
-			If ((ConvertBreaks) && (InStr(Step, "``n")) && ((Type = cType8) || (Type = cType13)))
+			If (RegExMatch(Step, "^\s*%\s"))
+				Step := StrReplace(Step, "``,", ",")
+			Else If ((ConvertBreaks) && (InStr(Step, "``n")) && ((Type = cType8) || (Type = cType13)))
 			{
 				Step := StrReplace(Step, "``n", "`n")
 			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
-			Step := StrReplace(Step, "`````,", "```,")
+			Step := StrReplace(Step, "````,", "``,")
 		,	RowData := "`n" Type ", " Step
 			If (!RegExMatch(Step, "```,\s*?$"))
 				RowData := RTrim(RowData, ", ")
@@ -537,17 +552,13 @@
 		}
 		Else If (InStr(FileCmdList, Type "|"))
 		{
-			; If ((ConvertBreaks) && (InStr(Step, "``n")) && (Type = cType8))
-			; {
-				; Step := StrReplace(Step, "``n", "`n")
-			; ,	Step := StrReplace(Step, "``,", ",")
-			; ,	Step := "`n(LTrim`n" Step "`n)"
-			; }
-			Step := StrReplace(Step, "`````,", "```,")
-		,	RowData := "`n" Type ", " Step
-			If (!RegExMatch(Step, "```,\s*?$"))
-				RowData := RTrim(RowData, ", ")
-			RowData := Add_CD(RowData, Comment, DelayX)
+			Stp := StrReplace(Step, "``,", _x)
+		,	Step := ""
+			Loop, Parse, Stp, `,, %A_Space%
+				Step .= (RegExMatch(A_LoopField, "^\s*%\s") ? StrReplace(A_LoopField, _x, ",") : StrReplace(A_LoopField, _x, "``,")) ", "
+			RowData := "`n" Type ", " Step
+		,	RowData := SubStr(RowData, 1, -2)
+		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
