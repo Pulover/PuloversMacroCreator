@@ -6,7 +6,7 @@
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound
 	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY, TakeAction, PbCoordModes
-	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult
+	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult, IsUserFunc := false
 
 	If (LoopInfo.GetCapacity())
 	{
@@ -18,6 +18,7 @@
 	,	Increment := LoopInfo.Increment
 	,	PbCoordModes := LoopInfo.CoordModes
 	,	PbSendModes := LoopInfo.SendModes
+	,	IsUserFunc := LoopInfo.UserFunc
 	}
 	Else
 	{
@@ -48,6 +49,8 @@
 		If ((ShowProgBar = 1) && (RunningFunction = ""))
 			GuiControl, 28:+Range0-%m_ListCount%, OSCProg
 		mLoopSize := o_TimesG[Macro_On]
+		If (UDFParams.GetCapacity())
+			IsUserFunc := true
 	}
 	SetTitleMatchMode, %TitleMatch%
 	SetTitleMatchMode, %TitleSpeed%
@@ -101,12 +104,15 @@
 				return
 			If (!ActiveRows.Checked[A_Index])
 				continue
-			If ((pb_From) && (A_Index < ActiveRows.FirstSel))
-				continue
-			If ((pb_To) && (A_Index > ActiveRows.FirstSel))
-				break
-			If ((pb_Sel) && (!ActiveRows.Selected[A_Index]))
-				continue
+			If (!IsUserFunc)
+			{
+				If ((pb_From) && (A_Index < ActiveRows.FirstSel))
+					continue
+				If ((pb_To) && (A_Index > ActiveRows.FirstSel))
+					break
+				If ((pb_Sel) && (!ActiveRows.Selected[A_Index]))
+					continue
+			}
 			Data_GetTexts(LVData, mListRow, Action, Step, TimesX, DelayX, Type, Target, Window)
 			If ((ShowProgBar = 1) && (RunningFunction = "") && (FlowControl.Break = 0) && (FlowControl.Continue = 0) && (FlowControl.If = 0))
 			{
@@ -589,7 +595,8 @@
 							,	Range: {Start: StartMark[LoopDepth], End: A_Index}
 							,	Count: _Count + 1
 							,	CoordModes: PbCoordModes
-							,	SendModes: PbSendModes}
+							,	SendModes: PbSendModes
+							,	UserFunc: IsUserFunc}
 					If (LoopCount[LoopDepth][3] != "")
 					{
 						If (Eval(LoopCount[LoopDepth][3], PlaybackVars[LoopDepth][mLoopIndex])[1])

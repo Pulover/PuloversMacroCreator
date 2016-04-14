@@ -14374,6 +14374,11 @@ Loop, % LV_GetCount()
 		If ((Type = cType48) && (InStr(Details, " := ")))
 			MustDefault := true
 	}
+	Else If Type in %cType47%,%cType48%,%cType49%
+	{
+		LV_Delete(A_Index)
+		continue
+	}
 	(Action = "[Text]") ? LV_Modify(A_Index, "Icon" IconsNames["text"])
 :	RegExMatch(Type, cType3 "|" cType4 "|" cType13) ? LV_Modify(A_Index, "Icon" IconsNames["mouse"])
 :	(Type = cType5) ? LV_Modify(A_Index, "Icon" IconsNames["pause"])
