@@ -720,41 +720,41 @@ Exprt(e)
 	While,(f:=RegExMatch(e,"S)""(?:[^""]|"""")*""",m,f))
 	{
 		t1:=SubStr(m,2,-1)
-		StringReplace,t1,t1,"",",All
-		StringReplace,t1,t1,','27,All
-		StringReplace,t1,t1,````,%c1%,All
-		StringReplace,t1,t1,``n,`n,All
-		StringReplace,t1,t1,``r,`r,All
-		StringReplace,t1,t1,``b,`b,All
-		StringReplace,t1,t1,``t,`t,All
-		StringReplace,t1,t1,``v,`v,All
-		StringReplace,t1,t1,``a,`a,All
-		StringReplace,t1,t1,``f,`f,All
-		StringReplace,t1,t1,%c1%,``,All
+	,	t1:=StrReplace(t1,"""""","""")
+	,	t1:=StrReplace(t1,"'","'27")
+	,	t1:=StrReplace(t1,"````",c1)
+	,	t1:=StrReplace(t1,"``n","`n")
+	,	t1:=StrReplace(t1,"``r","`r")
+	,	t1:=StrReplace(t1,"``b","`b")
+	,	t1:=StrReplace(t1,"``t","`t")
+	,	t1:=StrReplace(t1,"``v","`v")
+	,	t1:=StrReplace(t1,"``a","`a")
+	,	t1:=StrReplace(t1,"``f","`f")
+	,	t1:=StrReplace(t1,c1,"``")
 		SetFormat,IntegerFast,Hex
 		While,RegExMatch(t1,"iS)[^\w']",c)
-		StringReplace,t1,t1,%c%,% "'" . SubStr("0" . SubStr(Asc(c),3),-1),All
+		t1:=StrReplace(t1,c,"'" . SubStr("0" . SubStr(Asc(c),3),-1))
 		SetFormat,IntegerFast,D
 		e1.=SubStr(e,f1,f-f1) . c1 . "l" . t1 . c1,f+=StrLen(m),f1:=f
 	}
 	e1.=SubStr(e,f1),e:=InStr(e1,"""")? "":e1,e1:="",e:=RegExReplace(e,"S)/\*.*?\*/|[ \t]`;.*?(?=\r|\n|$)")
-	StringReplace,e,e,%A_Tab%,%A_Space%,All
-	e:=RegExReplace(e,"S)([\w#@\$] +|\) *)(?=" . Chr(1) . "*[\w#@\$\(])","$1 . ")
-	StringReplace,e,e,%A_Space%.%A_Space%,\.,All
-	StringReplace,e,e,%A_Space%,,All
-	f:=1,f1:=1
+,	e:=StrReplace(e,"`t"," ")
+,	e:=RegExReplace(e,"S)([\w#@\$] +|\) *)(?=" . Chr(1) . "*[\w#@\$\(])","$1 . ")
+,	e:=StrReplace(e," . ","\.")
+,	e:=StrReplace(e," ")
+,	f:=1,f1:=1
 	While,(f:=RegExMatch(e,"iS)(^|[^\w#@\$\.'])(0x[0-9a-fA-F]+|\d+(?:\.\d+)?|\.\d+)(?=[^\d\.]|$)",m,f))
 	{
 		If ((m1="\") && (RegExMatch(m2,"\.\d+")))
 		m1:="",m2:=SubStr(m2,2)
 		m2+=0
-		StringReplace,m2,m2,.,'2E
+		m2:=StrReplace(m2,".","'2E",,1)
 		e1.=SubStr(e,f1,f-f1) . m1 . c1 . "n" . m2 . c1,f+=StrLen(m),f1:=f
 	}
 	e:=e1 . SubStr(e,f1),e1:="",e:=RegExReplace(e,"S)(^|\(|[^" . c1 . "-])-" . c1 . "n","$1" . c1 . "n'2D")
-	StringReplace,e,e,%c1%n,%c1%l,All
-	e:=RegExReplace(e,"\\\.(\d+)\.(\d+)",c1 . "l$1'2E$2" . c1)
-	e:=RegExReplace(RegExReplace(e,"S)(%[\w#@\$]{1,253})%","$1"),"S)(?:^|[^\w#@\$'" . c1 . "])\K[\w#@\$]{1,253}(?=[^\(\w#@\$]|$)",c1 . "v$0" . c1),f:=1,f1:=1
+,	e:=StrReplace(e,c1 "n",c1 "l")
+,	e:=RegExReplace(e,"\\\.(\d+)\.(\d+)",c1 . "l$1'2E$2" . c1)
+,	e:=RegExReplace(RegExReplace(e,"S)(%[\w#@\$]{1,253})%","$1"),"S)(?:^|[^\w#@\$'" . c1 . "])\K[\w#@\$]{1,253}(?=[^\(\w#@\$]|$)",c1 . "v$0" . c1),f:=1,f1:=1
 	While,(f:=RegExMatch(e,"S)(^|[^\w#@\$'])([\w#@\$]{1,253})(?=\()",m,f))
 	{
 		t1:=f+StrLen(m)
@@ -764,38 +764,38 @@ Exprt(e)
 		{
 			If !Exprmlb(e,t1,fa)
 			Return
-			StringReplace,fa,fa,`,,`,,UseErrorLevel
-			ac:=ErrorLevel+1
+			fa:=StrReplace(fa,"`,","`,",c)
+			ac:=c+1
 		}
 		e1.=SubStr(e,f1,f-f1) . m1 . c1 . "f" . ac . "'20" . m2 . c1,f+=StrLen(m),f1:=f
 	}
 	e:=e1 . SubStr(e,f1),e1:=""
-	StringReplace,e,e,\.%c1%vNot%c1%\.,!,All
-	StringReplace,e,e,\.%c1%vAnd%c1%\.,&&,All
-	StringReplace,e,e,\.%c1%vOr%c1%\.,||,All
-	StringReplace,e,e,%c1%vNot%c1%\.,!,All
-	StringReplace,e,e,%c1%vAnd%c1%\.,&&,All
-	StringReplace,e,e,%c1%vOr%c1%\.,||,All
-	e:=RegExReplace(e,"S)(^|[^" . c1 . "\)-])-" . c1 . "(?=[lvf])","$1\-" . c1)
-	e:=RegExReplace(e,"S)(^|[^" . c1 . "\)&])&" . c1 . "(?=[lvf])","$1\&" . c1)
-	e:=RegExReplace(e,"S)(^|[^" . c1 . "\)\*])\*" . c1 . "(?=[lvf])","$1\*" . c1)
-	e:=RegExReplace(e,"S)(^|[^" . c1 . "\)])(\+\+|--)" . c1 . "(?=[lvf])","$1\$2" . c1)
-	t1:=RegExReplace(Exprol,"S)[\\\.\*\?\+\[\{\|\(\)\^\$]","\$0")
-	StringReplace,t1,t1,`n,|,All
-	e:=RegExReplace(e,"S)" . t1,c1 . "o$0" . c1)
-	StringReplace,e,e,`,,%c1%`,%c1%,All
-	StringReplace,e,e,(,%c1%(%c1%,All
-	StringReplace,e,e,),%c1%)%c1%,All
-	StringReplace,e,e,%c1%%c1%,%c1%,All
+,	e:=StrReplace(e,"\." c1 "vNot" c1 "\.","!")
+,	e:=StrReplace(e,"\." c1 "vAnd" c1 "\.","&&")
+,	e:=StrReplace(e,"\." c1 "vOr" c1 "\.","||")
+,	e:=StrReplace(e,c1 "vNot" c1 "\.","!")
+,	e:=StrReplace(e,c1 "vAnd" c1 "\.","&&")
+,	e:=StrReplace(e,c1 "vOr" c1 "\.","||")
+,	e:=RegExReplace(e,"S)(^|[^" . c1 . "\)-])-" . c1 . "(?=[lvf])","$1\-" . c1)
+,	e:=RegExReplace(e,"S)(^|[^" . c1 . "\)&])&" . c1 . "(?=[lvf])","$1\&" . c1)
+,	e:=RegExReplace(e,"S)(^|[^" . c1 . "\)\*])\*" . c1 . "(?=[lvf])","$1\*" . c1)
+,	e:=RegExReplace(e,"S)(^|[^" . c1 . "\)])(\+\+|--)" . c1 . "(?=[lvf])","$1\$2" . c1)
+,	t1:=RegExReplace(Exprol,"S)[\\\.\*\?\+\[\{\|\(\)\^\$]","\$0")
+,	t1:=StrReplace(t1,"`n","|")
+,	e:=RegExReplace(e,"S)" . t1,c1 . "o$0" . c1)
+,	e:=StrReplace(e,"`,",c1 "`," c1)
+,	e:=StrReplace(e,"(",c1 "(" c1)
+,	e:=StrReplace(e,")",c1 ")" c1)
+,	e:=StrReplace(e,c1 . c1,c1)
 	If RegExMatch(e,"S)" . c1 . "[^lvfo\(\),\n]")
 	Return
 	e:=SubStr(e,2,-1),f:=0
 	While,(f:=InStr(e,"'",False,f + 1))
 	{
 		If ((t1:=SubStr(e,f+1,2))<>27)
-		StringReplace,e,e,'%t1%,% Chr("0x" . t1),All
+		e:=StrReplace(e,"'" t1,Chr("0x" . t1))
 	}
-	StringReplace,e,e,'27,',All
+	e:=StrReplace(e,"'27","'")
 	Return,e
 }
 
