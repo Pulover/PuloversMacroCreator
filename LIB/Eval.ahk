@@ -250,8 +250,8 @@ Eval($x, _CustomVars := "", _Init := true)
 							,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
 							,	_Elements[HidString] := $y
 							,	$y := HidString
-							$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#:>""" : $y)
 							}
+							$z[$i] := StrReplace($z[$i], _Match, IsObject($y) ? """<~#" ObjName "#:>""" : $y)
 							continue 3
 						}
 					}
