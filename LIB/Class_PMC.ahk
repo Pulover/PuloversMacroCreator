@@ -57,7 +57,6 @@
 		Gui, 1:+Disabled
 		Gui, chMacro:Default
 		StringSplit, SelectedFile, SelectedFile, %DL%, `r
-		Critical
 		Loop, %SelectedFile0%
 		{
 			If InStr(FileExist(SelectedFile%A_Index%), "D")
@@ -74,6 +73,7 @@
 				GuiControl, chMacro:, %TabSel%, Macro%TabCount%
 				GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
 				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
+				GuiControl, chMacro:-g, InputList%TabCount%
 				this.LVLoad("InputList" TabCount, PmcCode[A_Index])
 				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
@@ -103,6 +103,7 @@
 			,	Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
 			,	LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
 			,	LVManager.SetGroups(PmcGroups[A_Index]), LVManager.Add()
+				GuiControl, chMacro:+gInputList, InputList%TabCount%
 			}
 		}
 		If (TabCount = 0)
@@ -125,7 +126,6 @@
 		Global UserDefFunctions
 		Static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
 		
-		Critical
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%
 		GuiControl, chMacro:-Redraw, %List%
@@ -205,7 +205,6 @@
 			LV_Add("Check" chk, Col*)
 		}
 		GuiControl, chMacro:+Redraw, %List%
-		Critical, Off
 	}
 
 	LVGet(List, DL := "|")

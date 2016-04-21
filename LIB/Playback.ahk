@@ -2248,10 +2248,13 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 		For _each, _value in Pars
 		{
 			CheckVars(CustomVars, _value)
-		,	Par[_each] := _value
+		,	Pars[_each] := _value
 		}
 		CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
-	,	VarName := Pars[1], VarName := %VarName%
+		If (CustomVars.HasKey(Pars[1]))
+			VarName := CustomVars[Pars[1]]
+		Else
+			VarName := Pars[1], VarName := %VarName%
 		If (InStr(VarName, Pars[2]))
 			return 0
 	}
@@ -2261,10 +2264,13 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 		For _each, _value in Pars
 		{
 			CheckVars(CustomVars, _value)
-		,	Par[_each] := _value
+		,	Pars[_each] := _value
 		}
 		CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
-	,	VarName := Pars[1], VarName := %VarName%
+		If (CustomVars.HasKey(Pars[1]))
+			VarName := CustomVars[Pars[1]]
+		Else
+			VarName := Pars[1], VarName := %VarName%
 		If (!InStr(VarName, Pars[2]))
 			return 0
 	}

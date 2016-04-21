@@ -6,7 +6,7 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.0.0
+; Version: 5.0.1
 ; Release Date: April, 2016
 ; AutoHotkey Version: 1.1.23.05
 ; Copyright © 2012-2016 Rodolfo U. Batista
@@ -129,7 +129,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.0", ReleaseDate := "April, 2016"
+CurrentVersion := "5.0.1", ReleaseDate := "April, 2016"
 
 ;##### Ini File Read #####
 
@@ -3834,9 +3834,10 @@ If (IsObject(VerChk))
 		document.close()
 		document.open()
 		document.write(changes)
+		document.body.style.overflow := "scroll"
 		document.close()
 
-		Gui, Update:Show,, %d_Lang060%
+		Gui, Update:Show,, % d_Lang060 ": " VerChk.AppVersion
 		return
 	}
 	Else If (VerChk.LangRev != LangVersion)
@@ -11349,11 +11350,14 @@ Gui, chMacro:Submit, NoHide
 s_List := A_List
 GuiControlGet, c_Time, chTimes:, TimesG
 GoSub, TabPlus
+GuiControl, chMacro:-g, InputList%TabCount%
 LVManager.SetHwnd(ListID%TabCount%, ListID%s_List%)
 ,	LVManager.ClearHistory()
 GuiControl, chTimes:, TimesG, %c_Time%
 GoSub, b_Start
 GuiControl, chMacro:+Redraw, InputList%A_List%
+GuiControl, chMacro:+gInputList, InputList%A_List%
+Gosub, PrevRefresh
 return
 
 CopyList:

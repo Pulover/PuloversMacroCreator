@@ -150,10 +150,6 @@ For more information see [AutoHotkey documentation](http://autohotkey.com/docs/c
 
 **Slow Down**: Selects the hotkey to toggle playback speed Down/Normal. When this option is on delay values will be multiplied by value set. Does not work when *Random Sleeps* is activated.
 
-### Set As Default Hotkeys
-
-If checked the current Hotkeys will be loaded on each run of the program and when 'Default Settings' are loaded.
-
 ### Display balloon tips
 
 Enables displaying of tooltips and traytips during Recording/Playback.

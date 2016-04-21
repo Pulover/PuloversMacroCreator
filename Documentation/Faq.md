@@ -7,6 +7,7 @@
 * [How do create a random number/command?](#how-do-create-a-random-number/command)
 * [Can I create Graphic User Interface/Gui with Macro Creator?](#can-i-create-graphic-user-interface/gui-with-macro-creator)
 * [Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?](#can-macro-creator-automate-firefox-or-chrome-as-it-does-with-internet-explorer)
+* [Where is the backup file located?](#where-is-the-backup-file-located)
 * [Can I make playback go faster/slower?](#can-i-make-playback-go-faster/slower)
 * [Can I execute a custom action based on Pixel/Image search result?](#can-i-execute-a-custom-action-based-on-pixel/image-search-result)
 * [Can I run a Macro in a timed interval?](#can-i-run-a-macro-in-a-timed-interval)
@@ -54,6 +55,10 @@ No, creating Guis is not in the scope of this project. But you can find some nic
 ### Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?
 
 No. Macro Creator can connect to IE because its controls are exposed via [COM](Commands/Expression.html), but that type of interaction is not possible with other browsers in the same way. Control Commands won't work either, so you might have more luck with mouse, keystrokes and Image Search.
+
+### Where is the backup file located?
+
+It's located at `%AppData%\MacroCreator\~ActiveProject.pmc` or at the application's own folder in case it's running as portable (when `MacroCreator.ini` is in the same folder as `MacroCreator.exe`).
 
 ### Can I make playback go faster/slower?
 

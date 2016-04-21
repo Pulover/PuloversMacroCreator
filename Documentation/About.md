@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 [pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2016 Rodolfo U. Batista  
 
-Version: 5.0.0  
+Version: 5.0.1  
 Release Date: April, 2016  
 AutoHotkey Version: 1.1.23.05  
 
@@ -35,6 +35,10 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 
 # Change Log
+
+## Version 5.0.1
+
+* 
 
 ## Version 5.0.0
 
