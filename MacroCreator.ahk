@@ -2187,8 +2187,9 @@ Gui, 14:Add, Button, yp-5 xp+170 H23 W25 hwndEx_EdVars vEx_EdVars gVarsTree Disa
 	ILButton(Ex_EdVars, ResDllPath ":" 73)
 Gui, 14:Add, Text, -Wrap R1 y+20 xs+10 W80, %t_Lang101%:
 Gui, 14:Add, Text, -Wrap R1 yp xs+90 W50, %t_Lang102%
-Gui, 14:Add, Slider, yp-10 xs+140 H35 W180 Center TickInterval Range-5-5 vEx_Speed, %Ex_Speed%
+Gui, 14:Add, Slider, yp-10 xs+140 H35 W180 Center TickInterval Range-8-8 vEx_Speed gSpeedTip, %Ex_Speed%
 Gui, 14:Add, Text, -Wrap R1 yp+10 xs+350 W50, %t_Lang103%
+Gui, 14:Add, Text, -Wrap R1 yp x+5 W35 vEx_SpeedTip, % RTrim(Round((2 ** Ex_Speed), 3), ".0") "x"
 Gui, 14:Add, Text, -Wrap R1 y+30 xs+10 W105, COM Objects:
 Gui, 14:Add, Radio, -Wrap Checked%ComCr% yp x+5 W120 vComCr R1, ComObjCreate
 Gui, 14:Add, Radio, -Wrap Checked%ComAc% yp x+5 W120 vComAc R1, ComObjActive
@@ -2691,8 +2692,8 @@ If (Ex_Speed != 0)
 		Ex_Speed *= -1
 		Loop, Parse, AllScripts, `n
 		{
-			If (RegExMatch(A_LoopField, "^Sleep, (\d+)$", Value))
-				Body .= "Sleep, " . Value1 * Exp_Mult[Ex_Speed] . "`n"
+			If (RegExMatch(A_LoopField, "^(\s*Sleep), (\d+)$", Value))
+				Body .= Value1 ", " . Value2 * (2 ** Ex_Speed) . "`n"
 			Else
 				Body .= A_LoopField "`n"
 		}
@@ -2701,8 +2702,8 @@ If (Ex_Speed != 0)
 	{
 		Loop, Parse, AllScripts, `n
 		{
-			If (RegExMatch(A_LoopField, "^Sleep, (\d+)$", Value))
-				Body .= "Sleep, " . Value1 // Exp_Mult[Ex_Speed] . "`n"
+			If (RegExMatch(A_LoopField, "^(\s*Sleep), (\d+)$", Value))
+				Body .= Value1 ", " . Value2 // (2 ** Ex_Speed) . "`n"
 			Else
 				Body .= A_LoopField "`n"
 		}
@@ -2786,8 +2787,8 @@ Gui, 1:+Disabled
 GoSub, SaveData
 GoSub, GetHotkeys
 GoSub, ResetHotkeys
-OldAreaColor := SearchAreaColor, OldLoopColor := LoopLVColor, OldIfColor := IfLVColor
-, OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
+OldSpeedUp := SpeedUp, OldSpeedDn := SpeedDn,OldAreaColor := SearchAreaColor, OldLoopColor := LoopLVColor
+, OldIfColor := IfLVColor, OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
 UserVarsList := User_Vars.Get(,, true)
 Gui, 4:Add, Listbox, W160 H310 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang191%|%t_Lang189%|%t_Lang178%|%t_Lang096%
 Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, General|Recording|Playback|Defaults|Screenshots|Email|Language|LangEditor|UserVars|SubmitRev
@@ -2867,13 +2868,13 @@ Gui, 4:Add, Edit, Limit Number y+10 xp W50 R1 vControlDelayE
 Gui, 4:Add, UpDown, vControlDelay 0x80 Range-1-1000, %ControlDelay%
 Gui, 4:Add, GroupBox, Section y+16 xm+170 W400 H75, %t_Lang053%:
 Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W200, %t_Lang036%:
-Gui, 4:Add, DDL, yp-2 x+0 W105 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
-Gui, 4:Add, DDL, yp x+5 W37 vSpeedUp, 2||4|8|16|32
-Gui, 4:Add, Text, -Wrap R1 yp+5 x+5, X
-Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W200, %t_Lang037%:
-Gui, 4:Add, DDL, yp-2 x+0 W105 vSlowKey, None|Pause||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
-Gui, 4:Add, DDL, yp x+5 W37 vSpeedDn, 2||4|8|16|32
-Gui, 4:Add, Text, -Wrap R1 yp+5 x+5, X
+Gui, 4:Add, DDL, yp-2 x+0 W75 vFastKey, None|Insert||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
+Gui, 4:Add, Slider, yp x+0 H25 W80 TickInterval Range1-8 vSpeedUp gSpeedTip, % Exp_Mult[SpeedUp]
+Gui, 4:Add, Text, -Wrap W25 R1 yp x+0 vSpeedUpTip, %SpeedUp%x
+Gui, 4:Add, Text, -Wrap R1 y+15 xs+10 W200, %t_Lang037%:
+Gui, 4:Add, DDL, yp-2 x+0 W75 vSlowKey, None|Pause||F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|CapsLock|NumLock|ScrollLock|
+Gui, 4:Add, Slider, yp x+0 H25 W80 TickInterval Range1-8 vSpeedDn gSpeedTip, % Exp_Mult[SpeedDn]
+Gui, 4:Add, Text, -Wrap W25 R1 yp x+0 vSpeedDnTip, %SpeedDn%x
 Gui, 4:Add, GroupBox, Section y+16 xs W400 H128, %w_Lang003%:
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%ShowStep% ys+20 xs+10 W380 vShowStep, %t_Lang100%
 Gui, 4:Add, Checkbox, -Wrap R1 Checked%HideErrors% W380 vHideErrors, %t_Lang206%
@@ -3063,6 +3064,9 @@ If (EditOn)
 	IfMsgBox, Cancel
 		return
 }
+SpeedUp := 2 ** SpeedUp
+SpeedDn := 2 ** SpeedDn
+OutputDebug, %SpeedUp% x %SpeedDn%
 If (Relative = 1)
 	CoordMouse := "Window"
 Else If (Screen = 1)
@@ -3113,8 +3117,8 @@ return
 ConfigCancel:
 4GuiClose:
 4GuiEscape:
-VirtualKeys := OldMods, SearchAreaColor := OldAreaColor, LoopLVColor := OldLoopColor, IfLVColor := OldIfColor
-, Moves := OldMoves, TimedI := OldTimed, RandomSleeps := OldRandM, RandPercent := OldRandP
+SpeedUp := OldSpeedUp, SpeedDn := OldSpeedDn, VirtualKeys := OldMods, SearchAreaColor := OldAreaColor, LoopLVColor := OldLoopColor
+, IfLVColor := OldIfColor, Moves := OldMoves, TimedI := OldTimed, RandomSleeps := OldRandM, RandPercent := OldRandP
 LangMan := ""
 Gui, 1:-Disabled
 Gui, 4:Destroy
@@ -3176,6 +3180,14 @@ If (CurrentFileName = "")
 		return
 }
 DefaultMacro = %CurrentFileName%
+return
+
+SpeedTip:
+Gui, 4:Submit, NoHide
+Gui, 14:Submit, NoHide
+GuiControl, 4:, SpeedUpTip, % (2 ** SpeedUp) "x"
+GuiControl, 4:, SpeedDnTip, % (2 ** SpeedDn) "x"
+GuiControl, 14:, Ex_SpeedTip, % RTrim(Round((2 ** Ex_Speed), 3), ".0") "x"
 return
 
 RemoveDefault:
@@ -14610,11 +14622,17 @@ Menu, SpeedUpMenu, Add, 4x, SpeedOpt
 Menu, SpeedUpMenu, Add, 8x, SpeedOpt
 Menu, SpeedUpMenu, Add, 16x, SpeedOpt
 Menu, SpeedUpMenu, Add, 32x, SpeedOpt
+Menu, SpeedUpMenu, Add, 64x, SpeedOpt
+Menu, SpeedUpMenu, Add, 128x, SpeedOpt
+Menu, SpeedUpMenu, Add, 256x, SpeedOpt
 Menu, SpeedDnMenu, Add, 2x, SpeedOpt
 Menu, SpeedDnMenu, Add, 4x, SpeedOpt
 Menu, SpeedDnMenu, Add, 8x, SpeedOpt
 Menu, SpeedDnMenu, Add, 16x, SpeedOpt
 Menu, SpeedDnMenu, Add, 32x, SpeedOpt
+Menu, SpeedDnMenu, Add, 64x, SpeedOpt
+Menu, SpeedDnMenu, Add, 128x, SpeedOpt
+Menu, SpeedDnMenu, Add, 256x, SpeedOpt
 Menu, PlayOptMenu, Add, %r_Lang007%, ResetHotkeys
 Menu, PlayOptMenu, Add
 Menu, PlayOptMenu, Add, %r_Lang008%, PlayFrom
@@ -15072,6 +15090,7 @@ return
 
 RecOpt:
 ItemVar := RecOptChecks[A_ThisMenuItemPos], %ItemVar% := !%ItemVar%
+GoSub, UpdateRecPlayMenus
 return
 
 ShowPlayMenu:
