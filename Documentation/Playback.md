@@ -146,9 +146,9 @@ For more information see [AutoHotkey documentation](http://autohotkey.com/docs/c
 
 ### Playback Speed Hotkeys
 
-**Speed Up**: Selects the hotkey to toggle playback speed Up/Normal. When this option is on delay values will be cut by value set. Does not work when *Random Sleeps* is activated.
+**Speed Up**: Selects the hotkey to toggle playback speed Up/Normal. When this function is activated, delay values will be cut by value set. Does not work when *Random Sleeps* is activated.
 
-**Slow Down**: Selects the hotkey to toggle playback speed Down/Normal. When this option is on delay values will be multiplied by value set. Does not work when *Random Sleeps* is activated.
+**Slow Down**: Selects the hotkey to toggle playback speed Down/Normal. When this function is activated, delay values will be multiplied by value set. Does not work when *Random Sleeps* is activated.
 
 ### Display balloon tips
 
