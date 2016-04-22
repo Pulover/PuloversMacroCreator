@@ -39,8 +39,9 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 ## Version 5.0.1
 
 * Increased max *Speed* settings for playback and export to 245x.
-* Fixed application freezing when loading large project files.
+* Fixed application not responsive when loading large project files.
 * Fixed *If string [not] contains* statement not working with *A_Loop* variables.
+* Fixed context menus not showing in main window after drag-and-drop operation.
 * Fixed Recording Options menu not updating.
 * Fixed Speed settings not corrected exported when using *Indentation*.
 

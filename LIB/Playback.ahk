@@ -339,11 +339,14 @@
 				}
 				If (!LabelFound)
 				{
-					MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
-						. "`n" d_Lang007 ":`t`t" d_Lang109 "`n" d_Lang066 ":`t" Step
-					IfMsgBox, No
-						StopIt := 1
-					continue
+					If (!HideErrors)
+					{
+						MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+							. "`n" d_Lang007 ":`t`t" d_Lang109 "`n" d_Lang066 ":`t" Step
+						IfMsgBox, No
+							StopIt := 1
+						continue
+					}
 				}
 				If (Type = cType36)
 				{
@@ -821,13 +824,16 @@
 					}
 					If (!Func(Action).IsBuiltIn)
 					{
-						If Action not in Screenshot,CDO,Zip,UnZip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords
+						If (!HideErrors)
 						{
-							MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
-								.	"`n" d_Lang007 ":`t`t" d_Lang031 "`n" d_Lang066 ":`t" Action "`n`n" d_Lang035
-							IfMsgBox, No
-								StopIt := 1
-							continue
+							If Action not in Screenshot,CDO,Zip,UnZip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords
+							{
+								MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
+									.	"`n" d_Lang007 ":`t`t" d_Lang031 "`n" d_Lang066 ":`t" Action "`n`n" d_Lang035
+								IfMsgBox, No
+									StopIt := 1
+								continue
+							}
 						}
 					}
 							

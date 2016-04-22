@@ -1966,8 +1966,6 @@ return
 
 Save:
 Input
-If (!SavePrompt)
-	return
 GoSub, SaveData
 ActiveFileName := CurrentFileName
 If (CurrentFileName = "")
@@ -3066,7 +3064,6 @@ If (EditOn)
 }
 SpeedUp := 2 ** SpeedUp
 SpeedDn := 2 ** SpeedDn
-OutputDebug, %SpeedUp% x %SpeedDn%
 If (Relative = 1)
 	CoordMouse := "Window"
 Else If (Screen = 1)
@@ -11274,6 +11271,8 @@ If (A_GuiEvent = "D")
 	GoSub, b_Start
 	If ((Dest_Row) && (A_GuiEvent == "d"))
 		SetTimer, MoveCopy, -10
+	Else
+		Dest_Row := ""
 }
 If (A_GuiEvent == "RightClick")
 {
