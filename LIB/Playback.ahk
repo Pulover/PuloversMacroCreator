@@ -4,10 +4,12 @@
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, cLoopIndex, iLoopIndex := 0, mLoopLength, mLoopSize, mListRow
 	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
-	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound
+	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound, Row_Type, TargetLabel, TargetFunc
 	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY, TakeAction, PbCoordModes
 	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult, IsUserFunc := false
 
+	Gui, 1:-OwnDialogs
+	
 	If (LoopInfo.GetCapacity())
 	{
 		LoopDepth := LoopInfo.LoopDepth
@@ -322,18 +324,17 @@
 						LabelFound := true
 						break
 					}
-					Else
+					Gui, chMacro:Default
+					Gui, chMacro:Submit, NoHide
+					Gui, chMacro:ListView, InputList%TabIdx%
+					Loop, % ListCount%A_Index%
 					{
-						Gui, chMacro:ListView, InputList%TabIdx%
-						Loop, % ListCount%A_Index%
+						LV_GetText(Row_Type, A_Index, 6)
+					,	LV_GetText(TargetLabel, A_Index, 3)
+						If ((Row_Type = cType35) && (TargetLabel = Step))
 						{
-							LV_GetText(Row_Type, A_Index, 6)
-						,	LV_GetText(TargetLabel, A_Index, 3)
-							If ((Row_Type = cType35) && (TargetLabel = Step))
-							{
-								RowIdx := A_Index, LabelFound := true
-								break 2
-							}
+							RowIdx := A_Index, LabelFound := true
+							break 2
 						}
 					}
 				}
@@ -345,8 +346,8 @@
 							. "`n" d_Lang007 ":`t`t" d_Lang109 "`n" d_Lang066 ":`t" Step
 						IfMsgBox, No
 							StopIt := 1
-						continue
 					}
+					continue
 				}
 				If (Type = cType36)
 				{

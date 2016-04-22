@@ -43,6 +43,9 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Fixed *If string [not] contains* statement not working with *A_Loop* variables.
 * Fixed context menus not showing in main window after drag-and-drop operation.
 * Fixed Recording Options menu not updating.
+* Fixed problems saving projects with large macros.
+* Fixed *Save as* not working.
+* Fixed *Target Label not found* error.
 * Fixed Speed settings not corrected exported when using *Indentation*.
 
 ## Version 5.0.0

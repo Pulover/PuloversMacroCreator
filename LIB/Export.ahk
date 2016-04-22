@@ -739,6 +739,7 @@ CheckExp(String, IncCommas := false)
 		return """"""
 	StringReplace, String, String, ```%, %_y%, All
 	StringReplace, String, String, `````,, %_x%, All
+	StringReplace, String, String, ``n, %_z%, All
 	If (IncCommas)
 		StringReplace, String, String, `,, %_x%, All
 	Loop, Parse, String, `,, %A_Space%``
@@ -760,6 +761,7 @@ CheckExp(String, IncCommas := false)
 	}
 	StringReplace, NewStr, NewStr, %_x%, `,, All
 	StringReplace, NewStr, NewStr, %_y%, `%, All
+	StringReplace, NewStr, NewStr, %_z%, ``n, All
 	NewStr := Trim(RegExReplace(NewStr, " """" "), ", ")
 ,	NewStr := RegExReplace(NewStr, """{4}", """""")
 ,	NewStr := RegExReplace(NewStr, "U)""(-?\d+)""", "$1")

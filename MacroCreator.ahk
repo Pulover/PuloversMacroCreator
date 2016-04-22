@@ -1980,6 +1980,7 @@ IfExist %CurrentFileName%
     }
 }
 Gui, chMacro:Default
+All_Data := ""
 Loop, %TabCount%
 {
 	LVManager.SetHwnd(ListID%A_Index%)
@@ -1988,8 +1989,9 @@ Loop, %TabCount%
 	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
 ,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
 ,	LV_Data := PMCSet . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
-	FileAppend, %LV_Data%, %CurrentFileName%
+,	All_Data .= LV_Data
 }
+FileAppend, %All_Data%, %CurrentFileName%
 LVManager.SetHwnd(ListID%A_List%)
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "NA" : "Hide"), % (CurrentFileName ? CurrentFileName " - " : "") AppName " v" CurrentVersion
 SplitPath, CurrentFileName,, wDir
@@ -2026,6 +2028,7 @@ ProjBackup:
 If !(SavePrompt)
 	return
 FileDelete, %SettingsFolder%\~ActiveProject.pmc
+All_Data := ""
 Loop, %TabCount%
 {
 	LVManager.SetHwnd(ListID%A_Index%)
@@ -2034,8 +2037,9 @@ Loop, %TabCount%
 	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
 ,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
 ,	LV_Data := PMCSet . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
-	FileAppend, %LV_Data%, %SettingsFolder%\~ActiveProject.pmc
+,	All_Data .= LV_Data
 }
+FileAppend, %All_Data%, %SettingsFolder%\~ActiveProject.pmc
 LVManager.SetHwnd(ListID%A_List%)
 return
 
@@ -6328,6 +6332,7 @@ If (s_Caller = "Edit")
 				GuiControl, 12:, EdRept, %TimesX%
 			Else
 				GuiControl, 12:, TimesL, %TimesX%
+			Par1 := ""
 			GoSub, LoopType
 		}
 		If (Type = cType38)
@@ -7252,7 +7257,8 @@ Gui, 19:Add, Checkbox, yp+5 x+20 W260 R1 vFixFoundVars, %c_Lang256%
 ; Options
 Gui, 19:Add, GroupBox, Section y+17 xm W275 H115, %c_Lang159%:
 Gui, 19:Add, Text, -Wrap R1 ys+20 xs+10 W40 Right, %c_Lang070%:
-Gui, 19:Add, DDL, yp x+10 W65 vCoordPixel, Screen||Window|Client
+Gui, 19:Add, DDL, yp x+10 W65 vCoordPixel, Window||Screen|Client
+GuiControl, 19:ChooseString, CoordPixel, %CoordMouse%
 Gui, 19:Add, Text, -Wrap R1 yp+3 x+0 W85 Right, %c_Lang071%:
 Gui, 19:Add, Edit, yp-3 x+10 vVariatT W45 Number Limit
 Gui, 19:Add, UpDown, vVariat 0x80 Range0-255, 0
@@ -10843,6 +10849,7 @@ Gui, 1:-Disabled
 Gui, 27:Destroy
 Gui, chMacro:Default
 Timer_ran := true
+GoSub, b_Enable
 If (ListCount%A_List% = 0)
 	return
 GoSub, SaveData
@@ -12097,15 +12104,24 @@ Loop, %TabCount%
 ActiveList := NewActive
 Gui, chMacro:Default
 Loop, %TabCount%
+	GuiControl, chMacro:-g, InputList%A_Index%
+Loop, %TabCount%
 	LVManager.SetHwnd(ListID%A_Index%, Project[A_Index])
+Loop, %TabCount%
+	GuiControl, chMacro:+gInputList, InputList%A_Index%
+Loop, %TabCount%
+{
+	Gui, chMacro:ListView, InputList%A_Index%
+	A_List := A_Index
+	GoSub, RowCheck
+	GoSub, b_Enable
+}
 GuiControl, chMacro:, A_List, |%Labels%
 GuiControl, chMacro:Choose, A_List, %ActiveList%
 Gui, chMacro:Submit, NoHide
 LVManager.SetHwnd(ListID%A_List%)
 GoSub, chMacroGuiSize
 GoSub, LoadData
-GoSub, RowCheck
-GoSub, b_Enable
 GoSub, UpdateCopyTo
 Gui, 1:-Disabled
 Gui, 32:Destroy
