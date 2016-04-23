@@ -438,7 +438,13 @@ You can change the default colors in Settings > General.
 
 ### Macro Tabs
 
-**Pulover's Macro Creator** supports multiple Macros / Hotkeys. To create a new Macro, click the **+** button (Add Macro / Ctrl+T). When you add or select a Macro in the tab list the current Hotkeys for it are displayed on the top-right part of the window, you can change them by clicking the box and pressing the keys on the keyboard. To remove a Hotkey click the box and press `Backspace`. Macros which have no Hotkey or no line of command will not be activated for Playback.
+**Pulover's Macro Creator** supports multiple Macros / Hotkeys. To create a new Macro, click the **+** button (Add Macro / Ctrl+T).
+
+When you add or select a Macro in the tab list, the current Hotkeys and Repeat counter for it are displayed on the top-right part of the window.
+
+Macros which have no Hotkey or no line of command will not be activated for Playback.
+
+You can edit the names and order of the tabs in Macro Menu > Edit Macros (Ctrl+Shift+M). You can also drag-and-drop the tab buttons.
 
 ### Main Loop
 
