@@ -4449,6 +4449,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -4457,6 +4458,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -5620,6 +5622,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -5628,6 +5631,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -6095,6 +6099,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -6105,6 +6110,7 @@ Else
 		If (AddIf = 1)
 			break
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -6573,7 +6579,7 @@ Else
 		If (!RowNumber)
 		{
 			LV_Insert(LastRow+1, "Check", LastRow+1, "[LoopEnd]", "LoopEnd", 1, 0, "Loop")
-			LVManager.InsertAtGroup(LastRow)
+		,	LVManager.InsertAtGroup(LastRow)
 			break
 		}
 		LastRow := LV_GetNext(LastRow)
@@ -7089,6 +7095,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -7097,6 +7104,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -7843,6 +7851,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -7851,6 +7860,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -8820,6 +8830,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -8828,6 +8839,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -9034,6 +9046,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -9042,6 +9055,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -9489,6 +9503,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -9497,6 +9512,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -9796,6 +9812,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -9804,6 +9821,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -9860,6 +9878,7 @@ Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -9868,6 +9887,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -11291,9 +11311,11 @@ If (A_GuiEvent == "ColClick")
 }
 If (A_GuiEvent = "D")
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	Dest_Row := LVManager.Drag(A_GuiEvent)
 	GoSub, RowCheck
 	GoSub, b_Start
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 	If ((Dest_Row) && (A_GuiEvent == "d"))
 		SetTimer, MoveCopy, -10
 	Else
@@ -11416,11 +11438,13 @@ return
 Duplicate:
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
+GuiControl, chMacro:-g, InputList%A_List%
 If (LVManager.Duplicate())
 {
 	GoSub, RowCheck
 	GoSub, b_Start
 }
+GuiControl, chMacro:+gInputList, InputList%A_List%
 GuiControl, Focus, InputList%A_List%
 return
 
@@ -11435,33 +11459,44 @@ return
 CutRows:
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
+GuiControl, chMacro:-g, InputList%A_List%
 If (LV_GetCount("Selected") = 0)
+{
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 	return
+}
 LVManager.Cut()
 GoSub, RowCheck
 GoSub, b_Start
+GuiControl, chMacro:+gInputList, InputList%A_List%
 GuiControl, Focus, InputList%A_List%
 return
 
 PasteRows:
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
+GuiControl, chMacro:-g, InputList%A_List%
 If (LVManager.Paste(, true))
 {
 	GoSub, RowCheck
 	GoSub, b_Start
 }
+GuiControl, chMacro:+gInputList, InputList%A_List%
 return
 
 Remove:
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
+GuiControl, chMacro:-g, InputList%A_List%
 RowSelection := LV_GetCount("Selected")
 If (RowSelection = 0)
 {
 	LV_GetText(Type, 1, 6)
-	If ((Type = cType47) || (Type = cType48))
+	If ((Type != cType47) && (Type != cType48))
+	{
+		GuiControl, chMacro:+gInputList, InputList%A_List%
 		return
+	}
 	LV_Delete(), LVManager.RemoveAllGroups()
 }
 Else
@@ -11474,6 +11509,7 @@ Else
 LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
+GuiControl, chMacro:+gInputList, InputList%A_List%
 GuiControl, Focus, InputList%A_List%
 return
 
@@ -11504,12 +11540,14 @@ return
 MoveHere:
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
+GuiControl, chMacro:-g, InputList%A_List%
 TempData := new LV_Rows()
 ,	TempData.Copy()
 ,	TempData.Paste(Dest_Row)
 ,	TempData.Delete()
 ,	TempData := ""
 LVManager.RefreshGroups()
+GuiControl, chMacro:+gInputList, InputList%A_List%
 return
 
 Undo:
@@ -11517,6 +11555,7 @@ Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:Listview, InputList%A_List%
+GuiControl, chMacro:-g, InputList%A_List%
 SelRow := LV_GetNext(0, "Focused")
 If (LVManager.Undo())
 {
@@ -11524,6 +11563,7 @@ If (LVManager.Undo())
 	GoSub, RowCheck
 	GoSub, b_Enable
 }
+GuiControl, chMacro:+gInputList, InputList%A_List%
 return
 
 Redo:
@@ -11531,6 +11571,7 @@ Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:Listview, InputList%A_List%
+GuiControl, chMacro:-g, InputList%A_List%
 SelRow := LV_GetNext(0, "Focused")
 If (LVManager.Redo())
 {
@@ -11538,6 +11579,7 @@ If (LVManager.Redo())
 	GoSub, RowCheck
 	GoSub, b_Enable
 }
+GuiControl, chMacro:+gInputList, InputList%A_List%
 return
 
 TabPlus:
@@ -12005,6 +12047,7 @@ If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 }
 Else
 {
+	GuiControl, chMacro:-g, InputList%A_List%
 	RowNumber := 0
 	Loop, %RowSelection%
 	{
@@ -12013,6 +12056,7 @@ Else
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 GoSub, RowCheck
 GoSub, b_Start
@@ -12087,6 +12131,7 @@ Else
 	}
 	Else
 	{
+		GuiControl, chMacro:-g, InputList%A_List%
 		RowNumber := 0
 		Loop, %RowSelection%
 		{
@@ -12095,6 +12140,7 @@ Else
 		,	LVManager.InsertAtGroup(RowNumber)
 		,	RowNumber++
 		}
+		GuiControl, chMacro:+gInputList, InputList%A_List%
 	}
 	GoSub, RowCheck
 	GoSub, b_Start

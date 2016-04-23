@@ -38,6 +38,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 ## Version 5.0.1
 
+* Improved performance of Macro List operations.
 * Increased max *Speed* settings for playback and export to 256x.
 * Added *Incremental* option to delay in the *Multi-Edit* window.
 * Fixed application not responsive when loading large project files.
