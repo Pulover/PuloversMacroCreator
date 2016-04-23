@@ -67,7 +67,7 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.0.0
+;@Ahk2Exe-SetVersion 5.0.1
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2016 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -142,8 +142,8 @@ SettingsFolder := FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_A
 
 IniRead, Version, %IniFilePath%, Application, Version
 IniRead, Lang, %IniFilePath%, Language, Lang
-IniRead, LangVersion, %IniFilePath%, Language, LangVersion, 1
-IniRead, LangLastCheck, %IniFilePath%, Language, LangLastCheck, 1
+IniRead, LangVersion, %IniFilePath%, Language, LangVersion, 2
+IniRead, LangLastCheck, %IniFilePath%, Language, LangLastCheck, 2
 IniRead, AutoKey, %IniFilePath%, HotKeys, AutoKey, F3|F4|F5|F6|F7
 IniRead, ManKey, %IniFilePath%, HotKeys, ManKey, |
 IniRead, AbortKey, %IniFilePath%, HotKeys, AbortKey, F8
@@ -299,6 +299,8 @@ IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1
 
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
+If (LangVersion < 2)
+	LangVersion := 2, LangLastCheck := 2
 
 User_Vars := new ObjIni(UserVarsPath)
 ,	User_Vars.Read()
