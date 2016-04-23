@@ -1,4 +1,4 @@
-﻿[PMC Code v5.0.0]|F3||1|Window,2,Fast,0,1,Input,-1,-1,1|1|BasicDemo
+﻿[PMC Code v5.0.1]|F3||1|Window,2,Fast,0,1,Input,-1,-1,1|1|BasicDemo
 Groups=New Group:1
 1|SendMode|Event|1|0|SendMode|||||
 2|SetKeyDelay|10|1|0|SetKeyDelay|||||
@@ -18,14 +18,14 @@ Groups=New Group:1
 16|[Pause]||1|2000|Sleep|||||
 17|[Text]|...LIKE THIS!!!|1|0|ControlSetText|Edit1|ahk_pid %Npid2%|||
 18|[Pause]||1|2000|Sleep|||||
-19|[Text]|{Control Down}{End}{Control UP}{Enter 2}You can also send move and click with the mouse{!}|1|0|ControlSend|Edit1|ahk_pid %Npid2%|||
+19|[Text]|{Control Down}{End}{Control UP}{Enter 2}Move the mouse cursor and click with any button{!}|1|0|ControlSend|Edit1|ahk_pid %Npid2%|||
 20|Left Move & Click|-6, -122 Left, 1|1|10|Click|||||
 21|[Pause]||1|2000|Sleep|||||
 22|Left Move & Click|693, 293 Left, Down|1|10|Click|||||
 23|[Pause]||1|300|Sleep|||||
 24|Left Move & Click|12, 62 Left, Up|1|10|Click|||||
 25|[Pause]||1|2000|Sleep|||||
-26|[Text]|You can also use [ControlClick] by checking the [Control] option`nin the [Mouse] command window to click on windows on the background...|1|0|SendRaw|||||
+26|[Text]|You can use [ControlClick] by checking the [Control] option`nin the [Mouse] command window to click on windows on the background...|1|0|SendRaw|||||
 27|[Pause]||1|2000|Sleep|||||
 28|Run|charmap|1|0|Run|||||
 29|WinWait||1|333|WinWait||ahk_exe charmap.exe|||

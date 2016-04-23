@@ -47,6 +47,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Fixed problems saving projects with large macros.
 * Fixed *Save as* not working.
 * Fixed *Target Label not found* error.
+* Fixed *Goto*, *Gosub* and *Set Timer* commands not accepting force expression syntax.
 * Fixed Speed settings not corrected exported when using *Indentation*.
 
 ## Version 5.0.0

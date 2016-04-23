@@ -6617,10 +6617,18 @@ If (GoLabelT)
 {
 	If (GoLabel = "")
 		return
-	If (!RegExMatch(GoLabel, "^[\w%]+$"))
+	If (!RegExMatch(GoLabel, "^%\s+"))
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang049%
-		return
+		If (!RegExMatch(GoLabel, "^[\w%]+$"))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang049%
+			return
+		}
+		If ((!InStr(GoLabel, "%")) && (!InStr(Proj_Labels, GoLabel "|")))
+		{
+			MsgBox, 16, %d_Lang007%, %d_Lang109%
+			return
+		}
 	}
 	Details := GoLabel, Type := (Goto = 1) ? "Goto" : "Gosub"
 }
@@ -6705,10 +6713,18 @@ Gui, 12:+OwnDialogs
 Gui, 12:Submit, NoHide
 If (GoTimerLabel = "")
 	return
-If (!RegExMatch(GoTimerLabel, "^[\w%]+$"))
+If (!RegExMatch(GoTimerLabel, "^%\s+"))
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang049%
-	return
+	If (!RegExMatch(GoTimerLabel, "^[\w%]+$"))
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang049%
+		return
+	}
+	If ((!InStr(GoTimerLabel, "%")) && (!InStr(Proj_Labels, GoTimerLabel "|")))
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang109%
+		return
+	}
 }
 If ((RunOnce) || (Period))
 {

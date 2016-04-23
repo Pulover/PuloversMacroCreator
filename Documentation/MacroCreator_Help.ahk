@@ -540,8 +540,8 @@
 		Jump to a Label or Macro.
 
 	Parameters:
-		Go to Label - Name of a label (you can select one in the list) to jump to.
-			To use a Macro as label select the corresponding Macro name in the list.
+		Go to Label - Name of a label (you can select one in the list) to jump to. This field accepts [Variables & Expressions](Variables.html).
+			To use a Macro as label, select the corresponding Macro name in the list.
 		Goto / Gosub - Sets the command to be used.
 			Goto jumps to the specified label and continues execution.
 			Gosub jumps to the specified label and continues execution until Return is encountered or the end of a Macro is reached.
@@ -569,7 +569,7 @@
 		Causes a subroutine to be launched automatically and repeatedly at a specified time interval.
 
 	Parameters:
-		Label - The name of the label or hotkey label to which to jump.
+		Label - The name of the label or hotkey label to which to jump. This field accepts [Variables & Expressions](Variables.html).
 		Period - Creates or updates a timer using the absolute value of this parameter as the approximate number of milliseconds that must pass before the timer is executed.
 		Options - Select the operation to perform with the timer.
 
