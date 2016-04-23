@@ -173,7 +173,7 @@ This menu can also be open by right-clicking on the [Macro List](#macro-list).
 
 ### Edit
 
-When only one row is selected it has tha same behavior as a double-click on a row to enter the command's window for editing. If more then one or no row is selected it will open an edit window where you change the target Control and Window, Repeat Loops or Delay for selected rows (or all rows if none is selected). If all checkboxes in the general edit window are left unchecked it will remove Control and Window from selected (or all) rows. Control and Window will only affect commands that use this column.
+When only one row is selected it has tha same behavior as a double-click on a row to enter the command's window for editing. If more then one or no row is selected it opens the **Multi-Edit** window where you change the target Control and Window, Repeat Loops or Delay for selected rows, and if no row is selected, it applies to all rows. If all checkboxes in the Multi-Edit window are left unchecked it will remove Control and Window from selected (or all) rows. Control and Window will only affect commands that use this column.
 
 ### Cut Rows
 

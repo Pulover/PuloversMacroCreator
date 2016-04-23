@@ -774,6 +774,7 @@
 	t_Lang214 =	Intervalo de tecla
 	t_Lang215 =	Intervalo de mous
 	t_Lang216 =	Intervalo de controle
+	t_Lang217 =	incremental
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir

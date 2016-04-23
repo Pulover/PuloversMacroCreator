@@ -774,6 +774,7 @@
 	t_Lang214 =	Key delay
 	t_Lang215 =	Mouse delay
 	t_Lang216 =	Control delay
+	t_Lang217 =	Incremental
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

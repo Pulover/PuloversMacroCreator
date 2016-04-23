@@ -11911,7 +11911,6 @@ return
 ApplyI:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
-ApplyIEd:
 RowSelection := LV_GetCount("Selected")
 If (RowSelection = 0)
 	LV_Modify(0, "Col5", (InStr(Delay, "%") ? Delay : DelayG))
@@ -11922,6 +11921,48 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 		LV_Modify(RowNumber, "Col5", (InStr(Delay, "%") ? Delay : DelayG))
+	}
+}
+HistCheck()
+return
+
+ApplyIEd:
+RowSelection := LV_GetCount("Selected")
+If (IncrementDelay)
+{
+	If (RowSelection = 0)
+	{
+		Loop, % LV_GetCount()
+		{
+			LV_GetText(RowDelay, A_Index, 5)
+			NewDelay := RowDelay + DelayX
+			LV_Modify(A_Index, "Col5", NewDelay > 0 ? NewDelay : 0)
+		}
+	}
+	Else
+	{
+		RowNumber := 0
+		Loop, %RowSelection%
+		{
+			RowNumber := LV_GetNext(RowNumber)
+			LV_GetText(RowDelay, RowNumber, 5)
+			NewDelay := RowDelay + DelayX
+			LV_Modify(RowNumber, "Col5", NewDelay > 0 ? NewDelay : 0)
+		}
+	}
+}
+Else
+{
+	If (RowSelection = 0)
+		LV_Modify(0, "Col5", (InStr(Delay, "%") ? Delay : DelayX))
+	Else
+	{
+		RowNumber := 0
+		Loop, %RowSelection%
+		{
+			RowNumber := LV_GetNext(RowNumber)
+			LV_Modify(RowNumber, "Col5", (InStr(Delay, "%") ? Delay : DelayX))
+		}
 	}
 }
 HistCheck()
@@ -12466,9 +12507,21 @@ MEditDelay:
 Gui, Submit, NoHide
 GuiControl, Disable%MEditDelay%, MEditRept
 GuiControl, Disable%MEditDelay%, CSend
+GuiControl, Enable%MEditDelay%, IncrementDelay
 GuiControl, Enable%MEditDelay%, DelayC
 GuiControl, Enable%MEditDelay%, Msc
 GuiControl, Enable%MEditDelay%, Sec
+return
+
+IncrementDelay:
+Gui, Submit, NoHide
+If (IncrementDelay)
+	GuiControl, +Range-999999999-999999999, DelayX
+Else
+{
+	GuiControl, +Range0-999999999, DelayX
+	GuiControl,, DelayX, 0
+}
 return
 
 EditApply:
@@ -12577,13 +12630,14 @@ Gui, 6:Add, Text, -Wrap yp+5 x+5 W180 H20 vWinParsTip cGray, %Wcmd_Short%
 Gui, 6:Add, Edit, xs+2 W230 vTitle Disabled, A
 Gui, 6:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 Gui, 6:Add, GroupBox, Section xm W280 H110
-Gui, 6:Add, Checkbox, -Wrap Section ys+15 xs+10 vMEditRept gMEditRept R1, %w_Lang015%:
-Gui, 6:Add, Checkbox, -Wrap y+15 vMEditDelay gMEditDelay R1, %c_Lang017%:
+Gui, 6:Add, Checkbox, -Wrap Section ys+15 xs+10 W85 vMEditRept gMEditRept R1, %w_Lang015%:
+Gui, 6:Add, Checkbox, -Wrap y+15 W85 vMEditDelay gMEditDelay R1, %c_Lang017%:
 Gui, 6:Add, Edit, Disabled W170 R1 ys xs+90 vEdRept
 Gui, 6:Add, UpDown, vTimesX 0x80 Range1-999999999, 1
-Gui, 6:Add, Edit, Disabled W170 vDelayC
+Gui, 6:Add, Edit, Disabled W80 vDelayC
 Gui, 6:Add, UpDown, vDelayX 0x80 Range0-999999999, 0
-Gui, 6:Add, Radio, -Wrap Section Checked Disabled W175 vMsc R1, %c_Lang018%
+Gui, 6:Add, Checkbox, -Wrap yp+5 x+5 W85 vIncrementDelay gIncrementDelay R1 Disabled, %t_Lang217%
+Gui, 6:Add, Radio, -Wrap Section Checked Disabled xs+90 W175 vMsc R1, %c_Lang018%
 Gui, 6:Add, Radio, -Wrap Disabled W175 vSec R1, %c_Lang019%
 Gui, 6:Add, Button, -Wrap Section Default xm W75 H23 gMultiOK, %c_Lang020%
 Gui, 6:Add, Button, -Wrap ys W75 H23 gMultiCancel, %c_Lang021%
@@ -12614,10 +12668,8 @@ If (MEditRept = 1)
 }
 Else If (MEditDelay = 1)
 {
-	DelayTemp := DelayG, DelayG := DelayX
 	Gui, chMacro:Default
 	GoSub, ApplyIEd
-	DelayG := DelayTemp
 	If (A_ThisLabel != "MultiApply")
 		Goto, MultiCancel
 	Else

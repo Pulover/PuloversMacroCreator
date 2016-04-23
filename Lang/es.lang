@@ -774,6 +774,7 @@
 	t_Lang214 =	Retardo clave
 	t_Lang215 =	Retardo del ratón
 	t_Lang216 =	Control de retardo
+	t_Lang217 =	incremental
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abierto

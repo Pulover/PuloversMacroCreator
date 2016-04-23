@@ -774,6 +774,7 @@
 	t_Lang214 =	キー遅延
 	t_Lang215 =	マウスの遅延
 	t_Lang216 =	制御遅延
+	t_Lang217 =	増分
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	開く

@@ -774,6 +774,7 @@
 	t_Lang214 =	Key viive
 	t_Lang215 =	Hiiri viive
 	t_Lang216 =	Ohjaus viive
+	t_Lang217 =	inkrementaalinen
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata

@@ -774,6 +774,7 @@
 	t_Lang214 =	Tasto del ritardo
 	t_Lang215 =	Ritardo del mouse
 	t_Lang216 =	Ritardo di controllo
+	t_Lang217 =	incrementale
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aperto

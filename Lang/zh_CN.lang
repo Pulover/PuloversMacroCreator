@@ -774,6 +774,7 @@
 	t_Lang214 =	关键延迟
 	t_Lang215 =	鼠标延迟
 	t_Lang216 =	控制延迟
+	t_Lang217 =	增量
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开

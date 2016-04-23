@@ -774,7 +774,8 @@
 	t_Lang214 =	Nøkkelen forsinkelse
 	t_Lang215 =	Mus forsinkelse
 	t_Lang216 =	Kontroll forsinkelse
-		tastatur og mus handlinger
+	t_Lang217 =	Trinnvis
+		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åpent
 	d_Lang002 =	Lagre nåværende prosjekt?

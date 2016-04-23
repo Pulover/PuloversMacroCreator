@@ -774,6 +774,7 @@
 	t_Lang214 =	키 지연
 	t_Lang215 =	마우스 지연
 	t_Lang216 =	제어 지연
+	t_Lang217 =	증분
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기
