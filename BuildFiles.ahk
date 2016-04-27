@@ -102,8 +102,9 @@ Source: "{#WorkDir}\Compiled\SciLexer-x64.dll"; DestDir: "{app}"; DestName: "Sci
 Source: "{#WorkDir}\Compiled\SciLexer-x86.dll"; DestDir: "{app}"; DestName: "SciLexer.dll"; Flags: ignoreversion; Tasks: install32bit
 Source: "{#WorkDir}\Compiled\MacroCreator.ini"; DestDir: "{app}"; Flags: ignoreversion; Tasks: portableinstall
 Source: "{#WorkDir}\Compiled\Resources.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#WorkDir}\Compiled\Lang\*.lang"; DestDir: "{app}\Lang"; Flags: ignoreversion
 Source: "{#WorkDir}\Compiled\MacroCreator_Help.chm"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#WorkDir}\Compiled\Lang\*.lang"; DestDir: "{userappdata}\MacroCreator\Lang"; Flags: ignoreversion; Tasks: not portableinstall
+Source: "{#WorkDir}\Compiled\Lang\*.lang"; DestDir: "{app}\Lang"; Flags: ignoreversion; Tasks: portableinstall
 Source: "{#WorkDir}\Compiled\Demo.pmc"; DestDir: "{userappdata}\MacroCreator"; Flags: ignoreversion; Tasks: not portableinstall
 Source: "{#WorkDir}\Compiled\Demo.pmc"; DestDir: "{app}"; Flags: ignoreversion; Tasks: portableinstall
 %CNHelp%
@@ -118,6 +119,9 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#PmcName}"; Filen
 
 [Run]
 Filename: "{app}\{#PmcExeName}"; Description: "{cm:LaunchProgram,{#StringChange(PmcName, '&', '&&')}}"; Flags: nowait postinstall
+
+[InstallDelete]
+Type: "filesandordirs"; Name: "{#WorkDir}\Compiled\Lang"; Flags: ignoreversion; Tasks: not portableinstall
 
 [UninstallDelete]
 Type: "filesandordirs"; Name: "{userappdata}\MacroCreator"

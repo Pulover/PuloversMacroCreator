@@ -1,7 +1,7 @@
 ﻿/*!
 	Library: Pulover's Macro Creator
 		
-		# Version: 5.0.1
+		# Version: 5.0.2
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)
 		
@@ -175,8 +175,8 @@
 		Buttons - Sets which buttons will be shown on the message box.
 		Default - Sets the default button.
 		Always On Top - Sets the message to stay on top of other windows.
-		Right-justified - Make the text right-justified.
-		Right-to-Left - Right-to-left reading order for Hebrew/Arabic.
+		Right justified - Make the text right-justified.
+		Right to Left - Right-to-left reading order for Hebrew/Arabic.
 		Timeout - Timeout in seconds.
 		Add "If Statement" - Automatically adds an *If Message Box* statement below the command. You may select a range of rows to be wrapped by the statement block.
 

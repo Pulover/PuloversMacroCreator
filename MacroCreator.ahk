@@ -6,8 +6,8 @@
 ; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.0.1
-; Release Date: April, 2016
+; Version: 5.0.2
+; Release Date: May, 2016
 ; AutoHotkey Version: 1.1.23.05
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
@@ -129,7 +129,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.1", ReleaseDate := "April, 2016"
+CurrentVersion := "5.0.2", ReleaseDate := "May, 2016"
 
 ;##### Ini File Read #####
 
@@ -3342,6 +3342,11 @@ return
 SendRevision:
 Gui, 4:Submit, NoHide
 Gui, 4:+OwnDialogs
+IfNotExist, LFile
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang102%
+	return
+}
 url := "http://www.macrocreator.com/sendemail.php"
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 whr.open("POST", url, true)
