@@ -234,7 +234,7 @@ Eval($x, _CustomVars := "", _Init := true)
 						If ((Row_Type = cType47) && (TargetFunc = _Match1))
 						{
 							_Match2 := RestoreElements(_Match2, _Elements)
-						,	_Params := {}
+						,	_Params := {Null: ""}
 						,	FuncPars := ExprGetPars(_Match2)
 						,	EvalResult := Eval(_Match2, _CustomVars)
 							Loop, % EvalResult.Length()

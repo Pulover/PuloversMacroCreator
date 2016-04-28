@@ -1109,6 +1109,7 @@ Else If (!MultInst) && (TargetID := WinExist("ahk_exe " A_ScriptFullPath))
 Else IfExist, %DefaultMacro%
 {
 	AutoRefreshState := AutoRefresh, AutoRefresh := 0
+	GpConfig := ShowGroups, ShowGroups := 0
 	PMC.Import(DefaultMacro)
 	CurrentFileName := LoadedFileName
 	GoSub, FileRead
@@ -1701,7 +1702,7 @@ ActivateHotkeys(1)
 Pause, Off
 GoSub, RecStop
 If (ClearNewList)
-	LV_Delete(), LVManager.RemoveAllGroups()
+	LV_Delete(), LVManager.RemoveAllGroups(c_Lang061)
 Else
 {
 	GoSub, RowCheck
@@ -1834,6 +1835,7 @@ If (SavePrompt)
 		return
 }
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
+GpConfig := ShowGroups, ShowGroups := 0
 PMC.Import(A_GuiEvent)
 CurrentFileName := LoadedFileName
 GoSub, FileRead
@@ -1865,6 +1867,7 @@ Loop, Parse, SelectedFileName, `n
 Files := RTrim(Files, "`n")
 OpenFile:
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
+GpConfig := ShowGroups, ShowGroups := 0
 PMC.Import(Files)
 CurrentFileName := LoadedFileName, Files := ""
 GoSub, b_Start
@@ -1882,8 +1885,7 @@ SplitPath, CurrentFileName,, wDir
 SetWorkingDir %wDir%
 Gui, chMacro:Submit, NoHide
 LVManager.SetHwnd(ListID%A_List%)
-If (ShowGroups)
-	GoSub, EnableGroups
+ShowGroups := GpConfig
 GoSub, chMacroGuiSize
 GoSub, RowCheck
 GoSub, b_Start
@@ -1917,6 +1919,7 @@ Loop, Parse, SelectedFileName, `n
 }
 Files := RTrim(Files, "`n")
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
+GpConfig := ShowGroups, ShowGroups := 0
 PMC.Import(Files,, 0)
 Files := ""
 GuiControl, chMacro:Choose, A_List, %TabCount%
@@ -1926,6 +1929,7 @@ GoSub, LoadData
 GoSub, RowCheck
 GuiControl, chMacro:Focus, InputList%A_List%
 AutoRefresh := AutoRefreshState
+ShowGroups := GpConfig
 GoSub, PrevRefresh
 GoSub, b_Start
 GoSub, RecentFiles
@@ -2088,6 +2092,7 @@ If (!FileExist(File))
 	return
 }
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
+GpConfig := ShowGroups, ShowGroups := 0
 PMC.Import(File)
 CurrentFileName := LoadedFileName, Files := ""
 ; GoSub, b_Start
@@ -11188,7 +11193,7 @@ Gui, chMacro:Default
 Gui, chMacro:Listview, %OSHK%
 MsgBox, 1, %d_Lang019%, %d_Lang020%
 IfMsgBox, OK
-	LV_Delete(), LVManager.RemoveAllGroups()
+	LV_Delete(), LVManager.RemoveAllGroups(c_Lang061)
 GoSub, RowCheck
 GoSub, b_Start
 return
@@ -11502,7 +11507,7 @@ If (RowSelection = 0)
 		GuiControl, chMacro:+gInputList, InputList%A_List%
 		return
 	}
-	LV_Delete(), LVManager.RemoveAllGroups()
+	LV_Delete(), LVManager.RemoveAllGroups(c_Lang061)
 }
 Else
 {
@@ -11676,7 +11681,7 @@ Loop, % TabCount - c_List
 ,	Labels .= TabGetText(TabSel, s_Tab) "|"
 ,	s_Tab++
 }
-LVManager.SetHwnd(ListID%TabCount%), LV_Delete(), LVManager.RemoveAllGroups()
+LVManager.SetHwnd(ListID%TabCount%), LV_Delete(), LVManager.RemoveAllGroups(c_Lang061)
 ,	LVManager.RemoveHwnd(ListID%TabCount%), LVManager.SetHwnd(ListID%A_List%)
 If (c_List != TabCount)
 {
@@ -11827,7 +11832,7 @@ Loop, %TabCount%
 {
 	Gui, chMacro:ListView, InputList%A_Index%
 	LVManager.SetHwnd(ListID%A_Index%)
-,	LV_Delete(), LVManager.RemoveAllGroups(), LVManager.ClearHistory()
+,	LV_Delete(), LVManager.RemoveAllGroups(c_Lang061), LVManager.ClearHistory()
 	GuiControl, chMacro:+Redraw, InputList%A_Index%
 	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
 }
@@ -15476,8 +15481,10 @@ Gui, chMacro:Submit, NoHide
 Loop, %TabCount%
 {
 	Gui, chMacro:Listview, InputList%A_List%
+	GuiControl, chMacro:-g, InputList%A_List%
 	LVManager.SetHwnd(ListID%A_Index%)
 	LVManager.EnableGroups(ShowGroups, c_Lang061)
+	GuiControl, chMacro:+gInputList, InputList%A_List%
 }
 LVManager.SetHwnd(ListID%A_List%)
 If (ShowGroups)
@@ -15502,7 +15509,7 @@ return
 RemoveAllGroups:
 Gui, chMacro:Default
 Gui, chMacro:Listview, InputList%A_List%
-LVManager.RemoveAllGroups()
+LVManager.RemoveAllGroups(c_Lang061)
 LVManager.Add()
 return
 

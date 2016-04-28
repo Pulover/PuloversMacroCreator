@@ -38,6 +38,8 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 ## Version 5.0.2
 
+* Improved performance when Groups are enabled.
+* Fixed variables cleared after user-defined function calls inside expressions.
 * Fixed identical function or object calls in expressions being executed only once.
 * Fixed error message when submitting translation revisions.
 
