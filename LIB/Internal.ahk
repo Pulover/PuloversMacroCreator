@@ -220,6 +220,8 @@ DragTab()
 						LVManager.SetHwnd(ListID%A_Index%, Proj_Opts[A_Index].Hist)
 				Loop, %TabCount%
 					GuiControl, chMacro:+gInputList, InputList%A_Index%
+				GuiControl, chMacro:, A_List, |
+				GuiControl, chMacro:, A_List, % NewOrder.Tabs
 				Loop, %TabCount%
 				{
 					Gui, chMacro:ListView, InputList%A_Index%
@@ -227,8 +229,6 @@ DragTab()
 					GoSub, RowCheck
 					GoSub, b_Enable
 				}
-				GuiControl, chMacro:, A_List, |
-				GuiControl, chMacro:, A_List, % NewOrder.Tabs
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
 				Gui, chMacro:Submit, NoHide
 				LVManager.SetHwnd(ListID%A_List%)

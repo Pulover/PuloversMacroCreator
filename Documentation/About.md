@@ -41,6 +41,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Improved performance when Groups are enabled.
 * Fixed variables cleared after user-defined function calls inside expressions.
 * Fixed identical function or object calls in expressions being executed only once.
+* Fixed Macro Lists being cleared after reodering function tabs by drag-and-drop or from the *Edit Macros* window.
 * Fixed error message when submitting translation revisions.
 
 ## Version 5.0.1

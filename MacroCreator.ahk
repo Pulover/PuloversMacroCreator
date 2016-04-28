@@ -12224,6 +12224,7 @@ Loop, %TabCount%
 	LVManager.SetHwnd(ListID%A_Index%, Project[A_Index])
 Loop, %TabCount%
 	GuiControl, chMacro:+gInputList, InputList%A_Index%
+GuiControl, chMacro:, A_List, |%Labels%
 Loop, %TabCount%
 {
 	Gui, chMacro:ListView, InputList%A_Index%
@@ -12231,7 +12232,6 @@ Loop, %TabCount%
 	GoSub, RowCheck
 	GoSub, b_Enable
 }
-GuiControl, chMacro:, A_List, |%Labels%
 GuiControl, chMacro:Choose, A_List, %ActiveList%
 Gui, chMacro:Submit, NoHide
 LVManager.SetHwnd(ListID%A_List%)
