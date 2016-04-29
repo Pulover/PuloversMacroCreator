@@ -39,7 +39,7 @@
 ;    SetGroups(Groups)
 ;    GetGroups([AsObject])
 ;    SetGroupCollapisable([Collapsible])
-;    RemoveAllGroups()
+;    RemoveAllGroups([FirstName])
 ;    CollapseAll([Collapse])
 ;    RefreshGroups([Collapsed])
 ;
@@ -804,7 +804,7 @@ Class LV_Rows extends LV_Rows.LV_EX
                 this.Handle.GroupsArray.Push({Name: GroupName, Row: Row})
         }
         this.RefreshGroups()
-		return true
+        return true
     }
 ;=======================================================================================
 ;    Function:           Handle.RemoveGroup()
@@ -846,7 +846,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             }
         }
         this.RefreshGroups()
-		return true
+        return true
     }
 ;=======================================================================================
 ;    Function:           Handle.InsertAtGroup()
@@ -858,11 +858,11 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
     InsertAtGroup(Row)
     {
-		For e, g in this.Handle.GroupsArray
-		{
-			If ((Row > 0) && (Row < g.Row))
-				g.Row++
-		}
+        For e, g in this.Handle.GroupsArray
+        {
+            If ((Row > 0) && (Row < g.Row))
+                g.Row++
+        }
     }
 ;=======================================================================================
 ;    Function:           Handle.RemoveAtGroup()
@@ -874,11 +874,11 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
     RemoveAtGroup(Row)
     {
-		For e, g in this.Handle.GroupsArray
-		{
-			If ((Row > 0) && (Row < g.Row))
-				g.Row--
-		}
+        For e, g in this.Handle.GroupsArray
+        {
+            If ((Row > 0) && (Row < g.Row))
+                g.Row--
+        }
     }
 ;=======================================================================================
 ;    Function:           Handle.SetGroups()
@@ -937,14 +937,19 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
 ;    Function:           Handle.RemoveAllGroups()
 ;    Description:        Removes all groups in the selected ListView.
+;    Parameters:
+;        FirstName:      Name for the first (mandatory) group at row 1.
 ;    Return:             No return value.
 ;=======================================================================================
-    RemoveAllGroups()
+    RemoveAllGroups(FirstName := "New Group")
     {
         If (!this.Handle.GroupsArray.Length())
-            this.Handle.GroupsArray.Push({Name: "New Group", Row: 1})
+            this.Handle.GroupsArray.Push({Name: FirstName, Row: 1})
         Else
-            this.Handle.GroupsArray.RemoveAt(2, this.Handle.GroupsArray.Length())
+        {
+            this.Handle.GroupsArray[1] := {Name: FirstName, Row: 1}
+        ,    this.Handle.GroupsArray.RemoveAt(2, this.Handle.GroupsArray.Length())
+        }
         this.RefreshGroups()
     }
 ;=======================================================================================
@@ -970,7 +975,13 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
     RefreshGroups(Collapsed := false)
     {
+        GroupStates := []
         Gui, Listview, % this.LVHwnd
+        For e, g in this.Handle.GroupsArray
+        {
+            this.GroupGetState(A_Index + 9, IsCollapsed)
+        ,    GroupStates.Push(IsCollapsed ? "Collapsed" : "")
+        }
         ListCount := LV_GetCount()
     ,   this.GroupRemoveAll(), GrNum := 1
         Loop, %ListCount%
@@ -978,7 +989,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             If (this.Handle.GroupsArray[GrNum].Row = A_Index)
             {
                 this.GroupInsert(GrNum + 9, this.Handle.GroupsArray[GrNum].Name)
-            ,   Styles := Collapsed ? ["Collapsible", "Collapsed"] : [this.Collapsible ? "Collapsible" : ""]
+            ,   Styles := Collapsed ? ["Collapsible", "Collapsed"] : this.Collapsible ? ["Collapsible", GroupStates[GrNum]] : []
             ,   this.GroupSetState(GrNum + 9, Styles*)
             ,   GrNum++
             }
@@ -1101,6 +1112,53 @@ Class LV_Rows extends LV_Rows.LV_EX
            Return NumGet(LVITEM, OffGroupID, "UPtr")
         }
 ; ======================================================================================================================
+; LV_EX_GroupGetHeader - Gets the header text of a group by group ID
+; ======================================================================================================================
+        GroupGetHeader(GroupID, MaxChars := 1024)
+        {
+            ; LVM_GETGROUPINFO = 0x1095
+            Static SizeOfLVGROUP := (4 * 6) + (A_PtrSize * 4)
+            Static LVGF_HEADER := 0x00000001
+            Static OffHeader := 8
+            Static OffHeaderMax := 8 + A_PtrSize
+            VarSetCapacity(HeaderText, MaxChars * 2, 0)
+            VarSetCapacity(LVGROUP, SizeOfLVGROUP, 0)
+            NumPut(SizeOfLVGROUP, LVGROUP, 0, "UInt")
+            NumPut(LVGF_HEADER, LVGROUP, 4, "UInt")
+            NumPut(&HeaderText, LVGROUP, OffHeader, "Ptr")
+            NumPut(MaxChars, LVGROUP, OffHeaderMax, "Int")
+            SendMessage, 0x1095, %GroupID%, % &LVGROUP, , % "ahk_id " . HLV
+            Return StrGet(&HeaderText, MaxChars, "UTF-16")
+        }
+; ======================================================================================================================
+; LV_EX_GroupGetState - Get group states (requires Win Vista+ for most states).
+; ======================================================================================================================
+        GroupGetState(GroupID, ByRef Collapsed := "", ByRef Collapsible := "", ByRef Focused := "", ByRef Hidden := ""
+                        , ByRef NoHeader := "", ByRef Normal := "", ByRef Selected := "")
+        {
+            ; LVM_GETGROUPINFO = 0x1095 -> msdn.microsoft.com/en-us/library/bb774932(v=vs.85).aspx
+            Static OS := DllCall("GetVersion", "UChar")
+            Static LVGS5 := {Collapsed: 0x01, Hidden: 0x02, Normal: 0x00}
+            Static LVGS6 := {Collapsed: 0x01, Collapsible: 0x08, Focused: 0x10, Hidden: 0x02, NoHeader: 0x04, Normal: 0x00, Selected: 0x20}
+            Static LVGF := 0x04 ; LVGF_STATE
+            Static SizeOfLVGROUP := (4 * 6) + (A_PtrSize * 4)
+            Static OffStateMask := 8 + (A_PtrSize * 3) + 8
+            Static OffState := OffStateMask + 4
+            SetStates := 0
+            LVGS := OS > 5 ? LVGS6 : LVGS5
+            For Each, State In LVGS
+                SetStates |= State
+            VarSetCapacity(LVGROUP, SizeOfLVGROUP, 0)
+            NumPut(SizeOfLVGROUP, LVGROUP, 0, "UInt")
+            NumPut(LVGF, LVGROUP, 4, "UInt")
+            NumPut(SetStates, LVGROUP, OffStateMask, "UInt")
+            SendMessage, 0x1095, %GroupID%, &LVGROUP, , % "ahk_id " . this.LVHwnd
+            States := NumGet(&LVGROUP, OffState, "UInt")
+            For Each, State in LVGS
+                %Each% := States & State ? True : False
+            Return ErrorLevel
+        }
+; ======================================================================================================================
 ; LV_EX_GroupInsert - Inserts a group into a list-view control.
 ; ======================================================================================================================
         GroupInsert(GroupID, Header, Align := "", Index := -1)
@@ -1160,6 +1218,8 @@ Class LV_Rows extends LV_Rows.LV_EX
            SetStates := 0
            LVGS := OS > 5 ? LVGS6 : LVGS5
            For Each, State In States {
+              If (State = "")
+			     continue
               If !LVGS.HasKey(State)
                  Return false
               SetStates |= LVGS[State]

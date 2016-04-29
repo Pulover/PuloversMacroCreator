@@ -45,6 +45,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Fixed identical function or object calls in expressions being executed only once.
 * Fixed Macro Lists being cleared after reodering function tabs by drag-and-drop or from the *Edit Macros* window.
 * Fixed hotkeys not always activated when project has function tabs.
+* Fixed collapsed groups expanded after editing the Macro list.
 * Fixed error message when submitting translation revisions.
 * Reverted *SciLexer.dll* to previous version due to crashes.
 
