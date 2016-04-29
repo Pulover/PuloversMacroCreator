@@ -2125,9 +2125,9 @@ Gui, 14:Add, Button, -Wrap W75 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
 Gui, 14:Add, Text, yp x+5 h25 0x11
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_AbortKey% yp+5 x+0 W65 vEx_AbortKey gEx_Checks R1, %w_Lang008%:
-Gui, 14:Add, Combobox, yp-5 x+0 W60 vAbortKey gAutoComplete, %KeybdList%
+Gui, 14:Add, Hotkey, yp-5 x+0 W60 vAbortKey, %AbortKey%
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_PauseKey% yp+5 x+10 W65 vEx_PauseKey R1, %t_Lang081%:
-Gui, 14:Add, Combobox, yp-5 x+0 W60 vPauseKey gAutoComplete, %KeybdList%
+Gui, 14:Add, Hotkey, yp-5 x+0 W60 vPauseKey, %PauseKey%
 ; Context
 Gui, 14:Add, GroupBox, Section y+16 xs W450 H80
 Gui, 14:Add, Checkbox, -Wrap Section ys xs vEx_IfDir gEx_Checks R1, %t_Lang009%:
@@ -2210,8 +2210,6 @@ Gui, 14:Add, Button, -Wrap Section Default xm W75 H23 hwndExpButton gExpButton, 
 Gui, 14:Add, Button, -Wrap ys W75 H23 gExpClose, %c_Lang022%
 Gui, 14:Add, Progress, ys W305 H20 vExpProgress
 
-GuiControl, 14:ChooseString, AbortKey, %AbortKey%
-GuiControl, 14:ChooseString, PauseKey, %PauseKey%
 GuiControl, 14:ChooseString, SI, %SI%
 GuiControl, 14:ChooseString, ST, %TitleMatch%
 GuiControl, 14:ChooseString, SP, %TitleSpeed%
@@ -2302,10 +2300,13 @@ Gui, 13:+owner14 +ToolWindow +Delimiter%_x% +HwndExLVEdit
 Gui, 14:Default
 Gui, 14:+Disabled
 Gui, 13:Add, GroupBox, Section xm W270 H105
-Gui, 13:Add, Edit, ys+15 xs+10 W250 vEx_Macro, %Ex_Macro%
-Gui, 13:Add, Combobox, W140 vEx_AutoKey gAutoComplete, %KeybdList%
+Gui, 13:Add, Edit, ys+15 xs+10 W140 vEx_Macro, %Ex_Macro%
 Gui, 13:Add, Checkbox, -Wrap Checked%Ex_BM% yp+3 x+10 W100 vEx_BM R1, %t_Lang006%
-Gui, 13:Add, Text, -Wrap y+17 xs+10 W60 R1 Right, %t_Lang003%:
+Gui, 13:Add, Hotkey, W100 y+15 xm+30 vEx_AutoKey, %Ex_AutoKey%
+Gui, 13:Add, Combobox, W100 yp x+30 vEx_AutoKeyL gAutoComplete Disabled, %KeybdList%
+Gui, 13:Add, Radio, W25 yp+5 xm+5 Checked vEx_AutoKeyFromH gExHotkey
+Gui, 13:Add, Radio, W25 yp xm+135 vEx_AutoKeyFromL gExHotkey
+Gui, 13:Add, Text, -Wrap y+13 xs+10 W60 R1 Right, %t_Lang003%:
 Gui, 13:Add, Edit, yp-3 x+10 Limit Number W70 R1 vEx_TE
 Gui, 13:Add, UpDown, 0x80 Range0-999999999 vEx_TimesX, %Ex_TimesX%
 Gui, 13:Add, Text, -Wrap R1 yp+3 x+10 , %t_Lang004%
@@ -2313,13 +2314,16 @@ Gui, 13:Add, Button, Section Default -Wrap xm W75 H23 gExpEditOK, %c_Lang020%
 Gui, 13:Add, Button, -Wrap ys W75 H23 gExpEditCancel, %c_Lang021%
 Gui, 13:Add, Updown, ys x+60 W50 H20 Horz vExpSel gExpSelList Range0-1
 If (InStr(KeybdList, Ex_AutoKey _x))
-	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
+	GuiControl, 13:ChooseString, Ex_AutoKeyL, %Ex_AutoKey%
 Else
-	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%%_x%%_x%
+	GuiControl, 13:, Ex_AutoKeyL, %Ex_AutoKey%%_x%%_x%
 If (InStr(Ex_Macro, "()"))
 {
 	GuiControl, 13:Disable, Ex_Macro
 	GuiControl, 13:Disable, Ex_AutoKey
+	GuiControl, 13:Disable, Ex_AutoKeyL
+	GuiControl, 13:Disable, Ex_AutoKeyFromH
+	GuiControl, 13:Disable, Ex_AutoKeyFromL
 	GuiControl, 13:Disable, Ex_BM
 	GuiControl, 13:Disable, Ex_TE
 	GuiControl, 13:Disable, Ex_TimesX
@@ -2364,6 +2368,20 @@ Gui, 13:Destroy
 LV_Modify(RowNumber,, Ex_Macro, Ex_AutoKey, Ex_TimesX, Ex_BM)
 return
 
+ExHotkey:
+Gui, 13:Submit, NoHide
+If (Ex_AutoKeyFromH)
+{
+	GuiControl, 13:Enable, Ex_AutoKey
+	GuiControl, 13:Disable, Ex_AutoKeyL
+}
+Else
+{
+	GuiControl, 13:Disable, Ex_AutoKey
+	GuiControl, 13:Enable, Ex_AutoKeyL
+}
+return
+
 ExpSelList:
 NewRow := ExpSel ? (RowNumber + 1) : (RowNumber - 1)
 Gui, 13:+OwnDialogs
@@ -2389,6 +2407,7 @@ If (Ex_Macro != "")
 		}
 	}
 }
+Ex_AutoKey := Ex_AutoKeyFromH ? Ex_AutoKey : Ex_AutoKeyL
 LV_Modify(RowNumber,, Ex_Macro, Ex_AutoKey, Ex_TimesX, Ex_BM)
 ,	RowNumber := NewRow
 If (RowNumber > LV_GetCount())
@@ -2400,17 +2419,26 @@ LV_Modify(0, "-Select"), LV_Modify(RowNumber, "Select")
 ,	LV_GetText(Ex_AutoKey, RowNumber, 2)
 ,	LV_GetText(Ex_TimesX, RowNumber, 3)
 ,	LV_GetText(Ex_BM, RowNumber, 4)
+If (InStr(Ex_Macro, "()"))
+{
+	Ex_AutoKey := ""
+	GuiControl, 13:, Ex_AutoKeyFromH, 1
+}
 GuiControl, 13:, Ex_Macro, %Ex_Macro%
 GuiControl, 13:, Ex_BM, %Ex_BM%
 GuiControl, 13:, Ex_TimesX, %Ex_TimesX%
-If (InStr(KeybdList, Ex_AutoKey))
-	GuiControl, 13:ChooseString, Ex_AutoKey, %Ex_AutoKey%
+GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%
+If (InStr(KeybdList, Ex_AutoKey _x))
+	GuiControl, 13:ChooseString, Ex_AutoKeyL, %Ex_AutoKey%
 Else
-	GuiControl, 13:, Ex_AutoKey, %Ex_AutoKey%||
+	GuiControl, 13:, Ex_AutoKeyL, %Ex_AutoKey%%_x%%_x%
 If (InStr(Ex_Macro, "()"))
 {
 	GuiControl, 13:Disable, Ex_Macro
 	GuiControl, 13:Disable, Ex_AutoKey
+	GuiControl, 13:Disable, Ex_AutoKeyL
+	GuiControl, 13:Disable, Ex_AutoKeyFromH
+	GuiControl, 13:Disable, Ex_AutoKeyFromL
 	GuiControl, 13:Disable, Ex_BM
 	GuiControl, 13:Disable, Ex_TE
 	GuiControl, 13:Disable, Ex_TimesX
@@ -2418,7 +2446,12 @@ If (InStr(Ex_Macro, "()"))
 Else
 {
 	GuiControl, 13:Enable, Ex_Macro
-	GuiControl, 13:Enable, Ex_AutoKey
+	If (Ex_AutoKeyFromH)
+		GuiControl, 13:Enable, Ex_AutoKey
+	Else
+		GuiControl, 13:Enable, Ex_AutoKeyL
+	GuiControl, 13:Enable, Ex_AutoKeyFromH
+	GuiControl, 13:Enable, Ex_AutoKeyFromL
 	GuiControl, 13:Enable, Ex_BM
 	GuiControl, 13:Enable, Ex_TE
 	GuiControl, 13:Enable, Ex_TimesX
@@ -2615,17 +2648,17 @@ If (ExpFile = "")
 	return
 If (Ex_AbortKey = 1)
 {
-	If (!RegExMatch(AbortKey, "^\w+$"))
+	If (AbortKey = "")
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang073%
+		MsgBox, 16, %d_Lang007%, %d_Lang073%`n`n> %w_Lang008%
 		return
 	}
 }
 If (Ex_PauseKey = 1)
 {
-	If (!RegExMatch(PauseKey, "^\w+$"))
+	If (PauseKey = "")
 	{
-		MsgBox, 16, %d_Lang007%, %d_Lang073%
+		MsgBox, 16, %d_Lang007%, %d_Lang073%`n`n> %t_Lang081%
 		return
 	}
 }

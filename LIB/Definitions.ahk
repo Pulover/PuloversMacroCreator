@@ -1283,3 +1283,5 @@ BuiltinVars := StrReplace(BIV_Characters, "`n", ",")
 			. StrReplace(BIV_System, "`n", ",")
 			. StrReplace(BIV_Misc, "`n", ",")
 			. StrReplace(BIV_Loop, "`n", ",")
+
+FuncWhiteList := "Gdip_,Screenshot,CDO,Zip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords,Dlg_,IEGet,IELoad,WBGet,ScheduleTask"

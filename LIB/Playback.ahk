@@ -810,7 +810,7 @@
 					{
 						If (!HideErrors)
 						{
-							If Action not in Screenshot,CDO,Zip,UnZip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords
+							If Action not contains %FuncWhiteList%
 							{
 								MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
 									.	"`n" d_Lang007 ":`t`t" d_Lang031 "`n" d_Lang066 ":`t" Action "`n`n" d_Lang035
