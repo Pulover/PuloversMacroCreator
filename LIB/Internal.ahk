@@ -1300,49 +1300,51 @@ CreateZipFile(sZip)
 	FileEncoding, %CurrentEncoding%
 }
 
-SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "")
+SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "", ClearLocal := false)
 {
 	Static VarsRecord := {}, LocalRecord := {}
 	Local ListOfVars, i, v
+	
+	If (ClearLocal)
+	{
+		LocalRecord[RunningFunction] := ""
+		return
+	}
 	
 	If _Var in %BuiltinVars%,TabCount,Record,Action,Step,Details,TimesX,DelayX,Type,Target,Window,Win,IfError,VarName,VarValue,Oper,Par,Param,Version,Lang,AutoKey,ManKey,AbortKey,PauseKey,RecKey,RecNewKey,RelKey,FastKey,SlowKey,ClearNewList,DelayG,OnScCtrl,ShowStep,HideMainWin,DontShowPb,DontShowRec,DontShowEdt,ConfirmDelete,ShowTips,NextTip,IfDirectContext,IfDirectWindow,KeepHkOn,Mouse,Moves,TimedI,Strokes,CaptKDn,MScroll,WClass,WTitle,MDelay,DelayM,DelayW,MaxHistory,TDelay,ToggleC,RecKeybdCtrl,RecMouseCtrl,CoordMouse,SpeedUp,SpeedDn,MouseReturn,ShowProgBar,ShowBarOnStart,AutoHideBar,RandomSleeps,RandPercent,DrawButton,OnRelease,OnEnter,LineW,ScreenDir,DefaultEditor,DefaultMacro,StdLibFile,KeepDefKeys,TbNoTheme,AutoBackup,MultInst,EvalDefault,CloseAction,ShowLoopIfMark,ShowActIdent,SearchAreaColor,LoopLVColor,IfLVColor,VirtualKeys,AutoUpdate,Ex_AbortKey,Ex_PauseKey,Ex_SM,SM,Ex_SI,SI,Ex_ST,ST,Ex_DH,Ex_AF,Ex_HK,Ex_PT,Ex_NT,Ex_SC,SC,Ex_SW,SW,Ex_SK,SK,Ex_MD,MD,Ex_SB,SB,Ex_MT,MT,Ex_IN,Ex_UV,Ex_Speed,ComCr,ComAc,Send_Loop,TabIndent,IncPmc,Exe_Exp,ShowExpOpt,MainWinSize,MainWinPos,WinState,ColSizes,ColOrder,PrevWinSize,ShowPrev,TextWrap,CommentUnchecked,CustomColors,OSCPos,OSTrans,OSCaption,AutoRefresh,ShowGroups,IconSize,UserLayout,MainLayout,MacroLayout,FileLayout,RecPlayLayout,SettingsLayout,CommandLayout,EditLayout,ShowBands
 		If ((_Var != "Clipboard") && (_Var != "ErrorLevel"))
 			TrayTip, %d_Lang011%, %_Var% %d_Lang042%,, 18
 	If (IsByRef(_Saved))
 	{
+		If ((AsArray) && (RunningFunction != ""))
+		{
+			ListOfVars := []
+			For i, v in LocalRecord[RunningFunction]
+				ListOfVars.Push(i)
+			_Saved := ListOfVars
+			return
+		}
 		If (AsArray)
 		{
 			ListOfVars := []
 			For i, v in VarsRecord
 				ListOfVars.Push(i)
 			_Saved := ListOfVars
+			return
 		}
-		Else
-		{
-			For i, v in VarsRecord
-				ListOfVars .= i ": " v "`n"
-			Sort, ListOfVars
-			ListOfVars := "Global Variables (alphabetical)`n--------------------------------------------------`n" ListOfVars
-			_Saved := ListOfVars
-		}
+		For i, v in VarsRecord
+			ListOfVars .= i ": " v "`n"
+		Sort, ListOfVars
+		ListOfVars := "Global Variables (alphabetical)`n--------------------------------------------------`n" ListOfVars
+		_Saved := ListOfVars
 		If (RunningFunction != "")
 		{
-			If (AsArray)
-			{
-				ListOfVars.Push("##_Locals:")
-				For i, v in LocalRecord[RunningFunction]
-					ListOfVars.Push(i)
-				_Saved := ListOfVars
-			}
-			Else
-			{
-				ListOfVars := ""
-				For i, v in LocalRecord[RunningFunction]
-					ListOfVars .= i ": " v "`n"
-				Sort, ListOfVars
-				ListOfVars := "Local Variables for " RunningFunction "()`n--------------------------------------------------`n" ListOfVars
-				_Saved := ListOfVars "`n" _Saved
-			}
+			ListOfVars := ""
+			For i, v in LocalRecord[RunningFunction]
+				ListOfVars .= i ": " v "`n"
+			Sort, ListOfVars
+			ListOfVars := "Local Variables for " RunningFunction "()`n--------------------------------------------------`n" ListOfVars
+			_Saved := ListOfVars "`n" _Saved
 		}
 		return
 	}

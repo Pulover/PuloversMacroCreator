@@ -5,7 +5,7 @@
 	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound, Row_Type, TargetLabel, TargetFunc
-	, ScopedParams := [], UserGlobals, GlobalList, CursorX, CursorY, TakeAction, PbCoordModes
+	, ScopedParams := [], UserGlobals, GlobalList, VarsList, CursorX, CursorY, TakeAction, PbCoordModes
 	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult, IsUserFunc := false
 
 	Gui, 1:-OwnDialogs
@@ -204,9 +204,10 @@
 						}
 					}
 				}
+				IsUserFunc := Target
+				GlobalList := ""
 				If (Target = "Global")
 				{
-					GlobalList := ""
 					Loop, Parse, Window, /, %A_Space%
 					{
 						If (A_Index = 1)
@@ -226,7 +227,6 @@
 				}
 				Else If (Target = "Local")
 				{
-					GlobalList := ""
 					Loop, Parse, Window, /, %A_Space%
 					{
 						If (A_Index = 1)
@@ -242,8 +242,6 @@
 					SavedVars(, VarsList, true)
 					For _each, _value in VarsList
 					{
-						If (_value = "##_Locals:")
-							break
 						If _value in %GlobalList%
 							continue
 						SVRef[_value] := %_value%, %_value% := ""
@@ -277,6 +275,18 @@
 						ParamName := _value.ParamName
 					,	_value.NewValue := %ParamName%
 					}
+				}
+				
+				If (IsUserFunc = "Local")
+				{
+					SavedVars(, VarsList, true, RunningFunction)
+					For _each, _value in VarsList
+					{
+						If _value in %GlobalList%
+							continue
+						%_value% := SVRef[_value]
+					}
+					SavedVars(,,, RunningFunction, true)
 				}
 				
 				For _each, _value in SVRef
@@ -635,34 +645,7 @@
 						LoopInfo.Increment := A_Index
 					,	GoToLab := Playback(Macro_On, LoopInfo, ManualKey,,, FlowControl)
 						If (IsObject(GoToLab))
-						{
-							For _each, _value in ScopedParams
-							{
-								If (_value.Type = "ByRef")
-								{
-									ParamName := _value.ParamName
-								,	_value.NewValue := %ParamName%
-								}
-							}
-							
-							For _each, _value in SVRef
-							{
-								If (Static_Vars[RunningFunction].HasKey(_each))
-									Static_Vars[RunningFunction][_each] := %_each%
-								%_each% := _value
-							}
-							
-							For _each, _value in ScopedParams
-							{
-								If (_value.Type = "ByRef")
-								{
-									VarName := _value.VarName
-								,	%VarName% := _value.NewValue
-								}
-							}
-							
 							return GoToLab
-						}
 						Else If (GoToLab = "_return")
 							break 3
 						Else If (GoToLab)
@@ -982,6 +965,18 @@
 			}
 		}
 		
+		If (IsUserFunc = "Local")
+		{
+			SavedVars(, VarsList, true, RunningFunction)
+			For _each, _value in VarsList
+			{
+				If _value in %GlobalList%
+					continue
+				%_value% := SVRef[_value]
+			}
+			SavedVars(,,, RunningFunction, true)
+		}
+		
 		For _each, _value in SVRef
 		{
 			If (Static_Vars[RunningFunction].HasKey(_each))
@@ -999,7 +994,6 @@
 		}
 
 		ScopedVars[RunningFunction].Pop()
-		
 		return Func_Result
 	}
 	If ((MouseReturn = 1) && (MouseReset = 1))
