@@ -15737,7 +15737,7 @@ return
 
 LoadLangFiles:
 LangFiles := {}
-Loop, Files, %A_ScriptDir%\Lang\*.lang
+Loop, Files, %SettingsFolder%\Lang\*.lang
 {
 	_L := StrReplace(A_LoopFileName, ".lang"), ReadData := {}
 	Loop, Read, %A_LoopFileFullPath%
