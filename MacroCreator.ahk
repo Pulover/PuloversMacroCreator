@@ -11446,6 +11446,7 @@ GoSub, ShowHideBandOn
 return
 
 DuplicateList:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 s_List := A_List
@@ -11455,9 +11456,10 @@ GuiControl, chMacro:-g, InputList%TabCount%
 LVManager.SetHwnd(ListID%TabCount%, ListID%s_List%)
 ,	LVManager.ClearHistory()
 GuiControl, chTimes:, TimesG, %c_Time%
+GuiControl, chMacro:+gInputList, InputList%TabCount%
 GoSub, b_Start
+GoSub, RowCheck
 GuiControl, chMacro:+Redraw, InputList%A_List%
-GuiControl, chMacro:+gInputList, InputList%A_List%
 Gosub, PrevRefresh
 return
 
@@ -11698,6 +11700,7 @@ If ((ConfirmDelete) && (ListCount%c_List% > 0))
 	return
 }
 ConfirmDel:
+Critical
 Gui, 1:-Disabled
 Gui, 35:Submit
 Gui, 35:Destroy
@@ -11707,6 +11710,8 @@ Gui, chMacro:Submit, NoHide
 Menu, CopyTo, Delete, % CopyMenuLabels[c_List]
 CopyMenuLabels.RemoveAt(c_List)
 s_Tab := c_List
+Loop, %TabCount%
+	GuiControl, chMacro:-g, InputList%A_Index%
 Loop, % TabCount - c_List
 {
 	n_Tab := s_Tab+1
@@ -11726,6 +11731,8 @@ s_List := ""
 Loop, %TabCount%
 	s_List .= (A_Index != c_List) ? "|" (Title := TabGetText(TabSel, A_Index)) : ""
 TabCount--
+Loop, %TabCount%
+	GuiControl, chMacro:+gInputList, InputList%A_Index%
 Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:, A_List, %s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
