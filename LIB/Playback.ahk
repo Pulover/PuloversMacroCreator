@@ -2,7 +2,7 @@
 {
 	local PlaybackVars := [], LVData := [], LoopDepth := 0, LoopCount := [0], StartMark := []
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, cLoopIndex, iLoopIndex := 0, mLoopLength, mLoopSize, mListRow
-	, Action, Step, TimesX, DelayX, Type, Target, Window, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
+	, Action, Step, TimesX, DelayX, Type, Target, Window, TimesR, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound, Row_Type, TargetLabel, TargetFunc
 	, ScopedParams := [], UserGlobals, GlobalList, VarsList, CursorX, CursorY, TakeAction, PbCoordModes
@@ -880,11 +880,11 @@
 		,	FieldsData := {Action: Action, Step: Step, DelayX: DelayX, Type: Type, Target: Target, Window: Window}
 			While (TimesX)
 			{
-				Data_GetTexts(LVData, mListRow, Action, Step,, DelayX,, Target, Window)
+				Data_GetTexts(LVData, mListRow, Action, Step, TimesR, DelayX,, Target, Window)
 			,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := TimesLoop ? A_Index : mLoopIndex
 			,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := FlowControl.ErrorLevel
 			,	Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step)
-			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesX, DelayX, Target, Window)
+			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesR, DelayX, Target, Window)
 				If (StopIt)
 				{
 					Try Menu, Tray, Icon, %DefaultIcon%, 1
@@ -894,7 +894,7 @@
 				If Type in %cType12%,%cType32%,%cType33%,%cType34%,%cType43%,%cType52%,%cType53%,%cType54%,%cType55%
 				{
 					Try
-						TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+						TakeAction := PlayCommand(Type, Action, Step, TimesR, DelayX, Target, Window, Pars, FlowControl
 												, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 					Catch e
 					{
@@ -908,33 +908,28 @@
 					}
 				}
 				Else
-					TakeAction := PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+					TakeAction := PlayCommand(Type, Action, Step, TimesR, DelayX, Target, Window, Pars, FlowControl
 											, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 				PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := FlowControl.ErrorLevel
 				If ((Type = cType15) || (Type = cType16))
 				{
 					If (((Target = "UntilFound") && (SearchResult))
-					||	((Target = "UntilNotFound") && (SearchResult = 0)))
+					|| ((Target = "UntilNotFound") && (SearchResult = 0)))
 					{
 						For _each, _value in FieldsData
 							%_each% := _value
 						If !(ManualKey)
-							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+							PlayCommand("Sleep", Action, Step, TimesR, DelayX, Target, Window, Pars, FlowControl
 										, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
+						If (TimesR > 1)
+							TimesX--
 						continue
 					}
-					If (TakeAction = "Break")
-					{
-						TakeAction := ""
-						For _each, _value in FieldsData
-							%_each% := _value
-						If !(ManualKey)
-							PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
-									, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
-						break
-					}
-					Else
-						TimesX--
+					If (((Target = "UntilFound") && (SearchResult = 0))
+					|| ((Target = "UntilNotFound") && (SearchResult))
+					|| (TakeAction = "Break"))
+						TimesX := 1, TakeAction := ""
+					TimesX--
 				}
 				Else
 					TimesX--
@@ -943,7 +938,7 @@
 				If Type in Sleep,KeyWait,MsgBox
 					continue
 				If !(ManualKey)
-					PlayCommand("Sleep", Action, Step, TimesX, DelayX, Target, Window, Pars, FlowControl
+					PlayCommand("Sleep", Action, Step, TimesR, DelayX, Target, Window, Pars, FlowControl
 							, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 			}
 			If (ManualKey)

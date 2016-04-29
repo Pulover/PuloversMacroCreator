@@ -704,6 +704,8 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 			Try Hotkey, % LastPlay.Man[A_Index], f_ManKey, Off
 			If (ListCount%A_Index% = 0)
 				continue
+			If (InStr(TabGetText(TabSel, A_Index), "()"))
+				o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
 			If (o_AutoKey[A_Index] != "")
 			{
 				Hotkey, % o_AutoKey[A_Index], f_AutoKey, % (Play) ? "On" : "Off"

@@ -39,10 +39,12 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 ## Version 5.0.2
 
 * Improved performance when Groups are enabled.
+* Changed behavior of *Repeat Until* option in Image/Pixel Search to allow max repeat number.
 * Fixed variables cleared after user-defined function calls inside expressions.
 * Fixed local function variables not cleared from global scope after call.
 * Fixed identical function or object calls in expressions being executed only once.
 * Fixed Macro Lists being cleared after reodering function tabs by drag-and-drop or from the *Edit Macros* window.
+* Fixed hotkeys not always activated when project has function tabs.
 * Fixed error message when submitting translation revisions.
 * Reverted *SciLexer.dll* to previous version due to crashes.
 

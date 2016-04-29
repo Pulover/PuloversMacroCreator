@@ -295,12 +295,12 @@ IniRead, RecPlayLayout, %IniFilePath%, ToolbarOptions, RecPlayLayout
 IniRead, SettingsLayout, %IniFilePath%, ToolbarOptions, SettingsLayout
 IniRead, CommandLayout, %IniFilePath%, ToolbarOptions, CommandLayout
 IniRead, EditLayout, %IniFilePath%, ToolbarOptions, EditLayout
-IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1
+IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1,1,1
 
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
-If (LangVersion < 2)
-	LangVersion := 2, LangLastCheck := 2
+If (LangVersion < 3)
+	LangVersion := 3, LangLastCheck := 3
 
 User_Vars := new ObjIni(UserVarsPath)
 ,	User_Vars.Read()
@@ -2798,7 +2798,10 @@ GoSub, GetHotkeys
 GoSub, ResetHotkeys
 OldSpeedUp := SpeedUp, OldSpeedDn := SpeedDn,OldAreaColor := SearchAreaColor, OldLoopColor := LoopLVColor
 , OldIfColor := IfLVColor, OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
-UserVarsList := User_Vars.Get(,, true)
+User_Vars := new ObjIni(UserVarsPath)
+,	User_Vars.Read()
+,	UserVars := User_Vars.Get(true)
+,	UserVarsList := User_Vars.Get(,, true)
 Gui, 4:Add, Listbox, W160 H310 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang191%|%t_Lang189%|%t_Lang178%|%t_Lang096%
 Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, General|Recording|Playback|Defaults|Screenshots|Email|Language|LangEditor|UserVars|SubmitRev
 ; General
@@ -7479,7 +7482,6 @@ If (PixelS = 1)
 Details := RTrim(Details, ", ")
 If (BreakLoop)
 {
-	TimesX := 1
 	If (LoopUntil = "Found")
 		Target := "UntilFound"
 	Else
@@ -7698,8 +7700,6 @@ return
 LoopUntil:
 Gui, 19:Submit, NoHide
 GuiControl, 19:Enable%BreakLoop%, LoopUntil
-GuiControl, 19:Disable%BreakLoop%, EdRept
-GuiControl, 19:Disable%BreakLoop%, TimesX
 return
 
 EditRun:
@@ -13422,13 +13422,22 @@ Else
 GoSub, RowCheck
 return
 
+ShowLoopCounter:
+bID := 11
+GoSub, ShowHideBandOn
+If (ShowBand11)
+	Menu, ViewMenu, Check, %v_Lang008%
+Else
+	Menu, ViewMenu, UnCheck, %v_Lang008%
+return
+
 ShowSearchBar:
 bID := 6
 GoSub, ShowHideBandOn
 If (ShowBand6)
-	Menu, ViewMenu, Check, %v_Lang008%
+	Menu, ViewMenu, Check, %v_Lang009%
 Else
-	Menu, ViewMenu, UnCheck, %v_Lang008%
+	Menu, ViewMenu, UnCheck, %v_Lang009%
 return
 
 ShowHideBand:
@@ -13438,25 +13447,25 @@ tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 ,	RbMain.ShowBand(tBand, ShowBand%bID%)
 ,	RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1)
 If (ShowBand1)
-	Menu, ToolbarsMenu, Check, %v_Lang012%
-Else
-	Menu, ToolbarsMenu, UnCheck, %v_Lang012%
-If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_Lang013%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_Lang013%
-If (ShowBand3)
+If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_Lang014%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_Lang014%
-If (ShowBand4)
+If (ShowBand3)
 	Menu, ToolbarsMenu, Check, %v_Lang015%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_Lang015%
-If (ShowBand5)
+If (ShowBand4)
 	Menu, ToolbarsMenu, Check, %v_Lang016%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_Lang016%
+If (ShowBand5)
+	Menu, ToolbarsMenu, Check, %v_Lang017%
+Else
+	Menu, ToolbarsMenu, UnCheck, %v_Lang017%
 return
 
 ShowHideBandHK:
@@ -13464,21 +13473,21 @@ bID := RBIndexHK[A_ThisMenuItemPos]
 ,	tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 ,	RbMain.ShowBand(tBand, ShowBand%bID%)
 If (ShowBand7)
-	Menu, HotkeyMenu, Check, %v_Lang018%
-Else
-	Menu, HotkeyMenu, UnCheck, %v_Lang018%
-If (ShowBand8)
 	Menu, HotkeyMenu, Check, %v_Lang019%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_Lang019%
-If (ShowBand9)
+If (ShowBand8)
 	Menu, HotkeyMenu, Check, %v_Lang020%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_Lang020%
-If (ShowBand10)
+If (ShowBand9)
 	Menu, HotkeyMenu, Check, %v_Lang021%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_Lang021%
+If (ShowBand10)
+	Menu, HotkeyMenu, Check, %v_Lang022%
+Else
+	Menu, HotkeyMenu, UnCheck, %v_Lang022%
 return
 
 ;##### Playback: #####
@@ -13611,6 +13620,9 @@ Menu, Tray, Tip, %AppName%
 return
 
 ActivateHotkeys:
+Loop, %TabCount%
+	If (InStr(TabGetText(TabSel, A_Index), "()"))
+		o_AutoKey[A_Index] := ""
 If (CheckDuplicates(AbortKey, o_ManKey, o_AutoKey*))
 {
 	ActiveKeys := "Error"
@@ -14065,7 +14077,7 @@ SetSmallIcons:
 SetLargeIcons:
 Gui, 1:+OwnDialogs
 IconSize := (A_ThisLabel = "SetSmallIcons") ? "Small" : "Large"
-MsgBox, 64, %AppName%, % d_Lang119 "`n`n" d_Lang120 "`n" StrReplace(m_Lang007 " > " v_Lang011, "&")
+MsgBox, 64, %AppName%, % d_Lang119 "`n`n" d_Lang120 "`n" StrReplace(m_Lang007 " > " v_Lang012, "&")
 return
 
 DefaultLayout:
@@ -14085,16 +14097,17 @@ TbFile.Reset(), TB_IdealSize(TbFile, TbFile_ID)
 ,	TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
 Loop, 3
 	RbMain.SetLayout(Default_Layout)
-Menu, ToolbarsMenu, Check, %v_Lang012%
 Menu, ToolbarsMenu, Check, %v_Lang013%
 Menu, ToolbarsMenu, Check, %v_Lang014%
 Menu, ToolbarsMenu, Check, %v_Lang015%
 Menu, ToolbarsMenu, Check, %v_Lang016%
+Menu, ToolbarsMenu, Check, %v_Lang017%
 Menu, ViewMenu, Check, %v_Lang008%
-Menu, HotkeyMenu, Check, %v_Lang018%
+Menu, ViewMenu, Check, %v_Lang009%
 Menu, HotkeyMenu, Check, %v_Lang019%
 Menu, HotkeyMenu, Check, %v_Lang020%
 Menu, HotkeyMenu, Check, %v_Lang021%
+Menu, HotkeyMenu, Check, %v_Lang022%
 GoSub, TabSel
 SavePrompt(SavePrompt)
 return
@@ -14127,16 +14140,17 @@ BFLayout := "1," (TB_GetSize(TbFile) + 16) ",644|"
 		.	"4," (TB_GetSize(TbEdit) + 16) ",645"
 Loop, 3
 	RbMain.SetLayout(BFLayout)
-Menu, ToolbarsMenu, Check, %v_Lang012%
 Menu, ToolbarsMenu, Check, %v_Lang013%
 Menu, ToolbarsMenu, Check, %v_Lang014%
 Menu, ToolbarsMenu, Check, %v_Lang015%
 Menu, ToolbarsMenu, Check, %v_Lang016%
+Menu, ToolbarsMenu, Check, %v_Lang017%
 Menu, ViewMenu, Check, %v_Lang008%
-Menu, HotkeyMenu, Check, %v_Lang018%
+Menu, ViewMenu, Check, %v_Lang009%
 Menu, HotkeyMenu, Check, %v_Lang019%
 Menu, HotkeyMenu, Check, %v_Lang020%
 Menu, HotkeyMenu, Check, %v_Lang021%
+Menu, HotkeyMenu, Check, %v_Lang022%
 GoSub, TabSel
 SavePrompt(SavePrompt)
 return
@@ -14153,16 +14167,17 @@ RecPlayLayout := "Record=" w_Lang047 ":54(Enabled AutoSize Dropdown),, PlayStart
 ,	TB_Layout(TbRecPlay, RecPlayLayout, TbRecPlay_ID)
 ,	TbCommand.Reset(), TB_IdealSize(TbCommand, TbCommand_ID)
 ,	RbMain.SetBandWidth(TbRecPlay_ID, TB_GetSize(tbRecPlay)+16)
-Menu, ToolbarsMenu, UnCheck, %v_Lang012%
-Menu, ToolbarsMenu, Check, %v_Lang013%
+Menu, ToolbarsMenu, UnCheck, %v_Lang013%
 Menu, ToolbarsMenu, Check, %v_Lang014%
-Menu, ToolbarsMenu, UnCheck, %v_Lang015%
+Menu, ToolbarsMenu, Check, %v_Lang015%
 Menu, ToolbarsMenu, UnCheck, %v_Lang016%
+Menu, ToolbarsMenu, UnCheck, %v_Lang017%
 Menu, ViewMenu, Check, %v_Lang008%
-Menu, HotkeyMenu, Check, %v_Lang018%
-Menu, HotkeyMenu, UnCheck, %v_Lang019%
-Menu, HotkeyMenu, Check, %v_Lang020%
-Menu, HotkeyMenu, UnCheck, %v_Lang021%
+Menu, ViewMenu, Check, %v_Lang009%
+Menu, HotkeyMenu, Check, %v_Lang019%
+Menu, HotkeyMenu, UnCheck, %v_Lang020%
+Menu, HotkeyMenu, Check, %v_Lang021%
+Menu, HotkeyMenu, UnCheck, %v_Lang022%
 GoSub, TabSel
 SavePrompt(SavePrompt)
 return
@@ -14915,7 +14930,7 @@ Menu, EditMenu, Add, %e_Lang009%`t%_s%Ctrl+V, PasteRows
 Menu, EditMenu, Add, %e_Lang010%`t%_s%Delete, Remove
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang001%`t%_s%Ctrl+D, Duplicate
-Menu, EditMenu, Add, %s_Lang001%`t%_s%Ctrl+A, SelectAll
+Menu, EditMenu, Add, %m_Lang006%, :SelectMenu
 Menu, EditMenu, Add, %e_Lang004%, :CopyTo
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang016%, :GroupMenu
@@ -14934,31 +14949,31 @@ Menu, EditMenu, Add, %e_Lang013%`t%_s%Insert, ApplyL
 Menu, EditMenu, Add, %e_Lang014%`t%_s%Ctrl+Insert, InsertKey
 Menu, EditMenu, Default, %m_Lang005%`t%_s%Enter
 
-Menu, CustomMenu, Add, %v_Lang012%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang013%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang014%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang015%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang016%, TbCustomize
+Menu, CustomMenu, Add, %v_Lang017%, TbCustomize
 
-Menu, ToolbarsMenu, Add, %v_Lang012%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang013%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang014%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang015%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang016%, ShowHideBand
+Menu, ToolbarsMenu, Add, %v_Lang017%, ShowHideBand
 Menu, ToolbarsMenu, Add
-Menu, ToolbarsMenu, Add, %v_Lang017%, :CustomMenu
+Menu, ToolbarsMenu, Add, %v_Lang018%, :CustomMenu
 
-Menu, HotkeyMenu, Add, %v_Lang018%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang019%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang020%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang021%, ShowHideBandHK
+Menu, HotkeyMenu, Add, %v_Lang022%, ShowHideBandHK
 
-Menu, SetIconSizeMenu, Add, %v_Lang025%, SetSmallIcons
-Menu, SetIconSizeMenu, Add, %v_Lang026%, SetLargeIcons
+Menu, SetIconSizeMenu, Add, %v_Lang026%, SetSmallIcons
+Menu, SetIconSizeMenu, Add, %v_Lang027%, SetLargeIcons
 
-Menu, SetLayoutMenu, Add, %v_Lang022%, SetBasicLayout
-Menu, SetLayoutMenu, Add, %v_Lang023%, SetBestFitLayout
-Menu, SetLayoutMenu, Add, %v_Lang024%, SetDefaultLayout
+Menu, SetLayoutMenu, Add, %v_Lang023%, SetBasicLayout
+Menu, SetLayoutMenu, Add, %v_Lang024%, SetBestFitLayout
+Menu, SetLayoutMenu, Add, %v_Lang025%, SetDefaultLayout
 
 Menu, ViewMenu, Add, %v_Lang001%, MainOnTop
 Menu, ViewMenu, Add, %v_Lang002%, ShowLoopIfMark
@@ -14968,11 +14983,12 @@ Menu, ViewMenu, Add, %v_Lang004%`t%_s%Ctrl+B, OnScControls
 Menu, ViewMenu, Add, %v_Lang005%`t%_s%Ctrl+P, Preview
 Menu, ViewMenu, Add, %v_Lang006%, :ToolbarsMenu
 Menu, ViewMenu, Add, %v_Lang007%, :HotkeyMenu
-Menu, ViewMenu, Add, %v_Lang008%, ShowSearchBar
+Menu, ViewMenu, Add, %v_Lang008%, ShowLoopCounter
+Menu, ViewMenu, Add, %v_Lang009%, ShowSearchBar
 Menu, ViewMenu, Add
-Menu, ViewMenu, Add, %v_Lang009%`t%_s%Alt+F5, SetColSizes
-Menu, ViewMenu, Add, %v_Lang010%, :SetIconSizeMenu
-Menu, ViewMenu, Add, %v_Lang011%, :SetLayoutMenu
+Menu, ViewMenu, Add, %v_Lang010%`t%_s%Alt+F5, SetColSizes
+Menu, ViewMenu, Add, %v_Lang011%, :SetIconSizeMenu
+Menu, ViewMenu, Add, %v_Lang012%, :SetLayoutMenu
 
 GoSub, BuildOnFinishMenu
 Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+G, Options
@@ -15109,25 +15125,27 @@ If (ShowBarOnStart)
 If (ShowPrev)
 	Menu, ViewMenu, Check, %v_Lang005%`t%_s%Ctrl+P
 If (ShowBand1)
-	Menu, ToolbarsMenu, Check, %v_Lang012%
-If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_Lang013%
-If (ShowBand3)
+If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_Lang014%
-If (ShowBand4)
+If (ShowBand3)
 	Menu, ToolbarsMenu, Check, %v_Lang015%
-If (ShowBand5)
+If (ShowBand4)
 	Menu, ToolbarsMenu, Check, %v_Lang016%
-If (ShowBand6)
+If (ShowBand5)
+	Menu, ToolbarsMenu, Check, %v_Lang017%
+If (ShowBand11)
 	Menu, ViewMenu, Check, %v_Lang008%
+If (ShowBand6)
+	Menu, ViewMenu, Check, %v_Lang009%
 If (ShowBand7)
-	Menu, HotkeyMenu, Check, %v_Lang018%
-If (ShowBand8)
 	Menu, HotkeyMenu, Check, %v_Lang019%
-If (ShowBand9)
+If (ShowBand8)
 	Menu, HotkeyMenu, Check, %v_Lang020%
-If (ShowBand10)
+If (ShowBand9)
 	Menu, HotkeyMenu, Check, %v_Lang021%
+If (ShowBand10)
+	Menu, HotkeyMenu, Check, %v_Lang022%
 
 ; Menu Icons
 Menu, FileMenu, Icon, %f_Lang001%`t%_s%Ctrl+N, %ResDllPath%, % IconsNames["new"]

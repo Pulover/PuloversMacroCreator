@@ -95,15 +95,15 @@
 
 	Parameters:
 		Action - Selects the Mouse action to execute.
-		Coordinates - Defines the coordinates of the window or screen where the action will be executed. This field accepts [Variables](Variables.html), functions and expressions are not supported.
+		Coordinates - Defines the coordinates of the window or screen where the action will be executed. This field accepts [Variables](Variables.html), functions and expressions are not supported.  
 			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).
 		Click - Uses the *Click*. This usually works for most cases.
 		Send - Uses *SendEvent*. Use this in case the Click Command doesn't work.
-		Relative - **If not used with Control**: Coordinates will be treated as an offset from mouse current position.
+		Relative - **If not used with Control**: Coordinates will be treated as an offset from mouse current position.  
 			**If used with Control**: *Unchecked*: Click coordinates relative to the target window. *Checked*: Click coordinates relative to Control's position.
-		Button - Selects the Mouse Button to send and the event type.
-			**Normal**: Sends a normal click.
-			**Hold**: Clicks and holds the button.
+		Button - Selects the Mouse Button to send and the event type.  
+			**Normal**: Sends a normal click.  
+			**Hold**: Clicks and holds the button.  
 			**Release**: Releases the button.
 		Click Count - The number of times to click the mouse. This is not affected by Delay. This field accepts [Variables](Variables.html).
 
@@ -168,8 +168,7 @@
 		Displays the specified text in a small window containing two default buttons (OK and Cancel).
 
 	Parameters:
-		Message - Text to display in the message. If the Cancel button is pressed, execution will stop.
-			This field accepts [Variables & Expressions](Variables.html).
+		Message - Text to display in the message. If the Cancel button is pressed, execution will stop. This field accepts [Variables & Expressions](Variables.html).
 		Title - The title of the message box window.
 		Icon - Sets the icon to be shown on the Message Box.
 		Buttons - Sets which buttons will be shown on the message box.
@@ -203,10 +202,8 @@
 	Function: Window(F6)
 		Gathers various Window commands. Please refer to [AutoHotkey documentation](http://autohotkey.com/docs) for details on each one.
 	Parameters:
-		Value - Second parameter of a Window Command when available.
-			This field accepts [Variables & Expressions](Variables.html).
-		Seconds - Seconds to wait for a Window Command when available.
-			This field accepts [Variables & Expressions](Variables.html).
+		Value - Second parameter of a Window Command when available. This field accepts [Variables & Expressions](Variables.html).
+		Seconds - Seconds to wait for a Window Command when available. This field accepts [Variables & Expressions](Variables.html).
 		Output Variable - The name of the variable in which to store the result of Cmd. For *WinGetPos* the variable you choose will be a prefix to the 4 outputvars. E.g. if you type a variable named "Pos_" the output will be saved to *Pos_X*, *Pos_Y*, *Pos_W* and *Pos_H*.
 		Position/Size - Coordinates and sizes to move a control with WinMove.
 
@@ -224,12 +221,12 @@
 		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#make-screenshot-tool-instructions) for details on usage).
 		File - Path for the image file, which is assumed to be in the same folder as MacroCreator.exe if an absolute path isn't specified.
 		Search - Opens the File Select dialog to select an Image File.
-		If found - Selects an action to execute when an image/pixel is found.
+		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
-		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.
+		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.
 		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.
-		Preview - Previews the selected image.
+		Preview - Previews the selected image.  
 			Double-Click an image to open the file with the associated application.
 		Variables - Names of the Output variables where to store the X and Y coordinates when found.
 		Adjust coordinates to the center of the image - Check this option to automatically correct the coordinates in the output variables to the center of the image, instead of the upper-left corner.
@@ -238,7 +235,9 @@
 		Icon - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
 		Transparent - Specify one color within the image that will match any color on the screen.
 		Scale - Width and height to which to scale the image (this width and height also determines which icon to load from a multi-icon .ICO file).
-		Repeat until - Loops the command until the image is found or not found, according to the option selected.
+		Repeat until - Loops the command until the image is found or not found, according to the option selected.  
+			When this option is checked you can use the Repeat counter to define the maximum number of times to search. If Repeat is 1, it will loop indefinitely until the image is found/not found or the user stops execution. And if it's a number higher than 1 or a variable, it will loop until the image is found/not found but no more than that number.
+			
 
 	Remarks:
 		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\Variables.html) window.
@@ -279,9 +278,9 @@
 		Color Picker - Opens the Color Picker Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).
 		ColorID - The decimal or hexadecimal color ID to search for, in Blue-Green-Red (BGR) format.
 		Search - Opens the Windows Color Pick dialog to select a pixel color.
-		If found - Selects an action to execute when an image/pixel is found.
+		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
-		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.
+		If not found / Error - Selects an action to execute when an image/pixel is not found or if the command finds an error.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Not Found' option in the If Statements window.
 		Add "If Statement" - Automatically adds an *If Image/Pixel Found* statement below the command. You may select a range of rows to be wrapped by the statement block.
 		Preview - Previews the selected pixel to search.
@@ -291,7 +290,8 @@
 		Variations - Specify for n a number between 0 and 255 (inclusive) to indicate the allowed number of shades of variation in either direction for the intensity of the red, green, and blue components of each pixel's color.
 		Fast - Uses a faster searching method that in most cases dramatically reduces the amount of CPU time used by the search.
 		RGB - Causes ColorID to be interpreted as an RGB value instead of BGR. This option affects the Color Picker Tool but the retrieved color will be reversed in preview and Color Pick Dialog.
-		Repeat until - Loops the command until the image is found or not found, according to the option selected.
+		Repeat until - Loops the command until the image is found or not found, according to the option selected.  
+			When this option is checked you can use the Repeat counter to define the maximum number of times to search. If Repeat is 1, it will loop indefinitely until the image is found/not found or the user stops execution. And if it's a number higher than 1 or a variable, it will loop until the image is found/not found but no more than that number.
 
 	Remarks:
 		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\Variables.html) window.
@@ -306,8 +306,7 @@
 		Gathers various AutoHotkey commands to execute different types of tasks. To get help on each command **right-click anywhere on the window** and select the corresponding link. For a complete list of commands refer to [AutoHotkey documentation](http://autohotkey.com/docs/).
 
 	Parameters:
-		Parameters Fields - Parameters will vary according to the selected command.
-				All fields should accept [Variables & Expressions](Variables.html).
+		Parameters Fields - Parameters will vary according to the selected command. All fields should accept [Variables & Expressions](Variables.html) except for InputVar and OutputVar.
 
 	Remarks:
 		Don't use percent signs (%) for variables when the fields name is OutputVar or InputVar, for they should expect a variable already.
@@ -322,8 +321,7 @@
 		Loops a section of the Macro enclosed within *LoopStart* and *LoopEnd*. Nested Loops are accepted.
 
 	Parameters:
-		Repeat - How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed.
-			This field accepts [Variables & Expressions](Variables.html).
+		Repeat - How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed. This field accepts [Variables & Expressions](Variables.html).
 
 	Remarks:
 		The built-in variable **A_Index** contains the number of the current loop iteration. It contains 1 the first time the loop's body is executed. For the second time, it contains 2; and so on. If an inner loop is enclosed by an outer loop, the inner loop takes precedence.
@@ -372,10 +370,10 @@
 
 	Parameters:
 		Input Variable - The name of the variable whose contents will be analyzed. Do not enclose the name in percent signs.
-		Delimiters - If this parameter is blank or omitted, each character of InputVar will be treated as a separate substring.
-			If this parameter is CSV, InputVar will be parsed in standard comma separated value format.
+		Delimiters - If this parameter is blank or omitted, each character of InputVar will be treated as a separate substring.  
+			If this parameter is CSV, InputVar will be parsed in standard comma separated value format.  
 			Otherwise, Delimiters contains one or more characters (case sensitive), each of which is used to determine where the boundaries between substrings occur in InputVar.
-		Omit Characters - An optional list of characters (case sensitive) to exclude from the beginning and end of each substring.
+		Omit Characters - An optional list of characters (case sensitive) to exclude from the beginning and end of each substring.  
 			For example, if OmitChars is %A_Space%%A_Tab%, spaces and tabs will be removed from the beginning and end (but not the middle) of every retrieved substring.
 
 	Remarks:
@@ -421,7 +419,7 @@
 		Key must be separated from RootKey by a slash instead of a comma, and both can be contained within a single variable. For example, Loop, Reg, HKLM\Software or Loop, Reg, %FullPathOfKey%.
 
 	Parameters:
-		Root Key - Must be either HKEY_LOCAL_MACHINE (or HKLM), HKEY_USERS (or HKU), HKEY_CURRENT_USER (or HKCU), HKEY_CLASSES_ROOT (or HKCR), or HKEY_CURRENT_CONFIG (or HKCC).
+		Root Key - Must be either HKEY_LOCAL_MACHINE (or HKLM), HKEY_USERS (or HKU), HKEY_CURRENT_USER (or HKCU), HKEY_CLASSES_ROOT (or HKCR), or HKEY_CURRENT_CONFIG (or HKCC).  
 			To access a remote registry, prepend the computer name and a colon, as in this example: \\workstation01:HKEY_LOCAL_MACHINE
 		Key - The name of the key (e.g. Software\SomeApplication). If blank or omitted, the contents of RootKey will be retrieved.
 		Values - If checked will include Values.
@@ -505,7 +503,7 @@
 		Exits (terminates) a loop.
 
 	Parameters:
-		LoopNumber - If specified, identifies which loop this statement should apply to by numeric nesting level. If omitted or 1, this statement applies to the innermost loop in which it is enclosed.
+		LoopNumber - If specified, identifies which loop this statement should apply to by numeric nesting level. If omitted or 1, this statement applies to the innermost loop in which it is enclosed.  
 			This parameter is available when editing the command or adding it from the *Run* command window. Labels are not yet supported.
 
 	Extra:
@@ -518,7 +516,7 @@
 		Skips the rest of the current loop iteration and begins a new one.
 
 	Parameters:
-		LoopNumber - If specified, identifies which loop this statement should apply to by numeric nesting level. If omitted or 1, this statement applies to the innermost loop in which it is enclosed.
+		LoopNumber - If specified, identifies which loop this statement should apply to by numeric nesting level. If omitted or 1, this statement applies to the innermost loop in which it is enclosed.  
 			This parameter is available when editing the command or adding it from the *Run* command window. Labels are not yet supported.
 
 	Extra:
@@ -540,10 +538,10 @@
 		Jump to a Label or Macro.
 
 	Parameters:
-		Go to Label - Name of a label (you can select one in the list) to jump to. This field accepts [Variables & Expressions](Variables.html).
+		Go to Label - Name of a label (you can select one in the list) to jump to. This field accepts [Variables & Expressions](Variables.html).  
 			To use a Macro as label, select the corresponding Macro name in the list.
-		Goto / Gosub - Sets the command to be used.
-			Goto jumps to the specified label and continues execution.
+		Goto / Gosub - Sets the command to be used.  
+			Goto jumps to the specified label and continues execution.  
 			Gosub jumps to the specified label and continues execution until Return is encountered or the end of a Macro is reached.
 
 	Extra:
@@ -556,7 +554,7 @@
 		A label identifies a line of code, and can be used as a Goto target or to form a subroutine.
 
 	Parameters:
-		Add Label - A valid name for the new label.
+		Add Label - A valid name for the new label.  
 			You can use Goto and Gosub to jump directly to this line from any Macro.
 
 	Extra:
@@ -586,10 +584,10 @@
 		Creates a Control of Flow block. The commands enclosed within the If Statement and EndIf will only be executed if the evaluated statement returns TRUE, which can be a number different than 0 or a non-empty string.
 
 	Parameters:
-		Options DropdownList - Selects the statement to evaluate. If the statement resolves to true the commands inside below the If Statement will be executed, otherwise they will be skipped until *EndIf* or an *Else* is reached.
-			For *Compare Variables* the VarName to the left of the operator should NOT be enclosed in percent signs, only the variables to the right of it must use them.
-			The operators accepted are:
-			> =, ==, <>, !=, >, <, >=, <=.
+		Options DropdownList - Selects the statement to evaluate. If the statement resolves to true the commands inside below the If Statement will be executed, otherwise they will be skipped until *EndIf* or an *Else* is reached.  
+			For *Compare Variables* the VarName to the left of the operator should NOT be enclosed in percent signs, only the variables to the right of it must use them.  
+			The operators accepted are:  
+			> =, ==, <>, !=, >, <, >=, <=.  
 			*Evaluate Expression* can evaluate any valid expression as true or false. Variables must NOT be enclosed in percent signs. For more information see [Expressions](Variables.html#expressions).
 		Add Else - Add an *Else* Statement. If the If Statement above it resolves to false the commands below it will be executed instead, otherwise they will be skipped until *EndIf* is reached. This should be placed before the *EndIf*.
 		Else If - Creates an *Else If* statement, which means that the statement must be inside another If block and will be evaluated only if the If before it evaluates to false. When this option is checked the *EndIf* row will not be created.
@@ -673,7 +671,7 @@
 	Parameters:
 		Output Variable (Optional) - Name of the Variable in which to store the contents.
 		Array Object - If checked, the name of an Array/Object on which to call the method.
-		Use Function from External File - Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires [AutoHotkey](http://autohotkey.com/) installed.
+		Use Function from External File - Check this option to select an AutoHotkey Script File (.ahk) containing one or more functions to be used. This feature requires [AutoHotkey](http://autohotkey.com/) installed.  
 			See Remarks below for more information.
 		Function Name - A valid AHK Built-in Function, an existing [User-Defined function](Functions.html#user-defined-functions) or one in the selected external .ahk file.
 		Comma separated parameters - The list of parameters for the function.

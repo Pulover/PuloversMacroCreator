@@ -252,9 +252,9 @@
 			}
 			RowData := Add_CD(RowData, Comment, DelayX)
 			If (Target = "UntilFound")
-				RowData := "`nLoop`n{" RowData "`n}`nUntil ErrorLevel = 0"
+				RowData := "`nLoop" (TimesX != 1 ? ", " TimesX : "") "`n{" RowData "`n}`nUntil ErrorLevel = 0"
 			Else If (Target = "UntilNotFound")
-				RowData := "`nLoop`n{" RowData "`n}`nUntil ErrorLevel"
+				RowData := "`nLoop" (TimesX != 1 ? ", " TimesX : "") "`n{" RowData "`n}`nUntil ErrorLevel"
 			Else If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
