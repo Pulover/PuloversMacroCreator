@@ -95,7 +95,7 @@
 
 	Parameters:
 		Action - Selects the Mouse action to execute.
-		Coordinates - Defines the coordinates of the window or screen where the action will be executed. This field accepts [Variables](Variables.html), functions and expressions are not supported.  
+		Coordinates - Defines the coordinates of the window or screen where the action will be executed. This field accepts [Variables](../Variables.html), functions and expressions are not supported.  
 			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).
 		Click - Uses the *Click*. This usually works for most cases.
 		Send - Uses *SendEvent*. Use this in case the Click Command doesn't work.
@@ -105,7 +105,7 @@
 			**Normal**: Sends a normal click.  
 			**Hold**: Clicks and holds the button.  
 			**Release**: Releases the button.
-		Click Count - The number of times to click the mouse. This is not affected by Delay. This field accepts [Variables](Variables.html).
+		Click Count - The number of times to click the mouse. This is not affected by Delay. This field accepts [Variables](../Variables.html).
 
 	Extra:
 		### Related
@@ -114,7 +114,7 @@
 
 /*!
 	Function: Text(F3)
-		Sends simulated keystrokes to a window. It may be used to send raw text or commands. This field accepts [Variables & Expressions](Variables.html).
+		Sends simulated keystrokes to a window. It may be used to send raw text or commands. This field accepts [Variables & Expressions](../Variables.html).
 
 	Parameters:
 		Plain Text (Raw) - Uses *SendRaw*. The SendRaw command interprets all characters literally rather than translating {Enter} to an ENTER keystroke, ^c to Control-C, etc.
@@ -136,7 +136,7 @@
 		Gathers various control commands. Please refer to [AutoHotkey documentation](http://autohotkey.com/docs) for details on each one.
 
 	Parameters:
-		Value - Second parameter of a Control Command when available. This field accepts [Variables & Expressions](Variables.html).
+		Value - Second parameter of a Control Command when available. This field accepts [Variables & Expressions](../Variables.html).
 		Output Variable - The name of the variable in which to store the result of Cmd. For *ControlGetPos* the variable you choose will be a prefix to the 4 outputvars. E.g. if you type a variable named "Pos_" the output will be saved to *Pos_X*, *Pos_Y*, *Pos_W* and *Pos_H*.
 		Position/Size - Coordinates and sizes to move a control with ControlMove.
 
@@ -153,7 +153,7 @@
 		Waits the specified amount of time before continuing.
 
 	Parameters:
-		Add Pause - The amount of time to pause (choose format in the options below). This field accepts [Variables & Expressions](Variables.html).
+		Add Pause - The amount of time to pause (choose format in the options below). This field accepts [Variables & Expressions](../Variables.html).
 		Miliseconds / Seconds / Minutes - Sets format of time (seconds and minutes will be converted to miliseconds when the command is added).
 		Random delay - Sets the command use a random value between Minimum and Maximum instead of a predefined value.
 		Disable random delays for this command - If the global option for *Random delays" is active the command won't be affected.
@@ -168,8 +168,8 @@
 		Displays the specified text in a small window containing two default buttons (OK and Cancel).
 
 	Parameters:
-		Message - Text to display in the message. If the Cancel button is pressed, execution will stop. This field accepts [Variables & Expressions](Variables.html).
-		Title - The title of the message box window. This field accepts [Variables & Expressions](Variables.html).
+		Message - Text to display in the message. If the Cancel button is pressed, execution will stop. This field accepts [Variables & Expressions](../Variables.html).
+		Title - The title of the message box window. This field accepts [Variables & Expressions](../Variables.html).
 		Icon - Sets the icon to be shown on the Message Box.
 		Buttons - Sets which buttons will be shown on the message box.
 		Default - Sets the default button.
@@ -202,8 +202,8 @@
 	Function: Window(F6)
 		Gathers various Window commands. Please refer to [AutoHotkey documentation](http://autohotkey.com/docs) for details on each one.
 	Parameters:
-		Value - Second parameter of a Window Command when available. This field accepts [Variables & Expressions](Variables.html).
-		Seconds - Seconds to wait for a Window Command when available. This field accepts [Variables & Expressions](Variables.html).
+		Value - Second parameter of a Window Command when available. This field accepts [Variables & Expressions](../Variables.html).
+		Seconds - Seconds to wait for a Window Command when available. This field accepts [Variables & Expressions](../Variables.html).
 		Output Variable - The name of the variable in which to store the result of Cmd. For *WinGetPos* the variable you choose will be a prefix to the 4 outputvars. E.g. if you type a variable named "Pos_" the output will be saved to *Pos_X*, *Pos_Y*, *Pos_W* and *Pos_H*.
 		Position/Size - Coordinates and sizes to move a control with WinMove.
 
@@ -219,7 +219,7 @@
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
 		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#make-screenshot-tool-instructions) for details on usage).
-		File - Path for the image file, which is assumed to be in the same folder as MacroCreator.exe if an absolute path isn't specified. This field accepts [Variables & Expressions](Variables.html).
+		File - Path for the image file, which is assumed to be in the same folder as MacroCreator.exe if an absolute path isn't specified. This field accepts [Variables & Expressions](../Variables.html).
 		Search - Opens the File Select dialog to select an Image File.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
@@ -240,7 +240,7 @@
 			
 
 	Remarks:
-		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\Variables.html) window.
+		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\../Variables.html) window.
 
 	Extra:
 		### Related
@@ -276,7 +276,7 @@
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
 		Color Picker - Opens the Color Picker Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).
-		ColorID - The decimal or hexadecimal color ID to search for, in Blue-Green-Red (BGR) format. This field accepts [Variables & Expressions](Variables.html).
+		ColorID - The decimal or hexadecimal color ID to search for, in Blue-Green-Red (BGR) format. This field accepts [Variables & Expressions](../Variables.html).
 		Search - Opens the Windows Color Pick dialog to select a pixel color.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
@@ -294,7 +294,7 @@
 			When this option is checked you can use the Repeat counter to define the maximum number of times to search. If Repeat is 1, it will loop indefinitely until the image is found/not found or the user stops execution. And if it's a number higher than 1 or a variable, it will loop until the image is found/not found but no more than that number.
 
 	Remarks:
-		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\Variables.html) window.
+		You may use the variables %FoundX% and %FoundY% (or the ones defined by you) in other commands like Mouse Move & Click when the image/pixel is found. To save the values to a different variable or increment the values, use the [Variables](Commands\../Variables.html) window.
 
 	Extra:
 		### Related
@@ -306,7 +306,7 @@
 		Gathers various AutoHotkey commands to execute different types of tasks. To get help on each command **right-click anywhere on the window** and select the corresponding link. For a complete list of commands refer to [AutoHotkey documentation](http://autohotkey.com/docs/).
 
 	Parameters:
-		Parameters Fields - Parameters will vary according to the selected command. All fields should accept [Variables & Expressions](Variables.html) except for InputVar and OutputVar.
+		Parameters Fields - Parameters will vary according to the selected command. All fields should accept [Variables & Expressions](../Variables.html) except for InputVar and OutputVar.
 
 	Remarks:
 		Don't use percent signs (%) for variables when the fields name is OutputVar or InputVar, for they should expect a variable already.
@@ -321,7 +321,7 @@
 		Loops a section of the Macro enclosed within *LoopStart* and *LoopEnd*. Nested Loops are accepted.
 
 	Parameters:
-		Repeat - How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed. This field accepts [Variables & Expressions](Variables.html).
+		Repeat - How many times to execute the loop section. If set to 0, the loop continues indefinitely until a break or return is encountered, or the Stop Key is pressed. This field accepts [Variables & Expressions](../Variables.html).
 
 	Remarks:
 		The built-in variable **A_Index** contains the number of the current loop iteration. It contains 1 the first time the loop's body is executed. For the second time, it contains 2; and so on. If an inner loop is enclosed by an outer loop, the inner loop takes precedence.
@@ -538,7 +538,7 @@
 		Jump to a Label or Macro.
 
 	Parameters:
-		Go to Label - Name of a label (you can select one in the list) to jump to. This field accepts [Variables & Expressions](Variables.html).  
+		Go to Label - Name of a label (you can select one in the list) to jump to. This field accepts [Variables & Expressions](../Variables.html).  
 			To use a Macro as label, select the corresponding Macro name in the list.
 		Goto / Gosub - Sets the command to be used.  
 			Goto jumps to the specified label and continues execution.  
@@ -567,7 +567,7 @@
 		Causes a subroutine to be launched automatically and repeatedly at a specified time interval.
 
 	Parameters:
-		Label - The name of the label or hotkey label to which to jump. This field accepts [Variables & Expressions](Variables.html).
+		Label - The name of the label or hotkey label to which to jump. This field accepts [Variables & Expressions](../Variables.html).
 		Period - Creates or updates a timer using the absolute value of this parameter as the approximate number of milliseconds that must pass before the timer is executed.
 		Options - Select the operation to perform with the timer.
 
@@ -588,14 +588,14 @@
 			For *Compare Variables* the VarName to the left of the operator should NOT be enclosed in percent signs, only the variables to the right of it must use them.  
 			The operators accepted are:  
 			> =, ==, <>, !=, >, <, >=, <=.  
-			*Evaluate Expression* can evaluate any valid expression as true or false. Variables must NOT be enclosed in percent signs. For more information see [Expressions](Variables.html#expressions).
+			*Evaluate Expression* can evaluate any valid expression as true or false. Variables must NOT be enclosed in percent signs. For more information see [Expressions](../Variables.html#expressions).
 		Add Else - Add an *Else* Statement. If the If Statement above it resolves to false the commands below it will be executed instead, otherwise they will be skipped until *EndIf* is reached. This should be placed before the *EndIf*.
 		Else If - Creates an *Else If* statement, which means that the statement must be inside another If block and will be evaluated only if the If before it evaluates to false. When this option is checked the *EndIf* row will not be created.
 
 	Remarks:
 		To evaluate two or more statements you can use the *Evaluate Expression* option as it supports multiple statements (e.g. Var > 10 && Var < 20) or you can add them in sequence in the list, each one with a corresponding EndIf.
 		
-		For more details on usage with other commands see [Variables](Variables.html).
+		For more details on usage with other commands see [Variables](../Variables.html).
 
 	Extra:
 		### Related
@@ -604,7 +604,7 @@
 
 /*!
 	Function: Else(F10)
-		Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces). For more information see [Comparing Variables](Variables.html#comparing-variables).
+		Specifies the command(s) to perform if an IF-statement evaluates to FALSE. When more than one command is present, enclose them in a block (braces). For more information see [Comparing Variables](../Variables.html#comparing-variables).
 
 	Remarks:
 		Every use of ELSE must belong to (be associated with) an IF-statement above it. An ELSE always belongs to the nearest unclaimed IF-statement above it unless a block is used to change that behavior.
@@ -630,7 +630,7 @@
 
 /*!
 	Function:Variables(Shift+F10)
-		Assigns a value to a Variable using the chosen operator. You can also assign expressions and linear/associative arrays using the "Expression" option.
+		Assigns a value to a Variable using the chosen operator. You can also assign expressions and linear/associative arrays using the "Expression" option. For more information see [Variables & Arrays/Objects](../Variables.html).
 
 	Parameters:
 		Output Variable - Name of the Variable in which to store the contents. This field accepts Object references such as Array[1] or Obj.Name.
@@ -652,7 +652,7 @@
 		Copy - Copies the variable's contents to the Clipboard.
 		Reset - Erases the variable's contents.
 
-	For more information, check the [Variables](Variables.html) help page.
+	For more information, check the [Variables](../Variables.html) help page.
 
 	Extra:
 		### Related
@@ -677,7 +677,7 @@
 		Comma separated parameters - The list of parameters for the function.
 			*Notes*:
 			* Input only the parameters values, without parenthesis.
-			* Use [Expression](Variables.html#expressions) format.
+			* Use [Expression](../Variables.html#expressions) format.
 			* Do NOT enclose variables in percent signs.
 			* Strings MUST be enclosed in quotes.
 			* Omitted optional parameters will use their default values.
@@ -708,7 +708,7 @@
 
 /*!
 	Function: Send_Email(F11)
-		Sends emails using an user-defined account. All fields accept [variables](Variables.html).
+		Sends emails using an user-defined account. All fields accept [variables](../Variables.html).
 
 	Parameters:
 		Message - Body of the message. It can be text or HTML.
@@ -732,7 +732,7 @@
 
 /*!
 	Function: Download_Files(Shift+F11)
-		Downloads one or more files from the Internet. All fields accept [variables](Variables.html).
+		Downloads one or more files from the Internet. All fields accept [variables](../Variables.html).
 
 	Parameters:
 		Destination folder - The name of the destination folder, which is assumed to be in %A_WorkingDir% if an absolute path isn't specified.
@@ -748,7 +748,7 @@
 
 /*!
 	Function: Zip_Files(Ctrl+F11)
-		Compress or uncompress one or more zip files. All fields accept [variables](Variables.html).
+		Compress or uncompress one or more zip files. All fields accept [variables](../Variables.html).
 
 	Parameters:
 		Zip files / Unzip files - Select the desired operation.
@@ -770,13 +770,13 @@
 
 /*!
 	Function: Internet_Explorer(F12)
-		Creates an Internet Explorer COM Object and adds automation commands for it. All fields accept [variables](Variables.html), except *Commands*.
+		Creates an Internet Explorer COM Object and adds automation commands for it. All fields accept [variables](../Variables.html), except *Commands*.
 
 	Parameters:
 		Commands - The dropdown list contains some of the most used IE Methods and Properties. Select the correct one to manipulate the browser window or page elements.
 		Set / Get - Chooses whether to set a value to the object or to copy the element's value to a variable.
 		Method / Property - If you type a command that is not recognized by the program you have to select whether it's a Method or a Property.
-		Value - Value to be used by a Method or to be set to a Property. This field accepts [Variables & Expressions](Variables.html).
+		Value - Value to be used by a Method or to be set to a Property. This field accepts [Variables & Expressions](../Variables.html).
 		Output Variable - The name of the variable in which to store the value of a Property.
 		Page Element / Index - Sets the page element and index on which to perform the action. The dropdown list selects the method to be used to identify the element. Use the *Get* button to easily identify elements of the page.
 		Wait for page to load - Check this option when you expect the page to change after the command. This will execute a function after it to wait for the new page to be completely loaded before continuing, avoiding errors.
@@ -795,7 +795,7 @@
 
 /*!
 	Function: Expression(Shift+F12)
-		Performs one or more operations upon a series of variables, literal strings, and/or literal numbers. For more information see [Expressions](Variables.html#expressions).
+		Performs one or more operations upon a series of variables, literal strings, and/or literal numbers. For more information see [Expressions](../Variables.html#expressions).
 
 	Parameters:
 		Automatically create COM object - Check this option let PMC create (if not yet created) a COM object using the defined CLSID.
@@ -826,7 +826,7 @@
 
 /*!
 	Function: PostMessage_and_SendMessage(Ctrl+F12)
-		Sends a message to a window or control (SendMessage additionally waits for acknowledgement). All fields accept [variables](Variables.html).
+		Sends a message to a window or control (SendMessage additionally waits for acknowledgement). All fields accept [variables](../Variables.html).
 
 	Parameters:
 		Message Number - The message number to send.
