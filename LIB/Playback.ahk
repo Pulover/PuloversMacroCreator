@@ -1027,8 +1027,11 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction := ""
 	
 	
-	If Type in %cType1%,%cType2%,%cType3%,%cType13%,%cType5%,%cType6%,%cType8%,%cType9%,%cType10%,%cType12%,%cType24%,%cType22%,%cType23%,%cType25%,%cType31%,WinWait,WinWaitActive,WinWaitNotActive,WinWaitClose,WinGetTitle,WinGetClass,WinGetText,WinGetPos,%cType52%,%cType53%,%cType54%,%cType55%,%cType32%,%cType33%
-		CheckVars(CustomVars, Step)
+	If Type in %cType1%,%cType2%,%cType3%,%cType13%,%cType5%,%cType6%,%cType8%,%cType9%
+	,%cType10%,%cType12%,%cType24%,%cType22%,%cType23%,%cType25%,%cType31%,WinWait,WinWaitActive
+	,WinWaitNotActive,WinWaitClose,WinGetTitle,WinGetClass,WinGetText,WinGetPos,%cType52%,%cType53%
+	,%cType54%,%cType55%,%cType32%,%cType33%
+		CheckVars(CustomVars, Action, Step)
 	Else If Type not in %cType34%,%cType43%
 	{
 		For _each, _value in Pars

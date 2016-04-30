@@ -3905,12 +3905,12 @@ If (IsObject(VerChk))
 	{
 		If ((LangLastCheck != VerChk.LangRev) || (A_ThisLabel = "CheckNow"))
 		{
-			MsgBox, 68, %d_Lang060%, %d_Lang103%`n`n%d_Lang061%
+			MsgBox, 68, %d_Lang060%, %d_Lang103%
 			IfMsgBox, Yes
 			{
 				FileDelete, %A_Temp%\Lang\*.*
 				SplashTextOn, 300, 25, %AppName%, %d_Lang091%
-				WinHttpDownloadToFile(VerChk.LangUrl, A_Temp "\Lang.zip")
+				WinHttpDownloadToFile(VerChk.LangUrl, A_Temp)
 				SplashTextOff
 				If (FileExist(A_Temp "\Lang.zip"))
 				{

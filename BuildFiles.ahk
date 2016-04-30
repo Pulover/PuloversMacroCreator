@@ -121,7 +121,7 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#PmcName}"; Filen
 Filename: "{app}\{#PmcExeName}"; Description: "{cm:LaunchProgram,{#StringChange(PmcName, '&', '&&')}}"; Flags: nowait postinstall
 
 [InstallDelete]
-Type: "filesandordirs"; Name: "{#WorkDir}\Compiled\Lang"; Flags: ignoreversion; Tasks: not portableinstall
+Type: "filesandordirs"; Name: "{app}\Lang"; Tasks: not portableinstall
 
 [UninstallDelete]
 Type: "filesandordirs"; Name: "{userappdata}\MacroCreator"

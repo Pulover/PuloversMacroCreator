@@ -108,9 +108,9 @@ NOT tested on: Windows XP, Vista
 This file contains both x86 and x64 builds.
 
 ), Compiled\MacroCreatorPortable\ReadMe.txt
-FileDelete, Compiled\MacroCreator-Portable.zip
+FileDelete, Compiled\PuloversMacroCreator-Portable.zip
 FileDelete, Compiled\Lang.zip
-Zip(A_ScriptDir "\Compiled\MacroCreatorPortable", A_ScriptDir "\Compiled\MacroCreator-Portable.zip")
+Zip(A_ScriptDir "\Compiled\MacroCreatorPortable", A_ScriptDir "\Compiled\PuloversMacroCreator-Portable.zip")
 Zip(A_ScriptDir "\Compiled\Lang\*.lang", A_ScriptDir "\Compiled\Lang.zip")
 
 TrayTip,, Finished compiling files.
