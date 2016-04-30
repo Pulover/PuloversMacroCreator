@@ -494,11 +494,11 @@
 		}
 		Else If (Type = cType52)
 		{
-			StringSplit, Act, Action, :
-			Action := SubStr(Action, StrLen(Act1) + 2)
 			StringSplit, Tar, Target, /
-			CDO_To := CheckExp(SubStr(Tar1, 4), 1)
-		,	CDO_Sub := CheckExp(Action, 1)
+			CDO_Sub := SubStr(Step, 1, RegExMatch(Step, "=\d:") - 1)
+		,	Step := SubStr(Step, RegExMatch(Step, "=\d:") + 1)
+		,	CDO_To := CheckExp(SubStr(Tar1, 4), 1)
+		,	CDO_Sub := CheckExp(CDO_Sub, 1)
 		,	CDO_Msg := SubStr(Step, 3)
 		,	CDO_Html := SubStr(Step, 1, 1)
 		,	CDO_Att := Window
@@ -509,7 +509,7 @@
 		,	User_Accounts := UserMailAccounts.Get(true)
 			For _each, _Section in User_Accounts
 			{
-				If (Act1 = _Section.email)
+				If (Action = _Section.email)
 				{
 					SelAcc := _each
 					break
@@ -537,14 +537,14 @@
 		}
 		Else If (Type = cType53)
 		{
-			RowData := "`nWinHttpDownloadToFile(" CheckExp(Step, 1) ", " CheckExp(Action, 1) ")"
+			RowData := "`nWinHttpDownloadToFile(" CheckExp(Step, 1) ", " CheckExp(Target, 1) ")"
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
 		Else If ((Type = cType54) || (Type = cType55))
 		{
-			RowData := "`n" Type "(" CheckExp(Step, 1) ", " CheckExp(Action, 1) ", " (Target ? "true" : "")
+			RowData := "`n" Type "(" CheckExp(Step, 1) ", " CheckExp(Target, 1) ", " (Window ? "true" : "")
 		,	RowData := RTrim(RowData, ", ") . ")"
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((TimesX > 1) || InStr(TimesX, "%"))

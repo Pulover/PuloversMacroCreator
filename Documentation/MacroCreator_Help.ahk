@@ -153,7 +153,7 @@
 		Waits the specified amount of time before continuing.
 
 	Parameters:
-		Add Pause - The amount of time to pause (choose format in the options below).
+		Add Pause - The amount of time to pause (choose format in the options below). This field accepts [Variables & Expressions](Variables.html).
 		Miliseconds / Seconds / Minutes - Sets format of time (seconds and minutes will be converted to miliseconds when the command is added).
 		Random delay - Sets the command use a random value between Minimum and Maximum instead of a predefined value.
 		Disable random delays for this command - If the global option for *Random delays" is active the command won't be affected.
@@ -169,7 +169,7 @@
 
 	Parameters:
 		Message - Text to display in the message. If the Cancel button is pressed, execution will stop. This field accepts [Variables & Expressions](Variables.html).
-		Title - The title of the message box window.
+		Title - The title of the message box window. This field accepts [Variables & Expressions](Variables.html).
 		Icon - Sets the icon to be shown on the Message Box.
 		Buttons - Sets which buttons will be shown on the message box.
 		Default - Sets the default button.
@@ -219,7 +219,7 @@
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
 		Make Screenshot - Use this tool to take a screenshot of an area of the screen (see [Instructions](#make-screenshot-tool-instructions) for details on usage).
-		File - Path for the image file, which is assumed to be in the same folder as MacroCreator.exe if an absolute path isn't specified.
+		File - Path for the image file, which is assumed to be in the same folder as MacroCreator.exe if an absolute path isn't specified. This field accepts [Variables & Expressions](Variables.html).
 		Search - Opens the File Select dialog to select an Image File.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
@@ -276,7 +276,7 @@
 	Parameters:
 		Start X/Y / End X/Y - Defines the Search area of the screen/window.
 		Color Picker - Opens the Color Picker Tool. Point the mouse to the desired location and Right-Click to get the pixel code (in RGB format).
-		ColorID - The decimal or hexadecimal color ID to search for, in Blue-Green-Red (BGR) format.
+		ColorID - The decimal or hexadecimal color ID to search for, in Blue-Green-Red (BGR) format. This field accepts [Variables & Expressions](Variables.html).
 		Search - Opens the Windows Color Pick dialog to select a pixel color.
 		If found - Selects an action to execute when an image/pixel is found.  
 			To execute a different action Select 'Continue' (or 'Break' to exit the command's loop) and use the 'If Image/Pixel Found' option in the If Statements window.
@@ -708,7 +708,7 @@
 
 /*!
 	Function: Send_Email(F11)
-		Sends emails using an user-defined account. All fields accept [variables](Variables.html#expressions).
+		Sends emails using an user-defined account. All fields accept [variables](Variables.html).
 
 	Parameters:
 		Message - Body of the message. It can be text or HTML.
@@ -732,7 +732,7 @@
 
 /*!
 	Function: Download_Files(Shift+F11)
-		Downloads one or more files from the Internet. All fields accept [variables](Variables.html#expressions).
+		Downloads one or more files from the Internet. All fields accept [variables](Variables.html).
 
 	Parameters:
 		Destination folder - The name of the destination folder, which is assumed to be in %A_WorkingDir% if an absolute path isn't specified.
@@ -748,7 +748,7 @@
 
 /*!
 	Function: Zip_Files(Ctrl+F11)
-		Compress or uncompress one or more zip files. All fields accept [variables](Variables.html#expressions).
+		Compress or uncompress one or more zip files. All fields accept [variables](Variables.html).
 
 	Parameters:
 		Zip files / Unzip files - Select the desired operation.
@@ -770,7 +770,7 @@
 
 /*!
 	Function: Internet_Explorer(F12)
-		Creates an Internet Explorer COM Object and adds automation commands for it. All fields accept [variables](Variables.html#expressions).
+		Creates an Internet Explorer COM Object and adds automation commands for it. All fields accept [variables](Variables.html), except *Commands*.
 
 	Parameters:
 		Commands - The dropdown list contains some of the most used IE Methods and Properties. Select the correct one to manipulate the browser window or page elements.
@@ -826,7 +826,7 @@
 
 /*!
 	Function: PostMessage_and_SendMessage(Ctrl+F12)
-		Sends a message to a window or control (SendMessage additionally waits for acknowledgement).
+		Sends a message to a window or control (SendMessage additionally waits for acknowledgement). All fields accept [variables](Variables.html).
 
 	Parameters:
 		Message Number - The message number to send.

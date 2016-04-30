@@ -149,6 +149,18 @@
 				,	SetUserWords(UserDefFunctions)
 				}
 			}
+			If (Code.Version < "5.0.2")
+			{
+				If (Col[6] = "SendEmail")
+				{
+					Action := Col[2]
+					StringSplit, Act, Action, :
+					Action := SubStr(Col[2], StrLen(Act1) + 2)
+				,	Col[2] := Act1, Col[3] := Action "=" Col[3]
+				}
+				If ((Col[6] = "DownloadFiles") || (Col[6] = "Zip") || (Col[6] = "Unzip"))
+					Col[8] := Col[7], Col[7] := Col[2], Col[2] := "[" StrReplace(Col[6], "Files") "]"
+			}
 			If (Code.Version = "")
 			{
 				Col[3] := CheckForExp(Col[3])

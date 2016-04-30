@@ -1031,7 +1031,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	,%cType10%,%cType12%,%cType24%,%cType22%,%cType23%,%cType25%,%cType31%,WinWait,WinWaitActive
 	,WinWaitNotActive,WinWaitClose,WinGetTitle,WinGetClass,WinGetText,WinGetPos,%cType52%,%cType53%
 	,%cType54%,%cType55%,%cType32%,%cType33%
-		CheckVars(CustomVars, Action, Step)
+		CheckVars(CustomVars, Step)
 	Else If Type not in %cType34%,%cType43%
 	{
 		For _each, _value in Pars
@@ -1873,15 +1873,15 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return
 	
 	pb_DownloadFiles:
-		WinHttpDownloadToFile(Step, Action)
+		WinHttpDownloadToFile(Step, Target)
 	return
 	
 	pb_Zip:
-		Zip(Step, Action, Target)
+		Zip(Step, Target, Window)
 	return
 	
 	pb_Unzip:
-		Unzip(Step, Action, Target)
+		Unzip(Step, Target, Window)
 	return
 	
 	pb_IECOM_Set:

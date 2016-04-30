@@ -9234,17 +9234,17 @@ SB_SetText("lines: " 0, 3)
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
+	Subject := SubStr(Details, 1, RegExMatch(Details, "=\d:") - 1)
+	Details := SubStr(Details, RegExMatch(Details, "=\d:") + 1)
 	StringReplace, Details, Details, ``n, `n, All
-	StringSplit, Act, Action, :
-	Action := SubStr(Action, StrLen(Act1) + 2)
 	StringSplit, Tar, Target, /
 	GuiControl, 39:, IsHtml, % SubStr(Details, 1, 1)
 	GuiControl, 39:, TextEdit, % SubStr(Details, 3)
 	GuiControl, 39:, To, % SubStr(Tar1, 4)
 	GuiControl, 39:, Cc, % SubStr(Tar2, 4)
 	GuiControl, 39:, Bcc, % SubStr(Tar3, 5)
-	GuiControl, 39:ChooseString, From, %Act1%
-	GuiControl, 39:, Subject, %Action%
+	GuiControl, 39:ChooseString, From, %Action%
+	GuiControl, 39:, Subject, %Subject%
 	GuiControl, 39:, TimesX, %TimesX%
 	GuiControl, 39:, EdRept, %TimesX%
 	GuiControl, 39:, DelayX, %DelayX%
@@ -9282,7 +9282,7 @@ If (From = "")
 	return
 }
 StringReplace, TextEdit, TextEdit, `n, ``n, All
-Action := From ":" Subject, Details := IsHtml ":" TextEdit, Type := cType52
+Action := From, Details := Subject "=" IsHtml ":" TextEdit, Type := cType52
 ,	Target := "To=" To "/CC=" Cc "/BCC=" Bcc
 ,	DelayX := InStr(DelayC, "%") ? DelayC : DelayX
 ,	TimesX := InStr(EdRept, "%") ? EdRept : TimesX
@@ -9467,7 +9467,7 @@ If (s_Caller = "Edit")
 	StringReplace, Details, Details, ``n, `n, All
 	If (A_ThisLabel = "EditDownload")
 	{
-		GuiControl, 40:, DlFolderVar, %Action%
+		GuiControl, 40:, DlFolderVar, %Target%
 		GuiControl, 40:, DlLinks, %Details%
 	}
 	Else
@@ -9475,9 +9475,9 @@ If (s_Caller = "Edit")
 		If (Type = cType55)
 			GuiControl, 40:, Unzip, 1
 		GoSub, ZipMode
-		GuiControl, 40:, ZipFileVar, %Action%
+		GuiControl, 40:, ZipFileVar, %Target%
 		GuiControl, 40:, ZipFilesVar, %Details%
-		If (Target = "Separate")
+		If (Window = "Separate")
 			GuiControl, 40:, Separate, 1
 	}
 }
@@ -9511,7 +9511,7 @@ If (TabControl = 1)
 		return
 	}
 	StringReplace, DlLinks, DlLinks, `n, ``n, All
-	Type := cType53, Action := DlFolderVar, Details := DlLinks, Target := ""
+	Type := cType53, Action := "[Download]", Details := DlLinks, Target := DlFolderVar, Window := ""
 	If (A_ThisLabel != "DownloadApply")
 	{
 		Gui, 1:-Disabled
@@ -9528,7 +9528,7 @@ Else
 		return
 	}
 	StringReplace, ZipFilesVar, ZipFilesVar, `n, ``n, All
-	Type := Zip ? cType54 : cType55, Action := ZipFileVar, Details := ZipFilesVar, Target := Separate ? "Separate" : ""
+	Type := Zip ? cType54 : cType55, Action := "[" Type "]", Details := ZipFilesVar, Target := ZipFileVar, Window := Separate ? "Separate" : ""
 	If (A_ThisLabel != "ZipApply")
 	{
 		Gui, 1:-Disabled
@@ -9538,10 +9538,10 @@ Else
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected"), LV_GetText(RowType, LV_GetNext(), 6)
 If (s_Caller = "Edit")
-	LV_Modify(RowNumber, "Col2", Action, Details, TimesX, DelayX, Type, Target)
+	LV_Modify(RowNumber, "Col2", Action, Details, TimesX, DelayX, Type, Target, Window)
 Else If ((RowSelection = 0) || ((RowType = cType47) || RowType = cType48))
 {
-	LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, DelayG, Type, Target)
+	LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, DelayG, Type, Target, Window)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
@@ -9551,7 +9551,7 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-	,	LV_Insert(RowNumber, "Check", RowNumber, Action, Details, 1, DelayG, Type, Target)
+	,	LV_Insert(RowNumber, "Check", RowNumber, Action, Details, 1, DelayG, Type, Target, Window)
 	,	LVManager.InsertAtGroup(RowNumber)
 	,	RowNumber++
 	}

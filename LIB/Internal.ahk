@@ -1192,6 +1192,7 @@ WinHttpDownloadToFile(UrlList, DestFolder)
 			ado.Type := 1 ; adTypeBinary
 			ado.Open
 			ado.Write(whr.ResponseBody)
+			OutputDebug, %FileName%
 			ado.SaveToFile(FileName, 2)
 			ado.Close
 		}
