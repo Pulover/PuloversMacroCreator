@@ -648,9 +648,9 @@ If (!LangFiles.HasKey(Lang))
 	url := "http://www.macrocreator.com/lang"
 	whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 	whr.open("GET", url, false)
-	whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
-	whr.SetRequestHeader("Referer", url)
-	whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+	; whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
+	; whr.SetRequestHeader("Referer", url)
+	; whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 	Try
 	{
 		whr.Send()
@@ -710,6 +710,8 @@ Loop, Parse, ShowBands, `,
 
 RegRead, DClickSpd, HKEY_CURRENT_USER, Control Panel\Mouse, DoubleClickSpeed
 DClickSpd := Round(DClickSpd * 0.001, 1)
+
+RowCheckInProgress := false
 
 ;##### Menus: #####
 
@@ -1109,7 +1111,8 @@ Else If (!MultInst) && (TargetID := WinExist("ahk_exe " A_ScriptFullPath))
 Else IfExist, %DefaultMacro%
 {
 	AutoRefreshState := AutoRefresh, AutoRefresh := 0
-	GpConfig := ShowGroups, ShowGroups := 0
+	GpConfig := ShowGroups, ShowGroups := false
+	LVManager.EnableGroups(false)
 	PMC.Import(DefaultMacro)
 	CurrentFileName := LoadedFileName
 	GoSub, FileRead
@@ -1835,7 +1838,8 @@ If (SavePrompt)
 		return
 }
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
-GpConfig := ShowGroups, ShowGroups := 0
+GpConfig := ShowGroups, ShowGroups := false
+LVManager.EnableGroups(false)
 PMC.Import(A_GuiEvent)
 CurrentFileName := LoadedFileName
 GoSub, FileRead
@@ -1867,7 +1871,8 @@ Loop, Parse, SelectedFileName, `n
 Files := RTrim(Files, "`n")
 OpenFile:
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
-GpConfig := ShowGroups, ShowGroups := 0
+GpConfig := ShowGroups, ShowGroups := false
+LVManager.EnableGroups(false)
 PMC.Import(Files)
 CurrentFileName := LoadedFileName, Files := ""
 GoSub, b_Start
@@ -1919,7 +1924,8 @@ Loop, Parse, SelectedFileName, `n
 }
 Files := RTrim(Files, "`n")
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
-GpConfig := ShowGroups, ShowGroups := 0
+GpConfig := ShowGroups, ShowGroups := false
+LVManager.EnableGroups(false)
 PMC.Import(Files,, 0)
 Files := ""
 GuiControl, chMacro:Choose, A_List, %TabCount%
@@ -2092,7 +2098,8 @@ If (!FileExist(File))
 	return
 }
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
-GpConfig := ShowGroups, ShowGroups := 0
+GpConfig := ShowGroups, ShowGroups := false
+LVManager.EnableGroups(false)
 PMC.Import(File)
 CurrentFileName := LoadedFileName, Files := ""
 ; GoSub, b_Start
@@ -11296,6 +11303,8 @@ Else
 return
 
 InputList:
+If (RowCheckInProgress)
+	return
 Critical
 Gui, chMacro:ListView, InputList%A_List%
 If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
@@ -12264,6 +12273,8 @@ Loop, %TabCount%
 }
 ActiveList := NewActive
 Gui, chMacro:Default
+GpConfig := ShowGroups, ShowGroups := false
+LVManager.EnableGroups(false)
 Loop, %TabCount%
 	GuiControl, chMacro:-g, InputList%A_Index%
 Loop, %TabCount%
@@ -12281,9 +12292,11 @@ Loop, %TabCount%
 GuiControl, chMacro:Choose, A_List, %ActiveList%
 Gui, chMacro:Submit, NoHide
 LVManager.SetHwnd(ListID%A_List%)
+ShowGroups := GpConfig
 GoSub, chMacroGuiSize
 GoSub, LoadData
 GoSub, UpdateCopyTo
+GoSub, b_Start
 Gui, 1:-Disabled
 Gui, 32:Destroy
 Project := "", SavePrompt(true)
@@ -14504,6 +14517,7 @@ HaltCheck := 0
 return
 
 RowCheck:
+RowCheckInProgress := true
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:-Redraw, InputList%A_List%
@@ -14668,6 +14682,7 @@ If (BadCmd)
 	Gui, 1:+OwnDialogs
 	MsgBox, 16, %d_Lang007%, %d_Lang100%
 }
+RowCheckInProgress := false
 return
 
 RecKeyUp:
@@ -15544,11 +15559,11 @@ EnableGroups:
 Gui, chMacro:Submit, NoHide
 Loop, %TabCount%
 {
-	Gui, chMacro:Listview, InputList%A_List%
-	GuiControl, chMacro:-g, InputList%A_List%
+	Gui, chMacro:Listview, InputList%A_Index%
+	GuiControl, chMacro:-g, InputList%A_Index%
 	LVManager.SetHwnd(ListID%A_Index%)
 	LVManager.EnableGroups(ShowGroups, c_Lang061)
-	GuiControl, chMacro:+gInputList, InputList%A_List%
+	GuiControl, chMacro:+gInputList, InputList%A_Index%
 }
 LVManager.SetHwnd(ListID%A_List%)
 If (ShowGroups)

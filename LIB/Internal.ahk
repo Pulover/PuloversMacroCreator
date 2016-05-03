@@ -213,6 +213,8 @@ DragTab()
 						NewActive := A_Index
 				}
 				ActiveList := NewActive
+				GpConfig := ShowGroups, ShowGroups := false
+				LVManager.EnableGroups(false)
 				Loop, %TabCount%
 					GuiControl, chMacro:-g, InputList%A_Index%
 				Loop, %TabCount%
@@ -232,9 +234,11 @@ DragTab()
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
 				Gui, chMacro:Submit, NoHide
 				LVManager.SetHwnd(ListID%A_List%)
+				ShowGroups := GpConfig
 				GoSub, chMacroGuiSize
 				GoSub, LoadData
 				GoSub, UpdateCopyTo
+				GoSub, b_Start
 				Proj_Opts := "", SavePrompt(true)
 				SetTimer, HitFix, -10
 			}
