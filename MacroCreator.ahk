@@ -3383,9 +3383,9 @@ return
 SendRevision:
 Gui, 4:Submit, NoHide
 Gui, 4:+OwnDialogs
-IfNotExist, LFile
+IfNotExist, %LFile%
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang102%
+	MsgBox, 16, %d_Lang007%, %d_Lang102%`n`n%LFile%
 	return
 }
 url := "http://www.macrocreator.com/sendemail.php"
@@ -3400,9 +3400,9 @@ objParam := { name		: Name
 CreateFormData(PostData, hdr_ContentType, objParam)
 
 whr.SetRequestHeader("Content-Type", hdr_ContentType)
-whr.SetRequestHeader("Referer", url)
-whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko")
-whr.Option(6) := false ; No auto redirect
+; whr.SetRequestHeader("Referer", url)
+; whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko")
+; whr.Option(6) := false ; No auto redirect
 SplashTextOn, 300, 25, %AppName%, %d_Lang039%
 Try
 {
@@ -3419,7 +3419,10 @@ SplashTextOff
 If (InStr(whr.ResponseText, "Email was sent successfully!"))
 	MsgBox, 64, %t_Lang186%, %d_Lang105%
 Else
-	MsgBox, 16, %d_Lang007%, %d_Lang102%
+{
+	MsgBox, 16, %d_Lang007%, %d_Lang102%`n`n%LFile%
+	return
+}
 GuiControl, 4:Choose, TabControl, LangEditor
 return
 
@@ -3489,6 +3492,8 @@ return
 SaveLang:
 Gui, 4:Submit, NoHide
 Gui, 4:ListView, LangList
+SpeedUp := 2 ** SpeedUp
+SpeedDn := 2 ** SpeedDn
 EditLang := RegExReplace(EditLang, "\s/.*"), SelLang := ""
 ExportLang:
 Gui, 4:Default
@@ -10492,6 +10497,7 @@ If (TabControl = 1)
 		LV_Modify(RowNumber, "Col2", "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, FuncVariables)
 	Else
 		LV_Add("Check", ListCount%A_List%+1, "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, FuncVariables)
+	GoSub, PrevRefresh
 }
 If (TabControl = 2)
 {
