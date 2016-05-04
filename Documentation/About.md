@@ -40,8 +40,8 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 * Improved performance when Groups are enabled.
 * Changed behavior of *Repeat Until* option in Image/Pixel Search to allow max repeat number.
-* Fixed variables cleared after user-defined function calls inside expressions.
-* Fixed local function variables not cleared from global scope after call.
+* Fixed global variables cleared after user-defined function calls inside expressions.
+* Fixed local function variables not restored to global scope after call.
 * Fixed identical function or object calls in expressions being executed only once.
 * Fixed mixed rows data after closing a Macro tab.
 * Fixed some fields of *Send Email*, *Download Files* and *Zip/Unzip Files* not working with variables.

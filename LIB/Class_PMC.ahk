@@ -1,9 +1,11 @@
 ﻿Class PMC
 {
+	Static PmcCode
+	Static PmcGroups
 	Load(FileName)
 	{
 		local ID := 0, Col, Row := [], Opt := []
-		PmcCode := [], PmcGroups := [], P
+		this.PmcCode := [], this.PmcGroups := []
 		Loop, Read, %FileName%
 		{
 			If (RegExMatch(A_LoopReadLine, "\[PMC Code(\sv)*(.*)\]", v)=1)
@@ -13,7 +15,7 @@
 					Opt.Push(A_LoopField)
 			}
 			Else If (InStr(A_LoopReadLine, "Groups=")=1)
-				PmcGroups[ID] := SubStr(A_LoopReadLine, 8)
+				this.PmcGroups[ID] := SubStr(A_LoopReadLine, 8)
 			Else If (RegExMatch(A_LoopReadLine, "^\d+\|"))
 			{
 				Col := []
@@ -21,17 +23,17 @@
 					Col.Push(A_LoopField)
 				Row.Push(Col)
 			}
-			Else If (A_LoopReadLine = "")
-				PmcCode[ID] := {Opt: Opt, Row: Row, Version: Version}
+			Else If (Trim(A_LoopReadLine) = "")
+				this.PmcCode[ID] := {Opt: Opt, Row: Row, Version: Version}
 		}
-		If (!IsObject(PmcCode[ID].opt))
-			PmcCode[ID] := {Opt: Opt, Row: Row, Version: Version}
+		If (!IsObject(this.PmcCode[ID].opt))
+			this.PmcCode[ID] := {Opt: Opt, Row: Row, Version: Version}
 		If (ID = 0)
 		{
-			If (PmcCode[0] = "")
+			If (this.PmcCode[0] = "")
 				return 0
-			PmcCode[1] := PmcCode[0], PmcCode[0] := "", ID := 1
-		,	PmcGroups[1] := PmcGroups[0], PmcGroups[0] := ""
+			this.PmcCode[1] := this.PmcCode[0], this.PmcCode[0] := "", ID := 1
+		,	this.PmcGroups[1] := this.PmcGroups[0], this.PmcGroups[0] := ""
 		}
 		return ID
 	}
@@ -74,10 +76,10 @@
 				GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
 				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 				GuiControl, chMacro:-g, InputList%TabCount%
-				this.LVLoad("InputList" TabCount, PmcCode[A_Index])
+				this.LVLoad("InputList" TabCount, this.PmcCode[A_Index])
 				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
-			,	Opt := PmcCode[A_Index].Opt
+			,	Opt := this.PmcCode[A_Index].Opt
 			,	o_AutoKey[TabCount] := (Opt[2] != "") ? Opt[2] : ""
 			,	o_ManKey[TabCount] := (Opt[3] != "") ? Opt[3] : ""
 			,	o_TimesG[TabCount] := (Opt[4] != "") ? Opt[4] : 1
@@ -102,7 +104,7 @@
 				OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
 			,	Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
 			,	LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
-			,	LVManager.SetGroups(PmcGroups[A_Index]), LVManager.Add()
+			,	LVManager.SetGroups(this.PmcGroups[A_Index]), LVManager.Add()
 				GuiControl, chMacro:+gInputList, InputList%TabCount%
 			}
 		}

@@ -171,6 +171,7 @@ Generate_Common(item, prefix="")
 	Parse_Common(item, prefix, type, syntax, name, isConstr, isGet, isSet)
 	
 	prettyname := type = "Function" ? StrReplace(name, "_", " ") : name
+	css := (type = "Function") ? "../default.css" : "default.css"
 	
 	filetext =
 	(LTrim
@@ -181,7 +182,7 @@ Generate_Common(item, prefix="")
 	<title>%prettyname%</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link href="default.css" rel="stylesheet" type="text/css">
+	<link href="%css%" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 
