@@ -317,7 +317,7 @@
 				FlowControl.If := IfStatement(FlowControl.If, PlaybackVars[LoopDepth][mLoopIndex]
 							, Action, Step, TimesX, DelayX, Type, Target, Window, FlowControl)
 				If (ManualKey)
-					WaitFor.Key(o_ManKey[ManualKey], 0)
+					WaitFor.Key(o_ManKey[ManualKey])
 				continue
 			}
 			If (FlowControl.If != 0)

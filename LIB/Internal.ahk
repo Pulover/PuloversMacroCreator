@@ -50,6 +50,7 @@ LV_GetSelCheck()
 				SelectedRows.FirstSel := A_Index
 		}
 	}
+	Critical, Off
 	return SelectedRows
 }
 
@@ -247,6 +248,7 @@ DragTab()
 				SetTimer, SetListFocus, -10
 		}
 	}
+	Critical, Off
 }
 
 HitFix:
@@ -576,6 +578,7 @@ GuiAddLV(ident)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)
 	LVOrder_Set(10, ColOrder, ListID%ident%)
+	Critical, Off
 }
 
 SelectByType(SelType, Col := 6)
@@ -1021,6 +1024,7 @@ LV_ColorsMessage(wParam, lParam)
 		If (LV_Colors[H].NS && (M = LVN_COLUMNCLICK))
 			Return 0
 	}
+	Critical, Off
 }
 
 ShowMenu(Menu, mX, mY)
@@ -1165,6 +1169,7 @@ UpdateMailAccounts()
 	}
 	UserMailAccounts.Set(MailIni)
 ,	UserMailAccounts.Write(UserAccountsPath)
+	Critical, Off
 }
 
 LoadMailAccounts()

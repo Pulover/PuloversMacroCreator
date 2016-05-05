@@ -11905,6 +11905,7 @@ GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
 DelLists:
+StopIt := 1
 OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
 Gui, chMacro:Default
 Loop, %TabCount%
@@ -13612,7 +13613,7 @@ return
 f_ManKey:
 Loop, %TabCount%
 	If (o_ManKey[A_Index] = A_ThisHotkey)
-		mHK_On := [A_Index,, mHK_On]
+		mHK_On := [A_Index, 0, A_Index]
 f_RunMan:
 If (InStr(TabGetText(TabSel, mHK_On), "()"))
 	return
