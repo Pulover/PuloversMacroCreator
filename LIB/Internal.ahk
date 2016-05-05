@@ -28,6 +28,7 @@ Data_GetTexts(Data, Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", By
 
 LV_GetSelCheck()
 {
+	Critical
 	SelectedRows := {Checked: [], Selected: []}, RowNumber := 0
 	Loop, % LV_GetCount()
 	{
@@ -1152,6 +1153,7 @@ TreeGetChecked()
 UpdateMailAccounts()
 {
 	global
+	Critical
 	MailIni := ""
 	Loop, % LV_GetCount()
 	{

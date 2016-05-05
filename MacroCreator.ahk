@@ -11479,6 +11479,7 @@ Gosub, PrevRefresh
 return
 
 CopyList:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
@@ -11492,10 +11493,10 @@ GoSub, b_Enable
 A_List := c_List
 Gui, chMacro:ListView, InputList%A_List%
 LVManager.SetHwnd(ListID%A_List%)
-GuiControl, Focus, InputList%A_List%
 return
 
 Duplicate:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
@@ -11505,10 +11506,12 @@ If (LVManager.Duplicate())
 	GoSub, b_Start
 }
 GuiControl, chMacro:+gInputList, InputList%A_List%
-GuiControl, Focus, InputList%A_List%
+If (AutoRefresh)
+	GoSub, PrevRefresh
 return
 
 CopyRows:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 If (LV_GetCount("Selected") = 0)
@@ -11517,6 +11520,7 @@ LVManager.Copy()
 return
 
 CutRows:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
@@ -11529,10 +11533,12 @@ LVManager.Cut()
 GoSub, RowCheck
 GoSub, b_Start
 GuiControl, chMacro:+gInputList, InputList%A_List%
-GuiControl, Focus, InputList%A_List%
+If (AutoRefresh)
+	GoSub, PrevRefresh
 return
 
 PasteRows:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
@@ -11542,9 +11548,12 @@ If (LVManager.Paste(, true))
 	GoSub, b_Start
 }
 GuiControl, chMacro:+gInputList, InputList%A_List%
+If (AutoRefresh)
+	GoSub, PrevRefresh
 return
 
 Remove:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
@@ -11570,7 +11579,8 @@ LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
 GuiControl, chMacro:+gInputList, InputList%A_List%
-GuiControl, Focus, InputList%A_List%
+If (AutoRefresh)
+	GoSub, PrevRefresh
 return
 
 MoveCopy:
@@ -11588,16 +11598,22 @@ Dest_Row := ""
 return
 
 CopyHere:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
+GuiControl, chMacro:-g, InputList%A_List%
 TempData := new LV_Rows()
 ,	TempData.Copy()
 ,	TempData.Paste(Dest_Row)
 ,	TempData := ""
 LVManager.RefreshGroups()
+GuiControl, chMacro:+gInputList, InputList%A_List%
+If (AutoRefresh)
+	GoSub, PrevRefresh
 return
 
 MoveHere:
+Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
@@ -11608,9 +11624,12 @@ TempData := new LV_Rows()
 ,	TempData := ""
 LVManager.RefreshGroups()
 GuiControl, chMacro:+gInputList, InputList%A_List%
+If (AutoRefresh)
+	GoSub, PrevRefresh
 return
 
 Undo:
+Critical
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
@@ -11624,9 +11643,12 @@ If (LVManager.Undo())
 	GoSub, b_Enable
 }
 GuiControl, chMacro:+gInputList, InputList%A_List%
+If (AutoRefresh)
+	GoSub, PrevRefresh
 return
 
 Redo:
+Critical
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
@@ -11640,6 +11662,8 @@ If (LVManager.Redo())
 	GoSub, b_Enable
 }
 GuiControl, chMacro:+gInputList, InputList%A_List%
+If (AutoRefresh)
+	GoSub, PrevRefresh
 return
 
 TabPlus:
@@ -13588,11 +13612,13 @@ return
 f_ManKey:
 Loop, %TabCount%
 	If (o_ManKey[A_Index] = A_ThisHotkey)
-		mHK_On := A_Index
+		mHK_On := [A_Index,, mHK_On]
+f_RunMan:
 If (InStr(TabGetText(TabSel, mHK_On), "()"))
 	return
 StopIt := 0
-Playback(mHK_On, 0, mHK_On)
+If (mHK_On := Playback(mHK_On*))
+	Goto, f_RunMan
 return
 
 f_AbortKey:

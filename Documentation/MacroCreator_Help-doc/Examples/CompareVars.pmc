@@ -1,4 +1,4 @@
-﻿[PMC Code v5.0.0]|F3||1|Window,2,Fast,0,1|1|CompareVars
+﻿[PMC Code v5.0.2]|F3||1|Window,2,Fast,0,1,Input,-1,-1,1|1|CompareVars
 Groups=
 1|Compare Variables|A_Hour > 11|1|0|If_Statement|||||
 2|[MsgBox]|Good Afternoon`, %A_UserName%!|1|0|MsgBox|0||||
@@ -13,7 +13,7 @@ Groups=
 11|[MsgBox]|Enjoy the Sunday! You got work tomorrow`, don't you?|1|0|MsgBox|0||||
 12|[End If]|EndIf|1|0|If_Statement|||||
 13|If Window Exist|ahk_class Notepad|1|0|If_Statement|||||
-14|WinGet|NpID`, ID|1|0|WinGet||ahk_class Notepad|||
+14|WinGet|NpID, ID|1|0|WinGet||ahk_class Notepad|||
 15|[MsgBox]|Notepad is open and the window ID is %NpID%.|1|0|MsgBox|0||||
 16|[Else]|Else|1|0|If_Statement|||||
 17|[MsgBox]|Notepad is not open.|1|0|MsgBox|0||||

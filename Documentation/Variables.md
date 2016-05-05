@@ -87,9 +87,9 @@ Some short variable names should be avoided in expressions as they are used inte
 
 ### Boolean Assignment
 
-To switch a variable's value True <> False use an exclamation in from of the value. Variable must be enclosed in percent signs.
+To switch a variable's value True <> False use an exclamation in from of the value. This option is only available with the "Expression" option checked.
 
-> MyVar := !MyVar ; Or !%MyVar% without Expression checked
+> MyVar := !MyVar
 
 ## Expressions in command parameters
 

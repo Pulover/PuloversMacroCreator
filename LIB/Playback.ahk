@@ -2,7 +2,7 @@
 {
 	local PlaybackVars := [], LVData := [], LoopDepth := 0, LoopCount := [0], StartMark := []
 	, m_ListCount := ListCount%Macro_On%, mLoopIndex, cLoopIndex, iLoopIndex := 0, mLoopLength, mLoopSize, mListRow
-	, Action, Step, TimesX, DelayX, Type, Target, Window, TimesR, Loop_Start, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
+	, Action, Step, TimesX, DelayX, Type, Target, Window, TimesR, Loop_Start := 0, Loop_End, Lab, _Label, _i, Pars, _Count, TimesLoop, FieldsData
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound, Row_Type, TargetLabel, TargetFunc
 	, ScopedParams := [], UserGlobals, GlobalList, VarsList, CursorX, CursorY, TakeAction, PbCoordModes
@@ -78,6 +78,25 @@
 		cLoopIndex := A_Index + Increment
 		Loop, %m_ListCount%
 		{
+			mListRow := A_Index + Loop_Start
+			If (mListRow > m_ListCount)
+				break
+			If (StopIt)
+				break 2
+			If (Loop_End = mListRow)
+				return
+			If (!ActiveRows.Checked[mListRow])
+				continue
+			If (!IsUserFunc)
+			{
+				If ((pb_From) && (mListRow < ActiveRows.FirstSel))
+					continue
+				If ((pb_To) && (mListRow > ActiveRows.FirstSel))
+					break
+				If ((pb_Sel) && (!ActiveRows.Selected[mListRow]))
+					continue
+			}
+			
 			CoordMode, Mouse, % PbCoordModes["Mouse"]
 			CoordMode, ToolTip, % PbCoordModes["Tooltip"]
 			CoordMode, Pixel, % PbCoordModes["Pixel"]
@@ -92,52 +111,35 @@
 			mLoopIndex := iLoopIndex ? 1 : cLoopIndex
 		,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
 		,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := FlowControl.ErrorLevel
-		,	mListRow := A_Index
+			
 			For _each, _value in PlaybackVars[LoopDepth][mLoopIndex]
 				(InStr(_each, "A_")=1) ? "" : %_each% := _value
-			If (StopIt)
-				break 2
-			If (Loop_Start > 0)
-			{
-				Loop_Start--
-				continue
-			}
-			If (Loop_End = A_Index)
-				return
-			If (!ActiveRows.Checked[A_Index])
-				continue
-			If (!IsUserFunc)
-			{
-				If ((pb_From) && (A_Index < ActiveRows.FirstSel))
-					continue
-				If ((pb_To) && (A_Index > ActiveRows.FirstSel))
-					break
-				If ((pb_Sel) && (!ActiveRows.Selected[A_Index]))
-					continue
-			}
+			
 			Data_GetTexts(LVData, mListRow, Action, Step, TimesX, DelayX, Type, Target, Window)
+			
 			If ((ShowProgBar = 1) && (RunningFunction = "") && (FlowControl.Break = 0) && (FlowControl.Continue = 0) && (FlowControl.If = 0))
 			{
 				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType42%
 				{
-					GuiControl, 28:, OSCProg, %A_Index%
+					GuiControl, 28:, OSCProg, %mListRow%
 					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
 				}
 				Else If (ManualKey)
 				{
-					GuiControl, 28:, OSCProg, %A_Index%
+					GuiControl, 28:, OSCProg, %mListRow%
 					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
 				}
 			}
+			
 			If ((ManualKey) && (ShowStep))
 			{
-				NextStep := A_Index + 1
+				NextStep := mListRow + 1
 				If (NextStep > LVData.Length())
 					NextStep := 1
 				While ((!ActiveRows.Checked[NextStep]) || (LVData[NextStep, 8] = cType42))
 				{
 					NextStep++
-					If (A_Index > m_ListCount)
+					If (mListRow > m_ListCount)
 						return
 				}
 				Data_GetTexts(LVData, NextStep,, NStep, NTimesX,, NType, NTarget, NWindow)
@@ -146,7 +148,7 @@
 				%d_Lang021%: %NextStep%
 				%NType%, %NStep%   [x%NTimesX% @ %NWindow%|%NTarget%]
 
-				%d_Lang022%: %A_Index%
+				%d_Lang022%: %mListRow%
 				%Type%, %Step%   [x%TimesX% @ %Window%|%Target%]
 				)
 			}
@@ -2024,7 +2026,7 @@ IfEval(_Name, _Operator, _Value)
 		result := (_Name = _Value) ? true : false
 	Else If (_Operator = "==")
 		result := (_Name == _Value) ? true : false
-	Else If (_Operator = "!=")
+	Else If ((_Operator = "!=") || (_Operator = "<>"))
 		result := (_Name != _Value) ? true : false
 	Else If (_Operator = ">")
 		result := (_Name > _Value) ? true : false
@@ -2409,8 +2411,6 @@ AssignVar(_Name, _Operator, _Value, CustomVars, RunningFunction)
 		_Value := StrReplace(_Value, _z, A_Space)
 		If (_Name = "Clipboard")
 			_Value := StrReplace(_Value, "````,", ",")
-		If (InStr(_Value, "!") = 1)
-			_Value := !SubStr(_Value, 2)
 	}
 	
 	Try _content := %_Name%
