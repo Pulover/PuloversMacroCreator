@@ -710,7 +710,7 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 			Hotkey, If, !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
 			Try Hotkey, % LastPlay.Auto[A_Index], f_AutoKey, Off
 			Try Hotkey, % LastPlay.Man[A_Index], f_ManKey, Off
-			If (ListCount%A_Index% = 0)
+			If (!ListCount%A_Index%)
 				continue
 			If (InStr(TabGetText(TabSel, A_Index), "()"))
 				o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
@@ -1203,7 +1203,6 @@ WinHttpDownloadToFile(UrlList, DestFolder)
 			ado.Type := 1 ; adTypeBinary
 			ado.Open
 			ado.Write(whr.ResponseBody)
-			OutputDebug, %FileName%
 			ado.SaveToFile(FileName, 2)
 			ado.Close
 		}

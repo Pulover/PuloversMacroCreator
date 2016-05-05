@@ -11769,12 +11769,13 @@ If (c_List != TabCount)
 s_List := ""
 Loop, %TabCount%
 	s_List .= (A_Index != c_List) ? "|" (Title := TabGetText(TabSel, A_Index)) : ""
-TabCount--
+ListCount%TabCount% := 0, TabCount--
 Loop, %TabCount%
 	GuiControl, chMacro:+gInputList, InputList%A_Index%
 Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:, A_List, %s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
+GoSub, LoadData
 GoSub, TabSel
 SavePrompt(true)
 return
@@ -11913,6 +11914,7 @@ Loop, %TabCount%
 	Gui, chMacro:ListView, InputList%A_Index%
 	LVManager.SetHwnd(ListID%A_Index%)
 ,	LV_Delete(), LVManager.RemoveAllGroups(c_Lang061), LVManager.ClearHistory()
+,	ListCount%A_Index% := 0
 	GuiControl, chMacro:+Redraw, InputList%A_Index%
 	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
 }
