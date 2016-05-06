@@ -4151,7 +4151,7 @@ If (s_Caller = "Edit")
 	StringReplace, Action, Action, Middle%A_Space%
 	StringReplace, Action, Action, X1%A_Space%
 	StringReplace, Action, Action, X2%A_Space%
-	If (Action = Action1)
+	If (Action = MAction1)
 	{
 		If (Type = cType13)
 		{
@@ -4172,17 +4172,17 @@ If (s_Caller = "Edit")
 		GuiControl, 5:Disable, DefCt
 		GuiControl, 5:Disable, GetCtrl
 	}
-	If (Action = Action2)
+	If (Action = MAction2)
 	{
 		GuiControl, 5:, Point, 1
 		GoSub, Point
 	}
-	If (Action = Action3)
+	If (Action = MAction3)
 	{
 		GuiControl, 5:, PClick, 1
 		GoSub, PClick
 	}
-	If (Action = Action4)
+	If (Action = MAction4)
 	{
 		StringReplace, DetailsX, Details, Rel%A_Space%,, All
 		StringReplace, DetailsX, DetailsX, `}`{, |, All
@@ -4202,7 +4202,7 @@ If (s_Caller = "Edit")
 		GuiControl, 5:, Drag, 1
 		GoSub, Drag
 	}
-	If (Action = Action5)
+	If (Action = MAction5)
 	{
 		If (Type = cType13)
 		{
@@ -4220,7 +4220,7 @@ If (s_Caller = "Edit")
 		GuiControl, 5:Disable, DefCt
 		GuiControl, 5:Disable, GetCtrl
 	}
-	If (Action = Action6)
+	If (Action = MAction6)
 	{
 		If (Type = cType13)
 		{
@@ -4312,7 +4312,7 @@ If (s_Caller = "Edit")
 	}
 	If (InStr(Details, "Rel"))
 		GuiControl, 5:, MRel, 1
-	If ((Action = Action2) || (Action = Action3))
+	If ((Action = MAction2) || (Action = MAction3))
 	{
 		If (Type = cType13)
 		{
@@ -4327,7 +4327,7 @@ If (s_Caller = "Edit")
 		GuiControl, 5:, IniX, %Par1%
 		GuiControl, 5:, IniY, %Par2%
 		GuiControlGet, cc, 5:, CCount
-		If (Action = Action2)
+		If (Action = MAction2)
 			GuiControl, 5:, CCount, 1
 		Else
 		{
@@ -4346,32 +4346,32 @@ If (s_Caller = "Edit")
 If (s_Caller = "Find")
 {
 	Gui, 5:Default
-	If (GotoRes1 = Action1)
+	If (GotoRes1 = MAction1)
 	{
 		GuiControl, 5:, Click, 1
 		GoSub, Click
 	}
-	Else If (GotoRes1 = Action2)
+	Else If (GotoRes1 = MAction2)
 	{
 		GuiControl, 5:, Point, 1
 		GoSub, Point
 	}
-	Else If (GotoRes1 = Action3)
+	Else If (GotoRes1 = MAction3)
 	{
 		GuiControl, 5:, PClick, 1
 		GoSub, PClick
 	}
-	Else If (GotoRes1 = Action4)
+	Else If (GotoRes1 = MAction4)
 	{
 		GuiControl, 5:, Drag, 1
 		GoSub, Drag
 	}
-	Else If (GotoRes1 = Action5)
+	Else If (GotoRes1 = MAction5)
 	{
 		GuiControl, 5:, WUp, 1
 		GoSub, WUp
 	}
-	Else If (GotoRes1 = Action6)
+	Else If (GotoRes1 = MAction6)
 	{
 		GuiControl, 5:, WDn, 1
 		GoSub, WDn
@@ -4538,7 +4538,7 @@ s_Caller := ""
 return
 
 f_Click:
-Action := Button " " Action1, Details := Button
+Action := Button " " MAction1, Details := Button
 If (MNormal)
 	Details .= ", " (InStr(CCountE, "%") ? CCountE : CCount) ", "
 If (MHold)
@@ -4557,7 +4557,7 @@ Else
 return
 
 f_Point:
-Action := Action2, Details := IniX ", " IniY ", 0"
+Action := MAction2, Details := IniX ", " IniY ", 0"
 If (MRel = 1)
 	Details := "Rel " Details
 If (SE = 1)
@@ -4567,7 +4567,7 @@ Else
 return
 
 f_PClick:
-Action := Button " " Action3, Details := IniX ", " IniY " " Button
+Action := Button " " MAction3, Details := IniX ", " IniY " " Button
 If (MNormal)
 	Details .= ", " (InStr(CCountE, "%") ? CCountE : CCount)
 If (MHold)
@@ -4583,7 +4583,7 @@ Else
 return
 
 f_Drag:
-Action := Button " " Action4, DetailsI := IniX ", " IniY ", " Button " Down"
+Action := Button " " MAction4, DetailsI := IniX ", " IniY ", " Button " Down"
 ,	DetailsE := EndX ", " EndY ", " Button " Up"
 If (MRel = 1)
 	DetailsI := " Rel " DetailsI, DetailsE := " Rel " DetailsE
@@ -4591,7 +4591,7 @@ Details := "{Click, " DetailsI "}{Click, " DetailsE "}", Type := cType13
 return
 
 f_WUp:
-Action := Action5
+Action := MAction5
 ,	Details := "WheelUp"
 ,	Details .= ", " (InStr(CCountE, "%") ? CCountE : CCount)
 If (SE = 1)
@@ -4601,7 +4601,7 @@ Else
 return
 
 f_WDn:
-Action := Action6
+Action := MAction6
 ,	Details := "WheelDown"
 ,	Details .= ", " (InStr(CCountE, "%") ? CCountE : CCount)
 If (SE = 1)
@@ -12544,7 +12544,7 @@ If Type in %cType34%,%cType43%
 	Goto, EditComInt
 If (InStr(Type, "Win"))
 	Goto, EditWindow
-If Action contains %Action1%,%Action2%,%Action3%,%Action4%,%Action5%,%Action6%
+If Action contains %MAction1%,%MAction2%,%MAction3%,%MAction4%,%MAction5%,%MAction6%
 	Goto, EditMouse
 If (InStr(Action, "[Text]"))
 	Goto, EditText
@@ -12594,7 +12594,7 @@ If Type in %cType1%,%cType2%,%cType3%,%cType4%,%cType8%,%cType9%,%cType13%
 {
 	If (Target != "")
 		GuiControl, 15:, DefCt, %Target%
-	If Action contains %Action2%,%Action3%,%Action4%
+	If Action contains %MAction2%,%MAction3%,%MAction4%
 		GuiControl, 15:Disable, CSend
 	If (InStr(Type, "Control"))
 	{
@@ -12861,7 +12861,7 @@ If (RowSelection = 0)
 		If (RowNumber > ListCount%A_List%)
 			break
 		LV_GetText(Action, RowNumber, 2)
-		If Action contains %Action2%,%Action3%,%Action4%
+		If Action contains %MAction2%,%MAction3%,%MAction4%
 			continue
 		LV_GetText(Type, RowNumber, 6)
 		If ((Type = cType1) || (Type = cType2) || (Type = cType3)
@@ -12901,7 +12901,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 		LV_GetText(Action, RowNumber, 2)
-		If Action contains %Action2%,%Action3%,%Action4%
+		If Action contains %MAction2%,%MAction3%,%MAction4%
 			continue
 		LV_GetText(Type, RowNumber, 6)
 		If ((Type = cType1) || (Type = cType2) || (Type = cType3)

@@ -66,12 +66,12 @@ ListCount1 := 0
 ,	cType54 := "Zip"
 ,	cType55 := "Unzip"
 
-Action1 := "Click"
-,	Action2 := "Move"
-,	Action3 := "Move & Click"
-,	Action4 := "Click & Drag"
-,	Action5 := "Mouse Wheel Up"
-,	Action6 := "Mouse Wheel Down"
+MAction1 := "Click"
+,	MAction2 := "Move"
+,	MAction3 := "Move & Click"
+,	MAction4 := "Click & Drag"
+,	MAction5 := "Mouse Wheel Up"
+,	MAction6 := "Mouse Wheel Down"
 ,	ContHelp := { 3: ["PauseB", "MsgboxB", "KeyWaitB"]
 			,	5: ["MouseB"]
 			,	7: ["SpecialB"]

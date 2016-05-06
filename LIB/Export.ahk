@@ -228,11 +228,7 @@
 				Else If (Act1 = "Move")
 					RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "%, 0"
 				Else If (InStr(Act1, "Click"))
-				{
-					Loop, Parse, Act1, %A_Space%
-						Action%A_Index% := A_LoopField
-					RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "% " Action1 ", 1"
-				}
+					RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "% " StrReplace(Act1, " Click") ", 1"
 				Else If (Act1 = "Prompt")
 					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang036 " %" OutVarX "%x%" OutVarY "%.``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
 				Else If (Act1 = "Play Sound")
