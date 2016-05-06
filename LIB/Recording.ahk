@@ -116,7 +116,7 @@ return
 MouseRecord:
 If (Moves = 1) && (MouseMove := MoveCheck())
 {
-	Action := Action2, Details := MouseMove ", 0"
+	Action := MAction2, Details := MouseMove ", 0"
 ,	Type := cType3, Target := "", Window := ""
 	GoSub, MouseAdd
 }
@@ -130,7 +130,7 @@ If (MScroll = 1)
 			Details := ClickOn(xPos, yPos, "WheelUp", Up)
 		Else
 			Details := "WheelUp, " Up
-		Action := Action5, Type := cType3
+		Action := MAction5, Type := cType3
 		GoSub, MouseInput
 		mScUp := 0
 	}
@@ -140,7 +140,7 @@ If (MScroll = 1)
 			Details := ClickOn(xPos, yPos, "WheelDown", Dn)
 		Else
 			Details := "WheelDown, " Dn
-		Action := Action6, Type := cType3
+		Action := MAction6, Type := cType3
 		GoSub, MouseInput
 		mScDn := 0
 	}
@@ -160,7 +160,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "Left"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~LButton Up::
@@ -170,7 +170,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "Left"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~RButton::
@@ -185,7 +185,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "Right"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~RButton Up::
@@ -195,7 +195,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "Right"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~MButton::
@@ -210,7 +210,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "Middle"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~MButton Up::
@@ -220,7 +220,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "Middle"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~XButton1::
@@ -235,7 +235,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "X1"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~XButton1 Up::
@@ -245,7 +245,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "X1"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~XButton2::
@@ -260,7 +260,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "X2"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Down" : "Down")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 *~XButton2 Up::
@@ -270,7 +270,7 @@ return
 	MouseGetPos, xPd, yPd
 	Button := "X2"
 ,	Details := ClickOn(xPd, yPd, Button) ((RecMouseCtrl = 1) ? ", Up" : "Up")
-,	Action := Button " " Action3, Type := cType3
+,	Action := Button " " MAction3, Type := cType3
 	GoSub, MouseInput
 return
 #If
@@ -309,7 +309,7 @@ If ((RecMouseCtrl = 1) && (InStr(m_Class, "#32") > 1))
 	,	Details .= " NA"
 	,	Target := "x" xPd " y" yPd
 	}
-	Action := Button " " Action1, Type := cType4
+	Action := Button " " MAction1, Type := cType4
 	WinGetTitle, c_Title, A
 	WinGetClass, c_Class, A
 	If (WTitle = 1)
@@ -332,7 +332,7 @@ If (TimedI = 1)
 }
 Else
 	RecDelay := DelayM, WinDelay := DelayW
-If (!InStr(Details, "Up") && (Action != Action2))
+If (!InStr(Details, "Up") && (Action != MAction2))
 {
 	If ((WClass = 1) || (WTitle = 1))
 		WindowRecord(A_List, WinDelay)
