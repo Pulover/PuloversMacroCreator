@@ -7380,7 +7380,6 @@ Gui, 19:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
 If (s_Caller = "Edit")
 {
-	EscCom(true, Details, Target, Window)
 	GuiControl, 19:, TimesX, %TimesX%
 	GuiControl, 19:, EdRept, %TimesX%
 	GuiControl, 19:, DelayX, %DelayX%
@@ -7534,7 +7533,6 @@ If (BreakLoop)
 }
 Else
 	Target := ""
-EscCom(false, Details, CoordPixel)
 If (A_ThisLabel != "ImageApply")
 {
 	Gui, 1:-Disabled
@@ -8172,7 +8170,6 @@ If (s_Caller = "Edit")
 	{
 		If (Action != If15)
 			StringReplace, Details, Details, ``n, `n, All
-		EscCom(true, Details, Target)
 		If (InStr(Action, "[ElseIf] "))
 		{
 			Action := SubStr(Action, 10)
@@ -8231,8 +8228,6 @@ If (s_Caller = "Edit")
 			GuiControl, 21:, UseEval, 1
 			GuiControl, 21:Show, ArrayTip
 		}
-		Else
-			EscCom(true, VarValue)
 		GuiControl, 21:, VarValue, %VarValue%
 		SBShowTip("Variable")
 		GoSub, AsOper
@@ -8498,14 +8493,10 @@ Else
 	Gui, 21:Submit, NoHide
 	Action := "[" ExprOper%Oper% " Variable]"
 	GuiControl, 21:-AltSubmit, Oper
-	EscCom(false, Target)
 	If (UseEval = 1)
 		Target := "Expression"
 	Else
-	{
 		Target := ""
-		EscCom(false, Details)
-	}
 }
 If (A_ThisLabel != "VarApply")
 {

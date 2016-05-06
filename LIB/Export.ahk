@@ -181,6 +181,8 @@
 				RowData := StrReplace(RowData, _x, ",")
 			Else
 				RowData := StrReplace(RowData, _x, "``,")
+			If (Type = cType39)
+				RowData := StrReplace(RowData, "``,", ",")
 		}
 		Else If (Type = cType12)
 		{
@@ -579,9 +581,6 @@
 			If ((TimesX > 1) || InStr(TimesX, "%"))
 				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 		}
-		If (!InStr(FileCmdList, Type "|"))
-			If Type in %cType39%,%cType15%,%cType16%,%cType21%,%cType44%
-				RowData := StrReplace(RowData, "``,", ",")
 		If ((IsChecked = A_Index) && (CommentOut))
 			LVData .= "`n*/" RowData, CommentOut := false
 		Else If ((IsChecked != A_Index) && (!CommentOut) && (Type != cType42))

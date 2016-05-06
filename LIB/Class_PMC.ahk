@@ -162,6 +162,8 @@
 				}
 				If ((Col[6] = "DownloadFiles") || (Col[6] = "Zip") || (Col[6] = "Unzip"))
 					Col[8] := Col[7], Col[7] := Col[2], Col[2] := "[" StrReplace(Col[6], "Files") "]"
+				If ((InStr(Col[6], "Search")) || (Col[6] = "Variable") || (Col[6] = "Function"))
+					Col[3] := StrReplace(Col[3], "``,", ","), Col[7] := StrReplace(Col[7], "``,", ","), Col[8] := StrReplace(Col[8], "``,", ",")
 			}
 			If (Code.Version = "")
 			{
