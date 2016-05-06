@@ -878,7 +878,7 @@
 	d_Lang082 =	Le fichier n'a pas été trouvé!
 	d_Lang083 =	Un fichier de sauvegarde a été trouvé. Voulez-vous ouvrir?
 	d_Lang084 =	S'il vous plaît enregistrer vos modifications avant de planifier une tâche.
-	d_Lang085 =	Manquant "End Loop" déclaration Macro 
+	d_Lang085 =	Manquant "End Loop" déclaration Macro
 	d_Lang086 =	Manquant "End If" déclaration Macro
 	d_Lang087 =	Notez que les modifications apportées au script en dehors du programme ne sera pas affecter vos macros en aucune façon.
 		Cette fonctionnalité est uniquement destinée en fonction rapide à l'exportation. PMC n'a pas été conçu pour être un éditeur de script AHK.

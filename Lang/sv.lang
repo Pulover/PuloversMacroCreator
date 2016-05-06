@@ -792,7 +792,7 @@
 		Den valda adressen eller filnamnet är ogiltigt.
 	d_Lang011 =	Varning
 	d_Lang012 =	Ingen kontroll vald.
-		Fortsätta?
+		Fortsätt?
 	d_Lang013 =	Exportera skriptet
 	d_Lang014 =	Scriptet Exporterades
 	d_Lang015 =	Filen har framgångsrikt exporterats!
@@ -878,7 +878,7 @@
 	d_Lang082 =	Filen hittades inte!
 	d_Lang083 =	En backup-fil har hittats. Vill du öppna den?
 	d_Lang084 =	Vänligen spara dina ändringar innan du schemalägger aktiviteter.
-	d_Lang085 =	Saknas "End Loop" uttalande i Macro 
+	d_Lang085 =	Saknas "End Loop" uttalande i Macro
 	d_Lang086 =	Saknas "End If 'uttalande i Macro
 	d_Lang087 =	Lägg märke till att ändringar som gjorts i skriptet utanför programmet inte kommer att påverka din MAKRON på något sätt.
 		Den här funktionen är endast avsedd som en snabb exportfunktionen . PMC är inte avsedd att vara en AHK script editor.

@@ -28,7 +28,7 @@ Loop, Parse, Data, `n, `r
 	Loop, % Line0 - 2
 	{
 		i := A_Index + 2
-		PMC.Lang[A_Index] .= Label . Line%i% "`n"
+		PMC.Lang[A_Index] .= Label . Trim(Line%i%) "`n"
 		If InStr(Label, "Lang_")
 			nLang[A_Index] := Line%i%
 	}

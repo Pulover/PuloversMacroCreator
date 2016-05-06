@@ -242,7 +242,7 @@
 	w_Lang054 =	控制(F4)
 	w_Lang055 =	暂停(F5)
 	w_Lang056 =	消息框(Shift+F5)
-	w_Lang057 =	等待按键(Ctrl+F5) 
+	w_Lang057 =	等待按键(Ctrl+F5)
 	w_Lang058 =	窗口(F6)
 	w_Lang059 =	图片/像素搜索(F7)
 	w_Lang060 =	运行/文件/字符串/其他(F8)
@@ -474,7 +474,7 @@
 	c_Lang174 =	重试
 	c_Lang175 =	继续
 	c_Lang176 =	再次重试
-	c_Lang177 =	超时 
+	c_Lang177 =	超时
 	c_Lang178 =	设置按键延时
 	c_Lang179 =	按键延时
 	c_Lang180 =	随机延时
@@ -665,7 +665,7 @@
 	t_Lang104 =	显示/隐藏标题栏
 	t_Lang105 =	显示/隐藏主窗口
 	t_Lang106 =	立即运行
-	t_Lang107 =	随机延时 
+	t_Lang107 =	随机延时
 	t_Lang108 =	正常
 	t_Lang109 =	减小
 	t_Lang110 =	增大
@@ -792,7 +792,7 @@
 		選定的地址或文件名是無效的。
 	d_Lang011 =	警告
 	d_Lang012 =	未选择控件。
-		Continue שליטה?
+		继续？
 	d_Lang013 =	导出脚本
 	d_Lang014 =	要导出的脚本
 	d_Lang015 =	文件已成功导出！
@@ -1164,7 +1164,7 @@
 	OuterHTML	设置或获取HTML中的对象及其内容。
 	Quit	关闭此页面。
 	Refresh	刷新当前显示页。
-	SelectedIndex	设置或获取在选择对象中已选项的索引。 
+	SelectedIndex	设置或获取在选择对象中已选项的索引。
 	Src	设置或获取对象加载的网址。
 	Stop	取消挂起的导航或下载。
 	Submit	提交表单。

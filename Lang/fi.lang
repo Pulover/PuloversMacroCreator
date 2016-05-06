@@ -792,7 +792,7 @@
 		Valitun osoitteen tai tiedoston nimi ei kelpaa.
 	d_Lang011 =	Varoitus
 	d_Lang012 =	Ei ohjaus valittu.
-		Jatka?
+		Jatkaa?
 	d_Lang013 =	Vie Script
 	d_Lang014 =	Script Viety
 	d_Lang015 =	Tiedosto onnistuneesti viety!
@@ -878,7 +878,7 @@
 	d_Lang082 =	Tiedostoa ei löydy!
 	d_Lang083 =	Varmuuskopio on löytynyt. Haluatko avata sen?
 	d_Lang084 =	Ole hyvä ja tallentaa muutokset ennen aikataulujen tehtävä.
-	d_Lang085 =	Puuttuu "End Loop" lausuma Makro 
+	d_Lang085 =	Puuttuu "End Loop" lausuma Makro
 	d_Lang086 =	Puuttuvat "End If 'lausuma Makro
 	d_Lang087 =	Huomaa, että tehdyt muutokset käsikirjoituksen ulkopuolella ohjelma ei vaikuta MACROS millään tavalla.
 		Tämä ominaisuus on tarkoitettu vain nopea viennin toiminto. PMC ei ole suunniteltu AHK script editor.

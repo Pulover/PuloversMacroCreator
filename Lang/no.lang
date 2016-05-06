@@ -540,7 +540,7 @@
 	c_Lang240 =	stillinger registrert.
 	c_Lang241 =	Slett alle tidtakere
 	c_Lang242 =	Set timer
-	c_Lang243 =	Høyrejustert 
+	c_Lang243 =	Høyrejustert
 	c_Lang244 =	Høyre mot venstre
 	c_Lang245 =	Vedlegg
 	c_Lang246 =	Sti
@@ -748,8 +748,8 @@
 	t_Lang187 =	Skjul alle
 	t_Lang188 =	Utvid alle
 	t_Lang189 =	Språk
-	t_Lang190 =	Konverter linjeskift 
-	t_Lang191 =	E-postkontoer 
+	t_Lang190 =	Konverter linjeskift
+	t_Lang191 =	E-postkontoer
 	t_Lang192 =	Oppdater
 	t_Lang193 =	Dobbeltklikk for å redigere
 	t_Lang194 =	SMTP-server
@@ -792,7 +792,7 @@
 		Den valgte adressen eller filnavnet er ugyldig.
 	d_Lang011 =	Advarsel
 	d_Lang012 =	Ingen kontroll valgt.
-		Vil du fortsette?
+		Fortsette?
 	d_Lang013 =	Eksportere Script
 	d_Lang014 =	Script Eksportert
 	d_Lang015 =	Filen ble vellykket eksportert!
@@ -878,7 +878,7 @@
 	d_Lang082 =	Filen ble ikke funnet!
 	d_Lang083 =	En backup filen har blitt funnet. Vil du åpne den?
 	d_Lang084 =	Vennligst lagre endringene før planleggingen av en oppgave.
-	d_Lang085 =	Mangler "End Loop" uttalelse i Makro 
+	d_Lang085 =	Mangler "End Loop" uttalelse i Makro
 	d_Lang086 =	Mangler "End If" uttalelse i Makro
 	d_Lang087 =	Legg merke til at endringer i scriptet utenfor programmet vil ikke påvirke makroene på noen måte.
 		Denne funksjonen er bare ment som en rask eksportfunksjon . PMC er ikke designet for å være en AHK script editor.

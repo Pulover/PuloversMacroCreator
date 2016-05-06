@@ -792,7 +792,7 @@
 		Seçilen adresi veya dosya adı geçersiz.
 	d_Lang011 =	Uyarı
 	d_Lang012 =	Hiçbir kontrol seçilmiş.
-		Devam edilsin mi?
+		Devam?
 	d_Lang013 =	Komut İhracat
 	d_Lang014 =	Komut İhracat
 	d_Lang015 =	Dosya başarıyla ihraç edildi!
@@ -878,7 +878,7 @@
 	d_Lang082 =	Dosya bulunamadı!
 	d_Lang083 =	Bir yedekleme dosyası tespit edilmiştir. Bunu açmak ister misiniz?
 	d_Lang084 =	Bir görev zamanlama önce değişiklikleri kaydedin.
-	d_Lang085 =	Makro deyimi 'Loop End' Eksik 
+	d_Lang085 =	Makro deyimi 'Loop End' Eksik
 	d_Lang086 =	Makro ifadesi "End If" Eksik
 	d_Lang087 =	Programın dışında komut yapılan değişiklikler hiçbir şekilde Makrolarınızı etkilemez dikkat edin.
 		Tato funkce je určena pouze k rychlému exportní funkce. PMC není navržen tak, aby editor AHK skript.

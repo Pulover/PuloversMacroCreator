@@ -792,7 +792,7 @@
 		Tim alamat atau nama file yang dipilih tidak valid..
 	d_Lang011 =	Peringatan
 	d_Lang012 =	Tidak ada kontrol yang dipilih.
-		Teruskan?
+		Terus?
 	d_Lang013 =	Ekspor Script
 	d_Lang014 =	Script Diekspor
 	d_Lang015 =	File tersebut berhasil diekspor!
@@ -878,7 +878,7 @@
 	d_Lang082 =	Berkas tidak ditemukan!
 	d_Lang083 =	Sebuah file cadangan telah ditemukan. Apakah Anda ingin membukanya?
 	d_Lang084 =	Harap menyimpan perubahan sebelum penjadwalan tugas.
-	d_Lang085 =	Hilang "End Loop" pernyataan dalam Makro 
+	d_Lang085 =	Hilang "End Loop" pernyataan dalam Makro
 	d_Lang086 =	Hilang "End If" pernyataan dalam Makro
 	d_Lang087 =	Perhatikan bahwa perubahan yang dibuat untuk script luar program TIDAK AKAN MEMPENGARUHI macro ANDA dengan cara apapun.
 		Fitur ini hanya dimaksudkan sebagai fungsi ekspor cepat. PMC tidak dirancang untuk menjadi editor skrip AHK.

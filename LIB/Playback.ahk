@@ -921,7 +921,7 @@
 						For _each, _value in FieldsData
 							%_each% := _value
 						If !(ManualKey)
-							PlayCommand("Sleep", Action, Step, TimesR, DelayX, Target, Window, Pars, FlowControl
+							PlayCommand(cType5, "", "", "", DelayX, "", "", Pars, FlowControl
 										, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 						If (TimesR > 1)
 							TimesX--
@@ -937,10 +937,14 @@
 					TimesX--
 				For _each, _value in FieldsData
 					%_each% := _value
-				If Type in Sleep,KeyWait,MsgBox
+				If (Action = "[" cType20 "]")
+					continue
+				If ((Type = cType13) && (Action = "[Text]"))
+					continue
+				If Type in %cType5%,%cType6%,%cType20%,%cType50%
 					continue
 				If !(ManualKey)
-					PlayCommand("Sleep", Action, Step, TimesR, DelayX, Target, Window, Pars, FlowControl
+					PlayCommand(cType5, "", "", "", DelayX, "", "", Pars, FlowControl
 							, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 			}
 			If (ManualKey)
@@ -1093,8 +1097,6 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 				Sleep, (DelayX*SpeedDn)
 			Else If (FastKeyOn)
 				Sleep, (DelayX/SpeedUp)
-			Else If ((Type = cType13) && (Action = "[Text]"))
-				return
 			Else
 				Sleep, %DelayX%
 		}
@@ -2251,7 +2253,7 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 			CheckVars(CustomVars, _value)
 		,	Pars[_each] := _value
 		}
-		CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
+		CheckVars(CustomVars, TimesX, DelayX)
 		If (CustomVars.HasKey(Pars[1]))
 			VarName := CustomVars[Pars[1]]
 		Else
@@ -2267,7 +2269,7 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 			CheckVars(CustomVars, _value)
 		,	Pars[_each] := _value
 		}
-		CheckVars(CustomVars, Step, TimesX, DelayX, Target, Window)
+		CheckVars(CustomVars, TimesX, DelayX)
 		If (CustomVars.HasKey(Pars[1]))
 			VarName := CustomVars[Pars[1]]
 		Else

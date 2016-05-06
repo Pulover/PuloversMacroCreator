@@ -878,7 +878,7 @@
 	d_Lang082 =	Soubor nebyl nalezen!
 	d_Lang083 =	Záložní soubor nebyl nalezen. Chtěli byste jej otevřít?
 	d_Lang084 =	Prosím uložte změny před plánování úkolu.
-	d_Lang085 =	Chybějící "End Loop" prohlášení v Makro 
+	d_Lang085 =	Chybějící "End Loop" prohlášení v Makro
 	d_Lang086 =	Chybějící "End If" prohlášení v Makro
 	d_Lang087 =	Všimněte si, že změny provedené v skriptu mimo program nebude mít vliv na vaše makra v žádném případě.
 		Tato funkce je určena pouze k rychlému exportní funkce. PMC není navržen tak, aby editor AHK skript.

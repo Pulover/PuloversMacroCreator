@@ -792,7 +792,7 @@
 		Skupina izbrani naslov ali ime datoteke je neveljavno.
 	d_Lang011 =	Opozorilo
 	d_Lang012 =	Izbrali nobenega nadzora.
-		Nadaljujem?
+		Naprej?
 	d_Lang013 =	Izvozi scenarij
 	d_Lang014 =	Scenarij Izvozni
 	d_Lang015 =	Datoteka je bila uspešno izvažajo!
@@ -878,7 +878,7 @@
 	d_Lang082 =	Datoteke ni bilo mogoče najti!
 	d_Lang083 =	Varnostna kopija je bila najdena. Bi radi, da jo odprete?
 	d_Lang084 =	Prosimo, shranite spremembe, preden načrtujete opravilo.
-	d_Lang085 =	Chýbajúce "End Loop" vyhlásenie v Makro 
+	d_Lang085 =	Chýbajúce "End Loop" vyhlásenie v Makro
 	d_Lang086 =	Chýbajúce "End If" vyhlásenie v Makro
 	d_Lang087 =	Obvestilo, da bodo spremembe v pisavi izven programa ne vpliva makre na kakršen koli način.
 		Táto funkcia je určená len k rýchlemu exportné funkcie. PMC nie je navrhnutý tak, aby editor AHK skript.

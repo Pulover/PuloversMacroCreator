@@ -792,7 +792,7 @@
 		Het geselecteerde adres of de bestandsnaam is ongeldig.
 	d_Lang011 =	Waarschuwing
 	d_Lang012 =	Geen controle geselecteerd.
-		Verder?
+		Doorgaan?
 	d_Lang013 =	Export Script
 	d_Lang014 =	Script Geëxporteerde
 	d_Lang015 =	Het bestand is succesvol geëxporteerd!
@@ -878,7 +878,7 @@
 	d_Lang082 =	Het bestand werd niet gevonden!
 	d_Lang083 =	Een back-upbestand is gevonden. Wil je om het te openen?
 	d_Lang084 =	Bewaar je veranderingen voordat een taak plannen.
-	d_Lang085 =	Ontbrekende "End Loop" verklaring in Macro 
+	d_Lang085 =	Ontbrekende "End Loop" verklaring in Macro
 	d_Lang086 =	Ontbrekende "End If" verklaring in Macro
 	d_Lang087 =	Merk op dat wijzigingen in het script buiten het programma NIET uw macro zal invloed hebben op geen enkele manier.
 		Deze functie is alleen bedoeld als een snelle export functie. PMC is niet ontworpen om een AHK-script editor.

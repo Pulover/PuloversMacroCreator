@@ -785,14 +785,14 @@
 	d_Lang005 =	Desar Projecte
 	d_Lang006 =	Error en desar / sobreescriure l'arxiu
 	d_Lang007 =	Error
-	d_Lang008 =	Error: No macro seleccionada 
+	d_Lang008 =	Error: No macro seleccionada
 		Comproveu almenys una macro a la llista ..
 	d_Lang009 =	Error: No Seleccionat tecla d'accés directe.
-	d_Lang010 =	Error:. Direcció invàlida 
+	d_Lang010 =	Error:. Direcció invàlida
 		La adreça seleccionada o el nom del fitxer no és vàlid.
 	d_Lang011 =	Advertència
-	d_Lang012 =	No hi ha control seleccionat. 
-		 Voleu continuar?
+	d_Lang012 =	No hi ha control seleccionat.
+		Continuar?
 	d_Lang013 =	Guió Exportació
 	d_Lang014 =	Guió Exportats
 	d_Lang015 =	L'arxiu s'ha exportat amb èxit!
@@ -878,7 +878,7 @@
 	d_Lang082 =	El fitxer no s'ha trobat!
 	d_Lang083 =	S'ha trobat un fitxer de còpia de seguretat. Vols obrir-lo?
 	d_Lang084 =	Deseu els canvis abans de programar una tasca.
-	d_Lang085 =	Falta "End Loop" declaració en la Macro 
+	d_Lang085 =	Falta "End Loop" declaració en la Macro
 	d_Lang086 =	Falta "End If" declaració en la Macro
 	d_Lang087 =	Recordeu que els canvis realitzats en el guió fora del programa no afectarà la seva MACROS de cap manera.
 		Aquesta característica només està pensada com una funció d'exportació ràpida. PMC no està dissenyat per a ser un editor de scripts AHK.

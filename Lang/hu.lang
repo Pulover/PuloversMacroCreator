@@ -878,7 +878,7 @@
 	d_Lang082 =	A fájl nem található!
 	d_Lang083 =	A biztonsági mentés találtak. Szeretnéd, hogy nyissa meg?
 	d_Lang084 =	Kérjük, mentse el a módosításokat, mielőtt ütemezése a feladat.
-	d_Lang085 =	Hiányzó "End Loop" kijelentés Macro 
+	d_Lang085 =	Hiányzó "End Loop" kijelentés Macro
 	d_Lang086 =	Hiányzó "End If" kijelentés Macro
 	d_Lang087 =	Figyeljük meg, hogy a módosítások a script kívül a program nem fogja befolyásolni a makrókat semmilyen módon.
 		Ez a funkció csak azt jelentette, mint egy gyors export funkciót. PMC nem célja, hogy egy AHK script editor.

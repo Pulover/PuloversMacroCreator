@@ -33,7 +33,7 @@
 	r_Lang002 =	Au&fnahme-Optionen
 	r_Lang003 =	M&akros aktivieren
 	r_Lang004 =	Wieder&gabe-Optionen
-	r_Lang005 =	A&ktuelles Makro abspielen 
+	r_Lang005 =	A&ktuelles Makro abspielen
 	r_Lang006 =	&Timer
 	r_Lang007 =	&Deaktivieren Von Makros
 	r_Lang008 =	&Wiedergabe von ausgewählter Zeile
@@ -41,7 +41,7 @@
 	r_Lang010 =	A&usgewählte Zeilen wiedergeben
 	r_Lang011 =	K&ontextsensitive Hotkeys
 	r_Lang012 =	Mak&ro hinzufügen
-	r_Lang013 =	Makro &schließen 
+	r_Lang013 =	Makro &schließen
 	r_Lang014 =	Makro du&plizieren
 	r_Lang015 =	Makros &Bearbeiten
 	r_Lang016 =	Makro importi&eren
@@ -92,7 +92,7 @@
 	e_Lang012 =	Na&ch unten
 	e_Lang013 =	E&infügen aus Fenster
 	e_Lang014 =	&Tastendruck einfügen
-	e_Lang015 =	&Farbmarkierung bearbeiten 
+	e_Lang015 =	&Farbmarkierung bearbeiten
 	e_Lang016 =	&Gruppen
 	e_Lang017 =	&Aktivieren Gruppen
 	e_Lang018 =	&Gruppe hinzufügen
@@ -107,7 +107,7 @@
 	s_Lang003 =	A&uswahl umkehren
 	s_Lang004 =	Au&swahl aktivieren
 	s_Lang005 =	Aus&wahl deaktivieren
-	s_Lang006 =	&Zustand umkehren 
+	s_Lang006 =	&Zustand umkehren
 	s_Lang007 =	&Bewegen Auswahl Bis
 	s_Lang008 =	Auswa&hl Nach Unten Verschieben
 	s_Lang009 =	&Gleiche Typen auswählen
@@ -123,7 +123,7 @@
 	v_Lang007 =	&Hotkeys
 	v_Lang008 =	Sch&leife
 	v_Lang009 =	S&uchleiste
-	v_Lang010 =	S&paltengröße zurücksetzen 
+	v_Lang010 =	S&paltengröße zurücksetzen
 	v_Lang011 =	I&cons Größe
 	v_Lang012 =	L&ayout zurücksetzen
 	v_Lang013 =	&Datei
@@ -151,9 +151,9 @@
 	o_Lang006 =	&Optionen für das Herunterfahren (Wenn Wiedergabe beendet...)
 	o_Lang007 =	&Windows-Taste auf "Wiederg." Hotkey fügen
 	o_Lang008 =	&Joystick-Taste als Hotkey verwenden
-	o_Lang009 =	Hotke&ys als Standard festlegen 
+	o_Lang009 =	Hotke&ys als Standard festlegen
 	o_Lang010 =	&Als Standard-Datei festlegen
-	o_Lang011 =	Sta&ndard-Datei entfernen 
+	o_Lang011 =	Sta&ndard-Datei entfernen
 	o_Lang012 =	Standa&rd-Hotkeys
 	o_Lang013 =	Standarde&instellungen
 		
@@ -212,7 +212,7 @@
 	w_Lang024 =	Herunterfahren (erzwingen)
 	w_Lang025 =	Starten
 	w_Lang026 =	Abmelden
-	w_Lang027 =	Ruhezustand 
+	w_Lang027 =	Ruhezustand
 	w_Lang028 =	Standbymodus
 	w_Lang029 =	Computer sperren
 	w_Lang030 =	Index
@@ -367,7 +367,7 @@
 	c_Lang066 =	Taste erfassen
 	c_Lang067 =	Wenn gefunden
 	c_Lang068 =	Wenn nicht, bzw. Fehler gefunden
-	c_Lang069 =	Ausgangsvariablen 
+	c_Lang069 =	Ausgangsvariablen
 	c_Lang070 =	Coord
 	c_Lang071 =	Variationen
 	c_Lang072 =	Vorschau
@@ -426,7 +426,7 @@
 	c_Lang125 =	Geben Sie einen Scancode ein...
 	c_Lang126 =	Code zur virtuelle Tastaturliste hinzugefügt.
 	c_Lang127 =	Geben Sie einen Namen für die Ausgabevariable ein
-	c_Lang128 =	Funktion aus externer Datei verwenden 
+	c_Lang128 =	Funktion aus externer Datei verwenden
 	c_Lang130 =	Wiederholen, bis
 	c_Lang131 =	Anwenden
 	c_Lang132 =	Schleife
@@ -540,7 +540,7 @@
 	c_Lang240 =	Positionen registriert.
 	c_Lang241 =	Löschen aller Zeiten
 	c_Lang242 =	Set Timer
-	c_Lang243 =	Rechtsbündig 
+	c_Lang243 =	Rechtsbündig
 	c_Lang244 =	Rechts nach links
 	c_Lang245 =	Zubehör
 	c_Lang246 =	Pfad
@@ -612,12 +612,12 @@
 	t_Lang051 =	Screenshot-Verzeichnis
 	t_Lang052 =	Zeilenumbruch
 	t_Lang053 =	Hotkeys
-	t_Lang054 =	Als Standard-Hotkeys festlegen 
-	t_Lang055 =	Fenster-Tastaturkürzel deaktivieren 
+	t_Lang054 =	Als Standard-Hotkeys festlegen
+	t_Lang055 =	Fenster-Tastaturkürzel deaktivieren
 	t_Lang056 =	Spaltenbreite zurücksetzen
 	t_Lang057 =	Standard Makro-Datei
 	t_Lang058 =	Standard Bibliotheks-Datei
-	t_Lang059 =	Standardmäßig Expression für Variablen-Zuweisung verwenden 
+	t_Lang059 =	Standardmäßig Expression für Variablen-Zuweisung verwenden
 	t_Lang060 =	Markieren Sie Loops und Statements
 	t_Lang061 =	(Klick auf die Überschrift der Index-Spalte zum Aktivieren/Deaktivieren)
 	t_Lang062 =	Virtuelle Tasten
@@ -646,10 +646,10 @@
 	t_Lang085 =	Steuerungs-Symbolleiste beim Start anzeigen
 	t_Lang086 =	Suche Funktionen. Bitte warten...
 	t_Lang087 =	Externe Dateien einbinden
-	t_Lang088 =	EXE-Datei erstellen 
+	t_Lang088 =	EXE-Datei erstellen
 	t_Lang089 =	Mehrere Instanzen zulassen
 	t_Lang090 =	Standard
-	t_Lang091 =	Reihen ziehen erlauben 
+	t_Lang091 =	Reihen ziehen erlauben
 	t_Lang092 =	&Gesamter Zellinhalt
 	t_Lang093 =	Standard INI-Format
 	t_Lang094 =	Name = Wert
@@ -665,7 +665,7 @@
 	t_Lang104 =	Titelleiste anzeigen/verbergen
 	t_Lang105 =	Hauptfenster anzeigen/verbergen
 	t_Lang106 =	Run immediately
-	t_Lang107 =	Zufallsverzögerung 
+	t_Lang107 =	Zufallsverzögerung
 	t_Lang108 =	Normal
 	t_Lang109 =	Auf
 	t_Lang110 =	Ab
@@ -758,7 +758,7 @@
 	t_Lang197 =	Benutzername
 	t_Lang198 =	Passwort
 	t_Lang199 =	SSL
-	t_Lang200 =	Sendemodus 
+	t_Lang200 =	Sendemodus
 	t_Lang201 =	Senden Sie eine Test
 	t_Lang202 =	Bildschirm und Fenster
 	t_Lang203 =	Erkennen Versteckte Fenster
@@ -974,7 +974,7 @@
 	AutoKey_TT =	Hotkey auf Makro spielen
 	Client_TT =	Koordinaten sind auf das aktive Fenster Client-Bereich relativ, die die Titelleiste des Fensters schließt, Menü und Grenzen (wenn es einen Standard hat man).
 	Clip_TT =	Text kurzzeitig mithilfe der Zwischenablage senden.
-		Wenn der Vorgang abgeschlossen ist, wird der ursprüngliche Inhalt 
+		Wenn der Vorgang abgeschlossen ist, wird der ursprüngliche Inhalt
 		der Zwischenablage wiederhergestellt.
 		(Text leer lassen, um den aktuellen Inhalt einzufügen)
 	CM_TT =	Screen: Koordinaten sind relativ zum Desktop (gesamter Bildschirm).
@@ -984,16 +984,16 @@
 	CmdSort_TT =	Alphabetisch
 	ColorPick_TT =	Bekommen pixel auf dem bildschirm
 	ComEvent_TT =	Die Rate, mit der Tastenanschläge gesendet wird durch Schlüssel Verzögerung bestimmt.
-	ComText_TT =	Ist der Raw-Modus nicht aktiv, werden folgende Zeichen als 
-		Modifikatoren behandelt (diese Modifikatoren beeinflussen 
+	ComText_TT =	Ist der Raw-Modus nicht aktiv, werden folgende Zeichen als
+		Modifikatoren behandelt (diese Modifikatoren beeinflussen
 		nur die nachfolgende Taste)::, +, ^, #
 	ControlDelayE_TT =	Stellt die Verzögerung, die nach jeder Steuer modifizierenden Befehl auftreten.
 	CoordPixel_TT =	Koordinaten-Modus
 	DefaultMacro_TT =	Datei wählen, die beim Programmstart geladen werden soll
 	EditPaste_TT =	String am Cursor einfügen/Einfügeposition
-		in ein Edit-Steuerelement (dies bestrifft nicht den 
+		in ein Edit-Steuerelement (dies bestrifft nicht den
 		der Inhalt der Zwischenablage).
-	Ex_AF_TT =	Überspringt die sanfte Aktivierungsmethode eines Fensters 
+	Ex_AF_TT =	Überspringt die sanfte Aktivierungsmethode eines Fensters
 		und erzwingt die gewaltsame Methode.
 	Ex_CM_TT =	Sets Koordinatenmodusfür Maus, um entweder das aktive Fenster oder den Bildschirm zu sein relativ Befehle.
 	Ex_DH_TT =	Legt fest, ob unsichtbare Fenster "gesehen" durch das Skript werden.
@@ -1001,20 +1001,20 @@
 	Ex_EdScript_TT =	Im externen Editor öffnen
 	Ex_EdVars_TT =	Wählen Sie die globalen Variablen zum Export.
 	Ex_ExecScript_TT =	Skript ausführen
-	Ex_HK_TT =	Erzwingt die Verwendung des Hooks, um alle oder einige 
+	Ex_HK_TT =	Erzwingt die Verwendung des Hooks, um alle oder einige
 		Tastatur-Hotkeys zu implementieren.
 	Ex_IfDir_TT =	Erstellt kontextabhängig Hotkeys und Hotstrings je
 		nach Fenstertyp, das aktiv oder vorhanden ist.
 	Ex_IfDirType_TT =	Erstellt kontextabhängig Hotkeys und Hotstrings je
 		nach Fenstertyp, das aktiv oder vorhanden ist.
-	Ex_IN_TT =	Bewirkt, dass der Inhalt der angegebenen Datei 
+	Ex_IN_TT =	Bewirkt, dass der Inhalt der angegebenen Datei
 		exakt an dieser Position ausgeführt wird.
-	Ex_MD_TT =	Bestimmt die Verzögerung nach jeder Mausbewegung 
+	Ex_MD_TT =	Bestimmt die Verzögerung nach jeder Mausbewegung
 		oder jedem Mausklick.
-	Ex_MT_TT =	Bestimmt die maximale Anzahl an Threads, 
+	Ex_MT_TT =	Bestimmt die maximale Anzahl an Threads,
 		die pro Hotkey oder Hotstring gleichzeitig vorhanden sein können.
 	Ex_NT_TT =	Deaktiviert die Darstellung des Infobereich-Symbols.
-	Ex_PT_TT =	Hält ein Script dauerhaft aufrecht 
+	Ex_PT_TT =	Hält ein Script dauerhaft aufrecht
 		(bis der Benutzer das Script schließt oder ein ExitApp vorkommt).
 	Ex_SB_TT =	Bestimmt, wie schnell ein Skript ausgeführt werden soll (betrifft die CPU-Auslastung).
 	Ex_SC_TT =	Legt die Verzögerung, die nach auftreten
@@ -1022,8 +1022,8 @@
 	Ex_SI_TT =	Bestimmt, ob ein Skript erneut aufgerufen werden darf, wenn es bereits ausgeführt wird.
 	Ex_SK_TT =	Bestimmt die Verzögerung, die nach jeder Tastatureingabe
 		von Send und ControlSend auftreten wird.
-	Ex_SM_TT =	Setzt Send gleichbedeutend mit SendInput oder SendPlay, 
-		statt mit SendEvent (Standard). Bewirkt auch, dass die angegebene Methode 
+	Ex_SM_TT =	Setzt Send gleichbedeutend mit SendInput oder SendPlay,
+		statt mit SendEvent (Standard). Bewirkt auch, dass die angegebene Methode
 		von MouseMove/Click/Drag verwendet wird.
 	Ex_ST_TT =	Setzt das passende Verhalten des WinTitle Parameter in Befehlen wie WinWait.
 	Ex_SW_TT =	Legt die Verzögerung, die nach auftreten
@@ -1067,7 +1067,7 @@
 	OSTrans_TT =	Deckkraft
 	PauseKey_TT =	Hotkey zum Anhalten der Wiedergabe
 	PicPrev_TT =	Doppelklicken, um Bild zu öffnen
-	Raw_TT =	Der SendRaw-Befehl interpretiert alle Zeichen direkt, anstatt z. B. 
+	Raw_TT =	Der SendRaw-Befehl interpretiert alle Zeichen direkt, anstatt z. B.
 		{Enter} als ENTER-Taste, ^c als STRG+C
 		und so weiter zu interpretieren.
 	RecKey_TT =	Rückschritttaste zum Löschen
@@ -1075,7 +1075,7 @@
 	Recurse_TT =	Rekursive Unterverzeichnisse (Unterordner) / Unterschlüssel
 	RefreshIEW_TT =	Liste aktualisieren
 	Relative_TT =	Koordinaten sind relativ zum aktiven Fenster.
-	RelKey_TT =	Mausbewegungen und Klicks als Offset von 
+	RelKey_TT =	Mausbewegungen und Klicks als Offset von
 		vorheriger Position aufzeichnen.
 	ReptC_TT =	0=unendlich
 	Reset_TT =	Variablen-Inhalte löschen
@@ -1088,11 +1088,11 @@
 		Das Wort IGNORE überspringt das Dialogfeld und erhält die alte Instanz.
 		Versuche, ein bereits laufendes Skript zu starten werden ignoriert.
 		Das Wort OFF ermöglicht es, mehrere Instanzen des Skripts gleichzeitig auszuführen.
-	SM_TT =	Event: Standardwert, der zu Beginn für alle Scripts gilt. Bewirkt, dass die SendEvent-Methode für Send, SendRaw, 
+	SM_TT =	Event: Standardwert, der zu Beginn für alle Scripts gilt. Bewirkt, dass die SendEvent-Methode für Send, SendRaw,
 		Click und MouseMove/Click/Drag verwendet wird.
-		Input: Wechselt auf die SendInput-Methode für Send, SendRaw, Click und MouseMove/Click/Drag. 
-		InputThenPlay [v1.0.43.02+]: Gleich wie oben, außer dass der Input-Modus auf den Play- anstatt auf den Event-Modus zurückgreift, 
-		falls SendInput nicht verfügbar ist. Bewirkt auch, dass der SendInput-Befehl auf den Play-Modus zurückgreift, 
+		Input: Wechselt auf die SendInput-Methode für Send, SendRaw, Click und MouseMove/Click/Drag.
+		InputThenPlay [v1.0.43.02+]: Gleich wie oben, außer dass der Input-Modus auf den Play- anstatt auf den Event-Modus zurückgreift,
+		falls SendInput nicht verfügbar ist. Bewirkt auch, dass der SendInput-Befehl auf den Play-Modus zurückgreift,
 		falls SendInput nicht verfügbar ist.
 		Play: Wechselt auf die SendPlay-Methode für Send, SendRaw, Click und MouseMove/Click/Drag.
 	SP_TT =	Schnell: Die Leistung kann als langsame wesentlich besser sein, aber bestimmte WinText Elemente "gesehen" werden dürfen.

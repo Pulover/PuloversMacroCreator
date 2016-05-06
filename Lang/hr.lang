@@ -785,13 +785,13 @@
 	d_Lang005 =	Spremi Projekt
 	d_Lang006 =	Neuspjelo spremanje / prebrisati datoteku
 	d_Lang007 =	Pogreška
-	d_Lang008 =	Pogreška: Makro U Izabrani 
+	d_Lang008 =	Pogreška: Makro U Izabrani
 		Imajte provjeriti barem jednu makronaredbu na popisu..
 	d_Lang009 =	Pogreška: Ne Hotkey Odabrani.
-	d_Lang010 =	Pogreška:. Invalid Adresa 
+	d_Lang010 =	Pogreška:. Invalid Adresa
 		Tim odabrana adresa ili ime datoteke nije valjan.
 	d_Lang011 =	Upozorenje
-	d_Lang012 =	Ne kontrola odabrana. 
+	d_Lang012 =	Ne kontrola odabrana.
 		Nastaviti?
 	d_Lang013 =	Izvoz Script
 	d_Lang014 =	Izvoze Script
@@ -878,7 +878,7 @@
 	d_Lang082 =	Datoteka nije pronađena!
 	d_Lang083 =	Kopija je pronađena. Želite li ga otvoriti?
 	d_Lang084 =	Molimo spremite promjene prije zakazivanja zadatak.
-	d_Lang085 =	Nedostaje "End Loop" izjavu u Macro 
+	d_Lang085 =	Nedostaje "End Loop" izjavu u Macro
 	d_Lang086 =	Nedostaje '"End If" iskaz u Macro
 	d_Lang087 =	Obavijest da su promjene koje su napravljene na skriptu izvan programa NEĆE utjecati na vaše makronaredbe na bilo koji način.
 		Ova značajka je namijenjena samo kao brzi izvozne funkcije. PMC nije namijenjen da bude urednik AHK skripta.
