@@ -46,7 +46,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 * Fixed identical function or object calls in expressions being executed only once.
 * Fixed mixed rows data after closing a Macro tab.
 * Fixed some fields of *Send Email*, *Download Files* and *Zip/Unzip Files* not working with variables.
-* Fixed Macro Lists being cleared after reodering function tabs by drag-and-drop or from the *Edit Macros* window.
+* Fixed Macro Lists being cleared after reordering function tabs by drag-and-drop or from the *Edit Macros* window.
 * Fixed hotkeys sometimes not activated.
 * Fixed some rows eventually not executed due to thread issue.
 * Fixed collapsed groups expanded after editing the Macro list.
