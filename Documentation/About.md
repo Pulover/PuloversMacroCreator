@@ -5,12 +5,11 @@
 [Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
-[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 Copyright © 2012-2016 Rodolfo U. Batista  
 
-Version: 5.0.2  
-Release Date: May, 2016  
-AutoHotkey Version: 1.1.23.05  
+Version: 5.0.3  
+Release Date: June, 2016  
+AutoHotkey Version: 1.1.24.00  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -35,6 +34,11 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 
 # Change Log
+
+## Version 5.0.3
+
+* Fixed missing value field in exported `Control` and `ControlGet` commands.
+* Fixed hidden *Main Loop* band reappearing after gui resize or minimizing/maximizing.
 
 ## Version 5.0.2
 

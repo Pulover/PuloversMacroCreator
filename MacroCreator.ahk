@@ -3,12 +3,11 @@
 ; *****************************
 ; "The Complete Automation Tool"
 ; Author: Pulover [Rodolfo U. Batista]
-; pulover@macrocreator.com
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.0.2
-; Release Date: May, 2016
-; AutoHotkey Version: 1.1.23.05
+; Version: 5.0.3
+; Release Date: June, 2016
+; AutoHotkey Version: 1.1.24.00
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -67,7 +66,7 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.0.2
+;@Ahk2Exe-SetVersion 5.0.3
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2016 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -129,7 +128,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.2", ReleaseDate := "May, 2016"
+CurrentVersion := "5.0.3", ReleaseDate := "June, 2016"
 
 ;##### Ini File Read #####
 
@@ -987,7 +986,7 @@ Menu, ExportG, Icon, Hotkeys, %ResDllPath%, 24
 Gui, +Resize +MinSize310x175 +HwndPMCWinID
 
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbFile gTbFile 0x0800 0x0100 0x0040 0x0008 0x0004
-Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0100 0x0040 0x0008 0x0004
+Gui, Add, Custom, ClassToolbarWindow32 hwndhTbRecPlay gTbRecPlay 0x0800 0x0040 0x0008 0x0004
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbCommand gTbCommand 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbSettings gTbSettings 0x0800 0x0100 0x0040 0x0008 0x0004
 Gui, Add, Custom, ClassToolbarWindow32 hwndhTbEdit gTbEdit 0x0800 0x0100 0x0040 0x0008 0x0004
@@ -9048,7 +9047,7 @@ If (VState = 0)
 If (ControlCmd = cType24)
 	Details := Cmd ", " Value
 If (ControlCmd = cType25)
-	Details =
+	Details := ""
 If (ControlCmd = cType26)
 	Details := PosX ", " PosY ", " SizeX ", " SizeY
 If (ControlCmd = cType10)
@@ -14764,6 +14763,8 @@ Critical ; 1000
 Loop, 3
 	GuiGetSize(GuiWidth, GuiHeight)
 RbMain.ShowBand(RbMain.IDToIndex(11))
+If (!ShowBand11)
+	RbMain.ShowBand(RbMain.IDToIndex(11), false)
 RbMacro.ModifyBand(1, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 RbMacro.ModifyBand(2, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 GuiControl, 1:Move, cRbMacro, % "W" GuiWidth+5

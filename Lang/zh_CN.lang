@@ -67,7 +67,7 @@
 	i_Lang011 =	去/标签(&G)
 	i_Lang012 =	设置计时器(&E)
 	i_Lang013 =	If语句(&S)
-	i_Lang014 =	变量 / 배열(&V)
+	i_Lang014 =	变量 / 数组(&V)
 	i_Lang015 =	函数 / 阵列方法(&U)
 	i_Lang016 =	发电子邮件(&E)
 	i_Lang017 =	下载文件(&N)
@@ -98,7 +98,7 @@
 	e_Lang018 =	添加组(&A)
 	e_Lang019 =	删除组(&R)
 	e_Lang020 =	删除所有组(&M)
-	e_Lang021 =	全部收缩(&C)
+	e_Lang021 =	全部折叠(&C)
 	e_Lang022 =	展开全部(&X)
 		
 ; 07. Select Sub Menu		
@@ -131,7 +131,7 @@
 	v_Lang015 =	命令(&C)
 	v_Lang016 =	编辑(&E)
 	v_Lang017 =	选项(&O)
-	v_Lang018 =	定制(&U)
+	v_Lang018 =	自定义(&U)
 	v_Lang019 =	播放(&P)
 	v_Lang020 =	手动(&M)
 	v_Lang021 =	停止(&S)
@@ -150,7 +150,7 @@
 	o_Lang005 =	热键总是激活(&H)
 	o_Lang006 =	关机选项（当回放结束时）(&U)
 	o_Lang007 =	添加Windows键“玩”热键(&A)
-	o_Lang008 =	使用操作杆作为热键(&E)
+	o_Lang008 =	使用操作杆按钮作为热键(&E)
 	o_Lang009 =	设为默认热键(&T)
 	o_Lang010 =	设为默认文件(&F)
 	o_Lang011 =	移除默认文件(&R)
@@ -166,7 +166,7 @@
 	h_Lang003 =	提示(&I)
 	h_Lang004 =	Macro Creator主页(&M)
 	h_Lang005 =	论坛(&F)
-	h_Lang006 =	AHK在线帮助(&A)
+	h_Lang006 =	AHK在线文档帮助(&A)
 	h_Lang007 =	检查更新(&C)
 	h_Lang008 =	启动时检查(&E)
 	h_Lang009 =	关于(&B)
@@ -182,7 +182,7 @@
 	b_Lang003 =	日期和时间
 	b_Lang004 =	用户空闲时间
 	b_Lang005 =	系统和用户
-	b_Lang006 =	杂项
+	b_Lang006 =	其他
 	b_Lang007 =	循环
 		
 ; 14. Main Window		
@@ -250,7 +250,7 @@
 	w_Lang062 =	去/标签（Shift + 9）
 	w_Lang063 =	设置定时器（CTRL+ F9）
 	w_Lang064 =	If语句(F10)
-	w_Lang065 =	变量 / 배열(&V) (Shift+F10)
+	w_Lang065 =	变量 / 阵列(&V) (Shift+F10)
 	w_Lang066 =	函数 / 阵列方法 (Ctrl+F10)
 	w_Lang067 =	发电子邮件 (F11)
 	w_Lang068 =	下载文件 (Shift+F11)
@@ -343,7 +343,7 @@
 	c_Lang042 =	X2
 	c_Lang043 =	按住
 	c_Lang044 =	点击次数
-	c_Lang045 =	普通文本（Raw）
+	c_Lang045 =	纯文本（Raw）
 	c_Lang046 =	含修饰键文本
 	c_Lang047 =	从剪贴板粘贴
 	c_Lang048 =	粘贴于控件
@@ -366,13 +366,13 @@
 	c_Lang065 =	截取屏幕快照
 	c_Lang066 =	等待按键
 	c_Lang067 =	如果找到
-	c_Lang068 =	如果未找到或出错
+	c_Lang068 =	如果未找到/出错
 	c_Lang069 =	输出变量
 	c_Lang070 =	坐标
 	c_Lang071 =	变体
 	c_Lang072 =	预览
 	c_Lang073 =	循环
-	c_Lang074 =	自動的にCOMオブジェクトを作成
+	c_Lang074 =	自動创建COM组件
 	c_Lang075 =	中断
 	c_Lang076 =	继续
 	c_Lang077 =	转到
@@ -442,7 +442,7 @@
 	c_Lang142 =	忽略字符：
 	c_Lang143 =	输入文件：
 	c_Lang144 =	键\根键：
-	c_Lang145 =	档
+	c_Lang145 =	文件夹
 	c_Lang146 =	钥匙
 	c_Lang147 =	图标
 	c_Lang148 =	无图标
@@ -455,7 +455,7 @@
 	c_Lang155 =	直到
 	c_Lang156 =	脚本
 	c_Lang157 =	脚本语言
-	c_Lang158 =	不适用于64位！
+	c_Lang158 =	不兼容于64位！
 	c_Lang159 =	搜索选项
 	c_Lang160 =	透明度
 	c_Lang161 =	尺寸
@@ -532,12 +532,12 @@
 	c_Lang232 =	密件抄送
 	c_Lang233 =	F2编辑
 	c_Lang234 =	HTML
-	c_Lang235 =	发电子邮件
+	c_Lang235 =	发送电子邮件
 	c_Lang236 =	下载文件
 	c_Lang237 =	压缩/解压缩文件
 	c_Lang238 =	打开
 	c_Lang239 =	关掉
-	c_Lang240 =	位置注册。
+	c_Lang240 =	位置注册
 	c_Lang241 =	删除所有计时器
 	c_Lang242 =	设置计时器
 	c_Lang243 =	右对齐

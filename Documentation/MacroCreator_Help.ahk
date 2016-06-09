@@ -1,12 +1,11 @@
 ﻿/*!
 	Library: Pulover's Macro Creator
 		
-		# Version: 5.0.2
+		# Version: 5.0.3
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)
 		
 		Author: Pulover [Rodolfo U. Batista]  
-		[pulover@macrocreator.com](mailto:pulover@macrocreator.com)  
 		©2012-2016 Rodolfo U. Batista
 		
 		Software License: [GNU General Public License](License.html)

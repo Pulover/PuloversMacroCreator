@@ -361,7 +361,7 @@
 		,	Step := ""
 			Loop, Parse, Stp, `,, %A_Space%
 				Step .= (RegExMatch(A_LoopField, "^\s*%\s") ? StrReplace(A_LoopField, _x, ",") : StrReplace(A_LoopField, _x, "``,")) ", "
-			Step := RTrim(Step, ", ")
+			Step := SubStr(Step, 1, -2)
 		,	RowData := "`n" Type ", " Step ", " Target ", " Window
 		,	RowData := Add_CD(RowData, Comment, DelayX)
 			If ((TimesX > 1) || InStr(TimesX, "%"))
