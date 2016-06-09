@@ -21,8 +21,6 @@
 ;    Delete()
 ;    Move([Up])
 ;    Drag([DragButton, AutoScroll, ScrollDelay, LineThick, Color])
-;    CopyTo(Hwnd)
-;    MoveTo(Hwnd)
 ;
 ; History Functions:
 ;    Add()
@@ -624,53 +622,6 @@ Class LV_Rows extends LV_Rows.LV_EX
         return LV_currRow
     }
 ;=======================================================================================
-;    Function:           Handle.CopyTo()
-;    Description:        Copies selected rows to a different ListView (requires initializing).
-;    Parameters:
-;        Hwnd:           The Hwnd of a previously inserted ListView.
-;    Return:             Number of copied rows.
-;=======================================================================================
-    CopyTo(Hwnd)
-    {
-        If (!this.hArray.HasKey(Hwnd))
-            return false
-        CurrentHwnd := this.LVHwnd
-    ,   CopyData := this.CopyData.Clone()
-    ,   CopiedLines := this.Copy()
-    ,   this.SetHwnd(Hwnd)
-    ,   this.Paste()
-    ,   this.CopyData := CopyData.Clone()
-    ,   CopyData.RemoveAt(1, CopyData.Length())
-    ,   CopyData := ""
-    ,   this.RefreshGroups()
-    ,   this.SetHwnd(CurrentHwnd)
-        return CopiedLines
-    }
-;=======================================================================================
-;    Function:           Handle.MoveTo()
-;    Description:        Copies selected rows to a different ListView
-;                            and deletes them from the original (requires initializing).
-;    Parameters:
-;        Hwnd:           The Hwnd of a previously inserted ListView.
-;    Return:             Number of copied rows.
-;=======================================================================================
-    MoveTo(Hwnd)
-    {
-        If (!this.hArray.HasKey(Hwnd))
-            return false
-        CurrentHwnd := this.LVHwnd
-    ,   CopyData := this.CopyData.Clone()
-    ,   CopiedLines := this.Cut()
-    ,   this.SetHwnd(Hwnd)
-    ,   this.Paste()
-    ,   this.CopyData := CopyData.Clone()
-    ,   CopyData.RemoveAt(1, CopyData.Length())
-    ,   CopyData := ""
-    ,   this.RefreshGroups()
-    ,   this.SetHwnd(CurrentHwnd)
-        return CopiedLines
-    }
-;=======================================================================================
 ;    History Functions:  Keep a history of ListView changes and allow Undo and Redo.
 ;                            These functions operate on the currently selected ListView.
 ;=======================================================================================
@@ -1219,7 +1170,7 @@ Class LV_Rows extends LV_Rows.LV_EX
            LVGS := OS > 5 ? LVGS6 : LVGS5
            For Each, State In States {
               If (State = "")
-			     continue
+                 continue
               If !LVGS.HasKey(State)
                  Return false
               SetStates |= LVGS[State]

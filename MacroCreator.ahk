@@ -1347,9 +1347,10 @@ return
 BuildMacroWin:
 Gui, chMacro:+LastFound
 Gui, chMacro:+hwndhMacroCh -Caption +Parent1
-Gui, chMacro:Add, Tab2, Section Buttons 0x0008 -Wrap AltSubmit y+0 H22 hwndTabSel vA_List gTabSel, Macro1
+Gui, chMacro:Add, Button, -Wrap y+0 W25 H23 hwndhMacrosMenu vMacrosMenu gMacrosMenu, ▼
+Gui, chMacro:Add, Tab2, Section Buttons 0x0008 -Wrap AltSubmit yp H22 hwndTabSel vA_List gTabSel, Macro1
 ;  LV0x10000 = LVS_EX_DOUBLEBUFFER
-Gui, chMacro:Add, ListView, AltSubmit Checked x+0 y+0 hwndListID1 vInputList1 gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
+Gui, chMacro:Add, ListView, AltSubmit Checked xs+0 y+0 hwndListID1 vInputList1 gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
 Loop, 10
@@ -11475,20 +11476,48 @@ Gosub, PrevRefresh
 return
 
 CopyList:
+If (IsMacrosMenu)
+{
+	GuiControl, chMacro:Choose, A_List, %A_ThisMenuItemPos%
+	GoSub, TabSel
+	return
+}
 Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
-LVManager.CopyTo(ListID%A_ThisMenuItemPos%)
-Gui, chMacro:ListView, InputList%A_ThisMenuItemPos%
-LVManager.SetHwnd(ListID%A_ThisMenuItemPos%)
-c_List := A_List, A_List := A_ThisMenuItemPos
-GoSub, RowCheck
+s_List := A_List, d_List := A_ThisMenuItemPos, RowSelection := LV_GetCount("Selected")
+RowNumber := 0
+If RowSelection = 0
+{
+	Loop, % ListCount%s_List%
+	{
+		RowNumber++
+		Gui, chMacro:ListView, InputList%s_List%
+		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
+		ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
+		Gui, chMacro:ListView, InputList%d_List%
+		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
+	}
+}
+Else
+{
+	Loop, %RowSelection%
+	{
+		Gui, chMacro:ListView, InputList%s_List%
+		RowNumber := LV_GetNext(RowNumber)
+		LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
+		ckd := (LV_GetNext(RowNumber-1, "Checked")=RowNumber) ? 1 : 0
+		Gui, chMacro:ListView, InputList%d_List%
+		LV_Add("Check" ckd, ListCount%d_List%+1, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
+	}
+}
+Gui, chMacro:ListView, InputList%d_List%
+ListCount%d_List% := LV_GetCount()
 HistCheck()
-GoSub, b_Enable
-A_List := c_List
-Gui, chMacro:ListView, InputList%A_List%
-LVManager.SetHwnd(ListID%A_List%)
+GoSub, RowCheck
+Gui, chMacro:ListView, InputList%s_List%
+GuiControl, Focus, InputList%A_List%
 return
 
 Duplicate:
@@ -11802,6 +11831,13 @@ Menu, FuncMenu, Disable, %u_Lang002%`t%_s%Ctrl+Shift+P
 Menu, FuncMenu, Disable, %u_Lang003%`t%_s%Ctrl+Shift+N
 Menu, FuncMenu, Enable, %u_Lang004%`t%_s%Ctrl+Shift+C
 TB_Edit(TbEdit, "FuncParameter",, 0), TB_Edit(TbEdit, "FuncReturn",, 0)
+return
+
+MacrosMenu:
+IsMacrosMenu := true
+ControlGetPos, CtrPosX, CtrPosY,, CtrlPosH,, ahk_id %hMacrosMenu%
+Menu, CopyTo, Show, %CtrPosX%, % CtrPosY + CtrlPosH
+IsMacrosMenu := false
 return
 
 SaveData:
@@ -14822,7 +14858,8 @@ return
 chMacroGuiSize:
 GuiGetSize(GuiWidth, GuiHeight, "chMacro")
 GuiControl, chMacro:Move, InputList%A_List%, % "W" GuiWidth-15 "H" GuiHeight-25
-GuiControl, chMacro:Move, A_List, % "W" GuiWidth-15
+GuiControl, chMacro:Move, A_List, % "W" GuiWidth-40
+GuiControl, chMacro:Move, MacrosMenu, % "X" GuiWidth-29
 return
 
 GuiSize:
