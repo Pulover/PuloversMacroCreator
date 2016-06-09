@@ -39,6 +39,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 * Fixed missing value field in exported `Control` and `ControlGet` commands.
 * Fixed hidden *Main Loop* band reappearing after gui resize or minimizing/maximizing.
+* Fixed *Delete* key not working as hotkey.
 
 ## Version 5.0.2
 

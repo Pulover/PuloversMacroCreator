@@ -50,7 +50,6 @@ class scintilla {
 
     __call(msg, wParam := 0, lParam := 0, params*){
 
-        ; OutputDebug, % msg "/" wParam "/" lParam "/" params[1] "/" params[2]
 		if (msg = "Add")
             __SCI(this.hwnd := __Add(wParam, lParam, params*), this)
         else

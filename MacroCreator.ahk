@@ -12308,13 +12308,13 @@ EditMacros:
 Input
 Gui, 1:Submit, NoHide
 GoSub, SaveData
-Gui, 32:-MinimizeBox +owner1 +HwndLVEditMacros
+Gui, 32:+Resize -MinimizeBox +MinSize450x200 +owner1 +HwndLVEditMacros
 Gui, 1:+Disabled
-Gui, 32:Add, GroupBox, Section W450 H240
+Gui, 32:Add, GroupBox, Section W450 H240 vEMGroup
 Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort AltSubmit LV0x4000, %t_Lang147%|%w_Lang005%|%w_Lang007%|%t_Lang003%|%w_Lang030%
-Gui, 32:Add, Text, -Wrap W430, %t_Lang144%
-Gui, 32:Add, Button, -Wrap Section xm W75 H23 gEditMacrosOK, %c_Lang020%
-Gui, 32:Add, Button, -Wrap ys W75 H23 gEditMacrosCancel, %c_Lang021%
+Gui, 32:Add, Text, -Wrap W430 vLabel1, %t_Lang144%
+Gui, 32:Add, Button, -Wrap Section xm W75 H23 vEditMacrosOK gEditMacrosOK, %c_Lang020%
+Gui, 32:Add, Button, -Wrap ys W75 H23 vEditMacrosCancel gEditMacrosCancel, %c_Lang021%
 Gui, 32:Default
 Loop, %TabCount%
 	LV_Add("", TabGetText(TabSel, A_Index), o_AutoKey[A_Index], o_ManKey[A_Index], o_TimesG[A_Index], A_Index)
@@ -12324,6 +12324,15 @@ Loop, %TabCount%
 ,	LV_ModifyCol(4, 60)		; Loop
 ,	LV_ModifyCol(5, 45)		; Index
 Gui, 32:Show,, %t_Lang145%
+return
+
+32GuiSize:
+GuiGetSize(GuiWidth, GuiHeight, 32)
+GuiControl, 32:Move, EMGroup, % "W" GuiWidth-20 "H" GuiHeight-40
+GuiControl, 32:Move, MacroList, % "W" GuiWidth-40 "H" GuiHeight-80
+GuiControl, 32:Move, Label1, % "Y" GuiHeight-55
+GuiControl, 32:Move, EditMacrosOK, % "Y" GuiHeight-28
+GuiControl, 32:Move, EditMacrosCancel, % "Y" GuiHeight-28
 return
 
 EditMacrosOK:
