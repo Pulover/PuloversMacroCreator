@@ -285,6 +285,7 @@ IniRead, OSTrans, %IniFilePath%, WindowOptions, OSTrans, 255
 IniRead, OSCaption, %IniFilePath%, WindowOptions, OSCaption, 0
 IniRead, AutoRefresh, %IniFilePath%, WindowOptions, AutoRefresh, 1
 IniRead, ShowGroups, %IniFilePath%, WindowOptions, ShowGroups, 0
+IniRead, BarInfo, %IniFilePath%, WindowOptions, BarInfo, 1
 IniRead, IconSize, %IniFilePath%, ToolbarOptions, IconSize, Large
 IniRead, UserLayout, %IniFilePath%, ToolbarOptions, UserLayout
 IniRead, MainLayout, %IniFilePath%, ToolbarOptions, MainLayout
@@ -1003,30 +1004,33 @@ Gui, Add, Hotkey, hwndhManKey vManKey gWaitKeys Limit190, % o_ManKey[1]
 Gui, Add, Hotkey, hwndhAbortKey vAbortKey, %AbortKey%
 Gui, Add, Hotkey, hwndhPauseKey vPauseKey, %PauseKey%
 
-Gui, Add, Text, Section -Wrap y+320 xm W85 R1 Right vRepeat, %w_Lang015%:
-Gui, Add, Edit, ys-3 x+10 W75 R1 vRept
-Gui, Add, UpDown, vTimesM 0x80 Range0-999999999, 1
-Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyT vApplyT gApplyT
-	ILButton(ApplyT, ResDllPath ":" 1)
-Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1
-Gui, Add, Text, -Wrap x+5 ys W85 R1 Right vDelayT, %w_Lang016%:
-Gui, Add, Edit, ys-3 x+10 W75 R1 vDelay
-Gui, Add, UpDown, vDelayG 0x80 Range0-999999999, %DelayG%
-Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyI vApplyI gApplyI
-	ILButton(ApplyI, ResDllPath ":" 1)
-Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator2
-Gui, Add, Hotkey, ys-3 x+5 W150 vsInput
-Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndApplyL vApplyL gApplyL
-	ILButton(ApplyL, ResDllPath ":" 31)
-Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndInsertKey vInsertKey gInsertKey
-	ILButton(InsertKey, ResDllPath ":" 91)
+Gui, Add, Checkbox, Section -Wrap Checked%BarInfo% y+316 xm W25 H23 hwndhBarInfo vBarInfo gBarInfo 0x1000
+	ILButton(hBarInfo, ResDllPath ":" 29)
+Gui, Add, Checkbox, -Wrap ys x+0 W25 H23 hwndhBarEdit vBarEdit gBarEdit 0x1000
+	ILButton(hBarEdit, ResDllPath ":" 14)
+Gui, Add, Text, -Wrap y+4 x+5 W85 R1 Right vRepeat Hidden, %w_Lang015%:
+Gui, Add, Edit, ys-3 x+10 W75 R1 vRept Hidden
+Gui, Add, UpDown, vTimesM 0x80 Range0-999999999 Hidden, 1
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndhApplyT vApplyT gApplyT Hidden
+	ILButton(hApplyT, ResDllPath ":" 1)
+Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator1 Hidden
+Gui, Add, Text, -Wrap x+5 ys W85 R1 Right vDelayT Hidden, %w_Lang016%:
+Gui, Add, Edit, ys-3 x+10 W75 R1 vDelay Hidden
+Gui, Add, UpDown, vDelayG 0x80 Range0-999999999 Hidden, %DelayG%
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndhApplyI vApplyI gApplyI Hidden
+	ILButton(hApplyI, ResDllPath ":" 1)
+Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator2 Hidden
+Gui, Add, Hotkey, ys-3 x+5 W150 vsInput Hidden
+Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndhApplyL vApplyL gApplyL Hidden
+	ILButton(hApplyL, ResDllPath ":" 31)
+Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndhInsertKey vInsertKey gInsertKey Hidden
+	ILButton(hInsertKey, ResDllPath ":" 91)
+Gui, Add, Link, -Wrap ys xs+55 W85 R1 vContextTip gSetWin, <a>#If</a>: %IfDirectContext%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Link, -Wrap ys x+5 W85 R1 vContextTip gSetWin, <a>#If</a>: %IfDirectContext%
-Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Link, -Wrap ys x+5 W115 R1 vCoordTip gOptions, <a>CoordMode</a>: %CoordMouse%
-Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator5
+Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
 Gui, Add, Link, -Wrap ys x+5 W115 R1 vTModeTip gOptions, <a>TitleMatchMode</a>: %TitleMatch%
-Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator6
+Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator5
 Gui, Add, Link, -Wrap ys x+5 W230 R1 vTSendModeTip gOptions, <a>SendMode</a>: %KeyMode%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
@@ -1046,6 +1050,8 @@ Else If (MainWinPos != "Center")
 	Else
 		MainWinPos := "X" mGuiX " Y" mGuiY
 }
+If (!BarInfo)
+	GoSub, BarEdit
 Gui, Show, %MainWinSize% %MainWinPos% Hide
 IfExist, %SettingsFolder%\~ActiveProject.pmc
 	BackupFound := true
@@ -12031,6 +12037,58 @@ LV_GetText(SelType, SelectedRow, 6)
 SelectByType(SelType)
 return
 
+BarInfo:
+GuiControl, 1:Hide, Repeat
+GuiControl, 1:Hide, Rept
+GuiControl, 1:Hide, TimesM
+GuiControl, 1:Hide, ApplyT
+GuiControl, 1:Hide, Separator1
+GuiControl, 1:Hide, DelayT
+GuiControl, 1:Hide, Delay
+GuiControl, 1:Hide, DelayG
+GuiControl, 1:Hide, ApplyI
+GuiControl, 1:Hide, Separator2
+GuiControl, 1:Hide, sInput
+GuiControl, 1:Hide, ApplyL
+GuiControl, 1:Hide, InsertKey
+GuiControl, 1:Show, ContextTip
+GuiControl, 1:Show, Separator3
+GuiControl, 1:Show, CoordTip
+GuiControl, 1:Show, Separator4
+GuiControl, 1:Show, TModeTip
+GuiControl, 1:Show, Separator5
+GuiControl, 1:Show, TSendModeTip
+GuiControl, 1:, BarEdit, 0
+GuiControl, 1:, BarInfo, 1
+Gui, 1:Submit, NoHide
+return
+
+BarEdit:
+GuiControl, 1:Show, Repeat
+GuiControl, 1:Show, Rept
+GuiControl, 1:Show, TimesM
+GuiControl, 1:Show, ApplyT
+GuiControl, 1:Show, Separator1
+GuiControl, 1:Show, DelayT
+GuiControl, 1:Show, Delay
+GuiControl, 1:Show, DelayG
+GuiControl, 1:Show, ApplyI
+GuiControl, 1:Show, Separator2
+GuiControl, 1:Show, sInput
+GuiControl, 1:Show, ApplyL
+GuiControl, 1:Show, InsertKey
+GuiControl, 1:Hide, ContextTip
+GuiControl, 1:Hide, Separator3
+GuiControl, 1:Hide, CoordTip
+GuiControl, 1:Hide, Separator4
+GuiControl, 1:Hide, TModeTip
+GuiControl, 1:Hide, Separator5
+GuiControl, 1:Hide, TSendModeTip
+GuiControl, 1:, BarInfo, 0
+GuiControl, 1:, BarEdit, 1
+Gui, 1:Submit, NoHide
+return
+
 ApplyT:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
@@ -14035,6 +14093,7 @@ OSTrans := 255
 OSCaption := 0
 OSCaption := 0
 CustomColors := 0
+BarInfo := 1
 OnFinishCode := 1
 sciPrev.SetWrapMode(0x0)
 sciPrevF.SetWrapMode(0x0)
@@ -14401,6 +14460,7 @@ IniWrite, %OSTrans%, %IniFilePath%, WindowOptions, OSTrans
 IniWrite, %OSCaption%, %IniFilePath%, WindowOptions, OSCaption
 IniWrite, %AutoRefresh%, %IniFilePath%, WindowOptions, AutoRefresh
 IniWrite, %ShowGroups%, %IniFilePath%, WindowOptions, ShowGroups
+IniWrite, %BarInfo%, %IniFilePath%, WindowOptions, BarInfo
 IniWrite, %IconSize%, %IniFilePath%, ToolbarOptions, IconSize
 IniWrite, %UserLayout%, %IniFilePath%, ToolbarOptions, UserLayout
 IniWrite, %MainLayout%, %IniFilePath%, ToolbarOptions, MainLayout
@@ -14770,6 +14830,8 @@ RbMacro.ModifyBand(2, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 GuiControl, 1:Move, cRbMacro, % "W" GuiWidth+5
 GuiControl, 1:Move, Repeat, % "y" GuiHeight-23
 GuiControl, 1:Move, Rept, % "y" GuiHeight-27
+GuiControl, 1:Move, BarInfo, % "y" GuiHeight-28
+GuiControl, 1:Move, BarEdit, % "y" GuiHeight-28
 GuiControl, 1:Move, TimesM, % "y" GuiHeight-27
 GuiControl, 1:Move, DelayT, % "y" GuiHeight-23
 GuiControl, 1:Move, Delay, % "y" GuiHeight-27
@@ -14784,7 +14846,6 @@ GuiControl, 1:Move, Separator2, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator3, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator4, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator5, % "y" GuiHeight-27
-GuiControl, 1:Move, Separator6, % "y" GuiHeight-27
 GuiControl, 1:MoveDraw, ContextTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, CoordTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, TModeTip, % "y" GuiHeight-23
