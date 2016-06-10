@@ -4012,7 +4012,6 @@ Gui, 34:Font
 Gui, 34:Font,, Tahoma
 Gui, 34:Add, Link,, <a href="http://www.macrocreator.com">www.macrocreator.com</a>
 Gui, 34:Add, Text,, Author: Pulover [Rodolfo U. Batista]
-Gui, 34:Add, Link, y+0, <a href="mailto:pulover@macrocreator.com">pulover@macrocreator.com</a>
 Gui, 34:Add, Text, -Wrap R1 y+0,
 (
 Copyright © 2012-2016 Rodolfo U. Batista

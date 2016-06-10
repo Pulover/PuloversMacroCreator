@@ -485,7 +485,7 @@
 				,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesX)
 				,	LoopDepth++
 				,	PlaybackVars[LoopDepth] := []
-				,	iLoopIndex++, StartMark[LoopDepth] := A_Index
+				,	iLoopIndex++, StartMark[LoopDepth] := mListRow
 				,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := 1
 				,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := FlowControl.ErrorLevel
 				,	LoopCount[LoopDepth] := ""
@@ -608,7 +608,7 @@
 					_Count := LoopCount[LoopDepth][1]
 				,	LoopInfo := {LoopDepth: LoopDepth
 							,	PlaybackVars: PlaybackVars
-							,	Range: {Start: StartMark[LoopDepth], End: A_Index}
+							,	Range: {Start: StartMark[LoopDepth], End: mListRow }
 							,	Count: _Count + 1
 							,	CoordModes: PbCoordModes
 							,	SendModes: PbSendModes

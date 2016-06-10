@@ -6,11 +6,11 @@ File := A_ScriptDir "\index.html"
 FileRead, FileData, %File%
 PMCVer := RegExReplace(FileData, "s).*Version: ([\d\.]+).*", "$1")
 Data := "<a href=""http://www.macrocreator.com/""><img src=""Images/PMC.png"" alt=""Pulover's Macro Creator"" border=""0""></a>"
-FileMod_Change(FileData, Data, 10)
-Data := "<h1 id=""version:-" PMCVer """>Version: <a href=""About.html#change-log"">" PMCVer "</a></h1>"
 FileMod_Change(FileData, Data, 11)
+Data := "<h1 id=""version:-" PMCVer """>Version: <a href=""About.html#change-log"">" PMCVer "</a></h1>"
+FileMod_Change(FileData, Data, 12)
 Data := "<Version: " PMCVer ">`n</head>"
-FileMod_Change(FileData, Data, 8)
+FileMod_Change(FileData, Data, 9)
 FileDelete, %File%
 FileAppend, %FileData%, %File%
 

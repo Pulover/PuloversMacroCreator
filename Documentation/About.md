@@ -37,6 +37,7 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 ## Version 5.0.3
 
+* Fixed wrong rows executed in loops after gosub or goto.
 * Fixed missing value field in exported `Control` and `ControlGet` commands.
 * Fixed hidden *Main Loop* band reappearing after gui resize or minimizing/maximizing.
 * Fixed bug in *Copy to...* feature.
