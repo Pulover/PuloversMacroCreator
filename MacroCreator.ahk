@@ -5,8 +5,8 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.0.3
-; Release Date: June, 2016
+; Version: 5.0.4
+; Release Date: July, 2016
 ; AutoHotkey Version: 1.1.24.00
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
@@ -66,7 +66,7 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.0.3
+;@Ahk2Exe-SetVersion 5.0.4
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2016 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -128,7 +128,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.3", ReleaseDate := "June, 2016"
+CurrentVersion := "5.0.4", ReleaseDate := "July, 2016"
 
 ;##### Ini File Read #####
 
@@ -299,8 +299,8 @@ IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1,
 
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
-If (LangVersion < 3)
-	LangVersion := 3, LangLastCheck := 3
+If (LangVersion < 4)
+	LangVersion := 4, LangLastCheck := 4
 
 User_Vars := new ObjIni(UserVarsPath)
 ,	User_Vars.Read()
@@ -6025,9 +6025,9 @@ If (s_Caller = "Edit")
 				break
 			}
 		}
-		GuiControl, 3:, Aot, % InStr(InStyles, "|" MsgBoxStyles[1] "|") ? 1 : 0
+		GuiControl, 3:, RightRead, % InStr(InStyles, "|" MsgBoxStyles[1] "|") ? 1 : 0
 		GuiControl, 3:, RightJ, % InStr(InStyles, "|" MsgBoxStyles[2] "|") ? 1 : 0
-		GuiControl, 3:, RightRead, % InStr(InStyles, "|" MsgBoxStyles[3] "|") ? 1 : 0
+		GuiControl, 3:, Aot, % InStr(InStyles, "|" MsgBoxStyles[3] "|") ? 1 : 0
 		GuiControl, 3:Choose, Default, % (InStr(InStyles, "|" MsgBoxStyles[4] "|")) ? 3 : (InStr(InStyles, "|" MsgBoxStyles[5] "|")) ? 2 : 1
 		GuiControl, 3:Choose, Icon, % (Target = 64) ? 5 : (Target = 48) ? 4 : (Target = 32) ? 3	: (Target = 16) ? 2 : 1
 		GuiControl, 3:Choose, Buttons, % MsgButton + 1
@@ -10612,10 +10612,7 @@ Else
 return
 
 DonatePayPal:
-If (Lang = "Pt")
-	Run, "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=BR&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC`%2eBr&currency_code=BRL&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted"
-Else
-	Run, "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub`%40gmail`%2ecom&lc=US&item_name=Pulover`%27s`%20Macro`%20Creator&item_number=App`%2ePMC&currency_code=USD&bn=PP`%2dDonationsBF`%3abtn_donateCC_LG`%2egif`%3aNonHosted"
+Run, "http://www.macrocreator.com/donate"
 return
 
 26GuiEscape:

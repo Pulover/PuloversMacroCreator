@@ -19,6 +19,7 @@
 * [Can I execute an action every time a certain event occurs?](#can-i-execute-an-action-every-time-a-certain-event-occurs)
 * [Can I play other Macros while Timer is running?](#can-i-play-other-macros-while-timer-is-running)
 * [Can I save my Macros as EXE to run on any computer?](#can-i-save-my-macros-as-exe-to-run-on-any-computer)
+* [How can I avoid/bypass error messages during playback?](#how-can-i-avoid/bypass-error-messages-during-playback)
 * [How can I use an active Internet Explorer window without editing the command every time I start PMC?](#how-can-i-use-an-active-internet-explorer-window-without-editing-the-command-every-time-i-start-pmc)
 * [What is COM and how do I use it?](#what-is-com-and-how-do-i-use-it)
 * [Can I take Screenshots during playback?](#can-i-take-screenshots-during-playback)
@@ -136,6 +137,10 @@ Macro Creator has an option to convert exported scripts to EXE using Ahk2Exe tha
 3. Click the *Export* button.  
 
 The EXE file will be saved to the same directory as the script file.
+
+### How can I avoid/bypass error messages during playback?
+
+To bypass error messages go to Options > Settings > Playback and check the "Do not display errors" option.
 
 ### How can I use an active Internet Explorer window without editing the command every time I start PMC?
 

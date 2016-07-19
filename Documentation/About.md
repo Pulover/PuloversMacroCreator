@@ -7,8 +7,8 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2016 Rodolfo U. Batista  
 
-Version: 5.0.3  
-Release Date: June, 2016  
+Version: 5.0.4  
+Release Date: July, 2016  
 AutoHotkey Version: 1.1.24.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -34,6 +34,10 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 
 # Change Log
+
+## Version 5.0.4
+
+* Fixed wrong options set for *Message Box* when editing the command.
 
 ## Version 5.0.3
 

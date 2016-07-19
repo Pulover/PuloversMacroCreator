@@ -1,7 +1,7 @@
 ﻿/*!
 	Library: Pulover's Macro Creator
 		
-		# Version: 5.0.3
+		# Version: 5.0.4
 		[www.macrocreator.com](http://www.macrocreator.com)  
 		[Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)
 		
@@ -12,7 +12,7 @@
 		
 		[AutoHotkey Online Documentation](http://autohotkey.com/docs)
 		
-		**Support Open Source software: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=rodolfoub%40gmail%2ecom&lc=US&item_name=Pulover%27s%20Macro%20Creator&item_number=App%2ePMC&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)**
+		**Support Open Source software: [Donate](http://www.macrocreator.com/donate)**
 		
 */
 
@@ -724,6 +724,8 @@
 		
 		**Warning**: Scripts exported (even if compiled) with the send email function (CDO) will have visible informations of email accounts used, including the **password**. The PMC project file does not have this information.
 		
+		To bypass error messages go to Options > Settings > Playback and check the "Do not display errors" option.
+		
 	Extra:
 		### Related
 			[COM](http://autohotkey.com/docs/commands/ComObjCreate.htm), [CDO (Microsoft MSDN)](http://msdn.microsoft.com/en-us/library/ms988614)
@@ -739,6 +741,8 @@
 
 	Remarks:
 		This function is not guaranteed to work with any Url.
+		
+		To bypass error messages go to Options > Settings > Playback and check the "Do not display errors" option.
 		
 	Extra:
 		### Related
@@ -761,6 +765,8 @@
 		You can extract multiple zip files in the same command.
 		
 		This function does not support other types of compressed files. For other formats, use the `Run` command to execute an adequate application.
+		
+		To bypass error messages go to Options > Settings > Playback and check the "Do not display errors" option.
 		
 	Extra:
 		### Related
@@ -786,6 +792,8 @@
 		It might be necessary to set *Focus* to an object before performing and action like *Click*.
 		
 		Although not all Methods and Properties are listed it may still be possible to use them with the correct syntax. For more information on methods and properties please check Microsoft MSDN website.
+		
+		To bypass error messages go to Options > Settings > Playback and check the "Do not display errors" option.
 		
 	Extra:
 		### Related
@@ -817,6 +825,8 @@
 			* Strings MUST be enclosed in quotes.
 		
 		When you close the application, all references to Active Objects will be lost. To continue working using saved project files you must reconnect to the application by either editing one of the lines containing each handle and use the *Connect* button to re-create all references, or assigning the Handle to a ComObj function, usually ComObjActive(), though it will not work on all applications.
+		
+		To bypass error messages go to Options > Settings > Playback and check the "Do not display errors" option.
 					
 	Extra:
 		### Related
