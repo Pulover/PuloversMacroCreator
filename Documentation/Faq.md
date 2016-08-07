@@ -14,6 +14,7 @@
 * [Can I run a Macro in a background window?](#can-i-run-a-macro-in-a-background-window)
 * [Can I schedule a Macro to run when I want?](#can-i-schedule-a-macro-to-run-when-i-want)
 * [How do I increment/add a value in a variable on every loop iteration?](#how-do-i-increment/add-a-value-in-a-variable-on-every-loop-iteration)
+* [How can I make an exported script auto-execute without a hotkey?](#how-can-i-make-an-exported-script-auto-execute-without-a-hotkey)
 * [Is Macro Creator Portable?](#is-macro-creator-portable)
 * [Which command line parameters are supported?](#which-command-line-parameters-are-supported)
 * [Can I execute an action every time a certain event occurs?](#can-i-execute-an-action-every-time-a-certain-event-occurs)
@@ -112,6 +113,10 @@ The code below is a PMC file (you can copy and save it using any text editor).
 > 
 
 A_Index is only valid inside a Loop, but in PMC all macros are considered loops since you can set the number of repetitions for the whole macro.
+
+### How can I make an exported script auto-execute without a hotkey?
+
+To make the first macro auto-execute when running an exported script, remove the hotkey associated with it in the [Export Window](Export.html) "Macros" section.
 
 ### Is Macro Creator Portable?
 

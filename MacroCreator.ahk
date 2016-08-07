@@ -5,9 +5,9 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.0.4
-; Release Date: July, 2016
-; AutoHotkey Version: 1.1.24.00
+; Version: 5.0.5
+; Release Date: August, 2016
+; AutoHotkey Version: 1.1.24.01
 ; Copyright © 2012-2016 Rodolfo U. Batista
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
@@ -66,7 +66,7 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.0.4
+;@Ahk2Exe-SetVersion 5.0.5
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2016 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -128,7 +128,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.4", ReleaseDate := "July, 2016"
+CurrentVersion := "5.0.5", ReleaseDate := "August, 2016"
 
 ;##### Ini File Read #####
 

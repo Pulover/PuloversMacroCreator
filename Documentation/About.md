@@ -7,9 +7,9 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2016 Rodolfo U. Batista  
 
-Version: 5.0.4  
-Release Date: July, 2016  
-AutoHotkey Version: 1.1.24.00  
+Version: 5.0.5  
+Release Date: August, 2016  
+AutoHotkey Version: 1.1.24.01  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -34,6 +34,10 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 
 # Change Log
+
+## Version 5.0.5
+
+* Fixed bug in expressions when assigning a variable to a ternary operation.
 
 ## Version 5.0.4
 

@@ -54,7 +54,7 @@ Eval($x, _CustomVars := "", _Init := true)
 	For $i, $v in $z
 	{
 		; Check for Ternary expression and evaluate
-		If (RegExMatch($z[$i], "([^\?:]+?)\?([^\?:]+?):(.*)", _Match))
+		If (RegExMatch($z[$i], "([^\?:=]+?)\?([^\?:]+?):(.*)", _Match))
 		{
 			Loop, 3
 			{
