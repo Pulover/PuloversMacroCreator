@@ -8,7 +8,10 @@
 ; Version: 5.0.5
 ; Release Date: August, 2016
 ; AutoHotkey Version: 1.1.24.01
-; Copyright © 2012-2016 Rodolfo U. Batista
+; Copyright © 2012-2017 Rodolfo U. Batista
+; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
+; under the terms of the UNLICENSE here: <http://unlicense.org/UNLICENSE>
+; For everyone else, the GPL below applies.
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
 
