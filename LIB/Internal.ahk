@@ -358,7 +358,7 @@ PicGetSize(File, ByRef Width, ByRef Height)
 {
 	static LoadedPic
 	LastEL := ErrorLevel
-	Gui, Pict:Add, Pic, vLoadedPic, %File% 
+	Gui, Pict:Add, Pic, vLoadedPic, %File%
 	GuiControlGet, LoadedPic, Pict:Pos
 	Gui, Pict:Destroy
 	Width := LoadedPicW, Height := LoadedPicH
@@ -369,7 +369,8 @@ CenterImgSrchCoords(File, ByRef CoordX, ByRef CoordY)
 {
 	static LoadedPic
 	LastEL := ErrorLevel
-	Gui, Pict:Add, Pic, vLoadedPic, %File% 
+	
+	Gui, Pict:Add, Pic, vLoadedPic, % RegExReplace(file, "^(\*\w+\s)+")
 	GuiControlGet, LoadedPic, Pict:Pos
 	Gui, Pict:Destroy
 	CoordX += LoadedPicW // 2
