@@ -260,7 +260,7 @@ Eval($x, _CustomVars := "", _Init := true)
 			
 			If ((IsFunc(_Match1)) && (!Func(_Match1).IsBuiltIn))
 			{
-				If _Match1 not contains %FuncWhiteList%
+				If _Match1 not contains %FuncAllowedList%
 				{
 					$z[$i] := StrReplace($z[$i], _Match,,, 1)
 				,	_Match1 := ""

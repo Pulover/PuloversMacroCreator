@@ -744,6 +744,8 @@ Ln
 LoadPicture
 Log
 LTrim
+Max
+Min
 Mod
 NumGet
 NumPut
@@ -809,6 +811,8 @@ Ln (Number)
 LoadPicture (Filename [, Options, ByRef ImageType])
 Log (Number)
 LTrim (String, OmitChars = "" `t"")
+Max (Number1 [, Number2, ...])
+Min (Number1 [, Number2, ...])
 Mod (Dividend, Divisor)
 NumGet (VarOrAddress [, Offset = 0][, Type = ""UPtr""])
 NumPut (Number, VarOrAddress [, Offset = 0][, Type = ""UPtr""])
@@ -1236,7 +1240,7 @@ A_StartupCommon
 A_Temp
 A_UserName
 A_WinDir
-ComSpec
+A_ComSpec
 )"
 
 BIV_Misc := "
@@ -1260,6 +1264,7 @@ A_LoopFileExt
 A_LoopFileFullPath
 A_LoopFileLongPath
 A_LoopFileName
+A_LoopFilePath
 A_LoopFileShortName
 A_LoopFileShortPath
 A_LoopFileSize
@@ -1284,4 +1289,4 @@ BuiltinVars := StrReplace(BIV_Characters, "`n", ",")
 			. StrReplace(BIV_Misc, "`n", ",")
 			. StrReplace(BIV_Loop, "`n", ",")
 
-FuncWhiteList := "Gdip_,Screenshot,CDO,Zip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords,Dlg_,IEGet,IELoad,WBGet,ScheduleTask"
+FuncAllowedList := "Gdip_,Screenshot,CDO,Zip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords,Dlg_,IEGet,IELoad,WBGet,ScheduleTask"

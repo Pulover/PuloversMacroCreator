@@ -3,7 +3,7 @@
 The simplest way to get started with **Pulover's Macro Creator** is using the recorder. Follow these steps record a macro:
 
 1. Start Pulover's Macro Creator.
-2. Click on the Record button on the toolbar.
+2. Click on the Record button on the toolbar or press Ctrl+R.
 3. Press the record hotkey (default is F9).
 4. Make mouse and keyboard actions.
 5. Press the record hotkey again to stop.

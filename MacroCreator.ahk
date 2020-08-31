@@ -5,10 +5,10 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.0.5
-; Release Date: August, 2016
-; AutoHotkey Version: 1.1.24.01
-; Copyright © 2012-2017 Rodolfo U. Batista
+; Version: 5.0.6
+; Release Date: August, 2020
+; AutoHotkey Version: 1.1.32.00
+; Copyright © 2012-2020 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
 ; under the terms of the UNLICENSE here: <http://unlicense.org/UNLICENSE>
 ; For everyone else, the GPL below applies.
@@ -69,10 +69,11 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.0.5
-;@Ahk2Exe-SetCopyright Copyright © 2012-2016 Rodolfo U. Batista
+;@Ahk2Exe-SetVersion 5.0.6
+;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
+; AutoHotkey settings:
 #NoEnv
 ListLines Off
 #InstallKeybdHook
@@ -94,11 +95,13 @@ Process, Priority,, High
 CoordMode, Menu, Window
 CoordMode, Tooltip, Window
 
+; Tray menu:
 Menu, Tray, Tip, Pulovers's Macro Creator
 DefaultIcon := (A_IsCompiled) ? A_ScriptFullPath
 			:  (FileExist(A_ScriptDir "\Resources\PMC4_Mult.ico") ? A_ScriptDir "\Resources\PMC4_Mult.ico" : A_AhkPath)
 Menu, Tray, Icon, %DefaultIcon%, 1, 1
 
+; Loading SciLexer DLL:
 SciDllPath := (A_IsCompiled) ? (A_ScriptDir "\SciLexer.dll")
 			: (A_ScriptDir ((A_PtrSize = 8) ? "\SciLexer-x64.dll" : "\SciLexer-x86.dll"))
 DllCall("LoadLibrary", "Str", SciDllPath)
@@ -109,6 +112,7 @@ IfNotExist, %SciDllPath%
 	ExitApp
 }
 
+; Loading Icons DLL:
 ResDllPath := A_ScriptDir "\Resources.dll", hIL_Icons := IL_Create(10, 10)
 ,	hIL_IconsHi := IL_Create(10, 10), IL_EX_SetSize(hIL_IconsHi, 24, 24)
 
@@ -118,6 +122,7 @@ IfNotExist, %ResDllPath%
 	ExitApp
 }
 
+; Loading Icons:
 Loop
 {
 	If (!IL_Add(hIL_Icons, ResDllPath, A_Index) && (A_Index > 1))
@@ -131,7 +136,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.5", ReleaseDate := "August, 2016"
+CurrentVersion := "5.0.6", ReleaseDate := "August, 2020"
 
 ;##### Ini File Read #####
 
@@ -160,6 +165,7 @@ IniRead, DelayG, %IniFilePath%, Options, DelayG, 0
 IniRead, OnScCtrl, %IniFilePath%, Options, OnScCtrl, 1
 IniRead, ShowStep, %IniFilePath%, Options, ShowStep, 1
 IniRead, HideMainWin, %IniFilePath%, Options, HideMainWin, 1
+IniRead, DontShowAdm, %IniFilePath%, Options, DontShowAdm, 0
 IniRead, DontShowPb, %IniFilePath%, Options, DontShowPb, 0
 IniRead, DontShowRec, %IniFilePath%, Options, DontShowRec, 0
 IniRead, DontShowEdt, %IniFilePath%, Options, DontShowEdt, 0
@@ -1076,34 +1082,35 @@ OnMessage(WM_COMMAND, "TB_Messages")
 If (KeepHkOn)
 	Menu, Tray, Check, %w_Lang014%
 
-If %0%
+; Command line parameters
+If (A_Args.length())
 {
 	WinGetActiveTitle, LastFoundWin
-	Loop, %0%
+	For n, Param in A_Args
 	{
-		Param .= %A_Index% "`n"
-		If (%A_Index% = "-r")
+		Params .= Param "`n"
+		If (Param = "-r")
 			RecOn := 1
-		If (!t_Macro) && (RegExMatch(%A_Index%, "i)^-s(\d+)*$", t_Macro))
+		If (!t_Macro) && (RegExMatch(Param, "i)^-s(\d+)*$", t_Macro))
 		{
 			AutoPlay := "Macro" t_Macro1
 		,	HideWin := 1, CloseAfterPlay := 1
 			break
 		}
-		If (!t_Macro) && (RegExMatch(%A_Index%, "i)^-a(\d+)*$", t_Macro))
+		If (!t_Macro) && (RegExMatch(Param, "i)^-a(\d+)*$", t_Macro))
 			AutoPlay := "Macro" t_Macro1
-		If (%A_Index% = "-p")
+		If (Param = "-p")
 			PlayHK := 1
-		If (%A_Index% = "-h")
+		If (Param = "-h")
 			HideWin := 1
-		If (!t_Timer) && (RegExMatch(%A_Index%, "i)^-t(\d*)(!)?$", _t))
+		If (!t_Timer) && (RegExMatch(Param, "i)^-t(\d*)(!)?$", _t))
 			TimerPlay := 1, TimerDelayX := (_t1) ? _t1 : 250, TimedRun := RunFirst := (_t2) ? 1 : 0
-		If (%A_Index% = "-c")
+		If (Param = "-c")
 			CloseAfterPlay := 1
-		If (%A_Index% = "-b")
+		If (Param = "-b")
 			ShowCtrlBar := 1
 	}
-	Files := RTrim(Param, "`n")
+	Files := RTrim(Params, "`n")
 	If (!MultInst) && (TargetID := WinExist("ahk_exe " A_ScriptFullPath))
 	{
 		Send_Params(Files, TargetID)
@@ -2133,7 +2140,7 @@ UserVarsList := User_Vars.Get(,, true, true, "global "), CheckedVars := []
 Gui, 14:+owner1 -MinimizeBox +E0x00000400 +Delimiter%_x% +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
-Gui, 14:Add, Tab2, W475 H430 vTabControl AltSubmit, %w_Lang001%%_x%%w_Lang003%
+Gui, 14:Add, Tab3, W475 H430 vTabControl AltSubmit, %w_Lang001%%_x%%w_Lang003%
 ; Macros
 Gui, 14:Add, GroupBox, Section W450 H190, %t_Lang002%:
 Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly LV0x4000, %t_Lang147%%_x%%w_Lang005%%_x%%t_Lang003%%_x%%t_Lang006%
@@ -3752,34 +3759,38 @@ return
 HelpB:
 ThisMenuItem := RegExReplace(A_ThisMenuItem, "\s/.*")
 StringReplace, ThisMenuItem, ThisMenuItem, #, _
-If (ThisMenuItem = "Clipboard")
-	Run, %HelpDocsUrl%/misc/Clipboard.htm
-Else If (ThisMenuItem = "If Statements")
-	Run, %HelpDocsUrl%/commands/IfEqual.htm
-Else If (ThisMenuItem = "Labels")
-	Run, %HelpDocsUrl%/misc/Labels.htm
-Else If (ThisMenuItem = "SplashImage")
-	Run, %HelpDocsUrl%/commands/Progress.htm
-Else If (ThisMenuItem = "SplashTextOff")
-	Run, %HelpDocsUrl%/commands/SplashTextOn.htm
-Else If (InStr(ThisMenuItem, "LockState"))
-	Run, %HelpDocsUrl%/commands/SetNumScrollCapsLockState.htm
-Else If (ThisMenuItem = "Variables and Expressions")
-	Run, %HelpDocsUrl%/Variables.htm
-Else If (ThisMenuItem = "Built-in Functions")
-	Run, %HelpDocsUrl%/Functions.htm#BuiltIn
-Else If (ThisMenuItem = "Functions")
-	Run, %HelpDocsUrl%/Functions.htm
-Else If (ThisMenuItem = "Arrays")
-	Run, %HelpDocsUrl%/misc/Arrays.htm
-Else If (ThisMenuItem = "Objects")
-	Run, %HelpDocsUrl%/Objects.htm
-Else If (ThisMenuItem = "Object Methods")
-	Run, %HelpDocsUrl%/objects/Object.htm
-Else If (ThisMenuItem = "Built-in Variables")
-	Run, %HelpDocsUrl%/Variables.htm#BuiltIn
-Else
-	Run, %HelpDocsUrl%/commands/%ThisMenuItem%.htm
+Switch ThisMenuItem
+{
+	Case "Clipboard":
+		Run, %HelpDocsUrl%/misc/Clipboard.htm
+	Case "If Statements":
+		Run, %HelpDocsUrl%/commands/IfEqual.htm
+	Case "Labels":
+		Run, %HelpDocsUrl%/misc/Labels.htm
+	Case "SplashImage":
+		Run, %HelpDocsUrl%/commands/Progress.htm
+	Case "SplashTextOff":
+		Run, %HelpDocsUrl%/commands/SplashTextOn.htm
+	Case "Variables and Expressions":
+		Run, %HelpDocsUrl%/Variables.htm
+	Case "Built-in Functions":
+		Run, %HelpDocsUrl%/Functions.htm#BuiltIn
+	Case "Functions":
+		Run, %HelpDocsUrl%/Functions.htm
+	Case "Arrays":
+		Run, %HelpDocsUrl%/misc/Arrays.htm
+	Case "Objects":
+		Run, %HelpDocsUrl%/Objects.htm
+	Case "Object Methods":
+		Run, %HelpDocsUrl%/objects/Object.htm
+	Case "Built-in Variables":
+		Run, %HelpDocsUrl%/Variables.htm#BuiltIn
+	Default:
+		If (InStr(ThisMenuItem, "LockState"))
+			Run, %HelpDocsUrl%/commands/SetNumScrollCapsLockState.htm
+		Else
+			Run, %HelpDocsUrl%/commands/%ThisMenuItem%.htm
+}
 return
 
 LoopB:
@@ -4018,7 +4029,7 @@ Gui, 34:Add, Link,, <a href="http://www.macrocreator.com">www.macrocreator.com</
 Gui, 34:Add, Text,, Author: Pulover [Rodolfo U. Batista]
 Gui, 34:Add, Text, -Wrap R1 y+0,
 (
-Copyright © 2012-2016 Rodolfo U. Batista
+Copyright © 2012-2020 Rodolfo U. Batista
 
 Version: %CurrentVersion% (%OsBit%)
 Release Date: %ReleaseDate%
@@ -4355,35 +4366,26 @@ If (s_Caller = "Edit")
 If (s_Caller = "Find")
 {
 	Gui, 5:Default
-	If (GotoRes1 = MAction1)
+	Switch GotoRes1
 	{
-		GuiControl, 5:, Click, 1
-		GoSub, Click
-	}
-	Else If (GotoRes1 = MAction2)
-	{
-		GuiControl, 5:, Point, 1
-		GoSub, Point
-	}
-	Else If (GotoRes1 = MAction3)
-	{
-		GuiControl, 5:, PClick, 1
-		GoSub, PClick
-	}
-	Else If (GotoRes1 = MAction4)
-	{
-		GuiControl, 5:, Drag, 1
-		GoSub, Drag
-	}
-	Else If (GotoRes1 = MAction5)
-	{
-		GuiControl, 5:, WUp, 1
-		GoSub, WUp
-	}
-	Else If (GotoRes1 = MAction6)
-	{
-		GuiControl, 5:, WDn, 1
-		GoSub, WDn
+		Case MAction1:
+			GuiControl, 5:, Click, 1
+			GoSub, Click
+		Case MAction2:
+			GuiControl, 5:, Point, 1
+			GoSub, Point
+		Case MAction3:
+			GuiControl, 5:, PClick, 1
+			GoSub, PClick
+		Case MAction4:
+			GuiControl, 5:, Drag, 1
+			GoSub, Drag
+		Case MAction5:
+			GuiControl, 5:, WUp, 1
+			GoSub, WUp
+		Case MAction6:
+			GuiControl, 5:, WDn, 1
+			GoSub, WDn
 	}
 }
 Gui, 5:Submit, NoHide
@@ -5325,12 +5327,13 @@ PixelGetColor, color, %xPos%, %yPos%, % (iPixel) ? (RGB ? "RGB" : "") : "RGB"
 WinGet, pname, ProcessName, ahk_id %id%
 ControlGetPos, cX, cY, cW, cH, %control%, ahk_id %id%
 xcpos := Controlpos(xPos, cx), ycpos := Controlpos(yPos, cy)
+DrawTip := RegExReplace(d_Lang034, "%DrawButton%", DrawButton)
 If (Draw)
 	ToolTip,
 	(LTrim
 	X%xPos% Y%yPos%
 	%c_Lang004%: %control%
-	%d_Lang034%
+	%DrawTip%
 	%ExtraTip%
 	)
 Else
@@ -5435,21 +5438,22 @@ If (FirstCall) {
   FirstCall := false
 }
 WinMove, , , X1, Y1, W1, H1
+DrawTip := RegExReplace(d_Lang034, "%DrawButton%", DrawButton)
 If (CoordPixel = "Window")
 {
 	CoordMode, Mouse, Window
 	MouseGetPos, xPos2, yPos2
 	If ((X2 > OriginX) || (Y2 > OriginY))
-		ToolTip, X%xPos% Y%yPos%`nX%xPos2% Y%yPos2%`n%d_Lang034%`n%ExtraTip%
+		ToolTip, X%xPos% Y%yPos%`nX%xPos2% Y%yPos2%`n%DrawTip%`n%ExtraTip%
 	Else
-		ToolTip, X%xPos% Y%yPos%`nX%xPos2% Y%yPos2%`n%d_Lang034%`n%ExtraTip%, % OriginX +8, % OriginY +8
+		ToolTip, X%xPos% Y%yPos%`nX%xPos2% Y%yPos2%`n%DrawTip%`n%ExtraTip%, % OriginX +8, % OriginY +8
 }
 Else
 {
 	If ((X2 > OriginX) || (Y2 > OriginY))
-		ToolTip, X%X1% Y%Y1%`nX%X2% Y%Y2%`n%d_Lang034%`n%ExtraTip%
+		ToolTip, X%X1% Y%Y1%`nX%X2% Y%Y2%`n%DrawTip%`n%ExtraTip%
 	Else
-		ToolTip, X%X1% Y%Y1%`nX%X2% Y%Y2%`n%d_Lang034%`n%ExtraTip%, % OriginX +8, % OriginY +8
+		ToolTip, X%X1% Y%Y1%`nX%X2% Y%Y2%`n%DrawTip%`n%ExtraTip%, % OriginX +8, % OriginY +8
 }
 return
 
@@ -5585,30 +5589,23 @@ If (s_Caller = "Edit")
 If (s_Caller = "Find")
 {
 	Gui, 8:Default
-	If (GotoRes1 = cType8)
+	Switch GotoRes1
 	{
-		GuiControl, 8:, Raw, 1
-		GoSub, Raw
-	}
-	Else If (GotoRes1 = cType1)
-	{
-		GuiControl, 8:, ComText, 1
-		GoSub, ComText
-	}
-	Else If (GotoRes1 = cType12)
-	{
-		GuiControl, 8:, Clip, 1
-		GoSub, Clip
-	}
-	Else If (GotoRes1 = cType22)
-	{
-		GuiControl, 8:, EditPaste, 1
-		GoSub, EditPaste
-	}
-	Else If (GotoRes1 = cType10)
-	{
-		GuiControl, 8:, SetText, 1
-		GoSub, SetText
+		Case cType8:
+			GuiControl, 8:, Raw, 1
+			GoSub, Raw
+		Case cType1:
+			GuiControl, 8:, ComText, 1
+			GoSub, ComText
+		Case cType12:
+			GuiControl, 8:, Clip, 1
+			GoSub, Clip
+		Case cType22:
+			GuiControl, 8:, EditPaste, 1
+			GoSub, EditPaste
+		Case cType10:
+			GuiControl, 8:, SetText, 1
+			GoSub, SetText
 	}
 }
 Else
@@ -6346,124 +6343,109 @@ SB_SetIcon(ResDllPath, IconsNames["help"])
 GoSub, ClearPars
 If (s_Caller = "Edit")
 {
-	If (Type = cType35)
+	Switch Type
 	{
-		GuiControl, 12:, NewLabel, %Details%
-		GuiControl, 12:, NewLabelT, 1
-		GuiControl, 12:, GoLabelT, 0
-		GuiControl, 12:Disable, GoLabelT
-		GuiControl, 12:Disable, GoLabel
-		GuiControl, 12:Disable, Goto
-		GuiControl, 12:Disable, Gosub
-		GuiControl, 12:Enable, NewLabel
-	}
-	Else If Type in %cType36%,%cType37%
-	{
-		If (InStr(Proj_Labels, Details "|"))
-			GuiControl, 12:ChooseString, GoLabel, %Details%
-		Else
-			GuiControl, 12:, GoLabel, %Details%||
-		GuiControl, 12:, %Type%, 1
-		GuiControl, 12:Disable, NewLabelT
-		GuiControl, 12:Enable, GoLabel
-		GuiControl, 12:Enable, Goto
-		GuiControl, 12:Enable, Gosub
-		GuiControl, 12:Disable, NewLabel
-	}
-	Else If (Type = cType50)
-	{
-		If (InStr(Proj_Labels, Details "|"))
-			GuiControl, 12:ChooseString, GoTimerLabel, %Details%
-		Else
-			GuiControl, 12:, GoTimerLabel, %Details%||
-		Action := StrReplace(Action, " ")
-		GuiControl, 12:, %Action%, 1
-		If Action in TurnOn,TurnOff,Delete
-		{
-			GuiControl, 12:Disable, TimerDelayE
-			GuiControl, 12:Disable, TimerDelayX
-			GuiControl, 12:Disable, TimerMsc
-			GuiControl, 12:Disable, TimerSec
-			GuiControl, 12:Disable, TimerMin
-		}
-		Else If (InStr(DelayX, "%"))
-			GuiControl, 12:, TimerDelayE, %DelayX%
-		Else
-			GuiControl, 12:, TimerDelayX, % StrReplace(DelayX, "-")
-	}
-	Else
-	{
-		StringReplace, Details, Details, `````,, %_x%, All
-		EscCom(true, Details)
-		Pars := GetPars(Details)
-		For i, v in Pars
-		{
-			Par%A_Index% := v
-			StringReplace, Par%A_Index%, Par%A_Index%, %_x%, `,, All
-		}
-		If (Type = cType7)
-		{
-			If (InStr(TimesX, "%"))
-				GuiControl, 12:, EdRept, %TimesX%
+		Case cType35:
+			GuiControl, 12:, NewLabel, %Details%
+			GuiControl, 12:, NewLabelT, 1
+			GuiControl, 12:, GoLabelT, 0
+			GuiControl, 12:Disable, GoLabelT
+			GuiControl, 12:Disable, GoLabel
+			GuiControl, 12:Disable, Goto
+			GuiControl, 12:Disable, Gosub
+			GuiControl, 12:Enable, NewLabel
+		Case cType36, cType37:
+			If (InStr(Proj_Labels, Details "|"))
+				GuiControl, 12:ChooseString, GoLabel, %Details%
 			Else
-				GuiControl, 12:, TimesL, %TimesX%
-			Par1 := ""
-			GoSub, LoopType
-		}
-		If (Type = cType38)
-		{
-			GuiControl, 12:, LRead, 1
-			GoSub, LoopType
-			GuiControl, 12:, LParamsFile, %Details%
-		}
-		If (Type = cType39)
-		{
-			GuiControl, 12:, LParse, 1
-			GoSub, LoopType
-			GuiControl, 12:, LParamsFile, %Par1%
-			GuiControl, 12:, Delim, %Par2%
-			GuiControl, 12:, Omit, %Par3%
-		}
-		If (Type = cType40)
-		{
-			GuiControl, 12:, LFilePattern, 1
-			GoSub, LoopType
-			GuiControl, 12:, LParamsFile, %Par1%
-			GuiControl, 12:, IncFiles, % InStr(Par2, "F") ? 1 : 0
-			GuiControl, 12:, IncFolders, % InStr(Par2, "D") ? 1 : 0
-			GuiControl, 12:, Recurse, % InStr(Par2, "R") ? 1 : 0
-		}
-		If (Type = cType41)
-		{
-			GuiControl, 12:, LRegistry, 1
-			GoSub, LoopType
-			GuiControl, 12:, LParamsFile, %Par1%
-			GuiControl, 12:, IncFiles, % InStr(Par2, "V") ? 1 : 0
-			GuiControl, 12:, IncFolders, % InStr(Par2, "K") ? 1 : 0
-			GuiControl, 12:, Recurse, % InStr(Par2, "R") ? 1 : 0
-		}
-		If (Type = cType45)
-		{
-			GuiControl, 12:, LFor, 1
-			GoSub, LoopType
-			GuiControl, 12:, LParamsFile, %Par1%
-			GuiControl, 12:, Delim, %Par2%
-			GuiControl, 12:, Omit, %Par3%
-		}
-		If (Type = cType51)
-		{
-			GuiControl, 12:, LWhile, 1
-			GoSub, LoopType
-			GuiControl, 12:, LParamsFile, %Details%
-		}
-		If (Target != "")
-		{
-			GuiControl, 12:, LUntil, 1
-			GoSub, LoopType
-			GuiControl, 12:Enable, UntilExpr
-			GuiControl, 12:, UntilExpr, %Target%
-		}
-		GoSub, ClearPars
+				GuiControl, 12:, GoLabel, %Details%||
+			GuiControl, 12:, %Type%, 1
+			GuiControl, 12:Disable, NewLabelT
+			GuiControl, 12:Enable, GoLabel
+			GuiControl, 12:Enable, Goto
+			GuiControl, 12:Enable, Gosub
+			GuiControl, 12:Disable, NewLabel
+		Case cType50:
+			If (InStr(Proj_Labels, Details "|"))
+				GuiControl, 12:ChooseString, GoTimerLabel, %Details%
+			Else
+				GuiControl, 12:, GoTimerLabel, %Details%||
+			Action := StrReplace(Action, " ")
+			GuiControl, 12:, %Action%, 1
+			If Action in TurnOn,TurnOff,Delete
+			{
+				GuiControl, 12:Disable, TimerDelayE
+				GuiControl, 12:Disable, TimerDelayX
+				GuiControl, 12:Disable, TimerMsc
+				GuiControl, 12:Disable, TimerSec
+				GuiControl, 12:Disable, TimerMin
+			}
+			Else If (InStr(DelayX, "%"))
+				GuiControl, 12:, TimerDelayE, %DelayX%
+			Else
+				GuiControl, 12:, TimerDelayX, % StrReplace(DelayX, "-")
+		Default:
+			StringReplace, Details, Details, `````,, %_x%, All
+			EscCom(true, Details)
+			Pars := GetPars(Details)
+			For i, v in Pars
+			{
+				Par%A_Index% := v
+				StringReplace, Par%A_Index%, Par%A_Index%, %_x%, `,, All
+			}
+			Switch Type
+			{
+				Case cType7:
+					If (InStr(TimesX, "%"))
+						GuiControl, 12:, EdRept, %TimesX%
+					Else
+						GuiControl, 12:, TimesL, %TimesX%
+					Par1 := ""
+					GoSub, LoopType
+				Case cType38:
+					GuiControl, 12:, LRead, 1
+					GoSub, LoopType
+					GuiControl, 12:, LParamsFile, %Details%
+				Case cType39:
+					GuiControl, 12:, LParse, 1
+					GoSub, LoopType
+					GuiControl, 12:, LParamsFile, %Par1%
+					GuiControl, 12:, Delim, %Par2%
+					GuiControl, 12:, Omit, %Par3%
+				Case cType40:
+					GuiControl, 12:, LFilePattern, 1
+					GoSub, LoopType
+					GuiControl, 12:, LParamsFile, %Par1%
+					GuiControl, 12:, IncFiles, % InStr(Par2, "F") ? 1 : 0
+					GuiControl, 12:, IncFolders, % InStr(Par2, "D") ? 1 : 0
+					GuiControl, 12:, Recurse, % InStr(Par2, "R") ? 1 : 0
+				Case cType41:
+					GuiControl, 12:, LRegistry, 1
+					GoSub, LoopType
+					GuiControl, 12:, LParamsFile, %Par1%
+					GuiControl, 12:, IncFiles, % InStr(Par2, "V") ? 1 : 0
+					GuiControl, 12:, IncFolders, % InStr(Par2, "K") ? 1 : 0
+					GuiControl, 12:, Recurse, % InStr(Par2, "R") ? 1 : 0
+				Case cType45:
+					GuiControl, 12:, LFor, 1
+					GoSub, LoopType
+					GuiControl, 12:, LParamsFile, %Par1%
+					GuiControl, 12:, Delim, %Par2%
+					GuiControl, 12:, Omit, %Par3%
+				Case cType51:
+					GuiControl, 12:, LWhile, 1
+					GoSub, LoopType
+					GuiControl, 12:, LParamsFile, %Details%
+				Default:
+					If (Target != "")
+					{
+						GuiControl, 12:, LUntil, 1
+						GoSub, LoopType
+						GuiControl, 12:Enable, UntilExpr
+						GuiControl, 12:, UntilExpr, %Target%
+					}
+			}
+			GoSub, ClearPars
 	}
 	GuiControl, 12:Enable, LoopApply
 	GuiControl, 12:Enable, GotoApply
@@ -7021,44 +7003,44 @@ If (s_Caller = "Edit")
 	GoSub, WinCom
 	If (WinCom = "WinSetTitle")
 		EscCom(true, Details)
-	If (Type = "WinSet")
+	Switch Type
 	{
-		WCmd := RegExReplace(Details, "(^\w*).*", "$1")
-	,	Values := RegExReplace(Details, "^\w*, ?(.*)", "$1")
-		GuiControl, 11:ChooseString, WCmd, %WCmd%
-		SetTitleMatchMode, 3
-		If (WCmd = "AlwaysOnTop")
-			GuiControl, 11:, % (Values = "On") ? "Aot2" : (Values = "Off") ? "AoT3" : "", 1
-		Else If (WCmd = "Transparent")
-		{
-			GuiControl, 11:, N, %Values%
-			GuiControl, 11:, TValue, %Values%
-		}
-		Else If (InStr(Details, ","))
-			GuiControl, 11:, Value, %Values%
-		SetTitleMatchMode, 2
-		GoSub, WCmd
+		Case "WinSet":
+			WCmd := RegExReplace(Details, "(^\w*).*", "$1")
+		,	Values := RegExReplace(Details, "^\w*, ?(.*)", "$1")
+			GuiControl, 11:ChooseString, WCmd, %WCmd%
+			SetTitleMatchMode, 3
+			If (WCmd = "AlwaysOnTop")
+				GuiControl, 11:, % (Values = "On") ? "Aot2" : (Values = "Off") ? "AoT3" : "", 1
+			Else If (WCmd = "Transparent")
+			{
+				GuiControl, 11:, N, %Values%
+				GuiControl, 11:, TValue, %Values%
+			}
+			Else If (InStr(Details, ","))
+				GuiControl, 11:, Value, %Values%
+			SetTitleMatchMode, 2
+			GoSub, WCmd
+		Case "WinMove":
+			Pars := GetPars(Details)
+			For i, v in Pars
+				Par%A_Index% := v
+			GuiControl, 11:, PosX, %Par1%
+			GuiControl, 11:, PosY, %Par2%
+			GuiControl, 11:, SizeX, %Par3%
+			GuiControl, 11:, SizeY, %Par4%
+		Default:
+			If (InStr(WinCom, "Get"))
+			{
+				Pars := GetPars(Details)
+				For i, v in Pars
+					Par%A_Index% := v
+				GuiControl, 11:, VarName, %Par1%
+				GuiControl, 11:ChooseString, WCmd, %Par2%
+			}
+			Else
+				GuiControl, 11:, Value, %Details%
 	}
-	Else If (Type = "WinMove")
-	{
-		Pars := GetPars(Details)
-		For i, v in Pars
-			Par%A_Index% := v
-		GuiControl, 11:, PosX, %Par1%
-		GuiControl, 11:, PosY, %Par2%
-		GuiControl, 11:, SizeX, %Par3%
-		GuiControl, 11:, SizeY, %Par4%
-	}
-	Else If (InStr(WinCom, "Get"))
-	{
-		Pars := GetPars(Details)
-		For i, v in Pars
-			Par%A_Index% := v
-		GuiControl, 11:, VarName, %Par1%
-		GuiControl, 11:ChooseString, WCmd, %Par2%
-	}
-	Else
-		GuiControl, 11:, Value, %Details%
 	GuiControl, 11:, Title, %Window%
 	GuiControl, 11:Enable, WinApply
 }
@@ -7430,7 +7412,7 @@ If (s_Caller = "Edit")
 		GuiControl, 19:, HScale, %HScale%
 		GoSub, MakePrev
 	}
-	If (Type = cType15)
+	Else If (Type = cType15)
 	{
 		color := Det5, Fast := InStr(Det7, "Fast") ? 1 : 0, RGB := InStr(Det7, "RGB") ? 1 : 0
 		GuiControl, 19:, PixelS, 1
@@ -8972,42 +8954,36 @@ If (s_Caller = "Edit")
 ,	EscCom(true, Details, Target)
 ,	ControlCmd := Type
 	GuiControl, 23:ChooseString, ControlCmd, %ControlCmd%
-	If (Type = cType24)
+	Switch Type
 	{
-		Details := StrReplace(Details, _x, ",")
-		GuiControl, 23:ChooseString, Cmd, % cmd := RegExReplace(Details, "(^\w*).*", "$1")
-		GuiControl, 23:, Value, % RegExReplace(Details, "^\w*, ?(.*)", "$1")
-		GoSub, Cmd
-		SBShowTip("Control")
-	}
-	Else If (Type = cType10)
-	{
-		GoSub, CtlCmd
-		Details := StrReplace(Details, _x, ",")
-		GuiControl, 23:, Value, %Details%
-	}
-	Else If ((Type = cType23)	|| (Type = cType27)
-	|| (Type = cType28) || (Type = cType31))
-	{
-		Pars := GetPars(Details)
-		For i, v in Pars
-			Par%A_Index% := StrReplace(v, _x, ",")
-		GoSub, CtlCmd
-		GuiControl, 23:, VarName, %Par1%
-		GuiControl, 23:ChooseString, Cmd, %Par2%
-		GuiControl, 23:, Value, %Par3%
-		GoSub, Cmd
-	}
-	Else If (Type = cType26)
-	{
-		GoSub, CtlCmd
-		Pars := GetPars(Details)
-		For i, v in Pars
-			Par%A_Index% := StrReplace(v, _x, ",")
-		GuiControl, 23:, PosX, %Par1%
-		GuiControl, 23:, PosY, %Par2%
-		GuiControl, 23:, SizeX, %Par3%
-		GuiControl, 23:, SizeY, %Par4%
+		Case cType24:
+			Details := StrReplace(Details, _x, ",")
+			GuiControl, 23:ChooseString, Cmd, % cmd := RegExReplace(Details, "(^\w*).*", "$1")
+			GuiControl, 23:, Value, % RegExReplace(Details, "^\w*, ?(.*)", "$1")
+			GoSub, Cmd
+			SBShowTip("Control")
+		Case cType10:
+			GoSub, CtlCmd
+			Details := StrReplace(Details, _x, ",")
+			GuiControl, 23:, Value, %Details%
+		Case cType23, cType27, cType28, cType31:
+			Pars := GetPars(Details)
+			For i, v in Pars
+				Par%A_Index% := StrReplace(v, _x, ",")
+			GoSub, CtlCmd
+			GuiControl, 23:, VarName, %Par1%
+			GuiControl, 23:ChooseString, Cmd, %Par2%
+			GuiControl, 23:, Value, %Par3%
+			GoSub, Cmd
+		Case cType26:
+			GoSub, CtlCmd
+			Pars := GetPars(Details)
+			For i, v in Pars
+				Par%A_Index% := StrReplace(v, _x, ",")
+			GuiControl, 23:, PosX, %Par1%
+			GuiControl, 23:, PosY, %Par2%
+			GuiControl, 23:, SizeX, %Par3%
+			GuiControl, 23:, SizeY, %Par4%
 	}
 	GuiControl, 23:, DefCt, %Target%
 	GuiControl, 23:, Title, %Window%
@@ -10996,7 +10972,7 @@ If (StopIt)
 	return
 }
 If (aHK_On := Playback(aHK_Timer%nMatch%, aHK_Label%nMatch%))
-	GoSub, f_RunMacro
+	SetTimer, f_RunMacro, -1
 FreeMemory()
 return
 
@@ -11064,7 +11040,7 @@ If (!(PlayHK) && !(HideWin) && (HideMainWin))
 Else
 	WinMinimize, ahk_id %PMCWinID%
 aHK_On := [A_List]
-GoSub, f_RunMacro
+SetTimer, f_RunMacro, -1
 return
 
 PlayStart:
@@ -11227,7 +11203,7 @@ return
 
 OSPlayOn:
 aHK_On := [OSHK]
-Gosub, f_RunMacro
+SetTimer, f_RunMacro, -1
 return
 
 OSClear:
@@ -12603,60 +12579,67 @@ GoSub, ClearPars
 LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
 If (Action = "[LoopEnd]")
 	return
-If Type in %cType7%,%cType38%,%cType39%,%cType40%,%cType41%,%cType45%,%cType51%
-	Goto, EditLoop
-If Type in %cType15%,%cType16%
-	Goto, EditImage
-If (Type = cType21)
-	Goto, EditVar
-If ((Type = cType44) || (Type = cType46))
-	Goto, EditFunc
-If (Type = cType47)
-	Goto, EditUserFunc
-If (Type = cType48)
-	Goto, EditParam
-If (Type = cType49)
-	Goto, EditReturn
-If (Action = "[Control]")
-	Goto, EditControl
-If ((Details = "EndIf") || (Details = "Else") || (Action = "[LoopEnd]"))
-	return
-If (Type = cType17)
-	Goto, EditSt
-If Type in %cType18%,%cType19%
-	Goto, EditMsg
-If ((Type = cType20) && (Action = "[KeyWait]"))
-	Goto, EditKeyWait
-If ((Type = cType11) || (Type = cType14) || InStr(FileCmdList, Type "|"))
-	Goto, EditRun
-If Type in %cType29%,%cType30%
-	return
-If Type in %cType32%,%cType33%
-	Goto, EditIECom
-If Type in %cType34%,%cType43%
-	Goto, EditComInt
-If (InStr(Type, "Win"))
-	Goto, EditWindow
-If Action contains %MAction1%,%MAction2%,%MAction3%,%MAction4%,%MAction5%,%MAction6%
-	Goto, EditMouse
-If (InStr(Action, "[Text]"))
-	Goto, EditText
-If (Type = cType5)
-	Goto, EditSleep
-If (Type = cType6)
-	Goto, EditMsgBox
-If (Type = cType42)
-	Goto, EditComm
-If Type in %cType35%,%cType36%,%cType37%
-	Goto, EditGoto
-If (Type = cType50)
-	Goto, EditTimer
-If (Type = cType52)
-	Goto, EditEmail
-If (Type = cType53)
-	Goto, EditDownload
-If Type in %cType54%,%cType55%
-	Goto, EditZip
+Switch Type
+{
+	Case cType7, cType38, cType39, cType40, cType41, cType45, cType51:
+		Goto, EditLoop
+	Case cType15, cType16:
+		Goto, EditImage
+	Case cType21:
+		Goto, EditVar
+	Case cType44, cType46:
+		Goto, EditFunc
+	Case cType47:
+		Goto, EditUserFunc
+	Case cType48:
+		Goto, EditParam
+	Case cType49:
+		Goto, EditReturn
+	Case cType17:
+		Goto, EditSt
+	Case cType18, cType19:
+		Goto, EditMsg
+	Case cType20:
+		If (Action = "[KeyWait]")
+			Goto, EditKeyWait
+	Case cType11, cType14:
+		Goto, EditRun
+	Case cType29, cType30:
+		return
+	Case cType32, cType33:
+		Goto, EditIECom
+	Case cType34, cType43:
+		Goto, EditComInt
+	Case cType5:
+		Goto, EditSleep
+	Case cType6:
+		Goto, EditMsgBox
+	Case cType42:
+		Goto, EditComm
+	Case cType35, cType36, cType37:
+		Goto, EditGoto
+	Case cType50:
+		Goto, EditTimer
+	Case cType52:
+		Goto, EditEmail
+	Case cType53:
+		Goto, EditDownload
+	Case cType54, cType55:
+		Goto, EditZip
+	Default:
+		If (Action = "[Control]")
+			Goto, EditControl
+		If ((Details = "EndIf") || (Details = "Else") || (Action = "[LoopEnd]"))
+			return
+		If (InStr(FileCmdList, Type "|"))
+			Goto, EditRun
+		If (InStr(Type, "Win"))
+			Goto, EditWindow
+		If Action contains %MAction1%,%MAction2%,%MAction3%,%MAction4%,%MAction5%,%MAction6%
+			Goto, EditMouse
+		If (InStr(Action, "[Text]"))
+			Goto, EditText
+}
 Gui, 15:+owner1 -MinimizeBox +HwndCmdWin
 Gui, 1:+Disabled
 Gui, 15:Add, GroupBox, vSGroup Section xm W280 H130
@@ -12796,9 +12779,9 @@ If (CSend = 1)
 	Target := DefCt
 	If (Type = cType1)
 		Type := cType2
-	If (Type = cType3)
+	Else If (Type = cType3)
 		Type := cType4
-	If (Type = cType8)
+	Else If (Type = cType8)
 		Type := cType9
 }
 Else
@@ -12806,9 +12789,9 @@ Else
 	Target := "", Window := ""
 	If (Type = cType2)
 		Type := cType1
-	If (Type = cType4)
+	Else If (Type = cType4)
 		Type := cType3
-	If (Type = cType9)
+	Else If (Type = cType9)
 		Type := cType8
 }
 If ((Type = cType5) || (Type = cType6))
@@ -13312,7 +13295,7 @@ IfWinExist
 	GoSub, FindClose
 Gui, 18:+owner1 +ToolWindow
 Gui, chMacro:Default
-Gui, 18:Add, Tab2, Section W400 H365 vFindTabC, %t_Lang140%|%t_Lang141%
+Gui, 18:Add, Tab3, Section W400 H365 vFindTabC, %t_Lang140%|%t_Lang141%
 Gui, 18:Add, Text, -Wrap R1 ys+40 xs+10 W150 Right, %t_Lang066%:
 Gui, 18:Add, DDL, yp-5 x+10 W120 vSearchCol gSearchCol AltSubmit, %w_Lang031%||%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
 Gui, 18:Add, GroupBox, ys+60 xs+10 W380 H130, %t_Lang208%:
@@ -14030,6 +14013,7 @@ DelayG := 0
 OnScCtrl := 1
 ShowStep := 1
 HideMainWin := 1
+DontShowAdm := 0
 DontShowPb := 0
 DontShowRec := 0
 DontShowEdt := 0
@@ -14383,6 +14367,7 @@ IniWrite, %DelayG%, %IniFilePath%, Options, DelayG
 IniWrite, %OnScCtrl%, %IniFilePath%, Options, OnScCtrl
 IniWrite, %ShowStep%, %IniFilePath%, Options, ShowStep
 IniWrite, %HideMainWin%, %IniFilePath%, Options, HideMainWin
+IniWrite, %DontShowAdm%, %IniFilePath%, Options, DontShowAdm
 IniWrite, %DontShowPb%, %IniFilePath%, Options, DontShowPb
 IniWrite, %DontShowRec%, %IniFilePath%, Options, DontShowRec
 IniWrite, %DontShowEdt%, %IniFilePath%, Options, DontShowEdt

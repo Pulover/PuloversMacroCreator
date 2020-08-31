@@ -66,520 +66,462 @@
 		}
 		If ((IsChecked != A_Index) && (!CommentUnchecked))
 			continue
-		If (Type = cType48)
+		Switch Type
 		{
-			If (IsChecked != A_Index)
-				continue
-			FuncParams .= LTrim(Target " " Step ", "), RowData := ""
-		}
-		Else If (Type = cType47)
-		{
-			IsFunction := true
-		,	RowData := "`n" Step "(" RTrim(FuncParams, ", ") ")"
-			If (Comment != "")
-				RowData .= "  " "; " Comment
-			RowData .= "`n{"
-			StringSplit, FuncVariables, Window, /, %A_Space%
-			If (FuncVariables1 != "")
-				RowData .= "`n" ((Target = "local") ? "global " : "local ") . FuncVariables1
-			Else If (Target = "global")
-				RowData .= "`nglobal"
-			If (FuncVariables2 != "")
-				RowData .= "`n" "static " . FuncVariables2
-		}
-		Else If (Type = cType49)
-			RowData := "`nreturn " Step
-		Else If ((Type = cType2) || (Type = cType9) || (Type = cType10))
-		{
-			If (RegExMatch(Step, "^\s*%\s"))
-				Step := StrReplace(Step, "``,", ",")
-			If ((ConvertBreaks) && (InStr(Step, "``n")))
-			{
-				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "``,", ",")
-			,	Step := "`n(LTrim`n" Step "`n)"
-			}
-			If (((TimesX > 1) || InStr(TimesX, "%")) && (Action != "[Text]"))
-				Step := RegExReplace(Step, "{\w+\K(})", " " TimesX "$1")
-			RowData := "`n" Type ", " Target ", " Step ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If (TimesX > 1 || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType4)
-		{
-			RowData := "`n" Type ", " Target ", " Window ",, " Step
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType5)
-		{
-			RowData := "`n" Type ", " DelayX
-			If (Comment != "")
-				RowData .= "  " "; " Comment
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType6)
-		{
-			If (RegExMatch(Step, "^\s*%\s"))
-				Step := StrReplace(Step, "``,", ",")
-			If ((ConvertBreaks) && (InStr(Step, "``n")))
-			{
-				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "``,", ",")
-			,	Step := "`n(LTrim`n" Step "`n)"
-			}
-			If (!RegExMatch(Window, "^\s*%\s"))
-				Window := StrReplace(Window, "```,", "`````,")
-			RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
-			If (Comment != "")
-				RowData .= "  " "; " Comment
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If ((Type = cType7) || (Type = cType38) || (Type = cType39)
-		|| (Type = cType40) || (Type = cType41) || (Type = cType45) || (Type = cType51))
-		{
-			Loop, 3
-				Stp%A_Index% := ""
-			Step := StrReplace(Step, "````,", _x)
-		,	Step := StrReplace(Step, "``,", ",")
-			If (Action = "[LoopStart]")
-			{
-				If (Type = cType7)
-					RowData := "`n" Type ((TimesX = 0) ? "" : ", " TimesX)
-				Else If (Type = cType45)
+			Case cType48:
+				If (IsChecked != A_Index)
+					continue
+				FuncParams .= LTrim(Target " " Step ", "), RowData := ""
+			Case cType47:
+				IsFunction := true
+			,	RowData := "`n" Step "(" RTrim(FuncParams, ", ") ")"
+				If (Comment != "")
+					RowData .= "  " "; " Comment
+				RowData .= "`n{"
+				StringSplit, FuncVariables, Window, /, %A_Space%
+				If (FuncVariables1 != "")
+					RowData .= "`n" ((Target = "local") ? "global " : "local ") . FuncVariables1
+				Else If (Target = "global")
+					RowData .= "`nglobal"
+				If (FuncVariables2 != "")
+					RowData .= "`n" "static " . FuncVariables2
+			Case cType49:
+				RowData := "`nreturn " Step
+			Case cType2, cType9, cType10:
+				If (RegExMatch(Step, "^\s*%\s"))
+					Step := StrReplace(Step, "``,", ",")
+				If ((ConvertBreaks) && (InStr(Step, "``n")))
 				{
-					StringSplit, Stp, Step, `,, %A_Space%``
-					RowData := "`nFor " Stp2 (Stp3 != "" ? ", " Stp3 : "") " in " Stp1
+					Step := StrReplace(Step, "``n", "`n")
+				,	Step := StrReplace(Step, "``,", ",")
+				,	Step := "`n(LTrim`n" Step "`n)"
 				}
+				If (((TimesX > 1) || InStr(TimesX, "%")) && (Action != "[Text]"))
+					Step := RegExReplace(Step, "{\w+\K(})", " " TimesX "$1")
+				RowData := "`n" Type ", " Target ", " Step ", " Window
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If (TimesX > 1 || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType4:
+				RowData := "`n" Type ", " Target ", " Window ",, " Step
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType5:
+				RowData := "`n" Type ", " DelayX
+				If (Comment != "")
+					RowData .= "  " "; " Comment
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType6:
+				If (RegExMatch(Step, "^\s*%\s"))
+					Step := StrReplace(Step, "``,", ",")
+				If ((ConvertBreaks) && (InStr(Step, "``n")))
+				{
+					Step := StrReplace(Step, "``n", "`n")
+				,	Step := StrReplace(Step, "``,", ",")
+				,	Step := "`n(LTrim`n" Step "`n)"
+				}
+				If (!RegExMatch(Window, "^\s*%\s"))
+					Window := StrReplace(Window, "```,", "`````,")
+				RowData := "`n" Type ", " Target ", " Window ", " Step ((DelayX > 0) ? ", " DelayX : "")
+				If (Comment != "")
+					RowData .= "  " "; " Comment
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType7, cType38, cType39, cType40, cType41, cType45, cType51:
+				Loop, 3
+					Stp%A_Index% := ""
+				Step := StrReplace(Step, "````,", _x)
+			,	Step := StrReplace(Step, "``,", ",")
+				If (Action = "[LoopStart]")
+				{
+					If (Type = cType7)
+						RowData := "`n" Type ((TimesX = 0) ? "" : ", " TimesX)
+					Else If (Type = cType45)
+					{
+						StringSplit, Stp, Step, `,, %A_Space%``
+						RowData := "`nFor " Stp2 (Stp3 != "" ? ", " Stp3 : "") " in " Stp1
+					}
+					Else
+					{
+						Type := StrReplace(Type, "FilePattern", ", Files")
+					,	Type := StrReplace(Type, "Parse", ", Parse")
+					,	Type := StrReplace(Type, "Read", ", Read")
+					,	Type := StrReplace(Type, "Registry", ", Reg")
+					,	RowData := "`n" Type . (Type = cType51 ? " " : ", ") . RTrim(Step, ", ")
+						If (SubStr(RowData, 0) = "``")
+							RowData := SubStr(RowData, 1, StrLen(RowData)-1)
+					}
+					UntilArray.Push(Target)
+				}
+				If (Comment != "")
+					RowData .= "  " "; " Comment
+				RowData .= "`n{"
+				If (Action = "[LoopEnd]")
+				{
+					RowData := "`n}"
+				,	Target := UntilArray.Pop()
+					If (Target != "")
+						RowData .= "`nUntil, " Target
+				}
+				If (Type = cType45)
+					RowData := StrReplace(RowData, _x, ",")
+				Else
+					RowData := StrReplace(RowData, _x, "``,")
+				If (Type = cType39)
+					RowData := StrReplace(RowData, "``,", ",")
+			Case cType12:
+				If ((ConvertBreaks) && (InStr(Step, "``n")))
+				{
+					Step := StrReplace(Step, "``n", "`n")
+				,	Step := StrReplace(Step, "``,", ",")
+				,	Step := "`n(LTrim`n" Step "`n)"
+				}
+				RowData := "`n" ((Step != "") ? "Clipboard := """"`nClipboard := " CheckExp(Step) "`nSleep, 1" : "")
+				If ((Target != "") && (Step != ""))
+					RowData .= "`nControlSend, " Target ", ^v, " Window
+				Else
+					RowData .= "`nSend, ^v"
+				RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType15, cType16:
+				Loop, 5
+					Act%A_Index% := ""
+				Loop, 5
+					Stp%A_Index% := ""
+				Loop, Parse, Action, `,,%A_Space%
+					Act%A_Index% := A_LoopField
+				OutVarX := Act3 != "" ? Act3 : "FoundX"
+			,	OutVarY := Act4 != "" ? Act4 : "FoundY"
+			,	RowData := "`nCoordMode, Pixel, " Window
+			,	RowData .= "`n" Type ", " OutVarX ", " OutVarY ", " Step
+				If ((Type = cType16) && (Act5))
+				{
+					StringSplit, Stp, Step, `,, %A_Space%%A_Tab%
+					RowData .= "`nCenterImgSrchCoords(" CheckExp(Stp5) ", " OutVarX ", " OutVarY ")"
+				}
+				If (Act1 != "Continue")
+				{
+					RowData .= "`nIf ErrorLevel = 0"
+					If (Act1 = "Break")
+						RowData .= "`n`tBreak"
+					Else If (Act1 = "Stop")
+						RowData .= "`n`tReturn"
+					Else If (Act1 = "Move")
+						RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "%, 0"
+					Else If (InStr(Act1, "Click"))
+						RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "% " StrReplace(Act1, " Click") ", 1"
+					Else If (Act1 = "Prompt")
+						RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang036 " %" OutVarX "%x%" OutVarY "%.``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
+					Else If (Act1 = "Play Sound")
+						RowData .= "`n`tSoundBeep"
+				}
+				If (Act2 != "Continue")
+				{
+					RowData .= "`nIf ErrorLevel"
+					If (Act2 = "Break")
+						RowData .= "`n`tBreak"
+					Else If (Act2 = "Stop")
+						RowData .= "`n`tReturn"
+					Else If (Act2 = "Prompt")
+						RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang037 "``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
+					Else If (Act2 = "Play Sound")
+						RowData .= "`n`tLoop, 2`n`t`tSoundBeep"
+				}
+				RowData := Add_CD(RowData, Comment, DelayX)
+				If (Target = "UntilFound")
+					RowData := "`nLoop" (TimesX != 1 ? ", " TimesX : "") "`n{" RowData "`n}`nUntil ErrorLevel = 0"
+				Else If (Target = "UntilNotFound")
+					RowData := "`nLoop" (TimesX != 1 ? ", " TimesX : "") "`n{" RowData "`n}`nUntil ErrorLevel"
+				Else If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType17:
+				If (Step = "Else")
+				{
+					RowData := "`n}`nElse"
+					If (Comment != "")
+						RowData .= "  " "; " Comment
+					RowData .= "`n{"
+				}
+				Else If (Step = "EndIf")
+					RowData := "`n}"
 				Else
 				{
-					Type := StrReplace(Type, "FilePattern", ", Files")
-				,	Type := StrReplace(Type, "Parse", ", Parse")
-				,	Type := StrReplace(Type, "Read", ", Read")
-				,	Type := StrReplace(Type, "Registry", ", Reg")
-				,	RowData := "`n" Type . (Type = cType51 ? " " : ", ") . RTrim(Step, ", ")
-					If (SubStr(RowData, 0) = "``")
-						RowData := SubStr(RowData, 1, StrLen(RowData)-1)
+					IfStReplace(Action, Step)
+				,	CompareParse(Step, VarName, Oper, VarValue)
+					If ((Oper = "between") || (Oper = "not between"))
+					{
+						_Val1 := "", _Val2 := ""
+					,	VarValue := StrReplace(VarValue, "``n", "`n")
+						StringSplit, _Val, VarValue, `n, %A_Space%%A_Tab%
+						Step := VarName " " Oper " " _Val1 " and " _Val2
+					}
+					RowData := "`n" Action " " Step
+				,	RowData := RTrim(RowData)
+					If (Comment != "")
+						RowData .= "  " "; " Comment
+					RowData .= "`n{"
 				}
-				UntilArray.Push(Target)
-			}
-			If (Comment != "")
-				RowData .= "  " "; " Comment
-			RowData .= "`n{"
-			If (Action = "[LoopEnd]")
-			{
-				RowData := "`n}"
-			,	Target := UntilArray.Pop()
-				If (Target != "")
-					RowData .= "`nUntil, " Target
-			}
-			If (Type = cType45)
-				RowData := StrReplace(RowData, _x, ",")
-			Else
-				RowData := StrReplace(RowData, _x, "``,")
-			If (Type = cType39)
-				RowData := StrReplace(RowData, "``,", ",")
-		}
-		Else If (Type = cType12)
-		{
-			If ((ConvertBreaks) && (InStr(Step, "``n")))
-			{
-				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "``,", ",")
-			,	Step := "`n(LTrim`n" Step "`n)"
-			}
-			RowData := "`n" ((Step != "") ? "SavedClip := ClipboardAll`nClipboard := """"`nClipboard := " CheckExp(Step) "`nSleep, 333" : "")
-			If ((Target != "") && (Step != ""))
-				RowData .= "`nControlSend, " Target ", ^v, " Window
-			Else
-				RowData .= "`nSend, ^v"
-			RowData := Add_CD(RowData, Comment, DelayX)
-			If (Step != "")
-				RowData .= "`nClipboard := SavedClip`nSavedClip := """""
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If ((Type = cType15) || (Type = cType16))
-		{
-			Loop, 5
-				Act%A_Index% := ""
-			Loop, 5
-				Stp%A_Index% := ""
-			Loop, Parse, Action, `,,%A_Space%
-				Act%A_Index% := A_LoopField
-			OutVarX := Act3 != "" ? Act3 : "FoundX"
-		,	OutVarY := Act4 != "" ? Act4 : "FoundY"
-		,	RowData := "`nCoordMode, Pixel, " Window
-		,	RowData .= "`n" Type ", " OutVarX ", " OutVarY ", " Step
-			If ((Type = cType16) && (Act5))
-			{
-				StringSplit, Stp, Step, `,, %A_Space%%A_Tab%
-				RowData .= "`nCenterImgSrchCoords(" CheckExp(Stp5) ", " OutVarX ", " OutVarY ")"
-			}
-			If (Act1 != "Continue")
-			{
-				RowData .= "`nIf ErrorLevel = 0"
-				If (Act1 = "Break")
-					RowData .= "`n`tBreak"
-				Else If (Act1 = "Stop")
-					RowData .= "`n`tReturn"
-				Else If (Act1 = "Move")
-					RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "%, 0"
-				Else If (InStr(Act1, "Click"))
-					RowData .= "`n`tClick, %" OutVarX "%, %" OutVarY "% " StrReplace(Act1, " Click") ", 1"
-				Else If (Act1 = "Prompt")
-					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang036 " %" OutVarX "%x%" OutVarY "%.``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
-				Else If (Act1 = "Play Sound")
-					RowData .= "`n`tSoundBeep"
-			}
-			If (Act2 != "Continue")
-			{
-				RowData .= "`nIf ErrorLevel"
-				If (Act2 = "Break")
-					RowData .= "`n`tBreak"
-				Else If (Act2 = "Stop")
-					RowData .= "`n`tReturn"
-				Else If (Act2 = "Prompt")
-					RowData .= "`n{`nMsgBox, 49, " d_Lang035 ", " d_Lang037 "``n" d_Lang038 "`nIfMsgBox, Cancel`n`tReturn`n}"
-				Else If (Act2 = "Play Sound")
-					RowData .= "`n`tLoop, 2`n`t`tSoundBeep"
-			}
-			RowData := Add_CD(RowData, Comment, DelayX)
-			If (Target = "UntilFound")
-				RowData := "`nLoop" (TimesX != 1 ? ", " TimesX : "") "`n{" RowData "`n}`nUntil ErrorLevel = 0"
-			Else If (Target = "UntilNotFound")
-				RowData := "`nLoop" (TimesX != 1 ? ", " TimesX : "") "`n{" RowData "`n}`nUntil ErrorLevel"
-			Else If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType17)
-		{
-			If (Step = "Else")
-			{
-				RowData := "`n}`nElse"
+			Case cType18, cType19:
+				Loop, Parse, Step, `,
+					Par%A_Index% := A_LoopField
+				RowData := "`n" Type ", " Step ", " Target ", " Window
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType20:
+				if (Action = "[KeyWait]")
+				{
+					RowData := "`n" Type ", " Step
+				,	RowData .= "`n" Type ", " Step ", D"
+					If (DelayX > 0)
+						RowData .= " T" Round(DelayX/1000, 2)
+					Else If (InStr(DelayX, "%"))
+						RowData .= " T" DelayX
+					If (Comment != "")
+						RowData .= "  " "; " Comment
+					If ((TimesX > 1) || InStr(TimesX, "%"))
+						RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+				}
+			Case cType21, cType44, cType46:
+				AssignParse(Step, VarName, Oper, VarValue)
+				If (Type = cType21)
+				{
+					If VarValue is not number
+					{
+						If (Target != "Expression")
+							VarValue := CheckExp(VarValue, 1)
+					}
+					If ((ConvertBreaks) && (InStr(VarValue, "``n")))
+					{
+						VarValue := StrReplace(VarValue, "``n", "`n")
+					,	VarValue := StrReplace(VarValue, "``,", ",")
+					,	VarValue := "`n(LTrim`n" VarValue "`n)"
+					}
+					Step := VarName " " Oper " " VarValue
+				}
+				Else If (Type = cType46)
+					Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Target "." Action "(" ((VarValue = """") ? "" : VarValue) ")"
+				Else
+					Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """") ? "" : VarValue) ")"
+				RowData := "`n" Step
 				If (Comment != "")
 					RowData .= "  " "; " Comment
-				RowData .= "`n{"
-			}
-			Else If (Step = "EndIf")
-				RowData := "`n}"
-			Else
-			{
-				IfStReplace(Action, Step)
-			,	CompareParse(Step, VarName, Oper, VarValue)
-				If ((Oper = "between") || (Oper = "not between"))
+			Case cType22:
+				If (RegExMatch(Step, "^\s*%\s"))
+					Step := StrReplace(Step, "``,", ",")
+				If ((ConvertBreaks) && (InStr(Step, "``n")))
 				{
-					_Val1 := "", _Val2 := ""
-				,	VarValue := StrReplace(VarValue, "``n", "`n")
-					StringSplit, _Val, VarValue, `n, %A_Space%%A_Tab%
-					Step := VarName " " Oper " " _Val1 " and " _Val2
+					Step := StrReplace(Step, "``n", "`n")
+				,	Step := StrReplace(Step, "``,", ",")
+				,	Step := "`n(LTrim`n" Step "`n)"
 				}
-				RowData := "`n" Action " " Step
-			,	RowData := RTrim(RowData)
-				If (Comment != "")
-					RowData .= "  " "; " Comment
-				RowData .= "`n{"
-			}
-		}
-		Else If ((Type = cType18) || (Type = cType19))
-		{
-			Loop, Parse, Step, `,
-				Par%A_Index% := A_LoopField
-			RowData := "`n" Type ", " Step ", " Target ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If ((Type = cType20) && (Action = "[KeyWait]"))
-		{
-			RowData := "`n" Type ", " Step
-		,	RowData .= "`n" Type ", " Step ", D"
-			If (DelayX > 0)
-				RowData .= " T" Round(DelayX/1000, 2)
-			Else If (InStr(DelayX, "%"))
-				RowData .= " T" DelayX
-			If (Comment != "")
-				RowData .= "  " "; " Comment
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If ((Type = cType21) || (Type = cType44) || (Type = cType46))
-		{
-			AssignParse(Step, VarName, Oper, VarValue)
-			If (Type = cType21)
-			{
-				If VarValue is not number
-				{
-					If (Target != "Expression")
-						VarValue := CheckExp(VarValue, 1)
-				}
-				If ((ConvertBreaks) && (InStr(VarValue, "``n")))
-				{
-					VarValue := StrReplace(VarValue, "``n", "`n")
-				,	VarValue := StrReplace(VarValue, "``,", ",")
-				,	VarValue := "`n(LTrim`n" VarValue "`n)"
-				}
-				Step := VarName " " Oper " " VarValue
-			}
-			Else If (Type = cType46)
-				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Target "." Action "(" ((VarValue = """") ? "" : VarValue) ")"
-			Else
-				Step := ((VarName = "_null") ? "" : VarName " " Oper " ") Action "(" ((VarValue = """") ? "" : VarValue) ")"
-			RowData := "`n" Step
-			If (Comment != "")
-				RowData .= "  " "; " Comment
-		}
-		Else If (Type = cType22)
-		{
-			If (RegExMatch(Step, "^\s*%\s"))
-				Step := StrReplace(Step, "``,", ",")
-			If ((ConvertBreaks) && (InStr(Step, "``n")))
-			{
-				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "``,", ",")
-			,	Step := "`n(LTrim`n" Step "`n)"
-			}
-			RowData := "`nControl, EditPaste, " Step ", " Target ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType23)
-		{
-			RowData := "`n" Type ", " Step ", " Target ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If ((Type = cType24) || (Type = cType28))
-		{
-			Stp := StrReplace(Step, "``,", _x)
-		,	Step := ""
-			Loop, Parse, Stp, `,, %A_Space%
-				Step .= (RegExMatch(A_LoopField, "^\s*%\s") ? StrReplace(A_LoopField, _x, ",") : StrReplace(A_LoopField, _x, "``,")) ", "
-			Step := SubStr(Step, 1, -2)
-		,	RowData := "`n" Type ", " Step ", " Target ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType25)
-		{
-			RowData := "`n" Type ", " Target ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType26)
-		{
-			RowData := "`n" Type ", " Target ", " Step ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType27)
-		{
-			RowData := "`n" Type ", " Step ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If ((Type = cType29) || (Type = cType30))
-		{
-			RowData := "`n" Type (RegExMatch(Step, "^\d+$") ? ", " Step : "")
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType31)
-		{
-			RowData := "`n" Type ", " Step "X, " Step "Y, "
-			. Step "W, " Step "H, " Target ", " Window
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType32)
-		{
-			StringSplit, Act, Action, :
-			StringSplit, El, Target, :
-			RowData := "`n" IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If (!init_ie)
-				RowData := "`nIf !IsObject(ie)"
-				.			"`n`tie := ComObjCreate(""InternetExplorer.Application"")"
-				.			"`nie.Visible := true" RowData
-			init_ie := true
-			If (Window = "LoadWait")
-				RowData .= "`nIELoad(ie)"
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType33)
-		{
-			StringSplit, Act, Action, :
-			StringSplit, El, Target, :
-			RowData := "`n" IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If (!init_ie)
-				RowData := "`nIf !IsObject(ie)"
-				.			"`n`tie := ComObjCreate(""InternetExplorer.Application"")"
-				.			"`nie.Visible := true" RowData
-			init_ie := true
-			If (Window = "LoadWait")
-				RowData .= "`nIELoad(ie)"
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If ((Type = cType34) || (Type = cType43))
-		{
-			RowData := "`n" GetRealLineFeeds(Step)
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((Target != "") && (!InStr(LVData, Action " := " ComType "(")))
-				RowData := "`nIf !IsObject(" Action ")`n`t" Action " := " ComType "(""" Target """)" RowData
-			If (Window = "LoadWait")
-				RowData .= "`nIELoad(" Action ")"
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType35)
-		{
-			RowData := "`n" Step ":"
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-		}
-		Else If ((Type = cType36) || (Type = cType37))
-		{
-			RowData := "`n" Type ", " Step
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-		}
-		Else If (Type = cType42)
-			RowData := (IsChecked = A_Index) ? "`n/*`n" Step "`n*/" : ""
-		Else If (Type = cType50)
-		{
-			Action := RegExReplace(Action, ".*\s")
-		,	RowData := "`n" Type ", " Step ", " (Action = "Once" ? (DelayX > 0 ? -DelayX : InStr(DelayX, "%") ? DelayX : -1)
-												: Action = "Period" ? DelayX
-												: Action)
-			If (Comment != "")
-				RowData .= "  " "; " Comment
-		}
-		Else If ((Type = cType3) || (Type = cType8) || (Type = cType13))
-		{
-			If (RegExMatch(Step, "^\s*%\s"))
-				Step := StrReplace(Step, "``,", ",")
-			Else If ((ConvertBreaks) && (InStr(Step, "``n")) && ((Type = cType8) || (Type = cType13)))
-			{
-				Step := StrReplace(Step, "``n", "`n")
-			,	Step := StrReplace(Step, "``,", ",")
-			,	Step := "`n(LTrim`n" Step "`n)"
-			}
-			Step := StrReplace(Step, "````,", "``,")
-		,	RowData := "`n" Type ", " Step
-			If (!RegExMatch(Step, "```,\s*?$"))
-				RowData := RTrim(RowData, ", ")
-			If ((Type = cType8) || (Action != "[Text]"))
-				RowData := Add_CD(RowData, Comment, DelayX)
-			Else If (Comment != "")
-				RowData .= "  " "; " Comment
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-			If ((Type = cType13) && (Action = "[Text]"))
-				RowData := "`nCurrentKeyDelay := A_KeyDelay`nSetKeyDelay, " DelayX RowData "`nSetKeyDelay, %CurrentKeyDelay%"
-		}
-		Else If (Type = cType52)
-		{
-			StringSplit, Tar, Target, /
-			CDO_Sub := SubStr(Step, 1, RegExMatch(Step, "=\d:") - 1)
-		,	Step := SubStr(Step, RegExMatch(Step, "=\d:") + 1)
-		,	CDO_To := CheckExp(SubStr(Tar1, 4), 1)
-		,	CDO_Sub := CheckExp(CDO_Sub, 1)
-		,	CDO_Msg := SubStr(Step, 3)
-		,	CDO_Html := SubStr(Step, 1, 1)
-		,	CDO_Att := Window
-		,	CDO_CC := CheckExp(SubStr(Tar2, 4), 1), CDO_CC := CDO_CC = """""" ? "" : CDO_CC
-		,	CDO_BCC := CheckExp(SubStr(Tar3, 5), 1), CDO_BCC := CDO_BCC = """""" ? "" : CDO_BCC
-		
-		,	SelAcc := ""
-		,	User_Accounts := UserMailAccounts.Get(true)
-			For _each, _Section in User_Accounts
-			{
-				If (Action = _Section.email)
-				{
-					SelAcc := _each
-					break
-				}
-			}
-			
-			If ((ConvertBreaks) && (InStr(CDO_Msg, "``n")))
-			{
-				CDO_Msg := StrReplace(CDO_Msg, "``n", "`n")
-			,	CDO_Msg := StrReplace(CDO_Msg, "``,", ",")
-			,	CDO_Msg := "`n(LTrim`n" CDO_Msg "`n)"
-			}
-			If ((ConvertBreaks) && (InStr(CDO_Att, "``n")))
-			{
-				CDO_Att := StrReplace(CDO_Att, "``n", "`n")
-			,	CDO_Att := StrReplace(CDO_Att, "``,", ",")
-			,	CDO_Att := "`n(LTrim`n" CDO_Att "`n)"
-			}
-			RowData := "`nMsgBody = " CDO_Msg . (CDO_Att = "" ? "" : "`nAttachments = " CDO_Att)
-		,	RowData .= "`nCDO(" SelAcc ", " CDO_To ", " CDO_Sub ", MsgBody, " CDO_Html ", " (CDO_Att = "" ? "" : "Attachments") ", " CDO_CC ", " CDO_BCC
-		,	RowData := RTrim(RowData, ", ") . ")"
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (Type = cType53)
-		{
-			RowData := "`nWinHttpDownloadToFile(" CheckExp(Step, 1) ", " CheckExp(Target, 1) ")"
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If ((Type = cType54) || (Type = cType55))
-		{
-			RowData := "`n" Type "(" CheckExp(Step, 1) ", " CheckExp(Target, 1) ", " (Window ? "true" : "")
-		,	RowData := RTrim(RowData, ", ") . ")"
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (InStr(FileCmdList, Type "|"))
-		{
-			Stp := StrReplace(Step, "``,", _x)
-		,	Step := ""
-			Loop, Parse, Stp, `,, %A_Space%
-				Step .= (RegExMatch(A_LoopField, "^\s*%\s") ? StrReplace(A_LoopField, _x, ",") : StrReplace(A_LoopField, _x, "``,")) ", "
-			RowData := "`n" Type ", " Step
-		,	RowData := SubStr(RowData, 1, -2)
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-		}
-		Else If (InStr(Type, "Win"))
-		{
-			If (Type = "WinMove")
-				RowData := "`n" Type ", " Window "," ", " Step
-			Else If (Type = "WinGetPos")
-				RowData := "`n" Type ", " Step "X, " Step "Y, "
-				. Step "W, " Step "H, " Window
-			Else If ((Type = "WinSet") || InStr(Type, "Get"))
+				RowData := "`nControl, EditPaste, " Step ", " Target ", " Window
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType23:
+				RowData := "`n" Type ", " Step ", " Target ", " Window
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType24, cType28:
+				Stp := StrReplace(Step, "``,", _x)
+			,	Step := ""
+				Loop, Parse, Stp, `,, %A_Space%
+					Step .= (RegExMatch(A_LoopField, "^\s*%\s") ? StrReplace(A_LoopField, _x, ",") : StrReplace(A_LoopField, _x, "``,")) ", "
+				Step := SubStr(Step, 1, -2)
+			,	RowData := "`n" Type ", " Step ", " Target ", " Window
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType25:
+				RowData := "`n" Type ", " Target ", " Window
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType26:
+				RowData := "`n" Type ", " Target ", " Step ", " Window
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType27:
 				RowData := "`n" Type ", " Step ", " Window
-			Else If Type contains Close,Kill,Wait,SetTitle
-			{
-				Win := SplitWin(Window)
-			,	RowData := "`n" Type ", " Win[1] ", " Win[2] ", " Step ", " Win[3] ", " Win[4]
-			}
-			Else
-				RowData := "`n" Type ", " Window
-			RowData := RTrim(RowData, " ,")
-		,	RowData := Add_CD(RowData, Comment, DelayX)
-			If ((TimesX > 1) || InStr(TimesX, "%"))
-				RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType29, cType30:
+				RowData := "`n" Type (RegExMatch(Step, "^\d+$") ? ", " Step : "")
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType31:
+				RowData := "`n" Type ", " Step "X, " Step "Y, "
+				. Step "W, " Step "H, " Target ", " Window
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType32:
+				StringSplit, Act, Action, :
+				StringSplit, El, Target, :
+				RowData := "`n" IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If (!init_ie)
+					RowData := "`nIf !IsObject(ie)"
+					.			"`n`tie := ComObjCreate(""InternetExplorer.Application"")"
+					.			"`nie.Visible := true" RowData
+				init_ie := true
+				If (Window = "LoadWait")
+					RowData .= "`nIELoad(ie)"
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType33:
+				StringSplit, Act, Action, :
+				StringSplit, El, Target, :
+				RowData := "`n" IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If (!init_ie)
+					RowData := "`nIf !IsObject(ie)"
+					.			"`n`tie := ComObjCreate(""InternetExplorer.Application"")"
+					.			"`nie.Visible := true" RowData
+				init_ie := true
+				If (Window = "LoadWait")
+					RowData .= "`nIELoad(ie)"
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType34, cType43:
+				RowData := "`n" GetRealLineFeeds(Step)
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((Target != "") && (!InStr(LVData, Action " := " ComType "(")))
+					RowData := "`nIf !IsObject(" Action ")`n`t" Action " := " ComType "(""" Target """)" RowData
+				If (Window = "LoadWait")
+					RowData .= "`nIELoad(" Action ")"
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType35:
+				RowData := "`n" Step ":"
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+			Case cType36, cType37:
+				RowData := "`n" Type ", " Step
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+			Case cType42:
+				RowData := (IsChecked = A_Index) ? "`n/*`n" Step "`n*/" : ""
+			Case cType50:
+				Action := RegExReplace(Action, ".*\s")
+			,	RowData := "`n" Type ", " Step ", " (Action = "Once" ? (DelayX > 0 ? -DelayX : InStr(DelayX, "%") ? DelayX : -1)
+													: Action = "Period" ? DelayX
+													: Action)
+				If (Comment != "")
+					RowData .= "  " "; " Comment
+			Case cType3, cType8, cType13:
+				If (RegExMatch(Step, "^\s*%\s"))
+					Step := StrReplace(Step, "``,", ",")
+				Else If ((ConvertBreaks) && (InStr(Step, "``n")) && ((Type = cType8) || (Type = cType13)))
+				{
+					Step := StrReplace(Step, "``n", "`n")
+				,	Step := StrReplace(Step, "``,", ",")
+				,	Step := "`n(LTrim`n" Step "`n)"
+				}
+				Step := StrReplace(Step, "````,", "``,")
+			,	RowData := "`n" Type ", " Step
+				If (!RegExMatch(Step, "```,\s*?$"))
+					RowData := RTrim(RowData, ", ")
+				If ((Type = cType8) || (Action != "[Text]"))
+					RowData := Add_CD(RowData, Comment, DelayX)
+				Else If (Comment != "")
+					RowData .= "  " "; " Comment
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+				If ((Type = cType13) && (Action = "[Text]"))
+					RowData := "`nCurrentKeyDelay := A_KeyDelay`nSetKeyDelay, " DelayX RowData "`nSetKeyDelay, %CurrentKeyDelay%"
+			Case cType52:
+				StringSplit, Tar, Target, /
+				CDO_Sub := SubStr(Step, 1, RegExMatch(Step, "=\d:") - 1)
+			,	Step := SubStr(Step, RegExMatch(Step, "=\d:") + 1)
+			,	CDO_To := CheckExp(SubStr(Tar1, 4), 1)
+			,	CDO_Sub := CheckExp(CDO_Sub, 1)
+			,	CDO_Msg := SubStr(Step, 3)
+			,	CDO_Html := SubStr(Step, 1, 1)
+			,	CDO_Att := Window
+			,	CDO_CC := CheckExp(SubStr(Tar2, 4), 1), CDO_CC := CDO_CC = """""" ? "" : CDO_CC
+			,	CDO_BCC := CheckExp(SubStr(Tar3, 5), 1), CDO_BCC := CDO_BCC = """""" ? "" : CDO_BCC
+			
+			,	SelAcc := ""
+			,	User_Accounts := UserMailAccounts.Get(true)
+				For _each, _Section in User_Accounts
+				{
+					If (Action = _Section.email)
+					{
+						SelAcc := _each
+						break
+					}
+				}
+				
+				If ((ConvertBreaks) && (InStr(CDO_Msg, "``n")))
+				{
+					CDO_Msg := StrReplace(CDO_Msg, "``n", "`n")
+				,	CDO_Msg := StrReplace(CDO_Msg, "``,", ",")
+				,	CDO_Msg := "`n(LTrim`n" CDO_Msg "`n)"
+				}
+				If ((ConvertBreaks) && (InStr(CDO_Att, "``n")))
+				{
+					CDO_Att := StrReplace(CDO_Att, "``n", "`n")
+				,	CDO_Att := StrReplace(CDO_Att, "``,", ",")
+				,	CDO_Att := "`n(LTrim`n" CDO_Att "`n)"
+				}
+				RowData := "`nMsgBody = " CDO_Msg . (CDO_Att = "" ? "" : "`nAttachments = " CDO_Att)
+			,	RowData .= "`nCDO(" SelAcc ", " CDO_To ", " CDO_Sub ", MsgBody, " CDO_Html ", " (CDO_Att = "" ? "" : "Attachments") ", " CDO_CC ", " CDO_BCC
+			,	RowData := RTrim(RowData, ", ") . ")"
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType53:
+				RowData := "`nWinHttpDownloadToFile(" CheckExp(Step, 1) ", " CheckExp(Target, 1) ")"
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType54, cType55:
+				RowData := "`n" Type "(" CheckExp(Step, 1) ", " CheckExp(Target, 1) ", " (Window ? "true" : "")
+			,	RowData := RTrim(RowData, ", ") . ")"
+			,	RowData := Add_CD(RowData, Comment, DelayX)
+				If ((TimesX > 1) || InStr(TimesX, "%"))
+					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Default:
+				If (InStr(FileCmdList, Type "|"))
+				{
+					Stp := StrReplace(Step, "``,", _x)
+				,	Step := ""
+					Loop, Parse, Stp, `,, %A_Space%
+						Step .= (RegExMatch(A_LoopField, "^\s*%\s") ? StrReplace(A_LoopField, _x, ",") : StrReplace(A_LoopField, _x, "``,")) ", "
+					RowData := "`n" Type ", " Step
+				,	RowData := SubStr(RowData, 1, -2)
+				,	RowData := Add_CD(RowData, Comment, DelayX)
+					If ((TimesX > 1) || InStr(TimesX, "%"))
+						RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+				}
+				Else If (InStr(Type, "Win"))
+				{
+					If (Type = "WinMove")
+						RowData := "`n" Type ", " Window "," ", " Step
+					Else If (Type = "WinGetPos")
+						RowData := "`n" Type ", " Step "X, " Step "Y, "
+						. Step "W, " Step "H, " Window
+					Else If ((Type = "WinSet") || InStr(Type, "Get"))
+						RowData := "`n" Type ", " Step ", " Window
+					Else If Type contains Close,Kill,Wait,SetTitle
+					{
+						Win := SplitWin(Window)
+					,	RowData := "`n" Type ", " Win[1] ", " Win[2] ", " Step ", " Win[3] ", " Win[4]
+					}
+					Else
+						RowData := "`n" Type ", " Window
+					RowData := RTrim(RowData, " ,")
+				,	RowData := Add_CD(RowData, Comment, DelayX)
+					If ((TimesX > 1) || InStr(TimesX, "%"))
+						RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+				}
 		}
 		If ((IsChecked = A_Index) && (CommentOut))
 			LVData .= "`n*/" RowData, CommentOut := false

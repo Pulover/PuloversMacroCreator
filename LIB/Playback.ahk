@@ -386,20 +386,19 @@
 						If (_key = Step)
 						{
 							aHK_Timer%_each% := TabIdx, aHK_Label%_Label% := RowIdx
-							If (Action = "Once")
+							Switch Action
 							{
-								DelayX := DelayX > 0 ? DelayX * -1 : -1
-								SetTimer, RunTimerOn%_each%, %DelayX%
+								Case "Once":
+									DelayX := DelayX > 0 ? DelayX * -1 : -1
+									SetTimer, RunTimerOn%_each%, %DelayX%
+								Case "Period":
+									SetTimer, RunTimerOn%_each%, %DelayX%
+								Case "Delete":
+									SetTimer, RunTimerOn%_each%, Delete
+									RegisteredTimers.Delete(_each)
+								Default:
+									SetTimer, RunTimerOn%_each%, %Action%
 							}
-							Else If (Action = "Period")
-								SetTimer, RunTimerOn%_each%, %DelayX%
-							Else If (Action = "Delete")
-							{
-								SetTimer, RunTimerOn%_each%, Delete
-								RegisteredTimers.Delete(_each)
-							}
-							Else
-								SetTimer, RunTimerOn%_each%, %Action%
 							If (ManualKey)
 								WaitFor.Key(o_ManKey[ManualKey], 0)
 							If ((ShowProgBar = 1) && (RunningFunction = ""))
@@ -413,20 +412,19 @@
 						{
 							RegisteredTimers[_each] := Step
 						,	aHK_Timer%_each% := TabIdx, aHK_Label%_Label% := RowIdx
-							If (Action = "Once")
+							Switch Action
 							{
-								DelayX := DelayX > 0 ? DelayX * -1 : -1
-								SetTimer, RunTimerOn%_each%, %DelayX%
+								Case "Once":
+									DelayX := DelayX > 0 ? DelayX * -1 : -1
+									SetTimer, RunTimerOn%_each%, %DelayX%
+								Case "Period":
+									SetTimer, RunTimerOn%_each%, %DelayX%
+								Case "Delete":
+									SetTimer, RunTimerOn%_each%, Delete
+									RegisteredTimers.Delete(_each)
+								Default:
+									SetTimer, RunTimerOn%_each%, %Action%
 							}
-							Else If (Action = "Period")
-								SetTimer, RunTimerOn%_each%, %DelayX%
-							Else If (Action = "Delete")
-							{
-								SetTimer, RunTimerOn%_each%, Delete
-								RegisteredTimers.Delete(_each)
-							}
-							Else
-								SetTimer, RunTimerOn%_each%, %Action%
 							If (ManualKey)
 								WaitFor.Key(o_ManKey[ManualKey], 0)
 							If ((ShowProgBar = 1) && (RunningFunction = ""))
@@ -438,20 +436,19 @@
 					{
 						_Label := RegisteredTimers.Push(Step)
 					,	aHK_Timer%_Label% := TabIdx, aHK_Label%_Label% := RowIdx
-						If (Action = "Once")
+						Switch Action
 						{
-							DelayX := DelayX > 0 ? DelayX * -1 : -1
-							SetTimer, RunTimerOn%_Label%, %DelayX%
+							Case "Once":
+								DelayX := DelayX > 0 ? DelayX * -1 : -1
+								SetTimer, RunTimerOn%_Label%, %DelayX%
+							Case "Period":
+								SetTimer, RunTimerOn%_Label%, %DelayX%
+							Case "Delete":
+								SetTimer, RunTimerOn%_Label%, Delete
+								RegisteredTimers.Delete(_Label)
+							Default:
+								SetTimer, RunTimerOn%_Label%, %Action%
 						}
-						Else If (Action = "Period")
-							SetTimer, RunTimerOn%_Label%, %DelayX%
-						Else If (Action = "Delete")
-						{
-							SetTimer, RunTimerOn%_Label%, Delete
-							RegisteredTimers.Delete(_Label)
-						}
-						Else
-							SetTimer, RunTimerOn%_Label%, %Action%
 					}
 					Else
 						TrayTip, %d_Lang107% %Step%, %d_Lang108%,, 19
@@ -508,94 +505,85 @@
 								PlaybackVars[LoopDepth][_each, _index] := _point
 					}
 					
-					If (Type = cType38)
+					Switch Type
 					{
-						Loop, Read, % Pars[1]
-						{
-							If (StopIt)
-								break 3
-							PlaybackVars[LoopDepth][A_Index, "A_LoopReadLine"] := A_LoopReadLine
-						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
-						}
+						Case cType38:
+							Loop, Read, % Pars[1]
+							{
+								If (StopIt)
+									break 3
+								PlaybackVars[LoopDepth][A_Index, "A_LoopReadLine"] := A_LoopReadLine
+							,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
+							}
+						Case cType39:
+							If (RegExMatch(Trim(Pars[1]), "%\s+(.+)", _Match) = 1)
+								Step := Eval(_Match1, PlaybackVars[LoopDepth][mLoopIndex])[1]
+							Else
+							{
+								Step := RegExReplace(Pars[1], "\w+", "%$0%", "", 1)
+							,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Step)
+							}
+							Loop, Parse, Step, % Pars[2], % Pars[3]
+							{
+								If (StopIt)
+									break 3
+								PlaybackVars[LoopDepth][A_Index, "A_LoopField"] := A_LoopField
+							,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
+							}
+						Case cType40:
+							Loop, Files, % Pars[1], % Pars[2]
+							{
+								If (StopIt)
+									break 3
+								PlaybackVars[LoopDepth][A_Index, "A_LoopFileName"] := A_LoopFileName
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileExt"] := A_LoopFileExt
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileFullPath"] := A_LoopFileFullPath
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileLongPath"] := A_LoopFileLongPath
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileShortPath"] := A_LoopFileShortPath
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileShortName"] := A_LoopFileShortName
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileDir"] := A_LoopFileDir
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileTimeModified"] := A_LoopFileTimeModified
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileTimeCreated"] := A_LoopFileTimeCreated
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileTimeAccessed"] := A_LoopFileTimeAccessed
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileAttrib"] := A_LoopFileAttrib
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSize"] := A_LoopFileSize
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSizeKB"] := A_LoopFileSizeKB
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSizeMB"] := A_LoopFileSizeMB
+							,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
+							}
+						Case cType41:
+							Loop, Reg, % Pars[1], % Pars[2]
+							{
+								If (StopIt)
+									break 3
+								PlaybackVars[LoopDepth][A_Index, "A_LoopRegName"] := A_LoopRegName
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegType"] := A_LoopRegType
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegKey"] := A_LoopRegKey
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegSubKey"] := A_LoopRegSubKey
+							,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegTimeModified"] := A_LoopRegTimeModified
+							,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
+							}
+						Case cType45:
+							VarName := Eval(Pars[1], PlaybackVars[LoopDepth][mLoopIndex])[1]
+							For _each, _value in VarName
+							{
+								If (StopIt)
+									break 3
+								PlaybackVars[LoopDepth][A_Index, Pars[2]] := _each
+							,	PlaybackVars[LoopDepth][A_Index, Pars[3]] := _value
+							,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
+							}
+						Case cType51:
+							If (!Eval(Step, PlaybackVars[LoopDepth][mLoopIndex])[1])
+							{
+								PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
+							,	FlowControl.Break++
+								continue
+							}
+							LoopCount[LoopDepth] := [0, Step]
+						Default:
+							LoopCount[LoopDepth] := [TimesX - 1, "", Target]
 					}
-					Else If (Type = cType39)
-					{
-						If (RegExMatch(Trim(Pars[1]), "%\s+(.+)", _Match) = 1)
-							Step := Eval(_Match1, PlaybackVars[LoopDepth][mLoopIndex])[1]
-						Else
-						{
-							Step := RegExReplace(Pars[1], "\w+", "%$0%", "", 1)
-						,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Step)
-						}
-						Loop, Parse, Step, % Pars[2], % Pars[3]
-						{
-							If (StopIt)
-								break 3
-							PlaybackVars[LoopDepth][A_Index, "A_LoopField"] := A_LoopField
-						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
-						}
-					}
-					Else If (Type = cType40)
-					{
-						Loop, Files, % Pars[1], % Pars[2]
-						{
-							If (StopIt)
-								break 3
-							PlaybackVars[LoopDepth][A_Index, "A_LoopFileName"] := A_LoopFileName
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileExt"] := A_LoopFileExt
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileFullPath"] := A_LoopFileFullPath
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileLongPath"] := A_LoopFileLongPath
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileShortPath"] := A_LoopFileShortPath
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileShortName"] := A_LoopFileShortName
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileDir"] := A_LoopFileDir
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileTimeModified"] := A_LoopFileTimeModified
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileTimeCreated"] := A_LoopFileTimeCreated
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileTimeAccessed"] := A_LoopFileTimeAccessed
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileAttrib"] := A_LoopFileAttrib
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSize"] := A_LoopFileSize
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSizeKB"] := A_LoopFileSizeKB
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopFileSizeMB"] := A_LoopFileSizeMB
-						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
-						}
-					}
-					Else If (Type = cType41)
-					{
-						Loop, Reg, % Pars[1], % Pars[2]
-						{
-							If (StopIt)
-								break 3
-							PlaybackVars[LoopDepth][A_Index, "A_LoopRegName"] := A_LoopRegName
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegType"] := A_LoopRegType
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegKey"] := A_LoopRegKey
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegSubKey"] := A_LoopRegSubKey
-						,	PlaybackVars[LoopDepth][A_Index, "A_LoopRegTimeModified"] := A_LoopRegTimeModified
-						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
-						}
-					}
-					Else If (Type = cType45)
-					{
-						VarName := Eval(Pars[1], PlaybackVars[LoopDepth][mLoopIndex])[1]
-						For _each, _value in VarName
-						{
-							If (StopIt)
-								break 3
-							PlaybackVars[LoopDepth][A_Index, Pars[2]] := _each
-						,	PlaybackVars[LoopDepth][A_Index, Pars[3]] := _value
-						,	LoopCount[LoopDepth] := [A_Index - 1, "", Target]
-						}
-					}
-					Else If (Type = cType51)
-					{
-						If (!Eval(Step, PlaybackVars[LoopDepth][mLoopIndex])[1])
-						{
-							PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
-						,	FlowControl.Break++
-							continue
-						}
-						LoopCount[LoopDepth] := [0, Step]
-					}
-					Else
-						LoopCount[LoopDepth] := [TimesX - 1, "", Target]
 					If (!IsObject(LoopCount[LoopDepth]))
 					{
 						PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := mLoopIndex
@@ -812,7 +800,7 @@
 					{
 						If (!HideErrors)
 						{
-							If Action not contains %FuncWhiteList%
+							If Action not contains %FuncAllowedList%
 							{
 								MsgBox, 20, %d_Lang007%, % "Macro" Macro_On ", " d_Lang065 " " mListRow
 									.	"`n" d_Lang007 ":`t`t" d_Lang031 "`n" d_Lang066 ":`t" Action "`n`n" d_Lang035
@@ -826,8 +814,46 @@
 					pbParams := Eval(VarValue, PlaybackVars[LoopDepth][mLoopIndex])
 					Try
 					{
-						VarValue := %Action%(pbParams*)
-					,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+						pbOutputVar := "", OutputVarName := ""
+						Switch Action
+						{
+							Case "RegExMatch":
+								OutputVarName := StrSplit(VarValue, ",", " ")[3]
+								If (pbParams[4])
+									VarValue := %Action%(pbParams[1], pbParams[2], pbOutputVar, pbParams[4])
+								Else
+									VarValue := %Action%(pbParams[1], pbParams[2], pbOutputVar)
+								AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+							Case "RegExReplace":
+								OutputVarName := StrSplit(VarValue, ",", " ")[4]
+								If (pbParams[6])
+									VarValue := %Action%(pbParams[1], pbParams[2], pbParams[3], pbOutputVar, pbParams[5], pbParams[6])
+								Else If (pbParams[5])
+									VarValue := %Action%(pbParams[1], pbParams[2], pbParams[3], pbOutputVar, pbParams[5])
+								Else
+									VarValue := %Action%(pbParams[1], pbParams[2], pbParams[3], pbOutputVar)
+								AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+							Case "StrReplace":
+								OutputVarName := StrSplit(VarValue, ",", " ")[4]
+								If (pbParams[5])
+									VarValue := %Action%(pbParams[1], pbParams[2], pbParams[3], pbOutputVar, pbParams[5])
+								Else
+									VarValue := %Action%(pbParams[1], pbParams[2], pbParams[3], pbOutputVar)
+								AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+							Default:
+								VarValue := %Action%(pbParams*)
+							,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+						}
+						
+						If (OutputVarName)
+						{
+							AssignVar(OutputVarName, ":=", pbOutputVar, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+							If (!IsObject(pbOutputVar))
+							{
+								While, (pbOutputVar%A_Index%)
+									AssignVar(OutputVarName . A_Index, ":=", pbOutputVar%A_Index%, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
+							}
+						}
 					}
 					Catch e
 					{
@@ -1568,12 +1594,11 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		ChangeProgBarColor("20D000", "OSCProg", 28)
 	return
 	pb_Clipboard:
-		SavedClip := ClipboardAll
 		If (Step != "")
 		{
-			Clipboard =
+			Clipboard := ""
 			Clipboard := Step
-			Sleep, 333
+			Sleep, 1
 		}
 		If (Target != "")
 		{
@@ -1582,8 +1607,6 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		}
 		Else
 			Send, {Control Down}{v}{Control Up}
-		Clipboard := SavedClip
-		SavedClip := ""
 	return
 	pb_Control:
 		Win := SplitWin(Window)
@@ -2024,79 +2047,66 @@ SplitStep(CustomVars, Step)
 
 IfEval(_Name, _Operator, _Value)
 {
-	If (_Operator = "=")
-		result := (_Name = _Value) ? true : false
-	Else If (_Operator = "==")
-		result := (_Name == _Value) ? true : false
-	Else If ((_Operator = "!=") || (_Operator = "<>"))
-		result := (_Name != _Value) ? true : false
-	Else If (_Operator = ">")
-		result := (_Name > _Value) ? true : false
-	Else If (_Operator = "<")
-		result := (_Name < _Value) ? true : false
-	Else If (_Operator = ">=")
-		result := (_Name >= _Value) ? true : false
-	Else If (_Operator = "<=")
-		result := (_Name <= _Value) ? true : false
-	Else If (_Operator = "in")
+	Switch _Operator
 	{
-		If _Name in %_Value%
-			result := true
-		Else
-			result := false
-	}
-	Else If (_Operator = "not in")
-	{
-		If _Name not in %_Value%
-			result := true
-		Else
-			result := false
-	}
-	Else If (_Operator = "contains")
-	{
-		If _Name contains %_Value%
-			result := true
-		Else
-			result := false
-	}
-	Else If (_Operator = "not contains")
-	{
-		If _Name not contains %_Value%
-			result := true
-		Else
-			result := false
-	}
-	Else If (_Operator = "between")
-	{
-		_Val1 := "", _Val2 := ""
-		StringSplit, _Val, _Value, `n, %A_Space%%A_Tab%
-		If _Name between %_Val1% and %_Val2%
-			result := true
-		Else
-			result := false
-	}
-	Else If (_Operator = "not between")
-	{
-		_Val1 := "", _Val2 := ""
-		StringSplit, _Val, _Value, `n, %A_Space%%A_Tab%
-		If _Name not between %_Val1% and %_Val2%
-			result := true
-		Else
-			result := false
-	}
-	Else If (_Operator = "is")
-	{
-		If _Name is %_Value%
-			result := true
-		Else
-			result := false
-	}
-	Else If (_Operator = "is not")
-	{
-		If _Name is not %_Value%
-			result := true
-		Else
-			result := false
+		Case "=":
+			result := (_Name = _Value) ? true : false
+		Case "==":
+			result := (_Name == _Value) ? true : false
+		Case "!=", "<>":
+			result := (_Name != _Value) ? true : false
+		Case ">":
+			result := (_Name > _Value) ? true : false
+		Case "<":
+			result := (_Name < _Value) ? true : false
+		Case ">=":
+			result := (_Name >= _Value) ? true : false
+		Case "<=":
+			result := (_Name <= _Value) ? true : false
+		Case "in":
+			If _Name in %_Value%
+				result := true
+			Else
+				result := false
+		Case "not in":
+			If _Name not in %_Value%
+				result := true
+			Else
+				result := false
+		Case "contains":
+			If _Name contains %_Value%
+				result := true
+			Else
+				result := false
+		Case "not contains":
+			If _Name not contains %_Value%
+				result := true
+			Else
+				result := false
+		Case "between":
+			_Val1 := "", _Val2 := ""
+			StringSplit, _Val, _Value, `n, %A_Space%%A_Tab%
+			If _Name between %_Val1% and %_Val2%
+				result := true
+			Else
+				result := false
+		Case "not between":
+			_Val1 := "", _Val2 := ""
+			StringSplit, _Val, _Value, `n, %A_Space%%A_Tab%
+			If _Name not between %_Val1% and %_Val2%
+				result := true
+			Else
+				result := false
+		Case "is":
+			If _Name is %_Value%
+				result := true
+			Else
+				result := false
+		Case "is not":
+			If _Name is not %_Value%
+				result := true
+			Else
+				result := false
 	}
 	return result
 }
@@ -2194,112 +2204,86 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 ,	Target := StrReplace(Target, _z, A_Space)
 ,	Window := StrReplace(Window, _z, A_Space)
 ,	Win := SplitWin(Step)
-	If (Action = If1)
+	Switch Action
 	{
-		IfWinActive, % Win[1], % Win[2], % Win[3], % Win[4]
-			return 0
-	}
-	Else If (Action = If2)
-	{
-		IfWinNotActive, % Win[1], % Win[2], % Win[3], % Win[4]
-			return 0
-	}
-	Else If (Action = If3)
-	{
-		IfWinExist, % Win[1], % Win[2], % Win[3], % Win[4]
-			return 0
-	}
-	Else If (Action = If4)
-	{
-		IfWinNotExist, % Win[1], % Win[2], % Win[3], % Win[4]
-			return 0
-	}
-	Else If (Action = If5)
-	{
-		IfExist, %Step%
-			return 0
-	}
-	Else If (Action = If6)
-	{
-		IfNotExist, %Step%
-			return 0
-	}
-	Else If (Action = If7)
-	{
-		Try ClipContents := Clipboard
-		If (ClipContents = Step)
-			return 0
-	}
-	Else If (Action = If8)
-	{
-		If (CustomVars["A_Index"] = Step)
-			return 0
-	}
-	Else If (Action = If9)
-	{
-		If (SearchResult = 0)
-			return 0
-	}
-	Else If (Action = If10)
-	{
-		If (SearchResult != 0)
-			return 0
-	}
-	Else If (Action = If11)
-	{
-		Pars := SplitStep(CustomVars, Step)
-		For _each, _value in Pars
-		{
-			CheckVars(CustomVars, _value)
-		,	Pars[_each] := _value
-		}
-		CheckVars(CustomVars, TimesX, DelayX)
-		If (CustomVars.HasKey(Pars[1]))
-			VarName := CustomVars[Pars[1]]
-		Else
-			VarName := Pars[1], VarName := %VarName%
-		If (InStr(VarName, Pars[2]))
-			return 0
-	}
-	Else If (Action = If12)
-	{
-		Pars := SplitStep(CustomVars, Step)
-		For _each, _value in Pars
-		{
-			CheckVars(CustomVars, _value)
-		,	Pars[_each] := _value
-		}
-		CheckVars(CustomVars, TimesX, DelayX)
-		If (CustomVars.HasKey(Pars[1]))
-			VarName := CustomVars[Pars[1]]
-		Else
-			VarName := Pars[1], VarName := %VarName%
-		If (!InStr(VarName, Pars[2]))
-			return 0
-	}
-	Else If (Action = If13)
-	{
-		IfMsgBox, %Step%
-			return 0
-	}
-	Else If (Action = If14)
-	{
-		CompareParse(Step, VarName, Oper, VarValue)
-	,	CheckVars(CustomVars, VarName, VarValue)
-	,	EscCom(true, VarValue)
-		If (CustomVars.HasKey(VarName))
-			VarName := CustomVars[VarName]
-		Else
-			VarName := %VarName%
-		VarValue := StrReplace(VarValue, "``n", "`n")
-		If (IfEval(VarName, Oper, VarValue))
-			return 0
-	}
-	Else If (Action = If15)
-	{
-		EvalResult := Eval(Step, CustomVars)
-		If (EvalResult[1])
-			return 0
+		Case If1:
+			IfWinActive, % Win[1], % Win[2], % Win[3], % Win[4]
+				return 0
+		
+		Case If2:
+			IfWinNotActive, % Win[1], % Win[2], % Win[3], % Win[4]
+				return 0
+		Case If3:
+			IfWinExist, % Win[1], % Win[2], % Win[3], % Win[4]
+				return 0
+		Case If4:
+			IfWinNotExist, % Win[1], % Win[2], % Win[3], % Win[4]
+				return 0
+		Case If5:
+			IfExist, %Step%
+				return 0
+		Case If6:
+			IfNotExist, %Step%
+				return 0
+		Case If7:
+			Try ClipContents := Clipboard
+			If (ClipContents = Step)
+				return 0
+		Case If8:
+			If (CustomVars["A_Index"] = Step)
+				return 0
+		Case If9:
+			If (SearchResult = 0)
+				return 0
+		Case If10:
+			If (SearchResult != 0)
+				return 0
+		Case If11:
+			Pars := SplitStep(CustomVars, Step)
+			For _each, _value in Pars
+			{
+				CheckVars(CustomVars, _value)
+			,	Pars[_each] := _value
+			}
+			CheckVars(CustomVars, TimesX, DelayX)
+			If (CustomVars.HasKey(Pars[1]))
+				VarName := CustomVars[Pars[1]]
+			Else
+				VarName := Pars[1], VarName := %VarName%
+			If (InStr(VarName, Pars[2]))
+				return 0
+		Case If12:
+			Pars := SplitStep(CustomVars, Step)
+			For _each, _value in Pars
+			{
+				CheckVars(CustomVars, _value)
+			,	Pars[_each] := _value
+			}
+			CheckVars(CustomVars, TimesX, DelayX)
+			If (CustomVars.HasKey(Pars[1]))
+				VarName := CustomVars[Pars[1]]
+			Else
+				VarName := Pars[1], VarName := %VarName%
+			If (!InStr(VarName, Pars[2]))
+				return 0
+		Case If13:
+			IfMsgBox, %Step%
+				return 0
+		Case If14:
+			CompareParse(Step, VarName, Oper, VarValue)
+		,	CheckVars(CustomVars, VarName, VarValue)
+		,	EscCom(true, VarValue)
+			If (CustomVars.HasKey(VarName))
+				VarName := CustomVars[VarName]
+			Else
+				VarName := %VarName%
+			VarValue := StrReplace(VarValue, "``n", "`n")
+			If (IfEval(VarName, Oper, VarValue))
+				return 0
+		Case If15:
+			EvalResult := Eval(Step, CustomVars)
+			If (EvalResult[1])
+				return 0
 	}
 	return 1
 }
@@ -2425,30 +2409,33 @@ AssignVar(_Name, _Operator, _Value, CustomVars, RunningFunction)
 	,	_Name := lFound1
 	}
 	
-	If (_Operator = ":=")
-		_content := _Value
-	Else If (_Operator = "+=")
-		_content += _Value
-	Else If (_Operator = "-=")
-		_content -= _Value
-	Else If (_Operator = "*=")
-		_content *= _Value
-	Else If (_Operator = "/=")
-		_content /= _Value
-	Else If (_Operator = "//=")
-		_content //= _Value
-	Else If (_Operator = ".=")
-		_content .= _Value
-	Else If (_Operator = "|=")
-		_content |= _Value
-	Else If (_Operator = "&=")
-		_content &= _Value
-	Else If (_Operator = "^=")
-		_content ^= _Value
-	Else If (_Operator = ">>=")
-		_content >>= _Value
-	Else If (_Operator = "<<=")
-		_content <<= _Value
+	Switch _Operator
+	{
+		Case ":=":
+			_content := _Value
+		Case "+=":
+			_content += _Value
+		Case "-=":
+			_content -= _Value
+		Case "*=":
+			_content *= _Value
+		Case "/=":
+			_content /= _Value
+		Case "//=":
+			_content //= _Value
+		Case ".=":
+			_content .= _Value
+		Case "|=":
+			_content |= _Value
+		Case "&=":
+			_content &= _Value
+		Case "^=":
+			_content ^= _Value
+		Case ">>=":
+			_content >>= _Value
+		Case "<<=":
+			_content <<= _Value
+	}
 
 	Try
 	{
