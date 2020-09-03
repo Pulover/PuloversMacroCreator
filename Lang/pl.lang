@@ -1,6 +1,6 @@
 ﻿Lang_pl
 		
-		; Polish [Revised by Vallorian]
+		; Polish [Revised by Vallorian and And]
 		
 ; 01. Main Menu		
 	m_Lang001 =	&Plik
@@ -8,7 +8,7 @@
 	m_Lang003 =	P&olecenia
 	m_Lang004 =	&Funkcje
 	m_Lang005 =	&Edytuj
-	m_Lang006 =	&Wybierać
+	m_Lang006 =	&Wybór
 	m_Lang007 =	W&idok
 	m_Lang008 =	Op&cje
 	m_Lang009 =	&Dotacja
@@ -20,58 +20,58 @@
 	f_Lang003 =	&Zapisz
 	f_Lang004 =	Z&apisz jako
 	f_Lang005 =	O&statnie Pliki
-	f_Lang006 =	&Eksport do AHK
+	f_Lang006 =	&Eksportuj do AHK
 	f_Lang007 =	&Podgląd Skryptu
-	f_Lang008 =	E&dycja Skryptu
-	f_Lang009 =	&Harmonogram Makr
+	f_Lang008 =	E&dytuj Skryptu
+	f_Lang009 =	&Harmonogram makr
 	f_Lang010 =	&Lista zmiennych
 	f_Lang011 =	&Wyjście
 	f_Lang012 =	&Brak plików
 		
 ; 03. Macro Sub Menu		
-	r_Lang001 =	&Nagraj Makro
-	r_Lang002 =	&Opcje Nagrywania
-	r_Lang003 =	&Aktywuj Makra
+	r_Lang001 =	&Nagraj makro
+	r_Lang002 =	&Opcje nagrywania
+	r_Lang003 =	&Aktywuj makra
 	r_Lang004 =	O&pcje odtwarzania
 	r_Lang005 =	O&dtwórz bieżące makro
 	r_Lang006 =	&Regulator czasowy
-	r_Lang007 =	&Wyłączyć Makra
-	r_Lang008 =	Od&twórz z wybranego wiersza
+	r_Lang007 =	&Wyłącz makro
+	r_Lang008 =	Od&twórz od wybranego wiersza
 	r_Lang009 =	Odtw&órz do wybranego wiersza
 	r_Lang010 =	Odtwór&z wybrane wiersze
 	r_Lang011 =	&Kontekstowe Hotkeye
-	r_Lang012 =	Doda&j Macro
-	r_Lang013 =	Za&mknij Makro
-	r_Lang014 =	Pow&iel Makro
-	r_Lang015 =	&Edytowanie Makra
-	r_Lang016 =	&Import Makra
-	r_Lang017 =	Zapi&sz bieżące Makro
+	r_Lang012 =	Doda&j makro
+	r_Lang013 =	Za&mknij makro
+	r_Lang014 =	Pow&iel makro
+	r_Lang015 =	&Edytuj makro
+	r_Lang016 =	&Importuj makro
+	r_Lang017 =	Zapi&sz bieżące makro
 		
 ; 04. Function Sub Menu		
-	u_Lang001 =	&Tworzenie funkcji
+	u_Lang001 =	U&twórz funkcję
 	u_Lang002 =	&Dodaj parametr
-	u_Lang003 =	D&odaj Powrót
-	u_Lang004 =	&Konwersja Makra do funkcji
+	u_Lang003 =	D&odaj powrót
+	u_Lang004 =	&Konwertuj makro do funkcji
 		
 ; 05. Commands Sub Menu		
 	i_Lang001 =	&Mysz
 	i_Lang002 =	&Tekst
 	i_Lang003 =	&Sterowanie
 	i_Lang004 =	&Pauza
-	i_Lang005 =	M&essage Box
-	i_Lang006 =	&Oczekiwanie na Klawisz
+	i_Lang005 =	M&essage box
+	i_Lang006 =	&Oczekiwanie na klawisz
 	i_Lang007 =	O&kno
-	i_Lang008 =	S&zukaj Obrazu / Pixela
-	i_Lang009 =	&Uruchom / Plik / Ciąg znaków / Inne.
+	i_Lang008 =	&Znajdź obraz / pixel
+	i_Lang009 =	&Uruchom / Plik / Ciąg znaków / Inne
 	i_Lang010 =	P&ętla
-	i_Lang011 =	P&rzejdź Do / Etykiety
+	i_Lang011 =	P&rzejdź do / Etykieta
 	i_Lang012 =	Ust&aw zegar
-	i_Lang013 =	&Jeśli (If)
+	i_Lang013 =	funkcja &Jeśli (If)
 	i_Lang014 =	Zm&ienne / Macierze
 	i_Lang015 =	&Funkcje / Metody tablic
-	i_Lang016 =	&Wysłać email
-	i_Lang017 =	Po&bieranie plików
-	i_Lang018 =	Zapakuj / Rozpakuj p&liki
+	i_Lang016 =	&Wyślij email
+	i_Lang017 =	Po&bierz pliki
+	i_Lang018 =	Spakuj / Wypakuj p&liki
 	i_Lang019 =	I&nternet Explorer
 	i_Lang020 =	W&yrażenie / Interfejs COM
 	i_Lang021 =	Komunikaty Win&dows
@@ -91,62 +91,62 @@
 	e_Lang011 =	P&rzenieś w górę
 	e_Lang012 =	Prze&nieś w dół
 	e_Lang013 =	Ws&taw z pudełkiem
-	e_Lang014 =	W&łóż Klawisz
+	e_Lang014 =	Wst&aw klawisz
 	e_Lang015 =	Z&mień kolor
 	e_Lang016 =	&Grupy
-	e_Lang017 =	Wł&ącz grupy
+	e_Lang017 =	Wł&ącz grupę
 	e_Lang018 =	D&odaj grupę
 	e_Lang019 =	Usu&ń grupę
 	e_Lang020 =	Usuń wsz&ystkie grupy
-	e_Lang021 =	Zw&inąć wszystkie
-	e_Lang022 =	&Rozwiń wszystkie
+	e_Lang021 =	Zw&iń wszystkie
+	e_Lang022 =	Poka&ż wszystkie
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Zaznacz wszystko
 	s_Lang002 =	&Odznacz wszystko
 	s_Lang003 =	O&dwróć zaznaczenie
-	s_Lang004 =	&Sprawdź Wybrane
-	s_Lang005 =	Odz&nacz Wybrane
-	s_Lang006 =	Od&wróć Kontrole
-	s_Lang007 =	&Przenieść Zaznaczenie do Góry
-	s_Lang008 =	P&rzesunąć Zaznaczenie W Dół
-	s_Lang009 =	W&ybranego typu
+	s_Lang004 =	&Sprawdź wybrane
+	s_Lang005 =	Odz&nacz wybrane
+	s_Lang006 =	Od&wróć kontrole
+	s_Lang007 =	&Przesuń zaznaczone do góry
+	s_Lang008 =	P&rzesuń zaznaczone w dół
+	s_Lang009 =	Zaznaczy tylko w&ybrany typ
 	s_Lang010 =	&Typ polecenia
 		
 ; 08. View Sub Menu		
 	v_Lang001 =	&Zawsze na wierzchu
 	v_Lang002 =	&Podświetlenie wierszy
 	v_Lang003 =	&Wcięcia
-	v_Lang004 =	P&asek Narzędzi Kontroli
+	v_Lang004 =	P&asek narzędzi kontroli
 	v_Lang005 =	P&odgląd
-	v_Lang006 =	Pa&ski Narzędzi
+	v_Lang006 =	Pa&ski narzędzi
 	v_Lang007 =	&Hotkeys
 	v_Lang008 =	P&ętla
-	v_Lang009 =	Pas&ek Wyszukiwania
+	v_Lang009 =	Pas&ek wyszukiwania
 	v_Lang010 =	&Resetuj rozmiar kolumny
-	v_Lang011 =	Roz&miar Ikon
+	v_Lang011 =	Roz&miar ikon
 	v_Lang012 =	W&yzeruj
 	v_Lang013 =	P&lik
 	v_Lang014 =	&Nagrywanie i odtwarzanie
 	v_Lang015 =	Pole&cenia
-	v_Lang016 =	E&dytować
+	v_Lang016 =	E&dytuj
 	v_Lang017 =	Opc&je
 	v_Lang018 =	Dos&tosuj
 	v_Lang019 =	A&utomatyczny
-	v_Lang020 =	&Ręczny
-	v_Lang021 =	Zatrzyma&ć
+	v_Lang020 =	R&ęczny
+	v_Lang021 =	Zatrzyma&j
 	v_Lang022 =	&Pauza
 	v_Lang023 =	&Zwarty
-	v_Lang024 =	Najlepsze Dopasowan&ie
+	v_Lang024 =	Najlepsze dopasowan&ie
 	v_Lang025 =	Domy&ślnie
 	v_Lang026 =	Ma&łe
 	v_Lang027 =	Du&że
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ustawienia
-	o_Lang002 =	&Zminimalizować do zasobnika
+	o_Lang002 =	&Zminimalizuj do zasobnika
 	o_Lang003 =	&Pokaż pasek narzędzi kontroli
-	o_Lang004 =	P&rzechwytywanie naciśniętego klawisza w tym oknie
+	o_Lang004 =	P&rzechwyć w tym oknie naciśnięcie klawisza
 	o_Lang005 =	&Hotkeys Zawsze Aktywne
 	o_Lang006 =	&Opcje wyłączania (Po zakończeniu odtwarzania...)
 	o_Lang007 =	&Dodaj klawisz Windows do skrótu "Zagraj"
@@ -164,25 +164,25 @@
 	h_Lang001 =	&Pomoc
 	h_Lang002 =	P&oradniki
 	h_Lang003 =	Po&rady
-	h_Lang004 =	&Makro Creator Home
+	h_Lang004 =	&Makro Creator home
 	h_Lang005 =	&Forum
-	h_Lang006 =	&AHK Dokumentacja online
-	h_Lang007 =	&Sprawdzić dostępność aktualizacji...
-	h_Lang008 =	Spra&wdź na starcie
-	h_Lang009 =	O &Nas
+	h_Lang006 =	&AHK dokumentacja online
+	h_Lang007 =	&Sprawdźć dostępność aktualizacji
+	h_Lang008 =	Spra&wdź aktuliazacje na starcie
+	h_Lang009 =	O &nas
 		
 ; 12. Tray Menu		
 	y_Lang001 =	Ukryj okno
 	y_Lang002 =	Pokaż okno
-	y_Lang003 =	Pasek Narzędzi Kontroli
+	y_Lang003 =	Pasek narzędzi kontroli
 		
 ; 13. Built-in Vars Menu		
 	b_Lang001 =	Znaki specjalne
-	b_Lang002 =	właściwości
+	b_Lang002 =	Właściwości
 	b_Lang003 =	Data i godzina
 	b_Lang004 =	Czas bezczynności
-	b_Lang005 =	System i użytkownika
-	b_Lang006 =	Inne.
+	b_Lang005 =	System i użytkownik
+	b_Lang006 =	Inne
 	b_Lang007 =	Pętla
 		
 ; 14. Main Window		
@@ -190,26 +190,26 @@
 	w_Lang002 =	Podgląd
 	w_Lang003 =	Opcje
 	w_Lang004 =	Nagraj
-	w_Lang005 =	Odtwórz
-	w_Lang006 =	Odtwarzanie
-	w_Lang007 =	Ręczne
-	w_Lang008 =	Zatrzymać
+	w_Lang005 =	Uruchom
+	w_Lang006 =	Odtwarzaj
+	w_Lang007 =	Ręcznie
+	w_Lang008 =	Zatrzymaj
 	w_Lang009 =	Pokaż pasek narzędzi kontroli
 	w_Lang010 =	Pauza
 	w_Lang011 =	Pętla
-	w_Lang012 =	Przechwytywanie naciśnięć klawiszy w tym oknie
-	w_Lang013 =	Zminimalizować do zasobnika
-	w_Lang014 =	Hotkeys zawsze Aktywne
+	w_Lang012 =	Przechwyć w tym oknie naciśnięcie klawisza
+	w_Lang013 =	Zminimalizuj do zasobnika
+	w_Lang014 =	Hotkeys włączone
 	w_Lang015 =	Powtarzaj
 	w_Lang016 =	Opóźnienie (ms)
 	w_Lang017 =	Zastosuj
 	w_Lang018 =	Wstaw
 	w_Lang019 =	Edytuj
 	w_Lang020 =	Opcje wyłączania (Po zakończeniu odtwarzania...)
-	w_Lang021 =	Nic nie rób
+	w_Lang021 =	Nie rób nic
 	w_Lang022 =	Zamknij aplikację
-	w_Lang023 =	Zamknij
-	w_Lang024 =	Wyłącz (force)
+	w_Lang023 =	Zamknij komputer
+	w_Lang024 =	Wymuś wyłączenie komputera
 	w_Lang025 =	Uruchom ponownie
 	w_Lang026 =	Wyloguj się
 	w_Lang027 =	Hibernacja
@@ -229,47 +229,47 @@
 	w_Lang041 =	Otwórz (Ctrl+O)
 	w_Lang042 =	Zapisz (Ctrl+S)
 	w_Lang043 =	Zapisz jako (Ctrl+Shift+S)
-	w_Lang044 =	Eksport do AHK (Ctrl+E)
-	w_Lang045 =	Podgląd Skrytpu (Ctrl+P)
+	w_Lang044 =	Eksportuj do AHK (Ctrl+E)
+	w_Lang045 =	Podgląd skrytpu (Ctrl+P)
 	w_Lang046 =	Ustawienia (Ctrl+G)
-	w_Lang047 =	Nagraj Makro (Ctrl+R)
-	w_Lang048 =	Aktywowanie Makra (Ctrl+Enter)
+	w_Lang047 =	Nagraj makro (Ctrl+R)
+	w_Lang048 =	Aktywuj makro (Ctrl+Enter)
 	w_Lang049 =	Odtwórz bieżące makro (Ctrl+Shift+Enter)
-	w_Lang050 =	Timer (Ctrl+Shift+T)
+	w_Lang050 =	Zegar (Ctrl+Shift+T)
 	w_Lang051 =	Mysz (F2)
 	w_Lang052 =	Tekst (F3)
-	w_Lang053 =	Edytowanie Makra (Ctrl+Shift+M)
+	w_Lang053 =	Edytuj makro (Ctrl+Shift+M)
 	w_Lang054 =	Control (F4)
 	w_Lang055 =	Pauza (F5)
-	w_Lang056 =	Message Box (Shift+F5)
-	w_Lang057 =	Czekać na Key (Ctrl+F5)
+	w_Lang056 =	Okno informacyjne (Shift+F5)
+	w_Lang057 =	Czekaj na klawisz (Ctrl+F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Szukaj Obrazu / Pixela(F7)
-	w_Lang060 =	Uruchom / Plik / String / Misc. (F8)
+	w_Lang059 =	Znajdź obraz / pixel (F7)
+	w_Lang060 =	Uruchom / Plik / Ciąg / Inne (F8)
 	w_Lang061 =	Pętla (F9)
-	w_Lang062 =	Przejdź Do / Etykiety (Shift + F9)
-	w_Lang063 =	Ustawić Czasomierz (Ctrl + F9)
-	w_Lang064 =	Jeśli (F10)
-	w_Lang065 =	Zmiennych / Macierze (Shift+F10)
+	w_Lang062 =	Przejdź do / Etykieta (Shift + F9)
+	w_Lang063 =	Ustaw zegar (Ctrl + F9)
+	w_Lang064 =	funkcja Jeśli (if) (F10)
+	w_Lang065 =	Zmienne / Macierze (Shift+F10)
 	w_Lang066 =	Funkcje / Metody tablicy (Ctrl+F10)
-	w_Lang067 =	Wysłać email (F11)
-	w_Lang068 =	Pobieranie plików (Shift+F11)
-	w_Lang069 =	Zapakuj / Rozpakuj pliki (Ctrl+F11)
+	w_Lang067 =	Wyślij email (F11)
+	w_Lang068 =	Pobierz plik (Shift+F11)
+	w_Lang069 =	Spakuj / rozpakuj pliki (Ctrl+F11)
 	w_Lang070 =	Internet Explorer (F12)
 	w_Lang071 =	Wyrażenie / Interfejs COM (Shift+F12)
 	w_Lang072 =	Komunikaty Windows (Ctrl+F12)
-	w_Lang073 =	Dodaj Macro (Ctrl+T)
+	w_Lang073 =	Dodaj makro (Ctrl+T)
 	w_Lang074 =	Zamknij makro (Ctrl+W)
 	w_Lang075 =	Powiel makro (Ctrl+Shift+D)
-	w_Lang076 =	Import Makro (Ctrl+I)
+	w_Lang076 =	Importuj makro (Ctrl+I)
 	w_Lang077 =	Zapisz bieżące makro (Ctrl+Alt+S)
 	w_Lang078 =	Przenieś w górę (Ctrl+PageUp)
 	w_Lang079 =	Przenieś w dół (Ctrl+PageDown)
-	w_Lang080 =	Duplikat wybranych wierszy (Ctrl+D)
+	w_Lang080 =	Powiel wybrane wiersze (Ctrl+D)
 	w_Lang081 =	Wytnij wybrane wiersze (Ctrl+X)
-	w_Lang082 =	Kopiowanie wybranych wierszy (Ctrl+C)
-	w_Lang083 =	Wklej Skopiowane wiersze (Ctrl+V)
-	w_Lang084 =	Usuń zaznaczone wiersze (DEL)
+	w_Lang082 =	Kopiuj wybrane wiersze (Ctrl+C)
+	w_Lang083 =	Wklej skopiowane wiersze (Ctrl+V)
+	w_Lang084 =	Usuń wybrane wiersze (DEL)
 	w_Lang085 =	Cofnij (Ctrl+Z)
 	w_Lang086 =	Ponów (Ctrl+Y)
 	w_Lang087 =	Skopiuj do...
@@ -277,7 +277,7 @@
 	w_Lang089 =	Wstaw / Edytuj komentarz (Ctrl+L)
 	w_Lang090 =	Zmień kolor (Ctrl+M)
 	w_Lang091 =	Dostosuj...
-	w_Lang092 =	Znajdź polecenia (Ctrl+Shift+F)
+	w_Lang092 =	Znajdź polecenie (Ctrl+Shift+F)
 	w_Lang093 =	Edytuj (Enter)
 	w_Lang094 =	Ukryj
 	w_Lang095 =	Przenieś tutaj
@@ -291,12 +291,12 @@
 	w_Lang103 =	Nazwa grupy
 	w_Lang104 =	Tworzenie funkcji (Ctrl+Shift+U)
 	w_Lang105 =	Dodaj parametr (Ctrl+Shift+P)
-	w_Lang106 =	Dodaj Return (Ctrl+Shift+N)
-	w_Lang107 =	Konwersja Makra do Funkcji (Ctrl+Shift+C)
+	w_Lang106 =	Dodaj powrót (Ctrl+Shift+N)
+	w_Lang107 =	Konwersja makra do funkcji (Ctrl+Shift+C)
 	w_Lang108 =	Komentarz do niezaznaczonych wierszy
-	w_Lang109 =	Dodaj klawisz Windows do skrótu "Zagraj"
+	w_Lang109 =	Dodaj klawisz Windows do skrótu "Odtwarzaj"
 	w_Lang110 =	Użyj przycisku joysticka jako skrótu
-	w_Lang111 =	Szukaj... (Naciśnij klawisz Enter, aby przejść)
+	w_Lang111 =	Szukaj... (Naciśnij klawisz Enter, aby uruchomić)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz
@@ -304,18 +304,18 @@
 	c_Lang003 =	Pauza
 	c_Lang004 =	Sterowanie
 	c_Lang005 =	Okno
-	c_Lang006 =	Szukaj Obrazu
-	c_Lang007 =	Szukaj Pixel
-	c_Lang008 =	Uruchom / Plik / Ciąg znaków / Inne.
-	c_Lang009 =	Jeśli Oświadczenia
+	c_Lang006 =	Znajdź obraz
+	c_Lang007 =	Znajdź pixel
+	c_Lang008 =	Uruchom / Plik / Ciąg znaków / Inne
+	c_Lang009 =	funkcja Jeśli (if)
 	c_Lang010 =	Zmienne
 	c_Lang011 =	Funkcje / Metody tablicy
 	c_Lang012 =	Internet Explorer
 	c_Lang013 =	Wyrażenie / Interfejs COM
-	c_Lang014 =	Wybierz aplikację (Advanced)
+	c_Lang014 =	Wybierz aplikację (Zaawansowane)
 	c_Lang015 =	Wiadomość
 	c_Lang016 =	Sterowanie
-	c_Lang017 =	Opóźniać
+	c_Lang017 =	Opóźnij
 	c_Lang018 =	Milisekundy
 	c_Lang019 =	Sekundy
 	c_Lang020 =	OK
@@ -327,14 +327,14 @@
 	c_Lang026 =	Akcja
 	c_Lang027 =	Kliknij
 	c_Lang028 =	Przenieś
-	c_Lang029 =	Przenieś i Kliknij
-	c_Lang030 =	Koło w górę
-	c_Lang031 =	koło w dół
-	c_Lang032 =	Przeciągnij i Upuść
+	c_Lang029 =	Przenieś i kliknij
+	c_Lang030 =	Kółko w górę
+	c_Lang031 =	Kółko w dół
+	c_Lang032 =	Przeciągnij i upuść
 	c_Lang033 =	Współrzędne
 	c_Lang034 =	Szukaj
 	c_Lang035 =	Polecenie
-	c_Lang036 =	Relative
+	c_Lang036 =	Relatywny
 	c_Lang037 =	Przycisk
 	c_Lang038 =	Lewy
 	c_Lang039 =	Prawy
@@ -343,32 +343,32 @@
 	c_Lang042 =	X2
 	c_Lang043 =	Przytrzymaj
 	c_Lang044 =	Policz kliknięcia
-	c_Lang045 =	tekst (raw)
+	c_Lang045 =	Tekst (raw)
 	c_Lang046 =	Tekst z poleceniami
 	c_Lang047 =	Wklej ze schowka
-	c_Lang048 =	Wklej Kontroli
+	c_Lang048 =	Wklej kontrolę
 	c_Lang049 =	Ustaw tekst
 	c_Lang050 =	Dodaj pauzę
-	c_Lang051 =	Message Box
-	c_Lang052 =	Czekać na klucz
+	c_Lang051 =	Okno informacyjne
+	c_Lang052 =	Czekaj na klawisz
 	c_Lang053 =	Czas oczekiwania
 	c_Lang054 =	(Milisekundy) 0 = nieskończony
-	c_Lang055 =	Komenda
+	c_Lang055 =	Polecenie
 	c_Lang056 =	Wartość
-	c_Lang057 =	Zmienna Wyjściowa
-	c_Lang058 =	Stanowisko
+	c_Lang057 =	Zmienna wyjściowa
+	c_Lang058 =	Pozycja
 	c_Lang059 =	Rozmiar
 	c_Lang060 =	4 zmienne będą tworzone z tego prefiksu, a kończąc na X, Y, W, H.
-	c_Lang061 =	Rozpocząć
+	c_Lang061 =	Rozpocznij
 	c_Lang062 =	Koniec
 	c_Lang063 =	Obraz
 	c_Lang064 =	Pixel
-	c_Lang065 =	Dodaj Screenshot
-	c_Lang066 =	Czekać na Key
+	c_Lang065 =	Zrób zrzut ekranu
+	c_Lang066 =	Czekaj na klawisz
 	c_Lang067 =	Jeśli znaleźono
 	c_Lang068 =	Jeśli nie znaleziono / błąd
-	c_Lang069 =	zmienne wyjściowe
-	c_Lang070 =	Coord
+	c_Lang069 =	Zmienne wyjściowe
+	c_Lang070 =	Współrzędne
 	c_Lang071 =	Odmiany
 	c_Lang072 =	Podgląd
 	c_Lang073 =	Pętla
@@ -379,7 +379,7 @@
 	c_Lang078 =	Idź do etykiety
 	c_Lang079 =	Etykieta
 	c_Lang080 =	Dodaj etykietę
-	c_Lang081 =	String (InputVar)
+	c_Lang081 =	Łańcuch znaków (dane wejściowe)
 	c_Lang082 =	Zmienna
 	c_Lang083 =	Więcej
 	c_Lang084 =	Przypisanie zmiennej
@@ -388,16 +388,16 @@
 	c_Lang087 =	Wyrażenie
 	c_Lang088 =	Resetuj
 	c_Lang089 =	Nazwa funkcji
-	c_Lang090 =	Oddzielonych przecinkami parametrów (bez nawiasów)
-	c_Lang091 =	Format Użyj wyrażenia
-	c_Lang092 =	Element / Index Strony
+	c_Lang090 =	Parametry oddzielone przecinkami (bez nawiasów)
+	c_Lang091 =	Użyj wyrażenia w odpowiednim formacie
+	c_Lang092 =	Element strony / Index
 	c_Lang093 =	Ustaw
-	c_Lang094 =	Pobierz (Get)
+	c_Lang094 =	Pobierz
 	c_Lang095 =	Metoda
-	c_Lang096 =	Nieruchomość
+	c_Lang096 =	Właściwości
 	c_Lang097 =	Poczekaj na załadowanie strony.
 	c_Lang098 =	CLSID
-	c_Lang099 =	Połączyć
+	c_Lang099 =	Połącz
 	c_Lang100 =	Uchwyt
 	c_Lang101 =	COM Script
 	c_Lang102 =	Numer komunikatu
@@ -405,62 +405,62 @@
 	c_Lang104 =	Przeglądarka - Cofnij
 	c_Lang105 =	Przeglądarka - Dalej
 	c_Lang106 =	Przeglądarka - Odśwież
-	c_Lang107 =	Przeglądarka - Stop
+	c_Lang107 =	Przeglądarka - Zatrzymaj
 	c_Lang108 =	Przeglądarka - Szukaj
 	c_Lang109 =	Przeglądarka - Zakładki
-	c_Lang110 =	Przeglądarka - główna
+	c_Lang110 =	Przeglądarka - Strona główna
 	c_Lang111 =	Media
 	c_Lang112 =	Wycisz
 	c_Lang113 =	Głośniej
 	c_Lang114 =	Ciszej
-	c_Lang115 =	Play / Pause
+	c_Lang115 =	Uruchom / Wstrzymaj
 	c_Lang116 =	Następny utwór
 	c_Lang117 =	Poprzedni utwór
-	c_Lang118 =	Stop
+	c_Lang118 =	Zatrzymaj
 	c_Lang119 =	E-mail
 	c_Lang120 =	App 1
 	c_Lang121 =	App 2
-	c_Lang122 =	Scancode
-	c_Lang123 =	Dodać
-	c_Lang124 =	Key History
-	c_Lang125 =	Wpisz ScanCode...
-	c_Lang126 =	Kod dodany do wirtualnej listy Keys!
+	c_Lang122 =	Kod kreskowy
+	c_Lang123 =	Dodaj
+	c_Lang124 =	Klawisz historii
+	c_Lang125 =	Wpisz kod kreskowy...
+	c_Lang126 =	Kod dodany do listy wirtualnych klawiszy!
 	c_Lang127 =	Wpisz nazwę zmiennej
 	c_Lang128 =	Użyj funkcji z zewnętrznego pliku
-	c_Lang130 =	Powtarzaj, aż
+	c_Lang130 =	Powtarzaj, dopóki
 	c_Lang131 =	Zastosuj
 	c_Lang132 =	Pętla
 	c_Lang133 =	Plik
 	c_Lang134 =	Analizuj
 	c_Lang135 =	Czytaj
 	c_Lang136 =	Rejestr
-	c_Lang137 =	Wzór Pliku:
+	c_Lang137 =	Wzór pliku:
 	c_Lang138 =	Katalogi
 	c_Lang139 =	Rekurencyjne
 	c_Lang140 =	Zmienna wejściowa:
 	c_Lang141 =	Ograniczniki:
-	c_Lang142 =	Pomiń Znaki:
-	c_Lang143 =	Plik Wejściowy:
-	c_Lang144 =	Key Główny\Key:
-	c_Lang145 =	Akta
+	c_Lang142 =	Pomiń znaki:
+	c_Lang143 =	Plik wejściowy:
+	c_Lang144 =	Główny klucz / Klucz:
+	c_Lang145 =	Pliki
 	c_Lang146 =	Klawiatura
 	c_Lang147 =	Ikona
-	c_Lang148 =	Brak Ikony
+	c_Lang148 =	Brak ikony
 	c_Lang149 =	Błąd
 	c_Lang150 =	Pytanie
-	c_Lang151 =	Okrzyk
+	c_Lang151 =	Wykrzyknik
 	c_Lang152 =	Informacja
 	c_Lang153 =	Zawsze na wierzchu
 	c_Lang154 =	Minut
-	c_Lang155 =	Aż do
+	c_Lang155 =	Dopóki
 	c_Lang156 =	Scenariusz
 	c_Lang157 =	Język Scriptu
 	c_Lang158 =	Nie kompatybilny z 64-bit!
 	c_Lang159 =	Opcje wyszukiwania
 	c_Lang160 =	Przezroczysty
 	c_Lang161 =	Skala
-	c_Lang162 =	Dodać "Jeśli"
-	c_Lang163 =	Wysłać Tryb
+	c_Lang162 =	Dodaj funkcję "Jeśli (if)"
+	c_Lang163 =	Tryb "Wyślij"
 	c_Lang164 =	Równy
 	c_Lang165 =	Zawiera
 	c_Lang166 =	Więcej
@@ -476,7 +476,7 @@
 	c_Lang176 =	Spróbuj ponownie
 	c_Lang177 =	Timeout
 	c_Lang178 =	Ustaw opóźnienie klawisza
-	c_Lang179 =	opóźnienie klawisza
+	c_Lang179 =	Opóźnienie klawisza
 	c_Lang180 =	Losowe opóźnienie
 	c_Lang181 =	Minimum
 	c_Lang182 =	Maksimum
@@ -495,26 +495,26 @@
 	c_Lang195 =	Jeśli plik NIE istnieje
 	c_Lang196 =	Jeśli tekst schowka
 	c_Lang197 =	Jeśli index pętli
-	c_Lang198 =	Jeśli obraz/pixel znaleziono
-	c_Lang199 =	Jeśli obraz/pixel NIE znaleziono
+	c_Lang198 =	Jeśli obraz / pixel znaleziono
+	c_Lang199 =	Jeśli obraz / pixel NIE znaleziono
 	c_Lang200 =	Jeśli ciąg zawiera
 	c_Lang201 =	Jeśli ciąg NIE zawiera
 	c_Lang202 =	Jeżeli okno komunikatu
 	c_Lang203 =	Porównaj zmienne
-	c_Lang204 =	Oceny ekspresji
+	c_Lang204 =	Porównaj wyrażenie
 	c_Lang205 =	Region
 	c_Lang206 =	(Użyj [], aby utworzyć tablice, np .: [10, 20, aVariable, "aString"])
-	c_Lang207 =	Obiekt Array
+	c_Lang207 =	Obiekt macierzy
 	c_Lang208 =	Nazwa klucza
 	c_Lang209 =	Nazwa wartości
 	c_Lang210 =	Wartości
-	c_Lang211 =	Array
+	c_Lang211 =	Macierz
 	c_Lang212 =	Funkcja zdefiniowana przez użytkownika
-	c_Lang213 =	Parametr Funkcji
-	c_Lang214 =	Funkcja Powrót
+	c_Lang213 =	Parametr funkcji
+	c_Lang214 =	Funkcja powrót
 	c_Lang215 =	Parametry
 	c_Lang216 =	Wartość zwracana
-	c_Lang217 =	Domyślna wartość
+	c_Lang217 =	Wartość domyślna
 	c_Lang218 =	Zakres
 	c_Lang219 =	Lokalny
 	c_Lang220 =	Globalny
@@ -524,7 +524,7 @@
 	c_Lang224 =	Zmienne lokalne
 	c_Lang225 =	Zmienne statyczne
 	c_Lang226 =	Od
-	c_Lang227 =	E-mail
+	c_Lang227 =	Email
 	c_Lang228 =	Temat
 	c_Lang229 =	Treść
 	c_Lang230 =	Do
@@ -534,10 +534,10 @@
 	c_Lang234 =	HTML
 	c_Lang235 =	Wyślij email
 	c_Lang236 =	Pobierz pliki
-	c_Lang237 =	Zapakuj / Rozpakuj pliki
-	c_Lang238 =	Włączyć
-	c_Lang239 =	Wyłączyć
-	c_Lang240 =	zarejestrowanie pozycji.
+	c_Lang237 =	Spakuj / Wypakuj pliki
+	c_Lang238 =	Włącz
+	c_Lang239 =	Wyłącz
+	c_Lang240 =	Rejestrowanie pozycji
 	c_Lang241 =	Usuń wszystkie liczniki
 	c_Lang242 =	Ustaw zegar
 	c_Lang243 =	Do prawej
@@ -545,10 +545,10 @@
 	c_Lang245 =	Załączniki
 	c_Lang246 =	Ścieżka
 	c_Lang247 =	Jeśli
-	c_Lang248 =	Zapakuj każdy plik do innego archiwum
+	c_Lang248 =	Spakuj każdy plik do innego archiwum
 	c_Lang249 =	Wypakuj każdy plik do innego folderu
-	c_Lang250 =	Zapakuj
-	c_Lang251 =	Rozpakuj pliki
+	c_Lang250 =	Spakuj
+	c_Lang251 =	Wypakuj pliki
 	c_Lang252 =	Pobierz linki
 	c_Lang253 =	Folder docelowy
 	c_Lang254 =	Plik docelowy
@@ -556,7 +556,7 @@
 	c_Lang256 =	Ustawienie współrzędnych na środku obrazu
 	c_Lang257 =	Okres
 	c_Lang258 =	Powrót
-	c_Lang259 =	Uwolnij
+	c_Lang259 =	Zwolnij
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -564,71 +564,71 @@
 	t_Lang003 =	Pętle
 	t_Lang004 =	0 = nieskończony
 	t_Lang005 =	Użyj Hotstring
-	t_Lang006 =	Zablokuj Mysz
+	t_Lang006 =	Zablokuj mysz
 	t_Lang007 =	Wszystko
 	t_Lang008 =	Żaden
 	t_Lang009 =	Kontekstowe Hotkeye
 	t_Lang010 =	Eksport do
 	t_Lang011 =	Wcięcie
-	t_Lang012 =	Zawierać kod PMC
-	t_Lang013 =	Nie łączyć wysyłać polecenia
+	t_Lang012 =	Dołącz kod PMC
+	t_Lang013 =	Nie łączyć polecenia "Wyślij"
 	t_Lang014 =	Odśwież
 	t_Lang015 =	Auto-odświeżanie
 	t_Lang016 =	Zawsze na wierzchu
 	t_Lang017 =	Ustawienia
 	t_Lang018 =	Ogólny
-	t_Lang019 =	Start / Stop Nagrywania
+	t_Lang019 =	Uruchom / Zatrzymaj nagrywanie
 	t_Lang020 =	Zarejestruj nowe makro
 	t_Lang021 =	Keystrokes
 	t_Lang022 =	Nagrywanie
-	t_Lang023 =	Przechwycić stan dół / góra klawisza
+	t_Lang023 =	Przechwycić pozycję klawisza (dół / góra)
 	t_Lang024 =	Kliknięcie myszką
 	t_Lang025 =	Kółko w myszy
-	t_Lang026 =	Ruchów myszką
+	t_Lang026 =	Ruch myszką
 	t_Lang027 =	Odstępy czasowe
 	t_Lang028 =	Minimalne opóźnienie
-	t_Lang029 =	Ćwiczenia okienne
-	t_Lang030 =	Tytuły okienne
-	t_Lang031 =	Rekord ControlSend
-	t_Lang032 =	Rekord ControlClick
+	t_Lang029 =	Klasy systemu
+	t_Lang030 =	Tytuły systemu
+	t_Lang031 =	Nagraj ControlSend
+	t_Lang032 =	Nagraj ControlClick
 	t_Lang033 =	Względny Key Record
 	t_Lang034 =	Przełączanie
 	t_Lang035 =	Odtwarzanie
 	t_Lang036 =	Przyspiesz
 	t_Lang037 =	Zwolnij
 	t_Lang038 =	Powrót myszki po zakończeniu odtwarzania
-	t_Lang039 =	Współrzędne
+	t_Lang039 =	Współrzędne myszki
 	t_Lang040 =	Okno
 	t_Lang041 =	Ekran
-	t_Lang042 =	Domyślnie Opóźnienia myszy
-	t_Lang043 =	Domyślne Opóźnienia okna
-	t_Lang044 =	Max Historia Makra
-	t_Lang045 =	Wyczyść Historię
-	t_Lang046 =	Zrzuty ekranu
+	t_Lang042 =	Domyślnie opóźnienie myszy
+	t_Lang043 =	Domyślne opóźnienie okna
+	t_Lang044 =	Maksymalna historia makra
+	t_Lang045 =	Wyczyść historię
+	t_Lang046 =	Zrzut ekranu
 	t_Lang047 =	Narysuj przycisk
 	t_Lang048 =	Szerokość linii (Px)
-	t_Lang049 =	Przechwytywanie w dniu premiery
-	t_Lang050 =	Naciśnij klawisz Enter, aby uchwycić
-	t_Lang051 =	Katalog Screenshotów
-	t_Lang052 =	Zwijanie lini
+	t_Lang049 =	Przechwyć w momencie zwolnienia
+	t_Lang050 =	Naciśnij klawisz Enter, aby przechwycić
+	t_Lang051 =	Katalog zrzutów ekranu
+	t_Lang052 =	Zawijanie lini
 	t_Lang053 =	Hotkeys
 	t_Lang054 =	Ustaw jako domyślne Hotkeye
 	t_Lang055 =	Wyłącz skróty okien
 	t_Lang056 =	Resetuj rozmiar kolumny
-	t_Lang057 =	Domyślny Plik Macro
+	t_Lang057 =	Domyślny plik makro
 	t_Lang058 =	Standardowy plik biblioteki
 	t_Lang059 =	Domyślnie używaj wyrażenia dla przypisanych zmiennych
-	t_Lang060 =	Podświetl Loops i oświadczenia
-	t_Lang061 =	(Kliknij na Indeks kolumny nagłówka aby włączyć / wyłączyć)
-	t_Lang062 =	Wirtualne Keye
+	t_Lang060 =	Podświetl pętle i funkcje
+	t_Lang061 =	(Kliknij na indeks kolumny nagłówka aby włączyć / wyłączyć)
+	t_Lang062 =	Klawisze wirtualne
 	t_Lang063 =	Domyślnie
 	t_Lang064 =	Edytuj komentarz
 	t_Lang065 =	Komentarz
-	t_Lang066 =	Kolumna Szukaj
-	t_Lang067 =	Znajdź / Zastąp
-	t_Lang068 =	&Odnaleźć
+	t_Lang066 =	Przeszukaj kolumnę
+	t_Lang067 =	Szukaj / Zastąp
+	t_Lang068 =	Szuka&j
 	t_Lang069 =	&Wielkość liter
-	t_Lang070 =	&Zastąpić
+	t_Lang070 =	&Zastąp
 	t_Lang071 =	Znaleziono
 	t_Lang072 =	Zastąpiono
 	t_Lang073 =	Wy&brane wiersze
@@ -636,12 +636,12 @@
 	t_Lang075 =	Wszys&tkie makra
 	t_Lang076 =	O
 	t_Lang077 =	W&yrażenie regularne
-	t_Lang078 =	Odtwórz raz
-	t_Lang079 =	Zagraj każdego x (mili) sekund
-	t_Lang080 =	Regulator czasowy
+	t_Lang078 =	Uruchom raz
+	t_Lang079 =	Uruchom każde x (mili) sekund
+	t_Lang080 =	Zegar
 	t_Lang081 =	Pauza
-	t_Lang082 =	Oświadczenia
-	t_Lang083 =	Pokaż Wcięcia dla pętli i oświadczenia
+	t_Lang082 =	Funkcje
+	t_Lang083 =	Pokaż wcięcia dla pętli i funkcji
 	t_Lang084 =	(Kliknij dwukrotnie na nagłówek kolumny Action aby włączyć / wyłączyć)
 	t_Lang085 =	Wyświetl pasek kontroli na starcie
 	t_Lang086 =	Wyszukiwanie funkcji. Proszę czekać...
@@ -654,7 +654,7 @@
 	t_Lang093 =	Standardowy format INI
 	t_Lang094 =	Nazwa = Wartość
 	t_Lang095 =	Wpisz 1 zmienną na 1 linię. Możesz także dodać [rozdziały].
-	t_Lang096 =	Zmienne Globalne Użytkownika
+	t_Lang096 =	Zmienne globalne użytkownika
 	t_Lang097 =	Naciśnij przycisk na joysticku
 	t_Lang098 =	Backspace, aby usunąć
 	t_Lang099 =	Przycisk
@@ -665,25 +665,25 @@
 	t_Lang104 =	Pokaż / Ukryj pasek tytułu
 	t_Lang105 =	Pokaż / Ukryj okno główne
 	t_Lang106 =	Uruchom natychmiast
-	t_Lang107 =	Losowe Opóźnienia
+	t_Lang107 =	Losowe opóźnienia
 	t_Lang108 =	Normalny
 	t_Lang109 =	W dół
 	t_Lang110 =	W górę
-	t_Lang111 =	Wstaw Klawisz
-	t_Lang112 =	odtwarzaj / pauza
+	t_Lang111 =	Wstaw klawisz
+	t_Lang112 =	Odtwarzaj / Wstrzymaj
 	t_Lang113 =	Zatrzymaj
 	t_Lang114 =	Opcje odtwarzania
-	t_Lang115 =	Start / Stop Nagrywania
+	t_Lang115 =	Uruchom / Zatrzymaj nagrywanie
 	t_Lang116 =	Zarejestruj nowe makro
-	t_Lang117 =	Opcje Nagrywania
+	t_Lang117 =	Opcje nagrywania
 	t_Lang118 =	Wyczyść listę
-	t_Lang119 =	Wyświetlić pasek postępu
-	t_Lang120 =	Przyśpieszyć
+	t_Lang119 =	Wyświetl pasek postępu
+	t_Lang120 =	Przyśpiesz
 	t_Lang121 =	Zwolnij
 	t_Lang122 =	Pokaż / Ukryj pasek tytułu
 	t_Lang123 =	Pokaż / Ukryj okno główne
-	t_Lang124 =	Zakotwicz
-	t_Lang125 =	Usuń zakotwiczenie
+	t_Lang124 =	Odłącz
+	t_Lang125 =	Zakotwicz
 	t_Lang126 =	Otwórz
 	t_Lang127 =	Zapisz
 	t_Lang128 =	Wytnij
@@ -695,18 +695,18 @@
 	t_Lang134 =	Mysz
 	t_Lang135 =	Inne
 	t_Lang136 =	Podświetl wiersze
-	t_Lang137 =	Domyślny Edytor Skryptów
+	t_Lang137 =	Domyślny edytor skryptów
 	t_Lang138 =	Otwórz w edytorze zewnętrznym (Ctrl+Shift+E)
 	t_Lang139 =	Wybierz
 	t_Lang140 =	Poprzez kolumnę
-	t_Lang141 =	Wszystkie Kolumny
-	t_Lang142 =	Usuń motyw z Paska narzędzi (wymaga ponownego uruchomienia)
+	t_Lang141 =	Wszystkie kolumny
+	t_Lang142 =	Usuń motyw z paska narzędzi (wymaga ponownego uruchomienia)
 	t_Lang143 =	Automatyczne ukrywanie paska narzędzi kontroli
 	t_Lang144 =	Kliknij i przeciągnij, aby zmienić kolejność. Kliknij dwukrotnie, aby edytować.
-	t_Lang145 =	Edytowanie Makra
-	t_Lang146 =	w Lini
+	t_Lang145 =	Edytowanie makra
+	t_Lang146 =	W linii
 	t_Lang147 =	Makro
-	t_Lang148 =	przycisk Zamknij dla Akcji głównego Okna
+	t_Lang148 =	Zdarzenie dla przycisku zamknij okna głównego
 	t_Lang149 =	Zamknij aplikację
 	t_Lang150 =	Zminimalizować do tray
 	t_Lang151 =	Wyświetl potwierdzenie przy zamykaniu makra
@@ -714,26 +714,26 @@
 	t_Lang153 =	Tworzy zaplanowane zadanie w Harmonogramie zadań systemu Windows.
 	t_Lang154 =	Czas od pierwszego uruchomienia
 	t_Lang155 =	Typ harmonogramu
-	t_Lang156 =	Jednorazowo||Codzienne|1 raz w tygodniu|1 raz W miesiącu|podczas startu|podczas logowania|W czasie bezczynności
+	t_Lang156 =	Jednorazowo | Codzienne | Raz raz w tygodniu | Raz raz w miesiącu | Podczas startu | Podczas logowania | W czasie bezczynności
 	t_Lang157 =	Plik docelowy PMC
 	t_Lang158 =	Plik docelowy AHK
-	t_Lang159 =	Skrypt zostanie zapisany lub zastąpione w bieżącym katalogu!
-	t_Lang160 =	Otwórz Harmonogram zadań
+	t_Lang159 =	Skrypt zostanie zapisany lub nadpisany w bieżącym katalogu!
+	t_Lang160 =	Otwórz harmonogram zadań
 	t_Lang161 =	Zadanie utworzone!
-	t_Lang162 =	Wystąpił błąd. Zadanie to nie może być utworzone.
+	t_Lang162 =	Wystąpił błąd. Zadanie nie może być utworzone.
 	t_Lang163 =	Planwanie harmonogramu
-	t_Lang164 =	Harmonogram Makr
+	t_Lang164 =	Harmonogram makr
 	t_Lang165 =	Uruchom Makro
 	t_Lang166 =	Plik
 	t_Lang167 =	Ciąg znaków
-	t_Lang168 =	Uzyskaj Informacje
+	t_Lang168 =	Uzyskaj informacje
 	t_Lang169 =	Zaczekaj
-	t_Lang170 =	Grupy Okien
-	t_Lang171 =	WiadomośCi
-	t_Lang172 =	Rejestr i INI
+	t_Lang170 =	Grupy okien
+	t_Lang171 =	Wiadomości
+	t_Lang172 =	Rejestr i plik INI
 	t_Lang173 =	Dźwięk
 	t_Lang174 =	Zmienne
-	t_Lang175 =	Inne.
+	t_Lang175 =	Inne
 	t_Lang176 =	Dodaj grupę
 	t_Lang177 =	Nowa grupa
 	t_Lang178 =	Edytor języków
@@ -745,52 +745,52 @@
 	t_Lang184 =	Język pliku
 	t_Lang185 =	Plik odniesienia
 	t_Lang186 =	Zatwierdź zmiany lub nowe tłumaczenie
-	t_Lang187 =	Zwinąć wszystkie
+	t_Lang187 =	Zwiń wszystkie
 	t_Lang188 =	Rozwiń wszystkie
 	t_Lang189 =	Język
 	t_Lang190 =	Konwertuj podziały wierszy
-	t_Lang191 =	Konta e-mail
+	t_Lang191 =	Konta email
 	t_Lang192 =	Aktualizacja
-	t_Lang193 =	Dwukrotnie kliknij, aby edytować
+	t_Lang193 =	Kliknij dwukrotnie, aby edytować
 	t_Lang194 =	Serwer SMTP
 	t_Lang195 =	Port
-	t_Lang196 =	Uwierzytelniać
+	t_Lang196 =	Uwierzytelnij
 	t_Lang197 =	Nazwa użytkownika
 	t_Lang198 =	Hasło
 	t_Lang199 =	SSL
 	t_Lang200 =	Wyślij tryb
 	t_Lang201 =	Wyślij test
-	t_Lang202 =	Ekran i Okno
-	t_Lang203 =	Wykrywanie Ukrytych Okien
-	t_Lang204 =	Wykrywania Ukrytego Tekstu
-	t_Lang205 =	Tryb Zgodności tytułów
+	t_Lang202 =	Ekran i okno
+	t_Lang203 =	Wykrywanie ukrytych okien
+	t_Lang204 =	Wykrywania ukrytego tekstu
+	t_Lang205 =	Tryb zgodności nagłówków
 	t_Lang206 =	Nie wyświetlaj błędów
 	t_Lang207 =	Klient
-	t_Lang208 =	O&dnaleźć
-	t_Lang209 =	Z&astąpić
+	t_Lang208 =	Szuka&j
+	t_Lang209 =	Z&astąp
 	t_Lang210 =	Zakładki
 	t_Lang211 =	Spacje
-	t_Lang212 =	Działania Klawiatury i myszy
-	t_Lang213 =	Tryb wyślij Key
-	t_Lang214 =	Key opóźnienia
+	t_Lang212 =	Działania klawiatury i myszy
+	t_Lang213 =	Wyślij stan klawisza
+	t_Lang214 =	Opóźnienie klawisza
 	t_Lang215 =	Opóźnienie myszki
 	t_Lang216 =	Opóźnienie sterowania
 	t_Lang217 =	Przyrostowe
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwórz
-	d_Lang002 =	Zapisz bieżący projekt?
+	d_Lang002 =	Czy zapisać bieżący projekt?
 	d_Lang003 =	Ustawienia domyślne
 	d_Lang004 =	Pliki PMC
-	d_Lang005 =	Zapisz Projekt
+	d_Lang005 =	Zapisz projekt
 	d_Lang006 =	Nie udało się zapisać / nadpisać pliku
 	d_Lang007 =	Błąd
 	d_Lang008 =	Błąd: Brak wybranego makra.
 		Proszę wybrać co najmniej jedno makro z listy.
 	d_Lang009 =	Błąd: Brak wybranego Hotkeya.
-	d_Lang010 =	Błąd: nieprawidłowy adres.
+	d_Lang010 =	Błąd: Nieprawidłowy adres.
 		Wybrany adres lub nazwa pliku jest nieprawidłowa.
-	d_Lang011 =	Ostrzeżenie
+	d_Lang011 =	Uwaga
 	d_Lang012 =	Brak wybranej kontroli.
 		Kontynuować?
 	d_Lang013 =	Eksport skryptu
@@ -800,9 +800,9 @@
 	d_Lang017 =	- Wybierz okno.
 		- Wskaż żądaną pozycję.
 		- Nacisnąć prawy przycisk.
-	d_Lang018 =	Kolor Pixelu
+	d_Lang018 =	Kolor pixela
 	d_Lang019 =	Wyczyść listę
-	d_Lang020 =	Zamknij makro?
+	d_Lang020 =	Zamknąć makro?
 	d_Lang021 =	Następny
 	d_Lang022 =	Poprzedni
 	d_Lang023 =	Wiadomość
@@ -816,43 +816,43 @@
 	d_Lang030 =	aby rozpocząć nowe nagranie
 	d_Lang031 =	Wywołanie nieistniejącej funkcji.
 	d_Lang032 =	Błąd: Powtarzające się Hotkeye.
-	d_Lang033 =	Aktywuj Makra
+	d_Lang033 =	Aktywuj makra
 	d_Lang034 =	- Kliknij i przeciągnij z %DrawButton%, aby wybrać obszar.
 		- Kliknij i puść bez przeciągania, aby wybrać obszar kontroli.
 		- Kliknij na obszarze bez kontroli, aby wybrać obszar okna.
 	d_Lang035 =	Kontynuować?
-	d_Lang036 =	Obraz / Pixel Znaleziono w
+	d_Lang036 =	Obraz / Pixel znaleziono w
 	d_Lang037 =	Obrazu / Pixela nie znaleziono.
 	d_Lang038 =	Naciśnij przycisk OK, aby kontynuować.
 	d_Lang039 =	Wysyłanie. Proszę czekać...
 	d_Lang040 =	Ta funkcja wymaga biblioteki GDI+.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
 	d_Lang041 =	Nazwa zmiennej zawiera niedozwolony znak.
-	d_Lang042 =	Jest to słowo zarezerwowane.
-	d_Lang043 =	Lub użyj paska narzędzi kontroli
-	d_Lang044 =	Ta funkcja wymaga funkcji Eval().
+	d_Lang042 =	To słowo jest już zarezerwowane.
+	d_Lang043 =	lub użyj paska narzędzi kontroli
+	d_Lang044 =	Ta funkcjonalność wymaga funkcji Eval().
 		Kliknij przycisk OK, aby przejść do strony pobierania.
 	d_Lang045 =	Proszę wybrać okno programu Internet Explorer!
-	d_Lang046 =	Połączenie powodzeniem!
+	d_Lang046 =	Połączenie nawiązane!
 	d_Lang047 =	Nie udało się połączyć!
-	d_Lang048 =	Włóż uchwyt i CLSID.
+	d_Lang048 =	Dodaj uchwyt i CLSID.
 	d_Lang049 =	Nieprawidłowa nazwa etykiety.
 	d_Lang050 =	Duplikat etykiety.
-	d_Lang051 =	Aby odtwarzać makra naciśnij odpowiedni Hotkey (Auto / Ręczny).
+	d_Lang051 =	Aby odtwarzać makro naciśnij odpowiedni Hotkey (Auto / Ręczny).
 	d_Lang052 =	Aby rozpocząć nagrywanie, naciśnij klawisz skrótu nagrywania.
 	d_Lang053 =	Nie pokazuj ponownie tego komunikatu .
 	d_Lang054 =	Proszę wybrać okno programu Excel!
-	d_Lang055 =	Proszę wybrać plik skryptu AutoHotkey (. AHK) i wpisz nazwę funkcji.
+	d_Lang055 =	Proszę wybrać plik skryptu AutoHotkey (. AHK) i podać nazwę funkcji.
 	d_Lang056 =	Ta funkcja wymaga zainstalowanego programu AutoHotkey.
 		Kliknij przycisk OK, aby przejść do strony pobierania.
 	d_Lang057 =	- Naciśnij klawisz CTRL+klawisze strzałek aby przemieścić wybrany obszar.
 		- Naciśnij Shift+klawisze strzałek, aby zmienić rozmiar wybranego obszaru.
 		- Naciśnij klawisz Enter, aby zakończyć.
-	d_Lang058 =	Niektóre funkcje wymagają PRZYWILEJI admnistratora aby funkcjonować poprawnie.
+	d_Lang058 =	Niektóre funkcje wymagają UPRAWNIEŃ admnistratora aby funkcjonować poprawnie.
 		Zaleca się, aby ponownie uruchomić aplikację jako administrator.
 	d_Lang059 =	To polecenie nie obsługuje wyrażenia lub funkcji.
 		Proszę przypisać zmienną i użyć ją w parametrze.
-	d_Lang060 =	Nowa wersja programu dostępna
+	d_Lang060 =	Nowa wersja programu jest dostępna.
 	d_Lang061 =	Nie teraz
 	d_Lang062 =	Masz już najnowszą wersję.
 	d_Lang063 =	Wystąpił błąd podczas sprawdzania.
@@ -861,27 +861,27 @@
 	d_Lang066 =	Specjalnie
 	d_Lang067 =	Pokaż to okno na starcie
 	d_Lang068 =	Porady:
-	d_Lang069 =	Wiele czasu i wysiłku włożono w rozwój Pulover's Macro Creator. Jeśli okaże się to przydatne, pokaż swoją wdzięczność poprzez uiszczenie dotacji.
-		Oddawanie, czy nie, nie będzie żadnej różnicy w jego cech i funkcjonalności.
+	d_Lang069 =	Wiele czasu i wysiłku włożono w rozwój Pulover's Macro Creator. Jeśli okaże się on przydatny, pokaż swoją wdzięczność poprzez uiszczenie dotacji.
+		Dotacja, czy też jej brak, nie będzie miała żadnego wpływu na działanie programu i jego możliwości.
 	d_Lang070 =	Dotacja...
 	d_Lang071 =	Nie, dziękuję
 	d_Lang072 =	Wsparcie oprogramowania Open Source
 	d_Lang073 =	Błąd: Wybrany zły Hotkey.
-	d_Lang074 =	Znajdź polecenie lub funkcje
+	d_Lang074 =	Wyszukaj polecenie lub funkcje
 	d_Lang075 =	Witamy w Pulover's Macro Creator
 	d_Lang076 =	Proszę wybrać preferowany układ
 	d_Lang077 =	Zwarty
 	d_Lang078 =	Domyślny
 	d_Lang079 =	Sprawdź aktualizacje na starcie.
 	d_Lang080 =	Można to zmienić w Opcje > Ustawienia > Ogólne.
-	d_Lang081 =	Możesz zmienić i dostosować układy w menu Widok.
+	d_Lang081 =	Możesz zmienić i dostosować wygląd w menu Widok.
 	d_Lang082 =	Plik nie został znaleziony!
 	d_Lang083 =	Plik kopii zapasowej został znaleziony. Czy chcesz go otworzyć?
 	d_Lang084 =	Proszę zapisać zmiany przed planowaniem zadania.
-	d_Lang085 =	Brakuje "End Loop" w Makrze
+	d_Lang085 =	Brakuje instrukcji zakończenia pętli w makrze
 	d_Lang086 =	Brakuje "End If" w Makro
-	d_Lang087 =	Zauważ, że zmiany wprowadzone w skrypcie poza programem nie ma wpływu na makro w żaden sposób.
-		Ta funkcja jest przeznaczona wyłącznie jako funkcja szybkiego eksportu. PMC nie jest przeznaczony jako Edytor skryptów AHK.
+	d_Lang087 =	Zauważ, że zmiany wprowadzone w skrypcie poza programem w żaden sposób nie wpływają na makro.
+		Ta funkcja służy wyłącznie do szybkiego eksportu. PMC nie jest przeznaczony do edycji skryptów AHK.
 	d_Lang088 =	Spróbuj uruchomić jako zwykły użytkownik (nie jako administrator).
 	d_Lang089 =	Nie wybrano wiersza!
 	d_Lang090 =	Proszę wybrać wiersz, aby wstawić lub usunąć grupę.
@@ -889,37 +889,37 @@
 	d_Lang092 =	Małe ikony
 	d_Lang093 =	Duże ikony
 	d_Lang094 =	Ta funkcja wymaga systemu Windows Vista lub nowszego.
-	d_Lang095 =	Korzystanie z ByRef powoduje parametru, aby stać się aliasem dla zmiennej przekazanej z rozmówcą. Innymi słowy, parametry i zmienne dzwoniącego odnoszą się do tych samych zawartości pamięci.
+	d_Lang095 =	Użycie funkcji ByRef powoduje zamianę parametru na alias dla przekazanej zmiennej, wszystko będzie wskazywało do tych samych zawartości pamięci.
 	d_Lang096 =	- TUTAJ NIE UMIESZCZAJ ZMIENNYCH W % .
 		- Zwracana wartość musi być wyrażeniem.
-		- Możesz użyć ciągów znaków, zmiennych, tablic i funkcji. Można również łączyć każde z nich.
+		- Możesz użyć ciągów znaków, zmiennych, tablic i funkcji. Można również łączyć je ze sobą.
 		- Aby używać ciągów znaków, ujmij je w cudzysłowiu, np: "Wynik jest:" A+B.
 		- Jeśli chcesz zwrócić dodatkowy wyniki, możesz skorzystać z ByRef w parametrach.
-		- Macierze można stosować do zwracania wielu wartości lub nazwanych wartości.
+		- Macierze można stosować do zwracania wielu wartości nawet ich nazw.
 	d_Lang097 =	- TUTAJ NIE UMIESZCZAJ ZMIENNYCH W %.
 		- Większość wyrażeń AHK jest obsługiwana.
 		- Możesz użyć ciągów znaków, zmiennych, tablic i funkcji.
 		- Aby używać ciągów znaków, ujmij je w cudzysłowiu, np: var = "A".
-		- Wiele oświadczeń jest obsługiwane np: var = "a" || InStr (var, "b").
-	d_Lang098 =	Jeśli jeden parametr ma wartość domyślną, następujące parametry również muszą ją mieć.
+		- Wiele wyrażeń jest obsługiwane np: var = "a" || InStr (var, "b").
+	d_Lang098 =	Jeśli jeden parametr ma wartość domyślną, to musi być ona przypisana również do następnych parametrów.
 	d_Lang099 =	Nazwa funkcji zawiera niedozwolony znak.
 	d_Lang100 =	GOTO, GOSUB i Label nie są dozwolone w funkcji.
 	d_Lang101 =	Duplikat funkcji.
-	d_Lang102 =	Wystąpił błąd. Możesz wysłać e-mail do "pulover@macrocreator.com" z plikiem:
-	d_Lang103 =	Aktualizacja plików języków są dostępne.
-		Pobierz teraz?
-	d_Lang104 =	Ta wiadomość nie pojawi się ponownie w tej samej aktualizacji. Można ją pobrać z menu Pomoc > Sprawdź aktualizacje.
+	d_Lang102 =	Wystąpił błąd. Możesz wysłać email do "pulover@macrocreator.com" z plikiem:
+	d_Lang103 =	Nowe pliki językowe są dostępne.
+		Czy chcesz pobrać teraz?
+	d_Lang104 =	Ta wiadomość nie pojawi się ponownie, aktualizację można pobrać z menu Pomoc > Sprawdź aktualizacje.
 	d_Lang105 =	Plik wysłany. Dziękuję!
-	d_Lang106 =	Pliki językowe zaktualizowane pomyślnie.
-	d_Lang107 =	Nie można uruchomić stopera
+	d_Lang106 =	Pliki językowe zostały zaktualizowane.
+	d_Lang107 =	Nie można uruchomić zegara
 	d_Lang108 =	Wszystkie pozycje są zarejestrowane. Proszę o usunięcie jednej z nich.
 	d_Lang109 =	Etykieta docelowa nie istnieje.
 	d_Lang110 =	Potwierdź zastąpienie pliku
 	d_Lang111 =	już istnieje.
 		Chcesz go zastąpić?
-	d_Lang112 =	Nie znaleziono konta e-mail.
+	d_Lang112 =	Nie znaleziono konta email.
 	d_Lang113 =	Nie zgłoszono błędu.
-	d_Lang114 =	Skrypty zaeksportowane (nawet jeśli skompilowane) z funkcją "Wyślij e-mail" (CDO) będzie miała widoczne informacje konta e-mail użytego, włączając w to hasło. Plik projektu PMC nie ma tej informacji.
+	d_Lang114 =	Skrypty wyeksportowane (nawet jeżeli zostały skompilowane) z funkcją "Wyślij email" (CDO) to będą w nich widoczne informacje odnośnie użytego konta email, włączając w to hasło. Plik projektu PMC nie ma tej informacji.
 	d_Lang115 =	- Przytrzymaj Alt aby ustawić obszar do tej samej lokalizacji.
 	d_Lang116 =	Przenieś i zainstaluj
 	d_Lang117 =	Przejdź do strony pobierania
@@ -928,40 +928,40 @@
 	d_Lang120 =	Aby przywrócić rozmiary pasków narzędzi, przejdź do:
 		
 ; 18. Start-up Tips		
-	Start_Tips =	Sprawdź samouczki wideo na www.macrocreator.com/help~~pobj aby dowiedzieć się o wielu funkcjach PMC.
+	Start_Tips =	Aby dowiedzieć się o wielu funkcjach PMC, sprawdź samouczki wideo na www.macrocreator.com/help
 		Aby otrzymać pomoc dla konkretnej komendy kliknij prawym przyciskiem myszy w dowolnym miejscu na oknie poleceń. Dzięki temu zobaczysz link do pomocy online.
-		Można tworzyć makra za pomocą przycisków poleceń w oknie głównym lub za pomocą nagrywania skopiować swoje działania. Przejdź do Opcje> Ustawienia> Nagrywanie, aby wybrać to, co będzie rejestrowane.
-		Użyj paska wyszukiwania lub okno "Znajdź", aby wyszukać polecenia i funkcje.
-		Chciałbyś pomóc naprawić tłumaczenie lub nawet stworzyć nową? Przejdź do Opcje> Ustawienia> Język i redaktor dokonywać żadnych korekt, które chcesz. Można go obejrzeć w dowolnym momencie. Kliknij na Zatwierdź aby wysłać rewizji. Zapraszam do składania dowolną liczbę korekt tyle razy, ile chcesz.
-		Zaznacz opcję "Keys przechwytywania", aby wejść do kombinacji klawiszy i makra bezpośrednio z głównego okna.
-		Wprowadź klucze i kombinacje w polu Skrót na dole i wciśnij przycisk Wstaw, aby dodać je do wybranych wierszy.
-		Za pomocą przycisków edycji w dolnej części okna głównego, aby ustawić powtarzanie i opóźnienia do wielu wierszy w tym samym czasie. Jeśli nie wybrano żadnych wierszy przyciski edytować zastosowanie do wszystkich wierszy w liście.
-		Prawie każde polecenie, a funkcja przyjmuje i wysyła zmienne. Można przypisać własne zmienne w zmiennych okien (Polecenia> Zmienne / podgrupach). Aby wykorzystać je wewnątrz polecenia dołączyć nazwę zmiennej w procentach znaków, np .:% MyVar%. W funkcjach, należy je bez znakami procentu, np .: substr (MyVar, 5).
-		Kliknij prawym przyciskiem myszy w dowolnym miejscu okna poleceń na łatwe wstawianie wbudowanych zmiennych z listy.
-		Aby korzystać z dyktafonu do szybkiego zadania przejdź do Opcje> Ustawienia> Nagrywanie i zaznacz opcję "Wyczyść listę". Następnie kliknij przycisk Record w oknie głównym programu i użyć F10, aby usunąć obecny Makro i rozpocząć nowe z tego samego skrótu. Można również sprawdzić "zawsze aktywne" opcja w oknie głównym, aby utrzymać hotkeys nagrywania i odtwarzania aktywne.
-		PMC obsługuje obiektów tablicy i metod, podobnie jak skrypty AutoHotkey. Można tworzyć tablice pod wieloma względami najbardziej zwykle będzie oknie Zmienne, zaznaczając opcję "ekspresja" i załączając wartości w nawiasach, np .: [10, 20, Var, "string"]. Można także tworzyć nazwane klucze, np .: {Keya: Vara, "jakiś klucz": "wartość ciągu"}.
+		Można tworzyć makra za pomocą przycisków poleceń z paska poleceń lub nagrywać wszystkie wykonywane czynności. Przejdź do Opcje > Ustawienia > Nagrywanie, aby wybrać to, co będzie rejestrowane.
+		Użyj paska wyszukiwania lub opcji "Wyszukaj", aby znaleźć polecenia i funkcje.
+		Chciałbyś pomóc naprawić tłumaczenie lub stworzyć nowy? Przejdź do Opcje > Ustawienia > Język i dokonaj koniecznych korekt. Można je obejrzeć w dowolnym momencie. Kliknij na Wyślij aby dostarczyć je do weryfikacji. Zapraszam do korzystania z tej funkcji jeśli macie tłumaczenie lepiej oddające wybrane zagadnienie.
+		Zaznacz opcję "Przechwyć klawisz", aby wprowadzić klawisze i skróty bezpośrednio z okna głównego.
+		Wprowadź klawisze i skróty w polu na dole i wciśnij przycisk "Wstaw", aby dodać je do wybranych wierszy.
+		Użyj pomocą przycisków edycji w dolnej części okna głównego, aby ustawić powtarzanie i opóźnienia do wielu wierszy za jednym razem. Jeśli nie wybrano żadnych wierszy zmiany zostaną zastosowane do wszystkich wierszy.
+		Większość poleceń i  funkcji pobiera i wysyła zmienne. Można przypisać własne zmienne za pomocą Polecenia > Zmienne / Tablice). Aby wykorzystać je wewnątrz polecenia muszą być ujęte w znaki % np .:% MyVar%. Natomiast w funkcjach, należy je pozstawić bez znaków % np .: SubStr(MyVar, 5).
+		Żeby wstawić zmienną z listy wystarczy kliknąć prawym przyciskiem myszy w dowolnym miejscu okna poleceń.
+		Żeby nagrać szybkie zadanie przejdź do Opcje > Ustawienia> Nagrywanie i zaznacz opcję "Wyczyść listę". Następnie kliknij przycisk "Nagrywanie" w oknie głównym programu i użyj F10, aby usunąć obecne makro i rozpocząć nowe z tego samego skrótu. Można również w oknie głównym zaznaczyć opcję "zawsze aktywne", aby pozostawić klawisze nagrywania i odtwarzania aktywne.
+		PMC podobnie jak skrypty AutoHotkey obsługuje metody i obiekty tablicowe. Można tworzyć tablice na wiele sposobów, zazwyczaj robi się to w oknie "Zmienne", zaznaczając opcję "Wyrażenia" i załączając wartości w nawiasach, np .: [10, 20, Var, "string"]. Można także tworzyć nazwane klucze, np .: {Keya: Vara, "jakiś klucz": "wartość ciągu"}.
 		Funkcje użyć składni wyrażeń AHK. Stringi, musi być ujęty w cudzysłów, a zmienne nie muszą procent znaki. Można korzystać z innych funkcji lub elementów tablicy jako parametry. Np .: StrReplace (MyVar, MyArray [ "A"], substr (OtherVar, 2, 3)).
 		Wyrażenia są obsługiwane w AutoHotkey Expression składni. Aby użyć wyrażenia wewnątrz parametru polecenia, uruchom go znakiem procentu, np .:% substr (Var, 5).
-		The "pętli" licznik w górę określa całkowitą liczbę pętli dla wybranego makro.
+		Licznik pętli na górze pozwala ustawić ilość powtórzeń dla wybranego makra.
 		Można edytować wiersz poprzez dwukrotne kliknięcie lub wybranie i kliknięcie przycisku Edytuj na dole. Można edytować wiele wybranych wierszy przy użyciu opcji na pasku edycji na dole.
-		Można definiować własne funkcje function> Tworzenie funkcji i używać ich z okna funkcji lub wyrażeń wewnątrz.
-		Można zdefiniować Globa / zmiennych lokalnych i statycznych dla funkcji zdefiniowanych przez użytkownika. Zmienne globalne zdefiniowane w Opcje> Ustawienia> zmienne globalne użytkownika są uważane Super Global, i zawsze będzie dostępne funkcje wewnętrzne, nawet jeśli zdefiniowano jako lokalne.
-		Wybierz jeden lub więcej wierszy, aby dodać nowe polecenia na nich.
-		Można przenieść wiersze z kliknij i przeciągnij.
-		Kliknij dwukrotnie ikonę na pasku zadań, aby włączyć lub wyłączyć skróty klawiszowe odtwarzania / nagrywania. Kliknij na nim środkowego przycisku podczas odtwarzania lub nagrywania, aby wstrzymać.
-		Można eksportować makr roboczych skryptów AutoHotkey lub samodzielnych plików wykonywalnych z okna eksportu.
+		Można definiować własne funkcje w menu Function > Tworzenie funkcji i używać ich z okna funkcji lub wyrażeń wewnątrz.
+		Można zdefiniować globalne lub lokalne statycznne zmienne dla funkcji zdefiniowanych przez użytkownika. Zmienne globalne definiuje się w menu Opcje > Ustawienia > Zmienne globalne użytkownika. Są one  nazywane Super Global, i widoczne wewnątrz funkcji nawet gdy będą zadeklarowane jako localne.
+		Wybierz jeden lub więcej wierszy, aby dodać nowe polecenia przed nimi.
+		Żeby przenieść wiersze należy kliknąć jeden zaznaczony i następnie przeciągnąć mająć cały czas wciśnięty przycisk.
+		Kliknij dwukrotnie ikonę na pasku zadań, aby uaktywnić skróty klawiszowe lub zatrzymać odtwarzanie / nagrywanie. Kliknij na nim podczas odtwarzania lub nagrywania środkowym przyciskiem, aby wstrzymać.
+		Z okna eksportu możesz wysłać swoje makro do działających skryptów AutoHotkey lub samodzielnych plików wykonywalnych.
 		Aby nagrać i odtworzyć za pomocą myszy współrzędne bezwzględne przejdź do Opcje> Ustawienia> Ustawienia domyślne i ustawić Mouse współrzędne ekranu.
-		Można otwierać, kopiować, przenosić i usuwać pliki i foldery za pomocą jednego z poleceń w poleceniach> Uruchom / File / String / Inne. Istnieje wiele innych przydatnych komend, takich jak StringReplace InputBox i MouseGetPos.
-		Aby nagrać Down and Up stan każdej kluczowej Przejdź do Opcje> Ustawienia> Nagrywanie i sprawdzić "Uchwyć państwa klucz (/ Up Down)" opcję.
-		Można używać skrótów klawiaturowych, aby przyspieszyć lub spowolnić odtwarzanie. Przejdź do Opcje> Ustawienia> Odtwarzanie ustawić klawisze i szybkość.
-		Aby dostosować obszar przechwytywania używając "Make Screen" narzędzie przejdź do Opcje> Ustawienia> Zrzuty ekranu i wybierz "Naciśnij Enter Capture". Po narysowaniu kontroli wykorzystywania prostokąt + klawisze strzałek, aby przesunąć zaznaczenie i Shift + klawisze strzałek, aby zmienić jego rozmiar.
+		Możesz otwierać, kopiować, przenosić i usuwać pliki i foldery za pomocą jednego z poleceń w menu Polecenia > Uruchom / File / String / Inne Istnieje wiele innych przydatnych komend, takich jak StringReplace InputBox i MouseGetPos.
+		Aby nagrać położenie klawisza (Góra / Dół) przejdź  do Opcje > Ustawienia > Nagrywanie i zaznacz opcję "Przechwyć położenie klawisza (Góra / Dół)".
+		Możesz używać skrótów klawiaturowych, aby przyspieszyć lub spowolnić odtwarzanie. Przejdź do Opcje > Ustawienia > Odtwarzanie i tam ustaw klawisze i prędkość.
+		Aby ustawić obszar przechwytywania za pomocą "Zrzut ekranu" przejdź do Opcje > Ustawienia > Zrzut ekranu i wybierz "Naciśnij Enter aby przechwycić". Po narysowaniu prostokąta użyj przycisku CTRL i strzałek aby przesunąć zaznaczenie a klawisza Shift + klawisze strzałek, aby zmienić jego rozmiar.
 		Szybki wybór: Wybierz dowolny wiersz i kliknij na nagłówek kolumny, aby wybrać podobne wiersze na podstawie tekstu komórki z tej kolumny.
-		Kliknij na nagłówek kolumny Indeks włączać / wyłączać pomocy znaczników i kolory dla pętli i instrukcji. Dwukrotnie kliknij na nagłówek kolumny, aby działania Włączanie / wyłączanie wcięcia dla pętli i instrukcji.
-		Można debugowania makra przy użyciu ręcznego szybkiego dostępu oraz opcje zagrać w menu Macro. Można również wyłączyć działań odznaczając je na liście makro.
-		Aby makra działają tylko w określonym oknie przejdź do makrofotografii> kontekstową skrótów klawiszowych.
-		Można ustawić własne zmienne globalne mają zostać załadowane na starcie i być eksportowane. Przejdź do Opcje> Ustawienia> użytkownika zmienne globalne, aby je dodać.
-		Można uruchomić zaawansowane funkcje, takie jak substr i REGEXREPLACE w oknie funkcji (Polecenia> Funkcje / metod Array). Można również zdefiniować własne funkcje lub uruchamianie funkcji z zewnętrznych skryptów AutoHotkey.
-		Można nagrywać ruchy myszy w stosunku do aktualnej pozycji trzymając CapsLock podczas nagrywania (można zmienić klucz i uczynić ją włączyć w ustawieniach).
+		Kliknij indeks nagłówka kolumny, aby włączyć / wyłączyć markery i kolory dla pętli i warunków wyboru. Kliknij dwukrotnie akcję nagłówka kolumny, aby włączyć / wyłączyć wcięcie pętli i warunków wyboru.
+		Możesz debugować makro przy użyciu skrótów klawiatury lub opcji "Uruchom" z menu "Makra". Można również je wyłączyć odznaczając wybrane na liście makro.
+		Żeby sprawić zadziałanie makra tylko w określonym oknie przejdź do Makra  > Ustawienia skrótów klawiatury.
+		Możesz ustawić własne zmienne globalne które zostaną załadowane po uruchomieniu aby móc zostać wyeksportowane. Przejdź do Opcje > Ustawienia > Zmienne globalne użytkownika, aby je dodać.
+		Można uruchomić zaawansowane funkcje, takie jak substr i REGEXREPLACE w oknie funkcji (Polecenia > Funkcje / Macierze). Można również zdefiniować własne funkcje lub uruchamianie funkcji z zewnętrznych skryptów AutoHotkey.
+		Można nagrywać ruchy myszy w stosunku do aktualnej pozycji trzymając CapsLock podczas nagrywania (można zmienić klawisz i przestawić to w Ustawieniach).
 		
 ; 19. Tooltips		
 	A_List_TT =	Wybierz Makro (Ctrl+1~0)
@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Pobiera podciągi (pola) z ciągiem, jeden na raz.
 	Loop (read file contents)	Pobiera wiersze w pliku tekstowym, po jednym na raz (działa lepiej niż FileReadLine).
 	Loop (registry)	Pobiera zawartość określonego podklucz rejestru, jeden element naraz.
+	Max	Zwraca najwyższą wartość jednej lub więcej liczb.
 	MaxIndex	Zwraca największy klucz całkowitą.
+	Min	Zwraca najniższą wartość jednej lub więcej liczb.
 	MinIndex	Zwraca najniższy klucz całkowitą.
 	Mod	Modulo. Zwraca resztę, gdy dywidendy dzieli się przez dzielnik.
 	MouseGetPos	Pobiera bieżącą pozycję kursora myszy i ewentualnie które okno i kontroli jest aktywując.

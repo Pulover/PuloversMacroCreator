@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Bir dize alır dizeleri (alanları), her seferinde bir.
 	Loop (read file contents)	Bir metin dosyasına satırları, bir zaman (FileReadLine daha iyi performans) az bir alır.
 	Loop (registry)	Bir anda belirtilen kayıt defteri alt anahtarını, bir öğe içeriğini alır.
+	Max	Bir veya daha fazla sayının en yüksek değerini verir.
 	MaxIndex	En yüksek tamsayı anahtarı döndürür.
+	Min	Bir veya daha fazla sayının en düşük değerini döndürür.
 	MinIndex	En tamsayı anahtarı döndürür.
 	Mod	Modulo. Temettü bölen bölünür kalanı verir.
 	MouseGetPos	Mevcut fare imleci konumu ve isteğe bağlı olarak hangi pencere ve kontrol üzerine asılı olan alır.

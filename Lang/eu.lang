@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Eskuratzen azpikateak (eremuak) kate bat, aldi berean batetik.
 	Loop (read file contents)	Testu fitxategi bat, bat lerro eskuratzen denbora bat (hobe burutzen FileReadLine baino ez).
 	Loop (registry)	Zehaztutako erregistro Azpigako edukiak, aldi berean, elementu bat eskuratzen du.
+	Max	Zenbaki baten edo gehiagoren balio altuena ematen du.
 	MaxIndex	Osokoa gakoa altuena itzultzen.
+	Min	Zenbaki baten edo gehiagoren balio txikiena ematen du.
 	MinIndex	Txikiena osokoa giltza itzultzen.
 	Mod	Modulo. gainerako denean Dibidenduen da zatitzailea arabera banatzen itzultzen.
 	MouseGetPos	Egungo saguaren kurtsorearen posizioan, eta aukeran, leihoak eta kontrolatzeko, gainetik pasatzean eskuratzen du.

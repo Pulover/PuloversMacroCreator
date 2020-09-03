@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Letölti részkarakterláncokat (mezők) egy string, egy olyan időpontban.
 	Loop (read file contents)	Letölti a vonalak egy szöveges fájlt, egy olyan időpontban (jobban teljesít, mint FileReadLine).
 	Loop (registry)	Letölti a tartalmát a megadott alkulcs, egy tétel egy időben.
+	Max	Egy vagy több szám legmagasabb értékét adja eredményül.
 	MaxIndex	Visszaadja a legnagyobb egész kulcs.
+	Min	Egy vagy több szám legkisebb értékét adja eredményül.
 	MinIndex	Visszaadja a legalacsonyabb egész kulcsot.
 	Mod	Modulo. Visszaadja a maradékot, ha osztalék osztva osztó.
 	MouseGetPos	Letölti a jelenlegi helyzetben a kurzort, és esetleg melyik ablak és ellenőrzés lebeg.

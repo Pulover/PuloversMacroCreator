@@ -13,7 +13,7 @@ Loop
 	If (InStr(sKey, "_") < 1)
 		If (Asc(sKey) < 192) && ((sKey != "/") && (sKey != ".") && (sKey != "?")&& (!GetKeyState(sKey, "P")))
 			continue
-	If ((GetKeyState("RAlt", "P")) && !(HoldRAlt))
+	If ((GetKeyState("RAlt", "P")) && (!HoldRAlt))
 		sKey := "RAlt", HoldRAlt := 1
 	If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
 	|| InStr(sKey, "Alt") || InStr(sKey, "Win"))
@@ -147,7 +147,7 @@ If (MScroll = 1)
 }
 return
 
-#If ((Record = 1) && (Mouse = 1) && !(A_IsPaused))
+#If ((Record = 1) && (Mouse = 1) && (!A_IsPaused))
 *~LButton::
 	Critical
 	; Send, {Blind}{LButton Down}

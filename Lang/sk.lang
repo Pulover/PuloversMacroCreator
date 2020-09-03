@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Načíta čiastkové reťazca (pole), z povrázku, jeden po druhom.
 	Loop (read file contents)	Načíta riadky v textovom súbore, jeden po druhom (lepšie ako FileReadLine).
 	Loop (registry)	Načíta obsah zadaného podkľúč databázy Registry, jeden kus po druhom.
+	Max	Vráti najvyššiu hodnotu jedného alebo viacerých čísel.
 	MaxIndex	Vracia najvyššej celočíselnú kľúč.
+	Min	Vráti najnižšiu hodnotu jedného alebo viacerých čísel.
 	MinIndex	Vracia najmenší celočíselnú kľúč.
 	Mod	Modulo. Vráti zvyšok, keď je dividenda podelil deliteľ.
 	MouseGetPos	Načíta aktuálnu pozíciu kurzora a prípadne kde je otvorené okno a riadenie je vznášajúce sa nad.

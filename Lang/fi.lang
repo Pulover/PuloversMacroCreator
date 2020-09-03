@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Hakee merkkijonoa (kentät) alkaen merkkijonon, yksi kerrallaan.
 	Loop (read file contents)	Hakee rivit tekstitiedosto, yksi kerrallaan (toimii paremmin kuin FileReadLine).
 	Loop (registry)	Hakee sisältö määritelty aliavaimen yhden kohteen kerrallaan.
+	Max	Palauttaa yhden tai useamman luvun suurimman arvon.
 	MaxIndex	Palauttaa korkein kokonaisluvun avain.
+	Min	Palauttaa yhden tai useamman luvun pienimmän arvon.
 	MinIndex	Palauttaa alin kokonaisluvun avain.
 	Mod	Modulo. Palauttaa jakojäännös, kun osinko jaetaan jakaja.
 	MouseGetPos	Hakee nykyinen asema hiiren kursori, ja valinnaisesti joka ikkunasta ja valvonnan yhteydessä leijuu.

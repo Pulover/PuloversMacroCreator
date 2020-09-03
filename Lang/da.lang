@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Henter delstrenge (felter) fra en streng, en ad gangen.
 	Loop (read file contents)	Henter linjerne i en tekstfil, en ad gangen (præsterer bedre end FileReadLine).
 	Loop (registry)	Henter indholdet af den angivne undernøgle i registreringsdatabasen, et element ad gangen.
+	Max	Returnerer den højeste værdi af et eller flere tal.
 	MaxIndex	Returnerer den højeste heltal tasten.
+	Min	Returnerer den laveste værdi af et eller flere tal.
 	MinIndex	Returnerer det laveste heltal tasten.
 	Mod	Modulo. Returnerer resten, når Udbytte divideret med Divisor.
 	MouseGetPos	Henter den aktuelle position af musemarkøren, og eventuelt hvilket vindue og kontrol er det svæver over.

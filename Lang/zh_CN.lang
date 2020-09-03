@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	从一个字符串中获取子字符串（片段），每次一个。
 	Loop (read file contents)	逐行读取文本文件的内容，每次一行（比FileReadLine执行的更好）。
 	Loop (registry)	获取指定的注册表子键的内容，每次一个项目。
+	Max	返回一个或多个数字的最大值。
 	MaxIndex	返回的最大整数键。
+	Min	返回一个或多个数字的最小值。
 	MinIndex	返回最低整数键。
 	Mod	求模。返回被除数Dividend除以除数Divisor后得到的余数。
 	MouseGetPos	获取鼠标光标的当前位置以及鼠标当前悬停的窗口和控件（可选的）。

@@ -946,7 +946,7 @@
 					{
 						For _each, _value in FieldsData
 							%_each% := _value
-						If !(ManualKey)
+						If (!ManualKey)
 							PlayCommand(cType5, "", "", "", DelayX, "", "", Pars, FlowControl
 										, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 						If (TimesR > 1)
@@ -969,7 +969,7 @@
 					continue
 				If Type in %cType5%,%cType6%,%cType20%,%cType50%
 					continue
-				If !(ManualKey)
+				If (!ManualKey)
 					PlayCommand(cType5, "", "", "", DelayX, "", "", Pars, FlowControl
 							, PlaybackVars[LoopDepth][mLoopIndex], PbCoordModes, PbSendModes, RunningFunction)
 			}
@@ -1035,7 +1035,7 @@
 	BlockInput, MouseMoveOff
 	BlockInput, Off
 	CurrentRange := ""
-	If !(aHK_Timer0)
+	If (!aHK_Timer0)
 	{
 		Try Menu, Tray, Icon, %DefaultIcon%, 1
 		Menu, Tray, Default, %w_Lang005%

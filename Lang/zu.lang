@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Retrieves substrings (fields) from a string, one at a time.
 	Loop (read file contents)	Retrieves the lines in a text file, one at a time (performs better than FileReadLine).
 	Loop (registry)	Retrieves the contents of the specified registry subkey, one item at a time.
+	Max	Ibuyisa inani eliphakeme kakhulu lenombolo eyodwa noma eziningi.
 	MaxIndex	Returns the highest integer key.
+	Min	Ibuyisa inani eliphansi kunombolo eyodwa noma eziningi.
 	MinIndex	Returns the lowest integer key.
 	Mod	Modulo. Returns the remainder when Dividend is divided by Divisor.
 	MouseGetPos	Retrieves the current position of the mouse cursor, and optionally which window and control it is hovering over.

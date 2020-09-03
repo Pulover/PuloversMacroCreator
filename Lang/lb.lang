@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Retrieves substrings (Felder) aus enger Kette, een op eng Kéier.
 	Loop (read file contents)	Retrieves d'Linnen an engem Text Fichier, een op eng Kéier (stécht besser wéi FileReadLine).
 	Loop (registry)	Retrieves d'Inhalter vun der spezifizéierter Enregistrement subkey, ee Punkt op enger Zäit.
+	Max	Nees den héchste Wäert vun enger oder méi Zuelen.
 	MaxIndex	Returns der héchster ganz wichteg.
+	Min	Nees de niddregste Wäert vun enger oder méi Zuelen.
 	MinIndex	Returns den niddregsten ganz wichteg.
 	Mod	Modulo. Returns de Rescht wann Dividend vun Divisor ënnerdeelt ass.
 	MouseGetPos	Retrieves déi aktuell Positioun vun der Maus Cursorpositioun, a méiglech déi Fënster a Kontroll et MouseOver eriwwer ass.

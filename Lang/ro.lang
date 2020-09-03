@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Recuperează subșirurilor (câmpuri) dintr-un șir de caractere, unul la un moment dat.
 	Loop (read file contents)	Recuperează liniile într-un fișier text, unul la un moment dat (performanță mai bună decât FileReadLine).
 	Loop (registry)	Extrage conținutul registrului specificat subcheii, un singur element la un moment dat.
+	Max	Returnează cea mai mare valoare a unuia sau mai multor numere.
 	MaxIndex	Returnează cel mai mare număr întreg tasta.
+	Min	Returnează cea mai mică valoare a unuia sau mai multor numere.
 	MinIndex	Returnează cel mai mic număr întreg tasta.
 	Mod	Modulo. Returnează restul când dividende este împărțit de Divisor.
 	MouseGetPos	Recuperează poziția curentă a cursorului mouse-ului, și, opțional, pe care fereastra și controlul este situându-se deasupra.

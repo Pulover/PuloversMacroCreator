@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Mendapatkan semula substrings (bidang) daripada rentetan, satu pada satu masa.
 	Loop (read file contents)	Mendapatkan semula baris dalam fail teks, satu pada satu masa (melakukan lebih baik daripada FileReadLine).
 	Loop (registry)	Mendapatkan semula kandungan subkey pendaftaran yang dinyatakan, satu perkara pada satu masa.
+	Max	Mengembalikan nilai tertinggi satu atau lebih nombor.
 	MaxIndex	Pulangan utama integer tertinggi.
+	Min	Mengembalikan nilai terendah satu atau lebih nombor.
 	MinIndex	Pulangan utama integer yang paling rendah.
 	Mod	Modulo. Kembali baki apabila dividen dibahagikan dengan Pembahagi.
 	MouseGetPos	Mendapatkan semula kedudukan semasa kursor tetikus, dan pilihan yang tingkap dan kawalan ia berlegar.

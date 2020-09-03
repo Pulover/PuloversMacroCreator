@@ -1,6 +1,6 @@
 ﻿Lang_it
 		
-		; Italian
+		; Italian [Revised by matteo]
 		
 ; 01. Main Menu		
 	m_Lang001 =	&File
@@ -48,10 +48,10 @@
 	r_Lang017 =	Sal&va Macro corrente
 		
 ; 04. Function Sub Menu		
-	u_Lang001 =	&Creare Funzione
+	u_Lang001 =	&Crea Funzione
 	u_Lang002 =	&Aggiungi parametro
 	u_Lang003 =	A&ggiungi ritorno
-	u_Lang004 =	C&onvertire macro Per Funzione
+	u_Lang004 =	C&onverti Macro Per Funzione
 		
 ; 05. Commands Sub Menu		
 	i_Lang001 =	&Mouse
@@ -105,8 +105,8 @@
 	s_Lang001 =	&Seleziona tutto
 	s_Lang002 =	S&elezionare Nessuno
 	s_Lang003 =	&Inverti selezione
-	s_Lang004 =	&Controllo selezionata
-	s_Lang005 =	&Deselezionare selezionato
+	s_Lang004 =	&Controllo selezione
+	s_Lang005 =	&Deselezionare selezione
 	s_Lang006 =	I&nverti Controlli
 	s_Lang007 =	S&postare La Selezione Su
 	s_Lang008 =	Sp&ostare La Selezione Verso Il Basso
@@ -115,9 +115,9 @@
 		
 ; 08. View Sub Menu		
 	v_Lang001 =	&Sempre in primo piano
-	v_Lang002 =	&Righe Evidenziare
-	v_Lang003 =	&Dentellatura
-	v_Lang004 =	&Controlli Di Barra Degli Strumenti Di
+	v_Lang002 =	&Evidenzia Righe
+	v_Lang003 =	&Indentazione
+	v_Lang004 =	&Controlli Di Barra Degli Strumenti
 	v_Lang005 =	&Anteprima
 	v_Lang006 =	&Barre Degli Strumenti
 	v_Lang007 =	&Tasti Di Scelta Rapida
@@ -929,7 +929,7 @@
 		
 ; 18. Start-up Tips		
 	Start_Tips =	Scopri i video tutorial a www.macrocreator.com/help per conoscere le molte caratteristiche di PMC.
-		Per ottenere aiuto per un comando specifico tasto destro del mouse in qualsiasi punto della finestra di comando per visualizzare collegamenti a guida in linea.
+		Per ottenere aiuto riguardo un comando specifico, premere il tasto destro del mouse in qualsiasi punto della finestra di comando per visualizzare i collegamenti alla guida in linea.
 		È possibile creare macro utilizzando i pulsanti di comando nella finestra principale o utilizzando il registratore di copiare le vostre azioni. Vai a Opzioni> Impostazioni> registrazione per selezionare ciò che verrà registrato ingressi.
 		Utilizzare la barra di ricerca o la finestra "Trova un comando" per la ricerca di comandi e funzioni.
 		Volete aiutare a risolvere una traduzione o addirittura crearne uno nuovo? Vai a Opzioni> Impostazioni> editor di Lingua e apportare le correzioni che si desidera. È possibile visualizzare in anteprima in qualsiasi momento. Clicca su Invia per inviare la vostra revisione. Sentitevi liberi di inviare un numero illimitato di correzioni tutte le volte che si desidera.
@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Recupera sottostringhe (campi) da una stringa, uno alla volta.
 	Loop (read file contents)	Recupera le righe in un file di testo, uno per volta (si comporta meglio di FileReadLine).
 	Loop (registry)	Recupera il contenuto della sottochiave del Registro specificato, un elemento alla volta.
+	Max	Restituisce il valore più alto di uno o più numeri.
 	MaxIndex	Restituisce la chiave intera più alta.
+	Min	Restituisce il valore più basso di uno o più numeri.
 	MinIndex	Restituisce la chiave intera più basso.
 	Mod	Modulo. Restituisce il resto quando dividendo viene diviso per divisore.
 	MouseGetPos	Recupera la posizione corrente del cursore del mouse e, facoltativamente, il quale finestra e il controllo si passa sopra.

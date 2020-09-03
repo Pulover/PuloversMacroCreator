@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Mengambil substring (field) dari string, satu per satu.
 	Loop (read file contents)	Mengambil baris dalam sebuah file teks, satu per satu waktu (melakukan lebih baik daripada FileReadLine).
 	Loop (registry)	Mengambil isi dari subkey registry yang ditentukan, satu item pada suatu waktu.
+	Max	Menampilkan nilai tertinggi dari satu atau beberapa angka.
 	MaxIndex	Mengembalikan kunci bilangan bulat tertinggi.
+	Min	Menampilkan nilai terendah dari satu atau beberapa angka.
 	MinIndex	Mengembalikan kunci bilangan bulat terendah.
 	Mod	Modulo. Mengembalikan sisanya ketika Dividen dibagi oleh pembagi.
 	MouseGetPos	Mengambil posisi saat kursor mouse, dan secara opsional yang jendela dan kontrol itu melayang di atas.

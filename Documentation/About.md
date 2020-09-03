@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 Copyright © 2012-2020 Rodolfo U. Batista  
 
 Version: 5.0.6  
-Release Date: August, 2020  
+Release Date: September, 2020  
 AutoHotkey Version: 1.1.32.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -36,8 +36,8 @@ Thiago Talma for some improvements to the code, debugging and many suggestions.
 # Change Log
 
 ## Version 5.0.6
-* Added support for _OutputVar_ in Function window for `RegExMatch`, `RegExReplace` and `StrReplace`.
-* Fixed bug in CenterImgSrchCoords with ImageSearch options.
+* Added support for *OutputVar* in **Function** window for `RegExMatch`, `RegExReplace` and `StrReplace`.
+* Fixed bug in *Adjust cooridnates to the center of the image* option in Image Search.
 * Improved performance of Text::Paste from Clipboard.
 * General bug fixes.
 

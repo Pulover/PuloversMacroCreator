@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Ruft Teilstrings (Felder) aus einem String, ein zu einer Zeit.
 	Loop (read file contents)	Ruft die Zeilen in einer Textdatei, einer nach dem anderen (besseren Ergebnissen führt als FileReadLine).
 	Loop (registry)	Ruft den Inhalt des angegebenen Registrierungsunterschlüssel, ein Element zu einem Zeitpunkt.
+	Max	Gibt den höchsten Wert einer oder mehrerer Zahlen zurück.
 	MaxIndex	Gibt die höchste Ganzzahl-Taste.
+	Min	Gibt den niedrigsten Wert einer oder mehrerer Zahlen zurück.
 	MinIndex	Gibt die kleinste ganze Zahl drücken.
 	Mod	Modulo. Gibt den Rest, wenn Dividend durch Divisor geteilt wird.
 	MouseGetPos	Ruft die aktuelle Position des Mauszeigers und gegebenenfalls welche Fenster und Kontrolle ist es schwebt über.

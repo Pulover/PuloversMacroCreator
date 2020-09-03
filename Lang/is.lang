@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Sækir hlutstrengi (reiti) frá streng, einn í einu.
 	Loop (read file contents)	Sækir línurnar í textaskrá, einn í einu (virkar betur en FileReadLine).
 	Loop (registry)	Sækir innihald tilgreinda skrásetning subkey, eitt atriði í einu.
+	Max	Skilar hæsta gildi eins eða fleiri talna.
 	MaxIndex	Skilar hæsta heiltölu takkann.
+	Min	Skilar lægsta gildi eins eða fleiri talna.
 	MinIndex	Skilar lægsta heiltölu takkann.
 	Mod	Modulo. Skilar afgangurinn þegar arður er deilt með divisor.
 	MouseGetPos	Sækir núverandi stöðu músarbendilinn og mögulega sem glugga og stjórna það er sveima yfir.

@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Retrieves substrings (caeau) o linyn, un ar y tro.
 	Loop (read file contents)	Adennill y llinellau mewn ffeil destun, un ar y tro (yn perfformio'n well na FileReadLine).
 	Loop (registry)	Adennill cynnwys y subkey gofrestrfa penodedig, un eitem ar y tro.
+	Max	Yn dychwelyd y gwerth uchaf o un neu fwy o rifau.
 	MaxIndex	Dychwelyd yr allwedd cyfanrif uchaf.
+	Min	Yn dychwelyd y gwerth isaf o un neu fwy o rifau.
 	MinIndex	Dychwelyd yr allwedd cyfanrif isaf.
 	Mod	Modwlo. Dychwelyd y gweddill pan Difidend wedi'i rannu gan rhannydd.
 	MouseGetPos	Yn adfer y sefyllfa bresennol y cyrchwr llygoden, ac yn ddewisol sy'n ffenestr a rheoli ei fod yn hofran dros.

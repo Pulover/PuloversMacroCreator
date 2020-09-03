@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Nuskaito poeilių (laukų) nuo eilutę, vienu metu.
 	Loop (read file contents)	Nuskaito į tekstinį failą, viena linijas vienu metu (atlieka geriau nei FileReadLine).
 	Loop (registry)	Nuskaito konkretaus registro raktą turinys, vienas elementas vienu metu.
+	Max	Pateikia didžiausią vieno ar kelių skaičių vertę.
 	MaxIndex	Grąžina didžiausią sveikąjį klavišą.
+	Min	Pateikiama mažiausia vieno ar kelių skaičių reikšmė.
 	MinIndex	Grąžina mažiausią sveikąjį skaičių klavišą.
 	Mod	Modulį. Grąžina likusi, kai dividendai yra padalytas daliklis.
 	MouseGetPos	Nuskaito esamą padėtį pelės žymeklis, ir pasirinktinai kurį langą ir kontroliuoti tai sklandė virš.

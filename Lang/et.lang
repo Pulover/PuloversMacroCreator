@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Otsib alamstringide (väljad) alates jada, üks korraga.
 	Loop (read file contents)	Otsib read tekstifaili, üks korraga (täidab paremini kui FileReadLine).
 	Loop (registry)	Otsib sisu määratud alamvõti, üks ese korraga.
+	Max	Tagastab ühe või mitme numbri suurima väärtuse.
 	MaxIndex	Tagasiside kõrgeima täisarv võti.
+	Min	Tagastab ühe või mitme numbri madalaima väärtuse.
 	MinIndex	Tagasiside madalaim täisarv võti.
 	Mod	Moodul. Tagasiside ülejäänud kui dividend on jagatud jagaja.
 	MouseGetPos	Otsib praegune positsioon hiirekursori ning vajadusel mis akna ja seda kontrollida viibib üle.

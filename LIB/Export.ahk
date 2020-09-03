@@ -26,7 +26,7 @@
 			,	Step := StrReplace(Step, "``,", ",")
 			,	Step := "`n(LTrim`n" Step "`n)"
 			}
-			If !(Send_Loop)
+			If (!Send_Loop)
 			{
 				If (((TimesX > 1) || InStr(TimesX, "%")) && (Action != "[Text]"))
 					Step := RegExReplace(Step, "{\w+\K(})", " " TimesX "$1")
@@ -866,11 +866,11 @@ IncludeFunc(Which)
 
 IELoad(Pwb)
 {
-	While !(Pwb.busy)
+	While (!Pwb.busy)
 		Sleep, 100
 	While (Pwb.busy)
 		Sleep, 100
-	While !(Pwb.document.Readystate = "Complete")
+	While (!Pwb.document.Readystate = "Complete")
 		Sleep, 100
 }
 

@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Iegūst apakšvirknēm (lauki) no virknes, pa vienam.
 	Loop (read file contents)	Izgūst līnijas teksta failu, viens laikā (veic labāk nekā FileReadLine).
 	Loop (registry)	Iegūst saturs norādīto reģistra apakšatslēgu, viens postenis laikā.
+	Max	Atgriež viena vai vairāku skaitļu augstāko vērtību.
 	MaxIndex	Atgriež augstāko skaitlim taustiņu.
+	Min	Atgriež viena vai vairāku skaitļu mazāko vērtību.
 	MinIndex	Atgriež mazāko skaitlim taustiņu.
 	Mod	Modulo. Atgriež atlikušo kad Dividenžu dala ar dalītājs.
 	MouseGetPos	Iegūst pašreizējo stāvokli peles kursoru, un pēc izvēles, kas logu un kontrolēt to ir lidinājās pār.

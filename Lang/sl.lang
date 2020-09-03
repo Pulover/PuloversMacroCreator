@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Prenese nukleotidov (polja) iz niza, enega naenkrat.
 	Loop (read file contents)	Pridobi vrstico v besedilno datoteko, enega naenkrat (opravlja bolje kot FileReadLine).
 	Loop (registry)	Pridobi vsebino, ki registrski ključ, en predmet naenkrat.
+	Max	Vrne najvišjo vrednost ene ali več številk.
 	MaxIndex	Vrne največjo ključ celi.
+	Min	Vrne najnižjo vrednost ene ali več številk.
 	MinIndex	Vrne najmanjšo celi ključ.
 	Mod	Modula. Vrne ostanek, ko je dividenda deljeno z delitelj.
 	MouseGetPos	Pridobi trenutni položaj kurzorja miške in opcijsko ki okno in nadzor je lebdi nad.

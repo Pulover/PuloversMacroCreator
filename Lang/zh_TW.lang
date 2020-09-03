@@ -186,11 +186,11 @@
 	b_Lang007 =	循環
 		
 ; 14. Main Window		
-	w_Lang001 =	出口
+	w_Lang001 =	導出
 	w_Lang002 =	預覽
 	w_Lang003 =	選項
 	w_Lang004 =	記錄
-	w_Lang005 =	玩
+	w_Lang005 =	播放、執行
 	w_Lang006 =	播放
 	w_Lang007 =	手冊
 	w_Lang008 =	停止
@@ -212,7 +212,7 @@
 	w_Lang024 =	關機（力）
 	w_Lang025 =	重新啟動
 	w_Lang026 =	註銷
-	w_Lang027 =	過冬
+	w_Lang027 =	休眠
 	w_Lang028 =	暫停
 	w_Lang029 =	鎖定計算機
 	w_Lang030 =	指數
@@ -225,16 +225,16 @@
 	w_Lang037 =	窗口
 	w_Lang038 =	評論
 	w_Lang039 =	顏色
-	w_Lang040 =	新（按Ctrl+N）
-	w_Lang041 =	開放（按Ctrl+O）
+	w_Lang040 =	開啟新檔（按Ctrl+N）
+	w_Lang041 =	開啟檔案（按Ctrl+O）
 	w_Lang042 =	保存（Ctrl+S）
 	w_Lang043 =	另存為 （Ctrl+Shift+S）
-	w_Lang044 =	導出華民航空（Ctrl+E鍵）
+	w_Lang044 =	導出到 AHK （Ctrl+E鍵）
 	w_Lang045 =	預覽腳本（按Ctrl+P）
 	w_Lang046 =	設置（按Ctrl+G）
 	w_Lang047 =	錄製宏（按Ctrl+R）
 	w_Lang048 =	激活宏（按Ctrl+Enter鍵）
-	w_Lang049 =	播放當前宏觀經濟（按Ctrl+Shift +回車）
+	w_Lang049 =	播放當前宏觀（按Ctrl+Shift +回車）
 	w_Lang050 =	定時器（按Ctrl+Shift+T）
 	w_Lang051 =	鼠標（F2）
 	w_Lang052 =	文本（F3）
@@ -250,7 +250,7 @@
 	w_Lang062 =	去/標籤（Shift + 9）
 	w_Lang063 =	設置定時器（CTRL+ F9）
 	w_Lang064 =	如果報表附註（F10）
-	w_Lang065 =	變量 / 배열(&V) （按Shift+F10）
+	w_Lang065 =	變量 / 陣列(&V) （按Shift+F10）
 	w_Lang066 =	功能 / 陣列方法 （按Ctrl+F10）
 	w_Lang067 =	發電子郵件 (F11)
 	w_Lang068 =	下載文件 （按Shift+F11）
@@ -318,24 +318,24 @@
 	c_Lang017 =	延遲
 	c_Lang018 =	毫秒
 	c_Lang019 =	秒
-	c_Lang020 =	行
+	c_Lang020 =	確定/好
 	c_Lang021 =	取消
 	c_Lang022 =	關閉
 	c_Lang023 =	複製
 	c_Lang024 =	刪除
 	c_Lang025 =	使用%變量，例如：%Clipboard%
-	c_Lang026 =	行動
+	c_Lang026 =	執行
 	c_Lang027 =	點擊
 	c_Lang028 =	移動
 	c_Lang029 =	移動和點擊
-	c_Lang030 =	車輪向上
+	c_Lang030 =	滾輪向上
 	c_Lang031 =	滾輪向下
 	c_Lang032 =	拖放
 	c_Lang033 =	坐標
 	c_Lang034 =	搜索
 	c_Lang035 =	子
 	c_Lang036 =	相對的
-	c_Lang037 =	鈕
+	c_Lang037 =	按鈕
 	c_Lang038 =	左
 	c_Lang039 =	右
 	c_Lang040 =	中間
@@ -372,8 +372,8 @@
 	c_Lang071 =	變奏曲
 	c_Lang072 =	預覽
 	c_Lang073 =	循環
-	c_Lang074 =	自動的にCOMオブジェクトを作成
-	c_Lang075 =	打破
+	c_Lang074 =	自動的 create COM object
+	c_Lang075 =	打破 / Loop
 	c_Lang076 =	繼續
 	c_Lang077 =	轉到
 	c_Lang078 =	轉到標籤
@@ -397,7 +397,7 @@
 	c_Lang096 =	財產
 	c_Lang097 =	等待頁面加載。
 	c_Lang098 =	CLSID
-	c_Lang099 =	接
+	c_Lang099 =	連接
 	c_Lang100 =	處理
 	c_Lang101 =	COM腳本
 	c_Lang102 =	消息編號
@@ -1174,26 +1174,26 @@
 		
 ; 22. COM Objects Tips		
 	COM_CLSID_Index =	
-	Excel.Application	엑셀 시트를 조작합니다.
-	HTMLfile	읽기, 쓰기 및 HTML과 상호 작용하는 데 사용할 수 있습니다.
-	InternetExplorer.Application	웹 사이트 탐색.
-	MSXML2.DOMDocument.6.0	XML 파서.
-	MSXML2.XMLHTTP	HTTP를 사용하여 XML 요청을 나타낸다.
-	Outlook.Application	Outlook 작업 및 항목을 조작 할 수 있습니다.
-	PowerPoint.Application	조작 된 PowerPoint 프레젠테이션.
-	Schedule.Service	예약 및 Windows 작업을 편집 할 수 있습니다.
-	ScriptControl	동적 JScript 또는 VBScript를 실행합니다.
-	Scripting.Dictionary	데이터 키, 항목 쌍을 저장하는 객체.
-	Scripting.FileSystemObject	액세스 파일 및 폴더
-	Shell.Application	액세스 탐색기 및 IE 창 / 탭; 열 및 창을 조작 할 수 있습니다.
-	Shell.Explorer	GUI (- 트라이던트 브라우저 인터넷 익스플로러)에서 탐색기 / 브라우저 컨트롤을 포함.
-	SAPI.SpVoice	TTS (텍스트 음성 변환).
-	VBScript.RegExp	(글로벌 경기 포함) VBS 정규 표현식.
-	WMPlayer.OCX	미디어 파일을 재생합니다;GUI에 포함 wmplayer를 제어 할 수 있습니다.
-	WinHttp.WinHttpRequest.5.1	UrlDownloadToFile보다 더 제어 할 수 있도록 간단한 HTTP 클라이언트 기능을 제공한다.
-	Winmgmt	시스템 정보를 얻으십시오; Windows 서비스를 관리 할 수 있습니다.
-	WScript.Shell	다양한 관리 작업 (많은 네이티브 AHK 작업).
-	Word.Application	Word 문서를 조작합니다.
+	Excel.Application	Manipulates Excel sheets.
+	HTMLfile	Can be used to read, write and interact with HTML.
+	InternetExplorer.Application	Explore websites.
+	MSXML2.DOMDocument.6.0	XML parser.
+	MSXML2.XMLHTTP	Represents an XML request using HTTP.
+	Outlook.Application	Manipulates Outlook tasks and items.
+	PowerPoint.Application	Manipulates PowerPoint presentations.
+	Schedule.Service	Schedule and edit Windows Tasks.
+	ScriptControl	Dynamically execute VBscript or JScript.
+	Scripting.Dictionary	Object that stores data key, item pairs.
+	Scripting.FileSystemObject	Access files & folders
+	Shell.Application	Access Explorer & IE windows/tabs; open & manipulate windows.
+	Shell.Explorer	Embed an Explorer/Browser control in a GUI (Internet Explorer - trident browser).
+	SAPI.SpVoice	Text-to-Speech (TTS).
+	VBScript.RegExp	VBS Regular Expressions (including global match).
+	WMPlayer.OCX	Play media files; Embed WMPlayer control in a GUI.
+	WinHttp.WinHttpRequest.5.1	Provides simple HTTP client functionality, allowing much more control than UrlDownloadToFile.
+	Winmgmt	Get system information; Manage windows services.
+	WScript.Shell	Various administration tasks (many native AHK tasks).
+	Word.Application	Manipulates Word documents.
 		
 ; 23. AHK Commands Tips		
 	Ahk_Cmd_Index =	
@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	檢索子字符串（字段）從一個字符串，一次一個。
 	Loop (read file contents)	檢索在一個文本文件，一個（執行優於FileReadLine）時間線。
 	Loop (registry)	檢索指定的註冊表子項，一個項目的內容在同一時間。
+	Max	返回一個或多個數字的最大值。
 	MaxIndex	返回的最大整數鍵。
+	Min	返回一個或多個數字的最小值。
 	MinIndex	返回最低整數鍵。
 	Mod	模。返回剩餘股利除以除數時。
 	MouseGetPos	檢索當前鼠標光標位置，以及可選的窗口和控件懸停。

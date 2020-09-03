@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Recupera subcadenes (camps) d'una cadena, d'una en una.
 	Loop (read file contents)	Recupera les línies en un arxiu de text, d'una en una (millor rendiment que FileReadLine).
 	Loop (registry)	Recupera el contingut de la subclau especificada, un element a la vegada.
+	Max	Retorna el valor més alt d'un o més números.
 	MaxIndex	Retorna la tecla més alta sencer.
+	Min	Retorna el valor més baix d'un o més números.
 	MinIndex	Retorna la clau nombre enter més baix.
 	Mod	Mòdul. Retorna la resta al dividend es divideix per Divisor.
 	MouseGetPos	Recupera la posició actual del cursor del ratolí, i que opcionalment finestra i el control que plana sobre.

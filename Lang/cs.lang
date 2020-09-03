@@ -1,6 +1,6 @@
 ﻿Lang_cs
 		
-		; Czech
+		; Czech [Revised by pokys]
 		
 ; 01. Main Menu		
 	m_Lang001 =	&Soubor
@@ -21,11 +21,11 @@
 	f_Lang004 =	U&ložit jako
 	f_Lang005 =	N&ejnovější Soubory
 	f_Lang006 =	E&xport do AHK
-	f_Lang007 =	N&áhled Script
+	f_Lang007 =	N&áhled Scriptu
 	f_Lang008 =	U&pravit Skript
-	f_Lang009 =	PláN &Makra
+	f_Lang009 =	Plánování &Maker
 	f_Lang010 =	&Seznam proměnných
-	f_Lang011 =	O&dchod
+	f_Lang011 =	Konec
 	f_Lang012 =	&Žádné soubory
 		
 ; 03. Macro Sub Menu		
@@ -33,25 +33,25 @@
 	r_Lang002 =	&Volby pro Záznam
 	r_Lang003 =	&Aktivace makra
 	r_Lang004 =	&Možnosti přehrávání
-	r_Lang005 =	&Hrát Aktuální makro
-	r_Lang006 =	&Časový spínač
+	r_Lang005 =	&Přehrát Aktuální makro
+	r_Lang006 =	&Odpočet
 	r_Lang007 =	&Deaktivovat Makra
-	r_Lang008 =	&Přehrávání z vybraný řádek
-	r_Lang009 =	H&rát, dokud vybraný řádek
+	r_Lang008 =	&Přehrát od vybraního řádku
+	r_Lang009 =	Přeh&rát do vybraního řádku
 	r_Lang010 =	P&řehrát vybrané řádky
 	r_Lang011 =	&Kontextová Klávesové zkratky
 	r_Lang012 =	Př&idat makro
 	r_Lang013 =	Zavř&ít Makro
-	r_Lang014 =	D&uplicitní makro
-	r_Lang015 =	&Úprava Makra
-	r_Lang016 =	D&ovoz Makro
+	r_Lang014 =	D&uplikovat makro
+	r_Lang015 =	&Úpravit Makra
+	r_Lang016 =	&Import Makra
 	r_Lang017 =	U&ložit aktuální makro
 		
 ; 04. Function Sub Menu		
 	u_Lang001 =	&Vytvoření funkce
 	u_Lang002 =	&Přidat parametr
 	u_Lang003 =	P&řidat návrat
-	u_Lang004 =	Př&evést makra fungovat
+	u_Lang004 =	Př&evést makro na funkci
 		
 ; 05. Commands Sub Menu		
 	i_Lang001 =	&Myš
@@ -59,19 +59,19 @@
 	i_Lang003 =	&Ovládání
 	i_Lang004 =	&Pauza
 	i_Lang005 =	M&essage Box
-	i_Lang006 =	&Klíč Čekání
+	i_Lang006 =	&Čekat na klávesu
 	i_Lang007 =	Ok&no
 	i_Lang008 =	O&brázek / Pixel Hledat
 	i_Lang009 =	&Spustit / Soubor / String / Misc.
-	i_Lang010 =	&Loop
-	i_Lang011 =	P&řejít Na Etiketě /
-	i_Lang012 =	Set &časovač
-	i_Lang013 =	Pok&ud Závěrka
+	i_Lang010 =	&Smyčka
+	i_Lang011 =	P&řejít na / Label
+	i_Lang012 =	Nastav &časovač
+	i_Lang013 =	If &Statements
 	i_Lang014 =	P&roměnné / Pole
 	i_Lang015 =	&Funkce / Metody pole
 	i_Lang016 =	Posl&at e-mailem
 	i_Lang017 =	Soubor&y ke stažení
-	i_Lang018 =	&Zip / rozbalení souborů
+	i_Lang018 =	&Zazipování / rozbalení souborů
 	i_Lang019 =	&Internet Explorer
 	i_Lang020 =	&Výraz / COM rozhraní
 	i_Lang021 =	&Windows Zprávy
@@ -82,35 +82,35 @@
 	e_Lang002 =	&Upravit komentář
 	e_Lang003 =	&Najít / Nahradit
 	e_Lang004 =	&Kopírovat do...
-	e_Lang005 =	&Zrušit
-	e_Lang006 =	&Předělat
-	e_Lang007 =	&Snížit
+	e_Lang005 =	&Zpět
+	e_Lang006 =	&Vpřed
+	e_Lang007 =	&Vyjmout
 	e_Lang008 =	K&opírovat
-	e_Lang009 =	P&asta
+	e_Lang009 =	V&ložit
 	e_Lang010 =	&Vymazat
-	e_Lang011 =	Na&horu
-	e_Lang012 =	Do&lů
-	e_Lang013 =	Vlo&žit z krabice
-	e_Lang014 =	Vlož&it Klávesy
-	e_Lang015 =	&Edit barva označuje
+	e_Lang011 =	Přesunout Na&horu
+	e_Lang012 =	Přesunout Do&lů
+	e_Lang013 =	Vlo&žit z boxu
+	e_Lang014 =	Vlož&it stisk klávesy
+	e_Lang015 =	&Upravit barvu značky
 	e_Lang016 =	Skupin&y
 	e_Lang017 =	&Povolit skupiny
 	e_Lang018 =	P&řidat skupinu
 	e_Lang019 =	&Odstranit skupinu
 	e_Lang020 =	O&dstranit všechny skupiny
 	e_Lang021 =	&Sbalit vše
-	e_Lang022 =	&Rozšířit vše
+	e_Lang022 =	&Rozbalit vše
 		
 ; 07. Select Sub Menu		
-	s_Lang001 =	&Vybrat vše
-	s_Lang002 =	V&yberte None
+	s_Lang001 =	&Označit vše
+	s_Lang002 =	&Odznačit vše
 	s_Lang003 =	&Invertovat výběr
-	s_Lang004 =	&Zkontrolujte Vybrané
+	s_Lang004 =	&Zaškrtnout Vybrané
 	s_Lang005 =	Z&rušte zaškrtnutí políčka Vybrané
-	s_Lang006 =	I&nvertovat Kontroly
-	s_Lang007 =	&Posune Se Na Předchozí
-	s_Lang008 =	P&ohybovat Výběru Dolů
-	s_Lang009 =	Vy&brané Type
+	s_Lang006 =	I&nvertovat výběr
+	s_Lang007 =	&Posunout nahoru
+	s_Lang008 =	P&osunout Dolů
+	s_Lang009 =	Vy&braný typ
 	s_Lang010 =	Typ příkazu
 		
 ; 08. View Sub Menu		
@@ -124,10 +124,10 @@
 	v_Lang008 =	&Smyčka
 	v_Lang009 =	V&yhledávací Panel
 	v_Lang010 =	O&bnovit sloupce Velikost
-	v_Lang011 =	&Ikony Velikost
+	v_Lang011 =	Velikost &Ikon
 	v_Lang012 =	Obnovi&t Rozložení
 	v_Lang013 =	&Soubor
-	v_Lang014 =	N&ahrávat a přehrávat
+	v_Lang014 =	N&ahrát a přehrát
 	v_Lang015 =	P&říkazy
 	v_Lang016 =	&Editovat
 	v_Lang017 =	&Možnosti
@@ -144,11 +144,11 @@
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavení
-	o_Lang002 =	&Minimalizovat do tray
-	o_Lang003 =	&Ovládací prvky panelu nástrojů
+	o_Lang002 =	&Minimalizovat na lištu
+	o_Lang003 =	&Zobrazit panel nástrojů
 	o_Lang004 =	&Zachytit stisky kláves v tomto okně
 	o_Lang005 =	&Klávesové Zkratky Vždy Aktivní
-	o_Lang006 =	&vypnutí možnosti (Pokud přehrávání skončí...)
+	o_Lang006 =	Možnosti &vypnutí (Pokud přehrávání skončí...)
 	o_Lang007 =	&Přidat klávesu Windows na "Play" klávesové zkratky
 	o_Lang008 =	Po&užijte joystick jako klávesovou zkratku
 	o_Lang009 =	N&astavit jako výchozí klávesové zkratky
@@ -168,7 +168,7 @@
 	h_Lang005 =	&Forum
 	h_Lang006 =	&AHK Online dokumentace
 	h_Lang007 =	&Zkontrolovat aktualizace...
-	h_Lang008 =	P&odívejte se na startu
+	h_Lang008 =	K&ontrola při startu
 	h_Lang009 =	O
 		
 ; 12. Tray Menu		
@@ -178,10 +178,10 @@
 		
 ; 13. Built-in Vars Menu		
 	b_Lang001 =	Speciální znaky
-	b_Lang002 =	Nemovitosti
+	b_Lang002 =	Vlastnosti
 	b_Lang003 =	Datum a čas
 	b_Lang004 =	Uživatel Idle Time
-	b_Lang005 =	Systém a uživatele
+	b_Lang005 =	Systém a uživatel
 	b_Lang006 =	Misc.
 	b_Lang007 =	Smyčka
 		
@@ -190,9 +190,9 @@
 	w_Lang002 =	Náhled
 	w_Lang003 =	Možnosti
 	w_Lang004 =	Záznam
-	w_Lang005 =	Hrát
+	w_Lang005 =	Přehrát
 	w_Lang006 =	Přehrávání
-	w_Lang007 =	Manuál
+	w_Lang007 =	Ručně
 	w_Lang008 =	Zastavit
 	w_Lang009 =	Ovládací prvky panelu nástrojů
 	w_Lang010 =	Pauza
@@ -202,18 +202,18 @@
 	w_Lang014 =	Klávesové Zkratky Vždy Aktivní
 	w_Lang015 =	Opakovat
 	w_Lang016 =	Delay (ms)
-	w_Lang017 =	Platit
+	w_Lang017 =	Použít
 	w_Lang018 =	Vložit
 	w_Lang019 =	Upravit
 	w_Lang020 =	vypnutí možnosti (Pokud přehrávání skončí...)
 	w_Lang021 =	Nedělat nic
 	w_Lang022 =	Zavřít aplikace
 	w_Lang023 =	Zavřít
-	w_Lang024 =	Vypnout (síla)
+	w_Lang024 =	Vypnout (vynucené)
 	w_Lang025 =	Restartujte
 	w_Lang026 =	Odhlásit
-	w_Lang027 =	Přezimovat
-	w_Lang028 =	Pozastavit
+	w_Lang027 =	Hibernovat
+	w_Lang028 =	Uspat
 	w_Lang029 =	Uzamčení počítače
 	w_Lang030 =	Index
 	w_Lang031 =	Akce
@@ -230,11 +230,11 @@
 	w_Lang042 =	Save (Ctrl+S)
 	w_Lang043 =	Uložit jako (Ctrl+Shift+S)
 	w_Lang044 =	Export do AHK (Ctrl+E)
-	w_Lang045 =	Náhled Script (Ctrl+P)
+	w_Lang045 =	Náhled Scriptu (Ctrl+P)
 	w_Lang046 =	Nastavení (Ctrl+G)
 	w_Lang047 =	Záznam makra (Ctrl+R)
 	w_Lang048 =	Aktivace Makra (Ctrl+Enter)
-	w_Lang049 =	Zahrajte si aktuální makro (Ctrl+Shift+Enter)
+	w_Lang049 =	Přehrát aktuální makro (Ctrl+Shift+Enter)
 	w_Lang050 =	Timer (Ctrl+Shift+T)
 	w_Lang051 =	Myš (F2)
 	w_Lang052 =	Text (F3)
@@ -242,19 +242,19 @@
 	w_Lang054 =	Control (F4)
 	w_Lang055 =	Pauza (F5)
 	w_Lang056 =	Message Box (Shift+F5)
-	w_Lang057 =	Klíč Čekání (Ctrl+F5)
+	w_Lang057 =	Čekat na klávesu (Ctrl+F5)
 	w_Lang058 =	Window (F6)
 	w_Lang059 =	Obrázek / Pixel Search (F7)
 	w_Lang060 =	Spustit / Soubor / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
-	w_Lang062 =	Přejít Na Etiketě / (Shift + F9)
+	w_Lang062 =	Přejít Na / Label / (Shift + F9)
 	w_Lang063 =	Nastavit Časovač (Ctrl + F9)
 	w_Lang064 =	Pokud výkazy (F10)
 	w_Lang065 =	Proměnné / Pole (Shift+F10)
 	w_Lang066 =	Funkce / Metody pole (Ctrl+F10)
 	w_Lang067 =	Poslat e-mailem (F11)
 	w_Lang068 =	Soubory ke stažení (Shift+F11)
-	w_Lang069 =	Zip / rozbalení souborů (Ctrl+F11)
+	w_Lang069 =	Zazipovat / rozbalit soubory (Ctrl+F11)
 	w_Lang070 =	Internet Explorer (F12)
 	w_Lang071 =	Výraz / COM rozhraní (Shift+F12)
 	w_Lang072 =	Windows Zprávy (Ctrl+F12)
@@ -328,12 +328,12 @@
 	c_Lang027 =	Klepněte na tlačítko
 	c_Lang028 =	Pohyb
 	c_Lang029 =	Pohybovat A Klikněte
-	c_Lang030 =	Wheel Up
-	c_Lang031 =	Kola Down
+	c_Lang030 =	Kolečko nahoru
+	c_Lang031 =	Kolečko dolů
 	c_Lang032 =	Táhni A Pusť
 	c_Lang033 =	Souřadnice
 	c_Lang034 =	Vyhledávání
-	c_Lang035 =	Dílčí
+	c_Lang035 =	Subcommand
 	c_Lang036 =	Relativní
 	c_Lang037 =	Tlačítko
 	c_Lang038 =	Levý
@@ -341,17 +341,17 @@
 	c_Lang040 =	Střední
 	c_Lang041 =	X1
 	c_Lang042 =	X2
-	c_Lang043 =	Žet
+	c_Lang043 =	Hold
 	c_Lang044 =	Klepněte na tlačítko Count
 	c_Lang045 =	Plain Text (Raw)
 	c_Lang046 =	Text s příkazy
 	c_Lang047 =	Vložit ze schránky
 	c_Lang048 =	Vložit o kontrole
 	c_Lang049 =	Nastavit text
-	c_Lang050 =	Přidat Pauza
+	c_Lang050 =	Přidat Pauzu
 	c_Lang051 =	Message Box
-	c_Lang052 =	Čekat na klíč
-	c_Lang053 =	Počkejte Timeout
+	c_Lang052 =	Čekat na klávesu
+	c_Lang053 =	Počkat na odpočet
 	c_Lang054 =	(Milisekund) 0 = nekonečno
 	c_Lang055 =	Příkaz
 	c_Lang056 =	Hodnota
@@ -363,44 +363,44 @@
 	c_Lang062 =	Konec
 	c_Lang063 =	Obraz
 	c_Lang064 =	Pixel
-	c_Lang065 =	Značka Screenshot
-	c_Lang066 =	Klíč Čekání
-	c_Lang067 =	Pokud zjistíme,
-	c_Lang068 =	Pokud není nalezena / Chyba
+	c_Lang065 =	Udělat Screenshot
+	c_Lang066 =	Čekat na klávesu
+	c_Lang067 =	Pokud je nalezen
+	c_Lang068 =	Pokud není nalezen / Chyba
 	c_Lang069 =	výstupní proměnné
 	c_Lang070 =	Coord
 	c_Lang071 =	Varianty
 	c_Lang072 =	Náhled
 	c_Lang073 =	Smyčka
 	c_Lang074 =	Automaticky vytvořit objekt COM
-	c_Lang075 =	Rozbít
+	c_Lang075 =	Break
 	c_Lang076 =	Pokračovat
 	c_Lang077 =	Goto
-	c_Lang078 =	Přejít na štítku
+	c_Lang078 =	Přejít na štítek
 	c_Lang079 =	Štítek
 	c_Lang080 =	Přidat štítek
 	c_Lang081 =	String (InputVar)
-	c_Lang082 =	Proměnlivý
-	c_Lang083 =	Jiný
+	c_Lang082 =	Proměná
+	c_Lang083 =	Jinak
 	c_Lang084 =	Přiřazení proměnné
 	c_Lang085 =	Obsah
-	c_Lang086 =	Provozovatel
+	c_Lang086 =	Operátor
 	c_Lang087 =	Výraz
-	c_Lang088 =	Obnovit
-	c_Lang089 =	Funkce Jméno
+	c_Lang088 =	Reset
+	c_Lang089 =	Jméno Funkce
 	c_Lang090 =	Oddělené čárkami parametry (bez závorek)
 	c_Lang091 =	Formát Používejte výrazy
 	c_Lang092 =	Page Element / Rejstřík
-	c_Lang093 =	Sada
-	c_Lang094 =	Dostat
+	c_Lang093 =	Set
+	c_Lang094 =	Get
 	c_Lang095 =	Metoda
-	c_Lang096 =	Majetek
-	c_Lang097 =	Počkejte Stránka se načítá.
+	c_Lang096 =	Vlastnost
+	c_Lang097 =	Počkejte než se načte stránka
 	c_Lang098 =	CLSID
 	c_Lang099 =	Připojit
-	c_Lang100 =	Rukojeť
+	c_Lang100 =	Handle
 	c_Lang101 =	COM Script
-	c_Lang102 =	Zpráva číslo
+	c_Lang102 =	Číslo zprávy
 	c_Lang103 =	Speciální klávesy
 	c_Lang104 =	Prohlížeč Zpět
 	c_Lang105 =	Prohlížeč Forward
@@ -410,7 +410,7 @@
 	c_Lang109 =	Prohlížeč Oblíbené
 	c_Lang110 =	Browser Home
 	c_Lang111 =	Media
-	c_Lang112 =	Vypnutí
+	c_Lang112 =	Ztlumit
 	c_Lang113 =	Zvýšení Hlasitosti
 	c_Lang114 =	Snížení Hlasitosti
 	c_Lang115 =	Play / Pause
@@ -427,14 +427,14 @@
 	c_Lang126 =	Kód přidán do Virtual Keys seznam!
 	c_Lang127 =	Zadejte název proměnné
 	c_Lang128 =	Pomocí funkce z externího souboru
-	c_Lang130 =	Opakujte, dokud
-	c_Lang131 =	Platit
+	c_Lang130 =	Opakuj, dokud
+	c_Lang131 =	Použít
 	c_Lang132 =	Smyčka
 	c_Lang133 =	Soubor
-	c_Lang134 =	Analyzovat
+	c_Lang134 =	Pársovat
 	c_Lang135 =	Číst
-	c_Lang136 =	Protokol
-	c_Lang137 =	Soubor Vzor:
+	c_Lang136 =	Registr
+	c_Lang137 =	Vzor Souboru:
 	c_Lang138 =	Adresáře
 	c_Lang139 =	Rekurzivní
 	c_Lang140 =	Vstupní Proměnná:
@@ -476,8 +476,8 @@
 	c_Lang176 =	Zkusit znovu
 	c_Lang177 =	Timeout
 	c_Lang178 =	Nastavení zpoždění klávesy
-	c_Lang179 =	Key zpoždění
-	c_Lang180 =	Náhodný zpoždění
+	c_Lang179 =	Zpoždění klávesy
+	c_Lang180 =	Náhodné zpoždění
 	c_Lang181 =	Minimální
 	c_Lang182 =	Maximum
 	c_Lang183 =	Zakázat náhodné zpoždění pro tento příkaz
@@ -488,12 +488,12 @@
 	c_Lang188 =	Třetí
 	c_Lang189 =	Název
 	c_Lang190 =	Pokud okno aktivní
-	c_Lang191 =	Je-li okno není aktivní
+	c_Lang191 =	Pokud okno není aktivní
 	c_Lang192 =	Pokud okno existují
-	c_Lang193 =	Je-li okno neexistuje
+	c_Lang193 =	Pokudi okno neexistuje
 	c_Lang194 =	Pokud soubor neexistuje
 	c_Lang195 =	Pokud soubor neexistuje
-	c_Lang196 =	Pokud schránky textu
+	c_Lang196 =	Pokud text ve schrýnce
 	c_Lang197 =	Pokud smyčka index
 	c_Lang198 =	Pokud image/pixel nalezeno
 	c_Lang199 =	Pokud image/pixel nebyl nalezen
@@ -502,13 +502,13 @@
 	c_Lang202 =	Pokud se zobrazí okno
 	c_Lang203 =	Porovnání proměnné
 	c_Lang204 =	Vyhodnotit výraz
-	c_Lang205 =	Kraj
+	c_Lang205 =	Oblast
 	c_Lang206 =	(Použijte [] pro vytvoření pole, např .: [10, 20, aVariable, "aString"])
 	c_Lang207 =	Objekt Array
 	c_Lang208 =	Název klíče
 	c_Lang209 =	Název hodnota
 	c_Lang210 =	Hodnoty
-	c_Lang211 =	řada
+	c_Lang211 =	Pole
 	c_Lang212 =	Uživatelem definované funkce
 	c_Lang213 =	Funkce Parametr
 	c_Lang214 =	Funkce Návrat
@@ -523,35 +523,35 @@
 	c_Lang223 =	Globální proměnné
 	c_Lang224 =	Lokální proměnné
 	c_Lang225 =	Statické proměnné
-	c_Lang226 =	Z
+	c_Lang226 =	Od
 	c_Lang227 =	E-mail
 	c_Lang228 =	Předmět
 	c_Lang229 =	Zpráva
-	c_Lang230 =	Na
+	c_Lang230 =	Komu
 	c_Lang231 =	CC
 	c_Lang232 =	SKRYTÁ
 	c_Lang233 =	F2 upravit
 	c_Lang234 =	HTML
 	c_Lang235 =	Poslat e-mailem
 	c_Lang236 =	Soubory ke stažení
-	c_Lang237 =	Zip / rozbalení souborů
+	c_Lang237 =	Zazipování / rozbalení souborů
 	c_Lang238 =	Zapnout
 	c_Lang239 =	Vypnout
-	c_Lang240 =	regálových pozic.
+	c_Lang240 =	positions registered.
 	c_Lang241 =	Smazat všechny časovače
 	c_Lang242 =	Set časovač
 	c_Lang243 =	Pravým odůvodněno
-	c_Lang244 =	Pravo na lijevo
+	c_Lang244 =	Z prava do leva
 	c_Lang245 =	Přílohy
 	c_Lang246 =	Cesta
 	c_Lang247 =	Pokud
 	c_Lang248 =	Komprimuje každý soubor do jiného archivu
-	c_Lang249 =	Extrakt každý soubor do jiné složky
-	c_Lang250 =	Zip soubory
-	c_Lang251 =	Rozbalení souborů
-	c_Lang252 =	Odkazy na stažení
+	c_Lang249 =	Rozbalit každý soubor do jiné složky
+	c_Lang250 =	Zazipovat soubory
+	c_Lang251 =	Rozbalit soubory
+	c_Lang252 =	Odkazy ke stažení
 	c_Lang253 =	Cílová složka
-	c_Lang254 =	Soubor Destination
+	c_Lang254 =	Cílový soubor
 	c_Lang255 =	Odděleny středníky, čárky nebo lince.
 	c_Lang256 =	Nastavte souřadnic do středu obrazu
 	c_Lang257 =	Doba
@@ -559,7 +559,7 @@
 	c_Lang259 =	uvolnit
 		
 ; 16. Other Windows		
-	t_Lang001 =	Export do AutoHotkey
+	t_Lang001 =	Exportovat do AutoHotkey
 	t_Lang002 =	Makra
 	t_Lang003 =	Smyčky
 	t_Lang004 =	0 = nekonečno
@@ -568,7 +568,7 @@
 	t_Lang007 =	Vše
 	t_Lang008 =	Žádný
 	t_Lang009 =	Kontextová Klávesové zkratky
-	t_Lang010 =	Export do
+	t_Lang010 =	Exportovat do
 	t_Lang011 =	Odsazení
 	t_Lang012 =	Zahrnout PMC kód
 	t_Lang013 =	Nenechte si zřetězit posílat příkazy
@@ -577,15 +577,15 @@
 	t_Lang016 =	Vždy navrchu
 	t_Lang017 =	Nastavení
 	t_Lang018 =	Obecný
-	t_Lang019 =	Start / Stop Záznam
+	t_Lang019 =	Start / Stop Záznamu
 	t_Lang020 =	Záznam nového makra
-	t_Lang021 =	Klávesové zkratky
-	t_Lang022 =	Záznam
-	t_Lang023 =	Zachycovat klíčové stav (dolů / nahoru)
+	t_Lang021 =	Stisky kláves
+	t_Lang022 =	Nahrávám
+	t_Lang023 =	Zachycovat stavy kláves (dolů / nahoru)
 	t_Lang024 =	Kliknutí myší
 	t_Lang025 =	Kolečko myši
 	t_Lang026 =	Myš Moves
-	t_Lang027 =	Časových intervalech
+	t_Lang027 =	Časové intervaly
 	t_Lang028 =	Minimální zpoždění
 	t_Lang029 =	Okenní Třídy
 	t_Lang030 =	Okenní Tituly
@@ -594,10 +594,10 @@
 	t_Lang033 =	Relativní rekord klíč
 	t_Lang034 =	Přepnout
 	t_Lang035 =	Přehrávání
-	t_Lang036 =	Urychlit
+	t_Lang036 =	Zrychlit
 	t_Lang037 =	Zpomalit
 	t_Lang038 =	Návrat myš po přehrávání
-	t_Lang039 =	Myš Souřadnice
+	t_Lang039 =	Souřadnice Myši
 	t_Lang040 =	Okno
 	t_Lang041 =	Obrazovka
 	t_Lang042 =	Výchozí Mouse Delay
@@ -620,7 +620,7 @@
 	t_Lang059 =	Použití výrazu jako výchozí pro přiřazení proměnných
 	t_Lang060 =	Označte smyček a prohlášení
 	t_Lang061 =	(Klikněte na index záhlaví sloupce pro zapnutí / vypnutí)
-	t_Lang062 =	Virtuální Keys
+	t_Lang062 =	Virtuální Klávesy
 	t_Lang063 =	Standardní
 	t_Lang064 =	Upravit komentář
 	t_Lang065 =	Komentář
@@ -673,7 +673,7 @@
 	t_Lang112 =	Play / Pause
 	t_Lang113 =	Zastavit
 	t_Lang114 =	Možnosti přehrávání
-	t_Lang115 =	Start / Stop Záznam
+	t_Lang115 =	Start / Stop Záznamu
 	t_Lang116 =	Záznam nového makra
 	t_Lang117 =	Volby pro Záznam
 	t_Lang118 =	Vymazat seznam
@@ -682,13 +682,13 @@
 	t_Lang121 =	Zpomalit
 	t_Lang122 =	Zobrazit / skrýt Title Bar
 	t_Lang123 =	Zobrazit / skrýt hlavní okno
-	t_Lang124 =	Dok
-	t_Lang125 =	Vyjmout Z Dokovací Stanice
-	t_Lang126 =	Open
-	t_Lang127 =	Save
-	t_Lang128 =	Snížit
+	t_Lang124 =	Odepnout
+	t_Lang125 =	Připnout
+	t_Lang126 =	Otevřít
+	t_Lang127 =	Uložit
+	t_Lang128 =	Vyjmout
 	t_Lang129 =	Kopírovat
-	t_Lang130 =	Pasta
+	t_Lang130 =	Vložit
 	t_Lang131 =	Vybrat vše
 	t_Lang132 =	Vymazat
 	t_Lang133 =	Klávesnice
@@ -696,7 +696,7 @@
 	t_Lang135 =	Ostatní
 	t_Lang136 =	Zvýraznění Řádků
 	t_Lang137 =	Výchozí Editor Skriptů
-	t_Lang138 =	Otvori u vanjskom uređivaču (Ctrl+Shift+E)
+	t_Lang138 =	Otevři v externím editoru (Ctrl+Shift+E)
 	t_Lang139 =	Vybrat
 	t_Lang140 =	Podle Sloupce
 	t_Lang141 =	Všechny Sloupce
@@ -716,7 +716,7 @@
 	t_Lang155 =	Plán typ
 	t_Lang156 =	Jakmile||Denní|Týdenní|Měsíční|Start|Přihlášení|Idle
 	t_Lang157 =	Cílový soubor PMC
-	t_Lang158 =	Cílová AHK soubor
+	t_Lang158 =	Cílový AHK soubor
 	t_Lang159 =	Skript bude uložen nebo přepsány v aktuálním adresáři!
 	t_Lang160 =	Otevřít Plánovač úloh
 	t_Lang161 =	Úkol byl úspěšně vytvořen!
@@ -739,7 +739,7 @@
 	t_Lang178 =	Editor jazyka
 	t_Lang179 =	Vytvořit nový
 	t_Lang180 =	Používejte Enter, PgDn a PgUp pro navigaci.
-	t_Lang181 =	Předložit
+	t_Lang181 =	Odeslat
 	t_Lang182 =	Jméno
 	t_Lang183 =	Uložit změny?
 	t_Lang184 =	Jazyk Soubor
@@ -753,19 +753,19 @@
 	t_Lang192 =	Aktualizovat
 	t_Lang193 =	Poklepáním editovat
 	t_Lang194 =	SMTP server
-	t_Lang195 =	Přístav
+	t_Lang195 =	Port
 	t_Lang196 =	Ověřit
 	t_Lang197 =	Uživatelské jméno
 	t_Lang198 =	Heslo
 	t_Lang199 =	SSL
 	t_Lang200 =	režim Odeslat
 	t_Lang201 =	Zaslat test
-	t_Lang202 =	Obrazovky A Okna
+	t_Lang202 =	Obrazovka A Okno
 	t_Lang203 =	Odhalit Skryté Okna
 	t_Lang204 =	Odhalit Skrytý Text
 	t_Lang205 =	Režim Titulový Zápas
 	t_Lang206 =	Nezobrazují chyby
-	t_Lang207 =	Zákazník
+	t_Lang207 =	Klient
 	t_Lang208 =	N&ajít
 	t_Lang209 =	Nah&radit
 	t_Lang210 =	Karty
@@ -795,7 +795,7 @@
 		Pokračovat?
 	d_Lang013 =	Export Script
 	d_Lang014 =	Script Exportované
-	d_Lang015 =	Soubor byl úspěšně vyváží!
+	d_Lang015 =	Soubor byl úspěšně vyexportován!
 	d_Lang016 =	Klepněte na tlačítko "Get" pro označení polohy.
 	d_Lang017 =	- Vyberte okno.
 		- Přejděte do požadované polohy.
@@ -867,7 +867,7 @@
 	d_Lang071 =	Ne, díky
 	d_Lang072 =	Podporu open source software
 	d_Lang073 =	Chyba: Neplatný Hotkey vybrané.
-	d_Lang074 =	Pronađite naredbu ili funkciju...
+	d_Lang074 =	Najít příkaz nebo funkci
 	d_Lang075 =	Vítejte na Pulover's Macro Creator
 	d_Lang076 =	Vyberte preferovaný rozvržení
 	d_Lang077 =	Kompaktní
@@ -907,7 +907,7 @@
 	d_Lang101 =	Duplicitní funkce.
 	d_Lang102 =	Dogodila se pogreška. Možete poslati e-mail "pulover@macrocreator.com 's datoteku:
 	d_Lang103 =	Nové jazyky soubor k dispozici.
-		Nyní stáhnout?
+		stáhnout nyní?
 	d_Lang104 =	Tato zpráva nebude znovu uvedeny pro stejné aktualizace. Můžete si jej stáhnout z nabídky Nápověda > Zjistit aktualizace.
 	d_Lang105 =	Soubor byl úspěšně odeslán. Děkuji!
 	d_Lang106 =	Jazykové soubory úspěšně aktualizována.
@@ -968,9 +968,9 @@
 	AbortKey_TT =	Klávesová zkratka pro zastavení přehrávání
 	ActiveObj_TT =	Pokusí připojit k Active objektu COM
 	AddAtt_TT =	Připojit soubory
-	ApplyI_TT =	Platit
+	ApplyI_TT =	Použít
 	ApplyL_TT =	Vložit z krabice (Insert)
-	ApplyT_TT =	Platit
+	ApplyT_TT =	Použít
 	AutoKey_TT =	Klávesová zkratka pro přehrávání makra
 	Client_TT =	Souřadnice jsou vztaženy k aktivní oblasti okna klienta, který vylučuje záhlaví okna, nabídku (pokud má standardně jeden) a hranice.
 	Clip_TT =	Dočasně používá Schránka zaslat znění.
@@ -982,13 +982,13 @@
 		Client: Souřadnice jsou vztaženy k aktivní oblasti okna klienta, který vylučuje záhlaví okna, nabídku (pokud má standardně jeden) a hranice.
 	CmdFilter_TT =	Filtrovat podle typu
 	CmdSort_TT =	Řadit abecedně
-	ColorPick_TT =	Dostat pixel na obrazovce
+	ColorPick_TT =	Získat pixel na obrazovce
 	ComEvent_TT =	Sazba, za kterou jsou zasílány kláves je určeno klíčové zpožděním.
 	ComText_TT =	Když ne v režimu raw, následující znaky
 		jsou považovány jako modifikátory (tyto modifikátory ovlivňují
 		pouze velmi další klíč):!, +, ^, #
 	ControlDelayE_TT =	Nastavuje zpoždění, které nastane po každém příkazu řídicího modifikující.
-	CoordPixel_TT =	Koordinovat režim
+	CoordPixel_TT =	Režim koordinátů
 	DefaultMacro_TT =	Vyberte soubor, který chcete nahrát na startu programu
 	EditPaste_TT =	Pasty String na stříška / vložka pozice
 		v kontrole úprav (to nemá vliv
@@ -1064,7 +1064,7 @@
 	OSHK_TT =	Vyberte Makro
 	OSHKEd_TT =	Vyberte Makro
 	OSProgB_TT =	Zobrazit Progress Bar
-	OSTrans_TT =	Neprůhlednost
+	OSTrans_TT =	Průhlednost
 	PauseKey_TT =	Klávesová zkratka pro pozastavení přehrávání
 	PicPrev_TT =	Dvakrát klikněte na Otevřít obrázek
 	Raw_TT =	Příkaz SendRaw interpretuje všechny postavy doslova
@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Načte dílčí řetězce (pole), z provázku, jeden po druhém.
 	Loop (read file contents)	Načte řádky v textovém souboru, jeden po druhém (lepší než FileReadLine).
 	Loop (registry)	Načte obsah zadaného podklíč registru, jeden kus po druhém.
+	Max	Vrátí nejvyšší hodnotu jednoho nebo více čísel.
 	MaxIndex	Vrací nejvyšší celočíselnou klíč.
+	Min	Vrátí nejnižší hodnotu jednoho nebo více čísel.
 	MinIndex	Vrací nejmenší celočíselnou klíč.
 	Mod	Modulo. Vrátí zbytek, když je dividenda podělil dělitel.
 	MouseGetPos	Načte aktuální pozici kurzoru a případně kde je otevřené okno a řízení je vznášející se nad.

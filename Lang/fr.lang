@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Récupère les chaînes (champs) d'une chaîne, un à la fois.
 	Loop (read file contents)	Récupère les lignes dans un fichier texte, un à la fois (performant que FileReadLine).
 	Loop (registry)	Récupère le contenu de la clé de Registre spécifiée, un seul élément à la fois.
+	Max	Renvoie la valeur la plus élevée d'un ou plusieurs nombres.
 	MaxIndex	Retourne la clé de nombre entier le plus élevé.
+	Min	Renvoie la valeur la plus basse d'un ou plusieurs nombres.
 	MinIndex	Retourne la clé plus bas entier.
 	Mod	Modulo. Renvoie le reste de dividende est divisé par diviseur.
 	MouseGetPos	Récupère la position actuelle du curseur de la souris, et éventuellement quelle fenêtre et de contrôle, il plane au-dessus.

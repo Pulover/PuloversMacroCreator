@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Truy xuất chuỗi con (lĩnh vực) từ một chuỗi, một tại một thời điểm.
 	Loop (read file contents)	Lấy các dòng trong một tập tin văn bản, một tại một thời điểm (thực hiện tốt hơn so với FileReadLine).
 	Loop (registry)	Lấy nội dung của các khóa registry được chỉ định, một mục tại một thời điểm.
+	Max	Trả về giá trị cao nhất của một hoặc nhiều số.
 	MaxIndex	Trả về các phím số nguyên cao nhất.
+	Min	Trả về giá trị thấp nhất của một hoặc nhiều số.
 	MinIndex	Trả về các phím số nguyên thấp nhất.
 	Mod	Modulo. Trả về phần còn lại khi cổ tức được chia cho Số chia.
 	MouseGetPos	Lấy vị trí hiện tại của con trỏ chuột, và tùy chọn mà cửa sổ và kiểm soát nó được lơ lửng trên.

@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Recupera substrings (campos) a partir dunha cadea de caracteres, unha de cada vez.
 	Loop (read file contents)	Recupera as liñas dun arquivo de texto, un de cada vez (rendemento mellor que FileReadLine).
 	Loop (registry)	Recupera o contido da subchave de rexistro indicado, un elemento de cada vez.
+	Max	Devolve o valor máis alto dun ou máis números.
 	MaxIndex	Volve a clave de enteiro máis elevado.
+	Min	Devolve o valor máis baixo dun ou máis números.
 	MinIndex	Devolve o menor clave enteiro.
 	Mod	Modulo. Devolve o resto cando dividendos divídese polo divisor.
 	MouseGetPos	Recupera a posición actual do cursor do rato, e incluso que fiestra e control-lo está paira sobre.

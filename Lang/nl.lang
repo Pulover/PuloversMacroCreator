@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Haalt substrings (velden) uit een tekenreeks, een voor een.
 	Loop (read file contents)	Haalt de lijnen in een tekstbestand, een voor een (beter presteert dan FileReadLine).
 	Loop (registry)	Haalt de inhoud van de opgegeven registersubsleutel, een item tegelijk.
+	Max	Zwraca najwyższą wartość jednej lub więcej liczb.
 	MaxIndex	Geeft de hoogste integer sleutel.
+	Min	Zwraca najniższą wartość jednej lub więcej liczb.
 	MinIndex	Geeft het laagste getal sleutel.
 	Mod	Modulo. Geeft de rest wanneer dividend wordt gedeeld door deler.
 	MouseGetPos	Haalt de huidige positie van de muiscursor, en eventueel welk venster en controle wordt zweefde over.

@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Rinxjerr vargjet (fushat) nga një varg, një në një kohë.
 	Loop (read file contents)	Rinxjerr linjat në një skedar teksti, një në një kohë (kryen më mirë se FileReadLine).
 	Loop (registry)	Rinxjerr përmbajtjen e subkey specifikuar regjistrit, një artikull në një kohë.
+	Max	Kthen vlerën më të lartë të një ose më shumë numrave.
 	MaxIndex	Kthen çelësin më të lartë integer.
+	Min	Kthen vlerën më të ulët të një ose më shumë numrave.
 	MinIndex	Kthen ulët çelësin integer.
 	Mod	Modulo. Kthim mbetur kur dividentit është e ndarë nga Pjesëtues.
 	MouseGetPos	Rinxjerr pozicionin aktual të kursorit të miut, dhe mundësisht të cilat dritare dhe kontrolluar është fluturonte mbi.

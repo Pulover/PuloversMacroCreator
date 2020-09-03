@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Dohvaća podnizova (polja) iz niza, jedan po jedan.
 	Loop (read file contents)	Dohvaća linije u tekstualnu datoteku, jednu po jednu (i bolji od FileReadLine).
 	Loop (registry)	Dohvaća sadržaj navedenog registra potključem, jedna točka na vrijeme.
+	Max	Vraća najveću vrijednost jednog ili više brojeva.
 	MaxIndex	Vraća najveću cijeli broj ključa.
+	Min	Vraća najnižu vrijednost jednog ili više brojeva.
 	MinIndex	Vraća najmanji cijeli broj ključa.
 	Mod	Modulo. Vraća ostatak pri Dividenda je podijeljen djelitelj.
 	MouseGetPos	Dohvaća trenutni položaj pokazivača miša i izboru koji prozor i kontrola se nadvili nad.

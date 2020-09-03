@@ -1327,7 +1327,9 @@
 	Loop (parse a string)	Kwakhona kwimitya (fields) evela umtya, omnye ngexesha.
 	Loop (read file contents)	Kwakhona imigca kwi kwifayile yokubhaliweyo, omnye ngexesha (osebenza bhetele ngaphezu FileReadLine).
 	Loop (registry)	Kwakhona imixholo irejistri subkey elikhankanyiweyo, into enye ngexesha.
+	Max	Ibuyisa elona xabiso liphezulu lenani elinye okanye nangaphezulu.
 	MaxIndex	Ubuyisela isitshixo iphezulu elipheleleyo.
+	Min	Ibuyisa elona xabiso liphantsi lenani elinye okanye nangaphezulu.
 	MinIndex	Ubuyisela isitshixo liphantsi elipheleleyo.
 	Mod	Modulo. Ubuyisela okusaleleyo xa Isabelo wahlulwe yi Divisor.
 	MouseGetPos	Kwakhona kwindawo yangoku yesalathisi se mouse, kwaye ngokuzikhethela leyo window kwaye ayilawule semouse.

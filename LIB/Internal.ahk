@@ -1135,7 +1135,7 @@ SavePrompt(State)
 	{
 		Menu, FileMenu, Enable, %f_Lang003%`t%_s%Ctrl+S
 		If ((!Record) && (AutoBackup) && (!BackupFound))
-			GoSub, ProjBackup
+			SetTimer, ProjBackup, -1
 	}
 	Else
 		Menu, FileMenu, Disable, %f_Lang003%`t%_s%Ctrl+S
