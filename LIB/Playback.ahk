@@ -815,6 +815,9 @@
 					Try
 					{
 						pbOutputVar := "", OutputVarName := ""
+						While, (pbOutputVar%A_Index%)
+							pbOutputVar%A_Index% := ""
+						
 						Switch Action
 						{
 							Case "RegExMatch":
