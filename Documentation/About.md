@@ -39,7 +39,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 ## Version 5.1.0
 * Added support for *OutputVar* in **Function** window for `RegExMatch`, `RegExReplace` and `StrReplace`.
 * Improved performance of Text::Paste from Clipboard.
-* Fixed bug in *Adjust cooridnates to the center of the image* option in Image Search.
+* Fixed bug in *Adjust coordinates to the center of the image* option in Image Search.
 * Fixed frequent random crashes.
 * Fixed mixing rows bug when saving a project (thanks to chosen1ft).
 * Fixed bug when closing macro tab.
