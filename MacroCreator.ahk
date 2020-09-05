@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.0.6
+; Version: 5.1.0
 ; Release Date: September, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -71,7 +71,7 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.0.6
+;@Ahk2Exe-SetVersion 5.1.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -138,7 +138,7 @@ Loop
 }
 
 
-CurrentVersion := "5.0.6", ReleaseDate := "September, 2020"
+CurrentVersion := "5.1.0", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
@@ -4167,7 +4167,7 @@ Gui, 34:Add, Text, -Wrap R1 y+0,
 Copyright © 2012-2020 Rodolfo U. Batista
 
 Version:
-OutputDebug, %A_ThisLabel% %CurrentVersion% (%OsBit%)
+%A_ThisLabel% %CurrentVersion% (%OsBit%)
 Release Date: %ReleaseDate%
 AutoHotkey Version: %A_AhkVersion%
 )
@@ -4193,12 +4193,13 @@ PhiLho and skwire for the function to Get/Set the order of columns.
 fincs for GenDocs and SciLexer.dll custom builds.
 tmplinshi for the CreateFormData function.
 Thiago Talma for some improvements to the code, debugging and many suggestions.
+chosen1ft for fixing the mixing rows bug when saving a project.
 )
 Gui, 34:Add, Link, y+10 W340 r1, <a href="http://www.macrocreator.com/project/">Translation revisions.</a>
 Gui, 34:Add, Groupbox, Section xm+58 W360 H130 Center, GNU General Public License
 Gui, 34:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
 (
-This program is free software, and you are welcome to redistribute it under  the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+This program is free software, and you are welcome to redistribute it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
 
 This program comes with ABSOLUTELY NO WARRANTY, for details see GNU General Public License.
 
