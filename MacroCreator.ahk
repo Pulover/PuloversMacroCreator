@@ -8,7 +8,10 @@
 ; Version: 5.0.5
 ; Release Date: August, 2016
 ; AutoHotkey Version: 1.1.24.01
-; Copyright © 2012-2016 Rodolfo U. Batista
+; Copyright © 2012-2017 Rodolfo U. Batista
+; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
+; under the terms of the UNLICENSE here: <http://unlicense.org/UNLICENSE>
+; For everyone else, the GPL below applies.
 ; GNU General Public License 3.0 or higher
 ; <http://www.gnu.org/licenses/gpl-3.0.txt>
 
@@ -1258,7 +1261,7 @@ Loop, 3
 	RbMain.SetLayout(MainLayout)
 Loop, % RbMain.GetBandCount()
 	RbMain.ShowBand(RbMain.IDToIndex(A_Index), ShowBand%A_Index%)
-BtnsArray := [] 
+BtnsArray := []
 If (FileLayout != "ERROR")
 	TB_Layout(TbFile, FileLayout, TbFile_ID)
 If (RecPlayLayout != "ERROR")
@@ -1811,7 +1814,7 @@ GoSub, LoadData
 GoSub, KeepHkOn
 GuiControl, 1:, Capt, 0
 GuiControl, 1:, TimesG, 1
-CurrentFileName = 
+CurrentFileName =
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion%
 GuiControl, chMacro:Focus, InputList%A_List%
 GoSub, b_Start
@@ -2162,7 +2165,7 @@ Gui, 14:Add, Checkbox, -Wrap Checked%CommentUnchecked% y+5 xs+10 W230 vCommentUn
 Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W230 vSend_Loop R1, %t_Lang013%
 Gui, 14:Add, Checkbox, -Wrap Checked%ConvertBreaks% ys+50 x+5 W190 vConvertBreaks R1, %t_Lang190%
 Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% y+5 xp W190 vIncPmc R1, %t_Lang012%
-Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% y+5 xp W190 vExe_Exp gExe_Exp R1,%t_Lang088% 
+Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% y+5 xp W190 vExe_Exp gExe_Exp R1,%t_Lang088%
 Gui, 14:Tab, 2
 ; Options
 Gui, 14:Add, GroupBox, Section ym+28 xm+12 W450 H390, %w_Lang003%:
@@ -3906,7 +3909,7 @@ If (IsObject(VerChk))
 		Gui, Update:Add, Button, -Wrap yp x+20 W290 H23 gDownloadPage, %d_Lang117%
 		Gui, Update:Add, Button, -Wrap xm W290 H23 gUpdateCancel, %d_Lang061%
 		Gui, Update:Add, Button, -Wrap yp x+20 W290 H23 gUpdateDisable, % SubStr(d_Lang053, 1, -1)
-		
+
 		document := WB.Document
 		document.open()
 		document.write(whr.ResponseText)
@@ -5336,15 +5339,15 @@ Else
 	X%xPos% Y%yPos%
 	%c_Lang004%: %control% X%xcpos% Y%ycpos%
 	%d_Lang018%: %color%
-	
+
 	WinTitle: %title%
 	Class: %class%
 	Process: %pname%
 	ID: %id%
 	PID: %pid%
-	
+
 	WinText: %text% (...)
-	
+
 	%d_Lang017%
 	%ExtraTip%
 	)
@@ -6493,7 +6496,7 @@ Else If ((s_Caller = "Find") && ((InStr(GotoRes1, "Loop"))
 	StringReplace, GotoRes1, GotoRes1, %A_Space%(parse a string), Parse
 	StringReplace, GotoRes1, GotoRes1, %A_Space%(read file contents), Read
 	StringReplace, GotoRes1, GotoRes1, %A_Space%(registry), Registry
-	
+
 	GotoRes1 := "L" GotoRes1
 	GuiControl, 12:, %GotoRes1%, 1
 	GoSub, LoopType
@@ -7063,8 +7066,8 @@ Else If (s_Caller = "Find")
 {
 	GuiControl, 11:ChooseString, WinCom, %GotoRes1%
 	GoSub, WinCom
-	
-	
+
+
 	If (InStr(WinCmd, GotoRes1))
 	{
 		GuiControl, 11:ChooseString, WCmd, %GotoRes1%
@@ -13675,7 +13678,7 @@ If (CheckDuplicateLabels())
 	StopIt := 1
 	return
 }
-Loop, %TabCount%  
+Loop, %TabCount%
 	If (o_AutoKey[A_Index] = A_ThisHotkey)
 		aHK_On := [A_Index]
 StopIt := 0
@@ -15817,7 +15820,7 @@ RbMain.ModifyBand(RbMain.IDToIndex(7), "Text", w_Lang005)
 , RbMain.ModifyBand(RbMain.IDToIndex(10), "Text", c_Lang003)
 , RbMain.ModifyBand(RbMain.IDToIndex(11), "Text", w_Lang011 " (" t_Lang004 ")")
 ; File
-TB_Edit(tbFile, "New", "", "", w_Lang040), TB_Edit(tbFile, "Open", "", "", w_Lang041), TB_Edit(tbFile, "Save", "", "", w_Lang042), TB_Edit(tbFile, "SaveAs", "", "", w_Lang043) 
+TB_Edit(tbFile, "New", "", "", w_Lang040), TB_Edit(tbFile, "Open", "", "", w_Lang041), TB_Edit(tbFile, "Save", "", "", w_Lang042), TB_Edit(tbFile, "SaveAs", "", "", w_Lang043)
 , TB_Edit(tbFile, "Export", "", "", w_Lang044), TB_Edit(tbFile, "Preview", "", "", w_Lang045), TB_Edit(tbFile, "Options", "", "", w_Lang046)
 ; RecPlay
 TB_Edit(tbRecPlay, "Record", "", "", w_Lang047)
@@ -15838,7 +15841,7 @@ TB_Edit(tbSettings, "HideMainWin", "", "", w_Lang013), TB_Edit(tbSettings, "OnSc
 , TB_Edit(tbSettings, "WinKey", "", "", w_Lang109), TB_Edit(tbSettings, "SetJoyButton", "", "", w_Lang110)
 ; Edit
 TB_Edit(tbEdit, "EditButton", "", "", w_Lang093), TB_Edit(tbEdit, "CutRows", "", "", w_Lang081), TB_Edit(tbEdit, "CopyRows", "", "", w_Lang082), TB_Edit(tbEdit, "PasteRows", "", "", w_Lang083), TB_Edit(tbEdit, "Remove", "", "", w_Lang084)
-, TB_Edit(tbEdit, "Duplicate", "", "", w_Lang080), TB_Edit(tbEdit, "SelectMenu", "", "", t_Lang139), TB_Edit(tbEdit, "CopyTo", "", "", w_Lang087) 
+, TB_Edit(tbEdit, "Duplicate", "", "", w_Lang080), TB_Edit(tbEdit, "SelectMenu", "", "", t_Lang139), TB_Edit(tbEdit, "CopyTo", "", "", w_Lang087)
 , TB_Edit(tbEdit, "GroupsMode", "", "", w_Lang097)
 , TB_Edit(tbEdit, "MoveUp", "", "", w_Lang078), TB_Edit(tbEdit, "MoveDn", "", "", w_Lang079)
 , TB_Edit(tbEdit, "Undo", "", "", w_Lang085), TB_Edit(tbEdit, "Redo", "", "", w_Lang086)
@@ -16024,7 +16027,7 @@ InternetExplorer
 " w_Lang064 " ; If Statements (F10)
 " w_Lang072 " ; Windows Messages (Ctrl+F12)
 " w_Lang072 " ; Windows Messages (Ctrl+F12)
-" w_Lang057 " ; Key Wait (Ctrl+F5) 
+" w_Lang057 " ; Key Wait (Ctrl+F5)
 " w_Lang065 " ; Variables / Arrays (Shift+F10)
 " w_Lang061 " ; Loop (F9)
 " w_Lang061 " ; Loop (F9)
