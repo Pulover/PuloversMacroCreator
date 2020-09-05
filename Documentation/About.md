@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.0.6  
+Version: 5.1.0  
 Release Date: September, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -30,16 +30,19 @@ PhiLho and skwire for the [function](http://autohotkey.com/board/topic/11926-can
 fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
 tmplinshi for the [CreateFormData function](http://autohotkey.com/boards/viewtopic.php?f=6&t=7647).  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
+chosen1ft for fixing the mixing rows bug when saving a project.
 [Translation revisions](http://www.macrocreator.com/project/).  
 
 
 # Change Log
 
-## Version 5.0.6
+## Version 5.1.0
 * Added support for *OutputVar* in **Function** window for `RegExMatch`, `RegExReplace` and `StrReplace`.
-* Fixed bug in *Adjust cooridnates to the center of the image* option in Image Search.
 * Improved performance of Text::Paste from Clipboard.
-* General bug fixes.
+* Fixed bug in *Adjust cooridnates to the center of the image* option in Image Search.
+* Fixed frequent random crashes.
+* Fixed mixing rows bug when saving a project (thanks to chosen1ft).
+* Fixed bug when closing macro tab.
 
 ## Version 5.0.5
 

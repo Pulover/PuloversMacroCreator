@@ -62,6 +62,8 @@ http://autohotkey.com/boards/viewtopic.php?f=6&t=7647
 
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 
+chosen1ft for fixing the mixing rows bug when saving a project.
+
 Translation revisions:
 http://www.macrocreator.com/project/
 */
@@ -1928,8 +1930,9 @@ GpConfig := ShowGroups, ShowGroups := false
 LVManager.EnableGroups(false)
 PMC.Import(Files)
 CurrentFileName := LoadedFileName, Files := ""
-GoSub, b_Start
+; GoSub, b_Start
 GoSub, FileRead
+GoSub, RowCheck
 GoSub, RecentFiles
 return
 
@@ -2051,7 +2054,7 @@ IfExist %CurrentFileName%
 }
 Gui, chMacro:Default
 All_Data := ""
-Sleep 100 ; It take some time to empty all data.This fix the row mixing bug when click the 'save' button
+Sleep, 100 ; It takes some time to empty all data. This fix the row mixing bug when click the 'save' button. [by chosen1ft]
 Loop, %TabCount%
 {
 	LVManager.SetHwnd(ListID%A_Index%)
@@ -2102,6 +2105,7 @@ If (!SavePrompt)
 	return
 FileDelete, %SettingsFolder%\~ActiveProject.pmc
 All_Data := ""
+Sleep, 100
 Loop, %TabCount%
 {
 	LVManager.SetHwnd(ListID%A_Index%)
