@@ -225,7 +225,7 @@
 	w_Lang037 =	Vindue
 	w_Lang038 =	Kommentar
 	w_Lang039 =	Farve
-	w_Lang040 =	Ny (Ctrl+N)
+	w_Lang040 =	Kodelinje
 	w_Lang041 =	Åbn (Ctrl+O)
 	w_Lang042 =	Gem (Ctrl+S)
 	w_Lang043 =	Gem som (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Tilføj på Windows-tasten på "Play" genvejen
 	w_Lang110 =	Brug et joystick knap som genvejstast
 	w_Lang111 =	Søg... (Tryk Enter for at gå)
+	w_Lang112 =	Ny (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -776,6 +777,8 @@
 	t_Lang215 =	Mus forsinkelse
 	t_Lang216 =	Kontrol forsinkelse
 	t_Lang217 =	Incremental
+	t_Lang218 =	Gå til den valgte linje
+	t_Lang219 =	Vælg automatisk
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent

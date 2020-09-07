@@ -225,7 +225,7 @@
 	w_Lang037 =	Fönster
 	w_Lang038 =	Kommentar
 	w_Lang039 =	Färg
-	w_Lang040 =	Ny (Ctrl+N)
+	w_Lang040 =	Kodrad
 	w_Lang041 =	Öppna (Ctrl+O)
 	w_Lang042 =	Spara (Ctrl+S)
 	w_Lang043 =	Spara som (Ctrl+Skift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Lägg den Windows-tangenten till "Play" hotkey
 	w_Lang110 =	Använd en joystick knapp som hotkey
 	w_Lang111 =	Sök... (Tryck Enter för att gå)
+	w_Lang112 =	Ny (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -776,6 +777,8 @@
 	t_Lang215 =	Fördröjning mus
 	t_Lang216 =	Fördröjningsstyrning
 	t_Lang217 =	inkrementell
+	t_Lang218 =	Gå till vald rad
+	t_Lang219 =	Välj automatiskt
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet

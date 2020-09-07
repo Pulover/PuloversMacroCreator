@@ -225,7 +225,7 @@
 	w_Lang037 =	Okno
 	w_Lang038 =	Komentarz
 	w_Lang039 =	Kolor
-	w_Lang040 =	Nowy (Ctrl+N)
+	w_Lang040 =	Linia kodu
 	w_Lang041 =	Otwórz (Ctrl+O)
 	w_Lang042 =	Zapisz (Ctrl+S)
 	w_Lang043 =	Zapisz jako (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Dodaj klawisz Windows do skrótu "Odtwarzaj"
 	w_Lang110 =	Użyj przycisku joysticka jako skrótu
 	w_Lang111 =	Szukaj... (Naciśnij klawisz Enter, aby uruchomić)
+	w_Lang112 =	Nowy (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz
@@ -776,6 +777,8 @@
 	t_Lang215 =	Opóźnienie myszki
 	t_Lang216 =	Opóźnienie sterowania
 	t_Lang217 =	Przyrostowe
+	t_Lang218 =	Przejdź do wybranej linii
+	t_Lang219 =	Automatyczny wybór
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwórz

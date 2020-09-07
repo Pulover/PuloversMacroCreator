@@ -225,7 +225,7 @@
 	w_Lang037 =	Cửa sổ
 	w_Lang038 =	Bình luận
 	w_Lang039 =	Màu
-	w_Lang040 =	Mới (Ctrl+N)
+	w_Lang040 =	Dòng mã
 	w_Lang041 =	Mở (Ctrl+O)
 	w_Lang042 =	Save (Ctrl+S)
 	w_Lang043 =	Save As (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Thêm phím Windows để "chơi" phím nóng
 	w_Lang110 =	Sử dụng nút điều khiển như phím nóng
 	w_Lang111 =	Tìm kiếm... (Nhấn Enter để đi)
+	w_Lang112 =	Mới (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột
@@ -776,6 +777,8 @@
 	t_Lang215 =	Chậm trễ chuột
 	t_Lang216 =	Chậm trễ kiểm soát
 	t_Lang217 =	Incremental
+	t_Lang218 =	Chuyển đến dòng đã chọn
+	t_Lang219 =	Tự động lựa chọn
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở

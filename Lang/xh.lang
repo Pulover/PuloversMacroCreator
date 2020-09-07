@@ -225,7 +225,7 @@
 	w_Lang037 =	Ifestile
 	w_Lang038 =	Amagqabantshintshi
 	w_Lang039 =	Umbala
-	w_Lang040 =	Entsha (Ctrl + N)
+	w_Lang040 =	Umgca wekhowudi
 	w_Lang041 =	Vula (Ctrl + O)
 	w_Lang042 =	Gcina (Ctrl + S)
 	w_Lang043 =	Gcina Njenge (Ctrl + Shift + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Yongeza isitshixo Windows ukuba "Dlala" lokugqithaName
 	w_Lang110 =	Sebenzisa iqhosha kwibar njengoko lokugqithaName
 	w_Lang111 =	Ukufuna ... (Cofa u-Enter ukuya)
+	w_Lang112 =	Entsha (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Impuku
@@ -776,6 +777,8 @@
 	t_Lang215 =	Mouse ngokukhawuleza
 	t_Lang216 =	Kokulibazisa ulawulo
 	t_Lang217 =	lolwandiso
+	t_Lang218 =	Yiya kumgca okhethiweyo
+	t_Lang219 =	Khetha ngokuzenzekelayo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

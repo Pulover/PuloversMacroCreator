@@ -225,7 +225,7 @@
 	w_Lang037 =	Gluggi
 	w_Lang038 =	Athugasemd
 	w_Lang039 =	Litur
-	w_Lang040 =	Ný (Ctrl + N)
+	w_Lang040 =	Kóðalína
 	w_Lang041 =	Open (Ctrl + O)
 	w_Lang042 =	Sparið (Ctrl + S)
 	w_Lang043 =	Save As (Ctrl + Shift + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Bæta á Windows takkann til að "leika" hotkey
 	w_Lang110 =	Notaðu stýripinnann hnapp sem hotkey
 	w_Lang111 =	Leita ... (Ýttu á Enter til að fara)
+	w_Lang112 =	Ný (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mús
@@ -776,6 +777,8 @@
 	t_Lang215 =	Mús seinkun
 	t_Lang216 =	Stjórn seinkun
 	t_Lang217 =	stigvaxandi
+	t_Lang218 =	Farðu í valda línu
+	t_Lang219 =	Sjálfvirkt val
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

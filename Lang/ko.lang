@@ -225,7 +225,7 @@
 	w_Lang037 =	창
 	w_Lang038 =	논평
 	w_Lang039 =	색
-	w_Lang040 =	새 (Ctrl 키+N)
+	w_Lang040 =	코드 라인
 	w_Lang041 =	열기 (Ctrl 키+O)
 	w_Lang042 =	저장하기 (Ctrl+S)
 	w_Lang043 =	다른 이름으로 저장 (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	단축키를 "재생"을 Windows 키 추가
 	w_Lang110 =	단축키로 조이스틱 버튼을 사용하여
 	w_Lang111 =	검색... (눌러 이동 입력)
+	w_Lang112 =	새 (Ctrl 키+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	마우스
@@ -776,6 +777,8 @@
 	t_Lang215 =	마우스 지연
 	t_Lang216 =	제어 지연
 	t_Lang217 =	증분
+	t_Lang218 =	선택한 라인으로 이동
+	t_Lang219 =	자동 선택
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기

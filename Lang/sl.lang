@@ -225,7 +225,7 @@
 	w_Lang037 =	Okno
 	w_Lang038 =	Komentar
 	w_Lang039 =	Barva
-	w_Lang040 =	New (Ctrl+N)
+	w_Lang040 =	Vrstica kode
 	w_Lang041 =	Odprta (Ctrl+O)
 	w_Lang042 =	Prihranite (Ctrl+S)
 	w_Lang043 =	Shrani kot (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Dodaj na tipko Windows in »Play" hotkey
 	w_Lang110 =	Uporabite gumb za igralno palico kot hotkey
 	w_Lang111 =	Iskanje... (Pritisnite Enter, da gredo)
+	w_Lang112 =	New (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška
@@ -776,6 +777,8 @@
 	t_Lang215 =	Zamuda miške
 	t_Lang216 =	Nadzor zamudo
 	t_Lang217 =	inkrementalni
+	t_Lang218 =	Pojdi na izbrano vrstico
+	t_Lang219 =	Samodejna izbira
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite

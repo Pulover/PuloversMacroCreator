@@ -225,7 +225,7 @@
 	w_Lang037 =	Aken
 	w_Lang038 =	Kommentaar
 	w_Lang039 =	Värv
-	w_Lang040 =	New (Ctrl + N)
+	w_Lang040 =	Koodirida
 	w_Lang041 =	Avatud (Ctrl + O)
 	w_Lang042 =	Säästa (Ctrl + S)
 	w_Lang043 =	Salvesta (Ctrl + Shift + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Lisa Windows võti "mängida" hotkey
 	w_Lang110 =	Kasuta juhtkangi nuppu hotkey
 	w_Lang111 =	Otsi ... (liikumiseks vajutage sisestusklahvi)
+	w_Lang112 =	New (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiir
@@ -776,6 +777,8 @@
 	t_Lang215 =	Hiire viivitus
 	t_Lang216 =	Kontrolli hilinemine
 	t_Lang217 =	kasvav
+	t_Lang218 =	Minge valitud reale
+	t_Lang219 =	Automaatne valimine
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avatud

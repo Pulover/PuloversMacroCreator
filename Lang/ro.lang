@@ -225,7 +225,7 @@
 	w_Lang037 =	Fereastră
 	w_Lang038 =	Cometariu
 	w_Lang039 =	Culoare
-	w_Lang040 =	Nou (Ctrl + N)
+	w_Lang040 =	Linie de cod
 	w_Lang041 =	Deschideți (Ctrl + O)
 	w_Lang042 =	Salvați (Ctrl + S)
 	w_Lang043 =	Save As (Ctrl + Shift + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Adăugați cheia Windows pentru a "Play" hotkey
 	w_Lang110 =	Utilizați un buton joystick ca tastă rapidă
 	w_Lang111 =	Căutare ... (Apăsați Enter pentru a merge)
+	w_Lang112 =	Nou (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -776,6 +777,8 @@
 	t_Lang215 =	Întârziere mouse-ul
 	t_Lang216 =	Întârziere de control
 	t_Lang217 =	incrementală
+	t_Lang218 =	Mergeți la linia selectată
+	t_Lang219 =	Selectare automată
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Deschis

@@ -225,7 +225,7 @@
 	w_Lang037 =	Прозорец
 	w_Lang038 =	Коментар
 	w_Lang039 =	Цвят
-	w_Lang040 =	New (Ctrl+N)
+	w_Lang040 =	Кодов ред
 	w_Lang041 =	Open (Ctrl+O)
 	w_Lang042 =	Save (Ctrl+S)
 	w_Lang043 =	Save As (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Добави клавиша Windows да "играе" клавишна комбинация
 	w_Lang110 =	Използвайте джойстика бутон като клавиш
 	w_Lang111 =	Търсене... (Натиснете Enter, за да отидете)
+	w_Lang112 =	New (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Мишка
@@ -776,6 +777,8 @@
 	t_Lang215 =	Забавяне на мишката
 	t_Lang216 =	Забавяне контрол
 	t_Lang217 =	Точкова
+	t_Lang218 =	Отидете на избрания ред
+	t_Lang219 =	Автоматичен избор
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Отворен

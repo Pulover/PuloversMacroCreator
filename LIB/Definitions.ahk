@@ -1092,7 +1092,7 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
-DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open=" w_Lang041 ":42(Enabled Dropdown)", "Save=" w_Lang042 ":59", "SaveAs=" w_Lang043 ":86"
+DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang112 ":41", "Open=" w_Lang041 ":42(Enabled Dropdown)", "Save=" w_Lang042 ":59", "SaveAs=" w_Lang043 ":86"
 													, "", "Export=" w_Lang044 ":16", "Preview=" w_Lang045 ":49", "Options=" w_Lang046 ":43"]
 			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=" w_Lang047 ":54(Enabled AutoSize Dropdown)"
 																, "", "PlayStart=" w_Lang048 ":46(Enabled AutoSize Dropdown)", "TestRun=" w_Lang049 ":48", "RunTimer=" w_Lang050 ":71"]
@@ -1117,10 +1117,10 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang040 ":41", "Open
 														, "", "TabPlus=" w_Lang073 ":66", "TabClose=" w_Lang074 ":68", "DuplicateList=" w_Lang075 ":69", "EditMacros=" w_Lang053 ":97"
 														, "", "Import=" w_Lang076 ":28", "SaveCurrentList=" w_Lang077 ":67"
 														, "", "UserFunction=" w_Lang104 ":35", "FuncParameter=" w_Lang105 ":107", "FuncReturn=" w_Lang106 ":105"]}
-FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)"
+FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)", "GoToLine=" t_Lang218 ":22(Enabled Dropdown)"
 														, "", "TabIndent=" t_Lang011 ":85(Enabled Dropdown)", "ConvertBreaks=" t_Lang190 ":76", "CommentUnchecked=" w_Lang108 ":5", "TextWrap=" t_Lang052 ":96"
 														, "", "EditScript=" t_Lang138 ":109", "PrevDock=" t_Lang124 ":106", "Preview=" c_Lang022 ":108"]
-			, PreviewF: ["PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)"
+			, PreviewF: ["PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)", "GoToLine=" t_Lang218 ":22(Enabled Dropdown)"
 														, "", "TabIndent=" t_Lang011 ":85(Enabled Dropdown)", "ConvertBreaks=" t_Lang190 ":76", "CommentUnchecked=" w_Lang108 ":5", "TextWrap=" t_Lang052 ":96", "OnTop=" t_Lang016 ":81"
 														, "", "EditScript=" t_Lang138 ":109", "PrevDock=" t_Lang125 ":93"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":42", "SaveT=" t_Lang127 ":59"

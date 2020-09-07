@@ -225,7 +225,7 @@
 	w_Lang037 =	Finestra
 	w_Lang038 =	Comentari
 	w_Lang039 =	Color
-	w_Lang040 =	Nou (Ctrl+N)
+	w_Lang040 =	Línia de codi
 	w_Lang041 =	Obrir (Ctrl+O)
 	w_Lang042 =	Desa (Ctrl+S)
 	w_Lang043 =	Desa (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Afegiu la clau de Windows per "Play" tecla d'accés ràpid
 	w_Lang110 =	Utilitzeu un botó del joystick com a tecla d'accés directe
 	w_Lang111 =	Cercar... (Premeu Retorn per anar)
+	w_Lang112 =	Nou (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratolí
@@ -776,6 +777,8 @@
 	t_Lang215 =	Retard del ratolí
 	t_Lang216 =	Control de retard
 	t_Lang217 =	incremental
+	t_Lang218 =	Aneu a la línia seleccionada
+	t_Lang219 =	Selecció automàtica
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert

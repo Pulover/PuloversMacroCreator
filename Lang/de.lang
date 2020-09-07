@@ -225,7 +225,7 @@
 	w_Lang037 =	Fenster
 	w_Lang038 =	Kommentar
 	w_Lang039 =	Farbe
-	w_Lang040 =	Neu (Strg+N)
+	w_Lang040 =	Codezeile
 	w_Lang041 =	Öffnen (Strg+O)
 	w_Lang042 =	Speichern (Strg+S)
 	w_Lang043 =	Speichern unter (Strg+Umschalt+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Windows-Taste auf "Wiederg." Hotkey fügen
 	w_Lang110 =	Joystick-Taste als Hotkey verwenden
 	w_Lang111 =	Suchen... (Drücken Sie die Eingabetaste zu gehen)
+	w_Lang112 =	Neu (Strg+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus
@@ -776,6 +777,8 @@
 	t_Lang215 =	Maus Verzögerung
 	t_Lang216 =	Steuerverzögerung
 	t_Lang217 =	inkremental
+	t_Lang218 =	Gehen Sie zur ausgewählten Zeile
+	t_Lang219 =	Automatische Auswahl
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öffnen

@@ -225,7 +225,7 @@
 	w_Lang037 =	Ventá
 	w_Lang038 =	Comentario
 	w_Lang039 =	Cor
-	w_Lang040 =	New (Ctrl + N)
+	w_Lang040 =	Liña de código
 	w_Lang041 =	Abrir (Ctrl + O)
 	w_Lang042 =	Salva (Ctrl + S)
 	w_Lang043 =	Gardar como (Ctrl + Maiús + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Engada a chave de Windows para "Play" atallo
 	w_Lang110 =	Use o botón de mando como teclas de atallo
 	w_Lang111 =	Buscar ... (Prema Intro para ir)
+	w_Lang112 =	New (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Rato
@@ -776,6 +777,8 @@
 	t_Lang215 =	Atraso do rato
 	t_Lang216 =	Atraso de control
 	t_Lang217 =	incremental
+	t_Lang218 =	Ir á liña seleccionada
+	t_Lang219 =	Selección automática
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aberto

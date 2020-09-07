@@ -25,6 +25,14 @@ Updates the content of Preview Window to the active Macro.
 
 Automatically refreshes the code whenever the active Macro is changed.
 
+### Go to selected line
+
+Selects the portion of the code corresponding to the selected row(s) in the list.
+
+### Auto-Select
+
+Automatically selects the portion of the code corresponding to the selected row(s) in the list.
+
 ### Indentation
 
 Uses Tab-Indentation for Loops and If Statements.

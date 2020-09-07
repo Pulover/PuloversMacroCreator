@@ -232,9 +232,9 @@
 		Row := []
 		Loop, % LV_GetCount()
 		{
-			LV_GetTexts(A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color)
+			LV_GetTexts(A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color, CodeLine)
 		,	ckd := (LV_GetNext(A_Index-1, "Checked")=A_Index) ? "" : 0
-		,	Row[A_Index] := [ckd A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color]
+		,	Row[A_Index] := [ckd A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color, CodeLine]
 		}
 		Loop, % LV_GetCount()
 		{

@@ -225,7 +225,7 @@
 	w_Lang037 =	Պատուհան
 	w_Lang038 =	Մեկնաբանություն
 	w_Lang039 =	Գույն
-	w_Lang040 =	Նոր (Ctrl + N)
+	w_Lang040 =	Կոդի տող
 	w_Lang041 =	Բաց (Ctrl + O)
 	w_Lang042 =	Պահպանել (Ctrl + S)
 	w_Lang043 =	Պահել որպես (Ctrl + Shift + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Ավելացնել Windows բանալին է «խաղալ» hotkey
 	w_Lang110 =	Օգտագործեք joystick կոճակը որպես hotkey
 	w_Lang111 =	Որոնել ... (Press Enter գնալ)
+	w_Lang112 =	Նոր (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Մուկ
@@ -776,6 +777,8 @@
 	t_Lang215 =	Մուկ ուշացում
 	t_Lang216 =	Հսկողություն ուշացում
 	t_Lang217 =	լրացուցիչ
+	t_Lang218 =	Գնալ ընտրված տող
+	t_Lang219 =	Ավտոմատ ընտրություն
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Բաց

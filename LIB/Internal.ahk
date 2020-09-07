@@ -1,4 +1,4 @@
-﻿LV_GetTexts(Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", ByRef Del := "", ByRef Typ := "", ByRef Tar := "", ByRef Win := "", ByRef Com := "", ByRef Col := "")
+﻿LV_GetTexts(Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", ByRef Del := "", ByRef Typ := "", ByRef Tar := "", ByRef Win := "", ByRef Com := "", ByRef Col := "", ByRef Cod := "")
 {
 	LV_GetText(Act, Index, 2)
 ,	LV_GetText(Det, Index, 3)
@@ -9,6 +9,7 @@
 ,	LV_GetText(Win, Index, 8)
 ,	LV_GetText(Com, Index, 9)
 ,	LV_GetText(Col, Index, 10)
+,	LV_GetText(Cod, Index, 11)
 ,	Act := LTrim(Act)
 }
 
@@ -574,7 +575,7 @@ GuiAddLV(ident)
 	Critical
 	Gui, chMacro:Default
 	Gui, chMacro:Tab, %ident%
-	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%
+	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%|%w_Lang040%
 	LV_SetImageList(hIL_Icons)
 	Loop, 10
 		LV_ModifyCol(A_Index, Col_%A_Index%)
@@ -1031,52 +1032,54 @@ LV_ColorsMessage(wParam, lParam)
 ShowMenu(Menu, mX, mY)
 {
 	global
-	If (Menu = "Open")
-		Menu, RecentMenu, Show, %mX%, %mY%
-	Else If (Menu = "Save")
+	Switch Menu
 	{
-		Menu, TbMenu, Add, %f_Lang004%, SaveAs
-		Menu, TbMenu, Icon, %f_Lang004%, %ResDllPath%, 86
-		Menu, TbMenu, Show, %mX%, %mY%
-		Menu, TbMenu, DeleteAll
+		Case "Open":
+			Menu, RecentMenu, Show, %mX%, %mY%
+		Case "Save":
+			Menu, TbMenu, Add, %f_Lang004%, SaveAs
+			Menu, TbMenu, Icon, %f_Lang004%, %ResDllPath%, 86
+			Menu, TbMenu, Show, %mX%, %mY%
+			Menu, TbMenu, DeleteAll
+		Case "PlayStart":
+			GoSub, ShowPlayMenu
+		Case "OnFinish":
+			GoSub, OnFinish
+		Case "RecStart":
+			Menu, TbMenu, Add, %t_Lang020%, RecStartNew
+			Menu, TbMenu, Show, %mX%, %mY%
+			Menu, TbMenu, DeleteAll
+		Case "ShowPlayMenu":
+			GoSub, ShowPlayMenu
+		Case "PrevRefreshButton":
+			Menu, TbMenu, Add, %t_Lang015%, AutoRefresh
+			If (AutoRefresh)
+				Menu, TbMenu, Check, %t_Lang015%
+			Menu, TbMenu, Show, %mX%, %mY%
+			Menu, TbMenu, DeleteAll
+		Case "GoToLine":
+			Menu, TbMenu, Add, %t_Lang219%, AutoSelectLine
+			If (AutoSelectLine)
+				Menu, TbMenu, Check, %t_Lang219%
+			Menu, TbMenu, Show, %mX%, %mY%
+			Menu, TbMenu, DeleteAll
+		Case "TabIndent":
+			Menu, TbMenu, Add, %t_Lang211%, IndentWith, Radio
+			Menu, TbMenu, Add, %t_Lang210%, IndentWith, Radio
+			If (IndentWith = "Tab")
+				Menu, TbMenu, Check, %t_Lang210%
+			Else
+				Menu, TbMenu, Check, %t_Lang211%
+			Menu, TbMenu, Show, %mX%, %mY%
+			Menu, TbMenu, DeleteAll
+		Case "GroupsMode":
+			GoSub, ShowGroupsMenu
+		Default:
+			If (InStr(Menu, "Rec"))
+				GoSub, ShowRecMenu
+			Else
+				Menu, %Menu%, Show, %mX%, %mY%
 	}
-	Else If (Menu = "PlayStart")
-		GoSub, ShowPlayMenu
-	Else If (Menu = "OnFinish")
-		GoSub, OnFinish
-	Else If (Menu = "RecStart")
-	{
-		Menu, TbMenu, Add, %t_Lang020%, RecStartNew
-		Menu, TbMenu, Show, %mX%, %mY%
-		Menu, TbMenu, DeleteAll
-	}
-	Else If (InStr(Menu, "Rec"))
-		GoSub, ShowRecMenu
-	Else If (Menu = "ShowPlayMenu")
-		GoSub, ShowPlayMenu
-	Else If (Menu = "PrevRefreshButton")
-	{
-		Menu, TbMenu, Add, %t_Lang015%, AutoRefresh
-		If (AutoRefresh)
-			Menu, TbMenu, Check, %t_Lang015%
-		Menu, TbMenu, Show, %mX%, %mY%
-		Menu, TbMenu, DeleteAll
-	}
-	Else If (Menu = "TabIndent")
-	{
-		Menu, TbMenu, Add, %t_Lang211%, IndentWith, Radio
-		Menu, TbMenu, Add, %t_Lang210%, IndentWith, Radio
-		If (IndentWith = "Tab")
-			Menu, TbMenu, Check, %t_Lang210%
-		Else
-			Menu, TbMenu, Check, %t_Lang211%
-		Menu, TbMenu, Show, %mX%, %mY%
-		Menu, TbMenu, DeleteAll
-	}
-	Else If (Menu = "GroupsMode")
-		GoSub, ShowGroupsMenu
-	Else
-		Menu, %Menu%, Show, %mX%, %mY%
 }
 
 ShowChevronMenu(rbPtr, BandID, X := "", Y := "")

@@ -225,7 +225,7 @@
 	w_Lang037 =	Pencere
 	w_Lang038 =	Yorumlamak
 	w_Lang039 =	Renk
-	w_Lang040 =	Yeni (Ctrl+N)
+	w_Lang040 =	Kod satırı
 	w_Lang041 =	Aç (Ctrl+O)
 	w_Lang042 =	Kaydet (Ctrl+S)
 	w_Lang043 =	Farklı Kaydet (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Kısayol tuşu "Play" için Windows tuşu ekle
 	w_Lang110 =	Kısayol olarak bir joystick düğmesini kullanın
 	w_Lang111 =	Arama... (Basın gitmek için Enter)
+	w_Lang112 =	Yeni (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Fare
@@ -776,6 +777,8 @@
 	t_Lang215 =	Fare gecikme
 	t_Lang216 =	Kontrol gecikmesi
 	t_Lang217 =	artımlı
+	t_Lang218 =	Seçili satıra git
+	t_Lang219 =	Otomatik seçim
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık

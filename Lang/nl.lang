@@ -225,7 +225,7 @@
 	w_Lang037 =	Venster
 	w_Lang038 =	Commentaar
 	w_Lang039 =	Kleur
-	w_Lang040 =	Nieuw (Ctrl+N)
+	w_Lang040 =	Code lijn
 	w_Lang041 =	Openen (Ctrl+O)
 	w_Lang042 =	Opslaan (Ctrl+S)
 	w_Lang043 =	Opslaan als (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Voeg de Windows-toets op "Play" sneltoets
 	w_Lang110 =	Gebruik een joystick knop als sneltoets
 	w_Lang111 =	Zoeken... (Druk op Enter om te gaan)
+	w_Lang112 =	Nieuw (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis
@@ -776,6 +777,8 @@
 	t_Lang215 =	Muis vertraging
 	t_Lang216 =	Controle vertraging
 	t_Lang217 =	incrementeel
+	t_Lang218 =	Ga naar de geselecteerde regel
+	t_Lang219 =	Automatische selectie
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

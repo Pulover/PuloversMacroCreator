@@ -408,6 +408,7 @@ Uncheck the checkboxes in the first column to disable specific actions during pl
 * *Window*: Name of the window which will be affected by the command.
 * *Comment*: Optional comment line to display in front of the command when the script is exported to AHK.
 * *Color*: Saves the color for the Color Mark set to the row (if any).
+* *Code line*: Line of code in the [Preview Window](Preview.html).
 
 **Note**: The content of each column may vary on certain type of commands.
 

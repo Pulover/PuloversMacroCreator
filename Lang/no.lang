@@ -225,7 +225,7 @@
 	w_Lang037 =	Vindu
 	w_Lang038 =	Kommentar
 	w_Lang039 =	Farge
-	w_Lang040 =	New (Ctrl+N)
+	w_Lang040 =	Kodelinje
 	w_Lang041 =	Open (Ctrl+O)
 	w_Lang042 =	Lagre (Ctrl+S)
 	w_Lang043 =	Lagre som (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Legg Windows-tasten til "Play" hurtigtast
 	w_Lang110 =	Bruk en joystick knappen som hurtigtast
 	w_Lang111 =	Søk... (Trykk Enter for å gå)
+	w_Lang112 =	New (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -776,6 +777,8 @@
 	t_Lang215 =	Mus forsinkelse
 	t_Lang216 =	Kontroll forsinkelse
 	t_Lang217 =	Trinnvis
+	t_Lang218 =	Gå til valgt linje
+	t_Lang219 =	Auto valg
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åpent

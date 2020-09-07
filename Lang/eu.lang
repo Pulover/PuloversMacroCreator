@@ -225,7 +225,7 @@
 	w_Lang037 =	Leiho
 	w_Lang038 =	Iruzkina
 	w_Lang039 =	Kolorea
-	w_Lang040 =	Berria (Ctrl + N)
+	w_Lang040 =	Kode lerroa
 	w_Lang041 =	Open (Ctrl + O)
 	w_Lang042 =	Gorde (Ktrl + S)
 	w_Lang043 =	Save As (Ctrl + Shift + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Gehitu Windows gakoa den "Play" laster
 	w_Lang110 =	Erabili joystick botoi bat laster gisa
 	w_Lang111 =	Search ... (Sakatu Sartu joan)
+	w_Lang112 =	Berria (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -776,6 +777,8 @@
 	t_Lang215 =	Saguaren atzerapena
 	t_Lang216 =	Kontrola atzerapena
 	t_Lang217 =	inkrementalak
+	t_Lang218 =	Joan hautatutako lerrora
+	t_Lang219 =	Hautapen automatikoa
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

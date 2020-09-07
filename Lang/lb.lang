@@ -225,7 +225,7 @@
 	w_Lang037 =	Fënster
 	w_Lang038 =	Kommentéieren
 	w_Lang039 =	Faarf
-	w_Lang040 =	New (Ctrl + N)
+	w_Lang040 =	Code Linn
 	w_Lang041 =	Open (Ctrl + O)
 	w_Lang042 =	Späichert (Ctrl + S)
 	w_Lang043 =	Trend Als (Ctrl + Nuetsschicht + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Foto vum Windows Schlëssel "Play" hotkey
 	w_Lang110 =	Benotzt eng joystick Knäppche wéi hotkey
 	w_Lang111 =	Sich ... (Press Gitt ze goen)
+	w_Lang112 =	New (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -776,6 +777,8 @@
 	t_Lang215 =	Maus Retard
 	t_Lang216 =	Kontroll Retard
 	t_Lang217 =	fortlafend
+	t_Lang218 =	Gitt op gewielte Linn
+	t_Lang219 =	Auto-Select
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

@@ -225,7 +225,7 @@
 	w_Lang037 =	窗口
 	w_Lang038 =	評論
 	w_Lang039 =	顏色
-	w_Lang040 =	開啟新檔（按Ctrl+N）
+	w_Lang040 =	代碼行
 	w_Lang041 =	開啟檔案（按Ctrl+O）
 	w_Lang042 =	保存（Ctrl+S）
 	w_Lang043 =	另存為 （Ctrl+Shift+S）
@@ -297,6 +297,7 @@
 	w_Lang109 =	Windows鍵“播放”熱鍵
 	w_Lang110 =	使用操縱桿按鈕，熱鍵
 	w_Lang111 =	搜索... (按Enter鍵進入)
+	w_Lang112 =	開啟新檔（按Ctrl+N）
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標
@@ -776,6 +777,8 @@
 	t_Lang215 =	鼠標延遲
 	t_Lang216 =	控制延遲
 	t_Lang217 =	增量
+	t_Lang218 =	轉到選定的行
+	t_Lang219 =	自動選擇
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開

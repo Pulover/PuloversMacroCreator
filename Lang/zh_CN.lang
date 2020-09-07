@@ -225,7 +225,7 @@
 	w_Lang037 =	窗口
 	w_Lang038 =	注释
 	w_Lang039 =	颜色
-	w_Lang040 =	新建(Ctrl+N)
+	w_Lang040 =	代码行
 	w_Lang041 =	打开(Ctrl+O)
 	w_Lang042 =	保存(Ctrl+S)
 	w_Lang043 =	另存为 (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	添加Windows键到“回放”热键
 	w_Lang110 =	使用操作杆作为热键
 	w_Lang111 =	搜索... (按Enter键进入)
+	w_Lang112 =	新建(Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠标
@@ -776,6 +777,8 @@
 	t_Lang215 =	鼠标延迟
 	t_Lang216 =	控制延迟
 	t_Lang217 =	增量
+	t_Lang218 =	转到选定的行
+	t_Lang219 =	自动选择
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开

@@ -225,7 +225,7 @@
 	w_Lang037 =	Fenêtre
 	w_Lang038 =	Commenter
 	w_Lang039 =	Couleur
-	w_Lang040 =	Nouveau (Ctrl+N)
+	w_Lang040 =	Ligne de code
 	w_Lang041 =	Ouvrir (Ctrl+O)
 	w_Lang042 =	Enregistrer (Ctrl+S)
 	w_Lang043 =	Enregistrer sous (Ctrl+Maj+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Ajoutez la touche Windows de "jouer" raccourci
 	w_Lang110 =	Utilisez un bouton de la manette comme raccourci
 	w_Lang111 =	Rechercher... (Appuyez sur Entrée pour aller)
+	w_Lang112 =	Nouveau (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Souris
@@ -776,6 +777,8 @@
 	t_Lang215 =	Retard souris
 	t_Lang216 =	Retard de commande
 	t_Lang217 =	incrémental
+	t_Lang218 =	Aller à la ligne sélectionnée
+	t_Lang219 =	Sélection automatique
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert

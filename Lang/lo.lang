@@ -225,7 +225,7 @@
 	w_Lang037 =	ປ່ອງຢ້ຽມ
 	w_Lang038 =	ຄໍາຄິດຄໍາເຫັນ
 	w_Lang039 =	ສີ
-	w_Lang040 =	New (Ctrl + N)
+	w_Lang040 =	ເສັ້ນລະຫັດ
 	w_Lang041 =	ເປີດ (Ctrl + O)
 	w_Lang042 =	ຊ່ວຍປະຢັດ (Ctrl + S)
 	w_Lang043 =	Save As (Ctrl + Shift + S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	ເພີ່ມທີ່ສໍາຄັນ Windows ກັບ "ຫຼິ້ນ" hotkey
 	w_Lang110 =	ການນໍາໃຊ້ປຸ່ມ joystick ເປັນ hotkey
 	w_Lang111 =	ຄົ້ນຫາ ... (ກົດ Enter ເພື່ອໄປ)
+	w_Lang112 =	New (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	ຫນູ
@@ -776,6 +777,8 @@
 	t_Lang215 =	ການຊັກຊ້າຫນູ
 	t_Lang216 =	ການຊັກຊ້າການຄວບຄຸມ
 	t_Lang217 =	ທີ່ເພີ່ມຂຶ້ນ
+	t_Lang218 =	ໄປທີ່ເສັ້ນທີ່ທ່ານເລືອກ
+	t_Lang219 =	ເລືອກອັດຕະໂນມັດ
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	ເປີດ

@@ -225,7 +225,7 @@
 	w_Lang037 =	Janela
 	w_Lang038 =	Comentário
 	w_Lang039 =	Cor
-	w_Lang040 =	Novo (Ctrl+N)
+	w_Lang040 =	Linha de código
 	w_Lang041 =	Abrir (Ctrl+O)
 	w_Lang042 =	Salvar (Ctrl+S)
 	w_Lang043 =	Salvar Como (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Adicionar a tecla Windows ao atalho "Executar"
 	w_Lang110 =	Usar um botão do joystick como atalho
 	w_Lang111 =	Pesquisar... (Pressione Enter para ir)
+	w_Lang112 =	Novo (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -776,6 +777,8 @@
 	t_Lang215 =	Intervalo de mous
 	t_Lang216 =	Intervalo de controle
 	t_Lang217 =	incremental
+	t_Lang218 =	Ir para linha selecionada
+	t_Lang219 =	Auto-Selecionar
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir

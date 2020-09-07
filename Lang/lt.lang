@@ -225,7 +225,7 @@
 	w_Lang037 =	Langas
 	w_Lang038 =	Komentaras
 	w_Lang039 =	Spalva
-	w_Lang040 =	Naujas (Ctrl + N)
+	w_Lang040 =	Kodo eilutė
 	w_Lang041 =	Atviras (Ctrl + O)
 	w_Lang042 =	Išsaugoti (Ctrl + S)
 	w_Lang043 =	Įrašyti kaip (Ctrl + Shift + P)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Įdėti Windows raktą į "Play" klavišas
 	w_Lang110 =	Naudokite kreiptuką mygtuką, kaip klavišas
 	w_Lang111 =	Paieška ... (Paspauskite klavišą Enter eiti)
+	w_Lang112 =	Naujas (Ctrl + N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pelė
@@ -776,6 +777,8 @@
 	t_Lang215 =	Pelės delsimas
 	t_Lang216 =	Kontrolės vėlavimo
 	t_Lang217 =	Pavienis
+	t_Lang218 =	Eikite į pasirinktą eilutę
+	t_Lang219 =	Automatinis pasirinkimas
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atviras

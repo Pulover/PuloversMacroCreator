@@ -225,7 +225,7 @@
 	w_Lang037 =	ウィンドウ
 	w_Lang038 =	コメント
 	w_Lang039 =	色
-	w_Lang040 =	新規作成（Ctrl+Nキー）
+	w_Lang040 =	コードライン
 	w_Lang041 =	開く（Ctrl+Oキー）
 	w_Lang042 =	保存（Ctrl+S）
 	w_Lang043 =	名前を付けて保存 （Ctrl+Shift+S）
@@ -297,6 +297,7 @@
 	w_Lang109 =	ホットキーを"再生"するには、Windowsキーを追加
 	w_Lang110 =	ホットキーとしてジョイスティックボタンを使用し
 	w_Lang111 =	検索... (押して移動します)
+	w_Lang112 =	新規作成（Ctrl+Nキー）
 		
 ; 15. Command Windows		
 	c_Lang001 =	マウス
@@ -776,6 +777,8 @@
 	t_Lang215 =	マウスの遅延
 	t_Lang216 =	制御遅延
 	t_Lang217 =	増分
+	t_Lang218 =	選択した行に移動
+	t_Lang219 =	自動選択
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	開く

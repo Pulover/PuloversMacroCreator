@@ -225,7 +225,7 @@
 	w_Lang037 =	Ventana
 	w_Lang038 =	Comentario
 	w_Lang039 =	Color
-	w_Lang040 =	Nuevo (Ctrl+N)
+	w_Lang040 =	Línea de código
 	w_Lang041 =	Abrir (Ctrl+O)
 	w_Lang042 =	Guardar (Ctrl+S)
 	w_Lang043 =	Guardar como (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Agregue la clave de Windows para tecla de acceso rápido "Reproducir"
 	w_Lang110 =	Utilizar un botón del joystick como tecla de acceso directo
 	w_Lang111 =	Buscar... (Pulse Intro para ir)
+	w_Lang112 =	Nuevo (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratón
@@ -776,6 +777,8 @@
 	t_Lang215 =	Retardo del ratón
 	t_Lang216 =	Control de retardo
 	t_Lang217 =	incremental
+	t_Lang218 =	Ir a la línea seleccionada
+	t_Lang219 =	Selección automática
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abierto

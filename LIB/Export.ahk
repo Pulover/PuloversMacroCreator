@@ -1,11 +1,11 @@
-﻿LV_Export(ListID)
+﻿LV_Export(ListID, ByRef CodeLines := "")
 {
 	local LVData, Id_LVData, Indent, RowData, Action, Match, ExpValue, Win
 	, Step, TimesX, DelayX, Type, Target, Window, Comment, UntilArray := []
 	, PAction, PType, PDelayX, PComment, Act, iCount, init_ie, ComExp
 	, VarsScope, FuncParams, IsFunction := false, CommentOut := false
 	, CDO_To, CDO_Sub, CDO_Msg, CDO_Att, CDO_Html, CDO_CC, CDO_BCC, SelAcc
-	, _each, _Section
+	, _each, _Section, _CodeLine
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%ListID%
 	ComType := ComCr ? "ComObjCreate" : "ComObjActive"
@@ -14,6 +14,10 @@
 	{
 		LV_GetTexts(A_Index, Action, Step, TimesX, DelayX, Type, Target, Window, Comment)
 	,	IsChecked := LV_GetNext(A_Index-1, "Checked")
+		If (CodeLines) {
+			RegExReplace(LVData, "`n", "", _CodeLine)
+		,	CodeLines.Push(_CodeLine + 1)
+		}
 		If (InStr(FileCmdList, Type "|"))
 			Step := StrReplace(Step, "```,", "`,")
 		If (Type = cType1)

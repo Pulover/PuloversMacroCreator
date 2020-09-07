@@ -225,7 +225,7 @@
 	w_Lang037 =	Okno
 	w_Lang038 =	Komentář
 	w_Lang039 =	Barva
-	w_Lang040 =	New (Ctrl+N)
+	w_Lang040 =	Řádek kódu
 	w_Lang041 =	Open (Ctrl+O)
 	w_Lang042 =	Save (Ctrl+S)
 	w_Lang043 =	Uložit jako (Ctrl+Shift+S)
@@ -297,6 +297,7 @@
 	w_Lang109 =	Přidat klávesu Windows na "Play" klávesové zkratky
 	w_Lang110 =	Použijte joystick jako klávesovou zkratku
 	w_Lang111 =	Vyhledávání... (Klávesou Enter prejdete)
+	w_Lang112 =	New (Ctrl+N)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš
@@ -776,6 +777,8 @@
 	t_Lang215 =	Zpoždění myš
 	t_Lang216 =	Ovládání zpoždění
 	t_Lang217 =	Incremental
+	t_Lang218 =	Přejít na vybraný řádek
+	t_Lang219 =	Automatický výběr
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít
