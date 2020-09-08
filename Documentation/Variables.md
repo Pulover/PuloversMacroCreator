@@ -30,8 +30,8 @@ A detailed explanation about Variables can be found at the [AHK documentation](h
 
 ### Remarks
 
-**Pulover's Macro Creator** is written in AutoHotkey language, and so it has internal variables in the same environment as user-defined variables. Therefore if you choose a variable name that's used by internally by PMC you may run into inconsistencies and even crash the program.  
-PMC will warn you with a traytip if it notices you are using some of its reserved words, but it's impossible to monitor every single situation where and variable to avoid such conflicts, so it's recommended to follow these guidelines when choosing a variable name:
+**Pulover's Macro Creator** is written in AutoHotkey language, and so it has internal variables in the same environment as user-defined variables. Therefore if you choose a variable name that's used internally by PMC you may run into inconsistencies and even crash the program.  
+PMC will warn you with a traytip if it notices you are using some of its reserved words, but it's impossible to monitor every single situation and variable to avoid such conflicts, so it's recommended to follow these guidelines when choosing a variable name:
 
 * Do not use very short words, such as "a" or "vr". Use variable names that are at least 3 characters long.
 * Do not use variable names starting with numbers or symbols like "_" or "$".

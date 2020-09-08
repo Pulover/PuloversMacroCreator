@@ -4,7 +4,7 @@ Pulover's Macro Creator is a Free Automation Tool and Script Generator based on 
 
 [www.macrocreator.com](http://www.macrocreator.com)
 
-**Current Version:** 5.0.5
+**Current Version:** 5.1.0
 
 ### Supported platforms
 
@@ -37,7 +37,7 @@ If you need to compile you may run the *Compile.ahk* script which generates the 
 To compile you'll need:
 * The latest version of Auto-Hotkey installed.
 * hhc.exe and hha.dll in *Documentation\MacroCreator_Help-doc* directory.
-* Inno Setup (5.5.2 or higher) installed.
+* Inno Setup 6 installed.
 
 Notes:
 * Execute *MacroCreator.ahk* at least once to create the .ini file with the current version. You might need to copy it from %AppData% to the script folder.

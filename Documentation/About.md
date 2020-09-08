@@ -37,7 +37,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 # Change Log
 
 ## Version 5.1.0
-* Added *Go to selected line* button on **Preview window**.
+* Added *Go to selected line* button and *Auto-select code* on **Preview window**.
 * Added support for *OutputVar* in **Function** window for `RegExMatch`, `RegExReplace` and `StrReplace`.
 * Improved performance of Text::Paste from Clipboard.
 * Fixed bug in *Adjust coordinates to the center of the image* option in Image Search.
