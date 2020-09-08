@@ -118,7 +118,7 @@
 	v_Lang002 =	&Destacar Linhas
 	v_Lang003 =	&Margem
 	v_Lang004 =	&Barra de Controles
-	v_Lang005 =	S&cript
+	v_Lang005 =	&Visuali&zar Script
 	v_Lang006 =	B&arras de Ferramentas
 	v_Lang007 =	A&talhos
 	v_Lang008 =	&Loop
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Padrão
 	v_Lang026 =	&Pequeno
 	v_Lang027 =	&Grande
+	v_Lang028 =	&Script
+	v_Lang029 =	&Copiar
+	v_Lang030 =	&Atualizar automaticamente
+	v_Lang031 =	S&elecionar código automaticamente
+	v_Lang032 =	&Margem
+	v_Lang033 =	Es&paços
+	v_Lang034 =	&Tabs
+	v_Lang035 =	C&onverter quebra de linhas
+	v_Lang036 =	Come&ntar linhas desmarcadas
+	v_Lang037 =	&Quebra de linha
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configurações
@@ -574,7 +584,7 @@
 	t_Lang012 =	Incluir Código PMC
 	t_Lang013 =	Não concatenar comandos Send
 	t_Lang014 =	Atualizar
-	t_Lang015 =	Auto-Atualizar
+	t_Lang015 =	Atualizar automaticamente
 	t_Lang016 =	Sempre Visível
 	t_Lang017 =	Configurações
 	t_Lang018 =	Geral
@@ -778,7 +788,7 @@
 	t_Lang216 =	Intervalo de controle
 	t_Lang217 =	incremental
 	t_Lang218 =	Ir para linha selecionada
-	t_Lang219 =	Auto-Selecionar
+	t_Lang219 =	Selecionar código automaticamente
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir

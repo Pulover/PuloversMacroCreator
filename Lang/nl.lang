@@ -118,7 +118,7 @@
 	v_Lang002 =	&Hoogtepunt Rijen
 	v_Lang003 =	&Inspringing
 	v_Lang004 =	&Controles Werkbalk
-	v_Lang005 =	&Voorbeeld
+	v_Lang005 =	&Voorbeeld Script
 	v_Lang006 =	&Werkbalken
 	v_Lang007 =	H&otkeys
 	v_Lang008 =	&Lus
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Verzuim
 	v_Lang026 =	&Klein
 	v_Lang027 =	&Groot
+	v_Lang028 =	&Voorbeeld
+	v_Lang029 =	&Kopieer
+	v_Lang030 =	&Automatisch vernieuwen
+	v_Lang031 =	A&utomatisch code selecteren
+	v_Lang032 =	&Inspringing
+	v_Lang033 =	&Ruimten
+	v_Lang034 =	&Tabs
+	v_Lang035 =	&Converteren regeleinden
+	v_Lang036 =	C&ommentaar uit ongecontroleerd rijen
+	v_Lang037 =	&Lijn wrap
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -574,7 +584,7 @@
 	t_Lang012 =	Inclusief PMC Code
 	t_Lang013 =	Niet aaneenschakelen Send commando's
 	t_Lang014 =	Verversen
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Automatisch vernieuwen
 	t_Lang016 =	Altijd op voorgrond
 	t_Lang017 =	Instellingen
 	t_Lang018 =	Algemeen
@@ -778,7 +788,7 @@
 	t_Lang216 =	Controle vertraging
 	t_Lang217 =	incrementeel
 	t_Lang218 =	Ga naar de geselecteerde regel
-	t_Lang219 =	Automatische selectie
+	t_Lang219 =	Automatisch code selecteren
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

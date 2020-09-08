@@ -118,7 +118,7 @@
 	v_Lang002 =	&Istaknuto Redovi
 	v_Lang003 =	U&vlačenje
 	v_Lang004 =	&Kontrole Traci
-	v_Lang005 =	&Pregled
+	v_Lang005 =	P&rikaz Script
 	v_Lang006 =	&Alatne Trake
 	v_Lang007 =	&Hotkeys
 	v_Lang008 =	P&etlja
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Default
 	v_Lang026 =	Mali
 	v_Lang027 =	Veliki
+	v_Lang028 =	&Pregled
+	v_Lang029 =	&Kopirajte
+	v_Lang030 =	&Automatski osvježi
+	v_Lang031 =	A&utomatski odaberite kod
+	v_Lang032 =	U&vlačenje
+	v_Lang033 =	P&rostori
+	v_Lang034 =	Kar&tice
+	v_Lang035 =	Pr&etvori prijelome redaka
+	v_Lang036 =	K&omentar iz označenim redaka
+	v_Lang037 =	&Line folijom
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Postavke
@@ -574,7 +584,7 @@
 	t_Lang012 =	Uključi PMC kod
 	t_Lang013 =	Ne spojite slanje naredbi
 	t_Lang014 =	Osvježiti
-	t_Lang015 =	Auto Osvježi
+	t_Lang015 =	Automatski osvježi
 	t_Lang016 =	Uvijek na vrhu
 	t_Lang017 =	Postavke
 	t_Lang018 =	Opći
@@ -778,7 +788,7 @@
 	t_Lang216 =	Kontrola kašnjenje
 	t_Lang217 =	Inkrementalni
 	t_Lang218 =	Idite na odabrani redak
-	t_Lang219 =	Automatski odabir
+	t_Lang219 =	Automatski odaberite kod
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno

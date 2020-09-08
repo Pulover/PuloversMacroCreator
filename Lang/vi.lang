@@ -118,7 +118,7 @@
 	v_Lang002 =	&Hàng nổi bật
 	v_Lang003 =	&Thụt đầu dòng
 	v_Lang004 =	Tha&nh công cụ điều khiển
-	v_Lang005 =	&Xem trước
+	v_Lang005 =	X&em trước Script
 	v_Lang006 =	Thanh &công cụ
 	v_Lang007 =	&Phím nóng
 	v_Lang008 =	&Vòng lặp
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Mặc Định
 	v_Lang026 =	Nhỏ
 	v_Lang027 =	Lớn
+	v_Lang028 =	&Xem trước
+	v_Lang029 =	&Sao chép
+	v_Lang030 =	&Tự động làm mới
+	v_Lang031 =	T&ự động chọn mã
+	v_Lang032 =	T&hụt đầu dòng
+	v_Lang033 =	&Không gian
+	v_Lang034 =	T&ab
+	v_Lang035 =	&Chuyển đổi ngắt dòng
+	v_Lang036 =	Th&ảo luận ra các hàng không được kiểm soát
+	v_Lang037 =	&Dòng bọc
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Cài đặt
@@ -574,7 +584,7 @@
 	t_Lang012 =	Bao gồm PMC Mã
 	t_Lang013 =	Không nối lệnh Gửi
 	t_Lang014 =	Làm mới
-	t_Lang015 =	Tự động Refresh
+	t_Lang015 =	Tự động làm mới
 	t_Lang016 =	Always On Top
 	t_Lang017 =	Cài đặt
 	t_Lang018 =	Chung
@@ -778,7 +788,7 @@
 	t_Lang216 =	Chậm trễ kiểm soát
 	t_Lang217 =	Incremental
 	t_Lang218 =	Chuyển đến dòng đã chọn
-	t_Lang219 =	Tự động lựa chọn
+	t_Lang219 =	Tự động chọn mã
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở

@@ -118,7 +118,7 @@
 	v_Lang002 =	&Baris Terkini
 	v_Lang003 =	&Indentasi
 	v_Lang004 =	&Kawalan Toolbar
-	v_Lang005 =	&Preview
+	v_Lang005 =	S&krip Preview
 	v_Lang006 =	&Toolbars
 	v_Lang007 =	&Hotkeys
 	v_Lang008 =	&Loop
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Default
 	v_Lang026 =	Ke&cil
 	v_Lang027 =	Besar
+	v_Lang028 =	&Preview
+	v_Lang029 =	&Menyalin
+	v_Lang030 =	&Segarkan secara automatik
+	v_Lang031 =	P&ilih kod secara automatik
+	v_Lang032 =	I&ndentasi
+	v_Lang033 =	&Ruang
+	v_Lang034 =	&Tab
+	v_Lang035 =	M&enukar rehat talian
+	v_Lang036 =	&Komen daripada baris tidak dikawal
+	v_Lang037 =	&Line bungkus
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Tetapan
@@ -574,7 +584,7 @@
 	t_Lang012 =	Termasuk PMC Kod
 	t_Lang013 =	Jangan concatenate arahan Hantar
 	t_Lang014 =	Refresh
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Segarkan secara automatik
 	t_Lang016 =	Sentiasa Pada Top
 	t_Lang017 =	Tetapan
 	t_Lang018 =	Ketua
@@ -778,7 +788,7 @@
 	t_Lang216 =	Kelewatan kawalan
 	t_Lang217 =	tambahan
 	t_Lang218 =	Pergi ke baris terpilih
-	t_Lang219 =	Pilih Auto
+	t_Lang219 =	Pilih kod secara automatik
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka

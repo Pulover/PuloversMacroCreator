@@ -118,7 +118,7 @@
 	v_Lang002 =	&Vrhunec Vrstic
 	v_Lang003 =	&Nazobčanost
 	v_Lang004 =	&Orodna Vrstica Nadzor
-	v_Lang005 =	&Predogled
+	v_Lang005 =	&Predogled Script
 	v_Lang006 =	Pan&ely Nástrojov
 	v_Lang007 =	&Klávesové Skratky
 	v_Lang008 =	&Zanka
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Privzeto
 	v_Lang026 =	Ma&jhno
 	v_Lang027 =	Velika
+	v_Lang028 =	&Predogled
+	v_Lang029 =	&Kopirajte
+	v_Lang030 =	&Samodejno osveži
+	v_Lang031 =	S&amodejno izberite kodo
+	v_Lang032 =	&Nazobčanost
+	v_Lang033 =	P&rostori
+	v_Lang034 =	&Zavihki
+	v_Lang035 =	Pr&etvarjanje prelome vrstic
+	v_Lang036 =	Zak&omentirajte nepreverjene vrstice
+	v_Lang037 =	&Line wrap
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavitve
@@ -574,7 +584,7 @@
 	t_Lang012 =	Vključujejo PMC zakoniku
 	t_Lang013 =	Ne združite pošiljanje ukazov
 	t_Lang014 =	Osveži
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Samodejno osveži
 	t_Lang016 =	Always On Top
 	t_Lang017 =	Nastavitve
 	t_Lang018 =	Splošno
@@ -778,7 +788,7 @@
 	t_Lang216 =	Nadzor zamudo
 	t_Lang217 =	inkrementalni
 	t_Lang218 =	Pojdi na izbrano vrstico
-	t_Lang219 =	Samodejna izbira
+	t_Lang219 =	Samodejno izberite kodo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite

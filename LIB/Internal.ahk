@@ -57,6 +57,7 @@ LV_GetSelCheck()
 
 GetRealLineFeeds(String)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	_Elements := {}
 	While (RegExMatch(String, "\[([^\[\]]++|(?R))*\]", _Bracket%A_Index%))
 		_Elements["&_Bracket" A_Index "_&"] := _Bracket%A_Index%
@@ -78,6 +79,7 @@ GetRealLineFeeds(String)
 
 AssignReplace(String, ByRef VarName, ByRef Oper, ByRef VarValue)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	RegExMatch(String, "(.*?)\s+(:=|\+=|-=|\*=|/=|//=|\.=|\|=|&=|\^=|>>=|<<=)\s+(.*)", Out)
 ,	VarName := Trim(Out1), Oper := Out2, VarValue := Trim(Out3)
 }
@@ -85,6 +87,7 @@ AssignReplace(String, ByRef VarName, ByRef Oper, ByRef VarValue)
 SetUserWords(Functions)
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
 	sciPrev.SetKeywords(0x7, Functions)
 ,	sciPrevF.SetKeywords(0x7, Functions)
 }
@@ -92,6 +95,7 @@ SetUserWords(Functions)
 ShowTooltip()
 {
 	static CurrControl, PrevControl, _TT, TT_A
+	
 	CurrControl := A_GuiControl
 	If (!CurrControl)
 		return
@@ -117,6 +121,7 @@ ShowTooltip()
 
 ReplaceCursor(hControl, hCursor)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	If (A_PtrSize = 8)
 		DllCall("SetClassLongPtr", "Ptr", hControl, "int", -12, "Ptr", hCursor)
 	Else
@@ -126,6 +131,7 @@ ReplaceCursor(hControl, hCursor)
 SBShowTip(Command)
 {
 	global Cmd_Tips
+	OutputDebug, Func: %A_ThisFunc%
 	
 	SB_SetText(Cmd_Tips[Command])
 	return Cmd_Tips[Command]
@@ -134,6 +140,7 @@ SBShowTip(Command)
 Find_Command(SearchWord, TrueMatch := false)
 {
 	local Results, SearchIn, Search
+	OutputDebug, Func: %A_ThisFunc%
 	
 	Results := []
 	Loop, Parse, KeywordsList, |
@@ -167,6 +174,7 @@ Find_Command(SearchWord, TrueMatch := false)
 
 RebarLock(rbPtr, Lock := true)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	Loop, % rbPtr.GetBandCount()
 		rbPtr.ModifyBand(A_Index, "Style", "NoGripper", Lock)
 }
@@ -174,6 +182,7 @@ RebarLock(rbPtr, Lock := true)
 CloseTab()
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
 	
 	MouseGetPos,,,, cHwnd, 2
 	If (cHwnd = TabSel)
@@ -187,6 +196,7 @@ CloseTab()
 DragTab()
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
 	
 	Critical
 	CoordMode, Mouse, Window
@@ -283,6 +293,7 @@ CompareParse(String, ByRef VarName, ByRef Oper, ByRef VarValue)
 ShowContextHelp()
 {
 	local Pag,Title
+	OutputDebug, Func: %A_ThisFunc%
 	
 	MouseGetPos,,,, Control
 	If (InStr(Control, "Edit"))
@@ -304,6 +315,7 @@ ShowContextHelp()
 CmdHelp()
 {
 	local Gui,Pag,Title
+	OutputDebug, Func: %A_ThisFunc%
 
 	If (HotkeyCtrlHasFocus())
 		return
@@ -358,6 +370,7 @@ CmdHelp()
 PicGetSize(File, ByRef Width, ByRef Height)
 {
 	static LoadedPic
+	OutputDebug, Func: %A_ThisFunc%
 	LastEL := ErrorLevel
 	Gui, Pict:Add, Pic, vLoadedPic, %File%
 	GuiControlGet, LoadedPic, Pict:Pos
@@ -369,6 +382,7 @@ PicGetSize(File, ByRef Width, ByRef Height)
 CenterImgSrchCoords(File, ByRef CoordX, ByRef CoordY)
 {
 	static LoadedPic
+	OutputDebug, Func: %A_ThisFunc%
 	LastEL := ErrorLevel
 	
 	Gui, Pict:Add, Pic, vLoadedPic, % RegExReplace(file, "^(\*\w+\s)+")
@@ -407,6 +421,7 @@ GuiGetSize(ByRef W, ByRef H, GuiID := 1)
 HotkeyCtrlHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))
+
 	GuiControlGet, ctrl, %GuiA%:Focus
 	If (InStr(ctrl,"hotkey"))
 	{
@@ -418,6 +433,7 @@ HotkeyCtrlHasFocus()
 ControlXHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))
+	
 	GuiControlGet, ctrl, %GuiA%:Focus
 	If (InStr(ctrl,"edit"))
 	{
@@ -432,6 +448,7 @@ ControlXHasFocus()
 
 SleepRandom(Delay := 0, Min := "", Max := "", Percent := "")
 {
+	OutputDebug, Func: %A_ThisFunc%
 	If (Percent)
 	{
 		Min := Floor(Delay - (Delay * Percent / 100))
@@ -444,6 +461,7 @@ SleepRandom(Delay := 0, Min := "", Max := "", Percent := "")
 EditCtrlHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))
+	OutputDebug, Func: %A_ThisFunc%
 	GuiControlGet, ctrl, %GuiA%:FocusV
 	return ctrl
 }
@@ -459,6 +477,7 @@ SCI_NOTIFY(wParam, lParam, msg, hwnd, sciObj)
 MarkArea(LineW)
 {
 	global c_Lang004, c_Lang059, d_Lang057
+	OutputDebug, Func: %A_ThisFunc%
 	
 	MouseGetPos,,, id, control
 	ControlGetPos, cX, cY, cW, cH, %control%, ahk_id %id%
@@ -502,6 +521,7 @@ MarkArea(LineW)
 
 MoveRectangle(o, p, LineW)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	Gui, 20:+LastFound
 	WinGetPos, wX, wY, wW, wH
 	w%o% := (p) ? w%o%+1 : w%o%-1
@@ -514,6 +534,7 @@ MoveRectangle(o, p, LineW)
 
 Screenshot(outfile, screen)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	Gdip_1 := "Gdip_Startup"
 ,	Gdip_2 := "Gdip_BitmapFromScreen"
 ,	Gdip_3 := "Gdip_SaveBitmapToFile"
@@ -531,6 +552,7 @@ Screenshot(outfile, screen)
 
 AdjustCoords(ByRef x1, ByRef y1, ByRef x2, ByRef y2)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	Xa := x2 < x1 ? x2 : x1
 ,	Xb := x1 > x2 ? x1 : x2
 ,	Ya := y2 < y1 ? y2 : y1
@@ -540,6 +562,7 @@ AdjustCoords(ByRef x1, ByRef y1, ByRef x2, ByRef y2)
 
 ReadFunctions(LibFile, Msg := "")
 {
+	OutputDebug, Func: %A_ThisFunc%
 	IfNotExist, %LibFile%
 		return "$"
 	Pos := 1
@@ -559,6 +582,7 @@ ReadFunctions(LibFile, Msg := "")
 
 ListIEWindows()
 {
+	OutputDebug, Func: %A_ThisFunc%
 	List := "[blank]||"
 	Try
 	{
@@ -572,6 +596,7 @@ ListIEWindows()
 GuiAddLV(ident)
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
 	Critical
 	Gui, chMacro:Default
 	Gui, chMacro:Tab, %ident%
@@ -585,6 +610,7 @@ GuiAddLV(ident)
 
 SelectByType(SelType, Col := 6)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	SelType := Trim(SelType)
 	LV_Modify(0, "-Select")
 	If SelType in Win,File,String
@@ -610,6 +636,7 @@ SelectByType(SelType, Col := 6)
 
 SelectByFilter(Act, Det, Tim, Del, Typ, Tar, Win, Com, Col, Case)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	LV_Modify(0, "-Select"), Found := 0
 	Loop, % ListCount%A_List%
 	{
@@ -663,6 +690,7 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 {
 	static LastFast, LastSlow, LastPause, LastAbort, LastRec, LatRecNew, LastPlay := {}
 	local ActiveKeys
+	OutputDebug, Func: %A_ThisFunc%
 	
 	If (Speed != "")
 	{
@@ -754,6 +782,7 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 CheckDuplicateLabels()
 {
 	local Proj_Labels
+	OutputDebug, Func: %A_ThisFunc%
 	
 	Gui, chMacro:Default
 	Loop, %TabCount%
@@ -777,6 +806,7 @@ CheckDuplicateLabels()
 
 RemoveDuplicates(ByRef String)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	StringTrimRight, String, String, 1
 	Loop, Parse, String, |
 		NewStr .= (InStr(NewStr, A_LoopField "|") ? "Macro" A_Index : A_LoopField) "|"
@@ -786,6 +816,7 @@ RemoveDuplicates(ByRef String)
 CheckDuplicates(Obj1, Obj2, Obj3*)
 {
 	global TabCount
+	OutputDebug, Func: %A_ThisFunc%
 	Loop, 3
 	{
 		If (IsObject(Obj%A_Index%))
@@ -805,6 +836,7 @@ CheckDuplicates(Obj1, Obj2, Obj3*)
 
 GetElIndex(elwb, GetBy)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	If (GetBy = "ID")
 		return ""
 
@@ -847,6 +879,7 @@ EscCom(Reverse, ByRef Item1 := "", ByRef Item2 := "", ByRef Item3 := "", ByRef I
 HistCheck()
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
 
 	SavePrompt(true)
 	If (MaxHistory = 0)
@@ -861,6 +894,7 @@ HistCheck()
 WinCheck(wParam, lParam, Msg)
 {
 	global
+
 	If (HaltCheck = 1)
 		return
 	Pause, Off
@@ -872,6 +906,8 @@ ToggleIcon(Custom := "")
 {
 	global
 	static IconFile, IconNumber, BarColor
+	OutputDebug, Func: %A_ThisFunc%
+
 	Color := (BarColor := !BarColor) ? "Red" : "20D000"
 	ChangeProgBarColor(Color, "OSCProg", 28)
 	If (Custom != "")
@@ -892,6 +928,7 @@ ToggleIcon(Custom := "")
 
 ToggleButtonIcon(Button, Icon)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	ILButton(Button, Icon[1] ":" Icon[2], 0)
 }
 
@@ -902,6 +939,7 @@ ChangeProgBarColor(Color, Control, Gui := 1)
 
 ChangeIcon(hInst, ID, Icon)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	; hIcon := DllCall("LoadImage", "Uint", hInst, "Uint", Icon, "Uint", 1, "int", 96, "int", 96, "Uint", 0x8000)
 	hIcon := IL_EX_GetHICON(hInst, Icon)
 	
@@ -912,6 +950,7 @@ ChangeIcon(hInst, ID, Icon)
 AHK_NOTIFYICON(wParam, lParam)
 {
 	global HaltCheck
+
 	If (lParam = 0x205) ; WM_RBUTTONUP
 	{
 		HaltCheck := 1
@@ -966,12 +1005,14 @@ Receive_Params(wParam, lParam)
 
 FreeMemory()
 {
+	OutputDebug, Func: %A_ThisFunc%
 	return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
 }
 
 GetPars(Param)
 {
 	Static _w := Chr(2)
+
 	ExprOn := false, InExpr := []
 ,	Param := Trim(Param)
 ,	Param := RegExReplace(Param, "(?<=^)%\s+|(?<=,)\s*%\s+", _w)
@@ -1015,6 +1056,7 @@ LV_ColorsMessage(wParam, lParam)
 {
 	Static NM_CUSTOMDRAW := -12
 	Static LVN_COLUMNCLICK := -108
+
 	Critical, 1000
 	If (LV_Colors.HasKey(H := NumGet(lParam + 0, 0, "UPtr")))
 	{
@@ -1032,6 +1074,8 @@ LV_ColorsMessage(wParam, lParam)
 ShowMenu(Menu, mX, mY)
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
+
 	Switch Menu
 	{
 		Case "Open":
@@ -1085,6 +1129,8 @@ ShowMenu(Menu, mX, mY)
 ShowChevronMenu(rbPtr, BandID, X := "", Y := "")
 {
 	Global TbEdit, ResDllPath
+	OutputDebug, Func: %A_ThisFunc%
+
 	Band := rbPtr.IDToIndex(BandID)
 ,	rbPtr.GetBand(Band, "", "", "", "", "", "", hChild)
 	tbPtr := TB_GetHwnd(hChild)
@@ -1132,6 +1178,8 @@ LVCallback(Func, Hwnd)
 SavePrompt(State)
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
+
 	SavePrompt := State
 ,	TB_Edit(TbFile, "Save",, State)
 	If (State)
@@ -1146,6 +1194,7 @@ SavePrompt(State)
 
 TreeGetChecked()
 {
+	OutputDebug, Func: %A_ThisFunc%
 	ItemID := 0, LastItemID := 0, CheckedVars := []
 	Loop
 	{
@@ -1161,6 +1210,8 @@ TreeGetChecked()
 UpdateMailAccounts()
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
+
 	Critical
 	MailIni := ""
 	Loop, % LV_GetCount()
@@ -1179,6 +1230,8 @@ UpdateMailAccounts()
 LoadMailAccounts()
 {
 	global
+	OutputDebug, Func: %A_ThisFunc%
+
 	User_Accounts := UserMailAccounts.Get(true)
 	For _each, Section in User_Accounts
 	{
@@ -1191,6 +1244,7 @@ LoadMailAccounts()
 
 WinHttpDownloadToFile(UrlList, DestFolder)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	UrlList := StrReplace(UrlList, "`n", ";")
 	UrlList := StrReplace(UrlList, ",", ";")
 	DestFolder := RTrim(DestFolder, "\") . "\"
@@ -1216,6 +1270,7 @@ WinHttpDownloadToFile(UrlList, DestFolder)
 Unzip(Sources, OutDir, SeparateFolders := false)
 {
 	Static vOptions := 16|256
+	OutputDebug, Func: %A_ThisFunc%
 	
 	Sources := StrReplace(Sources, "`n", ";")
 	Sources := StrReplace(Sources, ",", ";")
@@ -1243,6 +1298,7 @@ Unzip(Sources, OutDir, SeparateFolders := false)
 Zip(FilesToZip, OutFile, SeparateFiles := false)
 {
 	Static vOptions := 4|16
+	OutputDebug, Func: %A_ThisFunc%
 	
 	FilesToZip := StrReplace(FilesToZip, "`n", ";")
 	FilesToZip := StrReplace(FilesToZip, ",", ";")
@@ -1306,6 +1362,7 @@ Zip(FilesToZip, OutFile, SeparateFiles := false)
 
 CreateZipFile(sZip)
 {
+	OutputDebug, Func: %A_ThisFunc%
 	CurrentEncoding := A_FileEncoding
 	FileEncoding, CP1252
 	Header1 := "PK" . Chr(5) . Chr(6)

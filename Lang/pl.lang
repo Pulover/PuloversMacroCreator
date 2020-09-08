@@ -118,7 +118,7 @@
 	v_Lang002 =	&Podświetlenie wierszy
 	v_Lang003 =	&Wcięcia
 	v_Lang004 =	P&asek narzędzi kontroli
-	v_Lang005 =	P&odgląd
+	v_Lang005 =	&Podgląd Skryptu
 	v_Lang006 =	Pa&ski narzędzi
 	v_Lang007 =	&Hotkeys
 	v_Lang008 =	P&ętla
@@ -141,6 +141,16 @@
 	v_Lang025 =	Domy&ślnie
 	v_Lang026 =	Ma&łe
 	v_Lang027 =	Du&że
+	v_Lang028 =	&Podgląd
+	v_Lang029 =	&Skopiuj
+	v_Lang030 =	&Odśwież automatycznie
+	v_Lang031 =	&Automatycznie wybierz kod
+	v_Lang032 =	&Wcięcie
+	v_Lang033 =	Spa&cje
+	v_Lang034 =	&Zakładki
+	v_Lang035 =	&Konwertuj podziały wierszy
+	v_Lang036 =	Ko&mentarz do niezaznaczonych wierszy
+	v_Lang037 =	Zaw&ijanie lini
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -574,7 +584,7 @@
 	t_Lang012 =	Dołącz kod PMC
 	t_Lang013 =	Nie łączyć polecenia "Wyślij"
 	t_Lang014 =	Odśwież
-	t_Lang015 =	Auto-odświeżanie
+	t_Lang015 =	Odśwież automatycznie
 	t_Lang016 =	Zawsze na wierzchu
 	t_Lang017 =	Ustawienia
 	t_Lang018 =	Ogólny
@@ -778,7 +788,7 @@
 	t_Lang216 =	Opóźnienie sterowania
 	t_Lang217 =	Przyrostowe
 	t_Lang218 =	Przejdź do wybranej linii
-	t_Lang219 =	Automatyczny wybór
+	t_Lang219 =	Automatycznie wybierz kod
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwórz

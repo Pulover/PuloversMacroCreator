@@ -307,9 +307,9 @@ You can change the default colors in Settings > Misc.
 
 Shows or hides the [Controls Toolbar](Playback.html#controls-toolbar).
 
-### Preview
+### Preview Script
 
-Shows or hides the [Preview panel](Preview.html)
+[Preview panel](Preview.html) options.
 
 ### Toolbars
 

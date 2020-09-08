@@ -118,7 +118,7 @@
 	v_Lang002 =	&Files Destaquen
 	v_Lang003 =	S&angria
 	v_Lang004 =	&Barra D'eines De Controls
-	v_Lang005 =	A&vanç
+	v_Lang005 =	&Vista prèvia de script
 	v_Lang006 =	Ba&rres D'eines
 	v_Lang007 =	&Tecles D'accés Ràpid
 	v_Lang008 =	B&ucle
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Defecte
 	v_Lang026 =	Menor
 	v_Lang027 =	Gran
+	v_Lang028 =	&Avanç
+	v_Lang029 =	&Copieu
+	v_Lang030 =	Ac&tualitza automàticament
+	v_Lang031 =	&Seleccioneu automàticament el codi
+	v_Lang032 =	Sa&ngria
+	v_Lang033 =	&Espais
+	v_Lang034 =	&Fitxes
+	v_Lang035 =	C&onverteix salts de línia
+	v_Lang036 =	Co&menteu files sense marcar
+	v_Lang037 =	En&rotlleu
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuració
@@ -574,7 +584,7 @@
 	t_Lang012 =	Incloeu el codi de PMC
 	t_Lang013 =	No concatenar comandes Enviar
 	t_Lang014 =	Refrescar
-	t_Lang015 =	Actualització automàtica
+	t_Lang015 =	Actualitza automàticament
 	t_Lang016 =	Sempre visible
 	t_Lang017 =	Configuració
 	t_Lang018 =	General
@@ -778,7 +788,7 @@
 	t_Lang216 =	Control de retard
 	t_Lang217 =	incremental
 	t_Lang218 =	Aneu a la línia seleccionada
-	t_Lang219 =	Selecció automàtica
+	t_Lang219 =	Seleccioneu automàticament el codi
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert

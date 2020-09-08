@@ -118,7 +118,7 @@
 	v_Lang002 =	&Highlight Read
 	v_Lang003 =	&Taane
 	v_Lang004 =	&Controls tööriistariba
-	v_Lang005 =	&Eelvaade
+	v_Lang005 =	Eelvaa&de Script
 	v_Lang006 =	T&ööriistaribad
 	v_Lang007 =	&Kiirklahvid
 	v_Lang008 =	Aa&s
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Vaikimisi
 	v_Lang026 =	&Väike
 	v_Lang027 =	&Suur
+	v_Lang028 =	&Eelvaade
+	v_Lang029 =	&Koopia
+	v_Lang030 =	&Värskenda automaatselt
+	v_Lang031 =	V&alige kood automaatselt
+	v_Lang032 =	&Taane
+	v_Lang033 =	&Ruumid
+	v_Lang034 =	K&lapid
+	v_Lang035 =	&Convert reavahetused
+	v_Lang036 =	K&ommentaar välja märkimata rida
+	v_Lang037 =	L&ine wrap
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Seaded
@@ -574,7 +584,7 @@
 	t_Lang012 =	Kaasa PMC kood
 	t_Lang013 =	Ära concatenate saata käske
 	t_Lang014 =	Värskendama
-	t_Lang015 =	Auto-Värskenda
+	t_Lang015 =	Värskenda automaatselt
 	t_Lang016 =	Alati peal
 	t_Lang017 =	Seaded
 	t_Lang018 =	Üld-
@@ -778,7 +788,7 @@
 	t_Lang216 =	Kontrolli hilinemine
 	t_Lang217 =	kasvav
 	t_Lang218 =	Minge valitud reale
-	t_Lang219 =	Automaatne valimine
+	t_Lang219 =	Valige kood automaatselt
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avatud

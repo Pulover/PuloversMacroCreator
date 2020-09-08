@@ -118,7 +118,7 @@
 	v_Lang002 =	&Paryškinti eilutės
 	v_Lang003 =	&Įdubimas
 	v_Lang004 =	&Kontrolė "įrankių juosta
-	v_Lang005 =	P&eržiūrėti
+	v_Lang005 =	&Peržiūrėti scenarijus
 	v_Lang006 =	Į&rankių juostos
 	v_Lang007 =	K&lavišai
 	v_Lang008 =	K&ilpa
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Numatytasis
 	v_Lang026 =	Ma&žas
 	v_Lang027 =	&Didelis
+	v_Lang028 =	&Peržiūrėti
+	v_Lang029 =	&Kopija
+	v_Lang030 =	&Automatiškai atnaujinti
+	v_Lang031 =	A&utomatiškai pasirinkti kodą
+	v_Lang032 =	&Įdubimas
+	v_Lang033 =	&Erdves
+	v_Lang034 =	&Skirtukai
+	v_Lang035 =	K&onvertuoti eilučių
+	v_Lang036 =	Ko&mentaras iš Nepažymėjus eilučių
+	v_Lang037 =	&Linija įvyniojimas
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nustatymai
@@ -574,7 +584,7 @@
 	t_Lang012 =	Įtraukti PMC kodas
 	t_Lang013 =	Negalima Jungiant Siųsti komandas
 	t_Lang014 =	Atnaujinti
-	t_Lang015 =	Auto Atnaujinti
+	t_Lang015 =	Automatiškai atnaujinti
 	t_Lang016 =	Visada viršuje
 	t_Lang017 =	Nustatymai
 	t_Lang018 =	Bendras
@@ -778,7 +788,7 @@
 	t_Lang216 =	Kontrolės vėlavimo
 	t_Lang217 =	Pavienis
 	t_Lang218 =	Eikite į pasirinktą eilutę
-	t_Lang219 =	Automatinis pasirinkimas
+	t_Lang219 =	Automatiškai pasirinkti kodą
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atviras

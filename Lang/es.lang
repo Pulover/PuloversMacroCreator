@@ -118,7 +118,7 @@
 	v_Lang002 =	&Destacar Filas
 	v_Lang003 =	S&angría
 	v_Lang004 =	&Barra de Controles
-	v_Lang005 =	&Previa
+	v_Lang005 =	&Vista previa de Guión
 	v_Lang006 =	Ba&rras De Herramientas
 	v_Lang007 =	&Teclas De Acceso Rápido
 	v_Lang008 =	B&ucle
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Defecto
 	v_Lang026 =	&Pequeño
 	v_Lang027 =	&Grande
+	v_Lang028 =	&Previa
+	v_Lang029 =	&Copiar
+	v_Lang030 =	&Actualizar automáticamente
+	v_Lang031 =	&Seleccionar código automáticamente
+	v_Lang032 =	Sa&ngría
+	v_Lang033 =	&Espacios
+	v_Lang034 =	Pes&tañas
+	v_Lang035 =	C&onvertir saltos de línea
+	v_Lang036 =	Co&mente filas sin marcar
+	v_Lang037 =	A&juste de línea
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -574,7 +584,7 @@
 	t_Lang012 =	Incluya PMC Código
 	t_Lang013 =	No concatenar comandos Enviar
 	t_Lang014 =	Refrescar
-	t_Lang015 =	Actualización automática
+	t_Lang015 =	Actualizar automáticamente
 	t_Lang016 =	Siempre visible
 	t_Lang017 =	Configuración
 	t_Lang018 =	General
@@ -778,7 +788,7 @@
 	t_Lang216 =	Control de retardo
 	t_Lang217 =	incremental
 	t_Lang218 =	Ir a la línea seleccionada
-	t_Lang219 =	Selección automática
+	t_Lang219 =	Seleccionar código automáticamente
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abierto

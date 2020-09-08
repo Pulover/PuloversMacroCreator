@@ -118,7 +118,7 @@
 	v_Lang002 =	&Rânduri de evidențiere
 	v_Lang003 =	&Identație
 	v_Lang004 =	&Bara de instrumente de control
-	v_Lang005 =	&Previzualizare
+	v_Lang005 =	&Previzualizare Script
 	v_Lang006 =	B&are de instrumente
 	v_Lang007 =	&Hotkeys
 	v_Lang008 =	B&uclă
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Mod implicit
 	v_Lang026 =	&Mic
 	v_Lang027 =	&Mare
+	v_Lang028 =	&Previzualizare
+	v_Lang029 =	&Copie
+	v_Lang030 =	&Actualizați automat
+	v_Lang031 =	&Selectați automat codul
+	v_Lang032 =	&Identație
+	v_Lang033 =	Spa&ții
+	v_Lang034 =	&File
+	v_Lang035 =	C&onverti pauze de linie
+	v_Lang036 =	Co&mentați rânduri nebifate
+	v_Lang037 =	Fo&lie de linie
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Setările
@@ -574,7 +584,7 @@
 	t_Lang012 =	Includeți codul PMC
 	t_Lang013 =	Nu înlănțui Trimite comenzi
 	t_Lang014 =	Reîmprospăta
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Actualizați automat
 	t_Lang016 =	Mereu deasupra
 	t_Lang017 =	Setările
 	t_Lang018 =	General
@@ -778,7 +788,7 @@
 	t_Lang216 =	Întârziere de control
 	t_Lang217 =	incrementală
 	t_Lang218 =	Mergeți la linia selectată
-	t_Lang219 =	Selectare automată
+	t_Lang219 =	Selectați automat codul
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Deschis

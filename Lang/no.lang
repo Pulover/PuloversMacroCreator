@@ -118,7 +118,7 @@
 	v_Lang002 =	&Markere Rader
 	v_Lang003 =	&Innrykk
 	v_Lang004 =	&Kontroller Verktøylinjen
-	v_Lang005 =	&Forhåndsvisning
+	v_Lang005 =	&Forhåndsvisning Script
 	v_Lang006 =	&Verktøylinjer
 	v_Lang007 =	&Hurtigtaster
 	v_Lang008 =	&Loop
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Standard
 	v_Lang026 =	Liten
 	v_Lang027 =	Stor
+	v_Lang028 =	&Forhåndsvisning
+	v_Lang029 =	&Kopier
+	v_Lang030 =	&Oppdater automatisk
+	v_Lang031 =	&Velg kode automatisk
+	v_Lang032 =	&Innrykk
+	v_Lang033 =	&Mellomrom
+	v_Lang034 =	F&aner
+	v_Lang035 =	Ko&nverter linjeskift
+	v_Lang036 =	Komm&entar ut ukontrollert rader
+	v_Lang037 =	&Linje wrap
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Innstillinger
@@ -574,7 +584,7 @@
 	t_Lang012 =	Inkluder PMC kode
 	t_Lang013 =	Ikke sette sammen sende kommandoer
 	t_Lang014 =	Refresh
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Oppdater automatisk
 	t_Lang016 =	Alltid på topp
 	t_Lang017 =	Innstillinger
 	t_Lang018 =	Generelt
@@ -778,7 +788,7 @@
 	t_Lang216 =	Kontroll forsinkelse
 	t_Lang217 =	Trinnvis
 	t_Lang218 =	Gå til valgt linje
-	t_Lang219 =	Auto valg
+	t_Lang219 =	Velg kode automatisk
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åpent

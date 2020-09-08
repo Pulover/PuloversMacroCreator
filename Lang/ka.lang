@@ -118,7 +118,7 @@
 	v_Lang002 =	Highlight რიგები(&H)
 	v_Lang003 =	Indentation(&I)
 	v_Lang004 =	Controls Toolbar(&C)
-	v_Lang005 =	Preview(&P)
+	v_Lang005 =	Preview Script(&P)
 	v_Lang006 =	Toolbars(&T)
 	v_Lang007 =	Hotkeys(&O)
 	v_Lang008 =	Loop(&L)
@@ -141,6 +141,16 @@
 	v_Lang025 =	Default(&D)
 	v_Lang026 =	პატარა(&S)
 	v_Lang027 =	დიდი(&L)
+	v_Lang028 =	Preview(&P)
+	v_Lang029 =	ასლი(&C)
+	v_Lang030 =	ავტომატური განახლება(&A)
+	v_Lang031 =	ავტომატურად შეარჩიეთ კოდი(&U)
+	v_Lang032 =	Indentation(&I)
+	v_Lang033 =	ფართები(&S)
+	v_Lang034 =	ჩანართების(&T)
+	v_Lang035 =	კონვერტაციის ხაზის წყვეტები(&O)
+	v_Lang036 =	კომენტარები out გადაუმოწმებელი რიგები(&M)
+	v_Lang037 =	Line გადატანა(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	პარამეტრები(&S)
@@ -149,7 +159,7 @@
 	o_Lang004 =	ხელში გასაღები presses ამ window(&C)
 	o_Lang005 =	Hotkeys ყოველთვის აქტიური(&H)
 	o_Lang006 =	გამორთვა ვარიანტი (როდესაც დაკვრა სრულდება ...)(&U)
-	o_Lang007 =	სანიშნეს Windows გასაღები "თამაში" hotkey(&A)
+	o_Lang007 =	გამორთვა ვარიანტი (როდესაც დაკვრა სრულდება ...)(&A)
 	o_Lang008 =	გამოიყენოთ ჯოისტიკი ღილაკს hotkey(&E)
 	o_Lang009 =	უცნობია, როგორც ნაგულისხმები Hotkeys(&T)
 	o_Lang010 =	უცნობია, როგორც ნაგულისხმები ფაილი(&F)
@@ -574,7 +584,7 @@
 	t_Lang012 =	მოიცავს PMC კოდი
 	t_Lang013 =	ნუ concatenate პირადი ბრძანებები
 	t_Lang014 =	განახლება
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	ავტომატური განახლება
 	t_Lang016 =	ყოველთვის ყველაზე
 	t_Lang017 =	პარამეტრები
 	t_Lang018 =	ზოგადი
@@ -778,7 +788,7 @@
 	t_Lang216 =	კონტროლის დაგვიანებით
 	t_Lang217 =	დამატებითი
 	t_Lang218 =	გადადით არჩეულ სტრიქონზე
-	t_Lang219 =	ავტომატური შერჩევა
+	t_Lang219 =	ავტომატურად შეარჩიეთ კოდი
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	ღია

@@ -118,7 +118,7 @@
 	v_Lang002 =	&Zvýraznění Řádků
 	v_Lang003 =	&Odsazení
 	v_Lang004 =	Ov&ládací Prvky Panelu Nástrojů
-	v_Lang005 =	&Náhled
+	v_Lang005 =	N&áhled Scriptu
 	v_Lang006 =	&Panely Nástrojů
 	v_Lang007 =	&Klávesové Zkratky
 	v_Lang008 =	&Smyčka
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Standardní
 	v_Lang026 =	Mal&ý
 	v_Lang027 =	Velký
+	v_Lang028 =	&Náhled
+	v_Lang029 =	&Kopírovat
+	v_Lang030 =	&Automaticky aktualizovat
+	v_Lang031 =	A&utomaticky vybrat kód
+	v_Lang032 =	&Odsazení
+	v_Lang033 =	&Prostory
+	v_Lang034 =	Ka&rty
+	v_Lang035 =	P&řevod řádků
+	v_Lang036 =	Ko&mentář mimo nezkontrolované řádků
+	v_Lang037 =	&Zalamovat
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavení
@@ -574,7 +584,7 @@
 	t_Lang012 =	Zahrnout PMC kód
 	t_Lang013 =	Nenechte si zřetězit posílat příkazy
 	t_Lang014 =	Občerstvit
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Automaticky aktualizovat
 	t_Lang016 =	Vždy navrchu
 	t_Lang017 =	Nastavení
 	t_Lang018 =	Obecný
@@ -778,7 +788,7 @@
 	t_Lang216 =	Ovládání zpoždění
 	t_Lang217 =	Incremental
 	t_Lang218 =	Přejít na vybraný řádek
-	t_Lang219 =	Automatický výběr
+	t_Lang219 =	Automaticky vybrat kód
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít

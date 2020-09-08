@@ -118,7 +118,7 @@
 	v_Lang002 =	&Highlight Zeile
 	v_Lang003 =	&Arécken
 	v_Lang004 =	&Kontrollen Toolbar
-	v_Lang005 =	&Preview
+	v_Lang005 =	&Preview Audiodateien
 	v_Lang006 =	&Toolbare
 	v_Lang007 =	H&otkeys
 	v_Lang008 =	&Loop
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Default
 	v_Lang026 =	Klen&g
 	v_Lang027 =	&Grouss
+	v_Lang028 =	&Preview
+	v_Lang029 =	&Kopéieren
+	v_Lang030 =	&Automatesch aktualiséieren
+	v_Lang031 =	&Wielt automatesch de Code
+	v_Lang032 =	A&récken
+	v_Lang033 =	&Freiraim
+	v_Lang034 =	&Tabs
+	v_Lang035 =	K&onvertéieren Linn Break
+	v_Lang036 =	Ko&mmentéieren aus unchecked Zeile
+	v_Lang037 =	&Linn geschenkt
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Parameteren
@@ -574,7 +584,7 @@
 	t_Lang012 =	Gehéiert PMC Code
 	t_Lang013 =	Schécken Wëllt concatenate net commandéiert
 	t_Lang014 =	Frëscht
-	t_Lang015 =	Auto-Frëscht
+	t_Lang015 =	Automatesch aktualiséieren
 	t_Lang016 =	Ëmmer Op Top
 	t_Lang017 =	Parameteren
 	t_Lang018 =	Allgemeng
@@ -778,7 +788,7 @@
 	t_Lang216 =	Kontroll Retard
 	t_Lang217 =	fortlafend
 	t_Lang218 =	Gitt op gewielte Linn
-	t_Lang219 =	Auto-Select
+	t_Lang219 =	Wielt automatesch de Code
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

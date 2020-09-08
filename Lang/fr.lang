@@ -118,7 +118,7 @@
 	v_Lang002 =	&Les Lignes En Surbrillance
 	v_Lang003 =	&Renfoncement
 	v_Lang004 =	&Barre D'outils Des Contrôles
-	v_Lang005 =	&Avant-première
+	v_Lang005 =	&Aperçu du script
 	v_Lang006 =	Barr&es D'outils
 	v_Lang007 =	Ra&ccourcis Clavier
 	v_Lang008 =	B&oucle
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Par Défaut
 	v_Lang026 =	Petit
 	v_Lang027 =	&Grand
+	v_Lang028 =	&Avant-première
+	v_Lang029 =	&Copier
+	v_Lang030 =	Ac&tualiser automatiquement
+	v_Lang031 =	&Sélectionner automatiquement le code
+	v_Lang032 =	&Renfoncement
+	v_Lang033 =	&Les espaces
+	v_Lang034 =	&Onglets
+	v_Lang035 =	Co&nvertir les sauts de ligne
+	v_Lang036 =	Co&mmentaire sur les lignes non contrôlées
+	v_Lang037 =	&Wrap ligne
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Réglages
@@ -574,7 +584,7 @@
 	t_Lang012 =	Inclure PMC code
 	t_Lang013 =	Ne pas concaténer des commandes d'envoi
 	t_Lang014 =	Rafraîchir
-	t_Lang015 =	Actualisation automatique
+	t_Lang015 =	Actualiser automatiquement
 	t_Lang016 =	Toujours à la pointe
 	t_Lang017 =	Réglages
 	t_Lang018 =	Général
@@ -778,7 +788,7 @@
 	t_Lang216 =	Retard de commande
 	t_Lang217 =	incrémental
 	t_Lang218 =	Aller à la ligne sélectionnée
-	t_Lang219 =	Sélection automatique
+	t_Lang219 =	Sélectionner automatiquement le code
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert

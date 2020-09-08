@@ -118,7 +118,7 @@
 	v_Lang002 =	&Kiemelés Sorok
 	v_Lang003 =	&Behúzás
 	v_Lang004 =	&Ellenőrzés Eszköztár
-	v_Lang005 =	E&lőnézet
+	v_Lang005 =	&Preview Script
 	v_Lang006 =	E&szköztárak
 	v_Lang007 =	&Gyorsbillentyűk
 	v_Lang008 =	&Hurok
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Alapértelmezett
 	v_Lang026 =	Ki&csi
 	v_Lang027 =	&Nagy
+	v_Lang028 =	&Előnézet
+	v_Lang029 =	&Másolás
+	v_Lang030 =	&Automatikus frissítés
+	v_Lang031 =	&Kód automatikus kiválasztása
+	v_Lang032 =	&Behúzás
+	v_Lang033 =	&Terek
+	v_Lang034 =	&Lapok
+	v_Lang035 =	&Átalakítás sortöréseket
+	v_Lang036 =	&Hozzászólás ki ellenőrizetlenül sorok
+	v_Lang037 =	&Sortörés
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -574,7 +584,7 @@
 	t_Lang012 =	Beleértve a PMC-kód
 	t_Lang013 =	Ne összefűzni Küldés parancsokat
 	t_Lang014 =	Felfrissít
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Automatikus frissítés
 	t_Lang016 =	Mindig a tetején
 	t_Lang017 =	Beállítások
 	t_Lang018 =	Általános
@@ -778,7 +788,7 @@
 	t_Lang216 =	Vezérlés késleltetés
 	t_Lang217 =	Járulékos
 	t_Lang218 =	Ugrás a kijelölt sorra
-	t_Lang219 =	Automatikus választás
+	t_Lang219 =	Kód automatikus kiválasztása
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva

@@ -118,7 +118,7 @@
 	v_Lang002 =	&Korosta Rivejä
 	v_Lang003 =	&Sisennys
 	v_Lang004 =	&Hallinnan Työkalupalkki
-	v_Lang005 =	&Preview
+	v_Lang005 =	&Esikatselu Script
 	v_Lang006 =	&Työkalurivit
 	v_Lang007 =	P&ikanäppäimet
 	v_Lang008 =	Si&lmukka
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Oletusarvo
 	v_Lang026 =	Pieni
 	v_Lang027 =	Suuri
+	v_Lang028 =	&Preview
+	v_Lang029 =	&Kopioi
+	v_Lang030 =	P&äivitä automaattisesti
+	v_Lang031 =	&Valitse koodi automaattisesti
+	v_Lang032 =	&Sisennys
+	v_Lang033 =	&Tilat
+	v_Lang034 =	Vä&lilehdet
+	v_Lang035 =	&Muuta rivinvaihdot
+	v_Lang036 =	K&ommentoi pois valitsematta riviä
+	v_Lang037 =	L&ine wrap
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Asetukset
@@ -574,7 +584,7 @@
 	t_Lang012 =	Sisällytä PMC koodi
 	t_Lang013 =	Älä liität lähettää komentoja
 	t_Lang014 =	Virkistää
-	t_Lang015 =	Auto-refresh
+	t_Lang015 =	Päivitä automaattisesti
 	t_Lang016 =	Aina päällimmäisenä
 	t_Lang017 =	Asetukset
 	t_Lang018 =	Yleinen
@@ -778,7 +788,7 @@
 	t_Lang216 =	Ohjaus viive
 	t_Lang217 =	inkrementaalinen
 	t_Lang218 =	Siirry valitulle riville
-	t_Lang219 =	Automaattinen valinta
+	t_Lang219 =	Valitse koodi automaattisesti
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata

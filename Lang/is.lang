@@ -118,7 +118,7 @@
 	v_Lang002 =	&Highlight Raðir
 	v_Lang003 =	&Inndrátt
 	v_Lang004 =	&Stýrir Toolbar
-	v_Lang005 =	&Preview
+	v_Lang005 =	&Preview Script
 	v_Lang006 =	&Toolbars
 	v_Lang007 =	H&otkeys
 	v_Lang008 =	&Loop
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Sjálfgefið
 	v_Lang026 =	L&ítil
 	v_Lang027 =	St&ór
+	v_Lang028 =	&Preview
+	v_Lang029 =	&Afrita
+	v_Lang030 =	&Endurnýja sjálfkrafa
+	v_Lang031 =	&Veldu sjálfkrafa kóða
+	v_Lang032 =	&Inndrátt
+	v_Lang033 =	&Rými
+	v_Lang034 =	&Flipar
+	v_Lang035 =	&Umbreyta línuskiptingum
+	v_Lang036 =	A&thugasemd út óheft raðir
+	v_Lang037 =	&Línuskrið
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Stillingar
@@ -574,7 +584,7 @@
 	t_Lang012 =	Fela PMC Code
 	t_Lang013 =	Ekki concatenate senda skipanir
 	t_Lang014 =	Uppfæra
-	t_Lang015 =	Auto-Uppfæra
+	t_Lang015 =	Endurnýja sjálfkrafa
 	t_Lang016 =	Alltaf á toppnum
 	t_Lang017 =	Stillingar
 	t_Lang018 =	Almennt
@@ -778,7 +788,7 @@
 	t_Lang216 =	Stjórn seinkun
 	t_Lang217 =	stigvaxandi
 	t_Lang218 =	Farðu í valda línu
-	t_Lang219 =	Sjálfvirkt val
+	t_Lang219 =	Veldu sjálfkrafa kóða
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

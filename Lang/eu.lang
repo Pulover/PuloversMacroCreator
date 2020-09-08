@@ -118,7 +118,7 @@
 	v_Lang002 =	&Nabarmendu Ilarak
 	v_Lang003 =	&Koska
 	v_Lang004 =	K&ontrolak Toolbar
-	v_Lang005 =	&Aurreikusi
+	v_Lang005 =	A&urreikusi Script
 	v_Lang006 =	&Tresna-barrak
 	v_Lang007 =	&Hotkeys
 	v_Lang008 =	&Loop
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Default
 	v_Lang026 =	&Small
 	v_Lang027 =	&Handiak
+	v_Lang028 =	&Aurreikusi
+	v_Lang029 =	&Copy
+	v_Lang030 =	&Freskatu automatikoki
+	v_Lang031 =	A&ukeratu kodea automatikoki
+	v_Lang032 =	&Koska
+	v_Lang033 =	&Espazioak
+	v_Lang034 =	&Tabs
+	v_Lang035 =	&Bihurtu lerro-jauziak
+	v_Lang036 =	K&omentatu Deshautatzen errenkadak
+	v_Lang037 =	&Line wrap
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ezarpenak
@@ -574,7 +584,7 @@
 	t_Lang012 =	Besteak beste, PMC Código
 	t_Lang013 =	Ez kateatu Bidali komandoak
 	t_Lang014 =	Freskatu
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Freskatu automatikoki
 	t_Lang016 =	Beti aurrealdean
 	t_Lang017 =	Ezarpenak
 	t_Lang018 =	General
@@ -778,7 +788,7 @@
 	t_Lang216 =	Kontrola atzerapena
 	t_Lang217 =	inkrementalak
 	t_Lang218 =	Joan hautatutako lerrora
-	t_Lang219 =	Hautapen automatikoa
+	t_Lang219 =	Aukeratu kodea automatikoki
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

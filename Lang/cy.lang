@@ -118,7 +118,7 @@
 	v_Lang002 =	&Rhesi Amlygu
 	v_Lang003 =	&Mewnoliad
 	v_Lang004 =	R&heolaethau Bar Offer
-	v_Lang005 =	Rh&agolwg
+	v_Lang005 =	&Rhagolwg Sgript
 	v_Lang006 =	&Toolbars
 	v_Lang007 =	H&otkeys
 	v_Lang008 =	&Dolen
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Default
 	v_Lang026 =	&Bach
 	v_Lang027 =	&Mawr
+	v_Lang028 =	&Rhagolwg
+	v_Lang029 =	&Copi
+	v_Lang030 =	&Adnewyddu yn awtomatig
+	v_Lang031 =	&Dewis cod yn awtomatig
+	v_Lang032 =	&Mewnoliad
+	v_Lang033 =	&Lleoedd
+	v_Lang034 =	&Tabs
+	v_Lang035 =	Tr&osi toriadau llinell
+	v_Lang036 =	&Sylw allan rhesi ddirwystr
+	v_Lang037 =	Amla&pio llinell
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Gosodiadau
@@ -574,7 +584,7 @@
 	t_Lang012 =	Cynnwys Cod PMC
 	t_Lang013 =	Peidiwch â concatenate Anfon gorchmynion
 	t_Lang014 =	Refresh
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Adnewyddu yn awtomatig
 	t_Lang016 =	Bob amser Ar Top
 	t_Lang017 =	Gosodiadau
 	t_Lang018 =	Cyffredinol
@@ -778,7 +788,7 @@
 	t_Lang216 =	Oedi rheoli
 	t_Lang217 =	cynyddrannol
 	t_Lang218 =	Ewch i'r llinell a ddewiswyd
-	t_Lang219 =	Auto-Select
+	t_Lang219 =	Dewis cod yn awtomatig
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Agored

@@ -29,7 +29,7 @@ Automatically refreshes the code whenever the active Macro is changed.
 
 Selects the portion of the code corresponding to the selected row(s) in the list.
 
-### Auto-Select
+### Auto-select code
 
 Automatically selects the portion of the code corresponding to the selected row(s) in the list.
 

@@ -118,7 +118,7 @@
 	v_Lang002 =	高亮行(&H)
 	v_Lang003 =	缩进(&I)
 	v_Lang004 =	控制工具栏(&C)
-	v_Lang005 =	预览(&P)
+	v_Lang005 =	预览脚本(&P)
 	v_Lang006 =	工具栏(&T)
 	v_Lang007 =	热键(&O)
 	v_Lang008 =	循环(&L)
@@ -141,6 +141,16 @@
 	v_Lang025 =	默认(&D)
 	v_Lang026 =	小(&S)
 	v_Lang027 =	大(&L)
+	v_Lang028 =	预览(&P)
+	v_Lang029 =	复制(&C)
+	v_Lang030 =	自动刷新(&A)
+	v_Lang031 =	自动选择代码(&U)
+	v_Lang032 =	缩进(&I)
+	v_Lang033 =	空间(&S)
+	v_Lang034 =	标签(&T)
+	v_Lang035 =	换行符(&O)
+	v_Lang036 =	注释掉选中的行(&M)
+	v_Lang037 =	换行(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	设置(&S)
@@ -778,7 +788,7 @@
 	t_Lang216 =	控制延迟
 	t_Lang217 =	增量
 	t_Lang218 =	转到选定的行
-	t_Lang219 =	自动选择
+	t_Lang219 =	自动选择代码
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开

@@ -118,7 +118,7 @@
 	v_Lang002 =	&Vurgulamak Satır
 	v_Lang003 =	&Girinti
 	v_Lang004 =	&Kontroller Araç Çubuğu
-	v_Lang005 =	&Önizleme
+	v_Lang005 =	&Önizleme Senaryo
 	v_Lang006 =	&Araç Çubukları
 	v_Lang007 =	K&ısayol Tuşları
 	v_Lang008 =	&Döngü
@@ -141,6 +141,16 @@
 	v_Lang025 =	&Varsayılan
 	v_Lang026 =	Kü&çük
 	v_Lang027 =	&Büyük
+	v_Lang028 =	&Önizleme
+	v_Lang029 =	&Kopyala
+	v_Lang030 =	&Otomatik olarak yenile
+	v_Lang031 =	Ko&du otomatik olarak seçin
+	v_Lang032 =	&Girinti
+	v_Lang033 =	&Alanlarda
+	v_Lang034 =	&Sekmeler
+	v_Lang035 =	Sa&tır aralıklarını dönüştür
+	v_Lang036 =	D&enetlenmeyen satırları açıklama
+	v_Lang037 =	&Hat şal
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ayarlar
@@ -574,7 +584,7 @@
 	t_Lang012 =	PMC Kod dahil
 	t_Lang013 =	Gönder komutlarını bitiştirmek etmeyin
 	t_Lang014 =	Yenile
-	t_Lang015 =	Auto-Refresh
+	t_Lang015 =	Otomatik olarak yenile
 	t_Lang016 =	Her zaman üstte
 	t_Lang017 =	Ayarlar
 	t_Lang018 =	Genel
@@ -778,7 +788,7 @@
 	t_Lang216 =	Kontrol gecikmesi
 	t_Lang217 =	artımlı
 	t_Lang218 =	Seçili satıra git
-	t_Lang219 =	Otomatik seçim
+	t_Lang219 =	Kodu otomatik olarak seçin
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık

@@ -118,7 +118,7 @@
 	v_Lang002 =	하이라이트 행(&H)
 	v_Lang003 =	톱니 모양(&I)
 	v_Lang004 =	컨트롤 도구 모음(&C)
-	v_Lang005 =	시사(&P)
+	v_Lang005 =	미리보기 스크립트(&P)
 	v_Lang006 =	도구 모음(&T)
 	v_Lang007 =	단축키(&O)
 	v_Lang008 =	고리(&L)
@@ -141,6 +141,16 @@
 	v_Lang025 =	디폴트 값(&D)
 	v_Lang026 =	작은(&S)
 	v_Lang027 =	큰(&L)
+	v_Lang028 =	시사(&P)
+	v_Lang029 =	복사(&C)
+	v_Lang030 =	자동으로 새로 고침(&A)
+	v_Lang031 =	코드 자동 선택(&U)
+	v_Lang032 =	톱니 모양(&I)
+	v_Lang033 =	공간(&S)
+	v_Lang034 =	탭(&T)
+	v_Lang035 =	줄 바꿈 변환(&O)
+	v_Lang036 =	선택하지 않은 행을 주석(&M)
+	v_Lang037 =	줄 바꿈(&L)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	설정(&S)
@@ -149,7 +159,7 @@
 	o_Lang004 =	이 창에서 키 누름을 캡처(&C)
 	o_Lang005 =	항상 활성화 단축키(&H)
 	o_Lang006 =	종료 옵션 (재생시 마감...)(&U)
-	o_Lang007 =	단축키를 "재생"할 수있는 Windows 키 추가(&A)
+	o_Lang007 =	종료 옵션 (재생시 마감...)(&A)
 	o_Lang008 =	단축키로 조이스틱 버튼을 사용하여(&E)
 	o_Lang009 =	기본 단축키로 설정(&T)
 	o_Lang010 =	기본 파일로 설정(&F)
@@ -574,7 +584,7 @@
 	t_Lang012 =	PMC 코드를 포함
 	t_Lang013 =	보내기 명령을 연결하여하지 마십시오
 	t_Lang014 =	새롭게하다
-	t_Lang015 =	자동 새로 고침
+	t_Lang015 =	자동으로 새로 고침
 	t_Lang016 =	항상 상단에
 	t_Lang017 =	설정
 	t_Lang018 =	일반
@@ -778,7 +788,7 @@
 	t_Lang216 =	제어 지연
 	t_Lang217 =	증분
 	t_Lang218 =	선택한 라인으로 이동
-	t_Lang219 =	자동 선택
+	t_Lang219 =	코드 자동 선택
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기
