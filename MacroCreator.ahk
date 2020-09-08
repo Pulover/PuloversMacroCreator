@@ -1596,6 +1596,9 @@ SB_SetText("CoordMode: " CoordMouse, 3)
 SB_SetText("TitleMatchMode: " TitleMatch, 4)
 SB_SetText("SendMode: " KeyMode, 5)
 Gui, chMacro:Default
+
+If (AutoSelectLine)
+	GoSub, GoToLine
 return
 
 GoToLine:
@@ -1626,10 +1629,10 @@ If ((RowSelection > 1) || (!CodeNextLine) || ((CodeNextLine - CodeLineStart) > 1
 		RowNumber := LV_GetNext(RowNumber)
 	LastRowSelected := RowNumber = LV_GetCount()
 ,	RowNumber := LastRowSelected ? RowNumber : RowNumber + 1
-,	StartPosition := sciPrev.PositionFromLine(CodeLineStart)
-,	EndPosition := (CodeNextLine ? sciPrev.PositionFromLine(CodeNextLine) : sciPrev.GetLength()) - 1
-,	sciPrev.SetSel(StartPosition, EndPosition)
-,	sciPrevF.SetSel(StartPosition, EndPosition)
+,	CaretPos := sciPrev.PositionFromLine(CodeLineStart)
+,	Anchor := (CodeNextLine ? sciPrev.PositionFromLine(CodeNextLine) : sciPrev.GetLength()) - 1
+,	sciPrev.SetSel(Anchor, CaretPos)
+,	sciPrevF.SetSel(Anchor, CaretPos)
 }
 return
 
