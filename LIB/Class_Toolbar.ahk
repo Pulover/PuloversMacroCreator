@@ -871,7 +871,7 @@ Class Toolbar extends Toolbar.Private
                 {
                     If (Key1)
                         continue
-                    idCommand := this.GenerateRandomID()
+                    idCommand := this.StringToNumber(Key2)
                 ,   iString := Key3, iBitmap := Key4
                 ,   Struct := this.DefineBtnStruct(TBBUTTON, iBitmap, idCommand, iString, Key5 ? Key5 : Options)
                 ,   Struct.Label := Key2, BtnArray.Push(Struct)
@@ -1122,7 +1122,7 @@ Class Toolbar extends Toolbar.Private
         {
             If (RegExMatch(Button, "^(\W?)(\w+)[=\s]?(.*)?:(\d+)\(?(.*?)?\)?$", Key))
             {
-                idCommand := this.GenerateRandomID()
+                idCommand := this.StringToNumber(Key2)
             ,   iString := Key3, iBitmap := Key4
             ,   this.Labels[idCommand] := Key2
             ,   Struct := this.DefineBtnStruct(TBBUTTON, iBitmap, idCommand, iString, Key5 ? Key5 : Options)
@@ -1236,14 +1236,14 @@ Class Toolbar extends Toolbar.Private
             return {Icon: -1, ID: "", State: tbState, Style: tbStyle, Text: "", Label: ""}
         }
 ;=======================================================================================
-;    Method:             GenerateRandomID
-;    Description:        Returns a random number to be used as Command ID.
+;    Method:             StringToNumber
+;    Description:        Returns a number based on a string to be used as Command ID.
 ;=======================================================================================
-        GenerateRandomID()
+        StringToNumber(String)
         {
-            While, (!Number || this.Labels.HasKey(Number))
-                Random, Number, 1, 9999
-            return Number
+            Loop, Parse, String
+                Number += Asc(A_LoopField) + Number + SubStr(Number, -1)
+            return SubStr(Number, 1, 4)
         }
 ;=======================================================================================
 ;    Method:             MakeLong
