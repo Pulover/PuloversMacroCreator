@@ -120,14 +120,14 @@ Class Toolbar extends Toolbar.Private
             Struct := this.BtnSep(TBBUTTON, Options), this.DefaultBtnInfo.Push(Struct)
             SendMessage, this.TB_ADDBUTTONS, 1, &TBBUTTON,, % "ahk_id " this.tbHwnd
             If (ErrorLevel = "FAIL")
-                return False
+                return false
         }
         Else If (Options = "")
             Options := "Enabled"
         For each, Button in Buttons
         {
             If !(this.SendMessage(Button, Options, this.TB_ADDBUTTONS, 1))
-                return False
+                return false
         }
         this.AutoSize()
         return true
@@ -140,7 +140,7 @@ Class Toolbar extends Toolbar.Private
     AutoSize()
     {
         PostMessage, this.TB_AUTOSIZE, 0, 0,, % "ahk_id " this.tbHwnd
-        return ErrorLevel ? False : true
+        return ErrorLevel ? false : true
     }
 ;=======================================================================================
 ;    Method:             Customize
@@ -150,7 +150,7 @@ Class Toolbar extends Toolbar.Private
     Customize()
     {
         SendMessage, this.TB_CUSTOMIZE, 0, 0,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             Delete
@@ -168,7 +168,7 @@ Class Toolbar extends Toolbar.Private
         }
         Else
             SendMessage, this.TB_DELETEBUTTON, Button-1, 0,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             Export()
@@ -182,7 +182,7 @@ Class Toolbar extends Toolbar.Private
 ;    HidMark:            Changes the default symbol to prepend to hidden buttons.
 ;    Return:             A text string with current buttons information to be exported.
 ;=======================================================================================
-    Export(ArrayOut := False, HidMark := "-")
+    Export(ArrayOut := false, HidMark := "-")
     {
         BtnArray := [], IncLabels := ":"
         Loop, % this.GetCount()
@@ -237,7 +237,7 @@ Class Toolbar extends Toolbar.Private
             Style := ErrorLevel
         SendMessage, this.TB_GETEXTENDEDSTYLE, 0, 0,, % "ahk_id " this.tbHwnd
             ExStyle := ErrorLevel
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             GetButton
@@ -265,7 +265,7 @@ Class Toolbar extends Toolbar.Private
         VarSetCapacity(Buffer, ErrorLevel * (A_IsUnicode ? 2 : 1), 0)
         SendMessage, this.TB_GETBUTTONTEXT, ID, &Buffer,, % "ahk_id " this.tbHwnd
         Text := StrGet(&Buffer)
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
         ; Alternative way to retrieve the button state.
         ; SendMessage, this.TB_GETSTATE, ID, 0,, % "ahk_id " this.tbHwnd
         ; State := ErrorLevel
@@ -288,7 +288,7 @@ Class Toolbar extends Toolbar.Private
         SendMessage, this.TB_GETRECT, BtnID, &RECT,, % "ahk_id " this.tbHwnd
         OutX := NumGet(&RECT, 0, "Int"), OutY := NumGet(&RECT, 4, "Int")
     ,   OutW := NumGet(&RECT, 8, "Int") - OutX, OutH := NumGet(&RECT, 12, "Int") - OutY
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             GetButtonState
@@ -304,7 +304,7 @@ Class Toolbar extends Toolbar.Private
         If (this[ "TB_ISBUTTON" StateQuerry] )
             Msg := this[ "TB_ISBUTTON" StateQuerry ]
         SendMessage, Msg, BtnID, 0,, % "ahk_id " this.tbHwnd
-        return ErrorLevel ? true : False
+        return ErrorLevel ? true : false
     }
 ;=======================================================================================
 ;    Method:             GetCount
@@ -356,14 +356,14 @@ Class Toolbar extends Toolbar.Private
             this.BtnSep(TBBUTTON, Options)
             SendMessage, this.TB_INSERTBUTTON, Position-1, &TBBUTTON,, % "ahk_id " this.tbHwnd
             If (ErrorLevel = "FAIL")
-                return False
+                return false
         }
         Else If (Options = "")
             Options := "Enabled"
         For i, Button in Buttons
         {
             If !(this.SendMessage(Button, Options, this.TB_INSERTBUTTON, (Position-1)+(i-1)))
-                return False
+                return false
         }
         return true
     }
@@ -384,7 +384,7 @@ Class Toolbar extends Toolbar.Private
                 return ErrorLevel+1
             }
         }
-        return False
+        return false
     }
 ;=======================================================================================
 ;    Method:             ModifyButton
@@ -399,11 +399,11 @@ Class Toolbar extends Toolbar.Private
     ModifyButton(Button, State, Set := true)
     {
         If State not in CHECK,ENABLE,HIDE,MARK,PRESS
-            return False
+            return false
         Message := this[ "TB_" State "BUTTON"]
     ,   this.GetButton(Button, BtnID)
         SendMessage, Message, BtnID, Set,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             ModifyButtonInfo
@@ -445,7 +445,7 @@ Class Toolbar extends Toolbar.Private
         this.DefineBtnInfoStruct(TBBUTTONINFO, Property, Value)
     ,   this.GetButton(Button, BtnID)
         SendMessage, this.TB_SETBUTTONINFO, BtnID, &TBBUTTONINFO,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             MoveButton
@@ -458,7 +458,7 @@ Class Toolbar extends Toolbar.Private
     MoveButton(Button, Target)
     {
         SendMessage, this.TB_MOVEBUTTON, Button-1, Target-1,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             OnMessage
@@ -488,7 +488,7 @@ Class Toolbar extends Toolbar.Private
 			return true
 		}
         Else
-            return False
+            return false
     }
 ;=======================================================================================
 ;    Method:             OnNotify
@@ -522,7 +522,7 @@ Class Toolbar extends Toolbar.Private
             SendMessage, this.TB_GETRECT, ID, &RECT,, % "ahk_id " this.tbHwnd
             ControlGetPos, TBX, TBY,,,, % "ahk_id " this.tbHwnd
             MenuXPos := TBX + NumGet(&RECT, 0, "Int"), MenuYPos := TBY + NumGet(&RECT, 12, "Int")
-            return False
+            return false
         }
         Else
             BtnLabel := "", ID := ""
@@ -534,7 +534,7 @@ Class Toolbar extends Toolbar.Private
         {
             iItem := NumGet(Param + (A_PtrSize * 3), 0, "Int")
             If (iItem = this.DefaultBtnInfo.Length())
-                return False
+                return false
             For each, Member in this.DefaultBtnInfo[iItem+1]
                 %each% := Member
             If (Text != "")
@@ -604,7 +604,7 @@ Class Toolbar extends Toolbar.Private
         ,   NumPut(Index, TBBUTTON, 8 + (A_PtrSize * 2), "Int")
             SendMessage, this.TB_ADDBUTTONS, 1, &TBBUTTON,, % "ahk_id " this.tbHwnd
         }
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetButtonSize
@@ -618,7 +618,7 @@ Class Toolbar extends Toolbar.Private
     {
         Long := this.MakeLong(W, H)
         SendMessage, this.TB_SETBUTTONSIZE, 0, Long,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetDefault
@@ -676,7 +676,7 @@ Class Toolbar extends Toolbar.Private
     SetHotItem(Button)
     {
         SendMessage, this.TB_SETHOTITEM, Button-1, 0,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetImageList
@@ -697,7 +697,7 @@ Class Toolbar extends Toolbar.Private
             SendMessage, this.TB_SETPRESSEDIMAGELIST, 0, IL_Pressed,, % "ahk_id " this.tbHwnd
         If (IL_Disabled)
             SendMessage, this.TB_SETDISABLEDIMAGELIST, 0, IL_Disabled,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetIndent
@@ -709,7 +709,7 @@ Class Toolbar extends Toolbar.Private
     SetIndent(Value)
     {
         SendMessage, this.TB_SETINDENT, Value, 0,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetListGap
@@ -721,7 +721,7 @@ Class Toolbar extends Toolbar.Private
     SetListGap(Value)
     {
         SendMessage, this.TB_SETLISTGAP, Value, 0,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetMaxTextRows
@@ -733,7 +733,7 @@ Class Toolbar extends Toolbar.Private
     SetMaxTextRows(MaxRows := 0)
     {
         SendMessage, this.TB_SETMAXTEXTROWS, MaxRows, 0,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetPadding
@@ -747,7 +747,7 @@ Class Toolbar extends Toolbar.Private
     {
         Long := this.MakeLong(X, Y)
         SendMessage, this.TB_SETPADDING, 0, Long,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             SetRows
@@ -760,11 +760,11 @@ Class Toolbar extends Toolbar.Private
 ;                            creates fewer rows.
 ;    Return:             TRUE if successful, FALSE if there was a problem.
 ;=======================================================================================
-    SetRows(Rows := 0, AddMore := False)
+    SetRows(Rows := 0, AddMore := false)
     {
         Long := this.MakeLong(Rows, AddMore)
         SendMessage, this.TB_SETROWS, Long,,, % "ahk_id " this.tbHwnd
-        return (ErrorLevel = "FAIL") ? False : true
+        return (ErrorLevel = "FAIL") ? false : true
     }
 ;=======================================================================================
 ;    Method:             ToggleStyle
@@ -798,7 +798,7 @@ Class Toolbar extends Toolbar.Private
             return true
         }
         Else
-            return False
+            return false
     }
 ;=======================================================================================
 ;    Presets Methods     These methods are used exclusively by the Presets Object.
@@ -822,7 +822,7 @@ Class Toolbar extends Toolbar.Private
                 return true
             }
             Else
-                return False
+                return false
         }
 ;=======================================================================================
 ;    Method:             Presets.Export
@@ -835,7 +835,7 @@ Class Toolbar extends Toolbar.Private
 ;                            methods, which can be used to save and load layout presets.
 ;    Return:             A text string with buttons information to be exported.
 ;=======================================================================================
-        Export(Slot, ArrayOut := False)
+        Export(Slot, ArrayOut := false)
         {
             BtnArray := []
             For i, Button in this[Slot]
@@ -871,7 +871,7 @@ Class Toolbar extends Toolbar.Private
                 {
                     If (Key1)
                         continue
-                    idCommand := this.StringToNumber(Key2)
+                    idCommand := this.GenerateRandomID()
                 ,   iString := Key3, iBitmap := Key4
                 ,   Struct := this.DefineBtnStruct(TBBUTTON, iBitmap, idCommand, iString, Key5 ? Key5 : Options)
                 ,   Struct.Label := Key2, BtnArray.Push(Struct)
@@ -898,7 +898,7 @@ Class Toolbar extends Toolbar.Private
             Else
                 Buttons := this[Slot]
             If (!IsObject(Buttons))
-                return False
+                return false
             SendMessage, this.TB_GETROWS, 0, 0,, % "ahk_id " this.tbHwnd
                 Rows := ErrorLevel
             SendMessage, this.TB_BUTTONCOUNT, 0, 0,, % "ahk_id " this.tbHwnd
@@ -925,7 +925,7 @@ Class Toolbar extends Toolbar.Private
             ,   NumPut(Index, TBBUTTON, 8 + (A_PtrSize * 2), "Int")
                 SendMessage, this.TB_ADDBUTTONS, 1, &TBBUTTON,, % "ahk_id " this.tbHwnd
             }
-            return (ErrorLevel = "FAIL") ? False : true
+            return (ErrorLevel = "FAIL") ? false : true
         }
 ;=======================================================================================
 ;    Method:             Presets.Save
@@ -947,7 +947,7 @@ Class Toolbar extends Toolbar.Private
                 return true
             }
             Else
-                return False
+                return false
         }
     }
 ;=======================================================================================
@@ -1122,7 +1122,7 @@ Class Toolbar extends Toolbar.Private
         {
             If (RegExMatch(Button, "^(\W?)(\w+)[=\s]?(.*)?:(\d+)\(?(.*?)?\)?$", Key))
             {
-                idCommand := this.StringToNumber(Key2)
+                idCommand := this.GenerateRandomID()
             ,   iString := Key3, iBitmap := Key4
             ,   this.Labels[idCommand] := Key2
             ,   Struct := this.DefineBtnStruct(TBBUTTON, iBitmap, idCommand, iString, Key5 ? Key5 : Options)
@@ -1236,14 +1236,14 @@ Class Toolbar extends Toolbar.Private
             return {Icon: -1, ID: "", State: tbState, Style: tbStyle, Text: "", Label: ""}
         }
 ;=======================================================================================
-;    Method:             StringToNumber
-;    Description:        Returns a number based on a string to be used as Command ID.
+;    Method:             GenerateRandomID
+;    Description:        Returns a random number to be used as Command ID.
 ;=======================================================================================
-        StringToNumber(String)
+        GenerateRandomID()
         {
-            Loop, Parse, String
-                Number += Asc(A_LoopField) + Number + SubStr(Number, -1)
-            return SubStr(Number, 1, 4)
+            While, (!Number || this.Labels.HasKey(Number))
+                Random, Number, 1, 9999
+            return Number
         }
 ;=======================================================================================
 ;    Method:             MakeLong
