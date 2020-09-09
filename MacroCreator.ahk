@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.1.0
+; Version: 5.1.1
 ; Release Date: September, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -71,7 +71,7 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.1.0
+;@Ahk2Exe-SetVersion 5.1.1
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -138,7 +138,7 @@ Loop
 }
 
 
-CurrentVersion := "5.1.0", ReleaseDate := "September, 2020"
+CurrentVersion := "5.1.1", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
@@ -2112,20 +2112,7 @@ IfExist %CurrentFileName%
     }
 }
 Gui, chMacro:Default
-All_Data := ""
-Sleep, 100 ; It takes some time to empty all data. This fix the row mixing bug when click the 'save' button. [by chosen1ft]
-Loop, %TabCount%
-{
-	LVManager.SetHwnd(ListID%A_Index%)
-,	PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
-	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
-	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
-,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
-,	LV_Data := PMCSet . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
-,	All_Data .= LV_Data
-}
-FileAppend, %All_Data%, %CurrentFileName%
-LVManager.SetHwnd(ListID%A_List%)
+SaveProject(CurrentFileName)
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "NA" : "Hide"), % (CurrentFileName ? CurrentFileName " - " : "") AppName " v" CurrentVersion
 SplitPath, CurrentFileName,, wDir
 SetWorkingDir %wDir%
@@ -2162,21 +2149,9 @@ ProjBackup:
 OutputDebug, Label: %A_ThisLabel%
 If (!SavePrompt)
 	return
-FileDelete, %SettingsFolder%\~ActiveProject.pmc
-All_Data := ""
-Sleep, 100
-Loop, %TabCount%
-{
-	LVManager.SetHwnd(ListID%A_Index%)
-,	PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
-	. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
-	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
-,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
-,	LV_Data := PMCSet . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
-,	All_Data .= LV_Data
-}
-FileAppend, %All_Data%, %SettingsFolder%\~ActiveProject.pmc
-LVManager.SetHwnd(ListID%A_List%)
+BackupFileName := SettingsFolder "\~ActiveProject.pmc"
+FileDelete, %BackupFileName%
+SaveProject(BackupFileName)
 return
 
 RecentFiles:

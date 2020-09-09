@@ -1011,7 +1011,7 @@ FreeMemory()
 
 GetPars(Param)
 {
-	Static _w := Chr(2)
+	static _w := Chr(2)
 
 	ExprOn := false, InExpr := []
 ,	Param := Trim(Param)
@@ -1054,8 +1054,8 @@ GetPars(Param)
 
 LV_ColorsMessage(wParam, lParam)
 {
-	Static NM_CUSTOMDRAW := -12
-	Static LVN_COLUMNCLICK := -108
+	static NM_CUSTOMDRAW := -12
+	static LVN_COLUMNCLICK := -108
 
 	Critical, 1000
 	If (LV_Colors.HasKey(H := NumGet(lParam + 0, 0, "UPtr")))
@@ -1192,6 +1192,25 @@ SavePrompt(State)
 		Menu, FileMenu, Disable, %f_Lang003%`t%_s%Ctrl+S
 }
 
+SaveProject(FileName)
+{
+	local All_Data
+	OutputDebug, Func: %A_ThisFunc%
+
+	Loop, %TabCount%
+	{
+		LVManager.SetHwnd(ListID%A_Index%)
+	,	PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
+		. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
+		. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
+	,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
+	,	LV_Data := PMCSet . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
+	,	All_Data .= LV_Data
+	}
+	FileAppend, %All_Data%, %FileName%
+	LVManager.SetHwnd(ListID%A_List%)
+}
+
 TreeGetChecked()
 {
 	OutputDebug, Func: %A_ThisFunc%
@@ -1244,7 +1263,6 @@ LoadMailAccounts()
 
 WinHttpDownloadToFile(UrlList, DestFolder)
 {
-	OutputDebug, Func: %A_ThisFunc%
 	UrlList := StrReplace(UrlList, "`n", ";")
 	UrlList := StrReplace(UrlList, ",", ";")
 	DestFolder := RTrim(DestFolder, "\") . "\"
@@ -1269,8 +1287,7 @@ WinHttpDownloadToFile(UrlList, DestFolder)
 
 Unzip(Sources, OutDir, SeparateFolders := false)
 {
-	Static vOptions := 16|256
-	OutputDebug, Func: %A_ThisFunc%
+	static vOptions := 16|256
 	
 	Sources := StrReplace(Sources, "`n", ";")
 	Sources := StrReplace(Sources, ",", ";")
@@ -1297,8 +1314,7 @@ Unzip(Sources, OutDir, SeparateFolders := false)
 
 Zip(FilesToZip, OutFile, SeparateFiles := false)
 {
-	Static vOptions := 4|16
-	OutputDebug, Func: %A_ThisFunc%
+	static vOptions := 4|16
 	
 	FilesToZip := StrReplace(FilesToZip, "`n", ";")
 	FilesToZip := StrReplace(FilesToZip, ",", ";")
@@ -1362,7 +1378,6 @@ Zip(FilesToZip, OutFile, SeparateFiles := false)
 
 CreateZipFile(sZip)
 {
-	OutputDebug, Func: %A_ThisFunc%
 	CurrentEncoding := A_FileEncoding
 	FileEncoding, CP1252
 	Header1 := "PK" . Chr(5) . Chr(6)
@@ -1376,8 +1391,8 @@ CreateZipFile(sZip)
 
 SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "", ClearLocal := false)
 {
-	Static VarsRecord := {}, LocalRecord := {}
-	Local ListOfVars, i, v
+	static VarsRecord := {}, LocalRecord := {}
+	local ListOfVars, i, v
 	
 	If (ClearLocal)
 	{

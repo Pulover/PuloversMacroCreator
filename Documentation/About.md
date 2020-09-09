@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.1.0  
+Version: 5.1.1  
 Release Date: September, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -36,7 +36,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 # Change Log
 
-## Version 5.1.0
+## Version 5.1.1
 * Added *Go to selected line* button and *Auto-select code* on **Preview window**.
 * Added support for *OutputVar* in **Function** window for `RegExMatch`, `RegExReplace` and `StrReplace`.
 * Improved performance of Text::Paste from Clipboard.
