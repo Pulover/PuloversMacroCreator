@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.1.1
+; Version: 5.1.2
 ; Release Date: September, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -71,7 +71,7 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.1.1
+;@Ahk2Exe-SetVersion 5.1.2
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -138,7 +138,7 @@ Loop
 }
 
 
-CurrentVersion := "5.1.1", ReleaseDate := "September, 2020"
+CurrentVersion := "5.1.2", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
@@ -1602,6 +1602,8 @@ If (AutoSelectLine)
 return
 
 GoToLine:
+If (!ShowPrev)
+	return
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected")
 If (RowSelection = 0)
@@ -1618,8 +1620,6 @@ SelectedRow := LV_GetNext()
 	LV_GetText(CodeNextLine, RowNumber + 1, 11)
 ,	CodeLineStart--
 ,	CodeNextLine--
-,	sciPrev.SetFocus(true)
-,	sciPrevF.SetFocus(true)
 ,	sciPrev.GoToLine(CodeLineStart)
 ,	sciPrevF.GoToLine(CodeLineStart)
 If ((RowSelection > 1) || (!CodeNextLine) || ((CodeNextLine - CodeLineStart) > 1))
@@ -1634,6 +1634,8 @@ If ((RowSelection > 1) || (!CodeNextLine) || ((CodeNextLine - CodeLineStart) > 1
 ,	sciPrev.SetSel(Anchor, CaretPos)
 ,	sciPrevF.SetSel(Anchor, CaretPos)
 }
+sciPrev.SetFocus(true)
+,	sciPrevF.SetFocus(true)
 return
 
 TextWrap:
@@ -11751,6 +11753,8 @@ If (A_GuiEvent == "f")
 	SetTimer, MainLoop, Off
 	If (Capt)
 		GoSub, Capt
+	sciPrev.SetFocus(false)
+	,	sciPrevF.SetFocus(false)
 }
 If (A_GuiEvent == "ColClick")
 {
