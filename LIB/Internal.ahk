@@ -1,30 +1,30 @@
 ﻿LV_GetTexts(Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", ByRef Del := "", ByRef Typ := "", ByRef Tar := "", ByRef Win := "", ByRef Com := "", ByRef Col := "", ByRef Cod := "")
 {
 	LV_GetText(Act, Index, 2)
-,	LV_GetText(Det, Index, 3)
-,	LV_GetText(Tim, Index, 4)
-,	LV_GetText(Del, Index, 5)
-,	LV_GetText(Typ, Index, 6)
-,	LV_GetText(Tar, Index, 7)
-,	LV_GetText(Win, Index, 8)
-,	LV_GetText(Com, Index, 9)
-,	LV_GetText(Col, Index, 10)
-,	LV_GetText(Cod, Index, 11)
-,	Act := LTrim(Act)
+	LV_GetText(Det, Index, 3)
+	LV_GetText(Tim, Index, 4)
+	LV_GetText(Del, Index, 5)
+	LV_GetText(Typ, Index, 6)
+	LV_GetText(Tar, Index, 7)
+	LV_GetText(Win, Index, 8)
+	LV_GetText(Com, Index, 9)
+	LV_GetText(Col, Index, 10)
+	LV_GetText(Cod, Index, 11)
+	Act := LTrim(Act)
 }
 
 Data_GetTexts(Data, Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", ByRef Del := "", ByRef Typ := "", ByRef Tar := "", ByRef Win := "", ByRef Com := "", ByRef Col := "")
 {
 	Act := Data[Index, 3]
-,	Det := Data[Index, 4]
-,	Tim := Data[Index, 5]
-,	Del := Data[Index, 6]
-,	Typ := Data[Index, 7]
-,	Tar := Data[Index, 8]
-,	Win := Data[Index, 9]
-,	Com := Data[Index, 10]
-,	Col := Data[Index, 11]
-,	Act := LTrim(Act)
+	Det := Data[Index, 4]
+	Tim := Data[Index, 5]
+	Del := Data[Index, 6]
+	Typ := Data[Index, 7]
+	Tar := Data[Index, 8]
+	Win := Data[Index, 9]
+	Com := Data[Index, 10]
+	Col := Data[Index, 11]
+	Act := LTrim(Act)
 }
 
 LV_GetSelCheck()
@@ -216,12 +216,13 @@ DragTab()
 				Proj_Opts := [], ActiveList := A_List
 				For each, Index in NewOrder.Order
 					Proj_Opts.Push({Auto: o_AutoKey[Index], Man: o_ManKey[Index], ID: ListID%Index%
-									, Times: o_TimesG[Index], Hist: LVManager.GetData(ListID%Index%)})
+									, Times: o_TimesG[Index], Context: o_MacroContext[Index], Hist: LVManager.GetData(ListID%Index%)})
 				For each, Index in NewOrder.Order
 				{
 					o_AutoKey[A_Index] := Proj_Opts[A_Index].Auto
-				,	o_ManKey[A_Index] := Proj_Opts[A_Index].Man
-				,	o_TimesG[A_Index] := Proj_Opts[A_Index].Times
+					o_ManKey[A_Index] := Proj_Opts[A_Index].Man
+					o_TimesG[A_Index] := Proj_Opts[A_Index].Times
+					o_MacroContext[A_Index] := Proj_Opts[A_Index].Context
 					If (Index = ActiveList)
 						NewActive := A_Index
 				}
@@ -602,9 +603,10 @@ GuiAddLV(ident)
 	Gui, chMacro:Tab, %ident%
 	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%|%w_Lang040%
 	LV_SetImageList(hIL_Icons)
-	Loop, 10
+	Loop, 11
 		LV_ModifyCol(A_Index, Col_%A_Index%)
 	LVOrder_Set(10, ColOrder, ListID%ident%)
+	o_MacroContext[ident] := {"Condition": "None", "Context": ""}
 	Critical, Off
 }
 
@@ -736,27 +738,56 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 	{
 		Loop, %TabCount%
 		{
-			#If !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
-			Hotkey, If, !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
-			Try Hotkey, % LastPlay.Auto[A_Index], f_AutoKey, Off
-			Try Hotkey, % LastPlay.Man[A_Index], f_ManKey, Off
-			If (!ListCount%A_Index%)
-				continue
-			If (InStr(TabGetText(TabSel, A_Index), "()"))
-				o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
-			If (o_AutoKey[A_Index] != "")
+			If ((o_MacroContext[A_Index].Condition != "") && (o_MacroContext[A_Index].Condition != "None"))
 			{
-				Hotkey, % o_AutoKey[A_Index], f_AutoKey, % (Play) ? "On" : "Off"
-				LastPlay["Auto", A_Index] := o_AutoKey[A_Index]
-				ActiveKeys++
+				o_HotkeyCondition := o_MacroContext[A_Index].Condition
+				o_HotkeyContext := o_MacroContext[A_Index].Context
+				#If !WinActive("ahk_id" PMCWinID) && IfCondition[o_HotkeyCondition](o_HotkeyContext)
+				Hotkey, If, !WinActive("ahk_id" PMCWinID) && IfCondition[o_HotkeyCondition](o_HotkeyContext)
+				Try Hotkey, % LastPlay.Auto[A_Index], f_AutoKey, Off
+				Try Hotkey, % LastPlay.Man[A_Index], f_ManKey, Off
+				If (!ListCount%A_Index%)
+					continue
+				If (InStr(TabGetText(TabSel, A_Index), "()"))
+					o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
+				If (o_AutoKey[A_Index] != "")
+				{
+					Hotkey, % o_AutoKey[A_Index], f_AutoKey, % (Play) ? "On" : "Off"
+					LastPlay["Auto", A_Index] := o_AutoKey[A_Index]
+					ActiveKeys++
+				}
+				If (o_ManKey[A_Index] != "")
+				{
+					Hotkey, % o_ManKey[A_Index], f_ManKey, % (Play) ? "On" : "Off"
+					LastPlay["Man", A_Index] := o_ManKey[A_Index]
+				}
+				Hotkey, If
+				#If
 			}
-			If (o_ManKey[A_Index] != "")
+			Else
 			{
-				Hotkey, % o_ManKey[A_Index], f_ManKey, % (Play) ? "On" : "Off"
-				LastPlay["Man", A_Index] := o_ManKey[A_Index]
+				#If !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
+				Hotkey, If, !WinActive("ahk_id" PMCWinID) && IfCondition[IfDirectContext](IfDirectWindow)
+				Try Hotkey, % LastPlay.Auto[A_Index], f_AutoKey, Off
+				Try Hotkey, % LastPlay.Man[A_Index], f_ManKey, Off
+				If (!ListCount%A_Index%)
+					continue
+				If (InStr(TabGetText(TabSel, A_Index), "()"))
+					o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
+				If (o_AutoKey[A_Index] != "")
+				{
+					Hotkey, % o_AutoKey[A_Index], f_AutoKey, % (Play) ? "On" : "Off"
+					LastPlay["Auto", A_Index] := o_AutoKey[A_Index]
+					ActiveKeys++
+				}
+				If (o_ManKey[A_Index] != "")
+				{
+					Hotkey, % o_ManKey[A_Index], f_ManKey, % (Play) ? "On" : "Off"
+					LastPlay["Man", A_Index] := o_ManKey[A_Index]
+				}
+				Hotkey, If
+				#If
 			}
-			Hotkey, If
-			#If
 		}
 	}
 	
@@ -1200,12 +1231,13 @@ SaveProject(FileName)
 	Loop, %TabCount%
 	{
 		LVManager.SetHwnd(ListID%A_Index%)
-	,	PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
+		PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
 		. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 		. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
-	,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
-	,	LV_Data := PMCSet . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
-	,	All_Data .= LV_Data
+		IfContext := "Context=" o_MacroContext[A_Index].Condition "|" o_MacroContext[A_Index].Context "`n"
+		TabGroups := "Groups=" LVManager.GetGroups() "`n"
+		LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
+		All_Data .= LV_Data
 	}
 	FileAppend, %All_Data%, %FileName%
 	LVManager.SetHwnd(ListID%A_List%)
@@ -1242,7 +1274,7 @@ UpdateMailAccounts()
 			MailIni .= Email_Fields[A_Index] "=" _value "`n"
 	}
 	UserMailAccounts.Set(MailIni)
-,	UserMailAccounts.Write(UserAccountsPath)
+	UserMailAccounts.Write(UserAccountsPath)
 	Critical, Off
 }
 

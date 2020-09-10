@@ -723,6 +723,8 @@ Loop, Parse, ShowBands, `,
 RegRead, DClickSpd, HKEY_CURRENT_USER, Control Panel\Mouse, DoubleClickSpeed
 DClickSpd := Round(DClickSpd * 0.001, 1)
 
+o_MacroContext := []
+
 RowCheckInProgress := false
 
 ;##### Menus: #####
@@ -1037,12 +1039,14 @@ Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndhApplyL vApplyL gApplyL Hidden
 	ILButton(hApplyL, ResDllPath ":" 31)
 Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndhInsertKey vInsertKey gInsertKey Hidden
 	ILButton(hInsertKey, ResDllPath ":" 91)
-Gui, Add, Link, -Wrap ys xs+55 W85 R1 vContextTip gSetWin, <a>#If</a>: %IfDirectContext%
+Gui, Add, Link, -Wrap ys xs+55 W125 R1 vContextTip gSetWin, Global <a>#If</a>: %IfDirectContext%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Link, -Wrap ys x+5 W115 R1 vCoordTip gOptions, <a>CoordMode</a>: %CoordMouse%
+Gui, Add, Link, -Wrap ys x+5 W125 R1 vMacroContextTip gEditMacros, % "Macro <a>#If</a>: " o_MacroContext[A_List].Condition
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
-Gui, Add, Link, -Wrap ys x+5 W115 R1 vTModeTip gOptions, <a>TitleMatchMode</a>: %TitleMatch%
+Gui, Add, Link, -Wrap ys x+5 W115 R1 vCoordTip gOptions, <a>CoordMode</a>: %CoordMouse%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator5
+Gui, Add, Link, -Wrap ys x+5 W115 R1 vTModeTip gOptions, <a>TitleMatchMode</a>: %TitleMatch%
+Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator6
 Gui, Add, Link, -Wrap ys x+5 W230 R1 vTSendModeTip gOptions, <a>SendMode</a>: %KeyMode%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
@@ -1906,7 +1910,10 @@ Input
 GoSub, DelLists
 GuiControl, chMacro:, A_List, |Macro1
 Loop, %TabCount%
+{
 	LVManager.RemoveHwnd(ListID%A_Index%)
+	o_MacroContext[A_Index] := {"Condition": "None", "Context": ""}
+}
 TabCount := 1
 Gui, 1:Submit, NoHide
 Gui, chMacro:Submit, NoHide
@@ -2233,7 +2240,7 @@ Gui, 1:+Disabled
 Gui, 14:Add, Tab3, W475 H430 vTabControl AltSubmit, %w_Lang001%%_x%%w_Lang003%
 ; Macros
 Gui, 14:Add, GroupBox, Section W450 H190, %t_Lang002%:
-Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly LV0x4000, %t_Lang147%%_x%%w_Lang005%%_x%%t_Lang003%%_x%%t_Lang006%
+Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly LV0x4000, %t_Lang147%%_x%%w_Lang005%%_x%%t_Lang003%%_x%%t_Lang006%%_x%%w_Lang030%
 Gui, 14:Add, Text, -Wrap W430, %t_Lang144%
 Gui, 14:Add, Button, -Wrap W75 H23 gCheckAll, %t_Lang007%
 Gui, 14:Add, Button, -Wrap yp x+5 W75 H23 gUnCheckAll, %t_Lang008%
@@ -2345,11 +2352,12 @@ If (IfDirectContext != "None")
 }
 LV_Delete()
 Loop, %TabCount%
-	LV_Add("Check", TabGetText(TabSel, A_Index), (A_GuiControl = "SchedOK") ? "" : o_AutoKey[A_Index], o_TimesG[A_Index], 0, (BckIt%A_Index% ? 1 : 0))
-	LV_ModifyCol(1, 120)	; Macros
-,	LV_ModifyCol(2, 120)	; Hotkeys
-,	LV_ModifyCol(3, 80)		; Loop
+	LV_Add("Check", TabGetText(TabSel, A_Index), (A_GuiControl = "SchedOK") ? "" : o_AutoKey[A_Index], o_TimesG[A_Index], (BckIt%A_Index% ? 1 : 0), A_Index)
+,	LV_ModifyCol(1, 120)	; Macros
+,	LV_ModifyCol(2, 100)	; Hotkeys
+,	LV_ModifyCol(3, 60)		; Loop
 ,	LV_ModifyCol(4, 80)		; Block
+,	LV_ModifyCol(5, 40)		; Index
 ,	LV_Modify(0, "Check")
 If (CurrentFileName = "")
 	GuiControl, 14:, ExpFile, %A_MyDocuments%\MyScript.ahk
@@ -2830,19 +2838,20 @@ Loop, % LV_GetCount()
 ,	LV_GetText(Ex_AutoKey, RowNumber, 2)
 ,	LV_GetText(Ex_TimesX, RowNumber, 3)
 ,	LV_GetText(Ex_BM, RowNumber, 4)
-	If (ListCount%RowNumber% = 0)
+,	LV_GetText(Ex_Idx, RowNumber, 5)
+	If (ListCount%Ex_Idx% = 0)
 		continue
-	Body := LV_Export(RowNumber), AutoKey .= Ex_AutoKey "`n"
+	Body := LV_Export(Ex_Idx), AutoKey .= Ex_AutoKey "`n"
 	If (RegExMatch(Body, "CDO\((UserAccount\d+)", Acc))
 		HasEmailFunc[Acc1] := UserMailAccounts.Get(, Acc1,, true)
 	GoSub, ExportOpt
 	AllScripts .= Body "`n"
 	PMCSet := "[PMC Code v" CurrentVersion "]|" Ex_AutoKey
-	. "|" o_ManKey[RowNumber] "|" Ex_TimesX
-	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, RowNumber) "`n"
-	PmcCode .= PMCSet . PMC.LVGet("InputList" RowNumber).Text . "`n"
+	. "|" o_ManKey[Ex_Idx] "|" Ex_TimesX
+	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, Ex_Idx) "`n"
+	PmcCode .= PMCSet . PMC.LVGet("InputList" Ex_Idx).Text . "`n"
 	If (Ex_IN)
-		IncList .= IncludeFiles(RowNumber, ListCount%RowNumber%)
+		IncList .= IncludeFiles(Ex_Idx, ListCount%Ex_Idx%)
 }
 For _each, _Section in HasEmailFunc
 {
@@ -2888,7 +2897,13 @@ Else
 	Body := AllScripts
 AllScripts := ""
 If (Ex_IfDir = 1)
-	Body := Ex_IfDirType " " Title "`n`n" Body Ex_IfDirType "`n"
+{
+	If (InStr(Body, "#If") = 1)
+		Body .= Ex_IfDirType "`n"
+	Else
+		Body := Ex_IfDirType " " Title "`n`n" Body Ex_IfDirType "`n"
+	StringReplace, Body, Body, `n%Ex_IfDirType% %Title%`n`n%Ex_IfDirType%`n
+}
 If (Ex_AbortKey = 1)
 	Body .= "`n" AbortKey "::ExitApp`n"
 If (Ex_PauseKey = 1)
@@ -2950,6 +2965,12 @@ If (!InStr(Ex_Macro, "()"))
 	Body := ((Ex_Macro != "") ? Ex_Macro ":`n" : "") Body "Return`n"
 If (Ex_AutoKey != "")
 	Body := Ex_AutoKey "::`n" Body
+If ((o_MacroContext[Ex_Idx].Condition != "") && (o_MacroContext[Ex_Idx].Condition != "None"))
+{
+	Body := "#If" o_MacroContext[Ex_Idx].Condition " " o_MacroContext[Ex_Idx].Context "`n" Body "#If" o_MacroContext[Ex_Idx].Condition "`n"
+	If (Ex_IfDir = 1)
+		Body .= "`n" Ex_IfDirType " " Title "`n"
+}
 return
 
 Options:
@@ -8329,6 +8350,8 @@ OutputDebug, Label: %A_ThisLabel%
 EditSt:
 OutputDebug, Label: %A_ThisLabel%
 s_Caller := "Edit"
+If ((Action = "[End If]") || (Action = "[Else]"))
+	return
 AsFunc:
 OutputDebug, Label: %A_ThisLabel%
 AsVar:
@@ -12216,6 +12239,7 @@ Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Menu, CopyTo, Delete, % CopyMenuLabels[c_List]
 CopyMenuLabels.RemoveAt(c_List)
+o_MacroContext.RemoveAt(c_List)
 s_Tab := c_List
 Loop, %TabCount%
 	GuiControl, chMacro:-g, InputList%A_Index%
@@ -12257,6 +12281,8 @@ GuiControl, chTimes:, TimesG, 1
 GuiControl, 1:Disable, AutoKey
 GuiControl, 1:Disable, ManKey
 GuiControl, 1:Disable, JoyKey
+o_MacroContext[A_List] := {"Condition": "None", "Context": ""}
+GuiControl, 1:, MacroContextTip, Macro <a>#If</a>: None
 GuiControl, chTimes:Disable, TimesG
 GuiControl, chTimes:Disable, ReptC
 Menu, FuncMenu, Enable, %u_Lang002%`t%_s%Ctrl+Shift+P
@@ -12270,6 +12296,7 @@ OutputDebug, Label: %A_ThisLabel%
 GuiControl, 1:Enable, AutoKey
 GuiControl, 1:Enable, ManKey
 GuiControl, 1:Enable, JoyKey
+GuiControl, 1:, MacroContextTip, % "Macro <a>#If</a>: " o_MacroContext[A_List].Condition
 GuiControl, chTimes:Enable, TimesG
 GuiControl, chTimes:Enable, ReptC
 Menu, FuncMenu, Disable, %u_Lang002%`t%_s%Ctrl+Shift+P
@@ -12555,10 +12582,12 @@ GuiControl, 1:Hide, ApplyL
 GuiControl, 1:Hide, InsertKey
 GuiControl, 1:Show, ContextTip
 GuiControl, 1:Show, Separator3
-GuiControl, 1:Show, CoordTip
+GuiControl, 1:Show, MacroContextTip
 GuiControl, 1:Show, Separator4
-GuiControl, 1:Show, TModeTip
+GuiControl, 1:Show, CoordTip
 GuiControl, 1:Show, Separator5
+GuiControl, 1:Show, TModeTip
+GuiControl, 1:Show, Separator6
 GuiControl, 1:Show, TSendModeTip
 GuiControl, 1:, BarEdit, 0
 GuiControl, 1:, BarInfo, 1
@@ -12582,10 +12611,12 @@ GuiControl, 1:Show, ApplyL
 GuiControl, 1:Show, InsertKey
 GuiControl, 1:Hide, ContextTip
 GuiControl, 1:Hide, Separator3
-GuiControl, 1:Hide, CoordTip
+GuiControl, 1:Hide, MacroContextTip
 GuiControl, 1:Hide, Separator4
-GuiControl, 1:Hide, TModeTip
+GuiControl, 1:Hide, CoordTip
 GuiControl, 1:Hide, Separator5
+GuiControl, 1:Hide, TModeTip
+GuiControl, 1:Hide, Separator6
 GuiControl, 1:Hide, TSendModeTip
 GuiControl, 1:, BarInfo, 0
 GuiControl, 1:, BarEdit, 1
@@ -12822,21 +12853,22 @@ OutputDebug, Label: %A_ThisLabel%
 Input
 Gui, 1:Submit, NoHide
 GoSub, SaveData
-Gui, 32:+Resize -MinimizeBox +MinSize450x200 +owner1 +HwndLVEditMacros
+Gui, 32:+Resize -MinimizeBox +MinSize690x300 +owner1 +HwndLVEditMacros
 Gui, 1:+Disabled
 Gui, 32:Add, GroupBox, Section W450 H240 vEMGroup
-Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort AltSubmit LV0x4000, %t_Lang147%|%w_Lang005%|%w_Lang007%|%t_Lang003%|%w_Lang030%
+Gui, 32:Add, ListView, ys+15 xs+10 W430 r10 hwndMacroL vMacroList gMacroList -ReadOnly NoSort AltSubmit LV0x4000, %t_Lang147%|%w_Lang005%|%w_Lang007%|%t_Lang003%|%w_Lang030%|#If
 Gui, 32:Add, Text, -Wrap W430 vLabel1, %t_Lang144%
 Gui, 32:Add, Button, -Wrap Section xm W75 H23 vEditMacrosOK gEditMacrosOK, %c_Lang020%
 Gui, 32:Add, Button, -Wrap ys W75 H23 vEditMacrosCancel gEditMacrosCancel, %c_Lang021%
 Gui, 32:Default
 Loop, %TabCount%
-	LV_Add("", TabGetText(TabSel, A_Index), o_AutoKey[A_Index], o_ManKey[A_Index], o_TimesG[A_Index], A_Index)
+	LV_Add("", TabGetText(TabSel, A_Index), o_AutoKey[A_Index], o_ManKey[A_Index], o_TimesG[A_Index], A_Index, o_MacroContext[A_Index].Condition " " o_MacroContext[A_Index].Context)
 	LV_ModifyCol(1, 100)	; Macros
 ,	LV_ModifyCol(2, 100)	; Play
 ,	LV_ModifyCol(3, 100)	; Manual
 ,	LV_ModifyCol(4, 60)		; Loop
 ,	LV_ModifyCol(5, 45)		; Index
+,	LV_ModifyCol(6, 200)	; Context
 Gui, 32:Show,, %t_Lang145%
 return
 
@@ -12851,6 +12883,9 @@ return
 
 EditMacrosOK:
 OutputDebug, Label: %A_ThisLabel%
+GuiControl, 32:Disable, MacroList
+GuiControl, 32:Disable, EditMacrosOK
+GuiControl, 32:Disable, EditMacrosCancel
 Critical
 Gui, 32:Submit, NoHide
 Project := [], Labels := "", ActiveList := A_List
@@ -12858,17 +12893,22 @@ Loop, %TabCount%
 {
 	Gui, 32:Default
 	LV_GetText(Macro, A_Index, 1)
-,	LV_GetText(AutoKey, A_Index, 2)
-,	LV_GetText(ManKey, A_Index, 3)
-,	LV_GetText(TimesX, A_Index, 4)
-,	LV_GetText(IndexN, A_Index, 5)
-,	Labels .= ((Macro != "") ? Macro : "Macro" IndexN) "|"
-,	o_AutoKey[A_Index] := AutoKey
-,	o_ManKey[A_Index] := ManKey
-,	o_TimesG[A_Index] := TimesX
-,	Project.Push(LVManager.GetData(ListID%IndexN%))
+	LV_GetText(AutoKey, A_Index, 2)
+	LV_GetText(ManKey, A_Index, 3)
+	LV_GetText(TimesX, A_Index, 4)
+	LV_GetText(IndexN, A_Index, 5)
+	LV_GetText(Context, A_Index, 6)
+	RegExMatch(Context, "O)(\w+)\s(.*)", MContext)
+	Labels .= ((Macro != "") ? Macro : "Macro" IndexN) "|"
+	o_AutoKey[A_Index] := AutoKey
+	o_ManKey[A_Index] := ManKey
+	o_TimesG[A_Index] := TimesX
+	o_MacroContext[A_Index].Condition := MContext[1]
+	o_MacroContext[A_Index].Context := MContext[2]
+	Project.Push(LVManager.GetData(ListID%IndexN%))
 	If (IndexN = ActiveList)
 		NewActive := A_Index
+	Sleep, 100
 }
 ActiveList := NewActive
 Gui, chMacro:Default
@@ -12894,6 +12934,7 @@ LVManager.SetHwnd(ListID%A_List%)
 ShowGroups := GpConfig
 GoSub, chMacroGuiSize
 GoSub, LoadData
+GoSub, TabSel
 GoSub, UpdateCopyTo
 GoSub, b_Start
 Gui, 1:-Disabled
@@ -12964,22 +13005,32 @@ RowNumber := LV_GetNext()
 ,	LV_GetText(AutoKey, RowNumber, 2)
 ,	LV_GetText(ManKey, RowNumber, 3)
 ,	LV_GetText(TimesX, RowNumber, 4)
+,	LV_GetText(Context, RowNumber, 6)
+,	RegExMatch(Context, "O)(\w+)\s(.*)", MContext)
 Gui, 33:+owner32 +ToolWindow +Delimiter%_x% +HwndLVEdit
 Gui, 32:Default
 Gui, 32:+Disabled
-Gui, 33:Add, Groupbox, Section xm W300 H130
-Gui, 33:Add, Edit, ys+15 xs+10 W280 vMacro, %Macro%
+Gui, 33:Add, Groupbox, Section xm W450 H130
+Gui, 33:Add, Edit, ys+15 xs+10 W430 vMacro, %Macro%
 Gui, 33:Add, Text, -Wrap W90 R1 Right, %w_Lang005%:
-Gui, 33:Add, Hotkey, yp x+10 W180 vAutoKey, %AutoKey%
+Gui, 33:Add, Hotkey, yp x+10 W330 vAutoKey, %AutoKey%
 Gui, 33:Add, Text, -Wrap y+5 xs+10 W90 R1 Right, %w_Lang007%:
-Gui, 33:Add, Hotkey, yp x+10 W180 vManKey, %ManKey%
+Gui, 33:Add, Hotkey, yp x+10 W330 vManKey, %ManKey%
 Gui, 33:Add, Text, -Wrap y+5 xs+10 W90 R1 Right, %t_Lang003%:
 Gui, 33:Add, Edit, yp x+10 Limit Number W70 R1 vTE
 Gui, 33:Add, UpDown, 0x80 Range0-999999999 vTimesX, %TimesX%
 Gui, 33:Add, Text, -Wrap yp+3 x+10 W100, %t_Lang004%
+Gui, 33:Add, Groupbox, Section xs y+20 W450 H75
+Gui, 33:Add, Text, -Wrap R1 ys+20 xs+10 W40 cBlue, #If
+Gui, 33:Add, DDL, yp-3 x+5 W100 vIfDirectContext, None%_x%WinActive%_x%WinNotActive%_x%WinExist%_x%WinNotExist%_x%Expression
+Gui, 33:Add, Button, yp x+210 W75 vIdent gWinTitle, WinTitle
+Gui, 33:Add, Edit, y+5 xs+10 W400 vTitle R1 -Multi, % MContext[2]
+Gui, 33:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroOK, %c_Lang020%
 Gui, 33:Add, Button, Wrap ys W75 H23 gEditMacroCancel, %c_Lang021%
 Gui, 33:Add, Updown, ys x+90 W50 H20 Horz vEditSel gSelList Range0-1
+GuiControl, 33:ChooseString, IfDirectContext, % MContext[1]
+
 If (InStr(Macro, "()"))
 {
 	GuiControl, 33:Disable, Macro
@@ -12987,6 +13038,10 @@ If (InStr(Macro, "()"))
 	GuiControl, 33:Disable, ManKey
 	GuiControl, 33:Disable, TE
 	GuiControl, 33:Disable, TimesX
+	GuiControl, 33:Disable, IfDirectContext
+	GuiControl, 33:Disable, Ident
+	GuiControl, 33:Disable, Title
+	GuiControl, 33:Disable, GetWin
 }
 Gui, 33:Show,, %w_Lang019%
 return
@@ -13024,7 +13079,7 @@ Else If (!InStr(Macro, "()"))
 }
 Gui, 32:-Disabled
 Gui, 33:Destroy
-LV_Modify(RowNumber,, Macro, AutoKey, ManKey, TimesX)
+LV_Modify(RowNumber,, Macro, AutoKey, ManKey, TimesX,, IfDirectContext " " Title)
 return
 
 SelList:
@@ -13050,7 +13105,7 @@ Else If (!InStr(Macro, "()"))
 		}
 	}
 }
-LV_Modify(RowNumber,, Macro, AutoKey, ManKey, TimesX)
+LV_Modify(RowNumber,, Macro, AutoKey, ManKey, TimesX,, IfDirectContext " " Title)
 ,	RowNumber := NewRow
 If (RowNumber > LV_GetCount())
 	RowNumber := 1
@@ -13061,10 +13116,14 @@ LV_Modify(0, "-Select"), LV_Modify(RowNumber, "Select")
 ,	LV_GetText(AutoKey, RowNumber, 2)
 ,	LV_GetText(ManKey, RowNumber, 3)
 ,	LV_GetText(TimesX, RowNumber, 4)
+,	LV_GetText(Context, RowNumber, 6)
+,	RegExMatch(Context, "O)(\w+)\s(.*)", MContext)
 GuiControl, 33:, Macro, %Macro%
 GuiControl, 33:, AutoKey, %AutoKey%
 GuiControl, 33:, ManKey, %ManKey%
 GuiControl, 33:, TimesX, %TimesX%
+GuiControl, 33:ChooseString, IfDirectContext, % MContext[1]
+GuiControl, 33:, Title, % MContext[2]
 If (InStr(Macro, "()"))
 {
 	GuiControl, 33:Disable, Macro
@@ -13072,6 +13131,10 @@ If (InStr(Macro, "()"))
 	GuiControl, 33:Disable, ManKey
 	GuiControl, 33:Disable, TE
 	GuiControl, 33:Disable, TimesX
+	GuiControl, 33:Disable, IfDirectContext
+	GuiControl, 33:Disable, Ident
+	GuiControl, 33:Disable, Title
+	GuiControl, 33:Disable, GetWin
 }
 Else
 {
@@ -13080,6 +13143,10 @@ Else
 	GuiControl, 33:Enable, ManKey
 	GuiControl, 33:Enable, TE
 	GuiControl, 33:Enable, TimesX
+	GuiControl, 33:Enable, IfDirectContext
+	GuiControl, 33:Enable, Ident
+	GuiControl, 33:Enable, Title
+	GuiControl, 33:Enable, GetWin
 }
 return
 
@@ -13603,7 +13670,7 @@ Gui, chMacro:Default
 Gui, 1:+Disabled
 Gui, 16:Add, Groupbox, W450 H75
 Gui, 16:Add, Text, -Wrap R1 ys+20 xs+10 W40 cBlue, #If
-Gui, 16:Add, DDL, yp-3 x+5 W100 vIfDirectContext gIfDirectContext, None||WinActive|WinNotActive|WinExist|WinNotExist|Expression
+Gui, 16:Add, DDL, yp-3 x+5 W100 vIfDirectContext, None||WinActive|WinNotActive|WinExist|WinNotExist|Expression
 Gui, 16:Add, Button, yp x+210 W75 vIdent gWinTitle, WinTitle
 Gui, 16:Add, Edit, y+5 xs+10 W400 vTitle R1 -Multi, %IfDirectWindow%
 Gui, 16:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
@@ -13621,7 +13688,7 @@ IfDirectWindow := Title, TB_Edit(TbSettings, "SetWin", (IfDirectContext = "None"
 Gui, 1:-Disabled
 Gui, 16:Destroy
 Gui, chMacro:Default
-GuiControl, 1:, ContextTip, <a>#If</a>: %IfDirectContext%
+GuiControl, 1:, ContextTip, Global <a>#If</a>: %IfDirectContext%
 return
 
 SWinCancel:
@@ -13630,21 +13697,6 @@ OutputDebug, Label: %A_ThisLabel%
 16GuiEscape:
 Gui, 1:-Disabled
 Gui, 16:Destroy
-return
-
-IfDirectContext:
-OutputDebug, Label: %A_ThisLabel%
-Gui, 16:Submit, NoHide
-If (IfDirectContext = "Expression")
-{
-	GuiControl, 16:Disable, Ident
-	GuiControl, 16:Disable, GetWin
-}
-Else
-{
-	GuiControl, 16:Enable, Ident
-	GuiControl, 16:Enable, GetWin
-}
 return
 
 EditComm:
@@ -14723,7 +14775,7 @@ If (WinExist("ahk_id " PMCOSC))
 GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
-GuiControl, 1:, ContextTip, <a>#If</a>: %IfDirectContext%
+GuiControl, 1:, ContextTip, Global <a>#If</a>: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
 GuiControl, 1:, PauseKey, %PauseKey%
 GuiControl, 1:, DelayG, 0
@@ -15230,11 +15282,11 @@ Critical
 Loop, % LV_GetCount()
 {
 	LV_GetText(Action, A_Index, 2)
-,	Action := LTrim(Action)
-,	LV_GetText(Details, A_Index, 3)
-,	LV_GetText(Type, A_Index, 6)
-,	LV_GetText(Color, A_Index, 10)
-,	LV_Modify(A_Index, "Col2", Action)
+	Action := LTrim(Action)
+	LV_GetText(Details, A_Index, 3)
+	LV_GetText(Type, A_Index, 6)
+	LV_GetText(Color, A_Index, 10)
+	LV_Modify(A_Index, "Col2", Action)
 	If (Type = "")
 		break
 	If (Type = cType47)
@@ -15249,8 +15301,8 @@ Loop, % LV_GetCount()
 	If (ShowLoopIfMark = 1)
 	{
 		OnMessage(WM_NOTIFY, "LV_ColorsMessage")
-	,	LV_Colors.Row(ListID%A_List%, A_Index)
-	,	LV_Colors.Attach(ListID%A_List%, false, false)
+		LV_Colors.Row(ListID%A_List%, A_Index)
+		LV_Colors.Attach(ListID%A_List%, false, false)
 		If ((Action = "[LoopEnd]") && (RowColorLoop > 0))
 			RowColorLoop--, LV_Modify(A_Index,, A_Index " " IdxLv), IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
 		Else If ((Action = "[End If]") && (RowColorIf > 0))
@@ -15271,7 +15323,7 @@ Loop, % LV_GetCount()
 	Else
 	{
 		LV_Modify(A_Index,, A_Index)
-	,	OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
+		OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
 	}
 	If (ShowActIdent = 1)
 	{
@@ -15372,7 +15424,6 @@ Loop, % LV_GetCount()
 }
 Critical, Off
 GuiControl, chMacro:+Redraw, InputList%A_List%
-FreeMemory()
 DebugCheckLoop%A_List% := RowColorLoop
 DebugCheckIf%A_List% := RowColorIf
 If (BadPos)
@@ -15471,7 +15522,9 @@ GuiControl, 1:Move, Separator2, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator3, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator4, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator5, % "y" GuiHeight-27
+GuiControl, 1:Move, Separator6, % "y" GuiHeight-27
 GuiControl, 1:MoveDraw, ContextTip, % "y" GuiHeight-23
+GuiControl, 1:MoveDraw, MacroContextTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, CoordTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, TModeTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, TSendModeTip, % "y" GuiHeight-23
@@ -16004,11 +16057,15 @@ return
 UpdateCopyTo:
 OutputDebug, Label: %A_ThisLabel%
 Loop, %TabCount%
+{
 	Try Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
+	Sleep, 10
+}
 Loop, %TabCount%
 {
 	CopyMenuLabels[A_Index] := TabGetText(TabSel, A_Index)
 	Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_Index]
+	Sleep, 10
 	Menu, CopyTo, Add, % CopyMenuLabels[A_Index], CopyList, Radio
 }
 Gui, chMacro:Submit, NoHide

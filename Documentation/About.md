@@ -38,10 +38,12 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 ## Version 5.1.2
 * Added *Go to selected line* button and *Auto-select code* on **Preview window**.
+* Added per-macro Context Sensitve Hotkeys.
 * Added support for *OutputVar* in **Function** window for `RegExMatch`, `RegExReplace` and `StrReplace`.
 * Improved performance of Text::Paste from Clipboard.
 * Fixed bug in *Adjust coordinates to the center of the image* option in Image Search.
 * Fixed mixing rows bug when saving a project (thanks to chosen1ft).
+* Fixed reordered macros exported in the wrong order.
 * Fixed bug when closing macro tab.
 * Fixed bugs and crashes.
 

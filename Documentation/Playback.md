@@ -72,7 +72,9 @@ You can also view the list of variables and contents from the File menu and Tray
 
 ## Context Sensitive Hotkeys
 
-Makes all Hotkeys context-sensitive. Such hotkeys will only work depending on the type of window that is active or exists, or if an [expression](Variables.html#expressions) is evaluated to true.
+Global option will makes all Hotkeys context-sensitive. It can also be set individually for each macro in the *Edit Macros* window.
+
+Such hotkeys will only work depending on the type of window that is active or exists, or if an [expression](Variables.html#expressions) is evaluated to true.
 
 Select the type of condition and enter the identification of the window, or use the "Get Window" button to retrieve it.
 
@@ -86,7 +88,7 @@ For an expression to be `true` it must be a number other than 0 or a non-empty s
 
 You can also use [User-defined functions](Functions.html#user-defined-functions) with the *#If Expression* option.
 
-This option affects ALL Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-right of the main window to show if it's active. To deactivate this option select *None* in the list.
+Global option affects ALL Play Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-left of the main window to show if it's active. To deactivate this option select *None* in the list.
 
 For more information see AutoHotkey documentation: [#IfWinActive](http://autohotkey.com/docs/commands/_IfWinActive.htm) and [#If](http://autohotkey.com/docs/commands/_If.htm).
 

@@ -1,11 +1,14 @@
 ﻿Class PMC
 {
-	Static PmcCode
-	Static PmcGroups
+	static PmcCode
+	static PmcGroups
+	static PmcContexts
 	Load(FileName)
 	{
 		local ID := 0, Col, Row := [], Opt := []
-		this.PmcCode := [], this.PmcGroups := []
+		OutputDebug, Func: %A_ThisFunc%
+
+		this.PmcCode := [], this.PmcGroups := [], this.PmcContexts := []
 		Loop, Read, %FileName%
 		{
 			If (RegExMatch(A_LoopReadLine, "\[PMC Code(\sv)*(.*)\]", v)=1)
@@ -13,6 +16,11 @@
 				ID++, Row := [], Opt := [], Version := v2
 				Loop, Parse, A_LoopReadLine, |
 					Opt.Push(A_LoopField)
+			}
+			Else If (InStr(A_LoopReadLine, "Context=")=1)
+			{
+				RegExMatch(SubStr(A_LoopReadLine, 9), "O)(\w+)\|(.*)", MContext)
+				this.PmcContexts.Push({"Condition": MContext[1] != "" ? MContext[1] : "None", "Context": MContext[2]})
 			}
 			Else If (InStr(A_LoopReadLine, "Groups=")=1)
 				this.PmcGroups[ID] := SubStr(A_LoopReadLine, 8)
@@ -41,7 +49,8 @@
 	Import(SelectedFile, DL := "`n", New := "1")
 	{
 		local FoundC, Labels, TabText, AutoRefreshState
-
+		OutputDebug, Func: %A_ThisFunc%
+		
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(10, ListID%A_List%)
 		If (New)
@@ -74,15 +83,17 @@
 				Gui, chMacro:ListView, InputList%TabCount%
 				GuiControl, chMacro:, %TabSel%, Macro%TabCount%
 				GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
+				o_MacroContext[A_Index] := IsObject(this.PmcContexts[A_Index]) ? this.PmcContexts[A_Index] : {"Condition": "None", "Context": ""}
 				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 				GuiControl, chMacro:-g, InputList%TabCount%
 				this.LVLoad("InputList" TabCount, this.PmcCode[A_Index])
+				Sleep, 10
 				Gui, chMacro:ListView, InputList%TabCount%
 				ListCount%TabCount% := LV_GetCount()
-			,	Opt := this.PmcCode[A_Index].Opt
-			,	o_AutoKey[TabCount] := (Opt[2] != "") ? Opt[2] : ""
-			,	o_ManKey[TabCount] := (Opt[3] != "") ? Opt[3] : ""
-			,	o_TimesG[TabCount] := (Opt[4] != "") ? Opt[4] : 1
+				Opt := this.PmcCode[A_Index].Opt
+				o_AutoKey[TabCount] := (Opt[2] != "") ? Opt[2] : ""
+				o_ManKey[TabCount] := (Opt[3] != "") ? Opt[3] : ""
+				o_TimesG[TabCount] := (Opt[4] != "") ? Opt[4] : 1
 				
 				If (Opt[5] != "")
 				{
@@ -91,20 +102,20 @@
 					Loop, Parse, % Opt[5], `,, %A_Space%
 						Mode%A_Index% := A_LoopField
 					CoordMouse := (Mode1 != "") ? Mode1 : CoordMouse
-				,	TitleMatch := (Mode2 != "") ? Mode2 : TitleMatch
-				,	TitleSpeed := (Mode3 != "") ? Mode3 : TitleSpeed
-				,	HiddenWin := (Mode4 != "") ? Mode4 : HiddenWin
-				,	HiddenText := (Mode5 != "") ? Mode5 : HiddenText
-				,	KeyMode := (Mode6 != "") ? Mode6 : KeyMode
-				,	KeyDelay := (Mode7 != "") ? Mode7 : KeyDelay
-				,	MouseDelay := (Mode8 != "") ? Mode8 : MouseDelay
-				,	ControlDelay := (Mode9 != "") ? Mode9 : ControlDelay
+					TitleMatch := (Mode2 != "") ? Mode2 : TitleMatch
+					TitleSpeed := (Mode3 != "") ? Mode3 : TitleSpeed
+					HiddenWin := (Mode4 != "") ? Mode4 : HiddenWin
+					HiddenText := (Mode5 != "") ? Mode5 : HiddenText
+					KeyMode := (Mode6 != "") ? Mode6 : KeyMode
+					KeyDelay := (Mode7 != "") ? Mode7 : KeyDelay
+					MouseDelay := (Mode8 != "") ? Mode8 : MouseDelay
+					ControlDelay := (Mode9 != "") ? Mode9 : ControlDelay
 				}
 				
 				OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
-			,	Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
-			,	LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
-			,	LVManager.SetGroups(this.PmcGroups[A_Index]), LVManager.Add()
+				Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
+				LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
+				LVManager.SetGroups(this.PmcGroups[A_Index]), LVManager.Add()
 				GuiControl, chMacro:+gInputList, InputList%TabCount%
 			}
 		}
@@ -114,9 +125,9 @@
 		{
 			RemoveDuplicates(Labels)
 			GuiControl, chMacro:, A_List, |%Labels%
-			GoSub, UpdateCopyTo
+			SetTimer, UpdateCopyTo, -100
 		}
-		GoSub, SetFinishButtom
+		SetTimer, SetFinishButtom, -200
 		GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 		GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
@@ -125,8 +136,9 @@
 
 	LVLoad(List, Code)
 	{
-		Global UserDefFunctions
-		Static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
+		global UserDefFunctions
+		static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
+		OutputDebug, Func: %A_ThisFunc%
 		
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%
@@ -137,11 +149,11 @@
 			Loop, % Col.Length()
 				Col[A_Index] := RegExReplace(Col[A_Index], (Code.Version = "") ? "¢" : _x, "|")
 			chk := SubStr(Col[1], 1, 1)
-		,	((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
-		,	((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
-		,	((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
-		,	((Col[6] = "Variable") && (!InStr(Col[2], " Variable]"))) ? (Col[6] := "Function") : ""
-		,	Col[6] := RegExReplace(Col[6], "\s", "_")
+			((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
+			((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
+			((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
+			((Col[6] = "Variable") && (!InStr(Col[2], " Variable]"))) ? (Col[6] := "Function") : ""
+			Col[6] := RegExReplace(Col[6], "\s", "_")
 			If (Col[6] = "UserFunction")
 			{
 				If (!InStr(UserDefFunctions, " " Col[3] " "))
@@ -168,16 +180,16 @@
 			If (Code.Version = "")
 			{
 				Col[3] := CheckForExp(Col[3])
-			,	Col[4] := CheckForExp(Col[4])
-			,	Col[5] := CheckForExp(Col[5])
-			,	Col[7] := CheckForExp(Col[7])
-			,	Col[8] := CheckForExp(Col[8])
+				Col[4] := CheckForExp(Col[4])
+				Col[5] := CheckForExp(Col[5])
+				Col[7] := CheckForExp(Col[7])
+				Col[8] := CheckForExp(Col[8])
 				If ((Col[2] = "[Assign Variable]") && (Col[7] = "Expression"))
 					Col[3] := CheckComExp(Col[3])
 				If (Col[6] = "Function")
 				{
 					RegExMatch(Col[3], "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
-				,	Col[3] := Out1 " " Out2 " " CheckExp(Out3)
+					Col[3] := Out1 " " Out2 " " CheckExp(Out3)
 				}
 				If (Col[6] = "COMInterface")
 				{
@@ -193,7 +205,7 @@
 							If (A_LoopField = "")
 								continue
 							ComExp := CheckComExp(A_LoopField,,, Act1)
-						,	Details .= Act1 "." ComExp "``n"
+							Details .= Act1 "." ComExp "``n"
 						}
 					}
 					Col[2] := Act1, Col[3] := Details
@@ -201,10 +213,10 @@
 				If ((Col[6] = "VBScript") || (Col[6] = "JScript"))
 				{
 					Act := SubStr(Col[2], 1, 2)
-				,	LV_Add("Check" chk, 1, "[Assign Variable]", Act "Code := " Col[3], 1, 0, "Variable")
-				,	Details := Act ".Language := """ Col[6] """"
-				,	Details .= "`n" Act ".ExecuteStatement(" Act "Code)"
-				,	Col[2] := Act, Col[3] := Details, Col[6] := "COMInterface"
+					LV_Add("Check" chk, 1, "[Assign Variable]", Act "Code := " Col[3], 1, 0, "Variable")
+					Details := Act ".Language := """ Col[6] """"
+					Details .= "`n" Act ".ExecuteStatement(" Act "Code)"
+					Col[2] := Act, Col[3] := Details, Col[6] := "COMInterface"
 				}
 				If (InStr(Col[6], "Search"))
 				{
@@ -225,7 +237,7 @@
 
 	LVGet(List, DL := "|")
 	{
-		Static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
+		static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
 		
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%
@@ -233,8 +245,8 @@
 		Loop, % LV_GetCount()
 		{
 			LV_GetTexts(A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color, CodeLine)
-		,	ckd := (LV_GetNext(A_Index-1, "Checked")=A_Index) ? "" : 0
-		,	Row[A_Index] := [ckd A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color, CodeLine]
+			ckd := (LV_GetNext(A_Index-1, "Checked")=A_Index) ? "" : 0
+			Row[A_Index] := [ckd A_Index, Action, Details, TimesX, DelayX, Type, Target, Window, Comment, Color, CodeLine]
 		}
 		Loop, % LV_GetCount()
 		{
@@ -252,6 +264,8 @@
 	
 	FormatCmd(ColTxt, Type)
 	{
+		OutputDebug, Func: %A_ThisFunc%
+
 		StringSplit, Col, ColTxt, `,, ``
 		If (Type = "Files")
 		{
