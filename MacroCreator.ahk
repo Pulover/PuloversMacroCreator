@@ -1440,6 +1440,7 @@ TB_Define(tbPrev, htbPrev, hIL_Icons, FixedBar.Preview, FixedBar.PrevOpt)
 ,	sciPrev.SetWrapMode(TextWrap ? 0x1 : 0x0)
 ,	sciPrev.SetCaretLineBack(0xFFFF80)
 ,	sciPrev.SetCaretLineVisible(true)
+,	sciPrev.SetCaretLineVisibleAlways(true)
 ,	sciPrev.SetLexer(0xC8)
 ,	sciPrev.StyleClearAll()
 
@@ -1488,6 +1489,7 @@ TB_Define(tbPrevF, htbPrevF, hIL_Icons, FixedBar.PreviewF, FixedBar.PrevOpt)
 ,	sciPrevF.SetWrapMode(TextWrap ? 0x1 : 0x0)
 ,	sciPrevF.SetCaretLineBack(0xFFFF80)
 ,	sciPrevF.SetCaretLineVisible(true)
+,	sciPrevF.SetCaretLineVisibleAlways(true)
 ,	sciPrevF.SetLexer(0xC8)
 ,	sciPrevF.StyleClearAll()
 
@@ -1634,8 +1636,6 @@ If ((RowSelection > 1) || (!CodeNextLine) || ((CodeNextLine - CodeLineStart) > 1
 ,	sciPrev.SetSel(Anchor, CaretPos)
 ,	sciPrevF.SetSel(Anchor, CaretPos)
 }
-sciPrev.SetFocus(true)
-,	sciPrevF.SetFocus(true)
 return
 
 TextWrap:
@@ -2106,12 +2106,12 @@ If (CurrentFileName = "")
 	GoSub, SelectFile
 IfExist %CurrentFileName%
 {
-    FileDelete %CurrentFileName%
-    If (ErrorLevel)
-    {
-        MsgBox, 16, %d_Lang007%, %d_Lang006%`n`n"%CurrentFileName%".
-        return
-    }
+	FileDelete %CurrentFileName%
+	If (ErrorLevel)
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang006%`n`n"%CurrentFileName%".
+		return
+	}
 }
 Gui, chMacro:Default
 SaveProject(CurrentFileName)
@@ -2131,12 +2131,12 @@ GoSub, SelectFile
 ThisListFile := CurrentFileName, CurrentFileName := ActiveFileName
 IfExist %ThisListFile%
 {
-    FileDelete, %ThisListFile%
-    If (ErrorLevel)
-    {
-        MsgBox, 16, %d_Lang007%, %d_Lang006% "%ThisListFile%".
-        return
-    }
+	FileDelete, %ThisListFile%
+	If (ErrorLevel)
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang006% "%ThisListFile%".
+		return
+	}
 }
 PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_List]
 . "|" o_ManKey[A_List] "|" o_TimesG[A_List]
@@ -2909,12 +2909,12 @@ SaveAHK:
 OutputDebug, Label: %A_ThisLabel%
 IfExist %ChoosenFileName%
 {
-    FileDelete %ChoosenFileName%
-    If (ErrorLevel)
-    {
-        MsgBox, 16, %d_Lang007%, %d_Lang006% "%ChoosenFileName%".
-        return
-    }
+	FileDelete %ChoosenFileName%
+	If (ErrorLevel)
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang006% "%ChoosenFileName%".
+		return
+	}
 }
 FileAppend, %Script%, %ChoosenFileName%
 If (ErrorLevel)
@@ -3548,10 +3548,10 @@ whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 whr.open("POST", url, true)
 
 objParam := { name		: Name
-            , email		: FromMail
-            , subject	: Subject
-            , message	: Name "\nEmail: " FromMail "\nMessage:\n" Message
-            , file		: [LFile] }
+			, email		: FromMail
+			, subject	: Subject
+			, message	: Name "\nEmail: " FromMail "\nMessage:\n" Message
+			, file		: [LFile] }
 CreateFormData(PostData, hdr_ContentType, objParam)
 
 whr.SetRequestHeader("Content-Type", hdr_ContentType)
@@ -6063,12 +6063,12 @@ If (ext = "")
 	TextFile .= ".txt"
 IfExist %TextFile%
 {
-    FileDelete %TextFile%
-    If (ErrorLevel)
-    {
-        MsgBox, 16, %d_Lang007%, %d_Lang006% "%TextFile%".
-        return
-    }
+	FileDelete %TextFile%
+	If (ErrorLevel)
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang006% "%TextFile%".
+		return
+	}
 }
 FileAppend, %TextEdit%, %TextFile%
 return
@@ -11753,8 +11753,6 @@ If (A_GuiEvent == "f")
 	SetTimer, MainLoop, Off
 	If (Capt)
 		GoSub, Capt
-	sciPrev.SetFocus(false)
-	,	sciPrevF.SetFocus(false)
 }
 If (A_GuiEvent == "ColClick")
 {
@@ -14540,7 +14538,7 @@ If (WinExist("ahk_id " PrevID))
 ColSizes := ""
 Loop % LV_GetCount("Col")
 {
-    SendMessage, 4125, A_Index - 1, 0,, % "ahk_id " ListID%A_List%
+	SendMessage, 4125, A_Index - 1, 0,, % "ahk_id " ListID%A_List%
 	ColSizes .= Floor(ErrorLevel / Round(A_ScreenDPI / 96, 2)) ","
 }
 StringTrimRight, ColSizes, ColSizes, 1
@@ -16483,13 +16481,13 @@ GuiControl, 1:+Redraw, cRbMain
 
 Gui 7:+LastFoundExist
 IfWinExist
-    GoSub, InsertKey
+	GoSub, InsertKey
 Gui 18:+LastFoundExist
 IfWinExist
-    GoSub, FindReplace
+	GoSub, FindReplace
 Gui 26:+LastFoundExist
 IfWinExist
-    GoSub, TipClose
+	GoSub, TipClose
 GoSub, SetFindCmd
 SavePrompt(SavePrompt)
 return
