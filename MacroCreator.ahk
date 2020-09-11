@@ -1341,7 +1341,7 @@ If (A_GuiEvent = "N")
 		OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
 	If (rbEventCode = -836) ; RBN_ENDDRAG
 	{
-		SetTimer, RowCheck, -1
+		GoSub, RowCheck
 		SetTimer, chMacroGuiSize, -1
 	}
 }
@@ -2150,8 +2150,9 @@ IfExist %ThisListFile%
 PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_List]
 . "|" o_ManKey[A_List] "|" o_TimesG[A_List]
 . "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_List) "`n"
-,	TabGroups := "Groups=" LVManager.GetGroups() "`n"
-,	LV_Data := PMCSet . TabGroups . PMC.LVGet("InputList" A_List).Text . "`n"
+IfContext := "Context=" o_MacroContext[A_List].Condition "|" o_MacroContext[A_List].Context "`n"
+TabGroups := "Groups=" LVManager.GetGroups() "`n"
+LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_List).Text . "`n"
 FileAppend, %LV_Data%, %ThisListFile%
 GoSub, RecentFiles
 return
@@ -2671,7 +2672,7 @@ return
 ExEditScript:
 OutputDebug, Label: %A_ThisLabel%
 Gui, 14:Submit, NoHide
-Run, %DefaultEditor% %ExpFile%
+Run, "%DefaultEditor%" "%ExpFile%"
 return
 
 ExExecScript:
@@ -2685,7 +2686,7 @@ If (!A_AhkPath)
 		Run, http://autohotkey.com/
 	return
 }
-Run, %ExpFile%
+Run, "%ExpFile%"
 return
 
 DefaultExOpt:
@@ -2738,7 +2739,7 @@ OutputDebug, Label: %A_ThisLabel%
 14GuiEscape:
 Gui, 14:Submit, NoHide
 Loop, %TabCount%
-	LV_GetText(BckIt%A_Index%, A_Index, 5)
+	LV_GetText(BckIt%A_Index%, A_Index, 4)
 Gui, 1:-Disabled
 Gui, 14:Destroy
 Gui, chMacro:Default
@@ -2849,7 +2850,9 @@ Loop, % LV_GetCount()
 	PMCSet := "[PMC Code v" CurrentVersion "]|" Ex_AutoKey
 	. "|" o_ManKey[Ex_Idx] "|" Ex_TimesX
 	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, Ex_Idx) "`n"
-	PmcCode .= PMCSet . PMC.LVGet("InputList" Ex_Idx).Text . "`n"
+	IfContext := "Context=" o_MacroContext[Ex_Idx].Condition "|" o_MacroContext[Ex_Idx].Context "`n"
+	TabGroups := "Groups=" LVManager.GetGroups() "`n"
+	PmcCode .= PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" Ex_Idx).Text . "`n"
 	If (Ex_IN)
 		IncList .= IncludeFiles(Ex_Idx, ListCount%Ex_Idx%)
 }
@@ -12430,7 +12433,7 @@ Loop, %TabCount%
 ,	LV_Delete(), LVManager.RemoveAllGroups(c_Lang061), LVManager.ClearHistory()
 ,	ListCount%A_Index% := 0
 	GuiControl, chMacro:+Redraw, InputList%A_Index%
-	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
+	Try Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
 }
 LVManager.SetHwnd(ListID%A_List%)
 CopyMenuLabels[1] := "Macro1"
@@ -15368,59 +15371,93 @@ Loop, % LV_GetCount()
 		LV_Delete(A_Index)
 		continue
 	}
-	(Action = "[Text]") ? LV_Modify(A_Index, "Icon" IconsNames["text"])
-:	RegExMatch(Type, cType3 "|" cType4 "|" cType13) ? LV_Modify(A_Index, "Icon" IconsNames["mouse"])
-:	(Type = cType5) ? LV_Modify(A_Index, "Icon" IconsNames["pause"])
-:	(Type = cType6) ? LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
-:	(Type = cType14) ? LV_Modify(A_Index, "Icon" IconsNames["wait"])
-:	RegExMatch(Type, cType7 "|" cType38 "|" cType39 "|" cType40 "|" cType41 "|" cType45 "|" cType51) ? LV_Modify(A_Index, "Icon" IconsNames["loop"])
-:	(Type = cType29) ? LV_Modify(A_Index, "Icon" IconsNames["break"])
-:	(Type = cType30) ? LV_Modify(A_Index, "Icon" IconsNames["continue"])
-:	(Type = cType21) ? LV_Modify(A_Index, "Icon" IconsNames["variables"])
-:	((Type = cType44) || (Type = cType46)) ? LV_Modify(A_Index, "Icon" IconsNames["functions"])
-:	(Type = cType17) ? LV_Modify(A_Index, "Icon" IconsNames["ifstatements"])
-:	RegExMatch(Type, cType18 "|" cType19) ? LV_Modify(A_Index, "Icon" IconsNames["sendmsg"])
-:	(Type = cType15) ? LV_Modify(A_Index, "Icon" IconsNames["color"])
-:	(Type = cType16) ? LV_Modify(A_Index, "Icon" IconsNames["image"])
-:	(Action = "[Control]") ? LV_Modify(A_Index, "Icon" IconsNames["control"])
-:	(Type = cType34) ? LV_Modify(A_Index, "Icon" IconsNames["com"])
-:	(Type = cType35) ? LV_Modify(A_Index, "Icon" IconsNames["labels"])
-:	LV_Modify(A_Index, "Icon" IconsNames["keystroke"])
-	(Type = cType47) ? LV_Modify(A_Index, "Icon" IconsNames["userfunc"])
-:	(Type = cType48) ? LV_Modify(A_Index, "Icon" IconsNames["parameter"])
-:	(Type = cType49) ? LV_Modify(A_Index, "Icon" IconsNames["return"])
-:	(Type = cType43) ? LV_Modify(A_Index, "Icon" IconsNames["expression"])
-:	(Type = cType52) ? LV_Modify(A_Index, "Icon" IconsNames["email"])
-:	(Type = "Pause") ? LV_Modify(A_Index, "Icon" IconsNames["recpause"])
-:	(Type = "Return") ? LV_Modify(A_Index, "Icon" IconsNames["stop"])
-:	(Type = "ExitApp") ? LV_Modify(A_Index, "Icon" IconsNames["exit"])
-:	RegExMatch(Type, cType36 "|" cType37) ? LV_Modify(A_Index, "Icon" IconsNames["goto"])
-:	RegExMatch(Type, cType11 "|" cType14 "|Run|RunWait|RunAs") ? LV_Modify(A_Index, "Icon" IconsNames["run"])
-:	RegExMatch(Type, "Process") ? LV_Modify(A_Index, "Icon" IconsNames["process"])
-:	RegExMatch(Type, "Shutdown") ? LV_Modify(A_Index, "Icon" IconsNames["shutdown"])
-:	""
-	(Type = cType42) ? LV_Modify(A_Index, "Icon" IconsNames["comment"])
-:	(Type = cType50) ? LV_Modify(A_Index, "Icon" IconsNames["timer"])
-:	(Type = cType53) ? LV_Modify(A_Index, "Icon" IconsNames["download"])
-:	((Type = cType54) || (Type = cType55)) ? LV_Modify(A_Index, "Icon" IconsNames["zip"])
-:	RegExMatch(Type, cType32 "|" cType33) ? LV_Modify(A_Index, "Icon" IconsNames["ie"])
-:	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" IconsNames["string"])
-:	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
-	|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
-:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" IconsNames["window"])
-:	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" IconsNames["files"])
-:	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" IconsNames["wait"])
-:	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" IconsNames["ini"])
-:	InStr(Type, "Reg")=1 ? LV_Modify(A_Index, "Icon" IconsNames["registry"])
-:	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" IconsNames["sound"])
-:	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" IconsNames["group"])
-:	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" IconsNames["variables"])
-:	(!InStr(Type, "Control") && InStr(Type, "Get")) ? LV_Modify(A_Index, "Icon" IconsNames["info"])
-:	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" IconsNames["download"])
-:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform") || InStr(Type, "ListVars")
-	|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "Debug")
-	|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" IconsNames["misc"])
-:	""
+	Switch Type
+	{
+		Case cType3, cType4, cType13:
+			LV_Modify(A_Index, "Icon" IconsNames["mouse"])
+		Case cType5:
+			LV_Modify(A_Index, "Icon" IconsNames["pause"])
+		Case cType6:
+			LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
+		Case cType14:
+			LV_Modify(A_Index, "Icon" IconsNames["wait"])
+		Case cType7, cType38, cType39, cType40, cType41, cType45, cType51:
+			LV_Modify(A_Index, "Icon" IconsNames["loop"])
+		Case cType29:
+			LV_Modify(A_Index, "Icon" IconsNames["break"])
+		Case cType30:
+			LV_Modify(A_Index, "Icon" IconsNames["continue"])
+		Case cType21:
+			LV_Modify(A_Index, "Icon" IconsNames["variables"])
+		Case cType44, cType46:
+			LV_Modify(A_Index, "Icon" IconsNames["functions"])
+		Case cType17:
+			LV_Modify(A_Index, "Icon" IconsNames["ifstatements"])
+		Case cType18, cType19:
+			LV_Modify(A_Index, "Icon" IconsNames["sendmsg"])
+		Case cType15:
+			LV_Modify(A_Index, "Icon" IconsNames["color"])
+		Case cType16:
+			LV_Modify(A_Index, "Icon" IconsNames["image"])
+		Case cType34:
+			LV_Modify(A_Index, "Icon" IconsNames["com"])
+		Case cType35:
+			LV_Modify(A_Index, "Icon" IconsNames["labels"])
+		Case cType47:
+			LV_Modify(A_Index, "Icon" IconsNames["userfunc"])
+		Case cType48:
+			LV_Modify(A_Index, "Icon" IconsNames["parameter"])
+		Case cType49:
+			LV_Modify(A_Index, "Icon" IconsNames["return"])
+		Case cType43:
+			LV_Modify(A_Index, "Icon" IconsNames["expression"])
+		Case cType52:
+			LV_Modify(A_Index, "Icon" IconsNames["email"])
+		Case "Pause":
+			LV_Modify(A_Index, "Icon" IconsNames["recpause"])
+		Case "Return":
+			LV_Modify(A_Index, "Icon" IconsNames["stop"])
+		Case "ExitApp":
+			LV_Modify(A_Index, "Icon" IconsNames["exit"])
+		Case cType36, cType37:
+			LV_Modify(A_Index, "Icon" IconsNames["goto"])
+		Case cType11, cType14, "Run", "RunWait", "RunAs":
+			LV_Modify(A_Index, "Icon" IconsNames["run"])
+		Case "Process":
+			LV_Modify(A_Index, "Icon" IconsNames["process"])
+		Case "Shutdown":
+			LV_Modify(A_Index, "Icon" IconsNames["shutdown"])
+		Case cType42:
+			LV_Modify(A_Index, "Icon" IconsNames["comment"])
+		Case cType50:
+			LV_Modify(A_Index, "Icon" IconsNames["timer"])
+		Case cType53:
+			LV_Modify(A_Index, "Icon" IconsNames["download"])
+		Case cType54, cType55:
+			LV_Modify(A_Index, "Icon" IconsNames["zip"])
+		Case cType32, cType33:
+			LV_Modify(A_Index, "Icon" IconsNames["ie"])
+		Default:
+			(Action = "[Text]") ? LV_Modify(A_Index, "Icon" IconsNames["text"])
+		:	(Action = "[Control]") ? LV_Modify(A_Index, "Icon" IconsNames["control"])
+		:	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" IconsNames["string"])
+		:	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
+			|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
+		:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" IconsNames["window"])
+		:	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" IconsNames["files"])
+		:	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" IconsNames["wait"])
+		:	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" IconsNames["ini"])
+		:	InStr(Type, "Reg")=1 ? LV_Modify(A_Index, "Icon" IconsNames["registry"])
+		:	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" IconsNames["sound"])
+		:	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" IconsNames["group"])
+		:	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" IconsNames["variables"])
+		:	(!InStr(Type, "Control") && InStr(Type, "Get")) ? LV_Modify(A_Index, "Icon" IconsNames["info"])
+		:	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" IconsNames["download"])
+		:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform") || InStr(Type, "ListVars")
+			|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "Debug")
+			|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" IconsNames["misc"])
+		:	LV_Modify(A_Index, "Icon" IconsNames["keystroke"])
+	}
 }
 Critical, Off
 GuiControl, chMacro:+Redraw, InputList%A_List%

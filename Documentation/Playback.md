@@ -72,7 +72,7 @@ You can also view the list of variables and contents from the File menu and Tray
 
 ## Context Sensitive Hotkeys
 
-Global option will makes all Hotkeys context-sensitive. It can also be set individually for each macro in the *Edit Macros* window.
+Global option will makes all Hotkeys context-sensitive. It can also be set individually for each macro in the *Edit Macros* window. Macro context takes precedence.
 
 Such hotkeys will only work depending on the type of window that is active or exists, or if an [expression](Variables.html#expressions) is evaluated to true.
 
