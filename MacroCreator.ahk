@@ -723,7 +723,7 @@ Loop, Parse, ShowBands, `,
 RegRead, DClickSpd, HKEY_CURRENT_USER, Control Panel\Mouse, DoubleClickSpeed
 DClickSpd := Round(DClickSpd * 0.001, 1)
 
-o_MacroContext := []
+o_MacroContext := [{"Condition": "None", "Context": ""}]
 
 RowCheckInProgress := false
 
