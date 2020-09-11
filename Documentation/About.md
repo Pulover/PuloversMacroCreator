@@ -41,6 +41,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 * Added per-macro Context Sensitve Hotkeys.
 * Added support for *OutputVar* in **Function** window for `RegExMatch`, `RegExReplace` and `StrReplace`.
 * Improved performance of Text::Paste from Clipboard.
+* Fixed INI and REG commands not working when omitting optional parameters.
 * Fixed bug in *Adjust coordinates to the center of the image* option in Image Search.
 * Fixed mixing rows bug when saving a project (thanks to chosen1ft).
 * Fixed reordered macros exported in the wrong order.

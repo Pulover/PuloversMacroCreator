@@ -1485,27 +1485,46 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_RegWrite:
-		RegWrite, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		If (Par5 != "")
+			RegWrite, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		If (Par4 != "")
+			RegWrite, %Par1%, %Par2%, %Par3%, %Par4%
+		Else
+			RegWrite, %Par1%, %Par2%, %Par3%
 		Flow.ErrorLevel := ErrorLevel
 	return
 	pb_RegDelete:
-		RegDelete, %Par1%, %Par2%, %Par3%
+		If (Par3 != "")
+			RegDelete, %Par1%, %Par2%, %Par3%
+		Else
+			RegDelete, %Par1%, %Par2%
 		Flow.ErrorLevel := ErrorLevel
 	return
 	pb_SetRegView:
 		SetRegView, %Par1%
 	return
 	pb_IniRead:
-		IniRead, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		If (Par4 != "")
+			IniRead, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		Else If (Par3 != "")
+			IniRead, %Par1%, %Par2%, %Par3%
+		Else
+			IniRead, %Par1%, %Par2%
 		Flow.ErrorLevel := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_IniWrite:
-		IniWrite, %Par1%, %Par2%, %Par3%, %Par4%
+		If (Par4 != "")
+			IniWrite, %Par1%, %Par2%, %Par3%, %Par4%
+		Else
+			IniWrite, %Par1%, %Par2%, %Par3%
 		Flow.ErrorLevel := ErrorLevel
 	return
 	pb_IniDelete:
-		IniDelete, %Par1%, %Par2%, %Par3%
+		If (Par3 != "")
+			IniDelete, %Par1%, %Par2%, %Par3%
+		Else
+			IniDelete, %Par1%, %Par2%
 		Flow.ErrorLevel := ErrorLevel
 	return
 	pb_SoundBeep:

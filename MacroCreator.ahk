@@ -224,7 +224,7 @@ IniRead, KeepDefKeys, %IniFilePath%, Options, KeepDefKeys, 0
 IniRead, TbNoTheme, %IniFilePath%, Options, TbNoTheme, 0
 IniRead, AutoBackup, %IniFilePath%, Options, AutoBackup, 1
 IniRead, MultInst, %IniFilePath%, Options, MultInst, 0
-IniRead, EvalDefault, %IniFilePath%, Options, EvalDefault, 0
+IniRead, EvalDefault, %IniFilePath%, Options, EvalDefault, 1
 IniRead, CloseAction, %IniFilePath%, Options, CloseAction, %A_Space%
 IniRead, ShowLoopIfMark, %IniFilePath%, Options, ShowLoopIfMark, 1
 IniRead, ShowActIdent, %IniFilePath%, Options, ShowActIdent, 1
@@ -309,6 +309,8 @@ IniRead, CommandLayout, %IniFilePath%, ToolbarOptions, CommandLayout
 IniRead, EditLayout, %IniFilePath%, ToolbarOptions, EditLayout
 IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1,1,1
 
+If (Version < "5.1.2")
+	EvalDefault := 1
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
 If (LangVersion < 4)
@@ -8548,7 +8550,16 @@ If (s_Caller = "Edit")
 		If (Target = "Expression")
 		{
 			GuiControl, 21:, UseEval, 1
+			GuiControl, 21:Hide, VarTip
 			GuiControl, 21:Show, ArrayTip
+			GuiControl, 21:Show, ExprLink2
+		}
+		Else
+		{
+			GuiControl, 21:, UseEval, 0
+			GuiControl, 21:Hide, ArrayTip
+			GuiControl, 21:Hide, ExprLink2
+			GuiControl, 21:Show, VarTip
 		}
 		GuiControl, 21:, VarValue, %VarValue%
 		SBShowTip("Variable")
@@ -8823,6 +8834,12 @@ Else
 		Target := "Expression"
 	Else
 		Target := ""
+}
+If ((UseEval = 1) && (RegExMatch(Details, "%\w+%")))
+{
+	MsgBox, 52, %d_Lang011%, %d_Lang097%`n`n%d_Lang035%
+	IfMsgBox, No
+		return
 }
 If (A_ThisLabel != "VarApply")
 {
@@ -14732,7 +14749,7 @@ Exe_Exp := 0
 TbNoTheme := 0
 AutoBackup := 1
 MultInst := 0
-EvalDefault := 0
+EvalDefault := 1
 CloseAction := ""
 ShowLoopIfMark := 1
 ShowActIdent := 1
