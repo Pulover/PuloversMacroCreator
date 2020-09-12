@@ -29,7 +29,7 @@ Data_GetTexts(Data, Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", By
 
 LV_GetSelCheck()
 {
-	Critical
+	Critical, 600
 	SelectedRows := {Checked: [], Selected: []}, RowNumber := 0
 	Loop, % LV_GetCount()
 	{
@@ -196,9 +196,9 @@ CloseTab()
 DragTab()
 {
 	global
-	OutputDebug, Func: %A_ThisFunc%
+	OutputDebug, Func: %A_ThisFunc% Critical!
 	
-	Critical
+	Critical, 500
 	CoordMode, Mouse, Window
 	If (A_Gui = 28)
 		PostMessage, 0xA1, 2,,, ahk_id %PMCOSC%
@@ -253,7 +253,8 @@ DragTab()
 				GoSub, LoadData
 				GoSub, UpdateCopyTo
 				GoSub, b_Start
-				Proj_Opts := "", SavePrompt(true)
+				Proj_Opts := ""
+				SavePrompt(true, A_ThisFunc)
 				SetTimer, HitFix, -10
 			}
 			Else
@@ -597,8 +598,9 @@ ListIEWindows()
 GuiAddLV(ident)
 {
 	global
-	OutputDebug, Func: %A_ThisFunc%
-	Critical
+	OutputDebug, Func: %A_ThisFunc% Critical!
+	
+	Critical, 800
 	Gui, chMacro:Default
 	Gui, chMacro:Tab, %ident%
 	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%|%w_Lang040%
@@ -912,7 +914,7 @@ HistCheck()
 	global
 	OutputDebug, Func: %A_ThisFunc%
 
-	SavePrompt(true)
+	SavePrompt(true, A_ThisFunc)
 	If (MaxHistory = 0)
 		return
 	LVManager.Add()
@@ -1187,8 +1189,12 @@ LVCallback(Func, Hwnd)
 {
 	global
 	
+	If (!InStr(TabGetText(TabSel, A_List), "()"))
+		return true
+
 	If Func in Copy,Cut,Paste,Duplicate,Delete,Move,Drag
 	{
+		Critical, 2000
 		LV_Row := 0
 		Loop
 		{
@@ -1200,24 +1206,211 @@ LVCallback(Func, Hwnd)
 				return false
 		}
 	}
-	If Func in Cut,Paste,Duplicate,Delete,Move,Drag,Undo,Redo
-		SavePrompt(true)
 		
 	return true
 }
 
-SavePrompt(State)
+RowCheckFunc()
 {
 	global
-	OutputDebug, Func: %A_ThisFunc%
+
+	OutputDebug, Func: %A_ThisFunc% Critical!
+	Critical
+	Loop, % LV_GetCount()
+	{
+		LV_GetText(Action, A_Index, 2)
+		Action := LTrim(Action)
+		LV_GetText(Details, A_Index, 3)
+		LV_GetText(Type, A_Index, 6)
+		LV_GetText(Color, A_Index, 10)
+		LV_Modify(A_Index, "Col2", Action)
+		If (Type = "")
+			break
+		If (Type = cType47)
+		{
+			If (!InStr(UserDefFunctions, " " Details " "))
+			{
+				StringLower, UserDefFunc, Details
+				UserDefFunctions .= UserDefFunc " "
+			,	SetUserWords(UserDefFunctions)
+			}
+		}
+		If (ShowLoopIfMark = 1)
+		{
+			OnMessage(WM_NOTIFY, "LV_ColorsMessage")
+			LV_Colors.Row(ListID%A_List%, A_Index)
+			LV_Colors.Attach(ListID%A_List%, false, false)
+			If ((Action = "[LoopEnd]") && (RowColorLoop > 0))
+				RowColorLoop--, LV_Modify(A_Index,, A_Index " " IdxLv), IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
+			Else If ((Action = "[End If]") && (RowColorIf > 0))
+				RowColorIf--, LV_Modify(A_Index,, A_Index " " IdxLv), IdxLv := SubStr(IdxLv, 1, StrLen(IdxLv)-1)
+			Else If (Action = "[LoopStart]")
+				RowColorLoop++, IdxLv .= ">", LV_Modify(A_Index,, A_Index " " IdxLv)
+			Else If ((Type = cType17) && (!InStr(Action, "[Else")))
+				RowColorIf++, IdxLv .= "*", LV_Modify(A_Index,, A_Index " " IdxLv)
+			Else
+				LV_Modify(A_Index,, A_Index " " IdxLv)
+			LV_Colors.Row(ListID%A_List%, A_Index
+			, (RowColorLoop > 0) ? LoopLVColor : ((Action = "[LoopEnd]") ? LoopLVColor : "")
+			, (RowColorIf > 0 ) ? IfLVColor : ((Action = "[End If]") ? IfLVColor : ""))
+			If (Type = cType47)
+				LV_Colors.Row(ListID%A_List%, A_Index, 0xBB5046)
+			LV_Colors.Cell(ListID%A_List%, A_Index, 1, Color ? Color : "")
+		}
+		Else
+		{
+			LV_Modify(A_Index,, A_Index)
+			OnMessage(WM_NOTIFY, ""), LV_Colors.Detach(ListID%A_List%)
+		}
+		If (ShowActIdent = 1)
+		{
+			LV_Modify(A_Index, "Col2", ActLv Action)
+			If (Action = "[LoopEnd]")
+				ActLv := SubStr(ActLv, 4), LV_Modify(A_Index, "Col2", ActLv Action)
+			Else If (Action = "[End If]")
+				ActLv := SubStr(ActLv, 4), LV_Modify(A_Index, "Col2", ActLv Action)
+			Else If ((Type = cType17) && (InStr(Action, "[Else")))
+				LV_Modify(A_Index, "Col2", SubStr(ActLv, 4) Action)
+			Else If (Action = "[LoopStart]")
+				ActLv .= (ShowActIdent) ? "   " : ""
+			Else If ((Type = cType17) && (!InStr(Action, "[Else")))
+				ActLv .= (ShowActIdent) ? "   " : ""
+		}
+		If (IsUserFunc)
+		{
+			If (Type = cType47)
+				FuncLn := true
+			If Type in %cType35%,%cType36%,%cType37%
+			{
+				LV_Delete(A_Index), BadCmd := true
+				break
+			}
+			If ((FuncLn) && (Type = cType48))
+			{
+				LV_Delete(A_Index), BadPos := true
+				break
+			}
+			Else If ((!FuncLn) && ((Type != cType48) && (Type != cType42)))
+			{
+				LV_Delete(A_Index), BadPos := true
+				break
+			}
+			If ((MustDefault) && (Type = cType48) && (!InStr(Details, " := ")))
+				DebugDefault%A_List% := true
+			If ((Type = cType48) && (InStr(Details, " := ")))
+				MustDefault := true
+		}
+		Else If Type in %cType47%,%cType48%,%cType49%
+		{
+			LV_Delete(A_Index)
+			continue
+		}
+		Switch Type
+		{
+			Case cType3, cType4, cType13:
+				LV_Modify(A_Index, "Icon" IconsNames["mouse"])
+			Case cType5:
+				LV_Modify(A_Index, "Icon" IconsNames["pause"])
+			Case cType6:
+				LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
+			Case cType14:
+				LV_Modify(A_Index, "Icon" IconsNames["wait"])
+			Case cType7, cType38, cType39, cType40, cType41, cType45, cType51:
+				LV_Modify(A_Index, "Icon" IconsNames["loop"])
+			Case cType29:
+				LV_Modify(A_Index, "Icon" IconsNames["break"])
+			Case cType30:
+				LV_Modify(A_Index, "Icon" IconsNames["continue"])
+			Case cType21:
+				LV_Modify(A_Index, "Icon" IconsNames["variables"])
+			Case cType44, cType46:
+				LV_Modify(A_Index, "Icon" IconsNames["functions"])
+			Case cType17:
+				LV_Modify(A_Index, "Icon" IconsNames["ifstatements"])
+			Case cType18, cType19:
+				LV_Modify(A_Index, "Icon" IconsNames["sendmsg"])
+			Case cType15:
+				LV_Modify(A_Index, "Icon" IconsNames["color"])
+			Case cType16:
+				LV_Modify(A_Index, "Icon" IconsNames["image"])
+			Case cType34:
+				LV_Modify(A_Index, "Icon" IconsNames["com"])
+			Case cType35:
+				LV_Modify(A_Index, "Icon" IconsNames["labels"])
+			Case cType47:
+				LV_Modify(A_Index, "Icon" IconsNames["userfunc"])
+			Case cType48:
+				LV_Modify(A_Index, "Icon" IconsNames["parameter"])
+			Case cType49:
+				LV_Modify(A_Index, "Icon" IconsNames["return"])
+			Case cType43:
+				LV_Modify(A_Index, "Icon" IconsNames["expression"])
+			Case cType52:
+				LV_Modify(A_Index, "Icon" IconsNames["email"])
+			Case "Pause":
+				LV_Modify(A_Index, "Icon" IconsNames["recpause"])
+			Case "Return":
+				LV_Modify(A_Index, "Icon" IconsNames["stop"])
+			Case "ExitApp":
+				LV_Modify(A_Index, "Icon" IconsNames["exit"])
+			Case cType36, cType37:
+				LV_Modify(A_Index, "Icon" IconsNames["goto"])
+			Case cType11, cType14, "Run", "RunWait", "RunAs":
+				LV_Modify(A_Index, "Icon" IconsNames["run"])
+			Case "Process":
+				LV_Modify(A_Index, "Icon" IconsNames["process"])
+			Case "Shutdown":
+				LV_Modify(A_Index, "Icon" IconsNames["shutdown"])
+			Case cType42:
+				LV_Modify(A_Index, "Icon" IconsNames["comment"])
+			Case cType50:
+				LV_Modify(A_Index, "Icon" IconsNames["timer"])
+			Case cType53:
+				LV_Modify(A_Index, "Icon" IconsNames["download"])
+			Case cType54, cType55:
+				LV_Modify(A_Index, "Icon" IconsNames["zip"])
+			Case cType32, cType33:
+				LV_Modify(A_Index, "Icon" IconsNames["ie"])
+			Default:
+				(Action = "[Text]") ? LV_Modify(A_Index, "Icon" IconsNames["text"])
+			:	(Action = "[Control]") ? LV_Modify(A_Index, "Icon" IconsNames["control"])
+			:	(InStr(Type, "Sort") || InStr(Type, "String") || InStr(Type, "Split")) ? LV_Modify(A_Index, "Icon" IconsNames["string"])
+			:	(InStr(Type, "InputBox") || InStr(Type, "Msg") || InStr(Type, "Tip")
+				|| InStr(Type, "Progress") || InStr(Type, "Splash")) ? LV_Modify(A_Index, "Icon" IconsNames["dialogs"])
+			:	InStr(Type, "Win") ? LV_Modify(A_Index, "Icon" IconsNames["window"])
+			:	(InStr(Type, "File")=1 || InStr(Type, "Drive")=1) ? LV_Modify(A_Index, "Icon" IconsNames["files"])
+			:	(InStr(Type, "Wait") || InStr(Type, "Input")=1) ? LV_Modify(A_Index, "Icon" IconsNames["wait"])
+			:	InStr(Type, "Ini") ? LV_Modify(A_Index, "Icon" IconsNames["ini"])
+			:	InStr(Type, "Reg")=1 ? LV_Modify(A_Index, "Icon" IconsNames["registry"])
+			:	InStr(Type, "Sound") ? LV_Modify(A_Index, "Icon" IconsNames["sound"])
+			:	InStr(Type, "Group") ? LV_Modify(A_Index, "Icon" IconsNames["group"])
+			:	InStr(Type, "Env") ? LV_Modify(A_Index, "Icon" IconsNames["variables"])
+			:	(!InStr(Type, "Control") && InStr(Type, "Get")) ? LV_Modify(A_Index, "Icon" IconsNames["info"])
+			:	(InStr(Type, "Url")) ? LV_Modify(A_Index, "Icon" IconsNames["download"])
+			:	(InStr(Type, "LockState") || InStr(Type, "Time") || InStr(Type, "Transform") || InStr(Type, "ListVars")
+				|| InStr(Type, "Random") || InStr(Type, "ClipWait") || InStr(Type, "Block") || InStr(Type, "Debug")
+				|| InStr(Type, "Status") || InStr(Type, "SendLevel") || InStr(Type, "CoordMode")) ?  LV_Modify(A_Index, "Icon" IconsNames["misc"])
+			:	LV_Modify(A_Index, "Icon" IconsNames["keystroke"])
+		}
+	}
+	Critical, Off
+}
+
+SavePrompt(State, _Caller)
+{
+	global
+	
+	If (RowCheckInProgress)
+		return
+	OutputDebug, Func: %A_ThisFunc% [%State%] from %_Caller%
 
 	SavePrompt := State
-,	TB_Edit(TbFile, "Save",, State)
+	TB_Edit(TbFile, "Save",, State)
 	If (State)
 	{
 		Menu, FileMenu, Enable, %f_Lang003%`t%_s%Ctrl+S
 		If ((!Record) && (AutoBackup) && (!BackupFound))
-			SetTimer, ProjBackup, -1
+			SetTimer, ProjBackup, -100, 3000
 	}
 	Else
 		Menu, FileMenu, Disable, %f_Lang003%`t%_s%Ctrl+S
@@ -1263,7 +1456,7 @@ UpdateMailAccounts()
 	global
 	OutputDebug, Func: %A_ThisFunc%
 
-	Critical
+	Critical, 700
 	MailIni := ""
 	Loop, % LV_GetCount()
 	{

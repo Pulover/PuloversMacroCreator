@@ -682,7 +682,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
     ClearHistory()
     {
-        this.Handle.Slot := []
+        this.Handle.Slot.RemoveAt(1, this.Handle.Slot.Length())
     ,   this.Handle.ActiveSlot := 1
     }
 ;=======================================================================================

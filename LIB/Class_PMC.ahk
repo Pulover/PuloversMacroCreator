@@ -49,10 +49,10 @@
 	Import(SelectedFile, DL := "`n", New := "1")
 	{
 		local FoundC, Labels, TabText, AutoRefreshState
-		OutputDebug, Func: %A_ThisFunc%
+		OutputDebug, Func: %A_ThisFunc% Critical!
 		
 		Gui, chMacro:Submit, NoHide
-		ColOrder := LVOrder_Get(10, ListID%A_List%)
+		ColOrder := LVOrder_Get(11, ListID%A_List%)
 		If (New)
 		{
 			GoSub, DelLists
@@ -68,6 +68,7 @@
 		Gui, 1:+Disabled
 		Gui, chMacro:Default
 		StringSplit, SelectedFile, SelectedFile, %DL%, `r
+		Critical, 800
 		Loop, %SelectedFile0%
 		{
 			If InStr(FileExist(SelectedFile%A_Index%), "D")
@@ -82,7 +83,8 @@
 				TabCount++
 				Gui, chMacro:ListView, InputList%TabCount%
 				GuiControl, chMacro:, %TabSel%, Macro%TabCount%
-				GuiAddLV(TabCount), CopyMenuLabels[TabCount] := "Macro" TabCount
+				GuiAddLV(TabCount)
+				CopyMenuLabels[TabCount] := "Macro" TabCount
 				o_MacroContext[A_Index] := IsObject(this.PmcContexts[A_Index]) ? this.PmcContexts[A_Index] : {"Condition": "None", "Context": ""}
 				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 				GuiControl, chMacro:-g, InputList%TabCount%
@@ -114,8 +116,8 @@
 				
 				OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
 				Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
-				LVManager.SetHwnd(ListID%TabCount%), LVManager.ClearHistory()
-				LVManager.SetGroups(this.PmcGroups[A_Index]), LVManager.Add()
+				LVManager.SetHwnd(ListID%TabCount%)
+				LVManager.SetGroups(this.PmcGroups[A_Index])
 				GuiControl, chMacro:+gInputList, InputList%TabCount%
 			}
 		}
@@ -125,9 +127,9 @@
 		{
 			RemoveDuplicates(Labels)
 			GuiControl, chMacro:, A_List, |%Labels%
-			SetTimer, UpdateCopyTo, -100
+			SetTimer, UpdateCopyTo, -100, 3000
 		}
-		SetTimer, SetFinishButtom, -200
+		SetTimer, SetFinishButtom, -500, 4000
 		GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 		GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
