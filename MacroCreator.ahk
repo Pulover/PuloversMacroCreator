@@ -1159,7 +1159,7 @@ IfExist, %DefaultMacro%
 	GpConfig := ShowGroups, ShowGroups := false
 	LVManager[A_List].EnableGroups(false)
 	PMC.Import(DefaultMacro)
-	GoSub, UpdateCopyTo
+	SetTimer, UpdateCopyTo, -100, 100
 	GoSub, SetFinishButton
 	CurrentFileName := LoadedFileName
 	GoSub, FileRead
@@ -1977,7 +1977,7 @@ AutoRefreshState := AutoRefresh, AutoRefresh := 0
 GpConfig := ShowGroups, ShowGroups := false
 LVManager[A_List].EnableGroups(false)
 PMC.Import(A_GuiEvent)
-GoSub, UpdateCopyTo
+SetTimer, UpdateCopyTo, -100, 100
 GoSub, SetFinishButton
 CurrentFileName := LoadedFileName
 GoSub, FileRead
@@ -2016,7 +2016,7 @@ LVManager[A_List].EnableGroups(false)
 GoSub, ClearHistory
 Sleep, 100
 PMC.Import(Files)
-GoSub, UpdateCopyTo
+SetTimer, UpdateCopyTo, -100, 100
 GoSub, SetFinishButton
 CurrentFileName := LoadedFileName, Files := ""
 ; GoSub, b_Start
@@ -2073,7 +2073,7 @@ AutoRefreshState := AutoRefresh, AutoRefresh := 0
 GpConfig := ShowGroups, ShowGroups := false
 LVManager[A_List].EnableGroups(false)
 PMC.Import(Files,, 0)
-GoSub, UpdateCopyTo
+SetTimer, UpdateCopyTo, -100, 100
 GoSub, SetFinishButton
 Files := ""
 GuiControl, chMacro:Choose, A_List, %TabCount%
@@ -2239,7 +2239,7 @@ LVManager[A_List].EnableGroups(false)
 GoSub, ClearHistory
 Sleep, 100
 PMC.Import(File)
-GoSub, UpdateCopyTo
+SetTimer, UpdateCopyTo, -100, 100
 GoSub, SetFinishButton
 CurrentFileName := LoadedFileName, Files := ""
 ; GoSub, b_Start
@@ -12214,7 +12214,7 @@ OutputDebug, Label: %A_ThisLabel%
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
-Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
+Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 ColOrder := LVOrder_Get(11, ListID%A_List%), AllTabs := "", TabName := ""
 Loop, %TabCount%
 	AllTabs .= TabGetText(TabSel, A_Index) ","
@@ -12235,14 +12235,14 @@ If (ShowGroups)
 GoSub, chMacroGuiSize
 CopyMenuLabels[TabCount] := TabName
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
-Menu, CopyTo, Check, % CopyMenuLabels[A_List]
+Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, 28:+Range1-%TabCount%, OSHK
 
 TabSel:
 OutputDebug, Label: %A_ThisLabel%
 GoSub, SaveData
 Gui, 1:Submit, NoHide
-Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
+Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
@@ -12252,7 +12252,7 @@ GoSub, LoadData
 GoSub, RowCheck
 GuiControl, 28:, OSHK, %A_List%
 GoSub, PrevRefresh
-Menu, CopyTo, Check, % CopyMenuLabels[A_List]
+Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, chMacro:Focus, InputList%A_List%
 If (InStr(TabGetText(TabSel, A_List), "()"))
 	GoSub, FuncTab
@@ -12493,7 +12493,7 @@ Loop, %TabCount%
 	LVManager[A_Index].ClearHistory()
 	ListCount%A_Index% := 0
 	GuiControl, chMacro:+Redraw, InputList%A_Index%
-	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
+	Try Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
 }
 CopyMenuLabels[1] := "Macro1"
 Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
@@ -12998,7 +12998,7 @@ ShowGroups := GpConfig
 GoSub, chMacroGuiSize
 GoSub, LoadData
 GoSub, TabSel
-GoSub, UpdateCopyTo
+SetTimer, UpdateCopyTo, -100, 100
 GoSub, b_Start
 Gui, 1:-Disabled
 Gui, 32:Destroy
@@ -15980,16 +15980,24 @@ return
 
 UpdateCopyTo:
 OutputDebug, Label: %A_ThisLabel% !Critical
-Critical, 100
 Loop, %TabCount%
 {
-	Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
-	Sleep, 1
+	Try
+		Menu, CopyTo, Delete, % CopyMenuLabels[A_Index]
+	Catch
+		NoAction := ""
 	CopyMenuLabels[A_Index] := TabGetText(TabSel, A_Index)
+	Try
+		Menu, CopyTo, Uncheck, % CopyMenuLabels[A_Index]
+	Catch
+		NoAction := ""
 	Menu, CopyTo, Add, % CopyMenuLabels[A_Index], CopyList, Radio
 }
 Gui, chMacro:Submit, NoHide
-Menu, CopyTo, Check, % CopyMenuLabels[A_List]
+Try
+	Menu, CopyTo, Check, % CopyMenuLabels[A_List]
+Catch
+	NoAction := ""
 return
 
 ; Playback / Recording options menu:

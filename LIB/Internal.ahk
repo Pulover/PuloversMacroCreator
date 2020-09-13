@@ -246,9 +246,10 @@ DragTab()
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
 				Gui, chMacro:Submit, NoHide
 				ShowGroups := GpConfig
+				CopyMenuLabels := StrSplit(Trim(NewOrder.Tabs, "|"), "|")
 				GoSub, chMacroGuiSize
 				GoSub, LoadData
-				GoSub, UpdateCopyTo
+				SetTimer, UpdateCopyTo, -100, 100
 				Proj_Opts := ""
 				SavePrompt(true, A_ThisFunc)
 				SetTimer, HitFix, -10
