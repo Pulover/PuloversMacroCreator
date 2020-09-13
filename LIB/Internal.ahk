@@ -29,7 +29,7 @@ Data_GetTexts(Data, Index, ByRef Act := "", ByRef Det := "", ByRef Tim := "", By
 
 LV_GetSelCheck()
 {
-	Critical, 600
+	Critical
 	SelectedRows := {Checked: [], Selected: []}, RowNumber := 0
 	Loop, % LV_GetCount()
 	{
@@ -131,7 +131,6 @@ ReplaceCursor(hControl, hCursor)
 SBShowTip(Command)
 {
 	global Cmd_Tips
-	OutputDebug, Func: %A_ThisFunc%
 	
 	SB_SetText(Cmd_Tips[Command])
 	return Cmd_Tips[Command]
@@ -196,9 +195,9 @@ CloseTab()
 DragTab()
 {
 	global
-	OutputDebug, Func: %A_ThisFunc% Critical!
+	OutputDebug, Func: %A_ThisFunc% !Critical
 	
-	Critical, 500
+	Critical
 	CoordMode, Mouse, Window
 	If (A_Gui = 28)
 		PostMessage, 0xA1, 2,,, ahk_id %PMCOSC%
@@ -216,7 +215,7 @@ DragTab()
 				Proj_Opts := [], ActiveList := A_List
 				For each, Index in NewOrder.Order
 					Proj_Opts.Push({Auto: o_AutoKey[Index], Man: o_ManKey[Index], ID: ListID%Index%
-									, Times: o_TimesG[Index], Context: o_MacroContext[Index], Hist: LVManager.GetData(ListID%Index%)})
+									, Times: o_TimesG[Index], Context: o_MacroContext[Index], Hist: LVManager[Index].GetData()})
 				For each, Index in NewOrder.Order
 				{
 					o_AutoKey[A_Index] := Proj_Opts[A_Index].Auto
@@ -228,12 +227,11 @@ DragTab()
 				}
 				ActiveList := NewActive
 				GpConfig := ShowGroups, ShowGroups := false
-				LVManager.EnableGroups(false)
 				Loop, %TabCount%
 					GuiControl, chMacro:-g, InputList%A_Index%
 				Loop, %TabCount%
 					If (Proj_Opts[A_Index].ID != ListID%A_Index%)
-						LVManager.SetHwnd(ListID%A_Index%, Proj_Opts[A_Index].Hist)
+						LVManager[A_Index].SetData(, Proj_Opts[A_Index].Hist)
 				Loop, %TabCount%
 					GuiControl, chMacro:+gInputList, InputList%A_Index%
 				GuiControl, chMacro:, A_List, |
@@ -247,12 +245,10 @@ DragTab()
 				}
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
 				Gui, chMacro:Submit, NoHide
-				LVManager.SetHwnd(ListID%A_List%)
 				ShowGroups := GpConfig
 				GoSub, chMacroGuiSize
 				GoSub, LoadData
 				GoSub, UpdateCopyTo
-				GoSub, b_Start
 				Proj_Opts := ""
 				SavePrompt(true, A_ThisFunc)
 				SetTimer, HitFix, -10
@@ -598,9 +594,9 @@ ListIEWindows()
 GuiAddLV(ident)
 {
 	global
-	OutputDebug, Func: %A_ThisFunc% Critical!
-	
-	Critical, 800
+	OutputDebug, Func: %A_ThisFunc% !Critical
+
+	Critical
 	Gui, chMacro:Default
 	Gui, chMacro:Tab, %ident%
 	Try Gui, chMacro:Add, ListView, x+0 y+0 AltSubmit Checked hwndListID%ident% vInputList%ident% gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%|%w_Lang040%
@@ -909,19 +905,26 @@ EscCom(Reverse, ByRef Item1 := "", ByRef Item2 := "", ByRef Item3 := "", ByRef I
 	}
 }
 
-HistCheck()
+HistCheck(ListID := "")
 {
 	global
 	OutputDebug, Func: %A_ThisFunc%
 
-	SavePrompt(true, A_ThisFunc)
 	If (MaxHistory = 0)
 		return
-	LVManager.Add()
-	If (LVManager.Handle.Slot.Length() > MaxHistory+1)
-		LVManager.Handle.Slot.RemoveAt(1)
+	If (ListID = "")
+	{
+		ListID := A_List
+		LVManager[ListID].Add(HistData)
+	}
+	Else
+		LVManager[ListID].Add()
+	If (LVManager[ListID].Handle.Slot.Length() > MaxHistory+1)
+		LVManager[ListID].Handle.Slot.RemoveAt(1)
 	If (AutoRefresh = 1)
 		GoSub, PrevRefresh
+	SavePrompt(true, A_ThisFunc)
+	return
 }
 
 WinCheck(wParam, lParam, Msg)
@@ -1194,7 +1197,7 @@ LVCallback(Func, Hwnd)
 
 	If Func in Copy,Cut,Paste,Duplicate,Delete,Move,Drag
 	{
-		Critical, 2000
+		Critical
 		LV_Row := 0
 		Loop
 		{
@@ -1212,17 +1215,27 @@ LVCallback(Func, Hwnd)
 
 RowCheckFunc()
 {
-	global
+	local LvData, RowData, Rows := []
 
-	OutputDebug, Func: %A_ThisFunc% Critical!
-	Critical
-	Loop, % LV_GetCount()
+	OutputDebug, Func: %A_ThisFunc%
+	ControlGet, LvData, List,,, % "ahk_id " ListID%A_List%
+	Loop, Parse, LvData, `n
 	{
-		LV_GetText(Action, A_Index, 2)
+        RowData := []
+		Index := A_Index
+		ckd := (LV_GetNext(Index-1, "Checked")=Index) ? 1 : 0
+        RowData.Push("Check" ckd)
+		Loop, Parse, A_LoopField, `t
+            RowData.Push(A_LoopField)
+		Rows[A_Index] := [RowData*]
+	}
+	For Index, RowData in Rows
+	{
+		Action := RowData[3]
 		Action := LTrim(Action)
-		LV_GetText(Details, A_Index, 3)
-		LV_GetText(Type, A_Index, 6)
-		LV_GetText(Color, A_Index, 10)
+		Details := RowData[4]
+		Type := RowData[7]
+		Color := RowData[11]
 		LV_Modify(A_Index, "Col2", Action)
 		If (Type = "")
 			break
@@ -1393,7 +1406,7 @@ RowCheckFunc()
 			:	LV_Modify(A_Index, "Icon" IconsNames["keystroke"])
 		}
 	}
-	Critical, Off
+	return Rows
 }
 
 SavePrompt(State, _Caller)
@@ -1407,11 +1420,7 @@ SavePrompt(State, _Caller)
 	SavePrompt := State
 	TB_Edit(TbFile, "Save",, State)
 	If (State)
-	{
 		Menu, FileMenu, Enable, %f_Lang003%`t%_s%Ctrl+S
-		If ((!Record) && (AutoBackup) && (!BackupFound))
-			SetTimer, ProjBackup, -100, 3000
-	}
 	Else
 		Menu, FileMenu, Disable, %f_Lang003%`t%_s%Ctrl+S
 }
@@ -1423,17 +1432,15 @@ SaveProject(FileName)
 
 	Loop, %TabCount%
 	{
-		LVManager.SetHwnd(ListID%A_Index%)
 		PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
 		. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 		. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
 		IfContext := "Context=" o_MacroContext[A_Index].Condition "|" o_MacroContext[A_Index].Context "`n"
-		TabGroups := "Groups=" LVManager.GetGroups() "`n"
+		TabGroups := "Groups=" LVManager[A_Index].GetGroups() "`n"
 		LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
 		All_Data .= LV_Data
 	}
 	FileAppend, %All_Data%, %FileName%
-	LVManager.SetHwnd(ListID%A_List%)
 }
 
 TreeGetChecked()
@@ -1456,7 +1463,7 @@ UpdateMailAccounts()
 	global
 	OutputDebug, Func: %A_ThisFunc%
 
-	Critical, 700
+	Critical
 	MailIni := ""
 	Loop, % LV_GetCount()
 	{

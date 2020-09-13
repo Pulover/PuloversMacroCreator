@@ -14,8 +14,8 @@
 ;=======================================================================================
 ;
 ; Edit Functions:
-;    Copy()
-;    Cut()
+;    Copy([CopyData])
+;    Cut([CopyData])
 ;    Paste([Row, Multiline])
 ;    Duplicate()
 ;    Delete()
@@ -23,7 +23,7 @@
 ;    Drag([DragButton, AutoScroll, ScrollDelay, LineThick, Color])
 ;
 ; History Functions:
-;    Add()
+;    Add([Data])
 ;    Undo()
 ;    Redo()
 ;    ClearHistory()
@@ -46,6 +46,7 @@
 ;    RemoveHwnd(Hwnd)
 ;    SetHwnd(Hwnd [, NewData])
 ;    GetData([Hwnd])
+;    SetData([Hwnd])
 ;    SetCallback(Func)
 ;
 ;=======================================================================================
@@ -270,6 +271,43 @@ Class LV_Rows extends LV_Rows.LV_EX
             return this.hArray[Hwnd].Clone()
     }
 ;=======================================================================================
+;    Function:           Handle.SetData()
+;    Description:        Sets the CopyData, data, history and groups for specific or current
+;                            ListView.
+;    Parameters:
+;        Hwnd:           Hwnd of a previously inserted ListView. If left blank, the
+;                            current active ListView will be used.
+;    Return:             No return value.
+;=======================================================================================
+    SetData(Hwnd := "", Data := "", CopyData := "")
+    {
+        If (Hwnd = "")
+            Hwnd := this.LVHwnd
+        this.LVHwnd := this.hArray[Hwnd].Hwnd
+    ,   this.Handle := this.hArray[Hwnd]
+        Gui, Listview, % this.LVHwnd
+
+        If (Data != "")
+        {
+            If (IsObject(Data))
+            {
+                this.hArray[Hwnd].GroupsArray := Data.GroupsArray
+            ,   this.hArray[Hwnd].Slot := Data.Slot
+            ,   this.hArray[Hwnd].ActiveSlot := Data.ActiveSlot
+            ,   this.Load()
+            }
+            Else If (this.hArray.HasKey(Data))
+            {
+                this.hArray[Hwnd].GroupsArray := this.hArray[Data].GroupsArray.Clone()
+            ,   this.hArray[Hwnd].Slot := this.hArray[Data].Slot.Clone()
+            ,   this.hArray[Hwnd].ActiveSlot := this.hArray[Data].ActiveSlot
+            ,   this.Load()
+            }
+        }
+        If (CopyData != "")
+            this.CopyData := CopyData
+    }
+;=======================================================================================
 ;    Function:           LV_Rows.SetCallback()
 ;    Description:        Sets a callback function where the user can take actions based
 ;                            on the function being called called. The Callback function
@@ -289,9 +327,11 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
 ;    Function:           LV_Rows.Copy()
 ;    Description:        Copy selected rows to memory.
+;    Parameters:
+;        CopyData:       Optional output variable to store the copied data.
 ;    Return:             Number of copied rows.
 ;=======================================================================================
-    Copy()
+    Copy(ByRef CopyData := "")
     {
         this.CopyData := [], LV_Row := 0
         Loop
@@ -304,14 +344,17 @@ Class LV_Rows extends LV_Rows.LV_EX
         ,   this.CopyData.Push(Row)
         ,   CopiedLines := A_Index
         }
+        CopyData := this.CopyData
         return CopiedLines
     }
 ;=======================================================================================
 ;    Function:           LV_Rows.Cut()
 ;    Description:        Copy selected rows to memory and delete them.
+;    Parameters:
+;        CopyData:       Optional output variable to store the copied data.
 ;    Return:             Number of copied rows.
 ;=======================================================================================
-    Cut()
+    Cut(ByRef CopyData := "")
     {
         this.CopyData := [], LV_Row := 0
         Loop
@@ -324,6 +367,7 @@ Class LV_Rows extends LV_Rows.LV_EX
         ,   this.CopyData.Push(Row)
         ,   CopiedLines := A_Index
         }
+        CopyData := this.CopyData
         this.Delete()
         this.RefreshGroups()
         return CopiedLines
@@ -628,17 +672,22 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;    Function:           Handle.Add()
 ;    Description:        Adds an entry on History. This function requires
 ;                            initializing: MyListHandle := New LV_Rows()
+;    Parameters:
+;        Data:           An optional object containing an array of RowText Data. The
+;                            object MUST be an array of objects retrieved from RowText().
 ;    Return:             The total number of entries in history.
 ;=======================================================================================
-    Add()
+    Add(Data := "")
     {
-        Rows := []
-        If (this.Handle.ActiveSlot < this.Handle.Slot.Length())
-            this.Handle.Slot.RemoveAt(this.Handle.ActiveSlot+1, this.Handle.Slot.Length())
-        Loop, % LV_GetCount()
+        Rows := Data != "" ? Data : []
+
+        If (Data = "")
         {
-            RowData := this.RowText(A_Index)
-        ,   Rows[A_Index] := [RowData*]
+            Loop, % LV_GetCount()
+            {
+                RowData := this.RowText(A_Index)
+            ,   Rows[A_Index] := [RowData*]
+            }
         }
         
         Groups := []
@@ -646,7 +695,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             Groups[e] := {Name: g.Name, Row: g.Row}
         
         this.Handle.Slot.Push({Rows: Rows, Groups: Groups})
-        this.Handle.ActiveSlot := this.Handle.Slot.Length()
+    ,   this.Handle.ActiveSlot := this.Handle.Slot.Length()
         return this.Handle.Slot.Length()
     }
 ;=======================================================================================
@@ -684,6 +733,7 @@ Class LV_Rows extends LV_Rows.LV_EX
     {
         this.Handle.Slot.RemoveAt(1, this.Handle.Slot.Length())
     ,   this.Handle.ActiveSlot := 1
+        OutputDebug, % "ClearHistory: " this.Handle.Slot.Length() 
     }
 ;=======================================================================================
 ;    Group Functions:    Set, add and remove Listview Groups.
@@ -694,11 +744,11 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;    Description:        Enables or disables Groups in the currently selected ListView
 ;                            initializing: MyListHandle := New LV_Rows()
 ;    Parameters:
-;        Enable:         If TRUE enables GroupView in the selected ListView. If FALSE
+;        Enable:         If true enables GroupView in the selected ListView. If false
 ;                            disables it.
 ;        FirstName:      Name for the first (mandatory) group at row 1.
-;        Collapsible:    If TRUE makes the groups collapsible.
-;        StartCollapsed: If TRUE starts all groups collapsed.
+;        Collapsible:    If true makes the groups collapsible.
+;        StartCollapsed: If true starts all groups collapsed.
 ;    Return:             No return value.
 ;=======================================================================================
     EnableGroups(Enable := true, FirstName := "New Group", Collapsible := true, StartCollapsed := false)
@@ -721,7 +771,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;        Row:            Number of the row for the group to be inserted. If left blank
 ;                            the first selected row will be used.
 ;        GroupName:      Name of the new group or new name for an existing group.
-;    Return:             TRUE if Row is bigger than 0 or FALSE otherwise.
+;    Return:             True if Row is bigger than 0 or false otherwise.
 ;=======================================================================================
     InsertGroup(Row := "", GroupName := "New Group")
     {
@@ -763,7 +813,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;    Parameters:
 ;        Row:            Number of a row the group belongs to. If left blank the first
 ;                            selected row will be used.
-;    Return:             TRUE if Row is bigger than 0 or FALSE otherwise.
+;    Return:             True if Row is bigger than 0 or false otherwise.
 ;=======================================================================================
     RemoveGroup(Row := "")
     {
@@ -860,7 +910,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;    Description:        Returns a string or object representing the current groups in
 ;                            the selected ListView.
 ;    Parameters:
-;        AsObject:       If TRUE returns an object with the groups, otherwise an string.
+;        AsObject:       If true returns an object with the groups, otherwise an string.
 ;                            Both can be used with SetGroups().
 ;    Return:             No return value.
 ;=======================================================================================
@@ -876,8 +926,8 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;    Function:           Handle.SetGroupCollapisable()
 ;    Description:        Enables or disables Groups Collapsible style.
 ;    Parameters:
-;        Collapsible:    If TRUE enables Collapsible style in the selected ListView.
-;                            If FALSE disables it.
+;        Collapsible:    If true enables Collapsible style in the selected ListView.
+;                            If false disables it.
 ;    Return:             No return value.
 ;=======================================================================================
     SetGroupCollapisable(Collapsible := true)
@@ -907,7 +957,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;    Function:           Handle.CollapseAll()
 ;    Description:        Collapses or expands all groups.
 ;    Parameters:
-;        Collapse:       If TRUE collapses all groups in the selected ListView. If FALSE
+;        Collapse:       If true collapses all groups in the selected ListView. If false
 ;                            expands all groups in the selected ListView.
 ;    Return:             No return value.
 ;=======================================================================================
@@ -921,7 +971,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;                            automatically in from other functions, usually it's not
 ;                            necessary to use it in your script.
 ;    Parameters:
-;        Collapsed:      If TRUE collapses all groups in the selected ListView.
+;        Collapsed:      If true collapses all groups in the selected ListView.
 ;    Return:             No return value.
 ;=======================================================================================
     RefreshGroups(Collapsed := false)
@@ -955,7 +1005,7 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;    Description:        Loads a specified entry in History into ListView.
 ;    Parameters:
 ;        Position:       Number of entry position to be loaded.
-;    Return:             false if entry exists, false otherwise.
+;    Return:             true if entry exists, false otherwise.
 ;=======================================================================================
     Load(Position := "")
     {

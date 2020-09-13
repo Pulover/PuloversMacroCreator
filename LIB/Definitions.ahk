@@ -129,8 +129,9 @@ RecOptChecks := ["ClearNewList", "", "Strokes", "CaptKDn", "RecKeybdCtrl"
 ,	ScopedVars := {}
 ,	Static_Vars := {}
 ,	RegisteredTimers := []
-,	LVManager := new LV_Rows()
-,	LVManager.SetCallback("LVCallback")
+,	LVManager := []
+,	LVCopier := new LV_Rows()
+,	HistData := Object()
 ,	Exp_Mult := {2:1, 4:2, 8:3, 16:4, 32:5, 64:6, 128:7, 256:8}
 ,	MsgBoxStyles := [1048576, 524288, 262144, 512, 256]
 ,	Email_Fields := ["email", "smtpserver", "smtpserverport", "sendusername", "sendpassword"

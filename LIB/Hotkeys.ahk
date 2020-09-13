@@ -15,13 +15,17 @@ MButton & WheelDown::
 ^+Down::
 GoSub, MoveDn
 return
-+WheelUp::
 ^[::
 GoSub, MoveSelUp
 return
-+WheelDown::
 ^]::
 GoSub, MoveSelDn
+return
++WheelUp::
+Send, {WheelLeft}
+return
++WheelDown::
+Send {WheelRight}
 return
 
 ^c::GoSub, CopyRows

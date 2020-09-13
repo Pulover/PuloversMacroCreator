@@ -63,10 +63,9 @@
 	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%Macro_On%
-	LVManager.SetHwnd(ListID%Macro_On%)
 	Loop, %m_ListCount%
 	{
-		RowData := LVManager.RowText(A_Index)
+		RowData := LVManager[Macro_On].RowText(A_Index)
 	,   LVData[A_Index] := [RowData*]
 	}
 	ActiveRows := LV_GetSelCheck()

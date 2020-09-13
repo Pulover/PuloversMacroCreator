@@ -101,7 +101,7 @@ Else
 	{
 		RowNumber := LV_GetNext(RowNumber)
 	,	LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, Type, Target, Window)
-	,	LVManager.InsertAtGroup(1, RowNumber)
+	,	LVManager[A_List].InsertAtGroup(1, RowNumber)
 	,	RowNumber++
 	}
 	LV_Modify(RowNumber, "Vis")

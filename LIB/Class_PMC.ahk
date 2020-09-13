@@ -49,7 +49,7 @@
 	Import(SelectedFile, DL := "`n", New := "1")
 	{
 		local FoundC, Labels, TabText, AutoRefreshState
-		OutputDebug, Func: %A_ThisFunc% Critical!
+		OutputDebug, Func: %A_ThisFunc% !Critical
 		
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(11, ListID%A_List%)
@@ -116,8 +116,9 @@
 				
 				OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
 				Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
-				LVManager.SetHwnd(ListID%TabCount%)
-				LVManager.SetGroups(this.PmcGroups[A_Index])
+				LVManager[TabCount] := new LV_Rows(ListID%TabCount%)
+				LVManager[TabCount].Add()
+				LVManager[TabCount].SetGroups(this.PmcGroups[A_Index])
 				GuiControl, chMacro:+gInputList, InputList%TabCount%
 			}
 		}
@@ -127,9 +128,7 @@
 		{
 			RemoveDuplicates(Labels)
 			GuiControl, chMacro:, A_List, |%Labels%
-			SetTimer, UpdateCopyTo, -100, 3000
 		}
-		SetTimer, SetFinishButtom, -500, 4000
 		GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 		GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
