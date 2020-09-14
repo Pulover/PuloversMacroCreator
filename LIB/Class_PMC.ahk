@@ -63,7 +63,7 @@
 		Else
 		{
 			Loop, %TabCount%
-				Labels .= TabGetText(TabSel, A_Index) "|"
+				Labels .= CopyMenuLabels[A_Index] "|"
 		}
 		Gui, 1:+Disabled
 		Gui, chMacro:Default
@@ -84,9 +84,7 @@
 				Gui, chMacro:ListView, InputList%TabCount%
 				GuiControl, chMacro:, %TabSel%, Macro%TabCount%
 				GuiAddLV(TabCount)
-				CopyMenuLabels[TabCount] := "Macro" TabCount
 				o_MacroContext[A_Index] := IsObject(this.PmcContexts[A_Index]) ? this.PmcContexts[A_Index] : {"Condition": "None", "Context": ""}
-				Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 				GuiControl, chMacro:-g, InputList%TabCount%
 				this.LVLoad("InputList" TabCount, this.PmcCode[A_Index])
 				Sleep, 10
@@ -129,6 +127,7 @@
 			RemoveDuplicates(Labels)
 			GuiControl, chMacro:, A_List, |%Labels%
 		}
+		CopyMenuLabels := StrSplit(Trim(Labels, "|"), "|")
 		GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 		GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%

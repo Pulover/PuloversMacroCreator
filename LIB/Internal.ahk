@@ -235,6 +235,7 @@ DragTab()
 				Loop, %TabCount%
 					GuiControl, chMacro:+gInputList, InputList%A_Index%
 				GuiControl, chMacro:, A_List, |
+				CopyMenuLabels := StrSplit(Trim(NewOrder.Tabs, "|"), "|")
 				GuiControl, chMacro:, A_List, % NewOrder.Tabs
 				Loop, %TabCount%
 				{
@@ -246,10 +247,9 @@ DragTab()
 				GuiControl, chMacro:Choose, A_List, %ActiveList%
 				Gui, chMacro:Submit, NoHide
 				ShowGroups := GpConfig
-				CopyMenuLabels := StrSplit(Trim(NewOrder.Tabs, "|"), "|")
 				GoSub, chMacroGuiSize
 				GoSub, LoadData
-				SetTimer, UpdateCopyTo, -100, 100
+				GoSub, UpdateCopyTo
 				Proj_Opts := ""
 				SavePrompt(true, A_ThisFunc)
 				SetTimer, HitFix, -10
@@ -384,7 +384,7 @@ CenterImgSrchCoords(File, ByRef CoordX, ByRef CoordY)
 	OutputDebug, Func: %A_ThisFunc%
 	LastEL := ErrorLevel
 	
-	Gui, Pict:Add, Pic, vLoadedPic, % RegExReplace(file, "^(\*\w+\s)+")
+	Gui, Pict:Add, Pic, vLoadedPic, % RegExReplace(File, "^(\*\w+\s)+")
 	GuiControlGet, LoadedPic, Pict:Pos
 	Gui, Pict:Destroy
 	CoordX += LoadedPicW // 2
@@ -747,7 +747,7 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 				Try Hotkey, % LastPlay.Man[A_Index], f_ManKey, Off
 				If (!ListCount%A_Index%)
 					continue
-				If (InStr(TabGetText(TabSel, A_Index), "()"))
+				If (InStr(CopyMenuLabels[A_Index], "()"))
 					o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
 				If (o_AutoKey[A_Index] != "")
 				{
@@ -771,7 +771,7 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 				Try Hotkey, % LastPlay.Man[A_Index], f_ManKey, Off
 				If (!ListCount%A_Index%)
 					continue
-				If (InStr(TabGetText(TabSel, A_Index), "()"))
+				If (InStr(CopyMenuLabels[A_Index], "()"))
 					o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
 				If (o_AutoKey[A_Index] != "")
 				{
@@ -829,7 +829,7 @@ CheckDuplicateLabels()
 		}
 	}
 	Loop, %TabCount%
-		Proj_Labels .= TabGetText(TabSel, A_Index) "`n"
+		Proj_Labels .= CopyMenuLabels[A_Index] "`n"
 	Sort, Proj_Labels, U
 	return ErrorLevel
 }
@@ -1193,7 +1193,7 @@ LVCallback(Func, Hwnd)
 {
 	global
 	
-	If (!InStr(TabGetText(TabSel, A_List), "()"))
+	If (!InStr(CopyMenuLabels[A_List], "()"))
 		return true
 
 	If Func in Copy,Cut,Paste,Duplicate,Delete,Move,Drag
@@ -1435,7 +1435,7 @@ SaveProject(FileName)
 	{
 		PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
 		. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
-		. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" TabGetText(TabSel, A_Index) "`n"
+		. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" CopyMenuLabels[A_Index] "`n"
 		IfContext := "Context=" o_MacroContext[A_Index].Condition "|" o_MacroContext[A_Index].Context "`n"
 		TabGroups := "Groups=" LVManager[A_Index].GetGroups() "`n"
 		LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"

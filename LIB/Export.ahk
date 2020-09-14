@@ -1059,7 +1059,7 @@ CenterImgSrchCoords(File, ByRef CoordX, ByRef CoordY)
 	static LoadedPic
 	LastEL := ErrorLevel
 	
-	Gui, Pict:Add, Pic, vLoadedPic, % RegExReplace(file, "^(\*\w+\s)+")
+	Gui, Pict:Add, Pic, vLoadedPic, % RegExReplace(File, "^(\*\w+\s)+")
 	GuiControlGet, LoadedPic, Pict:Pos
 	Gui, Pict:Destroy
 	CoordX += LoadedPicW // 2

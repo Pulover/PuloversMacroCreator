@@ -508,7 +508,7 @@ __sendEditor(hwnd, msg:=0, wParam:=0, lParam:=0){
         return                      ; Exit because we did what we needed to do already.
 
     ; The fast way to control Scintilla
-    return DllCall(df_%hwnd%            ; DIRECT FUNCTION
+    return Try DllCall(df_%hwnd%            ; DIRECT FUNCTION
                   ,"UInt" ,dp_%hwnd%    ; DIRECT POINTER
                   ,"UInt" ,!(msg+0) ? %msg% : msg
                   ,"Int"  ,inStr(wParam, "-") ? wParam : (%wParam%+0 ? %wParam% : wParam) ; handles negative ints

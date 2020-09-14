@@ -5,7 +5,8 @@
 ;                    and returns an array with the new order and text labels.
 ;
 ; Author:        Pulover [Rodolfo U. Batista] (rodolfoub@gmail.com)
-; Credits:       TabGetText() adapted from GuiTabEx by just me
+; Credits:       TabGetText() adapted from TC_EX by just me
+;                https://www.autohotkey.com/boards/viewtopic.php?f=6&t=1271
 ;
 ;=======================================================================================
 TabDrag(DragButton := "LButton", LineThick := 2, Color := "Black", ShowUnder := false)
@@ -105,20 +106,38 @@ TabGetRect(Tab, Hwnd, ByRef Left, ByRef Top, ByRef Right, ByRef Bottom)
 ,   Right := NumGet(TabXYStruct, 8, "UInt"), Bottom := NumGet(TabXYStruct, 12, "UInt")
 }
 ;=======================================================================================
-TabGetText(Hwnd, Tab)
+TabGetText(HTC, TabIndex)
 {
-	Static Size := (5 * 4) + (2 * A_PtrSize) + (A_PtrSize - 4)
-	Static TCIF_TEXT := 0x0001
-	Static TCM_GETITEM := 0x133C
-	
-	VarSetCapacity(ItemText, 512, 0)
-,	VarSetCapacity(TCITEM, Size, 0)
-,	NumPut(TCIF_TEXT, TCITEM, 0, "UInt")
-,	NumPut(&ItemText, TCITEM, (3 * 4) + (A_PtrSize - 4), "Ptr")
-,	NumPut(512, TCITEM, (3 * 4) + (A_PtrSize - 4) + A_PtrSize, "Int")
-	SendMessage, TCM_GETITEM, Tab - 1, &TCITEM,, ahk_id %Hwnd%
-	TxtPtr := NumGet(TCITEM, (3 * 4) + (A_PtrSize - 4), "UPtr")
-	return StrGet(TxtPtr, 512)
+   Static TCIF_TEXT := 0x0001
+   Static TCM_GETITEM := A_IsUnicode ? 0x133C : 0x1305 ; TCM_GETITEMW : TCM_GETITEMA
+   Static OffTxL := (3 * 4) + (A_PtrSize - 4) + A_PtrSize
+   Static OffTxP := (3 * 4) + (A_PtrSize - 4)
+   Static MaxLength := 256
+   If (TabIndex < 0) or (TabIndex > GetCount(HTC))
+      Return
+   VarSetCapacity(ItemText, MaxLength * (A_IsUnicode ? 2 : 1), 0)
+   CreateTCITEM(TCITEM)
+   NumPut(TCIF_TEXT, TCITEM, 0, "UInt")
+   NumPut(&ItemText, TCITEM, OffTxP, "Ptr")
+   NumPut(MaxLength, TCITEM, OffTxL, "Int")
+   SendMessage, % TCM_GETITEM, % (TabIndex - 1), % &TCITEM, , % "ahk_id " . HTC
+   If (ErrorLevel = 0)
+      Return
+   TxtPtr := NumGet(TCITEM, OffTxP, "UPtr")
+   If (TxtPtr = 0)
+      Return
+   Return StrGet(TxtPtr, MaxLength)
+}
+; ======================================================================================================================
+CreateTCITEM(ByRef TCITEM) {
+   Static Size := (5 * 4) + (2 * A_PtrSize) + (A_PtrSize - 4)
+   VarSetCapacity(TCITEM, Size, 0)
+}
+; ======================================================================================================================
+GetCount(HTC) {
+   Static TCM_GETITEMCOUNT := 0x1304
+   SendMessage, % TCM_GETITEMCOUNT, 0, 0, , % "ahk_id " . HTC
+   Return ErrorLevel
 }
 ;=======================================================================================
 Swap(From, To, Total)
