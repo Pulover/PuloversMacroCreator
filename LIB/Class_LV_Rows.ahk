@@ -733,7 +733,6 @@ Class LV_Rows extends LV_Rows.LV_EX
     {
         this.Handle.Slot.RemoveAt(1, this.Handle.Slot.Length())
     ,   this.Handle.ActiveSlot := 1
-        OutputDebug, % "ClearHistory: " this.Handle.Slot.Length() 
     }
 ;=======================================================================================
 ;    Group Functions:    Set, add and remove Listview Groups.

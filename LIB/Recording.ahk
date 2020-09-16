@@ -1,50 +1,125 @@
-﻿KeyboardRecord:
-Loop
+﻿;##### Capture Keys #####
+
+MainLoop:
+If (!Capt || !ListFocus)
 {
-	If (Record = 0)
-		break
-	Input, sKey, V M L1, %VirtualKeys%
-	If (ErrorLevel = NewInput)
-		continue
-	sKey := (ErrorLevel != "Max") ? SubStr(ErrorLevel, 8) : sKey
-	If sKey in %A_Space%,`n,`t
-		continue
-	GoSub, ChReplace
-	If (InStr(sKey, "_") < 1)
-		If (Asc(sKey) < 192) && ((sKey != "/") && (sKey != ".") && (sKey != "?")&& (!GetKeyState(sKey, "P")))
-			continue
-	If ((GetKeyState("RAlt", "P")) && (!HoldRAlt))
-		sKey := "RAlt", HoldRAlt := 1
-	If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
-	|| InStr(sKey, "Alt") || InStr(sKey, "Win"))
-	{
-		ScK := GetKeySC(sKey)
-		If (Hold%ScK%)
-			continue
-		Hotkey, If
-		#If
-		If (sKey = "/")
-			HotKey, ~*VKC1SC730 Up, RecKeyUp, On
-		Else
-			HotKey, ~*%sKey% Up, RecKeyUp, On
-		If (sKey = ".")
-			HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
-		Hotkey, If
-		#If
-		Hold%ScK% := 1, sKey .= " Down"
-	}
-	Else If ((StrLen(sKey) = 1) && (!GetKeyState("CapsLock", "T")))
-		StringLower, sKey, sKey
-	tKey := sKey, sKey := "{" sKey "}"
-	If (Record = 0)
-		break
-	GoSub, InsertRow
+	SetTimer, MainLoop, Off
+	GoSub, Capt
+	return
 }
+Input, sKey, M L1 T10, %VirtualKeys%
+If (ErrorLevel = "NewInput")
+	return
+If (ErrorLevel = "Timeout")
+{
+	SetTimer, MainLoop, Off
+	GoSub, Capt
+	return
+}
+sKey := (ErrorLevel != "Max") ? SubStr(ErrorLevel, 8) : sKey
+If sKey in %A_Space%,`n,`t
+	return
+GoSub, ChReplace
+If (InStr(sKey, "_") < 1)
+	If (Asc(sKey) < 192) && ((sKey != "/") && (sKey != ".") && (!GetKeyState(sKey, "P")))
+		return
+If ((GetKeyState("RAlt", "P")) && (!HoldRAlt))
+	sKey := "RAlt", HoldRAlt := 1
+If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
+|| InStr(sKey, "Alt") || InStr(sKey, "Win"))
+{
+	ScK := GetKeySC(sKey)
+	If (Hold%ScK%)
+		return
+	Hotkey, If
+	#If
+	If (sKey = "/")
+		HotKey, ~*VKC1SC730 Up, RecKeyUp, On
+	Else
+		HotKey, ~*%sKey% Up, RecKeyUp, On
+	If (sKey = ".")
+		HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
+	Hotkey, If
+	#If
+	Hold%ScK% := 1, sKey .= " Down"
+}
+Else If ((StrLen(sKey) = 1) && (!GetKeyState("CapsLock", "T")))
+	StringLower, sKey, sKey
+tKey := sKey, sKey := "{" sKey "}"
+If (!Capt)
+	SetTimer, MainLoop, Off
+If (ListFocus)
+	GoSub, InsertRow
+return
+
+KeyboardRecord:
+If (Record = 0)
+{
+	SetTimer, KeyboardRecord, Off
+	return
+}
+Input, sKey, V M L1 T3, %VirtualKeys%
+If ((ErrorLevel = "NewInput") || (ErrorLevel = "Timeout"))
+{
+	SetTimer, KeyboardRecord, Off
+	SetTimer, KeyboardRecord, -1
+	return
+}
+sKey := (ErrorLevel != "Max") ? SubStr(ErrorLevel, 8) : sKey
+If sKey in %A_Space%,`n,`t
+{
+	SetTimer, KeyboardRecord, Off
+	SetTimer, KeyboardRecord, -1
+	return
+}
+GoSub, ChReplace
+If (InStr(sKey, "_") < 1)
+{
+	If (Asc(sKey) < 192) && ((sKey != "/") && (sKey != ".") && (sKey != "?") && (!GetKeyState(sKey, "P")))
+	{
+		SetTimer, KeyboardRecord, Off
+		SetTimer, KeyboardRecord, -1
+		return
+	}
+}
+If ((GetKeyState("RAlt", "P")) && (!HoldRAlt))
+	sKey := "RAlt", HoldRAlt := 1
+If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, "Shift")
+|| InStr(sKey, "Alt") || InStr(sKey, "Win"))
+{
+	ScK := GetKeySC(sKey)
+	If (Hold%ScK%)
+	{
+		SetTimer, KeyboardRecord, Off
+		SetTimer, KeyboardRecord, -1
+		return
+	}
+	Hotkey, If
+	#If
+	If (sKey = "/")
+		HotKey, ~*VKC1SC730 Up, RecKeyUp, On
+	Else
+		HotKey, ~*%sKey% Up, RecKeyUp, On
+	If (sKey = ".")
+		HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
+	Hotkey, If
+	#If
+	Hold%ScK% := 1, sKey .= " Down"
+}
+Else If ((StrLen(sKey) = 1) && (!GetKeyState("CapsLock", "T")))
+	StringLower, sKey, sKey
+tKey := sKey, sKey := "{" sKey "}"
+If (Record = 0)
+{
+	SetTimer, KeyboardRecord, Off
+	return
+}
+GoSub, InsertRow
+SetTimer, KeyboardRecord, Off
+SetTimer, KeyboardRecord, -1
 return
 
 InsertRow:
-IfWinActive, ahk_id %PMCOSC%
-	return
 Type := cType1, Target := "", Window := ""
 If (Record = 1)
 {
@@ -91,7 +166,7 @@ Else
 RowSelection := LV_GetCount("Selected")
 If (Record || RowSelection = 0)
 {
-	LV_Add("Check", ListCount%A_List%+1, tKey, sKey, 1, InputDelay, Type, Target, Window)
+	LV_Add("Check Icon" IconsNames["keystroke"], ListCount%A_List%+1, tKey, sKey, 1, InputDelay, Type, Target, Window)
 ,	LV_Modify(ListCount%A_List%+1, "Vis")
 }
 Else
@@ -100,17 +175,38 @@ Else
 	Loop, %RowSelection%
 	{
 		RowNumber := LV_GetNext(RowNumber)
-	,	LV_Insert(RowNumber, "Check", RowNumber, tKey, sKey, 1, DelayG, Type, Target, Window)
+	,	LV_Insert(RowNumber, "Check Icon" IconsNames["keystroke"], RowNumber, tKey, sKey, 1, DelayG, Type, Target, Window)
 	,	LVManager[A_List].InsertAtGroup(1, RowNumber)
 	,	RowNumber++
 	}
 	LV_Modify(RowNumber, "Vis")
 }
-If (!Record)
+return
+
+RecKeyUp:
+If (!GetKeyState("RAlt", "P"))
+	HoldRAlt := 0
+If (Record = 0)
 {
-	GoSub, RowCheck
-	GoSub, b_Start
+	Gui, 1:Submit, NoHide
+	If (Capt = 0)
+	{
+		HotKey, %A_ThisHotKey%, RecKeyUp, Off
+		return
+	}
 }
+StringTrimLeft, sKey, A_ThisHotKey, 2
+If (sKey = "VKC1SC730 Up")
+	sKey := "/ Up"
+Else If (sKey = "VKC2SC7E0 Up")
+	sKey := ". Up"
+ScK := GetKeySC(RegExReplace(sKey, " Up$"))
+Hold%ScK% := 0, tKey := sKey, sKey := "{" sKey "}"
+If (Record || ListFocus)
+	GoSub, InsertRow
+HotKey, %A_ThisHotKey%, RecKeyUp, Off
+If (InStr(A_ThisHotKey, "Win"))
+	Send, %sKey%
 return
 
 MouseRecord:
@@ -144,6 +240,49 @@ If (MScroll = 1)
 		GoSub, MouseInput
 		mScDn := 0
 	}
+}
+return
+
+Replace:
+If (InStr(sKey, "_"))
+	StringReplace, tKey, tKey, _, %A_Space%, All
+If (InStr(tKey, "+"))
+	StringReplace, sKey, tKey, +, Shift Down}{
+If (InStr(tKey, "^"))
+	StringReplace, sKey, tKey, ^, Control Down}{
+If (InStr(tKey, "!"))
+	StringReplace, sKey, tKey, !, Alt Down}{
+If (InStr(sKey, "+"))
+	StringReplace, sKey, sKey, +, Shift Down}{
+If (InStr(sKey, "^"))
+	StringReplace, sKey, sKey, ^, Control Down}{
+If (InStr(sKey, "!"))
+	StringReplace, sKey, sKey, !, Alt Down}{
+
+If (InStr(sKey, "Alt Down"))
+	sKey := sKey "}{Alt Up"
+If (InStr(sKey, "Control Down"))
+	sKey := sKey "}{Control Up"
+If (InStr(sKey, "Shift Down"))
+	sKey := sKey "}{Shift Up"
+
+StringGetPos, pos, tKey, +
+If (pos = 0)
+	StringReplace, tKey, tKey, +, Shift +%A_Space%
+If (InStr(tKey, "^"))
+	StringReplace, tKey, tKey, ^, Control +%A_Space%
+If (InStr(tKey, "!"))
+	StringReplace, tKey, tKey, !, Alt +%A_Space%
+
+If (InStr(tKey, "Numpad"))
+	StringReplace, tKey, tKey, Numpad, Num%A_Space%
+return
+
+ChReplace:
+Loop, 26
+{
+	Transform, Ch, Chr, %A_Index%
+	StringReplace, sKey, sKey, %Ch%, % Chr(96+A_Index)
 }
 return
 

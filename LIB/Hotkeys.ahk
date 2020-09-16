@@ -68,7 +68,7 @@ rColor := Palette%clr%
 GoSub, PaintRows
 return
 
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID)
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id" PMCWinID) && !Capt
 
 ^f::GoSub, FindReplace
 ^+f::GoSub, CmdFind
@@ -152,7 +152,7 @@ F12::GoSub, IECom
 ^F12::GoSub, SendMsg
 ~Enter::GoSub, EditButton
 
-#If ControlXHasFocus() && WinActive("ahk_id" PMCWinID)
+#If ControlXHasFocus() && WinActive("ahk_id" PMCWinID) && !Capt
 
 ~Enter::GoSub, GoToFind
 
@@ -160,7 +160,7 @@ F12::GoSub, IECom
 
 Enter::GoSub, MacroListEdit
 
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id " LVEdit)
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id " LVEdit) && !Capt
 
 ^PgDn::
 EditSel := 1
@@ -171,7 +171,7 @@ EditSel := 0
 GoSub, SelList
 return
 
-#If !HotkeyCtrlHasFocus() && WinActive("ahk_id " ExLVEdit)
+#If !HotkeyCtrlHasFocus() && WinActive("ahk_id " ExLVEdit) && !Capt
 
 ^PgDn::
 ExpSel := 1
@@ -182,26 +182,26 @@ ExpSel := 0
 GoSub, ExpSelList
 return
 
-#If WinActive("ahk_id " PrevID)
+#If WinActive("ahk_id " PrevID) && !Capt
 
 F5::GoSub, PrevRefresh
 
-#If Draw && DrawButton = "RButton"
+#If Draw && DrawButton = "RButton" && !Capt
 RButton::GoSub, DrawStart
 ; RButton Up::GoSub, DrawEnd
 
-#If Draw && DrawButton = "LButton"
+#If Draw && DrawButton = "LButton" && !Capt
 LButton::GoSub, DrawStart
 ; LButton Up::GoSub, DrawEnd
 
-#If Draw && DrawButton = "MButton"
+#If Draw && DrawButton = "MButton" && !Capt
 MButton::GoSub, DrawStart
 ; MButton Up::GoSub, DrawEnd
 
-#If Draw && OnEnter
+#If Draw && OnEnter && !Capt
 *Enter::GoSub, Restore
 
-#If Draw
+#If Draw && !Capt
 
 ^Up::
 ^NumpadUp::
@@ -266,13 +266,13 @@ Draw := 0
 WinActivate, ahk_id %CmdWin%
 Exit
 
-#If WinActive("ahk_id " StartTipID)
+#If WinActive("ahk_id " StartTipID) && !Capt
 
 Up::GoSub, PrevResult
 Down::GoSub, NextResult
 Enter::GoSub, GoResult
 
-#If WinActive("ahk_id " CmdWin)
+#If WinActive("ahk_id " CmdWin) && !Capt
 
 ^Tab::
 ^+Tab::
@@ -282,7 +282,7 @@ Enter::GoSub, GoResult
 ^+PgDn::
 return
 
-#If (WinActive("ahk_id " CmdWin) && (ControlXHasFocus()))
+#If (WinActive("ahk_id " CmdWin) && (ControlXHasFocus())) && !Capt
 
 Enter::
 PgDn::

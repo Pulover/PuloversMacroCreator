@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.1.2  
+Version: 5.1.3  
 Release Date: September, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -35,6 +35,10 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.1.3
+* Fixed bugs in *Capture key presses* feature.
+* Fixed bugs when recording keystorkes.
 
 ## Version 5.1.2
 * Added *Go to selected line* button and *Auto-select code* on **Preview window**.
