@@ -23,7 +23,7 @@ Updates the content of Preview Window to the active Macro.
 
 ### Auto-Refresh
 
-Automatically refreshes the code whenever the active Macro is changed.
+Automatically refreshes the code whenever the active Macro is changed (except during recording or key capture).
 
 ### Go to selected line
 
