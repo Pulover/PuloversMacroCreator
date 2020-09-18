@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: http://www.macrocreator.com
 ; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.1.3
+; Version: 5.1.4
 ; Release Date: September, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -71,7 +71,7 @@ http://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.1.3
+;@Ahk2Exe-SetVersion 5.1.4
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -139,7 +139,7 @@ Loop
 }
 
 
-CurrentVersion := "5.1.3", ReleaseDate := "September, 2020"
+CurrentVersion := "5.1.4", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
@@ -291,6 +291,8 @@ IniRead, ColOrder, %IniFilePath%, WindowOptions, ColOrder, 1,2,3,4,5,6,7,8,9,10,
 IniRead, PrevWinSize, %IniFilePath%, WindowOptions, PrevWinSize, W450 H500
 IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 1
 IniRead, TextWrap, %IniFilePath%, WindowOptions, TextWrap, 0
+IniRead, MacroFontSize, %IniFilePath%, WindowOptions, MacroFontSize, 8
+IniRead, PrevFontSize, %IniFilePath%, WindowOptions, PrevFontSize, 8
 IniRead, CommentUnchecked, %IniFilePath%, WindowOptions, CommentUnchecked, 1
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
 IniRead, OSCPos, %IniFilePath%, WindowOptions, OSCPos, X0 Y0
@@ -315,8 +317,8 @@ If (Version < "5.1.2")
 	EvalDefault := 1
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
-If (LangVersion < 4)
-	LangVersion := 4, LangLastCheck := 4
+If (LangVersion < 5)
+	LangVersion := 5, LangLastCheck := 5
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -1377,6 +1379,7 @@ Gui, chMacro:+hwndhMacroCh -Caption +Parent1
 Gui, chMacro:Add, Button, -Wrap y+0 W25 H23 hwndhMacrosMenu vMacrosMenu gMacrosMenu, ▼
 Gui, chMacro:Add, Tab2, Section Buttons 0x0008 -Wrap AltSubmit yp H22 hwndTabSel vA_List gTabSel, Macro1
 ;  LV0x10000 = LVS_EX_DOUBLEBUFFER
+Gui, chMacro:Font, s%MacroFontSize%
 Gui, chMacro:Add, ListView, AltSubmit Checked xs+0 y+0 hwndListID1 vInputList1 gInputList NoSort LV0x10000 LV0x4000, %w_Lang030%|%w_Lang031%|%w_Lang032%|%w_Lang033%|%w_Lang034%|%w_Lang035%|%w_Lang036%|%w_Lang037%|%w_Lang038%|%w_Lang039%|%w_Lang040%
 Gui, chMacro:Default
 LV_SetImageList(hIL_Icons)
@@ -1406,9 +1409,9 @@ Else
 	GoSub, PrevRefresh
 }
 If (ShowPrev)
-	Menu, PreviewMenu, Check, %v_Lang028%`t%_s%Ctrl+P
+	Menu, PreviewMenu, Check, %v_Lang029%`t%_s%Ctrl+P
 Else
-	Menu, PreviewMenu, UnCheck, %v_Lang028%`t%_s%Ctrl+P
+	Menu, PreviewMenu, UnCheck, %v_Lang029%`t%_s%Ctrl+P
 return
 
 PrevDock:
@@ -1534,6 +1537,9 @@ sciPrevF.SetKeywords(0x7, SyHi_UserDef)
 sciPrevF.SetText("", Preview)
 ControlSetText,, %Preview%, ahk_id %hSciPrevF%
 sciPrevF.SetReadOnly(0x1)
+
+GoSub, PrevFont
+
 Gui, 2:Default
 SB_SetParts(80, 120, 120, 120)
 SB_SetText("Macro" A_List ": " o_AutoKey[A_List], 1)
@@ -1554,6 +1560,64 @@ TB_Edit(tbPrevF, "ConvertBreaks", ConvertBreaks)
 TB_Edit(tbPrev, "CommentUnchecked", CommentUnchecked)
 TB_Edit(tbPrevF, "CommentUnchecked", CommentUnchecked)
 Gui, chMacro:Default
+return
+
+MacroFontSet:
+MacroFontSize := A_ThisMenuItem
+MacroFont:
+Gui, 1:Submit, NoHide
+Gui, chMacro:Font, s%MacroFontSize%
+Loop, %TabCount%
+	GuiControl, chMacro:Font, InputList%A_Index%
+Loop, 13
+	Menu, MacroFontMenu, Uncheck, % A_Index + 5
+Menu, MacroFontMenu, Check, %MacroFontSize%
+return
+
+PrevFontSet:
+PrevFontSize := A_ThisMenuItem
+PrevFont:
+sciPrev.StyleSetSize(0x0, PrevFontSize)
+sciPrev.StyleSetSize(0x1, PrevFontSize)
+sciPrev.StyleSetSize(0x2, PrevFontSize)
+sciPrev.StyleSetSize(0x3, PrevFontSize)
+sciPrev.StyleSetSize(0x4, PrevFontSize)
+sciPrev.StyleSetSize(0x5, PrevFontSize)
+sciPrev.StyleSetSize(0x6, PrevFontSize)
+sciPrev.StyleSetSize(0x7, PrevFontSize)
+sciPrev.StyleSetSize(0x8, PrevFontSize)
+sciPrev.StyleSetSize(0x9, PrevFontSize)
+sciPrev.StyleSetSize(0xA, PrevFontSize)
+sciPrev.StyleSetSize(0xB, PrevFontSize)
+sciPrev.StyleSetSize(0xC, PrevFontSize)
+sciPrev.StyleSetSize(0xD, PrevFontSize)
+sciPrev.StyleSetSize(0xE, PrevFontSize)
+sciPrev.StyleSetSize(0xF, PrevFontSize)
+sciPrev.StyleSetSize(0x10, PrevFontSize)
+sciPrev.StyleSetSize(0x11, PrevFontSize)
+sciPrev.StyleSetSize(0x12, PrevFontSize)
+sciPrev.StyleSetSize(0x14, PrevFontSize)
+
+sciPrevF.StyleSetSize(0x0, PrevFontSize)
+sciPrevF.StyleSetSize(0x1, PrevFontSize)
+sciPrevF.StyleSetSize(0x2, PrevFontSize)
+sciPrevF.StyleSetSize(0x3, PrevFontSize)
+sciPrevF.StyleSetSize(0x4, PrevFontSize)
+sciPrevF.StyleSetSize(0x5, PrevFontSize)
+sciPrevF.StyleSetSize(0x6, PrevFontSize)
+sciPrevF.StyleSetSize(0x7, PrevFontSize)
+sciPrevF.StyleSetSize(0x8, PrevFontSize)
+sciPrevF.StyleSetSize(0x9, PrevFontSize)
+sciPrevF.StyleSetSize(0xA, PrevFontSize)
+sciPrevF.StyleSetSize(0xB, PrevFontSize)
+sciPrevF.StyleSetSize(0xC, PrevFontSize)
+sciPrevF.StyleSetSize(0xD, PrevFontSize)
+sciPrevF.StyleSetSize(0xE, PrevFontSize)
+sciPrevF.StyleSetSize(0xF, PrevFontSize)
+sciPrevF.StyleSetSize(0x10, PrevFontSize)
+sciPrevF.StyleSetSize(0x11, PrevFontSize)
+sciPrevF.StyleSetSize(0x12, PrevFontSize)
+sciPrevF.StyleSetSize(0x14, PrevFontSize)
 return
 
 OnTop:
@@ -1652,10 +1716,17 @@ TB_Edit(tbPrev, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 TB_Edit(tbPrevF, A_ThisLabel, %A_ThisLabel%)
 sciPrev.SetWrapMode(TextWrap ? 0x1 : 0x0), sciPrevF.SetWrapMode(TextWrap ? 0x1 : 0x0)
 GoSub, PrevRefresh
-Menu, PreviewMenu, % (TabIndent) ? "Check" : "Uncheck", %v_Lang032%
-Menu, PreviewMenu, % (ConvertBreaks) ? "Check" : "Uncheck", %v_Lang035%
-Menu, PreviewMenu, % (CommentUnchecked) ? "Check" : "Uncheck", %v_Lang036%
-Menu, PreviewMenu, % (TextWrap) ? "Check" : "Uncheck", %v_Lang037%
+Menu, PreviewMenu, % (TabIndent) ? "Check" : "Uncheck", %v_Lang033%
+Menu, PreviewMenu, % (ConvertBreaks) ? "Check" : "Uncheck", %v_Lang036%
+Menu, PreviewMenu, % (CommentUnchecked) ? "Check" : "Uncheck", %v_Lang037%
+Menu, PreviewMenu, % (TextWrap) ? "Check" : "Uncheck", %v_Lang038%
+return
+
+PrevFontShow:
+PrevFontSize := PrevFontSize + 1
+If (PrevFontSize > 18)
+	PrevFontSize := 6
+GoSub, PrevFont
 return
 
 IndentWith:
@@ -1667,13 +1738,13 @@ Else
 GoSub, PrevRefresh
 If (IndentWith = "Tab")
 {
-	Menu, PreviewMenu, Uncheck, %v_Lang033%
-	Menu, PreviewMenu, Check, %v_Lang034%
+	Menu, PreviewMenu, Uncheck, %v_Lang034%
+	Menu, PreviewMenu, Check, %v_Lang035%
 }
 Else
 {
-	Menu, PreviewMenu, Uncheck, %v_Lang034%
-	Menu, PreviewMenu, Check, %v_Lang033%
+	Menu, PreviewMenu, Uncheck, %v_Lang035%
+	Menu, PreviewMenu, Check, %v_Lang034%
 }
 return
 
@@ -1681,13 +1752,13 @@ AutoRefresh:
 TB_Edit(tbPrev, "PrevRefreshButton", AutoRefresh := !AutoRefresh)
 TB_Edit(tbPrevF, "PrevRefreshButton", AutoRefresh)
 GoSub, PrevRefresh
-Menu, PreviewMenu, % (AutoRefresh) ? "Check" : "Uncheck", %v_Lang030%
+Menu, PreviewMenu, % (AutoRefresh) ? "Check" : "Uncheck", %v_Lang031%
 return
 
 AutoSelectLine:
 TB_Edit(tbPrev, "GoToLine", AutoSelectLine := !AutoSelectLine)
 TB_Edit(tbPrevF, "GoToLine", AutoSelectLine)
-Menu, PreviewMenu, % (AutoSelectLine) ? "Check" : "Uncheck", %v_Lang031%
+Menu, PreviewMenu, % (AutoSelectLine) ? "Check" : "Uncheck", %v_Lang032%
 return
 
 PrevClose:
@@ -3994,7 +4065,7 @@ If (IsObject(VerChk))
 		Gui, Update:Show,, % d_Lang060 ": " VerChk.AppVersion
 		return
 	}
-	Else If (VerChk.LangRev != LangVersion)
+	Else If (VerChk.LangRev > LangVersion)
 	{
 		If ((LangLastCheck != VerChk.LangRev) || (A_ThisLabel = "CheckNow"))
 		{
@@ -11776,6 +11847,7 @@ return
 TabPlus:
 Gui, 1:Submit, NoHide
 Gui, chMacro:Default
+Gui, chMacro:Font, s%MacroFontSize%
 Gui, chMacro:Submit, NoHide
 Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 ColOrder := LVOrder_Get(11, ListID%A_List%), AllTabs := "", TabName := ""
@@ -13754,25 +13826,25 @@ tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 RbMain.ShowBand(tBand, ShowBand%bID%)
 RbMain.ShowBand(RbMain.IDToIndex(1), ShowBand1)
 If (ShowBand1)
-	Menu, ToolbarsMenu, Check, %v_Lang013%
-Else
-	Menu, ToolbarsMenu, UnCheck, %v_Lang013%
-If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_Lang014%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_Lang014%
-If (ShowBand3)
+If (ShowBand2)
 	Menu, ToolbarsMenu, Check, %v_Lang015%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_Lang015%
-If (ShowBand4)
+If (ShowBand3)
 	Menu, ToolbarsMenu, Check, %v_Lang016%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_Lang016%
-If (ShowBand5)
+If (ShowBand4)
 	Menu, ToolbarsMenu, Check, %v_Lang017%
 Else
 	Menu, ToolbarsMenu, UnCheck, %v_Lang017%
+If (ShowBand5)
+	Menu, ToolbarsMenu, Check, %v_Lang018%
+Else
+	Menu, ToolbarsMenu, UnCheck, %v_Lang018%
 return
 
 ShowHideBandHK:
@@ -13780,21 +13852,21 @@ bID := RBIndexHK[A_ThisMenuItemPos]
 tBand := RbMain.IDToIndex(bID), ShowBand%bID% := !ShowBand%bID%
 RbMain.ShowBand(tBand, ShowBand%bID%)
 If (ShowBand7)
-	Menu, HotkeyMenu, Check, %v_Lang019%
-Else
-	Menu, HotkeyMenu, UnCheck, %v_Lang019%
-If (ShowBand8)
 	Menu, HotkeyMenu, Check, %v_Lang020%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_Lang020%
-If (ShowBand9)
+If (ShowBand8)
 	Menu, HotkeyMenu, Check, %v_Lang021%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_Lang021%
-If (ShowBand10)
+If (ShowBand9)
 	Menu, HotkeyMenu, Check, %v_Lang022%
 Else
 	Menu, HotkeyMenu, UnCheck, %v_Lang022%
+If (ShowBand10)
+	Menu, HotkeyMenu, Check, %v_Lang023%
+Else
+	Menu, HotkeyMenu, UnCheck, %v_Lang023%
 return
 
 ;##### Playback: #####
@@ -14251,6 +14323,8 @@ TabIndent := 1
 IndentWith := "Space"
 ConvertBreaks := 1
 TextWrap := 0
+MacroFontSize := 8
+PrevFontSize := 8
 CommentUnchecked := 1
 IncPmc := 0
 Exe_Exp := 0
@@ -14317,6 +14391,8 @@ TB_Edit(tbPrevF, "PrevRefreshButton", AutoRefresh)
 TB_Edit(tbPrev, "GoToLine", AutoSelectLine)
 TB_Edit(tbPrevF, "GoToLine", AutoSelectLine)
 GoSub, PrevRefresh
+GoSub, MacroFont
+GoSub, PrevFont
 SetColOrder:
 ColOrder := "1,2,3,4,5,6,7,8,9,10,11"
 Loop, %TabCount%
@@ -14396,7 +14472,7 @@ SetSmallIcons:
 SetLargeIcons:
 Gui, 1:+OwnDialogs
 IconSize := (A_ThisLabel = "SetSmallIcons") ? "Small" : "Large"
-MsgBox, 64, %AppName%, % d_Lang119 "`n`n" d_Lang120 "`n" StrReplace(m_Lang007 " > " v_Lang012, "&")
+MsgBox, 64, %AppName%, % d_Lang119 "`n`n" d_Lang120 "`n" StrReplace(m_Lang007 " > " v_Lang013, "&")
 return
 
 DefaultLayout:
@@ -14416,17 +14492,17 @@ TB_Edit(TbSettings, "SetJoyButton", 0)
 TB_Edit(TbOSC, "ProgBarToggle", ShowProgBar)
 Loop, 3
 	RbMain.SetLayout(Default_Layout)
-Menu, ToolbarsMenu, Check, %v_Lang013%
 Menu, ToolbarsMenu, Check, %v_Lang014%
 Menu, ToolbarsMenu, Check, %v_Lang015%
 Menu, ToolbarsMenu, Check, %v_Lang016%
 Menu, ToolbarsMenu, Check, %v_Lang017%
+Menu, ToolbarsMenu, Check, %v_Lang018%
 Menu, ViewMenu, Check, %v_Lang008%
 Menu, ViewMenu, Check, %v_Lang009%
-Menu, HotkeyMenu, Check, %v_Lang019%
 Menu, HotkeyMenu, Check, %v_Lang020%
 Menu, HotkeyMenu, Check, %v_Lang021%
 Menu, HotkeyMenu, Check, %v_Lang022%
+Menu, HotkeyMenu, Check, %v_Lang023%
 GoSub, TabSel
 SavePrompt(SavePrompt, A_ThisLabel)
 return
@@ -14459,17 +14535,17 @@ BFLayout := "1," (TB_GetSize(TbFile) + 16) ",644|"
 		.	"4," (TB_GetSize(TbEdit) + 16) ",645"
 Loop, 3
 	RbMain.SetLayout(BFLayout)
-Menu, ToolbarsMenu, Check, %v_Lang013%
 Menu, ToolbarsMenu, Check, %v_Lang014%
 Menu, ToolbarsMenu, Check, %v_Lang015%
 Menu, ToolbarsMenu, Check, %v_Lang016%
 Menu, ToolbarsMenu, Check, %v_Lang017%
+Menu, ToolbarsMenu, Check, %v_Lang018%
 Menu, ViewMenu, Check, %v_Lang008%
 Menu, ViewMenu, Check, %v_Lang009%
-Menu, HotkeyMenu, Check, %v_Lang019%
 Menu, HotkeyMenu, Check, %v_Lang020%
 Menu, HotkeyMenu, Check, %v_Lang021%
 Menu, HotkeyMenu, Check, %v_Lang022%
+Menu, HotkeyMenu, Check, %v_Lang023%
 GoSub, TabSel
 SavePrompt(SavePrompt, A_ThisLabel)
 return
@@ -14486,17 +14562,17 @@ RecPlayLayout := "Record=" w_Lang047 ":54(Enabled AutoSize Dropdown),, PlayStart
 TB_Layout(TbRecPlay, RecPlayLayout, TbRecPlay_ID)
 TbCommand.Reset(), TB_IdealSize(TbCommand, TbCommand_ID)
 RbMain.SetBandWidth(TbRecPlay_ID, TB_GetSize(tbRecPlay)+16)
-Menu, ToolbarsMenu, UnCheck, %v_Lang013%
-Menu, ToolbarsMenu, Check, %v_Lang014%
+Menu, ToolbarsMenu, UnCheck, %v_Lang014%
 Menu, ToolbarsMenu, Check, %v_Lang015%
-Menu, ToolbarsMenu, UnCheck, %v_Lang016%
+Menu, ToolbarsMenu, Check, %v_Lang016%
 Menu, ToolbarsMenu, UnCheck, %v_Lang017%
+Menu, ToolbarsMenu, UnCheck, %v_Lang018%
 Menu, ViewMenu, Check, %v_Lang008%
 Menu, ViewMenu, Check, %v_Lang009%
-Menu, HotkeyMenu, Check, %v_Lang019%
-Menu, HotkeyMenu, UnCheck, %v_Lang020%
-Menu, HotkeyMenu, Check, %v_Lang021%
-Menu, HotkeyMenu, UnCheck, %v_Lang022%
+Menu, HotkeyMenu, Check, %v_Lang020%
+Menu, HotkeyMenu, UnCheck, %v_Lang021%
+Menu, HotkeyMenu, Check, %v_Lang022%
+Menu, HotkeyMenu, UnCheck, %v_Lang023%
 GoSub, TabSel
 SavePrompt(SavePrompt, A_ThisLabel)
 return
@@ -14636,6 +14712,8 @@ IniWrite, %ColOrder%, %IniFilePath%, WindowOptions, ColOrder
 IniWrite, %PrevWinSize%, %IniFilePath%, WindowOptions, PrevWinSize
 IniWrite, %ShowPrev%, %IniFilePath%, WindowOptions, ShowPrev
 IniWrite, %TextWrap%, %IniFilePath%, WindowOptions, TextWrap
+IniWrite, %MacroFontSize%, %IniFilePath%, WindowOptions, MacroFontSize
+IniWrite, %PrevFontSize%, %IniFilePath%, WindowOptions, PrevFontSize
 IniWrite, %CommentUnchecked%, %IniFilePath%, WindowOptions, CommentUnchecked
 IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
 IniWrite, %OSCPos%, %IniFilePath%, WindowOptions, OSCPos
@@ -15067,45 +15145,59 @@ Menu, EditMenu, Add, %e_Lang013%`t%_s%Insert, ApplyL
 Menu, EditMenu, Add, %e_Lang014%`t%_s%Ctrl+Insert, InsertKey
 Menu, EditMenu, Default, %m_Lang005%`t%_s%Enter
 
-Menu, CustomMenu, Add, %v_Lang013%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang014%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang015%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang016%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang017%, TbCustomize
+Menu, CustomMenu, Add, %v_Lang018%, TbCustomize
 
-Menu, PreviewMenu, Add, %v_Lang028%`t%_s%Ctrl+P, Preview
-Menu, PreviewMenu, Add, %v_Lang029%, PrevCopy
+Menu, PreviewMenu, Add, %v_Lang029%`t%_s%Ctrl+P, Preview
+Menu, PreviewMenu, Add, %v_Lang030%, PrevCopy
 Menu, PreviewMenu, Add
-Menu, PreviewMenu, Add, %v_Lang030%, AutoRefresh
-Menu, PreviewMenu, Add, %v_Lang031%, AutoSelectLine
+Menu, PreviewMenu, Add, %v_Lang031%, AutoRefresh
+Menu, PreviewMenu, Add, %v_Lang032%, AutoSelectLine
 Menu, PreviewMenu, Add
-Menu, PreviewMenu, Add, %v_Lang032%, TabIndent
-Menu, PreviewMenu, Add, %v_Lang033%, IndentWith, Radio
+Menu, PreviewMenu, Add, %v_Lang033%, TabIndent
 Menu, PreviewMenu, Add, %v_Lang034%, IndentWith, Radio
+Menu, PreviewMenu, Add, %v_Lang035%, IndentWith, Radio
 Menu, PreviewMenu, Add
-Menu, PreviewMenu, Add, %v_Lang035%, ConvertBreaks
-Menu, PreviewMenu, Add, %v_Lang036%, CommentUnchecked
-Menu, PreviewMenu, Add, %v_Lang037%, TextWrap
+Menu, PreviewMenu, Add, %v_Lang036%, ConvertBreaks
+Menu, PreviewMenu, Add, %v_Lang037%, CommentUnchecked
+Menu, PreviewMenu, Add, %v_Lang038%, TextWrap
 
-Menu, ToolbarsMenu, Add, %v_Lang013%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang014%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang015%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang016%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang017%, ShowHideBand
+Menu, ToolbarsMenu, Add, %v_Lang018%, ShowHideBand
 Menu, ToolbarsMenu, Add
-Menu, ToolbarsMenu, Add, %v_Lang018%, :CustomMenu
+Menu, ToolbarsMenu, Add, %v_Lang019%, :CustomMenu
 
-Menu, HotkeyMenu, Add, %v_Lang019%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang020%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang021%, ShowHideBandHK
 Menu, HotkeyMenu, Add, %v_Lang022%, ShowHideBandHK
+Menu, HotkeyMenu, Add, %v_Lang023%, ShowHideBandHK
 
-Menu, SetIconSizeMenu, Add, %v_Lang026%, SetSmallIcons
-Menu, SetIconSizeMenu, Add, %v_Lang027%, SetLargeIcons
+Menu, SetIconSizeMenu, Add, %v_Lang027%, SetSmallIcons, Radio
+Menu, SetIconSizeMenu, Add, %v_Lang028%, SetLargeIcons, Radio
 
-Menu, SetLayoutMenu, Add, %v_Lang023%, SetBasicLayout
-Menu, SetLayoutMenu, Add, %v_Lang024%, SetBestFitLayout
-Menu, SetLayoutMenu, Add, %v_Lang025%, SetDefaultLayout
+Menu, SetLayoutMenu, Add, %v_Lang024%, SetBasicLayout
+Menu, SetLayoutMenu, Add, %v_Lang025%, SetBestFitLayout
+Menu, SetLayoutMenu, Add, %v_Lang026%, SetDefaultLayout
+
+Menu, MacroFontMenu, Add, 6, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 7, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 8, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 9, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 10, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 11, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 12, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 13, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 14, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 15, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 16, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 17, MacroFontSet, Radio
+Menu, MacroFontMenu, Add, 18, MacroFontSet, Radio
 
 Menu, ViewMenu, Add, %v_Lang001%, MainOnTop
 Menu, ViewMenu, Add, %v_Lang002%, ShowLoopIfMark
@@ -15119,8 +15211,9 @@ Menu, ViewMenu, Add, %v_Lang008%, ShowLoopCounter
 Menu, ViewMenu, Add, %v_Lang009%, ShowSearchBar
 Menu, ViewMenu, Add
 Menu, ViewMenu, Add, %v_Lang010%`t%_s%Alt+F5, SetColSizes
-Menu, ViewMenu, Add, %v_Lang011%, :SetIconSizeMenu
-Menu, ViewMenu, Add, %v_Lang012%, :SetLayoutMenu
+Menu, ViewMenu, Add, %v_Lang011%, :MacroFontMenu
+Menu, ViewMenu, Add, %v_Lang012%, :SetIconSizeMenu
+Menu, ViewMenu, Add, %v_Lang013%, :SetLayoutMenu
 
 GoSub, BuildOnFinishMenu
 Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+G, Options
@@ -15325,27 +15418,32 @@ Menu, ViewMenu, % (ShowActIdent) ? "Check" : "Uncheck", %v_Lang003%
 Menu, ViewMenu, % (ShowBarOnStart) ? "Check" : "Uncheck", %v_Lang004%`t%_s%Ctrl+B
 Menu, Tray, % (ShowBarOnStart) ? "Check" : "Uncheck", %y_Lang003%
 
-Menu, PreviewMenu, % (ShowPrev) ? "Check" : "Uncheck", %v_Lang028%`t%_s%Ctrl+P
-Menu, PreviewMenu, % (AutoRefresh) ? "Check" : "Uncheck", %v_Lang030%
-Menu, PreviewMenu, % (AutoSelectLine) ? "Check" : "Uncheck", %v_Lang031%
-Menu, PreviewMenu, % (TabIndent) ? "Check" : "Uncheck", %v_Lang032%
-Menu, PreviewMenu, % (IndentWith = "Tab") ? "Check" : "Uncheck", %v_Lang034%
-Menu, PreviewMenu, % (IndentWith = "Space") ? "Check" : "Uncheck", %v_Lang033%
-Menu, PreviewMenu, % (ConvertBreaks) ? "Check" : "Uncheck", %v_Lang035%
-Menu, PreviewMenu, % (CommentUnchecked) ? "Check" : "Uncheck", %v_Lang036%
-Menu, PreviewMenu, % (TextWrap) ? "Check" : "Uncheck", %v_Lang037%
+Menu, PreviewMenu, % (ShowPrev) ? "Check" : "Uncheck", %v_Lang029%`t%_s%Ctrl+P
+Menu, PreviewMenu, % (AutoRefresh) ? "Check" : "Uncheck", %v_Lang031%
+Menu, PreviewMenu, % (AutoSelectLine) ? "Check" : "Uncheck", %v_Lang032%
+Menu, PreviewMenu, % (TabIndent) ? "Check" : "Uncheck", %v_Lang033%
+Menu, PreviewMenu, % (IndentWith = "Tab") ? "Check" : "Uncheck", %v_Lang035%
+Menu, PreviewMenu, % (IndentWith = "Space") ? "Check" : "Uncheck", %v_Lang034%
+Menu, PreviewMenu, % (ConvertBreaks) ? "Check" : "Uncheck", %v_Lang036%
+Menu, PreviewMenu, % (CommentUnchecked) ? "Check" : "Uncheck", %v_Lang037%
+Menu, PreviewMenu, % (TextWrap) ? "Check" : "Uncheck", %v_Lang038%
 
-Menu, ToolbarsMenu, % (ShowBand1) ? "Check" : "Uncheck", %v_Lang013%
-Menu, ToolbarsMenu, % (ShowBand2) ? "Check" : "Uncheck", %v_Lang014%
-Menu, ToolbarsMenu, % (ShowBand3) ? "Check" : "Uncheck", %v_Lang015%
-Menu, ToolbarsMenu, % (ShowBand4) ? "Check" : "Uncheck", %v_Lang016%
-Menu, ToolbarsMenu, % (ShowBand5) ? "Check" : "Uncheck", %v_Lang017%
+Menu, MacroFontMenu, Check, %MacroFontSize%
+
+Menu, SetIconSizeMenu, % (IconSize = "Small") ? "Check" : "Uncheck", %v_Lang027%
+Menu, SetIconSizeMenu, % (IconSize = "Large") ? "Check" : "Uncheck", %v_Lang028%
+
+Menu, ToolbarsMenu, % (ShowBand1) ? "Check" : "Uncheck", %v_Lang014%
+Menu, ToolbarsMenu, % (ShowBand2) ? "Check" : "Uncheck", %v_Lang015%
+Menu, ToolbarsMenu, % (ShowBand3) ? "Check" : "Uncheck", %v_Lang016%
+Menu, ToolbarsMenu, % (ShowBand4) ? "Check" : "Uncheck", %v_Lang017%
+Menu, ToolbarsMenu, % (ShowBand5) ? "Check" : "Uncheck", %v_Lang018%
 Menu, ViewMenu, % (ShowBand11) ? "Check" : "Uncheck", %v_Lang008%
 Menu, ViewMenu, % (ShowBand6) ? "Check" : "Uncheck", %v_Lang009%
-Menu, HotkeyMenu, % (ShowBand7) ? "Check" : "Uncheck", %v_Lang019%
-Menu, HotkeyMenu, % (ShowBand8) ? "Check" : "Uncheck", %v_Lang020%
-Menu, HotkeyMenu, % (ShowBand9) ? "Check" : "Uncheck", %v_Lang021%
-Menu, HotkeyMenu, % (ShowBand10) ? "Check" : "Uncheck", %v_Lang022%
+Menu, HotkeyMenu, % (ShowBand7) ? "Check" : "Uncheck", %v_Lang020%
+Menu, HotkeyMenu, % (ShowBand8) ? "Check" : "Uncheck", %v_Lang021%
+Menu, HotkeyMenu, % (ShowBand9) ? "Check" : "Uncheck", %v_Lang022%
+Menu, HotkeyMenu, % (ShowBand10) ? "Check" : "Uncheck", %v_Lang023%
 return
 
 UpdateCopyTo:
@@ -15779,11 +15877,11 @@ TB_Edit(tbEdit, "EditButton", "", "", w_Lang093), TB_Edit(tbEdit, "CutRows", "",
 , TB_Edit(tbEdit, "UserFunction", "", "", w_Lang104), TB_Edit(tbEdit, "FuncParameter", "", "", w_Lang105), TB_Edit(tbEdit, "FuncReturn", "", "", w_Lang106)
 ; Preview
 TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefreshButton", "", "", t_Lang014), TB_Edit(tbPrev, "GoToLine", "", "", t_Lang218)
-, TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrev, "CommentUnchecked", "", "", w_Lang108), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052)
+, TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrev, "CommentUnchecked", "", "", w_Lang108), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "PrevFontShow", "", "", v_Lang011)
 , TB_Edit(tbPrev, "EditScript", "", "", t_Lang138), TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124), TB_Edit(tbPrev, "Preview", "", "", c_Lang022)
 
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefreshButton", "", "", t_Lang014), TB_Edit(tbPrevF, "GoToLine", "", "", t_Lang218)
-, TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrevF, "CommentUnchecked", "", "", w_Lang108), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
+, TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrevF, "CommentUnchecked", "", "", w_Lang108), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "PrevFontShow", "", "", v_Lang011), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrevF, "EditScript", "", "", t_Lang138), TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 ; OSC
 TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_Lang113), TB_Edit(tbOSC, "ShowPlayMenu", "", "", t_Lang114)

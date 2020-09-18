@@ -49,6 +49,10 @@ Keeps unchecked rows in the macro as commented out script, instead of not export
 
 Automatically add a line break to long lines.
 
+### Font Size
+
+Selects the size of the font.
+
 ### Always On Top
 
 Keeps this window on top. This may be used to watch code creation during Recording.

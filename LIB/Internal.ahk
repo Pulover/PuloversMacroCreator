@@ -1125,6 +1125,23 @@ ShowMenu(Menu, mX, mY)
 				Menu, TbMenu, Check, %t_Lang211%
 			Menu, TbMenu, Show, %mX%, %mY%
 			Menu, TbMenu, DeleteAll
+		Case "PrevFontShow":
+			Menu, PrevFontMenu, Add, 6, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 7, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 8, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 9, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 10, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 11, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 12, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 13, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 14, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 15, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 16, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 17, PrevFontSet, Radio
+			Menu, PrevFontMenu, Add, 18, PrevFontSet, Radio
+			Menu, PrevFontMenu, Check, %PrevFontSize%
+			Menu, PrevFontMenu, Show, %mX%, %mY%
+			Menu, PrevFontMenu, DeleteAll
 		Case "GroupsMode":
 			GoSub, ShowGroupsMenu
 		Default:

@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.1.3  
+Version: 5.1.4  
 Release Date: September, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -35,6 +35,11 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.1.4
+* Added font size setting for macro list in view menu.
+* Added font size setting for preview panel.
+* Fixed bug when closing macro tab.
 
 ## Version 5.1.3
 * Fixed bugs in *Capture key presses* feature.
