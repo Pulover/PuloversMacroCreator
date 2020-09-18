@@ -11876,14 +11876,15 @@ If (c_List != TabCount)
 	o_TimesG.RemoveAt(c_List)
 }
 s_List := ""
-Loop, %TabCount%
-	s_List .= (A_Index != c_List) ? "|" (Title := CopyMenuLabels[A_Index]) : ""
 ListCount%TabCount% := 0
 TabCount--
 Loop, %TabCount%
+{
+	s_List .= CopyMenuLabels[A_Index] "|"
 	GuiControl, chMacro:+gInputList, InputList%A_Index%
+}
 Gui, chMacro:ListView, InputList%A_List%
-GuiControl, chMacro:, A_List, %s_List%
+GuiControl, chMacro:, A_List, |%s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
 GoSub, LoadData
 GoSub, TabSel
