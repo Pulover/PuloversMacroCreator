@@ -323,6 +323,10 @@ Shows or hides the Hotkey controls.
 
 Shows or hides the [Command Search Bar](#command-search-bar).
 
+### Font Size
+
+Selects the size of the font for the Macros Listviews only.
+
 ### Reset Columns Size
 
 Resets default column sizes (default sizes are different for maximized and window mode).

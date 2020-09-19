@@ -1045,14 +1045,16 @@ Gui, Add, Button, -Wrap ys-4 x+0 W25 H23 hwndhApplyL vApplyL gApplyL Hidden
 	ILButton(hApplyL, ResDllPath ":" 31)
 Gui, Add, Button, -Wrap ys-4 x+5 W25 H23 hwndhInsertKey vInsertKey gInsertKey Hidden
 	ILButton(hInsertKey, ResDllPath ":" 91)
-Gui, Add, Link, -Wrap ys xs+55 W125 R1 vContextTip gSetWin, Global <a>#If</a>: %IfDirectContext%
+Gui, Add, Link, -Wrap ys xs+55 W125 R1 vTHotkeyTip gEditSelectedMacro, % "<a>Hotkey</a>: " o_AutoKey[A_List]
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator3
-Gui, Add, Link, -Wrap ys x+5 W125 R1 vMacroContextTip gEditMacros, % "Macro <a>#If</a>: " o_MacroContext[A_List].Condition
+Gui, Add, Link, -Wrap ys x+5 W125 R1 vContextTip gSetWin, Global <a>#If</a>: %IfDirectContext%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator4
-Gui, Add, Link, -Wrap ys x+5 W115 R1 vCoordTip gOptions, <a>CoordMode</a>: %CoordMouse%
+Gui, Add, Link, -Wrap ys x+5 W125 R1 vMacroContextTip gEditSelectedMacro, % "Macro <a>#If</a>: " o_MacroContext[A_List].Condition
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator5
-Gui, Add, Link, -Wrap ys x+5 W115 R1 vTModeTip gOptions, <a>TitleMatchMode</a>: %TitleMatch%
+Gui, Add, Link, -Wrap ys x+5 W115 R1 vCoordTip gOptions, <a>CoordMode</a>: %CoordMouse%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator6
+Gui, Add, Link, -Wrap ys x+5 W115 R1 vTModeTip gOptions, <a>TitleMatchMode</a>: %TitleMatch%
+Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator7
 Gui, Add, Link, -Wrap ys x+5 W230 R1 vTSendModeTip gOptions, <a>SendMode</a>: %KeyMode%
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
@@ -2503,6 +2505,7 @@ If (Ex_Macro != "")
 }
 Gui, 14:-Disabled
 Gui, 13:Destroy
+Ex_AutoKey := Ex_AutoKeyFromH ? Ex_AutoKey : Ex_AutoKeyL
 LV_Modify(RowNumber,, Ex_Macro, Ex_AutoKey, Ex_TimesX, Ex_BM)
 return
 
@@ -11972,6 +11975,7 @@ GuiControl, 1:Disable, AutoKey
 GuiControl, 1:Disable, ManKey
 GuiControl, 1:Disable, JoyKey
 o_MacroContext[A_List] := {"Condition": "None", "Context": ""}
+GuiControl, 1:, THotkeyTip, <a>Hotkey</a>:
 GuiControl, 1:, MacroContextTip, Macro <a>#If</a>: None
 GuiControl, chTimes:Disable, TimesG
 GuiControl, chTimes:Disable, ReptC
@@ -11987,6 +11991,7 @@ MacroTab:
 GuiControl, 1:Enable, AutoKey
 GuiControl, 1:Enable, ManKey
 GuiControl, 1:Enable, JoyKey
+GuiControl, 1:, THotkeyTip, % "<a>Hotkey</a>: " o_AutoKey[A_List]
 GuiControl, 1:, MacroContextTip, % "Macro <a>#If</a>: " o_MacroContext[A_List].Condition
 GuiControl, chTimes:Enable, TimesG
 GuiControl, chTimes:Enable, ReptC
@@ -12046,6 +12051,14 @@ return
 
 AutoComplete:
 CbAutoComplete()
+If (A_GuiControl = "AutoKeyL")
+{
+	Gui, 33:Submit, NoHide
+	If (AutoKeyL = "")
+		GuiControl, 33:Enable, AutoKey
+	Else
+		GuiControl, 33:Disable, AutoKey
+}
 return
 
 FindInList:
@@ -12251,14 +12264,16 @@ GuiControl, 1:Hide, Separator2
 GuiControl, 1:Hide, sInput
 GuiControl, 1:Hide, ApplyL
 GuiControl, 1:Hide, InsertKey
-GuiControl, 1:Show, ContextTip
+GuiControl, 1:Show, THotkeyTip
 GuiControl, 1:Show, Separator3
-GuiControl, 1:Show, MacroContextTip
+GuiControl, 1:Show, ContextTip
 GuiControl, 1:Show, Separator4
-GuiControl, 1:Show, CoordTip
+GuiControl, 1:Show, MacroContextTip
 GuiControl, 1:Show, Separator5
-GuiControl, 1:Show, TModeTip
+GuiControl, 1:Show, CoordTip
 GuiControl, 1:Show, Separator6
+GuiControl, 1:Show, TModeTip
+GuiControl, 1:Show, Separator7
 GuiControl, 1:Show, TSendModeTip
 GuiControl, 1:, BarEdit, 0
 GuiControl, 1:, BarInfo, 1
@@ -12279,14 +12294,16 @@ GuiControl, 1:Show, Separator2
 GuiControl, 1:Show, sInput
 GuiControl, 1:Show, ApplyL
 GuiControl, 1:Show, InsertKey
-GuiControl, 1:Hide, ContextTip
+GuiControl, 1:Hide, THotkeyTip
 GuiControl, 1:Hide, Separator3
-GuiControl, 1:Hide, MacroContextTip
+GuiControl, 1:Hide, ContextTip
 GuiControl, 1:Hide, Separator4
-GuiControl, 1:Hide, CoordTip
+GuiControl, 1:Hide, MacroContextTip
 GuiControl, 1:Hide, Separator5
-GuiControl, 1:Hide, TModeTip
+GuiControl, 1:Hide, CoordTip
 GuiControl, 1:Hide, Separator6
+GuiControl, 1:Hide, TModeTip
+GuiControl, 1:Hide, Separator7
 GuiControl, 1:Hide, TSendModeTip
 GuiControl, 1:, BarInfo, 0
 GuiControl, 1:, BarEdit, 1
@@ -12508,6 +12525,7 @@ Else
 	GoSub, MultiEdit
 return
 
+EditSelectedMacro:
 EditMacros:
 Input
 Gui, 1:Submit, NoHide
@@ -12529,6 +12547,9 @@ LV_ModifyCol(4, 60)		; Loop
 LV_ModifyCol(5, 200)	; Context
 LV_ModifyCol(6, 45)		; Index
 Gui, 32:Show,, %t_Lang145%
+
+If (A_ThisLabel = "EditSelectedMacro")
+	Goto, MacroListEdit
 return
 
 32GuiSize:
@@ -12656,9 +12677,11 @@ If (A_GuiEvent != "DoubleClick")
 	return
 MacroListEdit:
 Gui, 32:Default
+Gui, 32:Submit, NoHide
 If (LV_GetCount("Selected") = 0)
-	return
-RowNumber := LV_GetNext()
+	RowNumber := A_List
+Else
+	RowNumber := LV_GetNext()
 LV_GetText(Macro, RowNumber, 1)
 LV_GetText(AutoKey, RowNumber, 2)
 LV_GetText(ManKey, RowNumber, 3)
@@ -12671,13 +12694,15 @@ Gui, 32:+Disabled
 Gui, 33:Add, Groupbox, Section xm W450 H130
 Gui, 33:Add, Edit, ys+15 xs+10 W430 vMacro, %Macro%
 Gui, 33:Add, Text, -Wrap W90 R1 Right, %w_Lang005%:
-Gui, 33:Add, Hotkey, yp x+10 W330 vAutoKey, %AutoKey%
+Gui, 33:Add, Hotkey, yp x+10 W120 vAutoKey Disabled, %AutoKey%
+Gui, 33:Add, Combobox, W180 yp x+30 vAutoKeyL gAutoComplete, % RegExReplace(KeybdList, _x . "{2}", _x)
 Gui, 33:Add, Text, -Wrap y+5 xs+10 W90 R1 Right, %w_Lang007%:
-Gui, 33:Add, Hotkey, yp x+10 W330 vManKey, %ManKey%
+Gui, 33:Add, Hotkey, yp x+10 W120 vManKey, %ManKey%
 Gui, 33:Add, Text, -Wrap y+5 xs+10 W90 R1 Right, %t_Lang003%:
 Gui, 33:Add, Edit, yp x+10 Limit Number W70 R1 vTE
 Gui, 33:Add, UpDown, 0x80 Range0-999999999 vTimesX, %TimesX%
 Gui, 33:Add, Text, -Wrap yp+3 x+10 W100, %t_Lang004%
+Gui, 33:Add, Text, -Wrap yp-28 x+0 W100, # = Win`n! = Alt`n^ = Ctrl`n+ = Shift
 Gui, 33:Add, Groupbox, Section xs y+20 W450 H75
 Gui, 33:Add, Text, -Wrap R1 ys+20 xs+10 W40 cBlue, #If
 Gui, 33:Add, DDL, yp-3 x+5 W100 vIfDirectContext, None%_x%WinActive%_x%WinNotActive%_x%WinExist%_x%WinNotExist%_x%Expression
@@ -12688,6 +12713,10 @@ Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroOK, %c_Lang020%
 Gui, 33:Add, Button, Wrap ys W75 H23 gEditMacroCancel, %c_Lang021%
 Gui, 33:Add, Updown, ys x+90 W50 H20 Horz vEditSel gSelList Range0-1
 GuiControl, 33:ChooseString, IfDirectContext, % MContext[1]
+If (InStr(KeybdList, AutoKey _x))
+	GuiControl, 33:ChooseString, AutoKeyL, %AutoKey%
+Else
+	GuiControl, 33:, AutoKeyL, %AutoKey%%_x%%_x%
 
 If (InStr(Macro, "()"))
 {
@@ -12735,7 +12764,7 @@ Else If (!InStr(Macro, "()"))
 }
 Gui, 32:-Disabled
 Gui, 33:Destroy
-LV_Modify(RowNumber,, Macro, AutoKey, ManKey, TimesX, IfDirectContext " " Title)
+LV_Modify(RowNumber,, Macro, AutoKeyL != "" ? AutoKeyL : AutoKey, ManKey, TimesX, IfDirectContext " " Title)
 return
 
 SelList:
@@ -12760,7 +12789,7 @@ Else If (!InStr(Macro, "()"))
 		}
 	}
 }
-LV_Modify(RowNumber,, Macro, AutoKey, ManKey, TimesX, IfDirectContext " " Title)
+LV_Modify(RowNumber,, Macro, AutoKeyL != "" ? AutoKeyL : AutoKey, ManKey, TimesX, IfDirectContext " " Title)
 RowNumber := NewRow
 If (RowNumber > LV_GetCount())
 	RowNumber := 1
@@ -12779,10 +12808,15 @@ GuiControl, 33:, ManKey, %ManKey%
 GuiControl, 33:, TimesX, %TimesX%
 GuiControl, 33:ChooseString, IfDirectContext, % MContext[1]
 GuiControl, 33:, Title, % MContext[2]
+If (InStr(KeybdList, AutoKey _x))
+	GuiControl, 33:ChooseString, AutoKeyL, %AutoKey%
+Else
+	GuiControl, 33:, AutoKeyL, %AutoKey%%_x%%_x%
 If (InStr(Macro, "()"))
 {
 	GuiControl, 33:Disable, Macro
 	GuiControl, 33:Disable, AutoKey
+	GuiControl, 33:Disable, AutoKeyL
 	GuiControl, 33:Disable, ManKey
 	GuiControl, 33:Disable, TE
 	GuiControl, 33:Disable, TimesX
@@ -12794,7 +12828,7 @@ If (InStr(Macro, "()"))
 Else
 {
 	GuiControl, 33:Enable, Macro
-	GuiControl, 33:Enable, AutoKey
+	GuiControl, 33:Enable, AutoKeyL
 	GuiControl, 33:Enable, ManKey
 	GuiControl, 33:Enable, TE
 	GuiControl, 33:Enable, TimesX
@@ -14377,6 +14411,7 @@ If (WinExist("ahk_id " PMCOSC))
 GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
+GuiControl, 1:, THotkeyTip, % "<a>Hotkey</a>: " o_AutoKey[A_List]
 GuiControl, 1:, ContextTip, Global <a>#If</a>: %IfDirectContext%
 GuiControl, 1:, AbortKey, %AbortKey%
 GuiControl, 1:, PauseKey, %PauseKey%
@@ -14943,6 +14978,8 @@ GuiControl, 1:Move, Separator3, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator4, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator5, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator6, % "y" GuiHeight-27
+GuiControl, 1:Move, Separator7, % "y" GuiHeight-27
+GuiControl, 1:MoveDraw, THotkeyTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, ContextTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, MacroContextTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, CoordTip, % "y" GuiHeight-23

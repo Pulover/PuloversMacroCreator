@@ -37,6 +37,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 # Change Log
 
 ## Version 5.1.4
+* Added support for defining *any* hotkey for **Play** manually in Edit Macros window.
 * Added font size setting for macro list in view menu.
 * Added font size setting for preview panel.
 * Fixed bug when closing macro tab.
