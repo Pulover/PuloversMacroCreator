@@ -90,16 +90,17 @@
 	e_Lang010 =	Dil&eu
 	e_Lang011 =	&Symud i fyny
 	e_Lang012 =	S&ymud i lawr
-	e_Lang013 =	&Mewnosod o Box
-	e_Lang014 =	Me&wnosod trawiadau
-	e_Lang015 =	Ma&rk Lliw Golygu
-	e_Lang016 =	Grwpia&u
-	e_Lang017 =	&Galluogi grwpiau
-	e_Lang018 =	Yc&hwanegu grŵp
-	e_Lang019 =	Gr&ŵp Tynnwch
-	e_Lang020 =	Ty&nnwch yr holl grwpiau
-	e_Lang021 =	Collapse po&b
-	e_Lang022 =	E&xpand pob
+	e_Lang013 =	&Mynd i...
+	e_Lang014 =	Me&wnosod o Box
+	e_Lang015 =	Mew&nosod trawiadau
+	e_Lang016 =	Ma&rk Lliw Golygu
+	e_Lang017 =	Grwpia&u
+	e_Lang018 =	&Galluogi grwpiau
+	e_Lang019 =	Yc&hwanegu grŵp
+	e_Lang020 =	Gr&ŵp Tynnwch
+	e_Lang021 =	Ty&nnwch yr holl grwpiau
+	e_Lang022 =	Collapse po&b
+	e_Lang023 =	E&xpand pob
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Dewis Popeth
@@ -309,6 +310,7 @@
 	w_Lang110 =	Defnyddiwch fotwm ffon reoli fel hotkey
 	w_Lang111 =	Chwilio ... (Gwasg Enter i fynd)
 	w_Lang112 =	Newydd (Ctrl + D)
+	w_Lang113 =	Mynd i...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Llygoden
@@ -790,6 +792,7 @@
 	t_Lang217 =	cynyddrannol
 	t_Lang218 =	Ewch i'r llinell a ddewiswyd
 	t_Lang219 =	Dewis cod yn awtomatig
+	t_Lang220 =	Llinell
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Agored

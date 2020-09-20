@@ -90,16 +90,17 @@
 	e_Lang010 =	删除(&D)
 	e_Lang011 =	上移(&V)
 	e_Lang012 =	下移(&N)
-	e_Lang013 =	从框中插入(&I)
-	e_Lang014 =	插入键击(&K)
-	e_Lang015 =	编辑颜色标记(&M)
-	e_Lang016 =	组(&G)
-	e_Lang017 =	启用组(&E)
-	e_Lang018 =	添加组(&A)
-	e_Lang019 =	删除组(&R)
-	e_Lang020 =	删除所有组(&M)
-	e_Lang021 =	全部折叠(&C)
-	e_Lang022 =	展开全部(&X)
+	e_Lang013 =	去...(&G)
+	e_Lang014 =	从框中插入(&I)
+	e_Lang015 =	插入键击(&K)
+	e_Lang016 =	编辑颜色标记(&M)
+	e_Lang017 =	组(&S)
+	e_Lang018 =	启用组(&E)
+	e_Lang019 =	添加组(&A)
+	e_Lang020 =	删除组(&R)
+	e_Lang021 =	删除所有组(&M)
+	e_Lang022 =	全部折叠(&C)
+	e_Lang023 =	展开全部(&X)
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	全选(&A)
@@ -309,6 +310,7 @@
 	w_Lang110 =	使用操作杆作为热键
 	w_Lang111 =	搜索... (按Enter键进入)
 	w_Lang112 =	新建(Ctrl+N)
+	w_Lang113 =	去...
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠标
@@ -790,6 +792,7 @@
 	t_Lang217 =	增量
 	t_Lang218 =	转到选定的行
 	t_Lang219 =	自动选择代码
+	t_Lang220 =	线
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开

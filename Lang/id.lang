@@ -90,16 +90,17 @@
 	e_Lang010 =	&Hapus
 	e_Lang011 =	Mo&ve Up
 	e_Lang012 =	&Pindah ke Bawah
-	e_Lang013 =	S&isipkan dari Box
-	e_Lang014 =	M&asukkan keystroke
-	e_Lang015 =	S&unting Warna Mark
-	e_Lang016 =	&Grup
-	e_Lang017 =	&Memungkinkan kelompok
-	e_Lang018 =	M&enambahkan grup
-	e_Lang019 =	Me&nghapus grup
-	e_Lang020 =	&Hapus semua kelompok
-	e_Lang021 =	&Tutup semua
-	e_Lang022 =	Me&lebarkan semua
+	e_Lang013 =	Per&gi ke...
+	e_Lang014 =	S&isipkan dari Box
+	e_Lang015 =	M&asukkan keystroke
+	e_Lang016 =	S&unting Warna Mark
+	e_Lang017 =	&Grup
+	e_Lang018 =	&Memungkinkan kelompok
+	e_Lang019 =	M&enambahkan grup
+	e_Lang020 =	Me&nghapus grup
+	e_Lang021 =	&Hapus semua kelompok
+	e_Lang022 =	&Tutup semua
+	e_Lang023 =	Me&lebarkan semua
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Pilih Semua
@@ -309,6 +310,7 @@
 	w_Lang110 =	Gunakan tombol joystick sebagai hotkey
 	w_Lang111 =	Cari... (Tekan Enter untuk pergi)
 	w_Lang112 =	Baru (Ctrl+N)
+	w_Lang113 =	Pergi ke...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	Tambahan
 	t_Lang218 =	Pergi ke baris yang dipilih
 	t_Lang219 =	Pilih kode secara otomatis
+	t_Lang220 =	Baris
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka

@@ -84,22 +84,23 @@
 	e_Lang004 =	&Kopírovat do...
 	e_Lang005 =	&Zpět
 	e_Lang006 =	&Vpřed
-	e_Lang007 =	&Vyjmout
+	e_Lang007 =	V&yjmout
 	e_Lang008 =	K&opírovat
 	e_Lang009 =	V&ložit
-	e_Lang010 =	&Vymazat
-	e_Lang011 =	Přesunout Na&horu
-	e_Lang012 =	Přesunout Do&lů
-	e_Lang013 =	Vlo&žit z boxu
-	e_Lang014 =	Vlož&it stisk klávesy
-	e_Lang015 =	&Upravit barvu značky
-	e_Lang016 =	Skupin&y
-	e_Lang017 =	&Povolit skupiny
-	e_Lang018 =	P&řidat skupinu
-	e_Lang019 =	&Odstranit skupinu
-	e_Lang020 =	O&dstranit všechny skupiny
-	e_Lang021 =	&Sbalit vše
-	e_Lang022 =	&Rozbalit vše
+	e_Lang010 =	Vy&mazat
+	e_Lang011 =	&Přesunout Nahoru
+	e_Lang012 =	P&řesunout Dolů
+	e_Lang013 =	&Jít do...
+	e_Lang014 =	Vlo&žit z boxu
+	e_Lang015 =	Vlož&it stisk klávesy
+	e_Lang016 =	Up&ravit barvu značky
+	e_Lang017 =	&Skupiny
+	e_Lang018 =	&Povolit skupiny
+	e_Lang019 =	P&řidat skupinu
+	e_Lang020 =	&Odstranit skupinu
+	e_Lang021 =	O&dstranit všechny skupiny
+	e_Lang022 =	&Sbalit vše
+	e_Lang023 =	&Rozbalit vše
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Označit vše
@@ -309,6 +310,7 @@
 	w_Lang110 =	Použijte joystick jako klávesovou zkratku
 	w_Lang111 =	Vyhledávání... (Klávesou Enter prejdete)
 	w_Lang112 =	New (Ctrl+N)
+	w_Lang113 =	Jít do...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš
@@ -790,6 +792,7 @@
 	t_Lang217 =	Incremental
 	t_Lang218 =	Přejít na vybraný řádek
 	t_Lang219 =	Automaticky vybrat kód
+	t_Lang220 =	Čára
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít

@@ -90,16 +90,17 @@
 	e_Lang010 =	&Xóa
 	e_Lang011 =	&Move Up
 	e_Lang012 =	Mo&ve Down
-	e_Lang013 =	C&hèn từ Box
-	e_Lang014 =	Ch&èn Tổ hợp phím
-	e_Lang015 =	S&ửa Màu Đánh dấu
-	e_Lang016 =	C&ác nhóm
-	e_Lang017 =	&Kích hoạt tính năng nhóm
-	e_Lang018 =	&Thêm nhóm
-	e_Lang019 =	&Xóa nhóm
-	e_Lang020 =	&Hủy bỏ tất cả các nhóm
-	e_Lang021 =	Th&u gọn tất cả
-	e_Lang022 =	&Mở rộng tất cả
+	e_Lang013 =	&Đi đến...
+	e_Lang014 =	C&hèn từ Box
+	e_Lang015 =	Ch&èn Tổ hợp phím
+	e_Lang016 =	S&ửa Màu Đánh dấu
+	e_Lang017 =	C&ác nhóm
+	e_Lang018 =	&Kích hoạt tính năng nhóm
+	e_Lang019 =	&Thêm nhóm
+	e_Lang020 =	&Xóa nhóm
+	e_Lang021 =	&Hủy bỏ tất cả các nhóm
+	e_Lang022 =	Th&u gọn tất cả
+	e_Lang023 =	&Mở rộng tất cả
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Chọn tất cả
@@ -309,6 +310,7 @@
 	w_Lang110 =	Sử dụng nút điều khiển như phím nóng
 	w_Lang111 =	Tìm kiếm... (Nhấn Enter để đi)
 	w_Lang112 =	Mới (Ctrl+N)
+	w_Lang113 =	Đi đến...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột
@@ -790,6 +792,7 @@
 	t_Lang217 =	Incremental
 	t_Lang218 =	Chuyển đến dòng đã chọn
 	t_Lang219 =	Tự động chọn mã
+	t_Lang220 =	Hàng
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở

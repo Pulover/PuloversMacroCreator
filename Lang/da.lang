@@ -90,16 +90,17 @@
 	e_Lang010 =	&Slet
 	e_Lang011 =	Fl&yt op
 	e_Lang012 =	Fly&t ned
-	e_Lang013 =	I&ndsæt fra kassen
-	e_Lang014 =	Inds&æt Tastetryk
-	e_Lang015 =	Edit f&arvemærke
-	e_Lang016 =	&Grupper
-	e_Lang017 =	&Aktiver grupper
-	e_Lang018 =	&Tilføj gruppe
-	e_Lang019 =	&Fjern gruppe
-	e_Lang020 =	F&jern alle grupper
-	e_Lang021 =	&Skjul alle
-	e_Lang022 =	&Udvid alle
+	e_Lang013 =	&Gå til...
+	e_Lang014 =	I&ndsæt fra kassen
+	e_Lang015 =	Inds&æt Tastetryk
+	e_Lang016 =	Edit f&arvemærke
+	e_Lang017 =	Gr&upper
+	e_Lang018 =	&Aktiver grupper
+	e_Lang019 =	&Tilføj gruppe
+	e_Lang020 =	&Fjern gruppe
+	e_Lang021 =	F&jern alle grupper
+	e_Lang022 =	&Skjul alle
+	e_Lang023 =	&Udvid alle
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Vælg alt
@@ -309,6 +310,7 @@
 	w_Lang110 =	Brug et joystick knap som genvejstast
 	w_Lang111 =	Søg... (Tryk Enter for at gå)
 	w_Lang112 =	Ny (Ctrl+N)
+	w_Lang113 =	Gå til...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -790,6 +792,7 @@
 	t_Lang217 =	Incremental
 	t_Lang218 =	Gå til den valgte linje
 	t_Lang219 =	Vælg automatisk kode
+	t_Lang220 =	Linie
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent

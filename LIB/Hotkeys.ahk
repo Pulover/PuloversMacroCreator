@@ -88,7 +88,7 @@ return
 ^e::GoSub, Export
 ^p::GoSub, Preview
 ^+e::GoSub, EditScript
-^g::GoSub, Options
+^,::GoSub, Options
 ^r::GoSub, Record
 ^+t::GoSub, RunTimer
 ^!d::GoSub, ResetHotkeys
@@ -99,6 +99,7 @@ return
 ^t::GoSub, TabPlus
 ^w::GoSub, TabClose
 ^h::GoSub, SetWin
+^g::GoSub, GoToMacro
 ^b::GoSub, OnScControls
 ^Enter::GoSub, PlayStart
 ^+Enter::GoSub, TestRun

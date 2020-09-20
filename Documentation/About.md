@@ -38,13 +38,14 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 ## Version 5.1.4
 * Added support for defining *any* hotkey for **Play** manually in Edit Macros window.
+* Added *Go to* command in edit menu.
 * Added font size setting for macro list in view menu.
 * Added font size setting for preview panel.
 * Fixed bug when closing macro tab.
 
 ## Version 5.1.3
 * Fixed bugs in *Capture key presses* feature.
-* Fixed bugs when recording keystorkes.
+* Fixed bugs when recording keystrokes.
 
 ## Version 5.1.2
 * Added *Go to selected line* button and *Auto-select code* on **Preview window**.

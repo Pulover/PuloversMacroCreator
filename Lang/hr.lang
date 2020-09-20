@@ -90,16 +90,17 @@
 	e_Lang010 =	Iz&brisati
 	e_Lang011 =	&Napredovati
 	e_Lang012 =	Po&micanje dolje
-	e_Lang013 =	&Stavite na kutiji
-	e_Lang014 =	Ume&tnite Pritisak Na Tipku
-	e_Lang015 =	Uredi Bo&ja oznaka
-	e_Lang016 =	&Grupe
-	e_Lang017 =	&Omogućite grupe
-	e_Lang018 =	&Dodaj skupinu
-	e_Lang019 =	&Izvadite skupinu
-	e_Lang020 =	&Ukloni sve skupine
-	e_Lang021 =	&Sažmi sve
-	e_Lang022 =	&Proširi sve
+	e_Lang013 =	I&ći...
+	e_Lang014 =	&Stavite na kutiji
+	e_Lang015 =	Ume&tnite Pritisak Na Tipku
+	e_Lang016 =	Uredi Bo&ja oznaka
+	e_Lang017 =	&Grupe
+	e_Lang018 =	&Omogućite grupe
+	e_Lang019 =	&Dodaj skupinu
+	e_Lang020 =	&Izvadite skupinu
+	e_Lang021 =	&Ukloni sve skupine
+	e_Lang022 =	&Sažmi sve
+	e_Lang023 =	&Proširi sve
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Odaberi sve
@@ -309,6 +310,7 @@
 	w_Lang110 =	Koristite joystick tipke kao hotkey
 	w_Lang111 =	Traži... (Pritisnite Enter kako)
 	w_Lang112 =	New (Ctrl+N)
+	w_Lang113 =	Ići...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miš
@@ -790,6 +792,7 @@
 	t_Lang217 =	Inkrementalni
 	t_Lang218 =	Idite na odabrani redak
 	t_Lang219 =	Automatski odaberite kod
+	t_Lang220 =	Crta
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno

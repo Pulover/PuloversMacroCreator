@@ -90,16 +90,17 @@
 	e_Lang010 =	&Löschen
 	e_Lang011 =	&Nach oben
 	e_Lang012 =	Na&ch unten
-	e_Lang013 =	E&infügen aus Fenster
-	e_Lang014 =	&Tastendruck einfügen
-	e_Lang015 =	&Farbmarkierung bearbeiten
-	e_Lang016 =	&Gruppen
-	e_Lang017 =	&Aktivieren Gruppen
-	e_Lang018 =	&Gruppe hinzufügen
-	e_Lang019 =	&Entfernen Gruppe
-	e_Lang020 =	A&lle Gruppen entfernen
-	e_Lang021 =	Alle e&inklappen
-	e_Lang022 =	Alle e&rweitern
+	e_Lang013 =	&Gehe zu...
+	e_Lang014 =	E&infügen aus Fenster
+	e_Lang015 =	&Tastendruck einfügen
+	e_Lang016 =	&Farbmarkierung bearbeiten
+	e_Lang017 =	Gr&uppen
+	e_Lang018 =	&Aktivieren Gruppen
+	e_Lang019 =	&Gruppe hinzufügen
+	e_Lang020 =	&Entfernen Gruppe
+	e_Lang021 =	A&lle Gruppen entfernen
+	e_Lang022 =	Alle e&inklappen
+	e_Lang023 =	Alle e&rweitern
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Alles auswählen
@@ -309,6 +310,7 @@
 	w_Lang110 =	Joystick-Taste als Hotkey verwenden
 	w_Lang111 =	Suchen... (Drücken Sie die Eingabetaste zu gehen)
 	w_Lang112 =	Neu (Strg+N)
+	w_Lang113 =	Gehe zu...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus
@@ -790,6 +792,7 @@
 	t_Lang217 =	inkremental
 	t_Lang218 =	Gehen Sie zur ausgewählten Zeile
 	t_Lang219 =	Code automatisch auswählen
+	t_Lang220 =	Linie
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öffnen

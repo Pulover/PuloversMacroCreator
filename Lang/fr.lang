@@ -90,16 +90,17 @@
 	e_Lang010 =	E&ffacer
 	e_Lang011 =	D&éplacer vers le haut
 	e_Lang012 =	De&scendre
-	e_Lang013 =	&Insérez de la case
-	e_Lang014 =	I&nsérer Frappe
-	e_Lang015 =	Modifier mar&que de couleur
-	e_Lang016 =	&Groupes
-	e_Lang017 =	&Permettre aux groupes
-	e_Lang018 =	&Ajouter un groupe
-	e_Lang019 =	&Retirer groupe
-	e_Lang020 =	R&etirez tous les groupes
-	e_Lang021 =	R&éduire tout
-	e_Lang022 =	&Développer tout
+	e_Lang013 =	Aller &à...
+	e_Lang014 =	&Insérez de la case
+	e_Lang015 =	I&nsérer Frappe
+	e_Lang016 =	Modifier mar&que de couleur
+	e_Lang017 =	&Groupes
+	e_Lang018 =	&Permettre aux groupes
+	e_Lang019 =	&Ajouter un groupe
+	e_Lang020 =	&Retirer groupe
+	e_Lang021 =	R&etirez tous les groupes
+	e_Lang022 =	R&éduire tout
+	e_Lang023 =	&Développer tout
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Sélectionner tout
@@ -309,6 +310,7 @@
 	w_Lang110 =	Utilisez un bouton de la manette comme raccourci
 	w_Lang111 =	Rechercher... (Appuyez sur Entrée pour aller)
 	w_Lang112 =	Nouveau (Ctrl+N)
+	w_Lang113 =	Aller à...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Souris
@@ -790,6 +792,7 @@
 	t_Lang217 =	incrémental
 	t_Lang218 =	Aller à la ligne sélectionnée
 	t_Lang219 =	Sélectionner automatiquement le code
+	t_Lang220 =	Ligne
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert

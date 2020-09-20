@@ -90,16 +90,17 @@
 	e_Lang010 =	Ci&ma
 	e_Lang011 =	&Nyukela phezulu
 	e_Lang012 =	Sh&enxisela Ezantsi
-	e_Lang013 =	&Faka ukusuka Box
-	e_Lang014 =	F&aka Keystroke
-	e_Lang015 =	H&lela Umbala Mark
-	e_Lang016 =	&Amaqela
-	e_Lang017 =	&Yenza amaqela
-	e_Lang018 =	Yon&geza iqela
-	e_Lang019 =	&Susa iqela
-	e_Lang020 =	&Susa onke amaqela
-	e_Lang021 =	&Wisa yonke
-	e_Lang022 =	Yan&disa yonke
+	e_Lang013 =	&Yiya e...
+	e_Lang014 =	&Faka ukusuka Box
+	e_Lang015 =	F&aka Keystroke
+	e_Lang016 =	H&lela Umbala Mark
+	e_Lang017 =	&Amaqela
+	e_Lang018 =	&Yenza amaqela
+	e_Lang019 =	Yon&geza iqela
+	e_Lang020 =	&Susa iqela
+	e_Lang021 =	&Susa onke amaqela
+	e_Lang022 =	&Wisa yonke
+	e_Lang023 =	Yan&disa yonke
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Khetha zonke
@@ -309,6 +310,7 @@
 	w_Lang110 =	Sebenzisa iqhosha kwibar njengoko lokugqithaName
 	w_Lang111 =	Ukufuna ... (Cofa u-Enter ukuya)
 	w_Lang112 =	Entsha (Ctrl + N)
+	w_Lang113 =	Yiya e...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Impuku
@@ -790,6 +792,7 @@
 	t_Lang217 =	lolwandiso
 	t_Lang218 =	Yiya kumgca okhethiweyo
 	t_Lang219 =	Ngokuzenzekelayo khetha ikhowudi
+	t_Lang220 =	Umgca
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

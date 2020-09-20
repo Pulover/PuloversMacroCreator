@@ -83,23 +83,24 @@
 	e_Lang003 =	&Localizar / Substituir
 	e_Lang004 =	Co&piar para...
 	e_Lang005 =	&Desfazer
-	e_Lang006 =	&Refazer
+	e_Lang006 =	Re&fazer
 	e_Lang007 =	Recor&tar
 	e_Lang008 =	&Copiar
 	e_Lang009 =	C&olar
 	e_Lang010 =	E&xcluir
 	e_Lang011 =	Mo&ver para Cima
 	e_Lang012 =	Mover para &Baixo
-	e_Lang013 =	&Inserir da Caixa
-	e_Lang014 =	In&serir Tecla
-	e_Lang015 =	Editar &Marca de Cor
-	e_Lang016 =	&Grupos
-	e_Lang017 =	&Habilitar grupos
-	e_Lang018 =	&Adicionar grupo
-	e_Lang019 =	&Remover grupo
-	e_Lang020 =	R&emove todos os grupos
-	e_Lang021 =	Re&colher todos
-	e_Lang022 =	E&xpandir todos
+	e_Lang013 =	Ir pa&ra...
+	e_Lang014 =	&Inserir da Caixa
+	e_Lang015 =	In&serir Tecla
+	e_Lang016 =	Editar &Marca de Cor
+	e_Lang017 =	&Grupos
+	e_Lang018 =	&Habilitar grupos
+	e_Lang019 =	&Adicionar grupo
+	e_Lang020 =	&Remover grupo
+	e_Lang021 =	R&emove todos os grupos
+	e_Lang022 =	Re&colher todos
+	e_Lang023 =	E&xpandir todos
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	Selecionar &Tudo
@@ -309,6 +310,7 @@
 	w_Lang110 =	Usar um botão do joystick como atalho
 	w_Lang111 =	Pesquisar... (Pressione Enter para ir)
 	w_Lang112 =	Novo (Ctrl+N)
+	w_Lang113 =	Ir para...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	incremental
 	t_Lang218 =	Ir para linha selecionada
 	t_Lang219 =	Selecionar código automaticamente
+	t_Lang220 =	Linha
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir

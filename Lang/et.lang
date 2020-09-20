@@ -90,16 +90,17 @@
 	e_Lang010 =	K&ustutama
 	e_Lang011 =	&Üles liikuma
 	e_Lang012 =	L&iiguta alla
-	e_Lang013 =	&Sisestage alates Box
-	e_Lang014 =	Sises&tage Klahvivajutustoon
-	e_Lang015 =	Edit &Color Mark
-	e_Lang016 =	&Grupid
-	e_Lang017 =	Lu&ba rühmad
-	e_Lang018 =	&Lisa grupp
-	e_Lang019 =	Ee&malda grupp
-	e_Lang020 =	Eemalda k&õik rühmad
-	e_Lang021 =	&Sulge kõik
-	e_Lang022 =	Laie&nda kõik
+	e_Lang013 =	&Minema...
+	e_Lang014 =	&Sisestage alates Box
+	e_Lang015 =	Sises&tage Klahvivajutustoon
+	e_Lang016 =	Edit &Color Mark
+	e_Lang017 =	&Grupid
+	e_Lang018 =	Lu&ba rühmad
+	e_Lang019 =	&Lisa grupp
+	e_Lang020 =	Ee&malda grupp
+	e_Lang021 =	Eemalda k&õik rühmad
+	e_Lang022 =	&Sulge kõik
+	e_Lang023 =	Laie&nda kõik
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Vali kõik
@@ -309,6 +310,7 @@
 	w_Lang110 =	Kasuta juhtkangi nuppu hotkey
 	w_Lang111 =	Otsi ... (liikumiseks vajutage sisestusklahvi)
 	w_Lang112 =	New (Ctrl + N)
+	w_Lang113 =	Minema...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiir
@@ -790,6 +792,7 @@
 	t_Lang217 =	kasvav
 	t_Lang218 =	Minge valitud reale
 	t_Lang219 =	Valige kood automaatselt
+	t_Lang220 =	Rida
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avatud

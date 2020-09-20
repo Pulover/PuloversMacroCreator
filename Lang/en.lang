@@ -90,16 +90,17 @@
 	e_Lang010 =	&Delete
 	e_Lang011 =	Mo&ve Up
 	e_Lang012 =	Move Dow&n
-	e_Lang013 =	&Insert from Box
-	e_Lang014 =	Insert &Keystroke
-	e_Lang015 =	Edit Color &Mark
-	e_Lang016 =	&Groups
-	e_Lang017 =	&Enable groups
-	e_Lang018 =	&Add group
-	e_Lang019 =	&Remove group
-	e_Lang020 =	Re&move all groups
-	e_Lang021 =	&Collapse all
-	e_Lang022 =	E&xpand all
+	e_Lang013 =	&Go to...
+	e_Lang014 =	&Insert from Box
+	e_Lang015 =	Insert &Keystroke
+	e_Lang016 =	Edit Color &Mark
+	e_Lang017 =	Group&s
+	e_Lang018 =	&Enable groups
+	e_Lang019 =	&Add group
+	e_Lang020 =	&Remove group
+	e_Lang021 =	Re&move all groups
+	e_Lang022 =	&Collapse all
+	e_Lang023 =	E&xpand all
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	Select &All
@@ -309,6 +310,7 @@
 	w_Lang110 =	Use a joystick button as hotkey
 	w_Lang111 =	Search... (Press Enter to go)
 	w_Lang112 =	New (Ctrl+N)
+	w_Lang113 =	Go to...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	Incremental
 	t_Lang218 =	Go to selected line
 	t_Lang219 =	Auto-select code
+	t_Lang220 =	Line
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

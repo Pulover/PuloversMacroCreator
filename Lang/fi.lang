@@ -90,16 +90,17 @@
 	e_Lang010 =	Po&istaa
 	e_Lang011 =	&Siirrä ylös
 	e_Lang012 =	Sii&rtyä alemmalle luokalle
-	e_Lang013 =	I&nsertin laatikko
-	e_Lang014 =	Aseta N&äppäilyn
-	e_Lang015 =	E&dit värimerkk
-	e_Lang016 =	R&yhmät
-	e_Lang017 =	&Ota ryhmät
-	e_Lang018 =	&Lisää ryhmä
-	e_Lang019 =	&Poista ryhmä
-	e_Lang020 =	Po&ista kaikki ryhmät
-	e_Lang021 =	Pi&enennä kaikki
-	e_Lang022 =	L&aajenna kaikki
+	e_Lang013 =	Me&ne...
+	e_Lang014 =	&Insertin laatikko
+	e_Lang015 =	Aseta N&äppäilyn
+	e_Lang016 =	E&dit värimerkk
+	e_Lang017 =	R&yhmät
+	e_Lang018 =	&Ota ryhmät
+	e_Lang019 =	&Lisää ryhmä
+	e_Lang020 =	&Poista ryhmä
+	e_Lang021 =	Po&ista kaikki ryhmät
+	e_Lang022 =	Pi&enennä kaikki
+	e_Lang023 =	L&aajenna kaikki
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Valitse kaikki
@@ -309,6 +310,7 @@
 	w_Lang110 =	Käytä ohjainta painiketta kuin pikanäppäin
 	w_Lang111 =	Etsi... (Paina Enter päästäksesi)
 	w_Lang112 =	Uusi (Ctrl+N)
+	w_Lang113 =	Mene...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiiri
@@ -790,6 +792,7 @@
 	t_Lang217 =	inkrementaalinen
 	t_Lang218 =	Siirry valitulle riville
 	t_Lang219 =	Valitse koodi automaattisesti
+	t_Lang220 =	Linja
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata

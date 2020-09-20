@@ -90,16 +90,17 @@
 	e_Lang010 =	Pana&ikinti
 	e_Lang011 =	Perke&lti
 	e_Lang012 =	&Judėk žemyn
-	e_Lang013 =	&Įdėkite nuo dėžutėje
-	e_Lang014 =	Įd&ėkite Klaviatūros
-	e_Lang015 =	Reda&guoti Spalva Pažymėti
-	e_Lang016 =	Gr&upės
-	e_Lang017 =	Įjung&ti grupes
-	e_Lang018 =	Sukurti grup&ę
-	e_Lang019 =	Pa&šalinti grupę
-	e_Lang020 =	Pašalinti &visas grupes
-	e_Lang021 =	Sutraukti visk&ą
-	e_Lang022 =	&Išskleisti viską
+	e_Lang013 =	Ei&ti į...
+	e_Lang014 =	&Įdėkite nuo dėžutėje
+	e_Lang015 =	Įd&ėkite Klaviatūros
+	e_Lang016 =	Reda&guoti Spalva Pažymėti
+	e_Lang017 =	Gr&upės
+	e_Lang018 =	Įjung&ti grupes
+	e_Lang019 =	Sukurti grup&ę
+	e_Lang020 =	Pa&šalinti grupę
+	e_Lang021 =	Pašalinti &visas grupes
+	e_Lang022 =	Sutraukti visk&ą
+	e_Lang023 =	&Išskleisti viską
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Pasirinkti viską
@@ -309,6 +310,7 @@
 	w_Lang110 =	Naudokite kreiptuką mygtuką, kaip klavišas
 	w_Lang111 =	Paieška ... (Paspauskite klavišą Enter eiti)
 	w_Lang112 =	Naujas (Ctrl + N)
+	w_Lang113 =	Eiti į...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pelė
@@ -790,6 +792,7 @@
 	t_Lang217 =	Pavienis
 	t_Lang218 =	Eikite į pasirinktą eilutę
 	t_Lang219 =	Automatiškai pasirinkti kodą
+	t_Lang220 =	Linija
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atviras

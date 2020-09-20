@@ -90,16 +90,17 @@
 	e_Lang010 =	El&iminar
 	e_Lang011 =	S&ubir
 	e_Lang012 =	B&aixar
-	e_Lang013 =	I&nserir de Box
-	e_Lang014 =	Inserir &Keystroke
-	e_Lang015 =	Edi&tar cor Mark
-	e_Lang016 =	&Grupos
-	e_Lang017 =	Per&mitir que os grupos
-	e_Lang018 =	&Agregar grupo
-	e_Lang019 =	&Eliminar grupo
-	e_Lang020 =	&Eliminar todos os grupos
-	e_Lang021 =	&Recoller todo
-	e_Lang022 =	E&xpandir todo
+	e_Lang013 =	Ir a&...
+	e_Lang014 =	I&nserir de Box
+	e_Lang015 =	Inserir &Keystroke
+	e_Lang016 =	Edi&tar cor Mark
+	e_Lang017 =	&Grupos
+	e_Lang018 =	Per&mitir que os grupos
+	e_Lang019 =	&Agregar grupo
+	e_Lang020 =	&Eliminar grupo
+	e_Lang021 =	&Eliminar todos os grupos
+	e_Lang022 =	&Recoller todo
+	e_Lang023 =	E&xpandir todo
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Seleccionar todo
@@ -309,6 +310,7 @@
 	w_Lang110 =	Use o botón de mando como teclas de atallo
 	w_Lang111 =	Buscar ... (Prema Intro para ir)
 	w_Lang112 =	New (Ctrl + N)
+	w_Lang113 =	Ir a...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Rato
@@ -790,6 +792,7 @@
 	t_Lang217 =	incremental
 	t_Lang218 =	Ir á liña seleccionada
 	t_Lang219 =	Selecciona automaticamente o código
+	t_Lang220 =	Liña
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aberto

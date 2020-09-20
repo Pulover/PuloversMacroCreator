@@ -1732,7 +1732,6 @@ GoSub, PrevFont
 return
 
 IndentWith:
-OutputDebug, %A_ThisMenuItemPos%
 If ((A_ThisMenuItemPos = 2) || (A_ThisMenuItemPos = 9))
 	IndentWith := "Tab"
 Else
@@ -12026,6 +12025,7 @@ o_AutoKey[A_List] := (WinKey = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
 	o_AutoKey[A_List] := "LWin"
 o_ManKey[A_List] := ManKey, o_TimesG[A_List] := TimesO
+GuiControl, 1:, THotkeyTip, % "<a>Hotkey</a>: " o_AutoKey[A_List]
 return
 
 LoadData:
@@ -13367,6 +13367,44 @@ SWinCancel:
 16GuiEscape:
 Gui, 1:-Disabled
 Gui, 16:Destroy
+return
+
+GoToMacro:
+MenuList := ""
+For Index, MacroLabel in CopyMenuLabels
+	MenuList .= MacroLabel "|"
+Gui, 41:+owner1 -MinimizeBox +HwndCmdWin
+Gui, chMacro:Default
+Gui, 1:+Disabled
+Gui, 41:Add, Groupbox, W400 H75
+Gui, 41:Add, Text, -Wrap R1 ys+20 xs+10 W280, %t_Lang147%:
+Gui, 41:Add, Text, -Wrap R1 yp x+15 W80, %t_Lang220%:
+Gui, 41:Add, Combobox, W280 y+5 xs+10 vGoToMacro gAutoComplete, %MenuList%
+Gui, 41:Add, Edit, yp x+15 W80 H22 Number vGoLine
+Gui, 41:Add, UpDown, yp x+15 0x80 Range0-999999999 vGoToLine
+Gui, 41:Add, Button, -Wrap Section Default xm W75 H23 gGoToMacroOK, %c_Lang020%
+Gui, 41:Add, Button, -Wrap ys W75 H23 gGoToMacroCancel, %c_Lang021%
+GuiControl, 41:ChooseString, GotoMacro, % CopyMenuLabels[A_List]
+Gui, 41:Show,, %w_Lang113%
+Tooltip
+return
+
+GoToMacroOK:
+Gui, 41:Submit, NoHide
+Gui, 1:-Disabled
+Gui, 41:Destroy
+Gui, chMacro:Default
+GuiControl, chMacro:Choose, A_List, %GoToMacro%
+GoSub, TabSel
+If (GoToLine)
+	LV_Modify(GoToLine, "Select Focus Vis")
+return
+
+GoToMacroCancel:
+41GuiClose:
+41GuiEscape:
+Gui, 1:-Disabled
+Gui, 41:Destroy
 return
 
 EditComm:
@@ -15147,14 +15185,14 @@ If (CopyMenuLabels[1] = "")
 	Menu, CopyTo, Check, % CopyMenuLabels[1]
 }
 
-Menu, GroupMenu, Add, %e_Lang017%`t%_s%Ctrl+Shift+G, GroupsMode
+Menu, GroupMenu, Add, %e_Lang018%`t%_s%Ctrl+Shift+G, GroupsMode
 Menu, GroupMenu, Add
-Menu, GroupMenu, Add, %e_Lang018%`t%_s%Ctrl+Shift+Y, AddGroup
-Menu, GroupMenu, Add, %e_Lang019%`t%_s%Ctrl+Shift+R, RemoveGroup
-Menu, GroupMenu, Add, %e_Lang020%, RemoveAllGroups
+Menu, GroupMenu, Add, %e_Lang019%`t%_s%Ctrl+Shift+Y, AddGroup
+Menu, GroupMenu, Add, %e_Lang020%`t%_s%Ctrl+Shift+R, RemoveGroup
+Menu, GroupMenu, Add, %e_Lang021%, RemoveAllGroups
 Menu, GroupMenu, Add
-Menu, GroupMenu, Add, %e_Lang021%, CollapseGroups
-Menu, GroupMenu, Add, %e_Lang022%, ExpandGroups
+Menu, GroupMenu, Add, %e_Lang022%, CollapseGroups
+Menu, GroupMenu, Add, %e_Lang023%, ExpandGroups
 
 Menu, EditMenu, Add, %m_Lang005%`t%_s%Enter, EditButton
 Menu, EditMenu, Add, %e_Lang007%`t%_s%Ctrl+X, CutRows
@@ -15166,7 +15204,7 @@ Menu, EditMenu, Add, %e_Lang001%`t%_s%Ctrl+D, Duplicate
 Menu, EditMenu, Add, %m_Lang006%, :SelectMenu
 Menu, EditMenu, Add, %e_Lang004%, :CopyTo
 Menu, EditMenu, Add
-Menu, EditMenu, Add, %e_Lang016%, :GroupMenu
+Menu, EditMenu, Add, %e_Lang017%, :GroupMenu
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang011%`t%_s%Ctrl+PgUp, MoveUp
 Menu, EditMenu, Add, %e_Lang012%`t%_s%Ctrl+PgDn, MoveDn
@@ -15175,11 +15213,12 @@ Menu, EditMenu, Add, %e_Lang005%`t%_s%Ctrl+Z, Undo
 Menu, EditMenu, Add, %e_Lang006%`t%_s%Ctrl+Y, Redo
 Menu, EditMenu, Add
 Menu, EditMenu, Add, %e_Lang003%`t%_s%Ctrl+F, FindReplace
+Menu, EditMenu, Add, %e_Lang013%`t%_s%Ctrl+G, GoToMacro
 Menu, EditMenu, Add, %e_Lang002%`t%_s%Ctrl+L, EditComm
-Menu, EditMenu, Add, %e_Lang015%`t%_s%Ctrl+M, EditColor
+Menu, EditMenu, Add, %e_Lang016%`t%_s%Ctrl+M, EditColor
 Menu, EditMenu, Add
-Menu, EditMenu, Add, %e_Lang013%`t%_s%Insert, ApplyL
-Menu, EditMenu, Add, %e_Lang014%`t%_s%Ctrl+Insert, InsertKey
+Menu, EditMenu, Add, %e_Lang014%`t%_s%Insert, ApplyL
+Menu, EditMenu, Add, %e_Lang015%`t%_s%Ctrl+Insert, InsertKey
 Menu, EditMenu, Default, %m_Lang005%`t%_s%Enter
 
 Menu, CustomMenu, Add, %v_Lang014%, TbCustomize
@@ -15253,7 +15292,7 @@ Menu, ViewMenu, Add, %v_Lang012%, :SetIconSizeMenu
 Menu, ViewMenu, Add, %v_Lang013%, :SetLayoutMenu
 
 GoSub, BuildOnFinishMenu
-Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+G, Options
+Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+`,, Options
 Menu, OptionsMenu, Add
 Menu, OptionsMenu, Add, %o_Lang002%, HideMainWin
 Menu, OptionsMenu, Add, %o_Lang003%, OnScCtrl
@@ -15413,17 +15452,18 @@ Menu, EditMenu, Icon, %e_Lang008%`t%_s%Ctrl+C, %ResDllPath%, % IconsNames["copy"
 Menu, EditMenu, Icon, %e_Lang009%`t%_s%Ctrl+V, %ResDllPath%, % IconsNames["paste"]
 Menu, EditMenu, Icon, %e_Lang010%`t%_s%Delete, %ResDllPath%, % IconsNames["delete"]
 Menu, EditMenu, Icon, %e_Lang001%`t%_s%Ctrl+D, %ResDllPath%, % IconsNames["duplicate"]
-Menu, EditMenu, Icon, %e_Lang016%, %ResDllPath%, % IconsNames["groups"]
+Menu, EditMenu, Icon, %e_Lang017%, %ResDllPath%, % IconsNames["groups"]
 Menu, EditMenu, Icon, %e_Lang011%`t%_s%Ctrl+PgUp, %ResDllPath%, % IconsNames["moveup"]
 Menu, EditMenu, Icon, %e_Lang012%`t%_s%Ctrl+PgDn, %ResDllPath%, % IconsNames["movedn"]
 Menu, EditMenu, Icon, %e_Lang005%`t%_s%Ctrl+Z, %ResDllPath%, % IconsNames["undo"]
 Menu, EditMenu, Icon, %e_Lang006%`t%_s%Ctrl+Y, %ResDllPath%, % IconsNames["redo"]
 Menu, EditMenu, Icon, %e_Lang003%`t%_s%Ctrl+F, %ResDllPath%, % IconsNames["find"]
+Menu, EditMenu, Icon, %e_Lang013%`t%_s%Ctrl+G, %ResDllPath%, % IconsNames["goto"]
 Menu, EditMenu, Icon, %e_Lang002%`t%_s%Ctrl+L, %ResDllPath%, % IconsNames["comment"]
-Menu, EditMenu, Icon, %e_Lang015%`t%_s%Ctrl+M, %ResDllPath%, % IconsNames["color"]
-Menu, EditMenu, Icon, %e_Lang013%`t%_s%Insert, %ResDllPath%, % IconsNames["insert"]
-Menu, EditMenu, Icon, %e_Lang014%`t%_s%Ctrl+Insert, %ResDllPath%, % IconsNames["keystroke"]
-Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+G, %ResDllPath%, % IconsNames["options"]
+Menu, EditMenu, Icon, %e_Lang016%`t%_s%Ctrl+M, %ResDllPath%, % IconsNames["color"]
+Menu, EditMenu, Icon, %e_Lang014%`t%_s%Insert, %ResDllPath%, % IconsNames["insert"]
+Menu, EditMenu, Icon, %e_Lang015%`t%_s%Ctrl+Insert, %ResDllPath%, % IconsNames["keystroke"]
+Menu, OptionsMenu, Icon, %o_Lang001%`t%_s%Ctrl+`,, %ResDllPath%, % IconsNames["options"]
 Menu, HelpMenu, Icon, %h_Lang001%`t%_s%F1, %ResDllPath%, % IconsNames["help"]
 Menu, DonationMenu, Icon, %p_Lang001%, %ResDllPath%, % IconsNames["donate"]
 Menu, Tray, Icon, %w_Lang005%, %ResDllPath%, % IconsNames["play"]
@@ -15441,7 +15481,7 @@ Menu, Tray, Icon, %f_Lang011%, %ResDllPath%, % IconsNames["exit"]
 return
 
 CheckMenuItems:
-Menu, GroupMenu, % (ShowGroups) ? "Check" : "Uncheck", %e_Lang017%`t%_s%Ctrl+Shift+G
+Menu, GroupMenu, % (ShowGroups) ? "Check" : "Uncheck", %e_Lang018%`t%_s%Ctrl+Shift+G
 Menu, OptionsMenu, % (KeepDefKeys) ? "Check" : "Uncheck", %o_Lang009%
 Menu, OptionsMenu, % (OnScCtrl) ? "Check" : "Uncheck", %o_Lang003%
 Menu, OptionsMenu, % (WinKey) ? "Check" : "Uncheck", %o_Lang007%
@@ -15757,9 +15797,9 @@ Loop, %TabCount%
 	GuiControl, chMacro:+gInputList, InputList%A_Index%
 }
 If (ShowGroups)
-	Menu, GroupMenu, Check, %e_Lang017%`t%_s%Ctrl+Shift+G
+	Menu, GroupMenu, Check, %e_Lang018%`t%_s%Ctrl+Shift+G
 Else
-	Menu, GroupMenu, Uncheck, %e_Lang017%`t%_s%Ctrl+Shift+G
+	Menu, GroupMenu, Uncheck, %e_Lang018%`t%_s%Ctrl+Shift+G
 return
 
 RemoveGroup:

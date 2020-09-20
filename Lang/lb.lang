@@ -90,16 +90,17 @@
 	e_Lang010 =	&Läsche
 	e_Lang011 =	&Move Up
 	e_Lang012 =	Mo&ve Down
-	e_Lang013 =	&Dobäizemaachen aus Box
-	e_Lang014 =	Do&bäizemaachen Keystroke
-	e_Lang015 =	Ed&it Faarf Mark
-	e_Lang016 =	&Gruppen
-	e_Lang017 =	&Aktivéiert Gruppen
-	e_Lang018 =	&Foto Grupp
-	e_Lang019 =	E&wechhuelen Grupp
-	e_Lang020 =	&Huelt all Gruppen
-	e_Lang021 =	Ze&summebroch all
-	e_Lang022 =	&Ausbaue all
+	e_Lang013 =	&Géi op...
+	e_Lang014 =	&Dobäizemaachen aus Box
+	e_Lang015 =	Do&bäizemaachen Keystroke
+	e_Lang016 =	Ed&it Faarf Mark
+	e_Lang017 =	&Gruppen
+	e_Lang018 =	&Aktivéiert Gruppen
+	e_Lang019 =	&Foto Grupp
+	e_Lang020 =	E&wechhuelen Grupp
+	e_Lang021 =	&Huelt all Gruppen
+	e_Lang022 =	Ze&summebroch all
+	e_Lang023 =	&Ausbaue all
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&En All
@@ -309,6 +310,7 @@
 	w_Lang110 =	Benotzt eng joystick Knäppche wéi hotkey
 	w_Lang111 =	Sich ... (Press Gitt ze goen)
 	w_Lang112 =	New (Ctrl + N)
+	w_Lang113 =	Géi op...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	fortlafend
 	t_Lang218 =	Gitt op gewielte Linn
 	t_Lang219 =	Wielt automatesch de Code
+	t_Lang220 =	Linn
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

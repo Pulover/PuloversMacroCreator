@@ -90,16 +90,17 @@
 	e_Lang010 =	E&sborrar
 	e_Lang011 =	P&ujar
 	e_Lang012 =	&Baixar
-	e_Lang013 =	&Inseriu de Caixa
-	e_Lang014 =	Inserir Pu&lsacions
-	e_Lang015 =	Edit&a color
-	e_Lang016 =	&Grups
-	e_Lang017 =	&Habilitar grups
-	e_Lang018 =	&Afegir grup
-	e_Lang019 =	&Traieu grup
-	e_Lang020 =	T&raieu tots els grups
-	e_Lang021 =	&Col · lapsar tot
-	e_Lang022 =	&Expandir tot
+	e_Lang013 =	&Anar a...
+	e_Lang014 =	&Inseriu de Caixa
+	e_Lang015 =	Inserir Pu&lsacions
+	e_Lang016 =	&Edita color
+	e_Lang017 =	&Grups
+	e_Lang018 =	&Habilitar grups
+	e_Lang019 =	&Afegir grup
+	e_Lang020 =	&Traieu grup
+	e_Lang021 =	T&raieu tots els grups
+	e_Lang022 =	&Col · lapsar tot
+	e_Lang023 =	&Expandir tot
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Selecciona tot
@@ -309,6 +310,7 @@
 	w_Lang110 =	Utilitzeu un botó del joystick com a tecla d'accés directe
 	w_Lang111 =	Cercar... (Premeu Retorn per anar)
 	w_Lang112 =	Nou (Ctrl+N)
+	w_Lang113 =	Anar a...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratolí
@@ -790,6 +792,7 @@
 	t_Lang217 =	incremental
 	t_Lang218 =	Aneu a la línia seleccionada
 	t_Lang219 =	Seleccioneu automàticament el codi
+	t_Lang220 =	Línia
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert

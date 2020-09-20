@@ -90,16 +90,17 @@
 	e_Lang010 =	&Fshij
 	e_Lang011 =	&Leviz
 	e_Lang012 =	Le&viz poshtë
-	e_Lang013 =	F&ut nga Box
-	e_Lang014 =	Fu&t keystroke
-	e_Lang015 =	E&dit Color Mark
-	e_Lang016 =	&Grupet
-	e_Lang017 =	&Që grupet
-	e_Lang018 =	&Shto grup
-	e_Lang019 =	&Hiq grup
-	e_Lang020 =	H&iq të gjitha grupet
-	e_Lang021 =	&Collapse gjitha
-	e_Lang022 =	&Zgjerimin e të gjitha
+	e_Lang013 =	&Shkoni në ...
+	e_Lang014 =	F&ut nga Box
+	e_Lang015 =	Fu&t keystroke
+	e_Lang016 =	E&dit Color Mark
+	e_Lang017 =	&Grupet
+	e_Lang018 =	&Që grupet
+	e_Lang019 =	&Shto grup
+	e_Lang020 =	&Hiq grup
+	e_Lang021 =	H&iq të gjitha grupet
+	e_Lang022 =	&Collapse gjitha
+	e_Lang023 =	&Zgjerimin e të gjitha
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Selektoj të gjitha
@@ -309,6 +310,7 @@
 	w_Lang110 =	Përdorni butonin levë si hotkey
 	w_Lang111 =	Kërko ... (Shtypni Enter për të shkuar)
 	w_Lang112 =	New (Ctrl + N)
+	w_Lang113 =	Shkoni në ...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus
@@ -790,6 +792,7 @@
 	t_Lang217 =	rritje
 	t_Lang218 =	Shko te rreshti i zgjedhur
 	t_Lang219 =	Zgjidhni automatikisht kodin
+	t_Lang220 =	Linjë
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Hapur

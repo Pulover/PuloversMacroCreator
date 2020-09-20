@@ -90,16 +90,17 @@
 	e_Lang010 =	&Töröl
 	e_Lang011 =	&Felköltözik
 	e_Lang012 =	&Lefelé
-	e_Lang013 =	&Beszúrás box
-	e_Lang014 =	Be &Gombnyomás
-	e_Lang015 =	S&zerkesztés színvédjegy
-	e_Lang016 =	&Csoportok
-	e_Lang017 =	&Engedélyezze csoportok
-	e_Lang018 =	&Add csoport
-	e_Lang019 =	&Csoport eltávolítása
-	e_Lang020 =	&Vegye ki az összes csoport
-	e_Lang021 =	&Mindet összecsuk
-	e_Lang022 =	A&z összes kibontása
+	e_Lang013 =	Me&nj...
+	e_Lang014 =	&Beszúrás box
+	e_Lang015 =	Be &Gombnyomás
+	e_Lang016 =	S&zerkesztés színvédjegy
+	e_Lang017 =	&Csoportok
+	e_Lang018 =	&Engedélyezze csoportok
+	e_Lang019 =	&Add csoport
+	e_Lang020 =	&Csoport eltávolítása
+	e_Lang021 =	&Vegye ki az összes csoport
+	e_Lang022 =	&Mindet összecsuk
+	e_Lang023 =	A&z összes kibontása
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Az összes kijelölése
@@ -309,6 +310,7 @@
 	w_Lang110 =	Használjon joystick gombot hotkey
 	w_Lang111 =	Keresés... (Nyomja meg az Enter menni)
 	w_Lang112 =	Új (Ctrl+N)
+	w_Lang113 =	Menj...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Egér
@@ -790,6 +792,7 @@
 	t_Lang217 =	Járulékos
 	t_Lang218 =	Ugrás a kijelölt sorra
 	t_Lang219 =	Kód automatikus kiválasztása
+	t_Lang220 =	Vonal
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva

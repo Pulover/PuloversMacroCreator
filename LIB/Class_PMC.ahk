@@ -6,7 +6,6 @@
 	Load(FileName)
 	{
 		local ID := 0, Col, Row := [], Opt := []
-		OutputDebug, Func: %A_ThisFunc%
 
 		this.PmcCode := [], this.PmcGroups := [], this.PmcContexts := []
 		Loop, Read, %FileName%
@@ -49,7 +48,6 @@
 	Import(SelectedFile, DL := "`n", New := "1")
 	{
 		local FoundC, Labels, TabText, AutoRefreshState
-		OutputDebug, Func: %A_ThisFunc% !Critical
 		
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(11, ListID%A_List%)
@@ -138,7 +136,6 @@
 	{
 		global UserDefFunctions
 		static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
-		OutputDebug, Func: %A_ThisFunc%
 		
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%
@@ -264,8 +261,6 @@
 	
 	FormatCmd(ColTxt, Type)
 	{
-		OutputDebug, Func: %A_ThisFunc%
-
 		StringSplit, Col, ColTxt, `,, ``
 		If (Type = "Files")
 		{

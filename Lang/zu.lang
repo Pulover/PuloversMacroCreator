@@ -90,16 +90,17 @@
 	e_Lang010 =	&Susa
 	e_Lang011 =	H&amba uyephezulu
 	e_Lang012 =	&Move Down
-	e_Lang013 =	&Faka kusuka Ibhokisi
-	e_Lang014 =	Faka K&eystroke
-	e_Lang015 =	&Hlela Color Mark
-	e_Lang016 =	Ama&qembu
-	e_Lang017 =	&Vumela amaqembu
-	e_Lang018 =	En&geza iqembu
-	e_Lang019 =	S&usa iqembu
-	e_Lang020 =	Susa &wonke amaqembu
-	e_Lang021 =	&Goqa konke
-	e_Lang022 =	Nwe&ba konke
+	e_Lang013 =	I&ya ku...
+	e_Lang014 =	&Faka kusuka Ibhokisi
+	e_Lang015 =	Faka K&eystroke
+	e_Lang016 =	&Hlela Color Mark
+	e_Lang017 =	Ama&qembu
+	e_Lang018 =	&Vumela amaqembu
+	e_Lang019 =	En&geza iqembu
+	e_Lang020 =	S&usa iqembu
+	e_Lang021 =	Susa &wonke amaqembu
+	e_Lang022 =	&Goqa konke
+	e_Lang023 =	Nwe&ba konke
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Khetha konke
@@ -309,6 +310,7 @@
 	w_Lang110 =	Sebenzisa inkinobho induku yokudlala njengoba hotkey
 	w_Lang111 =	Ukucinga ... (Cindezela u-Enter ukuze ahambe)
 	w_Lang112 =	New (Ctrl + N)
+	w_Lang113 =	Iya ku...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	ukubuka
 	t_Lang218 =	Iya kulayini okhethiwe
 	t_Lang219 =	Khetha ikhodi ngokuzenzakalela
+	t_Lang220 =	Ulayini
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

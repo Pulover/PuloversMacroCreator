@@ -90,16 +90,17 @@
 	e_Lang010 =	&Slett
 	e_Lang011 =	Fl&ytt opp
 	e_Lang012 =	Fly&tt ned
-	e_Lang013 =	S&ett fra boksen
-	e_Lang014 =	Sett Tastetrykk
-	e_Lang015 =	Ed&it fargemerki
-	e_Lang016 =	Gru&pper
-	e_Lang017 =	&Aktiver grupper
-	e_Lang018 =	&Legg til gruppe
-	e_Lang019 =	&Fjern gruppe
-	e_Lang020 =	F&jern alle grupper
-	e_Lang021 =	&Skjul alle
-	e_Lang022 =	&Utvid alle
+	e_Lang013 =	G&å til...
+	e_Lang014 =	S&ett fra boksen
+	e_Lang015 =	&Sett Tastetrykk
+	e_Lang016 =	Ed&it fargemerki
+	e_Lang017 =	Gru&pper
+	e_Lang018 =	&Aktiver grupper
+	e_Lang019 =	&Legg til gruppe
+	e_Lang020 =	&Fjern gruppe
+	e_Lang021 =	F&jern alle grupper
+	e_Lang022 =	&Skjul alle
+	e_Lang023 =	&Utvid alle
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Velg Alle
@@ -309,6 +310,7 @@
 	w_Lang110 =	Bruk en joystick knappen som hurtigtast
 	w_Lang111 =	Søk... (Trykk Enter for å gå)
 	w_Lang112 =	New (Ctrl+N)
+	w_Lang113 =	Gå til...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -790,6 +792,7 @@
 	t_Lang217 =	Trinnvis
 	t_Lang218 =	Gå til valgt linje
 	t_Lang219 =	Velg kode automatisk
+	t_Lang220 =	Linje
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åpent

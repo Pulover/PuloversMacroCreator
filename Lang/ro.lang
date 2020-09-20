@@ -90,16 +90,17 @@
 	e_Lang010 =	&Șterge
 	e_Lang011 =	&Mutaţi în sus
 	e_Lang012 =	Co&borî
-	e_Lang013 =	&Se introduce din caseta
-	e_Lang014 =	&Inseraţi Keystroke
-	e_Lang015 =	Edita&ți culoarea Mark
-	e_Lang016 =	Gr&upuri
-	e_Lang017 =	Acti&vaţi grupurile
-	e_Lang018 =	Ad&ăugaţi un grup
-	e_Lang019 =	E&liminaţi grupul
-	e_Lang020 =	Elimi&nați toate grupurile
-	e_Lang021 =	Restr&ângere totul
-	e_Lang022 =	E&xtinde toate
+	e_Lang013 =	Merg&i la...
+	e_Lang014 =	&Se introduce din caseta
+	e_Lang015 =	I&nseraţi Keystroke
+	e_Lang016 =	Edita&ți culoarea Mark
+	e_Lang017 =	Gr&upuri
+	e_Lang018 =	Acti&vaţi grupurile
+	e_Lang019 =	Ad&ăugaţi un grup
+	e_Lang020 =	E&liminaţi grupul
+	e_Lang021 =	Elimi&nați toate grupurile
+	e_Lang022 =	Restr&ângere totul
+	e_Lang023 =	E&xtinde toate
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Selectează tot
@@ -309,6 +310,7 @@
 	w_Lang110 =	Utilizați un buton joystick ca tastă rapidă
 	w_Lang111 =	Căutare ... (Apăsați Enter pentru a merge)
 	w_Lang112 =	Nou (Ctrl + N)
+	w_Lang113 =	Mergi la...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	incrementală
 	t_Lang218 =	Mergeți la linia selectată
 	t_Lang219 =	Selectați automat codul
+	t_Lang220 =	Linia
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Deschis

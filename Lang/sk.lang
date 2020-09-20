@@ -90,16 +90,17 @@
 	e_Lang010 =	&Vymazať
 	e_Lang011 =	P&resunúť nahor
 	e_Lang012 =	Do&le
-	e_Lang013 =	Vlo&žiť z Box
-	e_Lang014 =	Vlož&te úhoz
-	e_Lang015 =	&Edit Color Mark
-	e_Lang016 =	&Skupiny
-	e_Lang017 =	&Povoliť skupiny
-	e_Lang018 =	P&ridať skupinu
-	e_Lang019 =	&Odstrániť skupinu
-	e_Lang020 =	O&dstrániť všetky skupiny
-	e_Lang021 =	&Zbaliť všetko
-	e_Lang022 =	Roz&baliť všetko
+	e_Lang013 =	&Ísť do...
+	e_Lang014 =	Vlo&žiť z Box
+	e_Lang015 =	Vlož&te úhoz
+	e_Lang016 =	&Edit Color Mark
+	e_Lang017 =	&Skupiny
+	e_Lang018 =	&Povoliť skupiny
+	e_Lang019 =	P&ridať skupinu
+	e_Lang020 =	&Odstrániť skupinu
+	e_Lang021 =	O&dstrániť všetky skupiny
+	e_Lang022 =	&Zbaliť všetko
+	e_Lang023 =	Roz&baliť všetko
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Vybrať všetko
@@ -309,6 +310,7 @@
 	w_Lang110 =	Použite joystick ako klávesovú skratku
 	w_Lang111 =	Vyhľadávanie... (Klávesou Enter prejdite)
 	w_Lang112 =	Nový (Ctrl+N)
+	w_Lang113 =	Ísť do...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš
@@ -790,6 +792,7 @@
 	t_Lang217 =	Incremental
 	t_Lang218 =	Prejdite na vybraný riadok
 	t_Lang219 =	Automaticky zvoliť kód
+	t_Lang220 =	Riadok
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené

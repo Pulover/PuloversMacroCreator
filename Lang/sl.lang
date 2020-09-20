@@ -90,16 +90,17 @@
 	e_Lang010 =	&Izbriši
 	e_Lang011 =	Pre&makni navzgor
 	e_Lang012 =	Prem&akni dol
-	e_Lang013 =	&Vstavite okencu
-	e_Lang014 =	V&stavite Keystroke
-	e_Lang015 =	Edi&t Color Mark
-	e_Lang016 =	Skupine
-	e_Lang017 =	&Omogoči skupine
-	e_Lang018 =	&Dodaj skupino
-	e_Lang019 =	Od&strani skupino
-	e_Lang020 =	Ods&tranite vse skupine
-	e_Lang021 =	St&rniti vse
-	e_Lang022 =	R&azširi vse
+	e_Lang013 =	Po&jdi do...
+	e_Lang014 =	&Vstavite okencu
+	e_Lang015 =	V&stavite Keystroke
+	e_Lang016 =	Edi&t Color Mark
+	e_Lang017 =	&Skupine
+	e_Lang018 =	&Omogoči skupine
+	e_Lang019 =	&Dodaj skupino
+	e_Lang020 =	Od&strani skupino
+	e_Lang021 =	Ods&tranite vse skupine
+	e_Lang022 =	St&rniti vse
+	e_Lang023 =	R&azširi vse
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Izberi vse
@@ -309,6 +310,7 @@
 	w_Lang110 =	Uporabite gumb za igralno palico kot hotkey
 	w_Lang111 =	Iskanje... (Pritisnite Enter, da gredo)
 	w_Lang112 =	New (Ctrl+N)
+	w_Lang113 =	Pojdi do...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška
@@ -790,6 +792,7 @@
 	t_Lang217 =	inkrementalni
 	t_Lang218 =	Pojdi na izbrano vrstico
 	t_Lang219 =	Samodejno izberite kodo
+	t_Lang220 =	Vrstica
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite

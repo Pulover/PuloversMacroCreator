@@ -90,16 +90,17 @@
 	e_Lang010 =	삭제(&D)
 	e_Lang011 =	끌어 올리다(&V)
 	e_Lang012 =	아래로 이동(&N)
-	e_Lang013 =	상자 삽입(&I)
-	e_Lang014 =	키를 삽입(&K)
-	e_Lang015 =	편집 색상 표(&M)
-	e_Lang016 =	여러 떼(&G)
-	e_Lang017 =	그룹을 사용(&E)
-	e_Lang018 =	그룹을 추가(&A)
-	e_Lang019 =	그룹을 제거(&R)
-	e_Lang020 =	모든 그룹을 제거(&M)
-	e_Lang021 =	모든 축소(&C)
-	e_Lang022 =	모두 확대(&X)
+	e_Lang013 =	이동...(&G)
+	e_Lang014 =	상자 삽입(&I)
+	e_Lang015 =	키를 삽입(&K)
+	e_Lang016 =	편집 색상 표(&M)
+	e_Lang017 =	여러 떼(&S)
+	e_Lang018 =	그룹을 사용(&E)
+	e_Lang019 =	그룹을 추가(&A)
+	e_Lang020 =	그룹을 제거(&R)
+	e_Lang021 =	모든 그룹을 제거(&M)
+	e_Lang022 =	모든 축소(&C)
+	e_Lang023 =	모두 확대(&X)
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	모두 선택(&A)
@@ -309,6 +310,7 @@
 	w_Lang110 =	단축키로 조이스틱 버튼을 사용하여
 	w_Lang111 =	검색... (눌러 이동 입력)
 	w_Lang112 =	새 (Ctrl 키+N)
+	w_Lang113 =	이동...
 		
 ; 15. Command Windows		
 	c_Lang001 =	마우스
@@ -790,6 +792,7 @@
 	t_Lang217 =	증분
 	t_Lang218 =	선택한 라인으로 이동
 	t_Lang219 =	코드 자동 선택
+	t_Lang220 =	선
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기

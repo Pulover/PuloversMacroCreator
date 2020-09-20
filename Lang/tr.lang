@@ -90,16 +90,17 @@
 	e_Lang010 =	S&ilmek
 	e_Lang011 =	Yuka&rı çıkmak
 	e_Lang012 =	A&şağı Taşı
-	e_Lang013 =	Ku&tusundan Ekle
-	e_Lang014 =	Tuş Ek&lemek
-	e_Lang015 =	&Düzen renk işareti
-	e_Lang016 =	&Gruplar
-	e_Lang017 =	&Grupları etkinleştirme
-	e_Lang018 =	G&rup ekle
-	e_Lang019 =	Gr&up kaldır
-	e_Lang020 =	&Tüm grupları kaldırın
-	e_Lang021 =	T&üm daraltmak
-	e_Lang022 =	&Hepsini genişlet
+	e_Lang013 =	&Git ...
+	e_Lang014 =	Ku&tusundan Ekle
+	e_Lang015 =	Tuş Ek&lemek
+	e_Lang016 =	&Düzen renk işareti
+	e_Lang017 =	Gru&plar
+	e_Lang018 =	&Grupları etkinleştirme
+	e_Lang019 =	G&rup ekle
+	e_Lang020 =	Gr&up kaldır
+	e_Lang021 =	&Tüm grupları kaldırın
+	e_Lang022 =	T&üm daraltmak
+	e_Lang023 =	&Hepsini genişlet
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Tümünü Seç
@@ -309,6 +310,7 @@
 	w_Lang110 =	Kısayol olarak bir joystick düğmesini kullanın
 	w_Lang111 =	Arama... (Basın gitmek için Enter)
 	w_Lang112 =	Yeni (Ctrl+N)
+	w_Lang113 =	Git ...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Fare
@@ -790,6 +792,7 @@
 	t_Lang217 =	artımlı
 	t_Lang218 =	Seçili satıra git
 	t_Lang219 =	Kodu otomatik olarak seçin
+	t_Lang220 =	Hat
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık

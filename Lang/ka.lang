@@ -90,16 +90,17 @@
 	e_Lang010 =	წაშლა(&D)
 	e_Lang011 =	Move Up(&V)
 	e_Lang012 =	ქვევით(&N)
-	e_Lang013 =	ჩასმა Box(&I)
-	e_Lang014 =	Insert კლავიატურა(&K)
-	e_Lang015 =	რედაქტირება ფერი Mark(&M)
-	e_Lang016 =	ჯგუფები(&G)
-	e_Lang017 =	ჩართვა ჯგუფები(&E)
-	e_Lang018 =	სანიშნეს ჯგუფი(&A)
-	e_Lang019 =	ჯგუფის წაშლა(&R)
-	e_Lang020 =	ამოიღონ ყველა ჯგუფების(&M)
-	e_Lang021 =	დაიშალოს ყველა(&C)
-	e_Lang022 =	Expand ყველა(&X)
+	e_Lang013 =	Წადი...(&G)
+	e_Lang014 =	ჩასმა Box(&I)
+	e_Lang015 =	Insert კლავიატურა(&K)
+	e_Lang016 =	რედაქტირება ფერი Mark(&M)
+	e_Lang017 =	ჯგუფები(&G)
+	e_Lang018 =	ჩართვა ჯგუფები(&E)
+	e_Lang019 =	სანიშნეს ჯგუფი(&A)
+	e_Lang020 =	ჯგუფის წაშლა(&R)
+	e_Lang021 =	ამოიღონ ყველა ჯგუფების(&M)
+	e_Lang022 =	დაიშალოს ყველა(&C)
+	e_Lang023 =	Expand ყველა(&X)
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	მონიშნე ყველა(&A)
@@ -309,6 +310,7 @@
 	w_Lang110 =	გამოიყენოთ ჯოისტიკი ღილაკს hotkey
 	w_Lang111 =	ძებნა ... (Press შეიყვანეთ წასვლა)
 	w_Lang112 =	New (Ctrl + N)
+	w_Lang113 =	Წადი...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	დამატებითი
 	t_Lang218 =	გადადით არჩეულ სტრიქონზე
 	t_Lang219 =	ავტომატურად შეარჩიეთ კოდი
+	t_Lang220 =	ხაზი
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	ღია

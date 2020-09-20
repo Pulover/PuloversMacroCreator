@@ -230,6 +230,10 @@ To select similar Command Types use the Select Menu.
 You can also select rows with the same content in a certain column: select a row and click on the **Column Header** of the column you want to search and all rows with the same text in it will be selected.  
 **Note**: Changing parameters of certain commands may cause misbehavior in Playback. Replace should be used only when and where necessary.
 
+### Go to...
+
+Go directly to any macro in the project optionally selecting a line in the list.
+
 ### Edit Comment
 
 Adds / Changes the comment to be displayed to the right of the line in Exported AHK Scripts on selected rows. Click *Insert* to add a Comment Block.

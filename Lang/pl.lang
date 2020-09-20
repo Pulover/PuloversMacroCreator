@@ -90,16 +90,17 @@
 	e_Lang010 =	&Usuń
 	e_Lang011 =	P&rzenieś w górę
 	e_Lang012 =	Prze&nieś w dół
-	e_Lang013 =	Ws&taw z pudełkiem
-	e_Lang014 =	Wst&aw klawisz
-	e_Lang015 =	Z&mień kolor
-	e_Lang016 =	&Grupy
-	e_Lang017 =	Wł&ącz grupę
-	e_Lang018 =	D&odaj grupę
-	e_Lang019 =	Usu&ń grupę
-	e_Lang020 =	Usuń wsz&ystkie grupy
-	e_Lang021 =	Zw&iń wszystkie
-	e_Lang022 =	Poka&ż wszystkie
+	e_Lang013 =	&Iść do...
+	e_Lang014 =	Ws&taw z pudełkiem
+	e_Lang015 =	Wst&aw klawisz
+	e_Lang016 =	Z&mień kolor
+	e_Lang017 =	&Grupy
+	e_Lang018 =	Wł&ącz grupę
+	e_Lang019 =	D&odaj grupę
+	e_Lang020 =	Usu&ń grupę
+	e_Lang021 =	Usuń wsz&ystkie grupy
+	e_Lang022 =	Zw&iń wszystkie
+	e_Lang023 =	Poka&ż wszystkie
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Zaznacz wszystko
@@ -309,6 +310,7 @@
 	w_Lang110 =	Użyj przycisku joysticka jako skrótu
 	w_Lang111 =	Szukaj... (Naciśnij klawisz Enter, aby uruchomić)
 	w_Lang112 =	Nowy (Ctrl+N)
+	w_Lang113 =	Iść do...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz
@@ -790,6 +792,7 @@
 	t_Lang217 =	Przyrostowe
 	t_Lang218 =	Przejdź do wybranej linii
 	t_Lang219 =	Automatycznie wybierz kod
+	t_Lang220 =	Linia
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwórz

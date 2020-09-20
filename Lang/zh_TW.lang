@@ -90,16 +90,17 @@
 	e_Lang010 =	刪除(&D)
 	e_Lang011 =	上移(&V)
 	e_Lang012 =	下移(&N)
-	e_Lang013 =	從盒框中插入(&I)
-	e_Lang014 =	插入擊鍵(&K)
-	e_Lang015 =	編輯顏色標誌(&M)
-	e_Lang016 =	群組(&G)
-	e_Lang017 =	啟用群組(&E)
-	e_Lang018 =	添加群組(&A)
-	e_Lang019 =	刪除群組(&R)
-	e_Lang020 =	刪除所有群組(&M)
-	e_Lang021 =	全部收縮(&C)
-	e_Lang022 =	全部展開(&X)
+	e_Lang013 =	去...(&G)
+	e_Lang014 =	從盒框中插入(&I)
+	e_Lang015 =	插入擊鍵(&K)
+	e_Lang016 =	編輯顏色標誌(&M)
+	e_Lang017 =	群組(&S)
+	e_Lang018 =	啟用群組(&E)
+	e_Lang019 =	添加群組(&A)
+	e_Lang020 =	刪除群組(&R)
+	e_Lang021 =	刪除所有群組(&M)
+	e_Lang022 =	全部收縮(&C)
+	e_Lang023 =	全部展開(&X)
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	全選(&A)
@@ -309,6 +310,7 @@
 	w_Lang110 =	使用操縱桿按鈕，熱鍵
 	w_Lang111 =	搜索... (按Enter鍵進入)
 	w_Lang112 =	開啟新檔（按Ctrl+N）
+	w_Lang113 =	去...
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標
@@ -790,6 +792,7 @@
 	t_Lang217 =	增量
 	t_Lang218 =	轉到選定的行
 	t_Lang219 =	自動選擇代碼
+	t_Lang220 =	線
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開

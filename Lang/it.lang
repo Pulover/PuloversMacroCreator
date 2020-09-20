@@ -90,16 +90,17 @@
 	e_Lang010 =	Canc&ellare
 	e_Lang011 =	&Sposta su
 	e_Lang012 =	A&bbassare
-	e_Lang013 =	Inserisci da scato&la
-	e_Lang014 =	Inserire Battit&ura
-	e_Lang015 =	Modi&fica marchio di colore
-	e_Lang016 =	&Gruppi
-	e_Lang017 =	&Abilita gruppi
-	e_Lang018 =	A&ggiungi gruppo
-	e_Lang019 =	&Rimuovere gruppo
-	e_Lang020 =	R&imuovere tutti i gruppi
-	e_Lang021 =	&Chiudi tutto
-	e_Lang022 =	&Espandere tutto
+	e_Lang013 =	&Vai a...
+	e_Lang014 =	Inserisci da scato&la
+	e_Lang015 =	Inserire Battit&ura
+	e_Lang016 =	Modi&fica marchio di colore
+	e_Lang017 =	&Gruppi
+	e_Lang018 =	&Abilita gruppi
+	e_Lang019 =	A&ggiungi gruppo
+	e_Lang020 =	&Rimuovere gruppo
+	e_Lang021 =	R&imuovere tutti i gruppi
+	e_Lang022 =	&Chiudi tutto
+	e_Lang023 =	&Espandere tutto
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Seleziona tutto
@@ -309,6 +310,7 @@
 	w_Lang110 =	Utilizzare un tasto del joystick come tasto di scelta rapida
 	w_Lang111 =	Cerca... (Premere Invio per andare)
 	w_Lang112 =	Nuovo (Ctrl+N)
+	w_Lang113 =	Vai a...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	incrementale
 	t_Lang218 =	Vai alla riga selezionata
 	t_Lang219 =	Seleziona automaticamente il codice
+	t_Lang220 =	Linea
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aperto

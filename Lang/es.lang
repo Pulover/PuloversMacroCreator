@@ -85,21 +85,22 @@
 	e_Lang005 =	De&shacer
 	e_Lang006 =	&Rehacer
 	e_Lang007 =	C&ortar
-	e_Lang008 =	Cop&iar
-	e_Lang009 =	&Pegar
+	e_Lang008 =	Co&piar
+	e_Lang009 =	Pe&gar
 	e_Lang010 =	Borr&ar
 	e_Lang011 =	S&ubir
 	e_Lang012 =	Ba&jar
-	e_Lang013 =	I&nserte de Caja
-	e_Lang014 =	Insertar P&ulsaciones
-	e_Lang015 =	Edi&tar marca de color
-	e_Lang016 =	&Grupos
-	e_Lang017 =	&Habilitar grupos
-	e_Lang018 =	&Añadir grupo
-	e_Lang019 =	&Retire grupo
-	e_Lang020 =	R&etire todos los grupos
-	e_Lang021 =	&Desplegar todo
-	e_Lang022 =	E&xpandir todo
+	e_Lang013 =	A&kṣara
+	e_Lang014 =	&Inserte de Caja
+	e_Lang015 =	I&nsertar Pulsaciones
+	e_Lang016 =	Edi&tar marca de color
+	e_Lang017 =	&Grupos
+	e_Lang018 =	&Habilitar grupos
+	e_Lang019 =	&Añadir grupo
+	e_Lang020 =	&Retire grupo
+	e_Lang021 =	R&etire todos los grupos
+	e_Lang022 =	&Desplegar todo
+	e_Lang023 =	E&xpandir todo
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Seleccionar todo
@@ -309,6 +310,7 @@
 	w_Lang110 =	Utilizar un botón del joystick como tecla de acceso directo
 	w_Lang111 =	Buscar... (Pulse Intro para ir)
 	w_Lang112 =	Nuevo (Ctrl+N)
+	w_Lang113 =	Akṣara
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratón
@@ -790,6 +792,7 @@
 	t_Lang217 =	incremental
 	t_Lang218 =	Ir a la línea seleccionada
 	t_Lang219 =	Seleccionar código automáticamente
+	t_Lang220 =	Línea
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abierto

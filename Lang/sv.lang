@@ -90,16 +90,17 @@
 	e_Lang010 =	&Ta bort
 	e_Lang011 =	&Flytta upp
 	e_Lang012 =	Fl&ytta ned
-	e_Lang013 =	I&nfoga från rutan
-	e_Lang014 =	Infog&a Tangenttryckning
-	e_Lang015 =	R&edigera färgmarkering
-	e_Lang016 =	Gr&upper
-	e_Lang017 =	&Aktivera grupper
-	e_Lang018 =	&Lägg till grupp
-	e_Lang019 =	&Ta bort grupp
-	e_Lang020 =	Ta &bort alla grupper
-	e_Lang021 =	&Kollapsa alla
-	e_Lang022 =	&Expandera alla
+	e_Lang013 =	G&å till...
+	e_Lang014 =	I&nfoga från rutan
+	e_Lang015 =	Infog&a Tangenttryckning
+	e_Lang016 =	R&edigera färgmarkering
+	e_Lang017 =	Gr&upper
+	e_Lang018 =	&Aktivera grupper
+	e_Lang019 =	&Lägg till grupp
+	e_Lang020 =	&Ta bort grupp
+	e_Lang021 =	Ta &bort alla grupper
+	e_Lang022 =	&Kollapsa alla
+	e_Lang023 =	&Expandera alla
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Markera allt
@@ -309,6 +310,7 @@
 	w_Lang110 =	Använd en joystick knapp som hotkey
 	w_Lang111 =	Sök... (Tryck Enter för att gå)
 	w_Lang112 =	Ny (Ctrl+N)
+	w_Lang113 =	Gå till...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -790,6 +792,7 @@
 	t_Lang217 =	inkrementell
 	t_Lang218 =	Gå till vald rad
 	t_Lang219 =	Välj kod automatiskt
+	t_Lang220 =	Linje
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet

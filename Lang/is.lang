@@ -90,16 +90,17 @@
 	e_Lang010 =	E&yða
 	e_Lang011 =	Fara &upp
 	e_Lang012 =	F&æra niður
-	e_Lang013 =	Settu &úr Box
-	e_Lang014 =	Set&ja inn Ásláttur
-	e_Lang015 =	Breyta Litur &Mark
-	e_Lang016 =	&Hópar
-	e_Lang017 =	&Virkja hópa
-	e_Lang018 =	Bæta vi&ð hópi
-	e_Lang019 =	Fjarlæ&gja hóp
-	e_Lang020 =	Fjarlægja alla h&ópa
-	e_Lang021 =	Hry&nja allt
-	e_Lang022 =	Stæ&kka allt
+	e_Lang013 =	Fara til&...
+	e_Lang014 =	Settu &úr Box
+	e_Lang015 =	Set&ja inn Ásláttur
+	e_Lang016 =	Breyta Litur &Mark
+	e_Lang017 =	&Hópar
+	e_Lang018 =	&Virkja hópa
+	e_Lang019 =	Bæta vi&ð hópi
+	e_Lang020 =	Fjarlæ&gja hóp
+	e_Lang021 =	Fjarlægja alla h&ópa
+	e_Lang022 =	Hry&nja allt
+	e_Lang023 =	Stæ&kka allt
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Velja allt
@@ -309,6 +310,7 @@
 	w_Lang110 =	Notaðu stýripinnann hnapp sem hotkey
 	w_Lang111 =	Leita ... (Ýttu á Enter til að fara)
 	w_Lang112 =	Ný (Ctrl + N)
+	w_Lang113 =	Fara til...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mús
@@ -790,6 +792,7 @@
 	t_Lang217 =	stigvaxandi
 	t_Lang218 =	Farðu í valda línu
 	t_Lang219 =	Veldu sjálfkrafa kóða
+	t_Lang220 =	Lína
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

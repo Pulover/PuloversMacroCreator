@@ -90,16 +90,17 @@
 	e_Lang010 =	&Izdzēst
 	e_Lang011 =	P&ārvietot uz augšu
 	e_Lang012 =	Pār&vietot uz leju
-	e_Lang013 =	I&evietot no Box
-	e_Lang014 =	Ievietot Ta&ustiņu
-	e_Lang015 =	Edit &Color Mark
-	e_Lang016 =	&Grupas
-	e_Lang017 =	Ies&lēgt grupas
-	e_Lang018 =	Pievie&not grupu
-	e_Lang019 =	No&ņemt grupu
-	e_Lang020 =	Noņe&mt visas grupas
-	e_Lang021 =	Sak&ļaut visu
-	e_Lang022 =	Papla&šināt visu
+	e_Lang013 =	I&et uz...
+	e_Lang014 =	Ievietot &no Box
+	e_Lang015 =	Ievietot Ta&ustiņu
+	e_Lang016 =	Edit &Color Mark
+	e_Lang017 =	&Grupas
+	e_Lang018 =	Ies&lēgt grupas
+	e_Lang019 =	Pievie&not grupu
+	e_Lang020 =	No&ņemt grupu
+	e_Lang021 =	Noņe&mt visas grupas
+	e_Lang022 =	Sak&ļaut visu
+	e_Lang023 =	Papla&šināt visu
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Izvēlēties visus
@@ -309,6 +310,7 @@
 	w_Lang110 =	Izmantojiet kursorsviru pogu kā Hotkey
 	w_Lang111 =	Meklēt ... (Nospiediet Enter, lai iet)
 	w_Lang112 =	Jauns (Ctrl + N)
+	w_Lang113 =	Iet uz...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pele
@@ -790,6 +792,7 @@
 	t_Lang217 =	Incremental
 	t_Lang218 =	Pārejiet uz izvēlēto rindu
 	t_Lang219 =	Automātiski atlasīt kodu
+	t_Lang220 =	Līnija
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atvērts

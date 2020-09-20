@@ -90,16 +90,17 @@
 	e_Lang010 =	&Verwijder
 	e_Lang011 =	O&mhoog
 	e_Lang012 =	Oml&aag
-	e_Lang013 =	Invo&egen van Box
-	e_Lang014 =	S&teek Toetsaanslag
-	e_Lang015 =	&Bewerken kleurmarkering
-	e_Lang016 =	&Groepen
-	e_Lang017 =	&Groepen inschakelen
-	e_Lang018 =	G&roep toevoegen
-	e_Lang019 =	&Verwijder groep
-	e_Lang020 =	V&erwijder alle groepen
-	e_Lang021 =	&Alles inklappen
-	e_Lang022 =	A&lles uitklappen
+	e_Lang013 =	&Ga naar...
+	e_Lang014 =	Invo&egen van Box
+	e_Lang015 =	S&teek Toetsaanslag
+	e_Lang016 =	&Bewerken kleurmarkering
+	e_Lang017 =	G&roepen
+	e_Lang018 =	&Groepen inschakelen
+	e_Lang019 =	G&roep toevoegen
+	e_Lang020 =	&Verwijder groep
+	e_Lang021 =	V&erwijder alle groepen
+	e_Lang022 =	&Alles inklappen
+	e_Lang023 =	A&lles uitklappen
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Alles selecteren
@@ -309,6 +310,7 @@
 	w_Lang110 =	Gebruik een joystick knop als sneltoets
 	w_Lang111 =	Zoeken... (Druk op Enter om te gaan)
 	w_Lang112 =	Nieuw (Ctrl+N)
+	w_Lang113 =	Ga naar...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis
@@ -790,6 +792,7 @@
 	t_Lang217 =	incrementeel
 	t_Lang218 =	Ga naar de geselecteerde regel
 	t_Lang219 =	Automatisch code selecteren
+	t_Lang220 =	Lijn
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

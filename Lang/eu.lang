@@ -90,16 +90,17 @@
 	e_Lang010 =	E&zabatu
 	e_Lang011 =	Era&man gora
 	e_Lang012 =	Erama&n behera
-	e_Lang013 =	Bo&x Txertatu
-	e_Lang014 =	&Txertatu Tekleatzeko
-	e_Lang015 =	&Kolore Mark
-	e_Lang016 =	Ta&ldeak
-	e_Lang017 =	&Gaitu talde
-	e_Lang018 =	Ge&hitu talde
-	e_Lang019 =	Kend&u taldea
-	e_Lang020 =	&Kendu talde guztiak
-	e_Lang021 =	Tole&stu guztiak
-	e_Lang022 =	&Zabaldu guztiak
+	e_Lang013 =	&Joan...
+	e_Lang014 =	Bo&x Txertatu
+	e_Lang015 =	&Txertatu Tekleatzeko
+	e_Lang016 =	&Kolore Mark
+	e_Lang017 =	Ta&ldeak
+	e_Lang018 =	&Gaitu talde
+	e_Lang019 =	Ge&hitu talde
+	e_Lang020 =	Kend&u taldea
+	e_Lang021 =	&Kendu talde guztiak
+	e_Lang022 =	Tole&stu guztiak
+	e_Lang023 =	&Zabaldu guztiak
 		
 ; 07. Select Sub Menu		
 	s_Lang001 =	&Hautatu guztiak
@@ -309,6 +310,7 @@
 	w_Lang110 =	Erabili joystick botoi bat laster gisa
 	w_Lang111 =	Search ... (Sakatu Sartu joan)
 	w_Lang112 =	Berria (Ctrl + N)
+	w_Lang113 =	Joan...
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -790,6 +792,7 @@
 	t_Lang217 =	inkrementalak
 	t_Lang218 =	Joan hautatutako lerrora
 	t_Lang219 =	Aukeratu kodea automatikoki
+	t_Lang220 =	Lerroa
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open
