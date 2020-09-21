@@ -61,7 +61,7 @@
 	i_Lang005 =	&Message Box
 	i_Lang006 =	&Näppäintä Odotus
 	i_Lang007 =	&Ikkuna
-	i_Lang008 =	&Kuva / Pixel Search
+	i_Lang008 =	&Kuva / Pixel Search / Kuva tekstiksi
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	M&ene / Etiketti
@@ -571,6 +571,9 @@
 	c_Lang257 =	aika
 	c_Lang258 =	Palata
 	c_Lang259 =	vapautus
+	c_Lang260 =	Kuva tekstiksi
+	c_Lang261 =	Kieli (kielet
+	c_Lang262 =	Lataa lisää kieliä ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Tarkastukset josmääritelty ikkuna on olemassa ja toimii tällä hetkellä (ennen kaikkea) .
 	IfWinExist / IfWinNotExist	Tarkastukset josmääritelty ikkuna on olemassa .
 	ImageSearch	Hakeealueennäytönkuvan .
+	ImageToText	Muunna ruudulla olevat kuvat, kuvatiedostot tai kuvan URL-osoite tekstiksi.
 	IniDelete	Poistaaarvovakiomalli . Ini-tiedoston .
 	IniRead	Lukeearvovakiomalli . Ini-tiedoston .
 	IniWrite	Kirjoittaaarvovakiomalli . Ini-tiedoston .

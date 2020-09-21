@@ -61,7 +61,7 @@
 	i_Lang005 =	Um&layezo Ibhokisi
 	i_Lang006 =	&Wait Key
 	i_Lang007 =	Wi&ndow
-	i_Lang008 =	Im&age / Pixel Ukucinga
+	i_Lang008 =	Im&age / Pixel Ukucinga / Image kuya Umbhalo
 	i_Lang009 =	&Run / Ifayela / String / Misc.
 	i_Lang010 =	L&oop
 	i_Lang011 =	&Go To / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Isikhathi
 	c_Lang258 =	Buyisela
 	c_Lang259 =	Release
+	c_Lang260 =	Image kuya Umbhalo
+	c_Lang261 =	Izilimi
+	c_Lang262 =	Landa izilimi eziningi ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Checks if the specified window exists and is currently active (foremost).
 	IfWinExist / IfWinNotExist	Checks if the specified window exists.
 	ImageSearch	Searches a region of the screen for an image.
+	ImageToText	Guqula izithombe kusikrini, kumafayili wesithombe, noma ku-URL yesithombe ukuze ithumele umbhalo.
 	IniDelete	Deletes a value from a standard format .ini file.
 	IniRead	Reads a value from a standard format .ini file.
 	IniWrite	Writes a value to a standard format .ini file.

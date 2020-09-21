@@ -7419,6 +7419,10 @@ return
 EditImage:
 s_Caller := "Edit"
 Image:
+TessLangs := ""
+TessSelectedLangs := "eng"
+Loop, Files, %SettingsFolder%\Bin\tesseract\tessdata_fast\*.traineddata, F
+	TessLangs .= A_LoopFileName "|"
 Gui, 1:Submit, NoHide
 Gui, 19:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
@@ -7437,14 +7441,14 @@ Gui, 19:Add, Text, -Wrap R1 yp x+15, Y:
 Gui, 19:Add, Edit, yp x+5 vePosY W60, %A_ScreenHeight%
 ; Search
 Gui, 19:Add, GroupBox, Section y+12 xs W275 H158, %c_Lang034%:
-Gui, 19:Add, Radio, -Wrap Checked ys+20 xs+10 W100 vImageS gImageS R1 Right, %c_Lang063%
-Gui, 19:Add, Radio, -Wrap yp xs+140 W95 vPixelS gPixelS R1 Right, %c_Lang064%
-Gui, 19:Add, Button, -Wrap yp-1 xs+115 W25 H23 hwndScreenshot vScreenshot gScreenshot
+Gui, 19:Add, DDL, AltSubmit ys+20 xs+10 W100 vImageS gImageS, %c_Lang063%||%c_Lang064%|%c_Lang260% (OCR)
+Gui, 19:Add, Text, -Wrap R1 yp+5 x+5 W140 vOutputVarT Hidden, %c_Lang057%/%c_Lang261%:
+Gui, 19:Add, Button, -Wrap yp-1 xs+240 W25 H23 hwndScreenshot vScreenshot gScreenshot
 	ILButton(Screenshot, ResDllPath ":" 60)
-Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gGetPixel Disabled
+Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gGetPixel Disabled Hidden
 	ILButton(ColorPick, ResDllPath ":" 100)
 Gui, 19:Add, Edit, y+5 xs+10 vImgFile W225 R1 -Multi
-Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImg gSearchImg, ...
+Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 hwndhSearchImg vSearchImg gSearchImg, ...
 Gui, 19:Add, Text, -Wrap R1 y+5 xs+10 W163 Right, %c_Lang067%:
 Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click|Play Sound
 Gui, 19:Add, Text, -Wrap R1 y+5 xs+10 W163 Right, %c_Lang068%:
@@ -7527,7 +7531,7 @@ If (s_Caller = "Edit")
 		Det%A_Index% := v
 	If (Type = cType16)
 	{
-		GuiControl, 19:, ImageS, 1
+		GuiControl, 19:Choose, ImageS, 1
 		RegExMatch(Det5, "\*(\d+?)\s+(.*)", ImgOpt)
 		Variat := ImgOpt1, Det5 := ImgOpt2 ? ImgOpt2 : Det5
 		RegExMatch(Det5, "\*Icon(.+?)\s+(.*)", ImgOpt)
@@ -7549,7 +7553,7 @@ If (s_Caller = "Edit")
 	Else If (Type = cType15)
 	{
 		color := Det5, Fast := InStr(Det7, "Fast") ? 1 : 0, RGB := InStr(Det7, "RGB") ? 1 : 0
-		GuiControl, 19:, PixelS, 1
+		GuiControl, 19:Choose, ImageS, 2
 		GuiControl, 19:Hide, PicPrev
 		GuiControl, 19:Show, ColorPrev
 		GuiControl, 19:, Fast, %Fast%
@@ -7558,6 +7562,16 @@ If (s_Caller = "Edit")
 		GuiControl, 19:Disable, Screenshot
 		GoSub, PixelS
 		GuiControl, 19:+Background%color%, ColorPrev
+	}
+	Else If (Type = cType56)
+	{
+		TessSelectedLangs := ""
+		Loop, Parse, Target, +
+			TessSelectedLangs .= A_LoopField "+"
+		TessSelectedLangs := SubStr(TessSelectedLangs, 1, -1)
+		GuiControl, 19:Choose, ImageS, 3
+		GuiControl, 19:, ImgFile, %Details%
+		GoSub, OcrS
 	}
 	GuiControl, 19:, iPosX, %Det1%
 	GuiControl, 19:, iPosY, %Det2%
@@ -7582,12 +7596,12 @@ If (s_Caller = "Edit")
 }
 Else If ((s_Caller = "Find") && (GotoRes1 = "PixelSearch"))
 {
-	GuiControl, 19:, PixelS, 1
+	GuiControl, 19:Choose, ImageS, 2
 	GoSub, PixelS
 }
 Gui, Submit, NoHide
-SBShowTip(ImageS ? "ImageSearch" : "PixelSearch")
-Gui, 19:Show,, %c_Lang006% / %c_Lang007%
+SBShowTip(ImageS = 1 ? "ImageSearch" : ImageS = 2 ? "PixelSearch" : "ImageToText")
+Gui, 19:Show,, %c_Lang006% / %c_Lang007% / %c_Lang260%
 ChangeIcon(hIL_Icons, CmdWin, IconsNames["image"])
 Input
 Tooltip
@@ -7601,26 +7615,39 @@ If (ImgFile = "")
 	GuiControl, 19:Focus, ImgFile
 	return
 }
-If ((OutVarX = "") || (OutVarY = ""))
+If (ImageS = 3)
 {
-	Gui, 19:Font, cRed
-	GuiControl, 19:Font, OutVarT
-	GuiControl, 19:Focus, OutVarX
-	return
+	Try
+		z_Check := VarSetCapacity(%ImgFile%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%ImgFile%
+		return
+	}
 }
-Try
-	z_Check := VarSetCapacity(%OutVarX%)
-Catch
+Else
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%OutVarX%
-	return
-}
-Try
-	z_Check := VarSetCapacity(%OutVarY%)
-Catch
-{
-	MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%OutVarY%
-	return
+	If ((OutVarX = "") || (OutVarY = ""))
+	{
+		Gui, 19:Font, cRed
+		GuiControl, 19:Font, OutVarT
+		GuiControl, 19:Focus, OutVarX
+		return
+	}
+	Try
+		z_Check := VarSetCapacity(%OutVarX%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%OutVarX%
+		return
+	}
+	Try
+		z_Check := VarSetCapacity(%OutVarY%)
+	Catch
+	{
+		MsgBox, 16, %d_Lang007%, %d_Lang041%`n`n%OutVarY%
+		return
+	}
 }
 DelayX := InStr(DelayC, "%") ? DelayC : DelayX
 If (Sec = 1)
@@ -7628,7 +7655,7 @@ If (Sec = 1)
 TimesX := InStr(EdRept, "%") ? EdRept : TimesX
 If (TimesX = 0)
 	TimesX := 1
-Action := IfFound "`, " IfNotFound ", " OutVarX ", " OutVarY
+Action := (ImageS = 3) ? "OCR" : IfFound "`, " IfNotFound ", " OutVarX ", " OutVarY
 If (ImageS = 1)
 {
 	Action .=  ", " FixFoundVars
@@ -7646,8 +7673,10 @@ If (ImageS = 1)
 	Type := cType16, ImgFile := ImgOptions ImgFile
 }
 Details := iPosX "`, " iPosY "`, " ePosX "`, " ePosY "`, " ImgFile
-If (PixelS = 1)
+If (ImageS = 2)
 	Type := cType15, Details .= ", " Variat "," (Fast ? " Fast" : "") (RGB ? " RGB" : "")
+If (ImageS = 3)
+	Type := cType56
 Details := RTrim(Details, ", ")
 If (BreakLoop)
 {
@@ -7656,6 +7685,8 @@ If (BreakLoop)
 	Else
 		Target := "UntilNotFound"
 }
+Else If (ImageS = 3)
+	Target := TessSelectedLangs != "" ? TessSelectedLangs : "eng"
 Else
 	Target := ""
 If (A_ThisLabel != "ImageApply")
@@ -7727,10 +7758,12 @@ return
 SearchImg:
 Gui, 19:+OwnDialogs
 Gui, 19:Submit, NoHide
-If (ImageS)
+If (ImageS = 1)
 	GoSub, GetImage
-If (PixelS)
+Else If (ImageS = 2)
 	GoSub, EditColor
+Else If (ImageS = 3)
+	GoSub, ShowTessMenu
 return
 
 GetImage:
@@ -7758,23 +7791,49 @@ return
 
 ImageS:
 Gui, 19:Submit, NoHide
-GuiControl, 19:, ImgFile
-GuiControl, 19:, PicPrev
-GuiControl, 19:, ImgSize
-GuiControl, +BackgroundDefault, ColorPrev
-GuiControl, 19:Show, PicPrev
-GuiControl, 19:Hide, ColorPrev
-GuiControl, 19:Disable, ColorPick
-GuiControl, 19:Disable, Fast
-GuiControl, 19:Disable, RGB
-GuiControl, 19:Enable, Screenshot
-GuiControl, 19:Enable, IconN
-GuiControl, 19:Enable, TransC
-GuiControl, 19:Enable, TransCS
-GuiControl, 19:Enable, WScale
-GuiControl, 19:Enable, HScale
-GuiControl, 19:Enable, FixFoundVars
-SBShowTip("ImageSearch")
+If (ImageS = 3)
+{
+	GoSub, OcrS
+	return
+}
+Else
+{
+	GuiControl, 19:Hide, OutputVarT
+	GuiControl, 19:Enable, IfFound
+	GuiControl, 19:Enable, IfNotFound
+	GuiControl, 19:Enable, AddIf
+	GuiControl, 19:Enable, OutVarX
+	GuiControl, 19:Enable, OutVarY
+	GuiControl, 19:Enable, CoordPixel
+	GuiControl, 19:Enable, VariatT
+	GuiControl, 19:Enable, BreakLoop
+}
+If (ImageS = 1)
+{
+	GuiControl, 19:, ImgFile
+	GuiControl, 19:, PicPrev
+	GuiControl, 19:, ImgSize
+	GuiControl, +BackgroundDefault, ColorPrev
+	GuiControl, 19:Show, PicPrev
+	GuiControl, 19:Hide, ColorPrev
+	GuiControl, 19:Disable, ColorPick
+	GuiControl, 19:Hide, ColorPick
+	GuiControl, 19:Disable, Fast
+	GuiControl, 19:Disable, RGB
+	GuiControl, 19:Show, Screenshot
+	GuiControl, 19:Enable, Screenshot
+	GuiControl, 19:Enable, IconN
+	GuiControl, 19:Enable, TransC
+	GuiControl, 19:Enable, TransCS
+	GuiControl, 19:Enable, WScale
+	GuiControl, 19:Enable, HScale
+	GuiControl, 19:Enable, FixFoundVars
+	SBShowTip("ImageSearch")
+}
+Else If (ImageS = 2)
+{
+	GoSub, PixelS
+}
 return
 
 PixelS:
@@ -7786,9 +7845,11 @@ GuiControl, +BackgroundDefault, ColorPrev
 GuiControl, 19:Hide, PicPrev
 GuiControl, 19:Show, ColorPrev
 GuiControl, 19:Enable, ColorPick
+GuiControl, 19:Show, ColorPick
 GuiControl, 19:Enable, Fast
 GuiControl, 19:Enable, RGB
 GuiControl, 19:Disable, Screenshot
+GuiControl, 19:Hide, Screenshot
 GuiControl, 19:Disable, IconN
 GuiControl, 19:Disable, TransC
 GuiControl, 19:Disable, TransCS
@@ -7796,6 +7857,43 @@ GuiControl, 19:Disable, WScale
 GuiControl, 19:Disable, HScale
 GuiControl, 19:Disable, FixFoundVars
 SBShowTip("PixelSearch")
+return
+
+OcrS:
+GuiControl, 19:, ImgFile
+GuiControl, 19:, PicPrev
+GuiControl, 19:, ImgSize
+GuiControl, +BackgroundDefault, ColorPrev
+GuiControl, 19:Show, OutputVarT
+GuiControl, 19:Show, PicPrev
+GuiControl, 19:Hide, ColorPrev
+GuiControl, 19:Disable, ColorPick
+GuiControl, 19:Hide, ColorPick
+GuiControl, 19:Disable, Fast
+GuiControl, 19:Disable, RGB
+GuiControl, 19:Disable, Screenshot
+GuiControl, 19:Hide, Screenshot
+GuiControl, 19:Disable, IconN
+GuiControl, 19:Disable, TransC
+GuiControl, 19:Disable, TransCS
+GuiControl, 19:Disable, WScale
+GuiControl, 19:Disable, HScale
+GuiControl, 19:Disable, FixFoundVars
+
+GuiControl, 19:, AddIf, 0
+GuiControl, 19:, FixFoundVars, 0
+GuiControl, 19:, BreakLoop, 0
+GuiControl, 19:ChooseString, CoordPixel, Screen
+GuiControl, 19:Disable, IfFound
+GuiControl, 19:Disable, IfNotFound
+GuiControl, 19:Disable, AddIf
+GuiControl, 19:Disable, OutVarX
+GuiControl, 19:Disable, OutVarY
+GuiControl, 19:Disable, CoordPixel
+GuiControl, 19:Disable, VariatT
+GuiControl, 19:Disable, BreakLoop
+
+SBShowTip("ImageToText")
 return
 
 PicOpen:
@@ -12848,7 +12946,7 @@ Switch Type
 {
 	Case cType7, cType38, cType39, cType40, cType41, cType45, cType51:
 		Goto, EditLoop
-	Case cType15, cType16:
+	Case cType15, cType16, cType56:
 		Goto, EditImage
 	Case cType21:
 		Goto, EditVar
@@ -13509,6 +13607,35 @@ CommCancel:
 17GuiEscape:
 Gui, 1:-Disabled
 Gui, 17:Destroy
+return
+
+ShowTessMenu:
+Loop, Parse, TessLangs, "|"
+{
+	If (A_LoopField != "")
+	{
+		LoopField := RegExReplace(A_LoopField, "\..*")
+		Menu, TessMenu, Add, %LoopField%, SelectTessLang
+		If (InStr(TessSelectedLangs, LoopField))
+			Menu, TessMenu, Check, %LoopField%
+	}
+}
+Menu, TessMenu, Add
+Menu, TessMenu, Add, %c_Lang262%, DownloadTessLangFiles
+ControlGetPos, CtrPosX, CtrPosY,, CtrlPosH,, ahk_id %hSearchImg%
+Menu, TessMenu, Show, %CtrPosX%, % CtrPosY + CtrlPosH
+Menu, TessMenu, DeleteAll
+return
+
+SelectTessLang:
+If (!InStr(TessSelectedLangs, A_ThisMenuItem))
+	TessSelectedLangs .= "+" A_ThisMenuItem
+Else
+	TessSelectedLangs := RegExReplace(TessSelectedLangs, "\+?" A_ThisMenuItem)
+TessSelectedLangs := RegExReplace(TessSelectedLangs, "^\+")
+return
+
+DownloadTessLangFiles:
 return
 
 EditColor:
@@ -16337,6 +16464,7 @@ return
 #Include <Class_LV_Colors>
 #Include <IL_EX>
 #Include <Gdip_All>
+#Include <Vis2>
 #Include <Eval>
 #Include <SCI>
 #SingleInstance Off

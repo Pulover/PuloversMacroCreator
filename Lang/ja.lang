@@ -61,7 +61,7 @@
 	i_Lang005 =	メッセージボックス(&B)
 	i_Lang006 =	キー待ち(&K)
 	i_Lang007 =	ウィンドウ(&W)
-	i_Lang008 =	イメージ / ピクセル検索(&I)
+	i_Lang008 =	イメージ / ピクセル検索(&I) / 画像からテキストへ
 	i_Lang009 =	ファイル / 文字列 / その他 / 実行します。(&R)
 	i_Lang010 =	ループ(&L)
 	i_Lang011 =	/ラベルに行く(&G)
@@ -571,6 +571,9 @@
 	c_Lang257 =	期間
 	c_Lang258 =	リターン
 	c_Lang259 =	ホールド
+	c_Lang260 =	画像からテキストへ
+	c_Lang261 =	言語
+	c_Lang262 =	他の言語をダウンロード...
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	チェックし指定されたウィンドウが存在し、（何よりも）は、現在アクティブであるかどうか。
 	IfWinExist / IfWinNotExist	チェックし指定したウィンドウが存在するかどうか。
 	ImageSearch	画像用の画面領域を検索します。
+	ImageToText	画面上の画像、画像ファイル、または画像URLをテキストに変換します。
 	IniDelete	標準フォーマットiniファイルから削除した値。
 	IniRead	標準フォーマットiniファイルから値を読み込みます。
 	IniWrite	標準フォーマットiniファイルに値を書き込みます。

@@ -61,7 +61,7 @@
 	i_Lang005 =	&Box Mesej
 	i_Lang006 =	T&unggu Utama
 	i_Lang007 =	T&ingkap
-	i_Lang008 =	Im&ej / Pixel Search
+	i_Lang008 =	Im&ej / Pixel Search / Imej ke Teks
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Pergi Ke / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	tempoh
 	c_Lang258 =	Pulangan
 	c_Lang259 =	Pelepasan
+	c_Lang260 =	Imej ke Teks
+	c_Lang261 =	Bahasa
+	c_Lang262 =	Muat turun lebih banyak bahasa ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Pemeriksaan jika tingkap yang dinyatakan wujud dan kini aktif (utama).
 	IfWinExist / IfWinNotExist	Pemeriksaan jika tingkap yang dinyatakan wujud.
 	ImageSearch	Carian satu rantau skrin untuk imej.
+	ImageToText	Tukarkan gambar di layar, fail gambar, atau URL gambar menjadi teks.
 	IniDelete	Memadam nilai dari fail format. Jogja standard.
 	IniRead	Membaca nilai dari fail format. Jogja standard.
 	IniWrite	Tulis nilai kepada fail format. Jogja standard.

@@ -61,7 +61,7 @@
 	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Nøgle Vente
 	i_Lang007 =	&Vindue
-	i_Lang008 =	&Billede / Pixel Søg
+	i_Lang008 =	&Billede / Pixel Søg / Billede til tekst
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Gå Til / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Periode
 	c_Lang258 =	Return
 	c_Lang259 =	Frigiv
+	c_Lang260 =	Billede til tekst
+	c_Lang261 =	Sprog
+	c_Lang262 =	Download flere sprog ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporter til AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Kontrollerer om den angivne vindue eksisterer og er aktiv i øjeblikket (den forreste) .
 	IfWinExist / IfWinNotExist	Kontrollerer om den angivne vindue eksisterer.
 	ImageSearch	Søger en region af skærmen for et billede .
+	ImageToText	Konverter billeder på skærmen, billedfiler eller en billed-URL til tekst.
 	IniDelete	Sletter en værdi fra et standardformat . Ini -filen .
 	IniRead	Læser en værdi fra et standardformat . Ini -filen .
 	IniWrite	Skriver en værdi til et standardformat . Ini -filen .

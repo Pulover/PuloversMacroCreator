@@ -61,7 +61,7 @@
 	i_Lang005 =	Message &Box
 	i_Lang006 =	&Key Wait
 	i_Lang007 =	&Window
-	i_Lang008 =	&Image / Pixel Search
+	i_Lang008 =	&Image / Pixel Search / Image to Text
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Go To / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Period
 	c_Lang258 =	Return
 	c_Lang259 =	Release
+	c_Lang260 =	Image to Text
+	c_Lang261 =	Languages
+	c_Lang262 =	Download more languages...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Checks if the specified window exists and is currently active (foremost).
 	IfWinExist / IfWinNotExist	Checks if the specified window exists.
 	ImageSearch	Searches a region of the screen for an image.
+	ImageToText	Convert images on screen, image files, or an image URL to text.
 	IniDelete	Deletes a value from a standard format .ini file.
 	IniRead	Reads a value from a standard format .ini file.
 	IniWrite	Writes a value to a standard format .ini file.

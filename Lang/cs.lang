@@ -61,7 +61,7 @@
 	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Čekat na klávesu
 	i_Lang007 =	Ok&no
-	i_Lang008 =	O&brázek / Pixel Hledat
+	i_Lang008 =	O&brázek / Pixel Hledat / Obrázek na text
 	i_Lang009 =	&Spustit / Soubor / String / Misc.
 	i_Lang010 =	&Smyčka
 	i_Lang011 =	P&řejít na / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Doba
 	c_Lang258 =	Vrátit se
 	c_Lang259 =	uvolnit
+	c_Lang260 =	Obrázek na text
+	c_Lang261 =	Jazyky
+	c_Lang262 =	Stáhnout více jazyků ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportovat do AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Zkontroluje, zda zadaný okno existuje a je aktivní (především) .
 	IfWinExist / IfWinNotExist	Zkontroluje, zda zadaný okno existuje.
 	ImageSearch	Prohledá oblast obrazovky pro obraz .
+	ImageToText	Převádějte obrázky na obrazovce, obrazové soubory nebo URL obrázku na text.
 	IniDelete	Odstraní hodnotu od standardního formátu. INI souboru.
 	IniRead	Čte hodnoty ze standardní formát . INI souboru.
 	IniWrite	Zapíšehodnotu standardního formátu. INI souboru.

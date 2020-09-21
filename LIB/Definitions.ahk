@@ -65,6 +65,7 @@ ListCount1 := 0
 ,	cType53 := "DownloadFiles"
 ,	cType54 := "Zip"
 ,	cType55 := "Unzip"
+,	cType56 := "ImageToText"
 
 MAction1 := "Click"
 ,	MAction2 := "Move"
@@ -1290,4 +1291,4 @@ BuiltinVars := StrReplace(BIV_Characters, "`n", ",")
 			. StrReplace(BIV_Misc, "`n", ",")
 			. StrReplace(BIV_Loop, "`n", ",")
 
-FuncAllowedList := "Gdip_,Screenshot,CDO,Zip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords,Dlg_,IEGet,IELoad,WBGet,ScheduleTask"
+FuncAllowedList := "OCR,ImageIdentify,Gdip_,Screenshot,CDO,Zip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords,Dlg_,IEGet,IELoad,WBGet,ScheduleTask"

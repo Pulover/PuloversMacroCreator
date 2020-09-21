@@ -61,7 +61,7 @@
 	i_Lang005 =	&Message Box
 	i_Lang006 =	K&ey Wait
 	i_Lang007 =	&Logs
-	i_Lang008 =	Att&ēlu / Pixel Meklēt
+	i_Lang008 =	Att&ēlu / Pixel Meklēt / Attēls uz tekstu
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Cilpa
 	i_Lang011 =	&Iet uz / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	periods
 	c_Lang258 =	Atgriešanās
 	c_Lang259 =	Izdošanas
+	c_Lang260 =	Attēls uz tekstu
+	c_Lang261 =	Valodas
+	c_Lang262 =	Lejupielādēt citas valodas ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksports uz AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Pārbauda, ​​vai norādītais logs pastāv un pašlaik ir aktīvs (galvenokārt).
 	IfWinExist / IfWinNotExist	Pārbauda, ​​vai pastāv norādītais logs.
 	ImageSearch	Meklē reģionu ekrāna par attēlu.
+	ImageToText	Konvertējiet attēlus uz ekrāna, attēlu failus vai attēla URL uz tekstu.
 	IniDelete	Dzēš vērtību no standarta formāta Ini failu.
 	IniRead	Skan vērtību no standarta formāta Ini failu.
 	IniWrite	Raksta vērtību standarta formāta Ini failu.

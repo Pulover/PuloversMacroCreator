@@ -61,7 +61,7 @@
 	i_Lang005 =	P&ranešimo dėžutė
 	i_Lang006 =	Pa&grindiniai Palaukite
 	i_Lang007 =	&Langas
-	i_Lang008 =	&Vaizdo / pikselių Paieška
+	i_Lang008 =	&Vaizdo / pikselių Paieška / Vaizdas į tekstą
 	i_Lang009 =	V&ykdyti / Failų / Styginių / Įvairūs.
 	i_Lang010 =	K&ilpa
 	i_Lang011 =	&Eiti į / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	laikotarpis
 	c_Lang258 =	Sugrįžimas
 	c_Lang259 =	Leidiniai
+	c_Lang260 =	Vaizdas į tekstą
+	c_Lang261 =	Kalbos
+	c_Lang262 =	Atsisiųsti daugiau kalbų ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksportas į AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Tikrina, ar nurodytas langas egzistuoja ir šiuo metu veikia (svarbiausia).
 	IfWinExist / IfWinNotExist	Patikrina, ar nurodyta langas egzistuoja.
 	ImageSearch	Ieško yra ekrano regioną vaizdą.
+	ImageToText	Konvertuokite vaizdus ekrane, vaizdo failus ar vaizdo URL į tekstą.
 	IniDelete	Ištrina vertę nuo standartinio formato ini failą.
 	IniRead	Skaityta vertę nuo standartinio formato ini failą.
 	IniWrite	Rašo vertės standartinio formato ini failą.

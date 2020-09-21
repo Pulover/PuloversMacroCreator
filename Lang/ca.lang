@@ -61,7 +61,7 @@
 	i_Lang005 =	&Bústia de missatges
 	i_Lang006 =	&Espera Clau
 	i_Lang007 =	&Finestra
-	i_Lang008 =	&Imatge / Píxel Cerca
+	i_Lang008 =	&Imatge / Píxel Cerca / Imatge a text
 	i_Lang009 =	E&xecutar / Arxiu / Cadena / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Anar A / Etiqueta
@@ -571,6 +571,9 @@
 	c_Lang257 =	període
 	c_Lang258 =	Retorn
 	c_Lang259 =	sortida
+	c_Lang260 =	Imatge a text
+	c_Lang261 =	Idiomes
+	c_Lang262 =	Baixa més idiomes ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Comprova si hi ha la finestra especificada i es troba actualment activa (sobretot) .
 	IfWinExist / IfWinNotExist	Comprova si hi ha la finestra especificada .
 	ImageSearch	Busca en una regió de la pantalla per una imatge .
+	ImageToText	Convertiu imatges en pantalla, fitxers d'imatge o URL de la imatge a text.
 	IniDelete	Elimina un valor d'un arxiu de format . Ini estàndard.
 	IniRead	Llegeix un valor d'un arxiu de format . Ini estàndard.
 	IniWrite	Escriu un valor en un arxiu de format . Ini estàndard.

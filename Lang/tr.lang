@@ -61,7 +61,7 @@
 	i_Lang005 =	M&esaj Kutusu
 	i_Lang006 =	&Anahtar Bekleyin
 	i_Lang007 =	&Pencere
-	i_Lang008 =	&Görüntü / Piksel Arama
+	i_Lang008 =	&Görüntü / Piksel Arama / Metne Görüntü
 	i_Lang009 =	D&osya / Dizi / Misc Çalıştırın.
 	i_Lang010 =	D&öngü
 	i_Lang011 =	E&tiket Gidin
@@ -571,6 +571,9 @@
 	c_Lang257 =	dönem
 	c_Lang258 =	Dönüş
 	c_Lang259 =	Tutun
+	c_Lang260 =	Metne Görüntü
+	c_Lang261 =	Diller
+	c_Lang262 =	Daha fazla dil indirin ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey Aktar
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Çekler belirtilen pencere var ve (en önemlisi) etkin olup olmadığını .
 	IfWinExist / IfWinNotExist	Çekler belirtilen pencere varsa .
 	ImageSearch	Bir görüntü için ekran bir bölge arar .
+	ImageToText	Ekrandaki görüntüleri, görüntü dosyalarını veya bir görüntü URL'sini metne dönüştürün.
 	IniDelete	Standart bir format . Ini dosyası siler bir değer .
 	IniRead	Standart bir format . Ini dosyası bir değer okur .
 	IniWrite	Standart bir format . Ini dosyası için bir değer yazar.

@@ -61,7 +61,7 @@
 	i_Lang005 =	M&eddelanderuta
 	i_Lang006 =	T&angent Vänta
 	i_Lang007 =	&Fönster
-	i_Lang008 =	&Bild / Pixel Sök
+	i_Lang008 =	&Bild / Pixel Sök / Bild till text
 	i_Lang009 =	K&ör / Arkiv / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Gå Till / Etikett
@@ -571,6 +571,9 @@
 	c_Lang257 =	Period
 	c_Lang258 =	Lämna tillbaka
 	c_Lang259 =	Släpp
+	c_Lang260 =	Bild till text
+	c_Lang261 =	språk
+	c_Lang262 =	Ladda ner fler språk ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Kontrollerar om det angivna fönstret finns och är aktiv (främst) .
 	IfWinExist / IfWinNotExist	Kontrollerar om det angivna fönstret existerar .
 	ImageSearch	Söker en region av skärmen för en bild .
+	ImageToText	Konvertera bilder på skärmen, bildfiler eller en bild-URL till text.
 	IniDelete	Raderar ett värde från ett standardformat . Ini-fil .
 	IniRead	Läser ett värde från ett standardformat . Ini-fil .
 	IniWrite	Skriver ett värde till ett standardformat . Ini-fil .

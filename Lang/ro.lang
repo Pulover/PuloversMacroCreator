@@ -61,7 +61,7 @@
 	i_Lang005 =	C&aseta mesaj
 	i_Lang006 =	A&steptati-cheie
 	i_Lang007 =	&Fereastră
-	i_Lang008 =	&Imagine / Pixel Cautare
+	i_Lang008 =	&Imagine / Pixel Cautare / Imagine către text
 	i_Lang009 =	&Run / Fișier / String / Diverse.
 	i_Lang010 =	&Buclă
 	i_Lang011 =	&Du-te la / Etichetă
@@ -571,6 +571,9 @@
 	c_Lang257 =	Perioadă
 	c_Lang258 =	Întoarcere
 	c_Lang259 =	eliberare
+	c_Lang260 =	Imagine către text
+	c_Lang261 =	Limbi
+	c_Lang262 =	Descărcați mai multe limbi ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export către AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Controale în cazul în care există fereastra specificată și este în prezent activă (în primul rând).
 	IfWinExist / IfWinNotExist	Verifică dacă există fereastra specificată.
 	ImageSearch	Căutări o regiune a ecranului pentru o imagine.
+	ImageToText	Convertiți imagini pe ecran, fișiere imagine sau o adresă URL a imaginii în text.
 	IniDelete	Șterge o valoare dintr-un format de fișier .ini standard de.
 	IniRead	Citește o valoare dintr-un format de fișier .ini standard de.
 	IniWrite	Scrie o valoare într-un format de fișier .ini standard de.

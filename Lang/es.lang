@@ -61,7 +61,7 @@
 	i_Lang005 =	C&aja de Mensaje
 	i_Lang006 =	E&spera Clave
 	i_Lang007 =	&Ventana
-	i_Lang008 =	&Imagen / Tamaño De Píxel Buscar
+	i_Lang008 =	&Imagen / Tamaño De Píxel Buscar / Imagen a texto
 	i_Lang009 =	E&jecutar / Archivo / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	Ir A / Eti&queta
@@ -571,6 +571,9 @@
 	c_Lang257 =	Período
 	c_Lang258 =	Regreso
 	c_Lang259 =	Liberar
+	c_Lang260 =	Imagen a texto
+	c_Lang261 =	Idiomas
+	c_Lang262 =	Descargar más idiomas ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar a AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Comprueba si existe la ventana especificada y se encuentra actualmente activa (sobre todo) .
 	IfWinExist / IfWinNotExist	Comprueba si existe la ventana especificada .
 	ImageSearch	Busca en una región de la pantalla para una imagen.
+	ImageToText	Convierta imágenes en pantalla, archivos de imagen o una URL de imagen en texto.
 	IniDelete	Elimina un valor de un archivo de formato. Ini estándar.
 	IniRead	Lee un valor de un archivo de formato. Ini estándar.
 	IniWrite	Escribe un valor en un archivo de formato . Ini estándar.

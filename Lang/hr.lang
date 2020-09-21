@@ -61,7 +61,7 @@
 	i_Lang005 =	P&oruka Box
 	i_Lang006 =	K&ljuč Čekati
 	i_Lang007 =	P&rozor
-	i_Lang008 =	&Slika / Pixel Traži
+	i_Lang008 =	&Slika / Pixel Traži / Slika u tekst
 	i_Lang009 =	Tr&čanje / File / String / Razno.
 	i_Lang010 =	P&etlja
 	i_Lang011 =	&Ići / Oznaci
@@ -571,6 +571,9 @@
 	c_Lang257 =	Razdoblje
 	c_Lang258 =	Povratak
 	c_Lang259 =	release
+	c_Lang260 =	Slika u tekst
+	c_Lang261 =	Jezici
+	c_Lang262 =	Preuzmi još jezika ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Provjerava jesu linavedeni prozor postoji i trenutno je aktivan (prije svega) .
 	IfWinExist / IfWinNotExist	Provjerava jesu linavedeni prozor postoji.
 	ImageSearch	Pretražuje se područje na zaslonu za slikom .
+	ImageToText	Pretvorite slike na ekranu, slikovne datoteke ili URL slike u tekst.
 	IniDelete	Briševrijednost od standardnog formata . Ini datoteci .
 	IniRead	Čita vrijednost iz standardnog formata . Ini datoteci .
 	IniWrite	Piševrijednost standardnog formata . Ini datoteci .

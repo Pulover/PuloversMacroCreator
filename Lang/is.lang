@@ -61,7 +61,7 @@
 	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Key Wait
 	i_Lang007 =	&Gluggi
-	i_Lang008 =	M&ynd / Pixel Leit
+	i_Lang008 =	M&ynd / Pixel Leit / Mynd til texta
 	i_Lang009 =	&Run / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	G&o To / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	tímabil
 	c_Lang258 =	Return
 	c_Lang259 =	Release
+	c_Lang260 =	Mynd til texta
+	c_Lang261 =	Tungumál
+	c_Lang262 =	Sæktu fleiri tungumál ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Flytja út í AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Eftirlit ef tilgreint gluggi er til og er nú virkur (fremst).
 	IfWinExist / IfWinNotExist	Athugar ef tilgreindur glugga til staðar.
 	ImageSearch	Leitar svæði á skjánum fyrir mynd.
+	ImageToText	Umbreyta myndum á skjá, myndskrám eða vefslóð myndar í texta.
 	IniDelete	Eyðir gildi frá venjulegu sniði .ini skrá.
 	IniRead	Les gildi frá venjulegu sniði .ini skrá.
 	IniWrite	Skrifar gildi til staðlaða sniði .ini skrá.

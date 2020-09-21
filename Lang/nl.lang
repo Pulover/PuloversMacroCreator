@@ -61,7 +61,7 @@
 	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Key Wachten
 	i_Lang007 =	&Venster
-	i_Lang008 =	&Afbeelding / Pixel Zoeken
+	i_Lang008 =	&Afbeelding / Pixel Zoeken / Afbeelding naar tekst
 	i_Lang009 =	&Run / Bestand / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Ga Naar / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Periode
 	c_Lang258 =	Terugkeer
 	c_Lang259 =	Laat
+	c_Lang260 =	Afbeelding naar tekst
+	c_Lang261 =	Talen
+	c_Lang262 =	Meer talen downloaden ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Controleert of het opgegeven venster bestaat en is momenteel actief (vooral) .
 	IfWinExist / IfWinNotExist	Controleert of het opgegeven venster bestaat.
 	ImageSearch	Zoekt een gebied van het scherm voor een afbeelding .
+	ImageToText	Converteer afbeeldingen op het scherm, afbeeldingsbestanden of een afbeeldings-URL naar tekst.
 	IniDelete	Verwijdert een waarde uit een standaard formaat . Ini-bestand .
 	IniRead	Leest een waarde uit een standaard formaat . Ini-bestand .
 	IniWrite	Schrijft een waarde naar een standaard formaat . Ini-bestand .

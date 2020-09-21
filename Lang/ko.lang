@@ -61,7 +61,7 @@
 	i_Lang005 =	메시지 박스(&B)
 	i_Lang006 =	키 대기(&K)
 	i_Lang007 =	창(&W)
-	i_Lang008 =	이미지 / 픽셀 검색(&I)
+	i_Lang008 =	이미지 / 픽셀 검색(&I) / 이미지를 텍스트로
 	i_Lang009 =	/ 파일 / 문자열 / 기타를 실행합니다.(&R)
 	i_Lang010 =	루프(&L)
 	i_Lang011 =	라벨로 이동(&G)
@@ -571,6 +571,9 @@
 	c_Lang257 =	기간
 	c_Lang258 =	반환
 	c_Lang259 =	기다려
+	c_Lang260 =	이미지를 텍스트로
+	c_Lang261 =	언어
+	c_Lang262 =	더 많은 언어 다운로드 ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	검사 지정 창이 존재하고 (제일) 현재 활성화됩니다.
 	IfWinExist / IfWinNotExist	검사를 지정된 윈도우가 존재합니다.
 	ImageSearch	이미지가 화면의 영역을 검색합니다.
+	ImageToText	화면의 이미지, 이미지 파일 또는 이미지 URL을 텍스트로 변환합니다.
 	IniDelete	표준 형식. ini 파일에서 삭제 값을 반환합니다.
 	IniRead	표준 형식. ini 파일에서 값을 읽습니다.
 	IniWrite	표준 형식. ini 파일에 값을 씁니다.

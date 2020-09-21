@@ -61,7 +61,7 @@
 	i_Lang005 =	&Message Box
 	i_Lang006 =	&Kulcs Várakozás
 	i_Lang007 =	&Ablak
-	i_Lang008 =	K&ép / Pixel Search
+	i_Lang008 =	K&ép / Pixel Search / Kép a szövegbe
 	i_Lang009 =	&Run / Fájl / String / Misc.
 	i_Lang010 =	&Hurok
 	i_Lang011 =	Me&gy / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Időszak
 	c_Lang258 =	Visszatérés
 	c_Lang259 =	release
+	c_Lang260 =	Kép a szövegbe
+	c_Lang261 =	Nyelvek
+	c_Lang262 =	További nyelvek letöltése ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Ellenőrzi, hogy a megadott ablak létezik, és aktív (elsősorban).
 	IfWinExist / IfWinNotExist	Ellenőrzi, hogy a megadott ablak létezik.
 	ImageSearch	Keres a régióban a képernyőn egy képet.
+	ImageToText	Konvertálja a képeket a képernyőn, képfájlokat vagy kép URL-jét szöveggé.
 	IniDelete	Törli egy értéket egy szabványos formátumban. Ini fájlt.
 	IniRead	Olvasás egy értéket egy szabványos formátumban. Ini fájlt.
 	IniWrite	Ír egy értéket egy szabványos formátumban. Ini fájlt.

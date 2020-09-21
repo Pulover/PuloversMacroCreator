@@ -61,7 +61,7 @@
 	i_Lang005 =	訊息框(&B)
 	i_Lang006 =	等待鍵(&K)
 	i_Lang007 =	視窗(&W)
-	i_Lang008 =	圖片 / 像素搜索(&I)
+	i_Lang008 =	圖片 / 像素搜索(&I) / 圖片到文字
 	i_Lang009 =	執行 / 文件 / 字串 / MISC。(&R)
 	i_Lang010 =	迴路(&L)
 	i_Lang011 =	去/標籤(&G)
@@ -571,6 +571,9 @@
 	c_Lang257 =	期
 	c_Lang258 =	返回
 	c_Lang259 =	釋放
+	c_Lang260 =	圖片到文字
+	c_Lang261 =	語言能力
+	c_Lang262 =	下載更多語言...
 		
 ; 16. Other Windows		
 	t_Lang001 =	導出到華民航空
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	檢查是否存在指定的窗口，是目前活躍（最重要的）。
 	IfWinExist / IfWinNotExist	檢查是否存在指定的窗口。
 	ImageSearch	搜索用於圖像的屏幕的區域。
+	ImageToText	將屏幕上的圖像，圖像文件或圖像URL轉換為文本。
 	IniDelete	刪除標準格式。ini文件中的值。
 	IniRead	讀取標準格式。ini文件中的值。
 	IniWrite	值寫入到標準格式。ini文件。

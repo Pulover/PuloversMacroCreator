@@ -61,7 +61,7 @@
 	i_Lang005 =	I&bhokisi yomyalezo
 	i_Lang006 =	&Thembela key
 	i_Lang007 =	I&festile
-	i_Lang008 =	I&mage / Pixel khangela
+	i_Lang008 =	I&mage / Pixel khangela / Umfuziselo wokubhaliweyo
 	i_Lang009 =	B&aleka / Ifayile / Umtya / Misc.
 	i_Lang010 =	&Lukhangelwe
 	i_Lang011 =	&Yiya / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	ixesha
 	c_Lang258 =	Buya
 	c_Lang259 =	Release
+	c_Lang260 =	Umfuziselo wokubhaliweyo
+	c_Lang261 =	Iilwimi
+	c_Lang262 =	Khuphela iilwimi ezininzi ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Rhweba AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Kukhangela ukuba window elikhankanyiweyo likhona kwaye olusebenzayo ngoku (kuqala).
 	IfWinExist / IfWinNotExist	Indlela yokukhangela ukuba window ekhankanyiweyo ikhona.
 	ImageSearch	Uphengulula kummandla isisitheliso umfanekiso.
+	ImageToText	Guqula imifanekiso kwiscreen, kwiifayile zemifanekiso, okanye kwi-URL yomfanekiso ukuze ubhale.
 	IniDelete	Icima ixabiso ukusuka ifomathi yefayile umgangatho .ini.
 	IniRead	Ufunda ixabiso ukusuka ifomathi yefayile umgangatho .ini.
 	IniWrite	Ubhala ixabiso kwifomati yefayile umgangatho .ini.

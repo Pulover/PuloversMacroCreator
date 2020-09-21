@@ -61,7 +61,7 @@
 	i_Lang005 =	K&otak pesan
 	i_Lang006 =	T&unggu Key
 	i_Lang007 =	J&endela
-	i_Lang008 =	&Image / Pixel Pencarian
+	i_Lang008 =	&Image / Pixel Pencarian / Gambar ke Teks
 	i_Lang009 =	J&alankan / File / String / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Pergi Ke / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Periode
 	c_Lang258 =	Kembali
 	c_Lang259 =	Lepas
+	c_Lang260 =	Gambar ke Teks
+	c_Lang261 =	Bahasa
+	c_Lang262 =	Unduh lebih banyak bahasa ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspor ke AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Cek jika jendela yang ditentukan ada dan saat ini aktif (terutama).
 	IfWinExist / IfWinNotExist	Cek jika jendela yang ditentukan ada.
 	ImageSearch	Mencari sebuah wilayah layar untuk gambar.
+	ImageToText	Konversikan gambar di layar, file gambar, atau URL gambar menjadi teks.
 	IniDelete	Menghapus nilai dari file ini format yang. Standar.
 	IniRead	Membaca nilai dari file ini format yang. Standar.
 	IniWrite	Menulis nilai ke file format yang inisial. Standar.

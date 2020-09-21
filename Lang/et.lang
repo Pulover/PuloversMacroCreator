@@ -61,7 +61,7 @@
 	i_Lang005 =	T&eatekast
 	i_Lang006 =	Ke&y Oodake
 	i_Lang007 =	&Aken
-	i_Lang008 =	P&ilt / Pixel Otsing
+	i_Lang008 =	P&ilt / Pixel Otsing / Pilt tekstiks
 	i_Lang009 =	&Run / Fail / String / Muud.
 	i_Lang010 =	Aa&s
 	i_Lang011 =	&Mine / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	periood
 	c_Lang258 =	Tagastamine
 	c_Lang259 =	Release
+	c_Lang260 =	Pilt tekstiks
+	c_Lang261 =	Keeled
+	c_Lang262 =	Laadige alla veel keeli ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Ekspordi AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Kontrollib, kas määratud aken on olemas ja on aktiivne (eelkõige).
 	IfWinExist / IfWinNotExist	Kontrollib, kas määratud aken olemas.
 	ImageSearch	Otsingud piirkonnas ekraani pildi.
+	ImageToText	Ekraanil olevate piltide, pildifailide või pildi URL-i teisendamine tekstiks.
 	IniDelete	Kustutab väärtus vormikohase Ini faili.
 	IniRead	Loeb väärtus vormikohase Ini faili.
 	IniWrite	Kirjutab väärtust vormikohase Ini faili.

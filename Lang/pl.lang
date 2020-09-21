@@ -61,7 +61,7 @@
 	i_Lang005 =	M&essage box
 	i_Lang006 =	&Oczekiwanie na klawisz
 	i_Lang007 =	O&kno
-	i_Lang008 =	&Znajdź obraz / pixel
+	i_Lang008 =	&Znajdź obraz / pixel / Obraz na tekst
 	i_Lang009 =	&Uruchom / Plik / Ciąg znaków / Inne
 	i_Lang010 =	P&ętla
 	i_Lang011 =	P&rzejdź do / Etykieta
@@ -571,6 +571,9 @@
 	c_Lang257 =	Okres
 	c_Lang258 =	Powrót
 	c_Lang259 =	Zwolnij
+	c_Lang260 =	Obraz na tekst
+	c_Lang261 =	Języki
+	c_Lang262 =	Pobierz więcej języków ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Sprawdza, czy określony okno istnieje i jest aktywna (przede wszystkim).
 	IfWinExist / IfWinNotExist	Sprawdza, czy określony okno istnieje.
 	ImageSearch	Przeszukuje obszar ekranu dla obrazu.
+	ImageToText	Konwertuj obrazy na ekranie, pliki obrazów lub adres URL obrazu na tekst.
 	IniDelete	Usuwanapięcie ze standardowego formatu . Pliku ini.
 	IniRead	Odczytuje wartość z standardowym formacie . Pliku ini .
 	IniWrite	Zapisujewartość do standardowego formatu . Pliku ini .

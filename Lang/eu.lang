@@ -61,7 +61,7 @@
 	i_Lang005 =	Me&zua Box
 	i_Lang006 =	&Gakoa Wait
 	i_Lang007 =	&Leiho
-	i_Lang008 =	&Image / Pixel bilaketa
+	i_Lang008 =	&Image / Pixel bilaketa / Irudia Testura
 	i_Lang009 =	&Run / Archivo / String / Misc.
 	i_Lang010 =	L&oop
 	i_Lang011 =	&Joan / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Epea
 	c_Lang258 =	Return
 	c_Lang259 =	oharra
+	c_Lang260 =	Irudia Testura
+	c_Lang261 =	Hizkuntzak
+	c_Lang262 =	Deskargatu hizkuntza gehiago ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Checks zehaztutako leiho existitzen bada eta une honetan aktibo dago (behin).
 	IfWinExist / IfWinNotExist	Egiaztatzen zehaztutako leiho existitzen bada.
 	ImageSearch	Pantailaren eskualde bat bilatzen du, irudi bat da.
+	ImageToText	Bihurtu pantailako irudiak, irudi fitxategiak edo irudi URL bat testu bihurtzeko.
 	IniDelete	Formatu .ini fitxategi estandar batean balio bat ezabatzen.
 	IniRead	Formatu .ini fitxategi estandar batean balio bat irakurtzen.
 	IniWrite	Balio bat idazten formatuan .ini fitxategi estandar bat da.

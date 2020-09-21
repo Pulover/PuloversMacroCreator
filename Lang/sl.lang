@@ -61,7 +61,7 @@
 	i_Lang005 =	P&olje sporočilo
 	i_Lang006 =	&Ključne Počakaj
 	i_Lang007 =	&Okno
-	i_Lang008 =	&Image / Pixel Iskanje
+	i_Lang008 =	&Image / Pixel Iskanje / Slika v besedilo
 	i_Lang009 =	&Run / Datoteke / String / Razno.
 	i_Lang010 =	&Loop
 	i_Lang011 =	I&ti / Etiketi
@@ -571,6 +571,9 @@
 	c_Lang257 =	obdobje
 	c_Lang258 =	Nazaj
 	c_Lang259 =	Spustite
+	c_Lang260 =	Slika v besedilo
+	c_Lang261 =	Jeziki
+	c_Lang262 =	Prenos več jezikov ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz v AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Preveri, če obstaja določena okno in je trenutno aktiven (predvsem).
 	IfWinExist / IfWinNotExist	Preveri, če obstaja določeno okno.
 	ImageSearch	Iskanje regijo na zaslonu za sliko.
+	ImageToText	Pretvorite slike na zaslonu, slikovne datoteke ali URL slike v besedilo.
 	IniDelete	Izbriše vrednost od standardnega formata. Ini datoteki.
 	IniRead	Prebere vrednost iz standardnega formata. Ini datoteki.
 	IniWrite	Piše vrednost standardnega formata. Ini datoteki.

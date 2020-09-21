@@ -61,7 +61,7 @@
 	i_Lang005 =	C&aixa de Mensagem
 	i_Lang006 =	E&sperar Tecla
 	i_Lang007 =	&Janela
-	i_Lang008 =	P&rocurar Imagem / Pixel
+	i_Lang008 =	P&rocurar Imagem / Pixel / Imagem para Texto
 	i_Lang009 =	E&xecutar / Arquivos / Texto / Misc.
 	i_Lang010 =	&Loop
 	i_Lang011 =	Ir Para / Rót&ulo
@@ -571,6 +571,9 @@
 	c_Lang257 =	Período
 	c_Lang258 =	Retorno
 	c_Lang259 =	Soltar
+	c_Lang260 =	Imagem para Texto
+	c_Lang261 =	Idiomas
+	c_Lang262 =	Baixar mais idiomas...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Verifica se a janela especificada existe e está ativa (acima de tudo).
 	IfWinExist / IfWinNotExist	Verifica se a janela especificada existe.
 	ImageSearch	Procura uma região da tela para uma imagem.
+	ImageToText	Converter imagens na tela, arquivos de imagem ou URL de imagem para texto.
 	IniDelete	Exclui um valor a partir de um arquivo de formato. Ini padrão.
 	IniRead	Lê um valor a partir de um arquivo de formato. Ini padrão.
 	IniWrite	Grava um valor a um arquivo de formato. Ini padrão.

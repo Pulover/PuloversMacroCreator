@@ -241,6 +241,11 @@
 					RowData := "`nLoop" (TimesX != 1 ? ", " TimesX : "") "`n{" RowData "`n}`nUntil ErrorLevel"
 				Else If ((TimesX > 1) || InStr(TimesX, "%"))
 					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+			Case cType56:
+				Loop, 5
+					Stp%A_Index% := ""
+				StringSplit, Stp, Step, `,, %A_Space%%A_Tab%
+				RowData := "`n" Stp5 " := OCR([" Stp1 ", " Stp2 ", " (Stp3 - Stp1) ", " (Stp4 - Stp2) "], """ Target """)"
 			Case cType17:
 				If (Step = "Else")
 				{
@@ -635,7 +640,7 @@ Script_Header()
 
 IncludeFiles(L, N)
 {
-	global cType44
+	global cType44,cType56
 	
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%L%
@@ -644,7 +649,12 @@ IncludeFiles(L, N)
 		If (LV_GetNext(A_Index-1, "Checked") != A_Index)
 			continue
 		LV_GetText(Row_Type, A_Index, 6)
-		If (Row_Type != cType44)
+		If (Row_Type = cType56)
+		{
+			IncList .= "`#`Include <Vis2>`n"
+			continue
+		}
+		Else If (Row_Type != cType44)
 			continue
 		LV_GetText(IncFile, A_Index, 7)
 		If ((IncFile != "") && (IncFile != "Expression"))

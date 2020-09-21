@@ -61,7 +61,7 @@
 	i_Lang005 =	M&essage Box
 	i_Lang006 =	P&risni Key
 	i_Lang007 =	&Dritare
-	i_Lang008 =	&Image / Pixel Kërko
+	i_Lang008 =	&Image / Pixel Kërko / Imazhi në Tekst
 	i_Lang009 =	R&un / File / String / Misc.
 	i_Lang010 =	&Lak
 	i_Lang011 =	&Go To / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	periudhë
 	c_Lang258 =	Kthimi
 	c_Lang259 =	Release
+	c_Lang260 =	Imazhi në Tekst
+	c_Lang261 =	Gjuhët
+	c_Lang262 =	Shkarkoni më shumë gjuhë ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporti në AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Kontrollon nëse dritarja specifikuar ekziston dhe aktualisht është aktive (kryesorja).
 	IfWinExist / IfWinNotExist	Kontrollon nëse ekziston dritarja specifikuar.
 	ImageSearch	Kërkon një rajon të ekranit për një imazh.
+	ImageToText	Shndërroni imazhet në ekran, skedarët e imazheve ose një URL të imazhit në tekst.
 	IniDelete	Fshin një vlerë prej një standardi format skedar .ini.
 	IniRead	Lexon një vlerë prej një standardi format skedar .ini.
 	IniWrite	Shkruan një vlerë në një standard format skedar .ini.

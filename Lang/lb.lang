@@ -61,7 +61,7 @@
 	i_Lang005 =	M&essage Box
 	i_Lang006 =	&Schlëssel Waart
 	i_Lang007 =	&Fënster
-	i_Lang008 =	&Image / Pixel Search
+	i_Lang008 =	&Image / Pixel Search / Bild op Text
 	i_Lang009 =	&Run / Fichier / Zeecheketten / Meedecher.
 	i_Lang010 =	&Loop
 	i_Lang011 =	&Go Fir / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	Period
 	c_Lang258 =	Zeréck
 	c_Lang259 =	Netflix
+	c_Lang260 =	Bild op Text
+	c_Lang261 =	Sproochen
+	c_Lang262 =	Luet méi Sproochen erof ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export ze AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Kontrollen ob der spezifizéierter Fënster existéiert an ass am Moment aktiv (virun allem).
 	IfWinExist / IfWinNotExist	Kontrollen ob der spezifizéierter Fënster existéiert.
 	ImageSearch	Recherchen eng Regioun vun de Bildschierm fir en Bild.
+	ImageToText	Konvertéiert Biller um Bildschierm, Bilddateien oder eng Bild URL an den Text.
 	IniDelete	Deletes engem Wäert vun engem Standard Format .ini Fichier.
 	IniRead	Liest e Wäert vun engem Standard Format .ini Fichier.
 	IniWrite	Schreift e Wäert op e Liewesniveau Format .ini Fichier.

@@ -1670,6 +1670,10 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try %Act3% := FoundX, %Act4% := FoundY
 		GoSub, TakeAction
 	return TakeAction
+	pb_ImageToText:
+		Try %Par5% := OCR([Par1, Par2, (Par3 - Par1), (Par4 - Par2)], Target)
+		Try SavedVars(Par5,,, RunningFunction)
+	return
 	pb_SendMessage:
 		Win := SplitWin(Window)
 		SendMessage, %Par1%, %Par2%, %Par3%, %Target%, % Win[1], % Win[2], % Win[3], % Win[4]

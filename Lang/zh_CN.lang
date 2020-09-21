@@ -61,7 +61,7 @@
 	i_Lang005 =	消息框(&B)
 	i_Lang006 =	等待按键(&K)
 	i_Lang007 =	窗口(&W)
-	i_Lang008 =	图片/像素搜索(&I)
+	i_Lang008 =	图片/像素搜索(&I) / 图片到文字
 	i_Lang009 =	运行/文件/字符串/其他(&R)
 	i_Lang010 =	循环(&L)
 	i_Lang011 =	去/标签(&G)
@@ -571,6 +571,9 @@
 	c_Lang257 =	期
 	c_Lang258 =	返回
 	c_Lang259 =	释放
+	c_Lang260 =	图片到文字
+	c_Lang261 =	语言能力
+	c_Lang262 =	下载更多语言...
 		
 ; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	检查指定的窗口是否存在且当前是否活动（在最前面）。
 	IfWinExist / IfWinNotExist	检查指定的窗口是否存在。
 	ImageSearch	在屏幕的某个区域中搜索图像。
+	ImageToText	将屏幕上的图像，图像文件或图像URL转换为文本。
 	IniDelete	删除标准格式的.ini文件中的值。
 	IniRead	读取标准格式的.ini文件中的值。
 	IniWrite	写入值到标准格式的.ini文件。

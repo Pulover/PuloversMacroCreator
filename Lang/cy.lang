@@ -61,7 +61,7 @@
 	i_Lang005 =	&Blwch neges
 	i_Lang006 =	&Aros allweddol
 	i_Lang007 =	&Ffenestr
-	i_Lang008 =	&Image / Picsel Chwilio
+	i_Lang008 =	&Image / Picsel Chwilio / Delwedd i'r Testun
 	i_Lang009 =	R&hedeg / File / String / Misc.
 	i_Lang010 =	&Dolen
 	i_Lang011 =	&Ewch i / Label
@@ -571,6 +571,9 @@
 	c_Lang257 =	cyfnod
 	c_Lang258 =	Dychwelyd
 	c_Lang259 =	Rhyddhau
+	c_Lang260 =	Delwedd i'r Testun
+	c_Lang261 =	Ieithoedd
+	c_Lang262 =	Dadlwythwch fwy o ieithoedd ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Allforio i AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Gwiriadau os bydd y ffenestr a bennir yn bodoli ac yn weithredol ar hyn o bryd (yn bennaf).
 	IfWinExist / IfWinNotExist	Gwiriadau os bydd y ffenestr a bennir yn bodoli.
 	ImageSearch	Chwiliadau rhanbarth y sgrin ar gyfer delwedd.
+	ImageToText	Trosi delweddau ar y sgrin, ffeiliau delwedd, neu URL delwedd yn destun.
 	IniDelete	Dileu gwerth o fformat ffeil .ini safonol.
 	IniRead	Darllen gwerth o fformat ffeil .ini safonol.
 	IniWrite	Ysgrifennu gwerth i fformat ffeil .ini safonol.

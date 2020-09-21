@@ -61,7 +61,7 @@
 	i_Lang005 =	C&aixa de mensaxes
 	i_Lang006 =	&Espérase clave
 	i_Lang007 =	&Ventá
-	i_Lang008 =	&Image / Pixel Buscar
+	i_Lang008 =	&Image / Pixel Buscar / Imaxe a texto
 	i_Lang009 =	R&un / File / String / Misc.
 	i_Lang010 =	&Lazo
 	i_Lang011 =	Ir a&o / etiqueta
@@ -571,6 +571,9 @@
 	c_Lang257 =	período
 	c_Lang258 =	Retorno
 	c_Lang259 =	Lanzamento
+	c_Lang260 =	Imaxe a texto
+	c_Lang261 =	Idiomas
+	c_Lang262 =	Descargar máis idiomas ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Comproba se a fiestra especificada existe e está actualmente activa (por riba de todo).
 	IfWinExist / IfWinNotExist	Comproba se existe a xanela especificada.
 	ImageSearch	Pescudas unha rexión da pantalla para unha imaxe.
+	ImageToText	Converte imaxes en pantalla, ficheiros de imaxe ou URL de imaxe a texto.
 	IniDelete	Exclúe un valor dun ficheiro ini formato estándar.
 	IniRead	Le un valor dun ficheiro ini formato estándar.
 	IniWrite	Grava un valor a un arquivo ini formato estándar.

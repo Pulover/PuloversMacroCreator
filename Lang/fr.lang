@@ -61,7 +61,7 @@
 	i_Lang005 =	&Message Box
 	i_Lang006 =	&Attente Touche
 	i_Lang007 =	&Fenêtre
-	i_Lang008 =	&Image / Pas De Pixel Recherche
+	i_Lang008 =	&Image / Pas De Pixel Recherche / Image en texte
 	i_Lang009 =	&Exécuter / Fichier / String / Misc.
 	i_Lang010 =	&Boucle
 	i_Lang011 =	A&ller / Étiquette
@@ -571,6 +571,9 @@
 	c_Lang257 =	Période
 	c_Lang258 =	Retour
 	c_Lang259 =	Release
+	c_Lang260 =	Image en texte
+	c_Lang261 =	Langues
+	c_Lang262 =	Télécharger plus de langues ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporter vers AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Vérifie si la fenêtre spécifiée existe et est actuellement active (avant tout) .
 	IfWinExist / IfWinNotExist	Vérifie si la fenêtre spécifiée existe.
 	ImageSearch	Une recherche dans une région de l'écran d'une image.
+	ImageToText	Convertissez des images à l'écran, des fichiers image ou une URL d'image en texte.
 	IniDelete	Supprime une valeur d'un format de fichier . Ini standard.
 	IniRead	Lit une valeur à partir d'un format de fichier . Ini standard.
 	IniWrite	Écrit une valeur dans un format de fichier . Ini standard.

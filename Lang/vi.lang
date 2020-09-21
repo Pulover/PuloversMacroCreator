@@ -61,7 +61,7 @@
 	i_Lang005 =	&Hộp tin nhắn
 	i_Lang006 =	Ch&ờ chính
 	i_Lang007 =	C&ửa sổ
-	i_Lang008 =	H&ình ảnh / Pixel Tìm kiếm
+	i_Lang008 =	H&ình ảnh / Pixel Tìm kiếm / Hình ảnh thành Văn bản
 	i_Lang009 =	Ch&ạy / File / String / Misc.
 	i_Lang010 =	V&òng lặp
 	i_Lang011 =	&Đi Vào / Nhãn
@@ -571,6 +571,9 @@
 	c_Lang257 =	Giai đoạn
 	c_Lang258 =	Trở về
 	c_Lang259 =	Thả
+	c_Lang260 =	Hình ảnh thành Văn bản
+	c_Lang261 =	Ngôn ngữ
+	c_Lang262 =	Tải xuống các ngôn ngữ khác ...
 		
 ; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -1325,6 +1328,7 @@
 	IfWinActive / IfWinNotActive	Kiểm tra nếu các cửa sổ chỉ định tồn tại và hiện đang hoạt động (quan trọng nhất).
 	IfWinExist / IfWinNotExist	Kiểm tra nếu các cửa sổ chỉ định tồn tại.
 	ImageSearch	Tìm kiếm một khu vực của màn hình cho hình ảnh.
+	ImageToText	Chuyển đổi hình ảnh trên màn hình, tệp hình ảnh hoặc URL hình ảnh thành văn bản.
 	IniDelete	Xóa một giá trị từ một định dạng tập tin này. Tiêu chuẩn.
 	IniRead	Đọc một giá trị từ một định dạng tập tin này. Tiêu chuẩn.
 	IniWrite	Viết một giá trị vào một tập tin định dạng ini. Tiêu chuẩn.
