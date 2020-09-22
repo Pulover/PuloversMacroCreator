@@ -651,7 +651,7 @@ IncludeFiles(L, N)
 		LV_GetText(Row_Type, A_Index, 6)
 		If (Row_Type = cType56)
 		{
-			IncList .= "`#`Include <Vis2>`n"
+			IncList .= "`#`Include <Vis2> `; https://www.autohotkey.com/boards/viewtopic.php?f=6&t=36047`n"
 			continue
 		}
 		Else If (Row_Type != cType44)
