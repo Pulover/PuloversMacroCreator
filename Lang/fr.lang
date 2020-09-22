@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift+F5)
 	w_Lang057 =	Attente Touche (Ctrl+F5)
 	w_Lang058 =	Fenêtre (F6)
-	w_Lang059 =	Image / pas de pixel Recherche (F7)
+	w_Lang059 =	Image / pas de pixel Recherche / Image en texte (F7)
 	w_Lang060 =	Exécuter / fichier / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Aller / Étiquette (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Renvoie le nombre binaire stocké à l'adresse spécifiée+offset.
 	NumPut	Magasins numéro en format binaire à l'adresse spécifiée+offset et retourne l'adresse à droite de l'article juste écrit.
 	Object	Crée un tableau associatif scriptable.
+	OCR	Convertissez des images à l'écran, des fichiers image ou une URL d'image en texte.
 	Ord	Renvoie la valeur ordinale (code de caractère numérique) du premier caractère de la chaîne.
 	OutputDebug	Envoie une chaîne au débogueur (le cas échéant) pour l'affichage.
 	Parameter	Ajoute un paramètre à la fonction.

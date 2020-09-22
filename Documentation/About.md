@@ -1,24 +1,24 @@
 ﻿# Pulover's Macro Creator
 *The Complete Automation Tool*
 
-[www.macrocreator.com](http://www.macrocreator.com)  
-[Forum Thread](http://autohotkey.com/boards/viewtopic.php?f=6&t=143)  
+[www.macrocreator.com](https://www.macrocreator.com)  
+[Forum Thread](https://www.autohotkey.com/boards/viewforum.php?f=63)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.1.4  
+Version: 5.2.0  
 Release Date: September, 2020  
-AutoHotkey Version: 1.1.32.00  
+AutoHotkey Version: 1.1.33.02  
 
 Software License: [GNU General Public License](License.html)  
 
 ## Thanks to
 
-Chris and Lexikos for [AutoHotkey](http://autohotkey.com/).  
-tic (Tariq Porter) for his [GDI+ Library](http://autohotkey.com/boards/viewtopic.php?t=6517).  
+Chris and Lexikos for [AutoHotkey](https://www.autohotkey.com/).  
+tic (Tariq Porter) for his [GDI+ Library](https://www.autohotkey.com/boards/viewtopic.php?t=6517).  
 tkoi & majkinetor for the [ILButton function](http://autohotkey.com/board/topic/37147-ilbutton-image-buttons).  
-just me for [LV_Colors Class](http://autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](http://autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](http://autohotkey.com/boards/viewtopic.php?f=6&t=1273) libraries and for updating ILButton to 64bit.  
+just me for [LV_Colors Class](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=1081), [LV_EX](https://www.autohotkey.com/boards/viewtopic.php?t=1256)/[IL_EX](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=1273) libraries and for updating ILButton to 64bit.  
 Micahs for the [base code](http://autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843) of the Drag-Rows function.  
 jaco0646 for the [function](http://autohotkey.com/board/topic/47439-user-defined-dynamic-hotkeys) to make hotkey controls detect other keys.  
 Uberi for the [ExprEval function](http://autohotkey.com/board/topic/64167-expreval-evaluate-expressions) to solve expressions.  
@@ -28,20 +28,23 @@ majkinetor for the [Dlg_Color function](http://autohotkey.com/board/topic/49214-
 rbrtryn for the [ChooseColor function](http://autohotkey.com/board/topic/91229-windows-color-picker-plus/).  
 PhiLho and skwire for the [function](http://autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340) to Get/Set the order of columns.  
 fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
-tmplinshi for the [CreateFormData function](http://autohotkey.com/boards/viewtopic.php?f=6&t=7647).  
+tmplinshi for the [CreateFormData function](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=7647).  
+iseahound (Edison Hua) for the [Vis2 function](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=36047) used for OCR.  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
 chosen1ft for fixing the mixing rows bug when saving a project.
-[Translation revisions](http://www.macrocreator.com/project/).  
+[Translation revisions](https://www.macrocreator.com/project/).  
 
 
 # Change Log
 
-## Version 5.1.4
+## Version 5.2.0
+* Added new feature: **Image to Text (OCR)** in *Image Search* command window.
 * Added support for defining *any* hotkey for **Play** manually in Edit Macros window.
 * Added *Go to* command in edit menu.
 * Added font size setting for macro list in view menu.
 * Added font size setting for preview panel.
 * Fixed bug when closing macro tab.
+* Fixed bugs.
 
 ## Version 5.1.3
 * Fixed bugs in *Capture key presses* feature.

@@ -23,7 +23,7 @@ Script =
 #define PmcName "Pulover's Macro Creator"
 #define PmcVersion "%PMCVer%"
 #define PmcCompany "Rodolfo U. Batista"
-#define PmcURL "http://www.macrocreator.com"
+#define PmcURL "https://www.macrocreator.com"
 #define PmcCopyright "Copyright (C) 2012-2020 Rodolfo U. Batista"
 #define PmcExeName "MacroCreator.exe"
 #define PmcExt "pmc"
@@ -108,6 +108,12 @@ Source: "{#WorkDir}\Compiled\Lang\*.lang"; DestDir: "{userappdata}\MacroCreator\
 Source: "{#WorkDir}\Compiled\Lang\*.lang"; DestDir: "{app}\Lang"; Flags: ignoreversion; Tasks: portableinstall
 Source: "{#WorkDir}\Compiled\Demo.pmc"; DestDir: "{userappdata}\MacroCreator"; Flags: ignoreversion; Tasks: not portableinstall
 Source: "{#WorkDir}\Compiled\Demo.pmc"; DestDir: "{app}"; Flags: ignoreversion; Tasks: portableinstall
+Source: "{#WorkDir}\Bin\leptonica_util\*.*"; DestDir: "{app}\Bin\leptonica_util"; Flags: ignoreversion
+Source: "{#WorkDir}\Bin\tesseract\tesseract.exe"; DestDir: "{app}\Bin\tesseract"; Flags: ignoreversion
+Source: "{#WorkDir}\Bin\tesseract\tessdata_best\eng.traineddata"; DestDir: "{app}\Bin\tesseract\tessdata_best"; Flags: ignoreversion; Tasks: portableinstall
+Source: "{#WorkDir}\Bin\tesseract\tessdata_fast\eng.traineddata"; DestDir: "{app}\Bin\tesseract\tessdata_fast"; Flags: ignoreversion; Tasks: portableinstall
+Source: "{#WorkDir}\Bin\tesseract\tessdata_best\eng.traineddata"; DestDir: "{userappdata}\MacroCreator\Bin\tesseract\tessdata_best"; Flags: ignoreversion; Tasks: not portableinstall
+Source: "{#WorkDir}\Bin\tesseract\tessdata_fast\eng.traineddata"; DestDir: "{userappdata}\MacroCreator\Bin\tesseract\tessdata_fast"; Flags: ignoreversion; Tasks: not portableinstall
 %CNHelp%
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift + F5)
 	w_Lang057 =	Key Wait (Ctrl + F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Mynd / Pixel Search (F7)
+	w_Lang059 =	Mynd / Pixel Search / Mynd til texta (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Go To / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Skilar tvöfaldur fjöldi geymdar á tilgreindu heimilisfangi + offsetprentun.
 	NumPut	Verslanir Fjöldi í tvöfaldur formi á tilgreindu heimilisfangi + móti og skilar tölu á hægri atriði bara skrifað.
 	Object	Býr scriptable tengin array.
+	OCR	Umbreyta myndum á skjá, myndskrám eða vefslóð myndar í texta.
 	Ord	Skilar ordinal gildi (tölustafir eðli code) af fyrsta staf í streng.
 	OutputDebug	Sendir streng til aflúsara (ef einhver er) fyrir skjáinn.
 	Parameter	Bætir breytu til fallsins.

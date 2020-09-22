@@ -90,7 +90,7 @@ You can also use [User-defined functions](Functions.html#user-defined-functions)
 
 Global option affects ALL Play Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-left of the main window to show if it's active. To deactivate this option select *None* in the list.
 
-For more information see AutoHotkey documentation: [#IfWinActive](http://autohotkey.com/docs/commands/_IfWinActive.htm) and [#If](http://autohotkey.com/docs/commands/_If.htm).
+For more information see AutoHotkey documentation: [#IfWinActive](https://www.autohotkey.com/docs/commands/_IfWinActive.htm) and [#If](https://www.autohotkey.com/docs/commands/_If.htm).
 
 ## Playback Options
 
@@ -108,43 +108,43 @@ Sets the matching behavior of the WinTitle parameter in commands such as WinWait
 **Fast**: This is the default behavior. Performance may be substantially better than Slow, but certain WinText elements for some types of windows may not be "seen" by the various window commands.  
 **Slow**: Can be much slower, but all possible WinText is retrieved from every window as a windowing command searches through them for a match. Window Spy reveals which parts of a Window's text (if any) require the slow mode.
 
-For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SetTitleMatchMode.htm).
+For more information see [AutoHotkey documentation](https://www.autohotkey.com/docs/commands/SetTitleMatchMode.htm).
 
 ### Detect Hidden Windows
 
 Determines whether invisible windows are "seen" by the program.
 
-For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/DetectHiddenWindows.htm).
+For more information see [AutoHotkey documentation](https://www.autohotkey.com/docs/commands/DetectHiddenWindows.htm).
 
 ### Detect Hidden Text
 
 Determines whether invisible text in a window is "seen" for the purpose of finding the window. This affects commands such as IfWinExist and WinActivate.
 
-For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/DetectHiddenText.htm).
+For more information see [AutoHotkey documentation](https://www.autohotkey.com/docs/commands/DetectHiddenText.htm).
 
 ### Key send mode
 
 Sets the default method for Keyboard and Mouse actions. You can change this mid-run using the `SendMode` command available in the [Run command window](Commands/Run.html) (this will not change the default setting).
 
-For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SendMode.htm).
+For more information see [AutoHotkey documentation](https://www.autohotkey.com/docs/commands/SendMode.htm).
 
 ### Key delay
 
 Sets the delay that will occur after each keystroke sent by Send and ControlSend. You can change this mid-run using the `SetKeyDelay` command available in the [Run command window](Commands/Run.html) (this will not change the default setting).
 
-For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SetKeyDelay.htm).
+For more information see [AutoHotkey documentation](https://www.autohotkey.com/docs/commands/SetKeyDelay.htm).
 
 ### Mouse delay
 
 Sets the delay that will occur after each mouse movement or click. You can change this mid-run using the `SetMouseDelay` command available in the [Run command window](Commands/Run.html) (this will not change the default setting).
 
-For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SetMouseDelay.htm).
+For more information see [AutoHotkey documentation](https://www.autohotkey.com/docs/commands/SetMouseDelay.htm).
 
 ### Control delay
 
 Sets the delay that will occur after each control-modifying command. You can change this mid-run using the `SetControlDelay` command available in the [Run command window](Commands/Run.html) (this will not change the default setting).
 
-For more information see [AutoHotkey documentation](http://autohotkey.com/docs/commands/SetControlDelay.htm).
+For more information see [AutoHotkey documentation](https://www.autohotkey.com/docs/commands/SetControlDelay.htm).
 
 ### Playback Speed Hotkeys
 

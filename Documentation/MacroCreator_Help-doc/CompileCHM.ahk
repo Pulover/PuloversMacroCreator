@@ -5,7 +5,7 @@ FileEncoding, UTF-8
 File := A_ScriptDir "\index.html"
 FileRead, FileData, %File%
 PMCVer := RegExReplace(FileData, "s).*Version: ([\d\.]+).*", "$1")
-Data := "<a href=""http://www.macrocreator.com/""><img src=""Images/PMC.png"" alt=""Pulover's Macro Creator"" border=""0""></a>"
+Data := "<a href=""https://www.macrocreator.com/""><img src=""Images/PMC.png"" alt=""Pulover's Macro Creator"" border=""0""></a>"
 FileMod_Change(FileData, Data, 11)
 Data := "<h1 id=""version:-" PMCVer """>Version: <a href=""About.html#change-log"">" PMCVer "</a></h1>"
 FileMod_Change(FileData, Data, 12)

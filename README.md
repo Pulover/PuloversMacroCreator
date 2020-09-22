@@ -2,9 +2,9 @@
 
 Pulover's Macro Creator is a Free Automation Tool and Script Generator based on AutoHotkey language. It features a large range of automation commands, has a built-in recorder and can capture inputs in its interface. The macros can be executed from the program itself or you can export them to AutoHotkey Script format.
 
-[www.macrocreator.com](http://www.macrocreator.com)
+[www.macrocreator.com](https://www.macrocreator.com)
 
-**Current Version:** 5.1.4
+**Current Version:** 5.2.0
 
 ### Supported platforms
 
@@ -26,11 +26,11 @@ The application is prepared to recognize a help file in the same directory of Ma
 
 ## Compile Instructions
 
-Source requires the latest version of [AutoHotkey](http://ahkscript.org/) to run.
+Source requires the latest version of [AutoHotkey](https://www.autohotkey.com/) to run.
 
 The source for SciLexer.dll can be found at [fincs/SciTE4AutoHotkey](https://github.com/fincs/SciTE4AutoHotkey).
 
-Installer is created with [Inno Setup](http://www.jrsoftware.org/).
+Installer is created with [Inno Setup](https://jrsoftware.org/).
 
 If you need to compile you may run the *Compile.ahk* script which generates the necessary files locally to create *MacroCreator.exe*, *MacroCreator-x64.exe*, *MacroCreator_Help.chm* and *MacroCreator-setup.exe*.
 

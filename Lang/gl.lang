@@ -256,7 +256,7 @@
 	w_Lang056 =	Caixa de mensaxes (Shift + F5)
 	w_Lang057 =	Espérase clave (Ctrl + F5)
 	w_Lang058 =	Fiestra (F6)
-	w_Lang059 =	Image / Pixel Buscar (F7)
+	w_Lang059 =	Image / Pixel Buscar / Imaxe a texto (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Ir ao / etiqueta (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Devolve o número binario almacenado no enderezo indicado + offset.
 	NumPut	Almacena o número en formato binario no enderezo indicado + offset e retorna a dirección á dereita do elemento acaba de escribir.
 	Object	Crea unha matriz asociativa scripts.
+	OCR	Converte imaxes en pantalla, ficheiros de imaxe ou URL de imaxe a texto.
 	Ord	Devolve o valor ordinal (código de caracteres numéricos) do primeiro carácter na cadea.
 	OutputDebug	Envía unha cadea para o depurador (se) para exhibición.
 	Parameter	Engade un parámetro para a función.

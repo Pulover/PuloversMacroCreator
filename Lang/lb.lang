@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift + F5)
 	w_Lang057 =	Schlëssel Waart (Ctrl + F5)
 	w_Lang058 =	Fënster (F6)
-	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang059 =	Image / Pixel Search / Bild op Text (F7)
 	w_Lang060 =	Run / Fichier / Zeecheketten / Meedecher. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Go Fir / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Returns de Begleetstär Zuel bei der spezifizéierter Adress gespäichert + auszegläichen.
 	NumPut	+ Stores Zuel vun Duebelstären Format op der Adress déi dir uginn Police a preparéieren d'Adress un den Recht vun der item just geschriwwen.
 	Object	Kreéiert eng scriptable Associatioun, onerfëllt.
+	OCR	Konvertéiert Biller um Bildschierm, Bilddateien oder eng Bild URL an den Text.
 	Ord	Returns der ordinal Wäert (da Charakter Code) vun der éischter Charakter vun Zeecheketten.
 	OutputDebug	Schéckt e String an der Debugger (wann iwwerhaapt) fir Ecran.
 	Parameter	Dësweidere e Parameter fir d'Funktioun.

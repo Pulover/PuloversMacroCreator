@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift+F5)
 	w_Lang057 =	Key Wachten (Ctrl+F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Afbeelding / Pixel Zoeken (F7)
+	w_Lang059 =	Afbeelding / Pixel Zoeken / Afbeelding naar tekst (F7)
 	w_Lang060 =	Run / Bestand / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Ga Naar / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Retourneert het binaire getal opgeslagen bij het opgegeven adres+offset.
 	NumPut	Winkels Nummer in binair formaat op het opgegeven adres+offset en het adres terug naar de rechterkant van de punt enkel geschreven.
 	Object	Maakt een scripts associatieve array.
+	OCR	Converteer afbeeldingen op het scherm, afbeeldingsbestanden of een afbeeldings-URL naar tekst.
 	Ord	Geeft de ordinale waarde (numeriek karakter code) van het eerste teken in string.
 	OutputDebug	Stuurt een string naar de debugger (indien aanwezig) voor weergave.
 	Parameter	Dodaje parametr do funkcji.

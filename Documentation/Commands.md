@@ -15,6 +15,7 @@
 * [Window](Commands/Window.html)
 * [Image Search](Commands/Image_Search.html)
 * [Pixel Search](Commands/Pixel_Search.html)
+* [Image to Text (OCR)](Commands/Image_to_Text.html)
 * [Run / File / String / Misc.](Commands/Run.html)
 * [Loop](Commands/Loop.html)
 * [Loop FilePattern](Commands/Loop_FilePattern.html)
@@ -60,7 +61,7 @@ The *Get* button automatically fills the *Window* field as well, using the selec
 
 ### Window
 
-Title, partial title or identifier of a target window. The first parameter is [WinTitle](http://autohotkey.com/docs/misc/WinTitle.htm), you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. This field accepts [Variables & Expressions](Variables.html).
+Title, partial title or identifier of a target window. The first parameter is [WinTitle](https://www.autohotkey.com/docs/misc/WinTitle.htm), you can add one or more extra parameters separating them by commas: `WinTitle, WinText, ExcludeTitle, ExcludeText`. You can omit any of those parameters, including WinTitle. This field accepts [Variables & Expressions](Variables.html).
 
 **WinTitle** matching behavior is determined by [Title Match Mode](Playback.html#title-match-mode) and [Detect Hidden Windows](Playback.html#detect-hidden-windows) settings.
 

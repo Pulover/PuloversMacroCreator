@@ -256,7 +256,7 @@
 	w_Lang056 =	Meddelanderuta (Shift+F5)
 	w_Lang057 =	Nyckel Vänta (Ctrl+F5)
 	w_Lang058 =	Fönster (F6)
-	w_Lang059 =	Bild / Pixel Sök (F7)
+	w_Lang059 =	Bild / Pixel Sök / Bild till text (F7)
 	w_Lang060 =	Kör / Arkiv / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Gå Till / Etikett (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Returnerar binära talet lagras vid den specificerade adressen+förskjutning.
 	NumPut	Butiker Antal i binärt format på den angivna adressen+offset och returnerar adressen till höger om objektet just skrivit.
 	Object	Skapar ett skript associativ array.
+	OCR	Konvertera bilder på skärmen, bildfiler eller en bild-URL till text.
 	Ord	Returnerar ordnings värde (siffra kod) för det första tecknet i sträng.
 	OutputDebug	Sänder en sträng till detta program (om någon) för visning.
 	Parameter	Lisää parametrin funktio.

@@ -256,7 +256,7 @@
 	w_Lang056 =	Polje sporočilo (Shift+F5)
 	w_Lang057 =	ključne Počakaj (Ctrl+F5)
 	w_Lang058 =	Okno (F6)
-	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang059 =	Image / Pixel Search / Slika v besedilo (F7)
 	w_Lang060 =	Run / datoteke / String / Razno. (F8)
 	w_Lang061 =	Zanka (F9)
 	w_Lang062 =	Iti / Etiketi (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Vrne binarno število shranjeno na določenem naslovu zamika.
 	NumPut	Število trgovin v binarni obliki na določen naslov zamika in vrne naslov na desni strani predmeta samo pisno.
 	Object	Ustvari scriptable asociativno paleto.
+	OCR	Pretvorite slike na zaslonu, slikovne datoteke ali URL slike v besedilo.
 	Ord	Vrne ordinalni vrednost (številčna oznaka znak) za prvi znak v nizu.
 	OutputDebug	Pošlje niz za iskanje in odpravljanje napak (če obstaja) za zaslon.
 	Parameter	Dodaja parameter funkcije.

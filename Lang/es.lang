@@ -256,7 +256,7 @@
 	w_Lang056 =	Caja de Mensaje (Shift+F5)
 	w_Lang057 =	Espera Clave (Ctrl+F5)
 	w_Lang058 =	Ventana (F6)
-	w_Lang059 =	Imagen / Tamaño de píxel Search (F7)
+	w_Lang059 =	Imagen / Tamaño de píxel Search / Imagen a texto (F7)
 	w_Lang060 =	Ejecutar / Archivo / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Ir A / Etiqueta (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Devuelve el número binario almacenado en la dirección especificada+offset.
 	NumPut	Almacena el número en formato binario en la dirección especificada+offset y devuelve la dirección a la derecha del elemento recién escrito.
 	Object	Crea una matriz asociativa.
+	OCR	Convierta imágenes en pantalla, archivos de imagen o una URL de imagen en texto.
 	Ord	Devuelve el valor ordinal (código de carácter numérico) del primer carácter en la cadena.
 	OutputDebug	Envía una cadena para el depurador (en su caso) para su visualización.
 	Parameter	Añade un parámetro a la función.

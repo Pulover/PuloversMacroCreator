@@ -52,7 +52,7 @@ Download Example: [Call array element using a random function](Examples/RandomFu
 
 ### Can I create Graphic User Interface/Gui with Macro Creator?
 
-No, creating Guis is not in the scope of this project. But you can find some nice tools to design Gui in the [AHK forum](http://autohotkey.com/boards/viewtopic.php?f=6&t=3376). You can use the generated script along with exported scripts from PMC (the Gui's gLabel must point to a Label in the script).
+No, creating Guis is not in the scope of this project. But you can find some nice tools to design Gui in the [AHK forum](https://www.autohotkey.com/boards/viewforum.php?f=60). You can use the generated script along with exported scripts from PMC (the Gui's gLabel must point to a Label in the script).
 
 ### Can Macro Creator automate Firefox or Chrome as it does with Internet Explorer?
 
@@ -83,7 +83,7 @@ Yes, use the [Timer](Main.html#timer) or the [SetTimer](Commands/Set_Timer.html)
 
 ### Can I run a Macro in a background window?
 
-If the window is a Win32 application with exposed controls you might be able to use Control commands to interact with it without needing to have it active in the foreground. For more info check the [video tutorial for control commands](http://www.macrocreator.com/help/).
+If the window is a Win32 application with exposed controls you might be able to use Control commands to interact with it without needing to have it active in the foreground. For more info check the [video tutorial for control commands](https://www.macrocreator.com/help/).
 
 ### Can I schedule a Macro to run when I want?
 
@@ -137,7 +137,7 @@ Although the Timer is limited to run one Macro at a time, you can still activate
 ### Can I save my Macros as EXE to run on any computer?
 
 Macro Creator has an option to convert exported scripts to EXE using Ahk2Exe that is installed with AutoHotkey:  
-1. Download and install [AutoHotkey](http://autohotkey.com/).  
+1. Download and install [AutoHotkey](https://www.autohotkey.com/).  
 2. Go to Export in PMC and check *[Create EXE File](Export.html#create-exe-file)* option.  
 3. Click the *Export* button.  
 
@@ -155,7 +155,7 @@ There are two methods:
 
 ### What is COM and how do I use it?
 
-COM stands for [Component Object Model](http://en.wikipedia.org/wiki/Component_Object_Model) and it's a method to allow interaction of a script with other programs. The Internet Explorer command window offers a basic simplified interface to add COM commands to IE. If you want to use the advanced features you'll need to know about the COM methods and properties for the program you want to interact with. You can find some useful tutorials in the AutoHotkey Forum.
+COM stands for [Component Object Model](https://en.wikipedia.org/wiki/Component_Object_Model) and it's a method to allow interaction of a script with other programs. The Internet Explorer command window offers a basic simplified interface to add COM commands to IE. If you want to use the advanced features you'll need to know about the COM methods and properties for the program you want to interact with. You can find some useful tutorials in the AutoHotkey Forum.
 
 * [Basic Webpage Controls with JavaScript / COM](http://www.autohotkey.com/board/topic/47052-basic-webpage-controls-with-javascript-com-tutorial/)
 * [Basic Ahk_L COM Tutorial for Excel](http://www.autohotkey.com/board/topic/69033-basic-ahk-l-com-tutorial-for-excel/)
@@ -164,7 +164,7 @@ COM stands for [Component Object Model](http://en.wikipedia.org/wiki/Component_O
 
 ### Can I take Screenshots during playback?
 
-Macro Creator has the [GDI+ Library](http://autohotkey.com/boards/viewtopic.php?t=6517) integrated so you can make use of its functions.
+Macro Creator has the [GDI+ Library](https://www.autohotkey.com/boards/viewtopic.php?t=6517) integrated so you can make use of its functions.
 
 The example file below allows you to save a png from the clipboard in your Documents folder. The first macro sends PrintScreen, the second sends Alt+PrintScreen, the third are the functions to save the file (you can change the destination folder in the 3rd line).
 

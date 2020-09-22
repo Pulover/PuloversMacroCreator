@@ -256,7 +256,7 @@
 	w_Lang056 =	Messagebox (Umschalt+F5)
 	w_Lang057 =	Taste erfassen (Strg+F5)
 	w_Lang058 =	Fenster (F6)
-	w_Lang059 =	Bild/Pixelsuche (F7)
+	w_Lang059 =	Bild/Pixelsuche / Bild zu Text (F7)
 	w_Lang060 =	Run/File/String/Versch. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Gehen Sie Zu / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Gibt die binäre Zahl an der angegebenen Adresse+Offset gespeichert.
 	NumPut	Anzahl Stores im binären Format an die angegebene Adresse+Offset und gibt die Adresse auf der rechten Seite der Artikel gerade geschrieben.
 	Object	Erstellt eine skript assoziatives Array.
+	OCR	Konvertieren Sie Bilder auf dem Bildschirm, Bilddateien oder eine Bild-URL in Text.
 	Ord	Gibt den Ordinalwert (numerisches Zeichen-Code) des ersten Zeichens im String.
 	OutputDebug	Sendet eine Zeichenfolge an den Debugger (falls vorhanden) für die Anzeige.
 	Parameter	Fügt einen Parameter der Funktion.

@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift+F5)
 	w_Lang057 =	Key Wait (Ctrl+F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang059 =	Image / Pixel Search / Image to Text (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Go To / Label (Shift+F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Returns the binary number stored at the specified address+offset.
 	NumPut	Stores Number in binary format at the specified address+offset and returns the address to the right of the item just written.
 	Object	Creates a scriptable associative array.
+	OCR	Convert images on screen, image files, or an image URL to text.
 	Ord	Returns the ordinal value (numeric character code) of the first character in String.
 	OutputDebug	Sends a string to the debugger (if any) for display.
 	Parameter	Adds a parameter to the function.

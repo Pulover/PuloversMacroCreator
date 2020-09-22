@@ -256,7 +256,7 @@
 	w_Lang056 =	Mesaj Kutusu (Shift+F5)
 	w_Lang057 =	Anahtar Bekleyin (Ctrl+F5)
 	w_Lang058 =	Pencere (F6)
-	w_Lang059 =	Görüntü / Piksel Arama (F7)
+	w_Lang059 =	Görüntü / Piksel Arama / Metne Görüntü (F7)
 	w_Lang060 =	Dosya / Dizi / Misc çalıştırın. (F8)
 	w_Lang061 =	Döngü (F9)
 	w_Lang062 =	Etiket Gidin (+ F9 Shift)
@@ -1358,6 +1358,7 @@
 	NumGet	Belirtilen adres+ofset saklanan ikili sayı döndürür.
 	NumPut	Belirtilen adresteki ikili biçimde mağaza sayısı+ofset ve sadece yazılı öğenin sağındaki adresini döndürür.
 	Object	Bir script ilişkisel dizi oluşturur.
+	OCR	Ekrandaki görüntüleri, görüntü dosyalarını veya bir görüntü URL'sini metne dönüştürün.
 	Ord	Dize ilk karakterin sıra değeri (sayısal karakter kodu) döndürür.
 	OutputDebug	Ekran için hata ayıklayıcı (varsa) için bir dize gönderir.
 	Parameter	Işleve bir parametre ekler.

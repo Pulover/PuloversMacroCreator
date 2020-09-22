@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift + F5)
 	w_Lang057 =	Key Pagaidiet (Ctrl + F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Attēlu / Pixel Search (F7)
+	w_Lang059 =	Attēlu / Pixel Search / Attēls uz tekstu (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Iet uz / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Atgriež bināro saglabāto numuru norādītajā adresē + kompensēt.
 	NumPut	Veikali skaits binārā formātā pēc norādītās adreses + kompensēt un atgriež adresi labi no posteņa tikai rakstveida.
 	Object	Izveido skriptiem asociatīvo masīvu.
+	OCR	Konvertējiet attēlus uz ekrāna, attēlu failus vai attēla URL uz tekstu.
 	Ord	Atgriež kārtas vērtību (ciparu rakstzīmju kods) pirmās rakstura String.
 	OutputDebug	Nosūta virkni ar atkļūdotājs (ja tādi ir) displeju.
 	Parameter	Pievieno parametru funkciju.

@@ -256,7 +256,7 @@
 	w_Lang056 =	Mezua Box (Shift + F5)
 	w_Lang057 =	Gakoa Wait (Ctrl + F5)
 	w_Lang058 =	Leiho (F6)
-	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang059 =	Image / Pixel Search / Irudia Testura (F7)
 	w_Lang060 =	Run / Archivo / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Joan / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Zehaztutako helbidean gordeta + offset bitar zenbakia itzultzen du.
 	NumPut	Zehaztutako helbidean formatu bitarrean dendak Zenbakia + konpentsatzeko eta helbidea itzultzen elementua eskubidea besterik idatzia.
 	Object	Scripten elkartze-array bat sortzen du.
+	OCR	Bihurtu pantailako irudiak, irudi fitxategiak edo irudi URL bat testu bihurtzeko.
 	Ord	Ordinalak balio (zenbakizko pertsonaia kodea) String pertsonaia lehen itzultzen.
 	OutputDebug	Kate bat bidaltzen araztailea (baldin badaude) bistaratzeko izateko.
 	Parameter	Funtzioak parametro bat gehitzen du.

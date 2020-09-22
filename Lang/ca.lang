@@ -256,7 +256,7 @@
 	w_Lang056 =	Bústia de missatges (Shift+F5)
 	w_Lang057 =	Espera Clau (Ctrl+F5)
 	w_Lang058 =	Finestra (F6)
-	w_Lang059 =	Imatge / píxel motor (F7)
+	w_Lang059 =	Imatge / píxel motor / Imatge a text (F7)
 	w_Lang060 =	Executar / Arxiu / cadena / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Anar A / Etiqueta (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Retorna el nombre binari emmagatzemat a l'adreça especificada+offset.
 	NumPut	Emmagatzema el número en format binari a l'adreça especificada+offset i retorna l'adreça a la dreta de l'element acabat escrit.
 	Object	Crea una matriu associativa scripts.
+	OCR	Convertiu imatges en pantalla, fitxers d'imatge o URL de la imatge a text.
 	Ord	Retorna el valor ordinal (codi de caràcter numèric) del primer caràcter en la cadena.
 	OutputDebug	Envia una cadena per al depurador (si escau) per a la seva visualització.
 	Parameter	Afegeix un paràmetre a la funció.

@@ -256,7 +256,7 @@
 	w_Lang056 =	Okno informacyjne (Shift+F5)
 	w_Lang057 =	Czekaj na klawisz (Ctrl+F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Znajdź obraz / pixel (F7)
+	w_Lang059 =	Znajdź obraz / pixel / Obraz na tekst (F7)
 	w_Lang060 =	Uruchom / Plik / Ciąg / Inne (F8)
 	w_Lang061 =	Pętla (F9)
 	w_Lang062 =	Przejdź do / Etykieta (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Zwraca liczbę binarną przechowywane na wskazany adres+offsetu.
 	NumPut	Sklepy Numer w formacie binarnym na wskazany adres+offset i zwraca adres z prawej pozycji tylko w formie pisemnej.
 	Object	Tworzy skrypty asocjacyjnej.
+	OCR	Konwertuj obrazy na ekranie, pliki obrazów lub adres URL obrazu na tekst.
 	Ord	Zwraca wartość porządkową (numeryczny kodu znaków) pierwszego znaku w ciągu znaków.
 	OutputDebug	Wysyła ciąg do debuggera (jeśli w ogóle) na wyświetlaczu.
 	Parameter	Dodaje parametr do funkcji.

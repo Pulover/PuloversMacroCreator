@@ -256,7 +256,7 @@
 	w_Lang056 =	Neges Box (Shift + F5)
 	w_Lang057 =	Aros allweddol (Ctrl + F5)
 	w_Lang058 =	Ffenestr (F6)
-	w_Lang059 =	Image / Pixel Chwilio (F7)
+	w_Lang059 =	Image / Pixel Chwilio / Delwedd i'r Testun (F7)
 	w_Lang060 =	Rhedeg / File / String / Misc. (F8)
 	w_Lang061 =	Dolen (F9)
 	w_Lang062 =	Ewch i / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Dychwelyd y rhif deuaidd cael ei storio yn y cyfeiriad a nodir + gwrthbwyso.
 	NumPut	Stores Nifer mewn fformat deuaidd yn y cyfeiriad a nodir + gwrthbwyso ac yn dychwelyd y cyfeiriad ar y dde o'r eitem yn unig ysgrifenedig.
 	Object	Creu amrywiaeth cysylltiadol scriptable.
+	OCR	Trosi delweddau ar y sgrin, ffeiliau delwedd, neu URL delwedd yn destun.
 	Ord	Dychwelyd y gwerth trefnolion (cod cymeriad rhifol) y nod cyntaf mewn Llinynnol.
 	OutputDebug	Anfon llinyn i'r debugger (os o gwbl) i'w harddangos.
 	Parameter	Yn ychwanegu baramedr i'r swyddogaeth.

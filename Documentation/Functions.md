@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Similarly to Variables it's also possible to do function calls and use their outputs in Playback. A function is similar to a subroutine (like calling a macro tab with Gosub) except that it can accept parameters (inputs) from its caller. In addition, a function may optionally return a value to its caller. PMC supports most every AHK built-in function and, just like in AHK scripts, you can define your own functions, with return values, ByRef parameters, local/global/static variables. Even recursive calls are supported. A detailed explanation can be found at [AHK documentation](http://autohotkey.com/docs/Functions.htm)
+Similarly to Variables it's also possible to do function calls and use their outputs in Playback. A function is similar to a subroutine (like calling a macro tab with Gosub) except that it can accept parameters (inputs) from its caller. In addition, a function may optionally return a value to its caller. PMC supports most every AHK built-in function and, just like in AHK scripts, you can define your own functions, with return values, ByRef parameters, local/global/static variables. Even recursive calls are supported. A detailed explanation can be found at [AHK documentation](https://www.autohotkey.com/docs/Functions.htm)
 
 ## Calling Functions
 
@@ -27,11 +27,11 @@ Download Example: [Using Functions inside Command Parameters](Examples/Functions
 
 ## Function parameters
 
-A Function parameter can be a variable, a number, a string enclosed in quotes or an expression. In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. You can even use another function call as a function parameter. A complete explanation can be found at [AHK documentation](http://autohotkey.com/docs/Variables.htm#Expressions)
+A Function parameter can be a variable, a number, a string enclosed in quotes or an expression. In expressions variables must not be enclosed in percent signs (except to deference) and literal strings must be enclosed in quotes. You can even use another function call as a function parameter. A complete explanation can be found at [AHK documentation](https://www.autohotkey.com/docs/Variables.htm#Expressions)
 
 ## Array/Object Methods
 
-Default [object methods](http://autohotkey.com/docs/objects/Object.htm) are supported, To call a method for an array object, go to *Functions* window and check the *Array Object* option. In that field, enter the name of an object. Select the method and enter the parameters (if any). You can enter an output variable for the returned value.  
+Default [object methods](https://www.autohotkey.com/docs/objects/Object.htm) are supported, To call a method for an array object, go to *Functions* window and check the *Array Object* option. In that field, enter the name of an object. Select the method and enter the parameters (if any). You can enter an output variable for the returned value.  
 
 You can also call object methods inside a command's parameter:
 
@@ -54,14 +54,14 @@ In the *Add Parameters* window you can insert more parameters with default value
 If one parameter is made optional, all following parameters must be optional too.  
 A parameter default value must be one of the following: `True`, `False`, a string or a number (integer or float). To set a blank string as the default value, select `_blank` in the list.  
 No need to quote strings. Variables are not allowed as default values.  
-Check the *[ByRef](http://autohotkey.com/docs/Functions.htm#ByRef)* option to make the parameter behave as an alias for the variable passed in from the caller.
+Check the *[ByRef](https://www.autohotkey.com/docs/Functions.htm#ByRef)* option to make the parameter behave as an alias for the variable passed in from the caller.
 
 Function parameters can only be added **above** the *[FunctionStart]* row.
 
 ### Return
 
 Use the *Add Return* button to define return values for the function.  
-The return value must be an [expression](http://autohotkey.com/docs/Variables.htm#Expressions).  
+The return value must be an [expression](https://www.autohotkey.com/docs/Variables.htm#Expressions).  
 To return more than one value, use ByRef parameters or an [Array/Object](Variables.html#assigning-and-retrieving-arrays).
 
 Function return can only be added **below** the *[FunctionStart]* row.

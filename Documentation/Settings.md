@@ -89,7 +89,7 @@ See [Playback Page](Playback.html#playback-options).
 
 ### Mouse Coordinates
 
-Sets [coordinate mode](http://autohotkey.com/docs/commands/CoordMode.htm) for Mouse commands and records to be relative to either the active window, screen or client area. This option is global and will affect both Recording and Playback so it should be set before adding any commands for the project.  
+Sets [coordinate mode](https://www.autohotkey.com/docs/commands/CoordMode.htm) for Mouse commands and records to be relative to either the active window, screen or client area. This option is global and will affect both Recording and Playback so it should be set before adding any commands for the project.  
 *Note*: This setting will be saved to the PMC file.
 
 ### Default Mouse Delay
@@ -167,7 +167,7 @@ Here you can choose the interface language.
 ## Language Editor
 
 Here you can make corrections to the translations (or even create a new one) and submit your revisions.  
-A new version of the language files may be released at any time independent of application releases, so feel free to submit any number of corrections as many times as you want. Credits will be given on the [official website](http://www.macrocreator.com/project). If don't wish to be credited, just say it in the message.
+A new version of the language files may be released at any time independent of application releases, so feel free to submit any number of corrections as many times as you want. Credits will be given on the [official website](https://www.macrocreator.com/project). If don't wish to be credited, just say it in the message.
 
 ## User Global Variables
 

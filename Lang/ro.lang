@@ -256,7 +256,7 @@
 	w_Lang056 =	Mesaj Box (Shift + F5)
 	w_Lang057 =	Așteptați (Ctrl + F5)
 	w_Lang058 =	Fereastra (F6)
-	w_Lang059 =	Imagine / Pixel Căutare (F7)
+	w_Lang059 =	Imagine / Pixel Căutare / Imagine către text (F7)
 	w_Lang060 =	Run / Fișier / String / Diverse. (F8)
 	w_Lang061 =	Buclă (F9)
 	w_Lang062 =	Du-te la / Etichetă (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Returnează numărul binar stocat la adresa specificată + offset.
 	NumPut	Magazine Număr în format binar la adresa specificată + offset și returnează adresa la dreapta elementului doar în scris.
 	Object	Creează un tablou asociativ scriptable.
+	OCR	Convertiți imagini pe ecran, fișiere imagine sau o adresă URL a imaginii în text.
 	Ord	Returnează valoarea ordinală (cod caracter numeric) al primului caracter din șir.
 	OutputDebug	Trimite un șir de caractere la debugger (dacă este cazul) pentru afișare.
 	Parameter	Adaugă un parametru la funcția.

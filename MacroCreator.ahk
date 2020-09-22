@@ -3,31 +3,31 @@
 ; *****************************
 ; "The Complete Automation Tool"
 ; Author: Pulover [Rodolfo U. Batista]
-; Home: http://www.macrocreator.com
-; Forum: http://autohotkey.com/boards/viewtopic.php?f=6&t=143
-; Version: 5.1.4
+; Home: https://www.macrocreator.com
+; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
+; Version: 5.2.0
 ; Release Date: September, 2020
-; AutoHotkey Version: 1.1.32.00
+; AutoHotkey Version: 1.1.33.02
 ; Copyright © 2012-2020 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
-; under the terms of the UNLICENSE here: <http://unlicense.org/UNLICENSE>
+; under the terms of the UNLICENSE here: <https://unlicense.org/UNLICENSE>
 ; For everyone else, the GPL below applies.
 ; GNU General Public License 3.0 or higher
-; <http://www.gnu.org/licenses/gpl-3.0.txt>
+; <https://www.gnu.org/licenses/gpl-3.0.txt>
 
 /*
 Thanks to:
 
 tic (Tariq Porter) for his GDI+ Library.
-http://autohotkey.com/boards/viewtopic.php?t=6517
+https://www.autohotkey.com/boards/viewtopic.php?t=6517
 
 tkoi & majkinetor for the Graphic Buttons function.
 http://www.autohotkey.com/board/topic/37147-ilbutton-image-buttons
 
 just me for LV_Colors Class, LV_EX/IL_EX libraries and for updating ILButton to 64bit.
-http://autohotkey.com/boards/viewtopic.php?f=6&t=1081
-http://autohotkey.com/boards/viewtopic.php?t=1256
-http://autohotkey.com/boards/viewtopic.php?f=6&t=1273
+https://www.autohotkey.com/boards/viewtopic.php?f=6&t=1081
+https://www.autohotkey.com/boards/viewtopic.php?t=1256
+https://www.autohotkey.com/boards/viewtopic.php?f=6&t=1273
 
 Micahs for the base code of the Drag-Rows function.
 http://www.autohotkey.com/board/topic/30486-listview-tooltip-on-mouse-hover/?p=280843
@@ -45,10 +45,10 @@ RaptorX for the Scintilla Wrapper for AHK
 http://www.autohotkey.com/board/topic/85928-wrapper-scintilla-wrapper
 
 majkinetor for the Dlg_Color function.
-http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08/
+http://www.autohotkey.com/board/topic/49214-ahk-ahk-l-forms-framework-08
 
 rbrtryn for the ChooseColor function.
-http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus/
+http://www.autohotkey.com/board/topic/91229-windows-color-picker-plus
 
 PhiLho and skwire for the function to Get/Set the order of columns.
 http://www.autohotkey.com/board/topic/11926-can-you-move-a-listview-column-programmatically/#entry237340
@@ -58,20 +58,23 @@ http://www.autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 http://www.autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139
 
 tmplinshi for the CreateFormData function.
-http://autohotkey.com/boards/viewtopic.php?f=6&t=7647
+https://www.autohotkey.com/boards/viewtopic.php?f=6&t=7647
+
+iseahound (Edison Hua) for the Vis2 function used for OCR.
+https://www.autohotkey.com/boards/viewtopic.php?f=6&t=36047
 
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 chosen1ft for fixing the mixing rows bug when saving a project.
 
 Translation revisions:
-http://www.macrocreator.com/project/
+https://www.macrocreator.com/project/
 */
 
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.1.4
+;@Ahk2Exe-SetVersion 5.2.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -139,7 +142,7 @@ Loop
 }
 
 
-CurrentVersion := "5.1.4", ReleaseDate := "September, 2020"
+CurrentVersion := "5.2.0", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
@@ -663,7 +666,7 @@ If (!LangFiles.HasKey(Lang))
 	IfMsgBox, No
 		ExitApp
 	VerChk := ""
-	url := "http://www.macrocreator.com/lang"
+	url := "https://www.macrocreator.com/lang"
 	whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 	whr.open("GET", url, false)
 	; whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
@@ -681,7 +684,7 @@ If (!LangFiles.HasKey(Lang))
 		MsgBox, 16, Pulover's Macro Creator, An error occurred.
 	FileDelete, %A_Temp%\Lang\*.*
 	SplashTextOn, 300, 25, Pulover's Macro Creator, Downloading... Please wait.
-	WinHttpDownloadToFile("http://www.macrocreator.com/lang/Lang.zip", A_Temp)
+	WinHttpDownloadToFile("https://www.macrocreator.com/lang/Lang.zip", A_Temp)
 	SplashTextOff
 	If (!FileExist(A_Temp "\Lang.zip"))
 	{
@@ -974,14 +977,14 @@ Menu, ZipB, Icon, COM, %ResDllPath%, 24
 Menu, IEComB, Add, COM, ComB
 Menu, IEComB, Add, COM Object Reference, ComB
 Menu, IEComB, Add, Basic Webpage COM Tutorial, ComB
-Menu, IEComB, Add, IWebBrowser2 Interface (MSDN), ComB
+Menu, IEComB, Add, IWebBrowser2 Interface (Microsoft), ComB
 Menu, IEComB, Add
 Menu, IEComB, Add, Variables and Expressions, HelpB
 Menu, IEComB, Add, Built-in Variables, :BuiltInMenu
 Menu, IEComB, Icon, COM, %ResDllPath%, 24
 Menu, SendMsgB, Add, PostMessage / SendMessage, HelpB
 Menu, SendMsgB, Add, Message List, SendMsgB
-Menu, SendMsgB, Add, Microsoft MSDN, SendMsgB
+Menu, SendMsgB, Add, Microsoft Docs, SendMsgB
 Menu, SendMsgB, Add
 Menu, SendMsgB, Add, Variables and Expressions, HelpB
 Menu, SendMsgB, Add, Built-in Variables, :BuiltInMenu
@@ -2687,7 +2690,7 @@ If (!A_AhkPath)
 	GuiControl, 21:, UseExtFunc, 0
 	MsgBox, 17, %d_Lang007%, %d_Lang056%
 	IfMsgBox, OK
-		Run, http://autohotkey.com/
+		Run, https://www.autohotkey.com/
 	return
 }
 Run, "%ExpFile%"
@@ -2762,7 +2765,7 @@ If (!A_AhkPath)
 	GuiControl, 14:, Exe_Exp, 0
 	MsgBox, 17, %d_Lang007%, %d_Lang056%
 	IfMsgBox, OK
-		Run, http://autohotkey.com/
+		Run, https://www.autohotkey.com/
 	return
 }
 return
@@ -3546,7 +3549,7 @@ IfNotExist, %LFile%
 	MsgBox, 16, %d_Lang007%, %d_Lang102%`n`n%LFile%
 	return
 }
-url := "http://www.macrocreator.com/sendemail.php"
+url := "https://www.macrocreator.com/sendemail.php"
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 whr.open("POST", url, true)
 
@@ -3951,24 +3954,24 @@ ComB:
 If (A_ThisMenuItem = "COM")
 	Run, %HelpDocsUrl%/commands/ComObjCreate.htm
 If (A_ThisMenuItem = "COM Object Reference")
-	Run, http://autohotkey.com/boards/viewtopic.php?t=77
+	Run, https://www.autohotkey.com/boards/viewtopic.php?t=77
 If (A_ThisMenuItem = "Basic Webpage COM Tutorial")
 	Run, http://www.autohotkey.com/board/topic/47052-basic-webpage-controls
-If (A_ThisMenuItem = "IWebBrowser2 Interface (MSDN)")
-	Run, http://msdn.microsoft.com/en-us/library/aa752127
-If (A_ThisMenuItem = "WinHttpRequest Object (Microsoft MSDN)")
-	Run, http://msdn.microsoft.com/pt-br/library/windows/desktop/aa384106
-If (A_ThisMenuItem = "CDO (Microsoft MSDN)")
-	Run, http://msdn.microsoft.com/en-us/library/ms988614
-If (A_ThisMenuItem = "Shell Object (Microsoft MSDN)")
-	Run, http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094
+If (A_ThisMenuItem = "IWebBrowser2 Interface (Microsoft)")
+	Run, https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127(v=vs.85)
+If (A_ThisMenuItem = "WinHttpRequest Object (Microsoft)")
+	Run, https://docs.microsoft.com/en-us/windows/win32/winhttp/winhttprequest
+If (A_ThisMenuItem = "CDO (Microsoft)")
+	Run, https://docs.microsoft.com/en-us/previous-versions/office/developer/exchange-server-2003/ms988614(v=exchg.65)
+If (A_ThisMenuItem = "Shell Object (Microsoft)")
+	Run, https://docs.microsoft.com/en-us/windows/win32/shell/shell
 return
 
 SendMsgB:
 If (A_ThisMenuItem = "Message List")
 	Run, %HelpDocsUrl%/misc/SendMessageList.htm
-If (A_ThisMenuItem = "Microsoft MSDN")
-	Run, http://msdn.microsoft.com
+If (A_ThisMenuItem = "Microsoft Docs")
+	Run, https://docs.microsoft.com/
 return
 
 Help:
@@ -3980,22 +3983,22 @@ Else IfExist, %A_ScriptDir%\MacroCreator_Help_%ShortLang%.chm
 Else IfExist, %A_ScriptDir%\MacroCreator_Help.chm
 	Run, %A_ScriptDir%\MacroCreator_Help.chm
 Else
-	Run, http://www.macrocreator.com/docs
+	Run, https://www.macrocreator.com/docs
 return
 
 Homepage:
-Run, http://www.macrocreator.com
+Run, https://www.macrocreator.com
 return
 
 Tutorials:
-Run, http://www.macrocreator.com/help
+Run, https://www.macrocreator.com/help
 return
 
 Forum:
 If (InStr(Lang, "Zh"))
-	Run, http://autohotkey.com/boards/viewtopic.php?f=28&t=1175
+	Run, https://www.autohotkey.com/boards/viewtopic.php?f=28&t=1175
 Else
-	Run, http://autohotkey.com/boards/viewtopic.php?f=6&t=143
+	Run, https://www.autohotkey.com/boards/viewforum.php?f=63
 return
 
 HelpAHK:
@@ -4022,12 +4025,9 @@ CheckUpdates:
 Gui, 1:+OwnDialogs
 ComObjError(false)
 VerChk := ""
-url := "http://www.macrocreator.com/lang"
+url := "https://www.macrocreator.com/lang"
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 whr.open("GET", url, false)
-; whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
-; whr.SetRequestHeader("Referer", url)
-; whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 Try
 {
 	whr.Send()
@@ -4123,7 +4123,7 @@ GoSub, Exit
 return
 
 DownloadPage:
-Run, http://www.macrocreator.com/download/
+Run, https://www.macrocreator.com/download/
 return
 
 UpdateDisable:
@@ -4158,7 +4158,7 @@ Gui, 34:Font, Italic, Tahoma
 Gui, 34:Add, Text, -Wrap R1 y+0 w300, The Complete Automation Tool
 Gui, 34:Font
 Gui, 34:Font,, Tahoma
-Gui, 34:Add, Link,, <a href="http://www.macrocreator.com">www.macrocreator.com</a>
+Gui, 34:Add, Link,, <a href="https://www.macrocreator.com">www.macrocreator.com</a>
 Gui, 34:Add, Text,, Author: Pulover [Rodolfo U. Batista]
 Gui, 34:Add, Text, -Wrap R1 y+0,
 (
@@ -4168,7 +4168,7 @@ Version: %CurrentVersion% (%OsBit%)
 Release Date: %ReleaseDate%
 AutoHotkey Version: %A_AhkVersion%
 )
-Gui, 34:Add, Link, y+0, Software Licence: <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public License</a>
+Gui, 34:Add, Link, y+0, Software Licence: <a href="https://www.gnu.org/licenses/gpl-3.0.txt">GNU General Public License</a>
 Gui, 34:Font, Bold, Tahoma
 Gui, 34:Font
 Gui, 34:Add, Groupbox, Section W360 H130 Center, Thanks to
@@ -4189,10 +4189,11 @@ rbrtryn for the ChooseColor function.
 PhiLho and skwire for the function to Get/Set the order of columns.
 fincs for GenDocs and SciLexer.dll custom builds.
 tmplinshi for the CreateFormData function.
+iseahound (Edison Hua) for the Vis2 function used for OCR.  
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 chosen1ft for fixing the mixing rows bug when saving a project.
 )
-Gui, 34:Add, Link, y+10 W340 r1, <a href="http://www.macrocreator.com/project/">Translation revisions.</a>
+Gui, 34:Add, Link, y+10 W340 r1, <a href="https://www.macrocreator.com/project/">Translation revisions.</a>
 Gui, 34:Add, Groupbox, Section xm+58 W360 H130 Center, GNU General Public License
 Gui, 34:Add, Edit, ys+20 xs+10 W340 H100 ReadOnly -E0x200,
 (
@@ -5744,6 +5745,8 @@ If (s_Caller = "Find")
 }
 Else
 	SBShowTip("SendRaw")
+Gui, 8:Font, s%MacroFontSize%
+GuiControl, 8:Font, TextEdit
 Gui, 8:Show,, %c_Lang002%
 ChangeIcon(hIL_Icons, CmdWin, IconsNames["text"])
 TB_Define(TbText, hTbText, hIL_Icons, FixedBar.Text, FixedBar.TextOpt)
@@ -7420,9 +7423,9 @@ EditImage:
 s_Caller := "Edit"
 Image:
 TessLangs := ""
-TessSelectedLangs := "eng"
 Loop, Files, %SettingsFolder%\Bin\tesseract\tessdata_fast\*.traineddata, F
 	TessLangs .= A_LoopFileName "|"
+TessSelectedLangs := "eng"
 Gui, 1:Submit, NoHide
 Gui, 19:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
@@ -7567,7 +7570,7 @@ If (s_Caller = "Edit")
 	{
 		TessSelectedLangs := ""
 		Loop, Parse, Target, +
-			TessSelectedLangs .= A_LoopField "+"
+			TessSelectedLangs .= InStr(TessLangs, A_LoopField) ? A_LoopField "+" : ""
 		TessSelectedLangs := SubStr(TessSelectedLangs, 1, -1)
 		GuiControl, 19:Choose, ImageS, 3
 		GuiControl, 19:, ImgFile, %Details%
@@ -8895,7 +8898,7 @@ If (!A_AhkPath)
 	GuiControl, 21:, UseExtFunc, 0
 	MsgBox, 17, %d_Lang007%, %d_Lang056%
 	IfMsgBox, OK
-		Run, http://autohotkey.com/
+		Run, https://www.autohotkey.com/
 	return
 }
 GuiControl, 21:Enable%UseExtFunc%, FileNameEx
@@ -9491,6 +9494,8 @@ If (s_Caller = "Edit")
 			LV_Add("", A_LoopField)
 }
 SBShowTip("CDO")
+Gui, 39:Font, s%MacroFontSize%
+GuiControl, 39:Font, TextEdit
 Gui, 39:Show,, %c_Lang235%
 ChangeIcon(hIL_Icons, CmdWin, IconsNames["email"])
 TB_Define(TbText, hTbText, hIL_Icons, FixedBar.Text, FixedBar.TextOpt)
@@ -10195,7 +10200,8 @@ Gosub, TabControl
 return
 
 IECmd:
-CbAutoComplete()
+If (A_GuiControl = "IECmd")
+	CbAutoComplete()
 Gui, 24:Submit, NoHide
 If IECmd in %NoElemList%
 {
@@ -10395,6 +10401,8 @@ SB_SetText(c_Lang091, 1)
 SB_SetText("length: " 0, 2)
 SB_SetText("lines: " 0, 3)
 GoSub, TextEdit
+Gui, 30:Font, s%MacroFontSize%
+GuiControl, 30:Font, TextEdit
 Gui, 30:Show,, %GuiTitle%
 TB_Define(TbText, hTbText, hIL_Icons, FixedBar.Text, FixedBar.TextOpt)
 TBHwndAll[9] := TbText
@@ -10843,7 +10851,7 @@ Else
 return
 
 DonatePayPal:
-Run, "http://www.macrocreator.com/donate"
+Run, "https://www.macrocreator.com/donate"
 return
 
 26GuiEscape:
@@ -13636,6 +13644,77 @@ TessSelectedLangs := RegExReplace(TessSelectedLangs, "^\+")
 return
 
 DownloadTessLangFiles:
+Gui, 19:+OwnDialogs
+ComObjError(false)
+AvailableLangs := []
+url := "https://github.com/tesseract-ocr/tessdata_fast"
+whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+whr.open("GET", url, false)
+Try
+{
+	whr.Send()
+	Pos := 1
+	While (Pos := RegExMatch(whr.ResponseText, "title=\""(\w+).traineddata\""", FoundLang, Pos + StrLen(FoundLang)))
+		AvailableLangs.Push(FoundLang1)
+	Gui, Tess:+owner1 +ToolWindow
+	Gui, 19:+Disabled
+	For each, key in AvailableLangs
+	{
+		LangName := ""
+		For l, k in LangData
+		{
+			If ((SubStr(k.Local, 1, 3) = key) || (SubStr(k.Idiom, 1, 3) = key))
+			{
+				LangName := k.Local
+				break
+			}
+		}
+		Gui, Tess:Add, Checkbox, % (!Mod(each-1, 22)) ? "v" key " R2 W200 ym x+10" : "v" key " R2 W200", % key . (LangName ? ": " LangName : "")
+	}
+	For each, key in AvailableLangs
+	{
+		If (InStr(TessLangs, key))
+		{
+			GuiControl, Tess:, %key%, 1
+			GuiControl, Tess:Disable, %key%
+		}
+	}
+	Gui, Tess:Add, Button, -Wrap Section Default xm W290 H23 gTransferLangs, %d_Lang116%
+	Gui, Tess:Add, Button, -Wrap yp x+5 W290 H23 gTessCancel, %c_Lang021%
+	Gui, Tess:Show, H760, %c_Lang260% (OCR) | %c_Lang262%
+}
+return
+
+TransferLangs:
+Gui, Tess:Submit, NoHide
+Gui, Tess:Destroy
+SplashTextOn, 300, 25, %AppName%, %d_Lang091%
+BestBaseUrl := "https://github.com/tesseract-ocr/tessdata_best/raw/master/"
+FastBaseUrl := "https://github.com/tesseract-ocr/tessdata_fast/raw/master/"
+TessdataBestFolder := SettingsFolder "\bin\tesseract\tessdata_best"
+TessdataFastFolder := SettingsFolder "\bin\tesseract\tessdata_fast"
+FileCreateDir, %TessdataBestFolder%
+FileCreateDir, %TessdataFastFolder%
+For each, key in AvailableLangs
+{
+	If ((!InStr(TessLangs, key)) && (%key%))
+	{
+		WinHttpDownloadToFile(BestBaseUrl . key ".traineddata", TessdataBestFolder)
+		WinHttpDownloadToFile(FastBaseUrl . key ".traineddata", TessdataFastFolder)
+	}
+}
+TessLangs := ""
+Loop, Files, %SettingsFolder%\Bin\tesseract\tessdata_fast\*.traineddata, F
+	TessLangs .= A_LoopFileName "|"
+SplashTextOff
+Gui, 19:-Disabled
+return
+
+TessGuiEscape:
+TessGuiClose:
+TessCancel:
+Gui, 19:-Disabled
+Gui, Tess:Destroy
 return
 
 EditColor:
@@ -16170,8 +16249,8 @@ For i, _Section in LangFiles[Lang]
 		%_var% := _value
 }
 
-HelpDocsUrl := (InStr(Lang, "zh")=1) ?  "http://ahkcn.github.io/docs"
-			: (Lang = "de") ? "http://ragnar-f.github.io/docs" : "http://autohotkey.com/docs"
+HelpDocsUrl := (InStr(Lang, "zh")=1) ?  "https://ahkcn.github.io/docs/AutoHotkey.htm"
+			: (Lang = "de") ? "https://ahkde.github.io/docs/AutoHotkey.htm" : "https://www.autohotkey.com/docs"
 Cmd_Tips := {}, IE_Tips := {}, Com_Tips := {}, Tips_List := ""
 Loop, Parse, Ahk_Cmd_Index, `n
 {

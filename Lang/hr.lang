@@ -256,7 +256,7 @@
 	w_Lang056 =	Poruka Box (Shift+F5)
 	w_Lang057 =	Ključ Čekati (Ctrl+F5)
 	w_Lang058 =	Prozor (F6)
-	w_Lang059 =	Slika / Pixel pretrage (F7)
+	w_Lang059 =	Slika / Pixel pretrage / Slika u tekst (F7)
 	w_Lang060 =	Trčanje / File / String / Razno. (F8)
 	w_Lang061 =	Petlja (F9)
 	w_Lang062 =	Ići / Oznaci (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Vraća binarni broj pohranjen na navedenoj adresi+prebijanje.
 	NumPut	Prodavaonice broj u binarnom formatu na navedenoj adresi+offset i vraća adresu na desno od stavke samo pismeni.
 	Object	Stvara scriptable asocijativni niz.
+	OCR	Pretvorite slike na ekranu, slikovne datoteke ili URL slike u tekst.
 	Ord	Vraća redni vrijednost (numerički znak kod) prvog karaktera u String.
 	OutputDebug	Šalje niz na ispravljanje pogrešaka (ako ih ima) za prikaz.
 	Parameter	Afegeix un paràmetre a la funció.

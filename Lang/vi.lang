@@ -256,7 +256,7 @@
 	w_Lang056 =	Hộp tin nhắn (Shift+F5)
 	w_Lang057 =	Chờ chính (Ctrl+F5)
 	w_Lang058 =	Cửa sổ (F6)
-	w_Lang059 =	Hình ảnh / Pixel Tìm kiếm (F7)
+	w_Lang059 =	Hình ảnh / Pixel Tìm kiếm / Hình ảnh thành Văn bản (F7)
 	w_Lang060 =	Chạy / File / String / Misc. (F8)
 	w_Lang061 =	Vòng lặp (F9)
 	w_Lang062 =	Đi Vào / Nhãn (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Trả về số nhị phân được lưu trữ tại địa chỉ cụ thể+bù đắp.
 	NumPut	Số cửa hàng trong định dạng nhị phân theo địa chỉ cho trước+bù đắp và trả về địa chỉ ở bên phải của mục chỉ bằng văn bản.
 	Object	Tạo ra một mảng kết hợp kịch bản.
+	OCR	Chuyển đổi hình ảnh trên màn hình, tệp hình ảnh hoặc URL hình ảnh thành văn bản.
 	Ord	Trả về giá trị thứ tự (mã ký tự số) của các nhân vật đầu tiên trong String.
 	OutputDebug	Gửi một chuỗi các trình sửa lỗi (nếu có) để hiển thị.
 	Parameter	Thêm một tham số cho hàm.

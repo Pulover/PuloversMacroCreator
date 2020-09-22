@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift+F5)
 	w_Lang057 =	Wait Chiave (Ctrl+F5)
 	w_Lang058 =	Finestra (F6)
-	w_Lang059 =	Immagine / Pixel Search (F7)
+	w_Lang059 =	Immagine / Pixel Search / Immagine in testo (F7)
 	w_Lang060 =	Eseguire / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Andare A / Etichetta (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Restituisce il numero binario memorizzato all'indirizzo specificato+offset.
 	NumPut	Negozi numero in formato binario all'indirizzo specificato+offset e restituisce l'indirizzo a destra della voce appena scritto.
 	Object	Crea un array associativo script.
+	OCR	Converti le immagini sullo schermo, i file di immagine o l'URL di un'immagine in testo.
 	Ord	Restituisce il valore ordinale (codice di carattere numerico) del primo carattere di stringa.
 	OutputDebug	Invia una stringa al debugger (se presente) per la visualizzazione.
 	Parameter	Aggiunge un parametro della funzione.

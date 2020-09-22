@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift+F5)
 	w_Lang057 =	Näppäintä Odotus (Ctrl+F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Kuva / Pixel Search (F7)
+	w_Lang059 =	Kuva / Pixel Search / Kuva tekstiksi (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Mene / Etiketti (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Palauttaa binääriluku tallennettu määrättyyn osoitteeseen aikaeron.
 	NumPut	Kaupat määrä binäärimuodossa määrättyyn osoitteeseen aikaeron ja palauttaa osoitteen kohteen oikealla puolella juuri kirjoitettu.
 	Object	Luo koodattavissa assosiatiivisia array.
+	OCR	Muunna ruudulla olevat kuvat, kuvatiedostot tai kuvan URL-osoite tekstiksi.
 	Ord	Palauttaa järjestysluku arvo (numeerinen merkki koodi) ensimmäisen merkin merkkijono.
 	OutputDebug	Lähettää merkkijonon debuggeri (mahdolliset) näyttö.
 	Parameter	Lisää parametrin funktio.

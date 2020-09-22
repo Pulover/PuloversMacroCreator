@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift + F5)
 	w_Lang057 =	Prisni Key (Ctrl + F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Image / Pixel Kërko (F7)
+	w_Lang059 =	Image / Pixel Kërko / Imazhi në Tekst (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Go To / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Kthen numrin binar ruajtur në adresën e specifikuar + kompensuar.
 	NumPut	Dyqane Numri në format binar në adresën e specifikuar + kompensuar dhe kthen adresën në të djathtë e sendit vetëm me shkrim.
 	Object	Krijon një rrjet scriptable associative.
+	OCR	Shndërroni imazhet në ekran, skedarët e imazheve ose një URL të imazhit në tekst.
 	Ord	Kthen vlerën rendor (kodin karakter numerik) të karakterit të parë në String.
 	OutputDebug	Dërgon një varg të Rregullues (nëse ka) për shfaqje.
 	Parameter	Shton një parametër të funksionit.

@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift+F5)
 	w_Lang057 =	Kulcs Várakozás (Ctrl+F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Image / Pixel Search (F7)
+	w_Lang059 =	Image / Pixel Search / Kép a szövegbe (F7)
 	w_Lang060 =	Run / Fájl / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Megy / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Visszaadja a bináris számot tárolt a megadott címre eltolva.
 	NumPut	Üzletek száma bináris formában a megadott címre+offset és visszatér a címet, jobbra az elem csak írásban.
 	Object	Létrehoz egy scriptable asszociatív tömb.
+	OCR	Konvertálja a képeket a képernyőn, képfájlokat vagy kép URL-jét szöveggé.
 	Ord	Visszaadja a sorrendi értéket (számjegyet kód) az első karakter karakterlánc.
 	OutputDebug	Küld egy stringet a debugger (ha van ilyen) a kijelzőn.
 	Parameter	Hozzáad egy paramétert a funkciót.

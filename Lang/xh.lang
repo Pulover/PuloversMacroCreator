@@ -256,7 +256,7 @@
 	w_Lang056 =	Box Umyalezo (Shift + F5)
 	w_Lang057 =	Thembela Key (Ctrl + F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Image / Pixel Ukufuna (F7)
+	w_Lang059 =	Image / Pixel Ukufuna / Umfuziselo wokubhaliweyo (F7)
 	w_Lang060 =	Baleka / Ifayile / Umtya / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Yiya / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Ubuyisela inani yokubini agcinwe kule dilesi ekhankanyiweyo + lisisiqalo.
 	NumPut	Stores Inani kwifomathi yokubini kwi dilesi ekhankanyiweyo + lisisiqalo kwaye ibuyisela nedilesi ekunene kwento nje ebhaliweyo.
 	Object	Yenza uluhlu esingqutyiweyo ziyangquzulana.
+	OCR	Guqula imifanekiso kwiscreen, kwiifayile zemifanekiso, okanye kwi-URL yomfanekiso ukuze ubhale.
 	Ord	Ubuyisela ixabiso ordinal (lenani ikhowudi yekharakhtha) lomlinganiswa wokuqala Umtya.
 	OutputDebug	Uthumela umtya le debugger (ukuba kukho nayiphi na) umboniso.
 	Parameter	Lidibanisa i parameter umsebenzi.

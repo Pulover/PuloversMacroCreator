@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift+F5)
 	w_Lang057 =	Key Wait (Ctrl+F5)
 	w_Lang058 =	Okno (F6)
-	w_Lang059 =	Obrázok / Pixel Search (F7)
+	w_Lang059 =	Obrázok / Pixel Search / Obrázok na text (F7)
 	w_Lang060 =	Spustiť / Súbor / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Prejsť Na Etikete / (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Vracia binárne číslo uložené na zadanú adresu+offset.
 	NumPut	Obchody číslo v binárnom formáte na určenú adresu+offset a vráti adresu vpravo od položky práve napísal.
 	Object	Vytvára skriptovateľné asociatívne polia.
+	OCR	Konvertujte obrázky na obrazovke, obrazové súbory alebo adresu URL obrázka na text.
 	Ord	Vráti poradové hodnotu (číselný kód znaku) prvého znaku v reťazci.
 	OutputDebug	Odošle reťazec ladiaci program (ak existuje) na displeji.
 	Parameter	Pridá parameter do funkcie.

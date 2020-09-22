@@ -256,7 +256,7 @@
 	w_Lang056 =	Teatekast (Shift + F5)
 	w_Lang057 =	Key Wait (Ctrl + F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Pilt / Pixel Otsing (F7)
+	w_Lang059 =	Pilt / Pixel Otsing / Pilt tekstiks (F7)
 	w_Lang060 =	Run / Fail / String / Muud. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Mine / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Tagasiside kahendarvu hoitakse antud aadressile + kompenseerida.
 	NumPut	Kauplused Number binaarvormingusse sisestatud aadressil + kompenseerida ja tagastab aadress paremal objekt lihtsalt kirjutatud.
 	Object	Loob skriptitav assotsiatiivne massiiv.
+	OCR	Ekraanil olevate piltide, pildifailide või pildi URL-i teisendamine tekstiks.
 	Ord	Tagasiside ordinaalne väärtus (numbriline kood) on esimene märk String.
 	OutputDebug	Saadab stringi siluri (kui üldse) näitamiseks.
 	Parameter	Lisab parameetrit funktsioonile.

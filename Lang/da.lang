@@ -256,7 +256,7 @@
 	w_Lang056 =	Message Box (Shift+F5)
 	w_Lang057 =	Nøgle Vente (Ctrl+F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Billede / Pixel Søg (F7)
+	w_Lang059 =	Billede / Pixel Søg / Billede til tekst (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Gå Til / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Returnerer det binære tal er gemt på den angivne adresse+offset.
 	NumPut	Butikker Antal i binært format på den angivne adresse+offset og returnerer adressen til højre for elementet lige skrevet.
 	Object	Opretter en instrukser associative array.
+	OCR	Konverter billeder på skærmen, billedfiler eller en billed-URL til tekst.
 	Ord	Returnerer ordinal værdi (numerisk tegn kode) det første tegn i String.
 	OutputDebug	Sender en streng til debugger (hvis nogen) til visning.
 	Parameter	Tilføjer en parameter til funktionen.

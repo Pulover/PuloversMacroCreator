@@ -256,7 +256,7 @@
 	w_Lang056 =	Pranešimo dėžutė (Shift + F5)
 	w_Lang057 =	Pagrindiniai Palaukite (Ctrl + F5)
 	w_Lang058 =	Langas (F6)
-	w_Lang059 =	Vaizdo / pikselių Paieška (F7)
+	w_Lang059 =	Vaizdo / pikselių Paieška / Vaizdas į tekstą (F7)
 	w_Lang060 =	Vykdyti / Failų / Styginių / Įvairūs. (F8)
 	w_Lang061 =	Ciklas (F9)
 	w_Lang062 =	Eiti į / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Grąžina dvejetainis skaičius saugomi nurodytu adresu + kompensuoti.
 	NumPut	Parduotuvių skaičius dvejetainiu formatu nurodytu adresu + kompensuoti ir grąžina adresą į elemento dešinėje tik raštu.
 	Object	Sukuria scenarijus Association masyvas.
+	OCR	Konvertuokite vaizdus ekrane, vaizdo failus ar vaizdo URL į tekstą.
 	Ord	Grąžina įveskite kanalo pirmojo personažo eilutės reikšmė (skaitmeninis simbolių kodą).
 	OutputDebug	Siunčia eilutę išriktuotojo (jei yra) ekrane.
 	Parameter	Prideda parametrą funkcijai.

@@ -92,8 +92,10 @@ class Vis2 {
 
          static leptonica := A_ScriptDir "\bin\leptonica_util\leptonica_util.exe"
          static tesseract := A_ScriptDir "\bin\tesseract\tesseract.exe"
-         static tessdata_best := A_ScriptDir "\bin\tesseract\tessdata_best"
-         static tessdata_fast := A_ScriptDir "\bin\tesseract\tessdata_fast"
+         static tessdata_best := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator")
+                              . "\bin\tesseract\tessdata_best"
+         static tessdata_fast := (FileExist(A_ScriptDir "\MacroCreator.ini") ? A_ScriptDir : A_AppData "\MacroCreator")
+                              . "\bin\tesseract\tessdata_fast"
 
          uuid := Vis2.stdlib.CreateUUID()
          file := A_Temp "\Vis2_screenshot" this.uuid ".bmp"

@@ -256,7 +256,7 @@
 	w_Lang056 =	Box Mesej (Shift+F5)
 	w_Lang057 =	Tunggu Utama (Ctrl+F5)
 	w_Lang058 =	Tingkap (F6)
-	w_Lang059 =	Imej / Pixel Search (F7)
+	w_Lang059 =	Imej / Pixel Search / Imej ke Teks (F7)
 	w_Lang060 =	Run / File / String / Misc. (F8)
 	w_Lang061 =	Loop (F9)
 	w_Lang062 =	Pergi Ke / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Kembali nombor perduaan yang disimpan di alamat yang dinyatakan+mengimbangi.
 	NumPut	Bilangan kedai di format binari di alamat yang dinyatakan+mengimbangi dan mengembalikan alamat di sebelah kanan item hanya bertulis.
 	Object	Mencipta pelbagai bersekutu scriptable.
+	OCR	Tukarkan gambar di layar, fail gambar, atau URL gambar menjadi teks.
 	Ord	Mengembalikan nilai ordinal (kod aksara angka) bagi aksara pertama dalam rentetan.
 	OutputDebug	Menghantar rentetan kepada penyahpepijat (jika ada) untuk paparan.
 	Parameter	Menambah parameter kepada fungsi.

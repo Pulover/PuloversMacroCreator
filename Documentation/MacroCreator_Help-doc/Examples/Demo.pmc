@@ -45,8 +45,8 @@ Groups=New Group:1
 43|[Pause]||1|2000|Sleep|||||
 44|[Control]|StaticText|1|0|ControlGetText|Static1|ahk_exe charmap.exe|||
 45|[MsgBox]|Text from charmap static control:`n`n%StaticText%|1|0|MsgBox|0||||
-46|[MsgBox]|Too fast? Play it again!`n`nYou can choose what commands you want to execute by unchecking the ones you don't want in the macro list.`n`nYou can also select to run only selected rows in [Macro > Playback options] and set a hotkey to play this macro step-by-step.`n`nThis was just a small demonstration`, PMC can do a lot more! Take some time to study the commands in this macro and learn what each one does.`n`nDownload more examples from the Help file in the [Tutorial] section and check out the video tutorials at http://macrocreator.com/help.`n`nWould like to see the videos now?`n|1|0|MsgBox|36||||
+46|[MsgBox]|Too fast? Play it again!`n`nYou can choose what commands you want to execute by unchecking the ones you don't want in the macro list.`n`nYou can also select to run only selected rows in [Macro > Playback options] and set a hotkey to play this macro step-by-step.`n`nThis was just a small demonstration`, PMC can do a lot more! Take some time to study the commands in this macro and learn what each one does.`n`nDownload more examples from the Help file in the [Tutorial] section and check out the video tutorials at https://www.macrocreator.com/help.`n`nWould like to see the videos now?`n|1|0|MsgBox|36||||
 47|If Message Box|Yes|1|0|If_Statement|36||||
-48|Run|http://macrocreator.com/help|1|0|Run|||||
+48|Run|https://www.macrocreator.com/help|1|0|Run|||||
 49|[End If]|EndIf|1|0|If_Statement|||||
 

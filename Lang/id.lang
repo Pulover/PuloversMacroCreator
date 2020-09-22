@@ -256,7 +256,7 @@
 	w_Lang056 =	Kotak pesan (Shift+F5)
 	w_Lang057 =	Tunggu Key (Ctrl+F5)
 	w_Lang058 =	Window (F6)
-	w_Lang059 =	Image / Pixel Cari (F7)
+	w_Lang059 =	Image / Pixel Cari / Gambar ke Teks (F7)
 	w_Lang060 =	Jalankan / file / String / Misc. (F8)
 	w_Lang061 =	Lingkaran (F9)
 	w_Lang062 =	Pergi Ke / Label (Shift + F9)
@@ -1358,6 +1358,7 @@
 	NumGet	Mengembalikan bilangan biner disimpan di alamat yang ditentukan+offset.
 	NumPut	Jumlah Toko dalam format biner pada alamat yang ditentukan+offset dan mengembalikan alamat ke sebelah kanan item saja menulis.
 	Object	Menciptakan array asosiatif scriptable.
+	OCR	Konversikan gambar di layar, file gambar, atau URL gambar menjadi teks.
 	Ord	Mengembalikan nilai ordinal (kode karakter numerik) dari karakter pertama dalam String.
 	OutputDebug	Mengirim string ke debugger (jika ada) untuk ditampilkan.
 	Parameter	Menambahkan parameter ke fungsi.

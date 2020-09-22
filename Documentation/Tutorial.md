@@ -27,4 +27,4 @@ Although the recorder is a good choice for quick tasks, **Pulover's Macro Creato
 * [User-Defined Functions](Examples/UserFunctions.pmc)
 * [Variables](Examples/Variables.pmc)
 
-Check out the video tutorials at [www.macrocreator.com/help](http://macrocreator.com/help) to learn more.
+Check out the video tutorials at [www.macrocreator.com/help](https://www.macrocreator.com/help) to learn more.

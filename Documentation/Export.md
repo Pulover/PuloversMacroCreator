@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Exports selected Macros to a working AutoHotkey Script file (*.ahk), optionally converting the script to an executable (EXE) file (requires the latest version of [AutoHotkey](http://autohotkey.com/) installed).
+Exports selected Macros to a working AutoHotkey Script file (*.ahk), optionally converting the script to an executable (EXE) file (requires the latest version of [AutoHotkey](https://www.autohotkey.com/) installed).
 
 ## Macros
 
@@ -70,7 +70,7 @@ Includes a copy of the PMC code for each selected Macro at the end of the export
 
 Runs Ahk2Exe Compiler after exporting the script to create an Executable File. The EXE file will be saved to the same folder as the script.  
 Once a script is compiled, it becomes a standalone executable; that is, it can be used even on machines where AutoHotkey is not installed (and such EXEs can be distributed or sold with no restrictions).  
-*Note*: This feature requires the latest version of [AutoHotkey](http://autohotkey.com/) installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).
+*Note*: This feature requires the latest version of [AutoHotkey](https://www.autohotkey.com/) installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).
 
 ## Context Sensitive Hotkeys
 
@@ -78,11 +78,11 @@ Makes hotkeys and hotstrings work depending on the type of window that is active
 
 ### Related
 
-[#IfWinActive](http://autohotkey.com/docs/commands/_IfWinActive.htm), [#If](http://autohotkey.com/docs/commands/_If.htm)
+[#IfWinActive](https://www.autohotkey.com/docs/commands/_IfWinActive.htm), [#If](https://www.autohotkey.com/docs/commands/_If.htm)
 
 ## Options
 
-Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](http://autohotkey.com/docs).
+Changes various options for the exported script's Auto-Execute Section. For more information see [AutoHotkey documentation](https://www.autohotkey.com/docs).
 
 ### #Include
 
@@ -98,8 +98,8 @@ Increases or decreases the delay of Sleep (Pause) commands in exported scripts.
 
 ### COM Objects
 
-Default behavior for the *Automatically create COM object* option in **Expression** window. [ComObjCreate](http://autohotkey.com/docs/commands/ComObjCreate.htm) will create a new COM object based with the given CLSID, while [ComObjActive](http://autohotkey.com/docs/commands/ComObjActive.htm) will try to connect to an existing instance of the application.
+Default behavior for the *Automatically create COM object* option in **Expression** window. [ComObjCreate](https://www.autohotkey.com/docs/commands/ComObjCreate.htm) will create a new COM object based with the given CLSID, while [ComObjActive](https://www.autohotkey.com/docs/commands/ComObjActive.htm) will try to connect to an existing instance of the application.
 
 ### Related
 
-[Hotkeys](http://autohotkey.com/docs/Hotkeys.htm), [Hotstrings](http://autohotkey.com/docs/Hotstrings.htm), [List of Keys](http://autohotkey.com/docs/KeyList.htm), [ComObjCreate](http://autohotkey.com/docs/commands/ComObjCreate.htm), [ComObjActive](http://autohotkey.com/docs/commands/ComObjActive.htm), [Auto-execute Section](http://autohotkey.com/docs/Scripts.htm#auto), [#IfWinActive / #IfWinExist](http://autohotkey.com/docs/commands/_IfWinActive.htm), [#If](http://autohotkey.com/docs/commands/_If.htm)
+[Hotkeys](https://www.autohotkey.com/docs/Hotkeys.htm), [Hotstrings](https://www.autohotkey.com/docs/Hotstrings.htm), [List of Keys](https://www.autohotkey.com/docs/KeyList.htm), [ComObjCreate](https://www.autohotkey.com/docs/commands/ComObjCreate.htm), [ComObjActive](https://www.autohotkey.com/docs/commands/ComObjActive.htm), [Auto-execute Section](https://www.autohotkey.com/docs/Scripts.htm#auto), [#IfWinActive / #IfWinExist](https://www.autohotkey.com/docs/commands/_IfWinActive.htm), [#If](https://www.autohotkey.com/docs/commands/_If.htm)

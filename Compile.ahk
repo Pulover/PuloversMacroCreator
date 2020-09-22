@@ -72,6 +72,12 @@ FileCreateDir, Compiled\MacroCreatorPortable\x86\MacroCreator
 FileCreateDir, Compiled\MacroCreatorPortable\x64\MacroCreator
 FileCreateDir, Compiled\MacroCreatorPortable\x86\MacroCreator\Lang
 FileCreateDir, Compiled\MacroCreatorPortable\x64\MacroCreator\Lang
+FileCreateDir, Compiled\MacroCreatorPortable\x86\MacroCreator\Bin\leptonica_util
+FileCreateDir, Compiled\MacroCreatorPortable\x64\MacroCreator\Bin\leptonica_util
+FileCreateDir, Compiled\MacroCreatorPortable\x86\MacroCreator\Bin\tesseract\tessdata_best
+FileCreateDir, Compiled\MacroCreatorPortable\x64\MacroCreator\Bin\tesseract\tessdata_best
+FileCreateDir, Compiled\MacroCreatorPortable\x86\MacroCreator\Bin\tesseract\tessdata_fast
+FileCreateDir, Compiled\MacroCreatorPortable\x64\MacroCreator\Bin\tesseract\tessdata_fast
 
 IniWrite, 0, Compiled\MacroCreator.ini, Options, AutoUpdate
 
@@ -85,6 +91,8 @@ FileCopy, Compiled\Resources.dll, Compiled\MacroCreatorPortable\x86\MacroCreator
 FileCopy, Compiled\SciLexer-x86.dll, Compiled\MacroCreatorPortable\x86\MacroCreator\SciLexer.dll, 1
 FileCopy, Compiled\Demo.pmc, Compiled\MacroCreatorPortable\x86\MacroCreator\Demo.pmc, 1
 FileCopy, Compiled\Lang\*.lang, Compiled\MacroCreatorPortable\x86\MacroCreator\Lang\, 1
+FileCopy, Bin\leptonica_util\*.*, Compiled\MacroCreatorPortable\x86\MacroCreator\Bin\leptonica_util\, 1
+FileCopy, Bin\tesseract\tesseract.exe, Compiled\MacroCreatorPortable\x86\MacroCreator\Bin\tesseract\, 1
 
 FileCopy, Compiled\MacroCreator-x64.exe, Compiled\MacroCreatorPortable\x64\MacroCreator\MacroCreator.exe, 1
 FileCopy, Compiled\MacroCreator.ini, Compiled\MacroCreatorPortable\x64\MacroCreator\, 1
@@ -94,12 +102,16 @@ FileCopy, Compiled\Resources.dll, Compiled\MacroCreatorPortable\x64\MacroCreator
 FileCopy, Compiled\SciLexer-x64.dll, Compiled\MacroCreatorPortable\x64\MacroCreator\SciLexer.dll, 1
 FileCopy, Compiled\Demo.pmc, Compiled\MacroCreatorPortable\x64\MacroCreator\Demo.pmc, 1
 FileCopy, Compiled\Lang\*.lang, Compiled\MacroCreatorPortable\x64\MacroCreator\Lang\, 1
+FileCopy, Bin\leptonica_util\*.*, Compiled\MacroCreatorPortable\x64\MacroCreator\Bin\leptonica_util\, 1
+FileCopy, Bin\tesseract\tesseract.exe, Compiled\MacroCreatorPortable\x64\MacroCreator\Bin\tesseract\, 1
 
 IniRead, Ver, MacroCreator.ini, Application, Version
 FileAppend,
 (
 Pulover's Macro Creator v%Ver% Portable Edition
 ===============================================
+
+https://www.macrocreator.com
 
 Thank you for downloading Pulover's Macro Creator.
 Supported platforms: Windows 7, 8, 8.1, 10
