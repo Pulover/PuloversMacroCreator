@@ -1,7 +1,7 @@
 ﻿/*!
 	Library: Pulover's Macro Creator
 		
-		# Version: 5.2.0
+		# Version: 5.2.1
 		[www.macrocreator.com](https://www.macrocreator.com)  
 		[Forum Thread](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=143)
 		

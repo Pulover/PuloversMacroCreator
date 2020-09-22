@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.0  
+Version: 5.2.1  
 Release Date: September, 2020  
 AutoHotkey Version: 1.1.33.02  
 
@@ -36,6 +36,10 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.2.1
+* Fixed inconsistency in exported OCR() function from Image To Text.
+* Fixed bug when using Apply button in command windows.
 
 ## Version 5.2.0
 * Added new feature: **Image to Text (OCR)** in *Image Search* command window.

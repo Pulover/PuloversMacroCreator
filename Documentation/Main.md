@@ -133,7 +133,7 @@ Copies all commands from currently selected Macro to a new tab.
 
 ### Edit Macros
 
-Opens the *Edit Macros* window where you can reorder and rename macros. Double click an item to change also hotkeys and loops.
+Opens the *Edit Macros* window where you can reorder and rename macros. Double click an item to change hotkeys and loops as well. Here you can set hotkeys not supported by the control in the main window, including mouse buttons, for the Play hotkey.
 
 ### Import Macro
 

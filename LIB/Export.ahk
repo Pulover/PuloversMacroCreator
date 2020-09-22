@@ -245,7 +245,7 @@
 				Loop, 5
 					Stp%A_Index% := ""
 				StringSplit, Stp, Step, `,, %A_Space%%A_Tab%
-				RowData := "`n" Stp5 " := OCR([" Stp1 ", " Stp2 ", " (Stp3 - Stp1) ", " (Stp4 - Stp2) "], """ Target """)"
+				RowData := "`n" Stp5 " := OCR([" CheckExp(Stp1) ", " CheckExp(Stp2) ", " (RegExMatch(Stp3, "%\w+%") ? CheckExp(Stp3) : (CheckExp(Stp3) - CheckExp(Stp1))) ", " (RegExMatch(Stp4, "%\w+%") ? CheckExp(Stp4) : (CheckExp(Stp4) - CheckExp(Stp2))) "], """ Target """)"
 			Case cType17:
 				If (Step = "Else")
 				{

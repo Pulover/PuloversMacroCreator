@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.0
+; Version: 5.2.1
 ; Release Date: September, 2020
 ; AutoHotkey Version: 1.1.33.02
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.0
+;@Ahk2Exe-SetVersion 5.2.1
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -142,7 +142,7 @@ Loop
 }
 
 
-CurrentVersion := "5.2.0", ReleaseDate := "September, 2020"
+CurrentVersion := "5.2.1", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
@@ -1682,30 +1682,30 @@ GoToLine:
 If (Capt || Record || !ShowPrev)
 	return
 Gui, chMacro:Default
-RowSelection := LV_GetCount("Selected")
-If (RowSelection = 0)
+GoRowSelection := LV_GetCount("Selected")
+If (GoRowSelection = 0)
 {
 	sciPrev.SetSel(0, 0)
 	sciPrevF.SetSel(0, 0)
 	return
 }
-SelectedRow := LV_GetNext()
-LV_GetText(CodeLineStart, SelectedRow, 11)
-RowNumber := 0
-Loop, %RowSelection%
-	RowNumber := LV_GetNext(RowNumber)
-LV_GetText(CodeNextLine, RowNumber + 1, 11)
+GoSelectedRow := LV_GetNext()
+LV_GetText(CodeLineStart, GoSelectedRow, 11)
+GoRowNumber := 0
+Loop, %GoRowSelection%
+	GoRowNumber := LV_GetNext(GoRowNumber)
+LV_GetText(CodeNextLine, GoRowNumber + 1, 11)
 CodeLineStart--
 CodeNextLine--
 sciPrev.GoToLine(CodeLineStart)
 sciPrevF.GoToLine(CodeLineStart)
-If ((RowSelection > 1) || (CodeNextLine <= 0) || ((CodeNextLine - CodeLineStart) > 1))
+If ((GoRowSelection > 1) || (CodeNextLine <= 0) || ((CodeNextLine - CodeLineStart) > 1))
 {
-	RowNumber := 0
-	Loop, %RowSelection%
-		RowNumber := LV_GetNext(RowNumber)
-	LastRowSelected := RowNumber = LV_GetCount()
-	RowNumber := LastRowSelected ? RowNumber : RowNumber + 1
+	GoRowNumber := 0
+	Loop, %GoRowSelection%
+		GoRowNumber := LV_GetNext(GoRowNumber)
+	LastRowSelected := GoRowNumber = LV_GetCount()
+	GoRowNumber := LastRowSelected ? GoRowNumber : GoRowNumber + 1
 	CaretPos := sciPrev.PositionFromLine(CodeLineStart)
 	Anchor := (CodeNextLine > 0 ? sciPrev.PositionFromLine(CodeNextLine) : sciPrev.GetLength()) - 1
 	sciPrev.SetSel(Anchor, CaretPos)

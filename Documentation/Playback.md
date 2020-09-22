@@ -17,14 +17,15 @@ The *Play Current Macro* button will run the active Macro immediately without ac
 
 ## Hotkeys
 
-Hotkeys are sometimes referred to as shortcut keys and are used to run/play the macros. Playback Hotkeys are set in the hotkey toolbars in the main window.
+Hotkeys are sometimes referred to as shortcut keys and are used to run/play the macros. Playback Hotkeys are set in the hotkey toolbars in the main window or in the *Edit Macros* window (Ctrl+Shift+M).
 
 Use `Backspace` to clear the hotkeys. Press it twice to set `Backspace` as the hotkey.
 
 ### Play
 
-Selects the Automatic Hotkey to execute the currently selected Macro.  
+Selects the Play Hotkey to execute the currently selected Macro.  
 You can make combinations with modifiers such as `Ctrl + X`.
+If you want to use a hotkey that's not supported by this control, you can go to *Edit Macros* window (Ctrl+Shift+M) and enter a valid hotkey manually. In there you can use any supported AHK hotkey, including mouse buttons.
 
 **Windows Key**: To make combination with the Windows key, check the option *Add the Windows key to "Play" hotkey* in the Options menu or in the Options toolbar.
 
