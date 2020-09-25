@@ -1291,4 +1291,4 @@ BuiltinVars := StrReplace(BIV_Characters, "`n", ",")
 			. StrReplace(BIV_Misc, "`n", ",")
 			. StrReplace(BIV_Loop, "`n", ",")
 
-FuncAllowedList := "OCR,ImageIdentify,Gdip_,Screenshot,CDO,Zip,CreateZipFile,WinHttpDownloadToFile,CenterImgSrchCoords,Dlg_,IEGet,IELoad,WBGet,ScheduleTask"
+FuncAllowedList := "OCR,ImageIdentify,Gdip_,Screenshot,CDO,Zip,CreateZipFile,WinHttpDownloadToFile,CreateFormData,CreateFormData_WinInet,CenterImgSrchCoords,Dlg_,IEGet,IELoad,WBGet,ScheduleTask"

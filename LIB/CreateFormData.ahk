@@ -3,8 +3,21 @@
 ; CreateFormData - Creates "multipart/form-data" for http post
 ; http://autohotkey.com/boards/viewtopic.php?f=6&t=7647
 ;###########################################################
+
+; Used for WinHttp.WinHttpRequest.5.1, Msxml2.XMLHTTP ...
 CreateFormData(ByRef retData, ByRef retHeader, objParam) {
 	New CreateFormData(retData, retHeader, objParam)
+}
+
+; Used for WinInet
+CreateFormData_WinInet(ByRef retData, ByRef retHeader, objParam) {
+	New CreateFormData(safeArr, retHeader, objParam)
+
+	size := safeArr.MaxIndex() + 1
+	VarSetCapacity(retData, size, 1)
+	DllCall("oleaut32\SafeArrayAccessData", "ptr", ComObjValue(safeArr), "ptr*", pdata)
+	DllCall("RtlMoveMemory", "ptr", &retData, "ptr", pdata, "ptr", size)
+	DllCall("oleaut32\SafeArrayUnaccessData", "ptr", ComObjValue(safeArr))
 }
 
 Class CreateFormData {
@@ -13,12 +26,12 @@ Class CreateFormData {
 
 		CRLF := "`r`n"
 
-		; Create a random Boundary
 		Boundary := this.RandomBoundary()
 		BoundaryLine := "------------------------------" . Boundary
 
 		; Loop input paramters
 		binArrs := []
+		fileArrs := []
 		For k, v in objParam
 		{
 			If IsObject(v) {
@@ -27,9 +40,9 @@ Class CreateFormData {
 					str := BoundaryLine . CRLF
 					     . "Content-Disposition: form-data; name=""" . k . """; filename=""" . FileName . """" . CRLF
 					     . "Content-Type: " . this.MimeType(FileName) . CRLF . CRLF
-					binArrs.Push( BinArr_FromString(str) )
-					binArrs.Push( BinArr_FromFile(FileName) )
-					binArrs.Push( BinArr_FromString(CRLF) )
+					fileArrs.Push( BinArr_FromString(str) )
+					fileArrs.Push( BinArr_FromFile(FileName) )
+					fileArrs.Push( BinArr_FromString(CRLF) )
 				}
 			} Else {
 				str := BoundaryLine . CRLF
@@ -39,10 +52,11 @@ Class CreateFormData {
 			}
 		}
 
+		binArrs.push( fileArrs* )
+
 		str := BoundaryLine . "--" . CRLF
 		binArrs.Push( BinArr_FromString(str) )
 
-		; Finish
 		retData := BinArr_Join(binArrs*)
 		retHeader := "multipart/form-data; boundary=----------------------------" . Boundary
 	}

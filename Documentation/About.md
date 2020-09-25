@@ -37,6 +37,10 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 # Change Log
 
+## Version 5.2.2
+* Updated exported *Compare variables* from *If Statements* window to use expression.
+* Fixed *Function Return* ignoring if statements.
+
 ## Version 5.2.1
 * Fixed inconsistency in exported OCR() function from Image To Text.
 * Fixed bug when using Apply button in command windows.

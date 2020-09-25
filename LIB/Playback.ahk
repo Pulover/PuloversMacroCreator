@@ -258,6 +258,18 @@
 				,	%VarName% := _value.NewValue
 				continue
 			}
+			If ((Type = cType3) || (Type = cType13))
+				MouseReset := 1
+			If (Type = cType17)
+			{
+				FlowControl.If := IfStatement(FlowControl.If, PlaybackVars[LoopDepth][mLoopIndex]
+							, Action, Step, TimesX, DelayX, Type, Target, Window, FlowControl)
+				If (ManualKey)
+					WaitFor.Key(o_ManKey[ManualKey])
+				continue
+			}
+			If (FlowControl.If != 0)
+				continue
 			If (Type = cType49)
 			{
 				Try
@@ -309,18 +321,6 @@
 				ScopedVars[RunningFunction].Pop()
 				return Func_Result
 			}
-			If ((Type = cType3) || (Type = cType13))
-				MouseReset := 1
-			If (Type = cType17)
-			{
-				FlowControl.If := IfStatement(FlowControl.If, PlaybackVars[LoopDepth][mLoopIndex]
-							, Action, Step, TimesX, DelayX, Type, Target, Window, FlowControl)
-				If (ManualKey)
-					WaitFor.Key(o_ManKey[ManualKey])
-				continue
-			}
-			If (FlowControl.If != 0)
-				continue
 			If ((Type = cType36) || (Type = cType37) || (Type = cType50))
 			{
 				If ((FlowControl.Break > 0) || (FlowControl.Continue > 0))

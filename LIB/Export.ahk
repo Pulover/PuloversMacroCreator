@@ -259,7 +259,7 @@
 				Else
 				{
 					IfStReplace(Action, Step)
-				,	CompareParse(Step, VarName, Oper, VarValue)
+				,	CompareParse(Trim(Step, "()"), VarName, Oper, VarValue)
 					If ((Oper = "between") || (Oper = "not between"))
 					{
 						_Val1 := "", _Val2 := ""
@@ -267,6 +267,8 @@
 						StringSplit, _Val, VarValue, `n, %A_Space%%A_Tab%
 						Step := VarName " " Oper " " _Val1 " and " _Val2
 					}
+					Else If Oper in in,not in,contains,not contains,is,is not
+						Step := Trim(Step, "()")
 					RowData := "`n" Action " " Step
 				,	RowData := RTrim(RowData)
 					If (Comment != "")
@@ -575,11 +577,24 @@ IfStReplace(ByRef Action, ByRef Step)
 			break
 		}
 	}
-	If (Action = c_If15)
+	Action := Trim(Action)
+	Step := Trim(Step)
+	If Action in %c_If14%,%c_If15%
 	{
 		Action := "If"
 		StringReplace, Step, Step, `%,, All
 		Step := "(" Step ")"
+	}
+	Else If Action in %c_If7%,%c_If8%
+	{
+		StringReplace, Step, Step, `%,, All
+		Action := "If (" RegExReplace(Action, "^If\s")
+		Step := Step ")"
+	}
+	Else If Action in %c_If9%,%c_If10%
+	{
+		If (!RegExMatch(Oper, "\w+"))
+			Action := "If (" RegExReplace(Action, "^If\s") ")"
 	}
 	If (ElseIf)
 		Action := "}`nElse " Action
