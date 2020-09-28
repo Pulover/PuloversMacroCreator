@@ -80,7 +80,7 @@ MAction1 := "Click"
 			,	10: ["RunB"]
 			,	11: ["WindowB"]
 			,	12: ["ComLoopB", "ComGotoB", "TimedLabelB"]
-			,	14: ["ExportG"]
+			,	14: ["ExportG", "ExportO"]
 			,	16: ["IfDirB"]
 			,	19: ["ImageB"]
 			,	21: ["IfStB", "AsVarB", "AsFuncB"]

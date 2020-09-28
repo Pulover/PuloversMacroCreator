@@ -89,7 +89,11 @@ For an expression to be `true` it must be a number other than 0 or a non-empty s
 
 You can also use [User-defined functions](Functions.html#user-defined-functions) with the *#If Expression* option.
 
-Global option affects ALL Play Hotkeys and will be saved to the programs settings when it's closed. There's a text tip at the bottom-left of the main window to show if it's active. To deactivate this option select *None* in the list.
+Global option affects ALL Play Hotkeys.
+
+Both Global and Macro options are saved to the project file (.pmc).
+
+There's a text tip at the bottom-left of the main window to show if it's active globally or for the current macro. To deactivate this option select *None* in the list.
 
 For more information see AutoHotkey documentation: [#IfWinActive](https://www.autohotkey.com/docs/commands/_IfWinActive.htm) and [#If](https://www.autohotkey.com/docs/commands/_If.htm).
 

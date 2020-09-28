@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.1
+; Version: 5.2.2
 ; Release Date: September, 2020
 ; AutoHotkey Version: 1.1.33.02
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.1
+;@Ahk2Exe-SetVersion 5.2.2
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -142,7 +142,7 @@ Loop
 }
 
 
-CurrentVersion := "5.2.1", ReleaseDate := "September, 2020"
+CurrentVersion := "5.2.2", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
@@ -179,8 +179,6 @@ IniRead, DontShowEdt, %IniFilePath%, Options, DontShowEdt, 0
 IniRead, ConfirmDelete, %IniFilePath%, Options, ConfirmDelete, 1
 IniRead, ShowTips, %IniFilePath%, Options, ShowTips, 1
 IniRead, NextTip, %IniFilePath%, Options, NextTip, 1
-IniRead, IfDirectContext, %IniFilePath%, Options, IfDirectContext, None
-IniRead, IfDirectWindow, %IniFilePath%, Options, IfDirectWindow, %A_Space%
 IniRead, KeepHkOn, %IniFilePath%, Options, KeepHkOn, 0
 IniRead, Mouse, %IniFilePath%, Options, Mouse, 1
 IniRead, Moves, %IniFilePath%, Options, Moves, 1
@@ -1004,6 +1002,25 @@ Menu, ExportG, Add, ComObjActive, ExportG
 Menu, ExportG, Add, Auto-execute Section, ExportG
 Menu, ExportG, Add, #IfWinActive / #IfWinExist, HelpB
 Menu, ExportG, Icon, Hotkeys, %ResDllPath%, 24
+Menu, ExportO, Add, #SingleInstance, ExportG
+Menu, ExportO, Add, SetTitleMatchMode, ExportG
+Menu, ExportO, Add, CoordMode, ExportG
+Menu, ExportO, Add, DetectHiddenWindows, ExportG
+Menu, ExportO, Add, DetectHiddenText, ExportG
+Menu, ExportO, Add, #WinActivateForce, ExportG
+Menu, ExportO, Add, #Persistent, ExportG
+Menu, ExportO, Add, #UseHook, ExportG
+Menu, ExportO, Add, SendMode, ExportG
+Menu, ExportO, Add, SetKeyDelay, ExportG
+Menu, ExportO, Add, SetMouseDelay, ExportG
+Menu, ExportO, Add, SetMouseDelay, ExportG
+Menu, ExportO, Add, SetControlDelay, ExportG
+Menu, ExportO, Add, SetWinDelay, ExportG
+Menu, ExportO, Add, SetBatchLines, ExportG
+Menu, ExportO, Add, #MaxThreadsPerHotkey, ExportG
+Menu, ExportO, Add, #NoTrayIcon, ExportG
+Menu, ExportO, Add, #Warn, ExportG
+Menu, ExportO, Icon, #SingleInstance, %ResDllPath%, 24
 
 ;##### Main Window: #####
 
@@ -1946,7 +1963,10 @@ GoSub, LoadData
 GoSub, KeepHkOn
 GuiControl, 1:, Capt, 0
 GuiControl, 1:, TimesG, 1
-CurrentFileName =
+IfDirectContext := "None"
+IfDirectWindow := ""
+GuiControl, 1:, ContextTip, Global <a>#If</a>: %IfDirectContext%
+CurrentFileName := ""
 Gui, 1:Show, % ((WinExist("ahk_id" PMCWinID)) ? "" : "Hide"), %AppName% v%CurrentVersion%
 GuiControl, chMacro:Focus, InputList%A_List%
 GoSub, b_Enable
@@ -2168,7 +2188,7 @@ IfExist %ThisListFile%
 PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_List]
 . "|" o_ManKey[A_List] "|" o_TimesG[A_List]
 . "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" CopyMenuLabels[A_List] "`n"
-IfContext := "Context=" o_MacroContext[A_List].Condition "|" o_MacroContext[A_List].Context "`n"
+IfContext := "Context=" o_MacroContext[A_List].Condition "|" o_MacroContext[A_List].Context "|" IfDirectContext "|" IfDirectWindow "`n"
 TabGroups := "Groups=" LVManager[A_List].GetGroups() "`n"
 LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_List).Text . "`n"
 FileAppend, %LV_Data%, %ThisListFile%
@@ -2851,7 +2871,7 @@ Loop, % LV_GetCount()
 	PMCSet := "[PMC Code v" CurrentVersion "]|" Ex_AutoKey
 	. "|" o_ManKey[Ex_Idx] "|" Ex_TimesX
 	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" CopyMenuLabels[Ex_Idx] "`n"
-	IfContext := "Context=" o_MacroContext[Ex_Idx].Condition "|" o_MacroContext[Ex_Idx].Context "`n"
+	IfContext := "Context=" o_MacroContext[Ex_Idx].Condition "|" o_MacroContext[Ex_Idx].Context "|" IfDirectContext "|" IfDirectWindow "`n"
 	TabGroups := "Groups=" LVManager[Ex_Idx].GetGroups() "`n"
 	PmcCode .= PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" Ex_Idx).Text . "`n"
 	If (Ex_IN)
@@ -2948,7 +2968,10 @@ If (IncPmc)
 If (Exe_Exp)
 {
 	SplitPath, A_AhkPath,, AhkDir
-	RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" /mpress 1,, UseErrorLevel
+	If (FileExist(AhkDir "\Compiler\mpress.exe"))
+		RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" /compress 1,, UseErrorLevel
+	Else
+		RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" /bin "%AhkDir%\Compiler\Unicode 32-bit.bin",, UseErrorLevel
 }
 PmcCode := ""
 MsgBox, 64, %d_Lang014%, % d_Lang015 . (HasEmailFunc.GetCapacity() ? "`n`n`n>>>>>>>>>>[" RegExReplace(d_Lang011, "(*UCP).*", "$u0") "]<<<<<<<<<<`n`n" d_Lang114 : "")
@@ -3946,6 +3969,8 @@ Else If (A_ThisMenuItem = "Auto-execute Section")
 	Run, %HelpDocsUrl%/Scripts.htm#auto
 Else If (InStr(A_ThisMenuItem, "ComObj"))
 	Run, %HelpDocsUrl%/commands/%A_ThisMenuItem%.htm
+Else If (InStr(A_ThisMenuItem, "#"))
+	Run, % HelpDocsUrl "/commands/" RegExReplace(A_ThisMenuItem, "#", "_") ".htm"
 Else
 	Run, %HelpDocsUrl%/%A_ThisMenuItem%.htm
 return
@@ -8418,6 +8443,7 @@ If (s_Caller = "Edit")
 		Else If (InStr(Action, "Compare"))
 		{
 			CompareParse(Details, VarName, Oper, VarValue), Opers := "=$==$!=$>$<$>=$<=$in$not in$contains$not contains$between$not between$is$is not"
+			StringReplace, VarValue, VarValue, ```,, `,, All
 			GuiControl, 21:, TestVar, %VarName%
 			GuiControl, 21:, TestVar2, %VarValue%
 			Loop, Parse, Opers, $
@@ -12066,6 +12092,7 @@ Loop, %TabCount%
 Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:, A_List, |%s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
+Gui, chMacro:Submit, NoHide
 GoSub, LoadData
 GoSub, TabSel
 SavePrompt(true, A_ThisLabel)
@@ -12432,7 +12459,8 @@ Else
 		LV_Modify(RowNumber, "Col4", (InStr(Rept, "%") ? Rept : TimesM))
 	}
 }
-HistCheck()
+GoSub, RowCheck
+GoSub, b_Start
 return
 
 ApplyI:
@@ -12450,7 +12478,8 @@ Else
 		LV_Modify(RowNumber, "Col5", (InStr(Delay, "%") ? Delay : DelayG))
 	}
 }
-HistCheck()
+GoSub, RowCheck
+GoSub, b_Start
 return
 
 ApplyIEd:
@@ -12492,7 +12521,8 @@ Else
 		}
 	}
 }
-HistCheck()
+GoSub, RowCheck
+GoSub, b_Start
 return
 
 ApplyL:
@@ -12973,6 +13003,8 @@ Switch Type
 	Case cType20:
 		If (Action = "[KeyWait]")
 			Goto, EditKeyWait
+		Else
+			Goto, EditRun
 	Case cType11, cType14:
 		Goto, EditRun
 	Case cType29, cType30:
@@ -13385,7 +13417,8 @@ If (A_ThisLabel = "MultiApply")
 	Gui, 6:Default
 Else
 	GuiControl, Focus, InputList%A_List%
-HistCheck()
+GoSub, RowCheck
+GoSub, b_Start
 return
 
 MultiCancel:
@@ -14157,8 +14190,13 @@ If (CheckDuplicateLabels())
 	return
 }
 Loop, %TabCount%
-	If (o_AutoKey[A_Index] = A_ThisHotkey)
+{
+	If (("hotkey:" o_AutoKey[A_Index]) == ("hotkey:" A_ThisHotkey))
+	{
 		aHK_On := [A_Index]
+		break
+	}
+}
 StopIt := 0
 f_RunMacro:
 If (InStr(CopyMenuLabels[aHK_On[1]], "()"))
@@ -14882,8 +14920,6 @@ IniWrite, %DontShowEdt%, %IniFilePath%, Options, DontShowEdt
 IniWrite, %ConfirmDelete%, %IniFilePath%, Options, ConfirmDelete
 IniWrite, %ShowTips%, %IniFilePath%, Options, ShowTips
 IniWrite, %NextTip%, %IniFilePath%, Options, NextTip
-IniWrite, %IfDirectContext%, %IniFilePath%, Options, IfDirectContext
-IniWrite, %IfDirectWindow%, %IniFilePath%, Options, IfDirectWindow
 IniWrite, %KeepHkOn%, %IniFilePath%, Options, KeepHkOn
 IniWrite, %Mouse%, %IniFilePath%, Options, Mouse
 IniWrite, %Moves%, %IniFilePath%, Options, Moves

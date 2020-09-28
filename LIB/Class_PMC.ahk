@@ -18,8 +18,13 @@
 			}
 			Else If (InStr(A_LoopReadLine, "Context=")=1)
 			{
-				RegExMatch(SubStr(A_LoopReadLine, 9), "O)(\w+)\|(.*)", MContext)
+				RegExMatch(SubStr(A_LoopReadLine, 9), "O)(\w+)\|([^\|]*)\|?([^\|]*)\|?([^\|]*)", MContext)
 				this.PmcContexts.Push({"Condition": MContext[1] != "" ? MContext[1] : "None", "Context": MContext[2]})
+				If (MContext[3] != "")
+				{
+					IfDirectContext := MContext[3], IfDirectWindow := MContext[4]
+					GuiControl, 1:, ContextTip, Global <a>#If</a>: %IfDirectContext%
+				}
 			}
 			Else If (InStr(A_LoopReadLine, "Groups=")=1)
 				this.PmcGroups[ID] := SubStr(A_LoopReadLine, 8)

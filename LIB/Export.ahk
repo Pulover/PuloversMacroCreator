@@ -268,7 +268,7 @@
 						Step := VarName " " Oper " " _Val1 " and " _Val2
 					}
 					Else If Oper in in,not in,contains,not contains,is,is not
-						Step := Trim(Step, "()")
+						Step := RegExReplace(Trim(Step, "()"), "```,", "`,")
 					RowData := "`n" Action " " Step
 				,	RowData := RTrim(RowData)
 					If (Comment != "")
@@ -282,20 +282,6 @@
 			,	RowData := Add_CD(RowData, Comment, DelayX)
 				If ((TimesX > 1) || InStr(TimesX, "%"))
 					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-			Case cType20:
-				if (Action = "[KeyWait]")
-				{
-					RowData := "`n" Type ", " Step
-				,	RowData .= "`n" Type ", " Step ", D"
-					If (DelayX > 0)
-						RowData .= " T" Round(DelayX/1000, 2)
-					Else If (InStr(DelayX, "%"))
-						RowData .= " T" DelayX
-					If (Comment != "")
-						RowData .= "  " "; " Comment
-					If ((TimesX > 1) || InStr(TimesX, "%"))
-						RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
-				}
 			Case cType21, cType44, cType46:
 				AssignParse(Step, VarName, Oper, VarValue)
 				If (Type = cType21)
@@ -500,7 +486,20 @@
 				If ((TimesX > 1) || InStr(TimesX, "%"))
 					RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
 			Default:
-				If (InStr(FileCmdList, Type "|"))
+				if (Action = "[KeyWait]")
+				{
+					RowData := "`n" Type ", " Step
+				,	RowData .= "`n" Type ", " Step ", D"
+					If (DelayX > 0)
+						RowData .= " T" Round(DelayX/1000, 2)
+					Else If (InStr(DelayX, "%"))
+						RowData .= " T" DelayX
+					If (Comment != "")
+						RowData .= "  " "; " Comment
+					If ((TimesX > 1) || InStr(TimesX, "%"))
+						RowData := "`nLoop, " TimesX "`n{" RowData "`n}"
+				}
+				Else If (InStr(FileCmdList, Type "|"))
 				{
 					Stp := StrReplace(Step, "``,", _x)
 				,	Step := ""

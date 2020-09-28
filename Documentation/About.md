@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.1  
+Version: 5.2.2  
 Release Date: September, 2020  
 AutoHotkey Version: 1.1.33.02  
 
@@ -39,7 +39,11 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 ## Version 5.2.2
 * Updated exported *Compare variables* from *If Statements* window to use expression.
+* Global Context Hotkey is now saved in project file instead of ini file.
 * Fixed *Function Return* ignoring if statements.
+* Fixed bug with similar numeric Play hotkeys.
+* Fixed bugs in Expressions.
+* Fixed various bugs.
 
 ## Version 5.2.1
 * Fixed inconsistency in exported OCR() function from Image To Text.
