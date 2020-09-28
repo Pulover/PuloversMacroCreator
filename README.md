@@ -38,7 +38,7 @@ If you need to compile you may run the *Compile.ahk* script which generates the 
 
 To compile you'll need:
 * The latest version of AutoHotkey installed.
-* upx.exe (win32) inside AutoHotkey's Compiler subfolder, in its installation folder (this is required to avoid false positive virus alerts in some Anti-Virus softwares).
+* upx.exe (win32) inside AutoHotkey's Compiler subfolder, in its installation folder (this can be changed in Compile.ahk).
 * hhc.exe and hha.dll in *Documentation\MacroCreator_Help-doc* directory.
 * Inno Setup 6 installed.
 
