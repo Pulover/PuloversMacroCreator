@@ -30,12 +30,15 @@ Source requires the latest version of [AutoHotkey](https://www.autohotkey.com/) 
 
 The source for SciLexer.dll can be found at [fincs/SciTE4AutoHotkey](https://github.com/fincs/SciTE4AutoHotkey).
 
+The source for tesseract.exe can be found at [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract).
+
 Installer is created with [Inno Setup](https://jrsoftware.org/).
 
 If you need to compile you may run the *Compile.ahk* script which generates the necessary files locally to create *MacroCreator.exe*, *MacroCreator-x64.exe*, *MacroCreator_Help.chm* and *MacroCreator-setup.exe*.
 
 To compile you'll need:
-* The latest version of Auto-Hotkey installed.
+* The latest version of AutoHotkey installed.
+* upx.exe (win32) inside AutoHotkey's Compiler subfolder, in its installation folder (this is required to avoid false positive virus alerts in some Anti-Virus softwares).
 * hhc.exe and hha.dll in *Documentation\MacroCreator_Help-doc* directory.
 * Inno Setup 6 installed.
 
