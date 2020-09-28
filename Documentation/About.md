@@ -7,9 +7,9 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.2  
+Version: 5.2.3  
 Release Date: September, 2020  
-AutoHotkey Version: 1.1.33.02  
+AutoHotkey Version: 1.1.32.00  
 
 Software License: [GNU General Public License](License.html)  
 
@@ -37,7 +37,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 # Change Log
 
-## Version 5.2.2
+## Version 5.2.3
 * Updated exported *Compare variables* from *If Statements* window to use expression.
 * Global Context Hotkey is now saved in project file instead of ini file.
 * Fixed *Function Return* ignoring if statements.

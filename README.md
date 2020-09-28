@@ -4,7 +4,7 @@ Pulover's Macro Creator is a Free Automation Tool and Script Generator based on 
 
 [www.macrocreator.com](https://www.macrocreator.com)
 
-**Current Version:** 5.2.2
+**Current Version:** 5.2.3
 
 ### Supported platforms
 
@@ -38,7 +38,7 @@ If you need to compile you may run the *Compile.ahk* script which generates the 
 
 To compile you'll need:
 * The latest version of AutoHotkey installed.
-* upx.exe (win32) inside AutoHotkey's Compiler subfolder, in its installation folder (this can be changed in Compile.ahk).
+* mpress.exe inside AutoHotkey's Compiler subfolder, in its installation folder (this can be changed in Compile.ahk).
 * hhc.exe and hha.dll in *Documentation\MacroCreator_Help-doc* directory.
 * Inno Setup 6 installed.
 

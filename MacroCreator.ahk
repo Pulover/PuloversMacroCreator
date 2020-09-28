@@ -5,9 +5,9 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum Board: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.2
+; Version: 5.2.3
 ; Release Date: September, 2020
-; AutoHotkey Version: 1.1.33.02
+; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
 ; under the terms of the UNLICENSE here: <https://unlicense.org/UNLICENSE>
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.2
+;@Ahk2Exe-SetVersion 5.2.3
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -142,7 +142,7 @@ Loop
 }
 
 
-CurrentVersion := "5.2.2", ReleaseDate := "September, 2020"
+CurrentVersion := "5.2.3", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
