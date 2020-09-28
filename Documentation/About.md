@@ -2,7 +2,7 @@
 *The Complete Automation Tool*
 
 [www.macrocreator.com](https://www.macrocreator.com)  
-[Forum Thread](https://www.autohotkey.com/boards/viewforum.php?f=63)  
+[Forum Board](https://www.autohotkey.com/boards/viewforum.php?f=63)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  

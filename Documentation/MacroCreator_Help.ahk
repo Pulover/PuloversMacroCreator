@@ -3,7 +3,7 @@
 		
 		# Version: 5.2.2
 		[www.macrocreator.com](https://www.macrocreator.com)  
-		[Forum Thread](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=143)
+		[Forum Board](https://www.autohotkey.com/boards/viewforum.php?f=63)
 		
 		Author: Pulover [Rodolfo U. Batista]  
 		©2012-2020 Rodolfo U. Batista

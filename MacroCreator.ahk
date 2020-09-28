@@ -4,7 +4,7 @@
 ; "The Complete Automation Tool"
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
-; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
+; Forum Board: https://www.autohotkey.com/boards/viewforum.php?f=63
 ; Version: 5.2.2
 ; Release Date: September, 2020
 ; AutoHotkey Version: 1.1.33.02
