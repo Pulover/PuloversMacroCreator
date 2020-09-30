@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.3  
+Version: 5.2.6  
 Release Date: September, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -36,6 +36,10 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.2.6
+* Fixed error when exporting to exe.
+* Fixed hotkeys not being activated.
 
 ## Version 5.2.3
 * Updated exported *Compare variables* from *If Statements* window to use expression.

@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum Board: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.3
+; Version: 5.2.6
 ; Release Date: September, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.3
+;@Ahk2Exe-SetVersion 5.2.6
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -142,7 +142,7 @@ Loop
 }
 
 
-CurrentVersion := "5.2.3", ReleaseDate := "September, 2020"
+CurrentVersion := "5.2.6", ReleaseDate := "September, 2020"
 
 ;##### Ini File Read #####
 
@@ -329,6 +329,7 @@ For _each, _Section in UserVars
 		Try SavedVars(_key)
 
 UserMailAccounts := new ObjIni(UserAccountsPath)
+IfDirectContext := "None"
 
 If (DefaultEditor = "ERROR")
 {
@@ -2968,10 +2969,14 @@ If (IncPmc)
 If (Exe_Exp)
 {
 	SplitPath, A_AhkPath,, AhkDir
+	Compress := ""
+
 	If (FileExist(AhkDir "\Compiler\mpress.exe"))
-		RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" /compress 1,, UseErrorLevel
+		Compress := RegExReplace(A_AhkVersion, "\D") > 113200 ? "/compress 1" : "/mpress 1"
+	Else If (FileExist(AhkDir "\Compiler\upx.exe"))
+		Compress := RegExReplace(A_AhkVersion, "\D") > 113200 ? "/compress 2" : ""
 	Else
-		RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" /bin "%AhkDir%\Compiler\Unicode 32-bit.bin",, UseErrorLevel
+		RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" %Compress%,, UseErrorLevel
 }
 PmcCode := ""
 MsgBox, 64, %d_Lang014%, % d_Lang015 . (HasEmailFunc.GetCapacity() ? "`n`n`n>>>>>>>>>>[" RegExReplace(d_Lang011, "(*UCP).*", "$u0") "]<<<<<<<<<<`n`n" d_Lang114 : "")
@@ -13499,6 +13504,7 @@ Gui, 1:-Disabled
 Gui, 16:Destroy
 Gui, chMacro:Default
 GuiControl, 1:, ContextTip, Global <a>#If</a>: %IfDirectContext%
+SavePrompt(true, A_ThisLabel)
 return
 
 SWinCancel:
@@ -14191,7 +14197,7 @@ If (CheckDuplicateLabels())
 }
 Loop, %TabCount%
 {
-	If (("hotkey:" o_AutoKey[A_Index]) == ("hotkey:" A_ThisHotkey))
+	If ("" o_AutoKey[A_Index] "" = "" A_ThisHotkey "")
 	{
 		aHK_On := [A_Index]
 		break
