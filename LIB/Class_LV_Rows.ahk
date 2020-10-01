@@ -78,11 +78,6 @@
 ;        You can create more handles or pass the ListView's Hwnd to operate on different
 ;        lists with the same handle.
 ;
-;    In order to keep row's icons you need to initialize the class passing the
-;        ListView's Hwnd. For example:
-;        Gui, Add, ListView, hwndhLV, Columns
-;        MyListHandle := New LV_Rows(hLV)
-;
 ;=======================================================================================
 Class LV_Rows extends LV_Rows.LV_EX
 {
@@ -219,7 +214,7 @@ Class LV_Rows extends LV_Rows.LV_EX
                 Else If (this.hArray.HasKey(NewData))
                 {
                     this.hArray[Hwnd].GroupsArray := this.hArray[NewData].GroupsArray.Clone()
-                ,   this.hArray[Hwnd].Slot := this.hArray[NewData].Slot.Clone()
+                ,   this.hArray[Hwnd].Slot := this.DeepClone(this.hArray[NewData].Slot)
                 ,   this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
                 ,   this.Load()
                 }
@@ -248,7 +243,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             Else If (this.hArray.HasKey(NewData))
             {
                 this.hArray[Hwnd].GroupsArray := this.hArray[NewData].GroupsArray.Clone()
-            ,   this.hArray[Hwnd].Slot := this.hArray[NewData].Slot.Clone()
+            ,   this.hArray[Hwnd].Slot := this.DeepClone(this.hArray[NewData].Slot)
             ,   this.hArray[Hwnd].ActiveSlot := this.hArray[NewData].ActiveSlot
             ,   this.Load()
             }
@@ -268,7 +263,7 @@ Class LV_Rows extends LV_Rows.LV_EX
         If (Hwnd = "")
             Hwnd := this.LVHwnd
         If (this.hArray.HasKey(Hwnd))
-            return this.hArray[Hwnd].Clone()
+            return this.DeepClone(this.hArray[Hwnd])
     }
 ;=======================================================================================
 ;    Function:           Handle.SetData()
@@ -299,7 +294,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             Else If (this.hArray.HasKey(Data))
             {
                 this.hArray[Hwnd].GroupsArray := this.hArray[Data].GroupsArray.Clone()
-            ,   this.hArray[Hwnd].Slot := this.hArray[Data].Slot.Clone()
+            ,   this.hArray[Hwnd].Slot := this.DeepClone(this.hArray[Data].Slot)
             ,   this.hArray[Hwnd].ActiveSlot := this.hArray[Data].ActiveSlot
             ,   this.Load()
             }
@@ -902,7 +897,8 @@ Class LV_Rows extends LV_Rows.LV_EX
         }
         Else
             this.Handle.GroupsArray := Groups
-        this.RefreshGroups()
+        this.Handle.Slot[this.Handle.ActiveSlot].Groups := this.Handle.GroupsArray
+    ,   this.RefreshGroups()
     }
 ;=======================================================================================
 ;    Function:           Handle.GetGroups()
@@ -1279,6 +1275,15 @@ Class LV_Rows extends LV_Rows.LV_EX
            VarSetCapacity(WSTR, StrPut(Str, "UTF-16") * 2, 0)
            StrPut(Str, &WSTR, "UTF-16")
            Return &WSTR
+        }
+; ----------------------------------------------------------------------------------------------------------------------
+        DeepClone(Obj)
+        {
+            ObjCopy := Obj.Clone()
+            For k, v in ObjCopy
+                If (IsObject(v))
+                    ObjCopy[k] := this.DeepClone(v)
+            return ObjCopy
         }
     }
 }

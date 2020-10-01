@@ -5,8 +5,8 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum Board: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.6
-; Release Date: September, 2020
+; Version: 5.2.7
+; Release Date: October, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.6
+;@Ahk2Exe-SetVersion 5.2.7
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -141,8 +141,7 @@ Loop
 		break
 }
 
-
-CurrentVersion := "5.2.6", ReleaseDate := "September, 2020"
+CurrentVersion := "5.2.7", ReleaseDate := "October, 2020"
 
 ;##### Ini File Read #####
 
@@ -1702,11 +1701,7 @@ If (Capt || Record || !ShowPrev)
 Gui, chMacro:Default
 GoRowSelection := LV_GetCount("Selected")
 If (GoRowSelection = 0)
-{
-	sciPrev.SetSel(0, 0)
-	sciPrevF.SetSel(0, 0)
 	return
-}
 GoSelectedRow := LV_GetNext()
 LV_GetText(CodeLineStart, GoSelectedRow, 11)
 GoRowNumber := 0
@@ -3346,6 +3341,7 @@ GoSub, LangChange
 GoSub, UpdateRecPlayMenus
 If (InEditLang != "")
 	GoSub, UpdateLang
+GoSub, WriteSettings
 Gui, 1:-Disabled
 return
 
@@ -11751,13 +11747,13 @@ s_List := A_List
 GuiControlGet, c_Time, chTimes:, TimesG
 GoSub, TabPlus
 GuiControl, chMacro:-g, InputList%TabCount%
-LVManager[TabCount].SetData(, LVManager[s_List].GetData())
-LVManager[TabCount].ClearHistory()
+LVManager[A_List].SetData(, LVManager[s_List].GetData())
+LVManager[A_List].ClearHistory()
 GuiControl, chTimes:, TimesG, %c_Time%
-GuiControl, chMacro:+gInputList, InputList%TabCount%
-HistCheck(TabCount)
+GuiControl, chMacro:+gInputList, InputList%A_List%
 GoSub, b_Enable
 GoSub, RowCheck
+HistCheck()
 GuiControl, chMacro:+Redraw, InputList%A_List%
 Gosub, PrevRefresh
 return
@@ -12005,8 +12001,6 @@ Gui, chMacro:ListView, InputList%A_List%
 GoSub, LoadData
 LVManager[A_List] := new LV_Rows(ListID%A_List%)
 LVManager[A_List].Add()
-If (ShowGroups)
-	GoSub, EnableGroups
 GoSub, chMacroGuiSize
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
@@ -12710,9 +12704,9 @@ Critical
 Gui, 32:Submit, NoHide
 Project := [], Labels := "", ActiveList := A_List
 Sleep, 100
+Gui, 32:Default
 Loop, %TabCount%
 {
-	Gui, 32:Default
 	LV_GetText(Macro, A_Index, 1)
 	LV_GetText(AutoKey, A_Index, 2)
 	LV_GetText(ManKey, A_Index, 3)
@@ -12726,7 +12720,8 @@ Loop, %TabCount%
 	o_TimesG[A_Index] := TimesX
 	o_MacroContext[A_Index].Condition := MContext[1]
 	o_MacroContext[A_Index].Context := MContext[2]
-	Project.Push(LVManager[IndexN].GetData())
+	Project.Push(LVData := LVManager[IndexN].GetData())
+	OutputDebug, % A_Index "/" IndexN " " LVData.ActiveSlot ": " LVData.Slot[LVData.ActiveSlot].Rows[1][3]
 	If (IndexN = ActiveList)
 		NewActive := A_Index
 	Sleep, 100
@@ -12758,7 +12753,6 @@ GoSub, chMacroGuiSize
 GoSub, LoadData
 GoSub, TabSel
 GoSub, UpdateCopyTo
-GoSub, b_Start
 Gui, 1:-Disabled
 Gui, 32:Destroy
 Project := ""
@@ -15087,6 +15081,7 @@ If (A_ThisHotkey == "*BackSpace" && %ctrl% && !modifier)
 	GuiControl, %GuiA%:,%ctrl%
 Else
 	GuiControl, %GuiA%:,%ctrl%, % modifier SubStr(A_ThisHotkey,2)
+SavePrompt(true, A_ThisHotkey)
 return
 #If
 
@@ -16015,6 +16010,7 @@ If (!ShowGroups)
 	GoSub, GroupsMode
 LVManager[A_List].InsertGroup(, GrName)
 LVManager[A_List].Add()
+SavePrompt(true, A_ThisLabel)
 return
 
 GrCancel:
@@ -16061,6 +16057,7 @@ If (!LV_GetNext())
 }
 LVManager[A_List].RemoveGroup()
 LVManager[A_List].Add()
+SavePrompt(true, A_ThisLabel)
 return
 
 RemoveAllGroups:
@@ -16068,6 +16065,7 @@ Gui, chMacro:Default
 Gui, chMacro:Listview, InputList%A_List%
 LVManager[A_List].RemoveAllGroups(c_Lang061)
 LVManager[A_List].Add()
+SavePrompt(true, A_ThisLabel)
 return
 
 CollapseGroups:

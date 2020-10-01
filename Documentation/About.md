@@ -7,8 +7,8 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.6  
-Release Date: September, 2020  
+Version: 5.2.7  
+Release Date: October, 2020  
 AutoHotkey Version: 1.1.32.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -31,11 +31,17 @@ fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002
 tmplinshi for the [CreateFormData function](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=7647).  
 iseahound (Edison Hua) for the [Vis2 function](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=36047) used for OCR.  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
-chosen1ft for fixing the mixing rows bug when saving a project.
+chosen1ft for fixing the mixing rows bug when saving a project.  
 [Translation revisions](https://www.macrocreator.com/project/).  
 
 
 # Change Log
+
+## Version 5.2.7
+* Fixed ListView data not showing after adding a macro with groups enabled.
+* Fixed groups not showing in duplicated macros.
+* Fixed mixing content when editing macros after duplicating a list.
+* Fixed small bugs.
 
 ## Version 5.2.6
 * Fixed error when exporting to exe.
