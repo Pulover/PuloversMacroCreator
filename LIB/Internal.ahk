@@ -1019,12 +1019,13 @@ FreeMemory()
 	return, DllCall("psapi.dll\EmptyWorkingSet", "UInt", -1)
 }
 
-GetPars(Param)
+GetPars(Param, KeepEscapedCommas := false)
 {
-	static _w := Chr(2)
+	static _w := Chr(2), _c := Chr(3)
 
 	ExprOn := false, InExpr := []
 ,	Param := Trim(Param)
+,	Param := StrReplace(Param, "``,", _c)
 ,	Param := RegExReplace(Param, "(?<=^)%\s+|(?<=,)\s*%\s+", _w)
 ,	r := [], i := 1
 	
@@ -1034,6 +1035,11 @@ GetPars(Param)
 		{
 			ExprOn := true
 		,	r[i] .= "% "
+			continue
+		}
+		If (A_LoopField = _c)
+		{
+			r[i] .= KeepEscapedCommas ? "``," : ","
 			continue
 		}
 		If ((InExpr.Length()) && (A_LoopField = InExpr[InExpr.Length()]))

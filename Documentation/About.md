@@ -38,7 +38,8 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 # Change Log
 
 ## Version 5.2.7
-* Fixed ListView data not showing after adding a macro with groups enabled.
+* Added support for **Image to Text** from image file in *Image Search* command window.
+* Fixed blank ListViews after adding a macro with groups enabled.
 * Fixed groups not showing in duplicated macros.
 * Fixed mixing content when editing macros after duplicating a list.
 * Fixed small bugs.

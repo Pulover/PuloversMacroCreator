@@ -203,8 +203,10 @@
 			,	RowData .= "`n" Type ", " OutVarX ", " OutVarY ", " Step
 				If ((Type = cType16) && (Act5))
 				{
-					StringSplit, Stp, Step, `,, %A_Space%%A_Tab%
-					RowData .= "`nCenterImgSrchCoords(" CheckExp(Stp5) ", " OutVarX ", " OutVarY ")"
+					Pars := GetPars(Step)
+					For i, v in Pars
+						Stp%A_Index% := v
+					RowData .= "`nCenterImgSrchCoords(" CheckExp(Stp5, true) ", " OutVarX ", " OutVarY ")"
 				}
 				If (Act1 != "Continue")
 				{
@@ -244,8 +246,13 @@
 			Case cType56:
 				Loop, 5
 					Stp%A_Index% := ""
-				StringSplit, Stp, Step, `,, %A_Space%%A_Tab%
-				RowData := "`n" Stp5 " := OCR([" CheckExp(Stp1) ", " CheckExp(Stp2) ", " (RegExMatch(Stp3, "%\w+%") ? CheckExp(Stp3) : (CheckExp(Stp3) - CheckExp(Stp1))) ", " (RegExMatch(Stp4, "%\w+%") ? CheckExp(Stp4) : (CheckExp(Stp4) - CheckExp(Stp2))) "], """ Target """)"
+				Pars := GetPars(Step)
+				For i, v in Pars
+					Stp%A_Index% := v
+				If (Window = "File")
+					RowData := "`n" Stp2 " := OCR(" CheckExp(Stp1, true) ", """ Target """)"
+				Else
+					RowData := "`n" Stp5 " := OCR([" CheckExp(Stp1) ", " CheckExp(Stp2) ", " (RegExMatch(Stp3, "%\w+%") ? CheckExp(Stp3) : (CheckExp(Stp3) - CheckExp(Stp1))) ", " (RegExMatch(Stp4, "%\w+%") ? CheckExp(Stp4) : (CheckExp(Stp4) - CheckExp(Stp2))) "], """ Target """)"
 			Case cType17:
 				If (Step = "Else")
 				{

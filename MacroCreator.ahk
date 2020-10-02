@@ -7478,11 +7478,14 @@ Gui, 19:Add, Button, -Wrap yp xs+240 W25 H23 hwndColorPick vColorPick gGetPixel 
 	ILButton(ColorPick, ResDllPath ":" 100)
 Gui, 19:Add, Edit, y+5 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 hwndhSearchImg vSearchImg gSearchImg, ...
-Gui, 19:Add, Text, -Wrap R1 y+5 xs+10 W163 Right, %c_Lang067%:
+Gui, 19:Add, Text, Section -Wrap R1 y+5 xs+10 W163 Right vIfFoundT, %c_Lang067%:
 Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click|Play Sound
-Gui, 19:Add, Text, -Wrap R1 y+5 xs+10 W163 Right, %c_Lang068%:
+Gui, 19:Add, Text, -Wrap R1 y+5 xs+10 W163 Right vIfNotFoundT, %c_Lang068%:
 Gui, 19:Add, DDL, yp-2 x+10 W80 vIfNotFound, Continue||Break|Stop|Prompt|Play Sound
 Gui, 19:Add, CheckBox, Checked -Wrap y+0 xs+10 W180 vAddIf, %c_Lang162%
+Gui, 19:Add, CheckBox, -Wrap ys xs+10 W180 vFileOCR gFileOCR Hidden, %c_Lang133%
+Gui, 19:Add, Edit, y+5 xs+0 vImgFileOCR W225 R1 -Multi Hidden Disabled
+Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchImgOCR gSearchImg Hidden Disabled, ...
 ; Preview
 Gui, 19:Add, Groupbox, Section ym xs+280 W275 H240, %c_Lang072%:
 Gui, 19:Add, Pic, ys+20 xs+10 W255 H200 0x100 vPicPrev gPicOpen
@@ -7602,12 +7605,25 @@ If (s_Caller = "Edit")
 		GuiControl, 19:, ImgFile, %Details%
 		GoSub, OcrS
 	}
-	GuiControl, 19:, iPosX, %Det1%
-	GuiControl, 19:, iPosY, %Det2%
-	GuiControl, 19:, ePosX, %Det3%
-	GuiControl, 19:, ePosY, %Det4%
-	GuiControl, 19:, ImgFile, %Det5%
-	GuiControl, 19:ChooseString, CoordPixel, %Window%
+	If (Window = "File")
+	{
+		File := Det1
+		GuiControl, 19:, FileOCR, 1
+		GuiControl, 19:, ImgFileOCR, %File%
+		GuiControl, 19:, ImgFile, %Det2%
+		GoSub, FileOCR
+		GuiControl, 19:ChooseString, CoordPixel, Screen
+		GoSub, MakePrev
+	}
+	Else
+	{
+		GuiControl, 19:, iPosX, %Det1%
+		GuiControl, 19:, iPosY, %Det2%
+		GuiControl, 19:, ePosX, %Det3%
+		GuiControl, 19:, ePosY, %Det4%
+		GuiControl, 19:, ImgFile, %Det5%
+		GuiControl, 19:ChooseString, CoordPixel, %Window%
+	}
 	If (Target = "UntilFound")
 	{
 		GuiControl, 19:, BreakLoop, 1
@@ -7685,6 +7701,8 @@ TimesX := InStr(EdRept, "%") ? EdRept : TimesX
 If (TimesX = 0)
 	TimesX := 1
 Action := (ImageS = 3) ? "OCR" : IfFound "`, " IfNotFound ", " OutVarX ", " OutVarY
+EscCom(false, ImgFile)
+EscCom(false, ImgFileOCR)
 If (ImageS = 1)
 {
 	Action .=  ", " FixFoundVars
@@ -7715,7 +7733,14 @@ If (BreakLoop)
 		Target := "UntilNotFound"
 }
 Else If (ImageS = 3)
+{
+	If (FileOCR)
+	{
+		Details := ImgFileOCR "`, " ImgFile
+		CoordPixel := "File"
+	}
 	Target := TessSelectedLangs != "" ? TessSelectedLangs : "eng"
+}
 Else
 	Target := ""
 If (A_ThisLabel != "ImageApply")
@@ -7792,7 +7817,12 @@ If (ImageS = 1)
 Else If (ImageS = 2)
 	GoSub, EditColor
 Else If (ImageS = 3)
-	GoSub, ShowTessMenu
+{
+	If (A_GuiControl = "SearchImg")
+		GoSub, ShowTessMenu
+	Else
+		GoSub, GetImage
+}
 return
 
 GetImage:
@@ -7800,7 +7830,10 @@ FileSelectFile, File,,, %AppName%, Images (*.gif; *.jpg; *.bmp; *.png; *.tif; *.
 FreeMemory()
 If (File = "")
 	return
-GuiControl, 19:, ImgFile, %File%
+If (A_GuiControl = "SearchImg")
+	GuiControl, 19:, ImgFile, %File%
+Else
+	GuiControl, 19:, ImgFileOCR, %File%
 
 MakePrev:
 If (InStr(File, "%"))
@@ -7828,15 +7861,25 @@ If (ImageS = 3)
 Else
 {
 	GuiControl, 19:Hide, OutputVarT
-	GuiControl, 19:Enable, IfFound
-	GuiControl, 19:Enable, IfNotFound
-	GuiControl, 19:Enable, AddIf
+	GuiControl, 19:Hide, FileOCR
+	GuiControl, 19:Hide, ImgFileOCR
+	GuiControl, 19:Hide, SearchImgOCR
+	GuiControl, 19:Show, IfFound
+	GuiControl, 19:Show, IfFoundT
+	GuiControl, 19:Show, IfNotFound
+	GuiControl, 19:Show, IfNotFoundT
+	GuiControl, 19:Show, AddIf
 	GuiControl, 19:Enable, OutVarX
 	GuiControl, 19:Enable, OutVarY
 	GuiControl, 19:Enable, CoordPixel
 	GuiControl, 19:Enable, VariatT
 	GuiControl, 19:Enable, BreakLoop
 }
+GuiControl, 19:, FileOCR, 0
+GuiControl, 19:Enable, iPosX
+GuiControl, 19:Enable, iPosY
+GuiControl, 19:Enable, ePosX
+GuiControl, 19:Enable, ePosY
 If (ImageS = 1)
 {
 	GuiControl, 19:, ImgFile
@@ -7894,6 +7937,9 @@ GuiControl, 19:, PicPrev
 GuiControl, 19:, ImgSize
 GuiControl, +BackgroundDefault, ColorPrev
 GuiControl, 19:Show, OutputVarT
+GuiControl, 19:Show, FileOCR
+GuiControl, 19:Show, ImgFileOCR
+GuiControl, 19:Show, SearchImgOCR
 GuiControl, 19:Show, PicPrev
 GuiControl, 19:Hide, ColorPrev
 GuiControl, 19:Disable, ColorPick
@@ -7913,9 +7959,11 @@ GuiControl, 19:, AddIf, 0
 GuiControl, 19:, FixFoundVars, 0
 GuiControl, 19:, BreakLoop, 0
 GuiControl, 19:ChooseString, CoordPixel, Screen
-GuiControl, 19:Disable, IfFound
-GuiControl, 19:Disable, IfNotFound
-GuiControl, 19:Disable, AddIf
+GuiControl, 19:Hide, IfFound
+GuiControl, 19:Hide, IfFoundT
+GuiControl, 19:Hide, IfNotFound
+GuiControl, 19:Hide, IfNotFoundT
+GuiControl, 19:Hide, AddIf
 GuiControl, 19:Disable, OutVarX
 GuiControl, 19:Disable, OutVarY
 GuiControl, 19:Disable, CoordPixel
@@ -7923,6 +7971,28 @@ GuiControl, 19:Disable, VariatT
 GuiControl, 19:Disable, BreakLoop
 
 SBShowTip("ImageToText")
+return
+
+FileOCR:
+Gui, 19:Submit, NoHide
+If (FileOCR)
+{
+	GuiControl, 19:Disable, iPosX
+	GuiControl, 19:Disable, iPosY
+	GuiControl, 19:Disable, ePosX
+	GuiControl, 19:Disable, ePosY
+	GuiControl, 19:Enable, ImgFileOCR
+	GuiControl, 19:Enable, SearchImgOCR
+}
+Else
+{
+	GuiControl, 19:Enable, iPosX
+	GuiControl, 19:Enable, iPosY
+	GuiControl, 19:Enable, ePosX
+	GuiControl, 19:Enable, ePosY
+	GuiControl, 19:Disable, ImgFileOCR
+	GuiControl, 19:Disable, SearchImgOCR
+}
 return
 
 PicOpen:

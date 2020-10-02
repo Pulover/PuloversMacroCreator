@@ -1672,7 +1672,15 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	return TakeAction
 	pb_ImageToText:
 		Try Menu, Tray, Icon, %ResDllPath%, 77
-		Try %Par5% := OCR([Par1, Par2, (Par3 - Par1), (Par4 - Par2)], Target)
+		If (Window = "File")
+		{
+			Pars := GetPars(Step)
+			For i, v in Pars
+				Par%A_Index% := v
+			Try %Par2% := OCR(Par1, Target)
+		}
+		Else
+			Try %Par5% := OCR([Par1, Par2, (Par3 - Par1), (Par4 - Par2)], Target)
 		Try Menu, Tray, Icon, %ResDllPath%, 46
 		Try SavedVars(Par5,,, RunningFunction)
 	return
