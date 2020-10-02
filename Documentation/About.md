@@ -42,6 +42,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 * Fixed blank ListViews after adding a macro with groups enabled.
 * Fixed groups not showing in duplicated macros.
 * Fixed mixing content when editing macros after duplicating a list.
+* Fixed bug with commas in *WinTitle* (must be escaped).
 * Fixed small bugs.
 
 ## Version 5.2.6

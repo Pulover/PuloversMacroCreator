@@ -15,7 +15,7 @@
 		LV_GetTexts(A_Index, Action, Step, TimesX, DelayX, Type, Target, Window, Comment)
 	,	IsChecked := LV_GetNext(A_Index-1, "Checked")
 		If (CodeLines) {
-			RegExReplace(LVData, "`n", "", _CodeLine)
+			StrReplace(LVData, "`n", "", _CodeLine)
 		,	CodeLines.Push(_CodeLine + 1)
 		}
 		If (InStr(FileCmdList, Type "|"))

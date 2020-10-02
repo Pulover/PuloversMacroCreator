@@ -689,7 +689,16 @@
 			,	Step := StrReplace(Step, "``::", "::")
 			,	Step := StrReplace(Step, "````", "``")
 			,	AssignParse(Step, VarName, Oper, VarValue)
-			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Step, Target, Window, VarName, VarValue)
+			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Step, Target, VarName, VarValue)
+			,	Win := SplitWin(Window, true), VerifiedWin := ""
+				For _each, _value in Win
+				{
+					Win%A_Index% := _value
+					CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Win%A_Index%)
+					EscCom(false, Win%A_Index%)
+					VerifiedWin .= Win%A_Index% ", "
+				}
+				Window := Trim(VerifiedWin, ", ")
 				If (Type = cType21)
 				{
 					If (Target = "Expression")
@@ -914,7 +923,16 @@
 			,	PlaybackVars[LoopDepth][mLoopIndex, "A_Index"] := TimesLoop ? A_Index : mLoopIndex
 			,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := FlowControl.ErrorLevel
 			,	Pars := SplitStep(PlaybackVars[LoopDepth][mLoopIndex], Step)
-			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesR, DelayX, Target, Window)
+			,	CheckVars(PlaybackVars[LoopDepth][mLoopIndex], TimesR, DelayX, Target)
+			,	Win := SplitWin(Window, true), VerifiedWin := ""
+				For _each, _value in Win
+				{
+					Win%A_Index% := _value
+					CheckVars(PlaybackVars[LoopDepth][mLoopIndex], Win%A_Index%)
+					EscCom(false, Win%A_Index%)
+					VerifiedWin .= Win%A_Index% ", "
+				}
+				Window := Trim(VerifiedWin, ", ")
 				If (StopIt)
 				{
 					Try Menu, Tray, Icon, %DefaultIcon%, 1
@@ -1059,7 +1077,6 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 {
 	local Par1, Par2, Par3, Par4, Par5, Par6, Par7, Par8, Par9, Par10, Par11, Win
 		, _each, _value, _Section, SelAcc, IeIntStr, lMatch, lMatch1, lResult, TakeAction := ""
-	
 	
 	If Type in %cType1%,%cType2%,%cType3%,%cType13%,%cType5%,%cType6%,%cType8%,%cType9%
 	,%cType10%,%cType12%,%cType24%,%cType22%,%cType23%,%cType25%,%cType31%,WinWait,WinWaitActive
@@ -2233,7 +2250,16 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 	If (ThisError = -1)
 		return -1
 	Tooltip
-	CheckVars(CustomVars, Step, Target, Window)
+	CheckVars(CustomVars, Step, Target)
+,	Win := SplitWin(Window, true), VerifiedWin := ""
+	For _each, _value in Win
+	{
+		Win%A_Index% := _value
+		CheckVars(CustomVars, Win%A_Index%)
+		EscCom(false, Win%A_Index%)
+		VerifiedWin .= Win%A_Index% ", "
+	}
+	Window := Trim(VerifiedWin, ", ")
 ,	EscCom(true, Step, Target, Window)
 ,	Step := StrReplace(Step, _z, A_Space)
 ,	Target := StrReplace(Target, _z, A_Space)
@@ -2406,7 +2432,7 @@ class WaitFor
 	
 }
 
-SplitWin(Window)
+SplitWin(Window, KeepEscapes := false)
 {
 	Static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
 	
@@ -2414,7 +2440,7 @@ SplitWin(Window)
 	Window := StrReplace(Window, "``,", _x)
 	Loop, Parse, Window, `,, %A_Space%
 	{
-		LoopField := StrReplace(A_LoopField, _x, ",")
+		LoopField := StrReplace(A_LoopField, _x, KeepEscapes ? "``," : ",")
 		WinPars.Push(LoopField)
 	}
 	return WinPars
@@ -2485,7 +2511,7 @@ AssignVar(_Name, _Operator, _Value, CustomVars, RunningFunction)
 	Try SavedVars(_Name,,, RunningFunction)
 }
 
-CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckVar3 := "", ByRef CheckVar4 := "", ByRef CheckVar5 := "")
+CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckVar3 := "", ByRef CheckVar4 := "")
 {
 	global d_Lang007, d_Lang035, d_Lang065, d_Lang066, d_Lang088, StopIt
 	Loop, 5

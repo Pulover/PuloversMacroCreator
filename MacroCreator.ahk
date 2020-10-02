@@ -5289,6 +5289,7 @@ StringSplit, Ident, GetWinTitle, `,
 Loop, 5
 	Ident%A_Index% := Ident%A_Index% ? 1 : 0
 FoundTitle := ""
+EscCom(false, Title)
 If (Ident1)
 	FoundTitle .= Title
 If (Ident2)
