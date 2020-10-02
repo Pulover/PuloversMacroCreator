@@ -10565,25 +10565,25 @@ If (s_Caller = "Edit")
 	}
 	GuiControl, 38:Enable, UDFApply
 }
-If (A_ThisLabel = "UserFunction")
+If (InStr(A_ThisLabel, "UserFunc"))
 {
 	GuiTitle := c_Lang212
 	SBShowTip("UserFunction")
 }
-Else If (A_ThisLabel = "FuncParameter")
+Else If (InStr(A_ThisLabel, "Param"))
 {
 	GuiControl, 38:Choose, TabControl, 2
 	GuiTitle := c_Lang213
 	SBShowTip("Parameter")
 }
-Else If (A_ThisLabel = "FuncReturn")
+Else
 {
 	GuiControl, 38:Choose, TabControl, 3
 	GuiTitle := c_Lang214
 	SBShowTip("Return")
 }
 Gui, 38:Show,, %GuiTitle%
-ChangeIcon(hIL_Icons, CmdWin, InStr(A_ThisLabel, "UserFunction") ? IconsNames["userfunc"] : InStr(A_ThisLabel, "FuncParameter") ? IconsNames["parameter"] : IconsNames["return"])
+ChangeIcon(hIL_Icons, CmdWin, InStr(A_ThisLabel, "UserFunc") ? IconsNames["userfunc"] : InStr(A_ThisLabel, "Param") ? IconsNames["parameter"] : IconsNames["return"])
 Tooltip
 return
 

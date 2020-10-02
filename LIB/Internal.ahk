@@ -816,7 +816,7 @@ RemoveDuplicates(ByRef String)
 {
 	StringTrimRight, String, String, 1
 	Loop, Parse, String, |
-		NewStr .= (InStr(NewStr, A_LoopField "|") ? "Macro" A_Index : A_LoopField) "|"
+		NewStr .= (RegExMatch(NewStr, "\b" A_LoopField "\b\|") ? "Macro" A_Index : A_LoopField) "|"
 	String := NewStr
 }
 
