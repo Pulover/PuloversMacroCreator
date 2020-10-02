@@ -291,7 +291,7 @@ ShowContextHelp()
 	MouseGetPos,,,, Control
 	If (InStr(Control, "Edit"))
 		return
-	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24,38,39,40
+	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24,33,38,39,40
 	{
 		GuiControlGet, Pag,, TabControl
 		Title := ContHelp[A_Gui][Pag ? Pag : 1]
@@ -728,7 +728,13 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 					continue
 				If (InStr(CopyMenuLabels[A_Index], "()"))
 					o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
-				If (o_AutoKey[A_Index] != "")
+				If (RegExMatch(o_AutoKey[A_Index], "^:.*?:"))
+				{
+					Hotstring(o_AutoKey[A_Index], "f_AutoKey", (Play) ? "On" : "Off")
+					LastPlay["Auto", A_Index] := o_AutoKey[A_Index]
+					ActiveKeys++
+				}
+				Else If (o_AutoKey[A_Index] != "")
 				{
 					Hotkey, % o_AutoKey[A_Index], f_AutoKey, % (Play) ? "On" : "Off"
 					LastPlay["Auto", A_Index] := o_AutoKey[A_Index]
@@ -752,7 +758,13 @@ ActivateHotkeys(Rec := "", Play := "", Speed := "", Stop := "", Pause := "", Joy
 					continue
 				If (InStr(CopyMenuLabels[A_Index], "()"))
 					o_AutoKey[A_Index] := "", o_ManKey[A_Index] := ""
-				If (o_AutoKey[A_Index] != "")
+				If (RegExMatch(o_AutoKey[A_Index], "^:.*?:"))
+				{
+					Hotstring(o_AutoKey[A_Index], "f_AutoKey", (Play) ? "On" : "Off")
+					LastPlay["Auto", A_Index] := o_AutoKey[A_Index]
+					ActiveKeys++
+				}
+				Else If (o_AutoKey[A_Index] != "")
 				{
 					Hotkey, % o_AutoKey[A_Index], f_AutoKey, % (Play) ? "On" : "Off"
 					LastPlay["Auto", A_Index] := o_AutoKey[A_Index]

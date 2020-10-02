@@ -25,7 +25,14 @@ Use `Backspace` to clear the hotkeys. Press it twice to set `Backspace` as the h
 
 Selects the Play Hotkey to execute the currently selected Macro.  
 You can make combinations with modifiers such as `Ctrl + X`.
-If you want to use a hotkey that's not supported by this control, you can go to *Edit Macros* window (Ctrl+Shift+M) and enter a valid hotkey manually. In there you can use any supported AHK hotkey, including mouse buttons.
+
+**Note**: If you want to use a hotkey that's not supported by this control, you can go to *Edit Macros* window (Ctrl+Shift+M) and enter a valid hotkey manually. In there you can use any supported AHK hotkey, including mouse buttons and hotstrings.
+
+**Hotstrings**: [Hotstrings](https://www.autohotkey.com/docs/Hotstrings.htm) may be configured to be used for playback in the *Edit Macros* window (Ctrl+Shift+M). To define a hotstring, the triggering abbreviation must start pairs of colons as in this example:
+
+> ::btw
+
+The `X` symbol is necessary and will be inserted automatically if not present, so the resulting hotstring would be `:X:btw` in this case. You can add other [symbols](https://www.autohotkey.com/docs/Hotstrings.htm#Options) between the colons.
 
 **Windows Key**: To make combination with the Windows key, check the option *Add the Windows key to "Play" hotkey* in the Options menu or in the Options toolbar.
 

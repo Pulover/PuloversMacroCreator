@@ -994,6 +994,9 @@ Menu, UserFuncB, Add, Built-in Variables, :BuiltInMenu
 Menu, UserFuncB, Icon, Functions, %ResDllPath%, 24
 Menu, IfDirB, Add, #IfWinActive / #IfWinExist, HelpB
 Menu, IfDirB, Icon, #IfWinActive / #IfWinExist, %ResDllPath%, 24
+Menu, EditMacroB, Add, Hotkeys, HelpB
+Menu, EditMacroB, Add, Hotstrings, HelpB
+Menu, EditMacroB, Icon, Hotkeys, %ResDllPath%, 24
 Menu, ExportG, Add, Hotkeys, ExportG
 Menu, ExportG, Add, Hotstrings, ExportG
 Menu, ExportG, Add, List of Keys, ExportG
@@ -7640,10 +7643,18 @@ If (s_Caller = "Edit")
 	GuiControl, 19:, AddIf, 0
 	GuiControl, 19:Disable, AddIf
 }
-Else If ((s_Caller = "Find") && (GotoRes1 = "PixelSearch"))
+Else If (s_Caller = "Find")
 {
-	GuiControl, 19:Choose, ImageS, 2
-	GoSub, PixelS
+	If (GotoRes1 = "PixelSearch")
+	{
+		GuiControl, 19:Choose, ImageS, 2
+		GoSub, PixelS
+	}
+	Else If ((GotoRes1 = "ImageToText") || (GotoRes1 = "OCR"))
+	{
+		GuiControl, 19:Choose, ImageS, 3
+		GoSub, OcrS
+	}
 }
 Gui, Submit, NoHide
 SBShowTip(ImageS = 1 ? "ImageSearch" : ImageS = 2 ? "PixelSearch" : "ImageToText")
@@ -11665,6 +11676,7 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 	If (InStr(ErrorLevel, "c"))
 	{
 		SavePrompt(true, A_ThisLabel)
+		HistCheck(A_List)
 		If (AutoRefresh = 1)
 			GoSub, PrevRefresh
 	}
@@ -12224,6 +12236,8 @@ Else
 	GuiControlGet, HK_AutoKey, 1:, AutoKey
 GuiControlGet, ManKey, 1:, ManKey
 GuiControlGet, TimesO, chTimes:, TimesG
+If (HK_AutoKey = "")
+	HK_AutoKey := StrReplace(o_AutoKey[A_List], "#")
 o_AutoKey[A_List] := (WinKey = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
 	o_AutoKey[A_List] := "LWin"
@@ -12243,7 +12257,7 @@ Else
 {
 	TB_Edit(TbSettings, "SetJoyButton", JoyHK := 0)
 	GuiControl, 1:, JoyKey
-	GuiControl, 1:, AutoKey, % LTrim(o_AutoKey[A_List], "#")
+	GuiControl, 1:, AutoKey, % StrReplace(o_AutoKey[A_List], "#")
 	GoSub, SetNoJoy
 }
 WinKey := InStr(o_AutoKey[A_List], "#") ? 1 : 0
@@ -12401,6 +12415,7 @@ return
 
 CheckSel:
 Gui, chMacro:Default
+GuiControl, chMacro:-g, InputList%A_List%
 RowNumber := 0
 Loop
 {
@@ -12409,11 +12424,13 @@ Loop
 		break
 	LV_Modify(RowNumber, "Check")
 }
-GoSub, b_Start
+HistCheck(A_List)
+GuiControl, chMacro:+gInputList, InputList%A_List%
 return
 
 UnCheckSel:
 Gui, chMacro:Default
+GuiControl, chMacro:-g, InputList%A_List%
 RowNumber := 0
 Loop
 {
@@ -12422,11 +12439,13 @@ Loop
 		break
 	LV_Modify(RowNumber, "-Check")
 }
-GoSub, b_Start
+HistCheck(A_List)
+GuiControl, chMacro:+gInputList, InputList%A_List%
 return
 
 InvertCheck:
 Gui, chMacro:Default
+GuiControl, chMacro:-g, InputList%A_List%
 RowNumber := 0
 Loop
 {
@@ -12438,7 +12457,8 @@ Loop
 	Else
 		LV_Modify(RowNumber, "Check")
 }
-GoSub, b_Start
+HistCheck(A_List)
+GuiControl, chMacro:+gInputList, InputList%A_List%
 return
 
 SelectCmd:
@@ -12787,12 +12807,13 @@ Loop, %TabCount%
 	RegExMatch(Context, "O)(\w+)\s(.*)", MContext)
 	Labels .= ((Macro != "") ? Macro : "Macro" IndexN) "|"
 	o_AutoKey[A_Index] := AutoKey
+	If ((RegExMatch(o_AutoKey[A_Index], "^:.*?:")) && (!RegExMatch(o_AutoKey[A_Index], "^:.*X.*?:")))
+		o_AutoKey[A_Index] := RegExReplace(o_AutoKey[A_Index], "^:(.*?):", ":X$1:")
 	o_ManKey[A_Index] := ManKey
 	o_TimesG[A_Index] := TimesX
 	o_MacroContext[A_Index].Condition := MContext[1]
 	o_MacroContext[A_Index].Context := MContext[2]
 	Project.Push(LVData := LVManager[IndexN].GetData())
-	OutputDebug, % A_Index "/" IndexN " " LVData.ActiveSlot ": " LVData.Slot[LVData.ActiveSlot].Rows[1][3]
 	If (IndexN = ActiveList)
 		NewActive := A_Index
 	Sleep, 100
@@ -12826,6 +12847,8 @@ GoSub, TabSel
 GoSub, UpdateCopyTo
 Gui, 1:-Disabled
 Gui, 32:Destroy
+If (ShowGroups)
+	GoSub, EnableGroups
 Project := ""
 SavePrompt(true, A_ThisLabel)
 return
@@ -14262,7 +14285,7 @@ If (CheckDuplicateLabels())
 }
 Loop, %TabCount%
 {
-	If ("" o_AutoKey[A_Index] "" = "" A_ThisHotkey "")
+	If (("" o_AutoKey[A_Index] "" = "" A_ThisHotkey "")	|| ("" LTrim(o_AutoKey[A_Index], "*~$") "" = "" LTrim(A_ThisHotkey, "*~$") ""))
 	{
 		aHK_On := [A_Index]
 		break
@@ -16395,6 +16418,8 @@ Type_Keywords := "
 " cType7 "    ; Loop
 " cType15 "   ; PixelSearch
 " cType16 "   ; ImageSearch
+" cType56 "   ; ImageToText
+OCR
 " cType17 "   ; If_Statement
 Else
 " cType18 "   ; SendMessage
@@ -16441,8 +16466,10 @@ Types_Path := "
 " w_Lang055 " ; Pause (F5)
 " w_Lang056 " ; Message Box (Shift+F5)
 " w_Lang061 " ; Loop (F9)
-" w_Lang059 " ; Image / Pixel Search (F7)
-" w_Lang059 " ; Image / Pixel Search (F7)
+" w_Lang059 " ; Image / Pixel Search / Image to Text (F7)
+" w_Lang059 " ; Image / Pixel Search / Image to Text (F7)
+" w_Lang059 " ; Image / Pixel Search / Image to Text (F7)
+OCR
 " w_Lang064 " ; If Statements (F10)
 " w_Lang064 " ; If Statements (F10)
 " w_Lang072 " ; Windows Messages (Ctrl+F12)
@@ -16489,6 +16516,8 @@ Mouse
 Sleep
 MsgBox
 ComLoop
+Image
+Image
 Image
 Image
 IfSt

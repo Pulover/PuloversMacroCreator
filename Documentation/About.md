@@ -38,6 +38,8 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 # Change Log
 
 ## Version 5.2.7
+* Added support for more `&`, `*`, `~` and `Up` as modifier symbols for Play hotkey.
+* Added support for Hotstrings to be used for Playback (*Edit Macros* window).
 * Added support for **Image to Text** from image file in *Image Search* command window.
 * Fixed blank ListViews after adding a macro with groups enabled.
 * Fixed groups not showing in duplicated macros.

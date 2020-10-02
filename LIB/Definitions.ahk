@@ -87,6 +87,7 @@ MAction1 := "Click"
 			,	22: ["SendMsgB"]
 			,	23: ["ControlB"]
 			,	24: ["IEComB", "IEComB"]
+			,	33: ["EditMacroB"]
 			,	38: ["UserFuncB", "UserFuncB", "UserFuncB"]
 			,	39: ["EmailB"]
 			,	40: ["DownloadB", "ZipB"]}
