@@ -249,7 +249,8 @@ IconsNames := { "apply": 1
 			,	"extedit": 109
 			,	"sort": 110
 			,	"zip": 111
-			,	"email": 112 }
+			,	"email": 112
+			,	"ocr": 113 }
 
 KeyNameRep := "
 (Join,

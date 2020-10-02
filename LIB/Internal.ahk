@@ -1332,8 +1332,10 @@ RowCheckFunc()
 				LV_Modify(A_Index, "Icon" IconsNames["sendmsg"])
 			Case cType15:
 				LV_Modify(A_Index, "Icon" IconsNames["color"])
-			Case cType16, cType56:
+			Case cType16:
 				LV_Modify(A_Index, "Icon" IconsNames["image"])
+			Case cType56:
+				LV_Modify(A_Index, "Icon" IconsNames["ocr"])
 			Case cType34:
 				LV_Modify(A_Index, "Icon" IconsNames["com"])
 			Case cType35:
