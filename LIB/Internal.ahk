@@ -291,7 +291,7 @@ ShowContextHelp()
 	MouseGetPos,,,, Control
 	If (InStr(Control, "Edit"))
 		return
-	If A_Gui in 3,5,7,8,10,11,12,14,16,19,21,22,23,24,33,38,39,40
+	If (ContHelp.HasKey(A_Gui))
 	{
 		GuiControlGet, Pag,, TabControl
 		Title := ContHelp[A_Gui][Pag ? Pag : 1]

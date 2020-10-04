@@ -95,6 +95,8 @@
 				ListCount%TabCount% := LV_GetCount()
 				Opt := this.PmcCode[A_Index].Opt
 				o_AutoKey[TabCount] := (Opt[2] != "") ? Opt[2] : ""
+				If ((RegExMatch(o_AutoKey[TabCount], "^:.*?:")) && (!RegExMatch(o_AutoKey[TabCount], "^:.*X.*?:")))
+					o_AutoKey[TabCount] := RegExReplace(o_AutoKey[A_Index], "^:(.*?):", ":X$1:")
 				o_ManKey[TabCount] := (Opt[3] != "") ? Opt[3] : ""
 				o_TimesG[TabCount] := (Opt[4] != "") ? Opt[4] : 1
 				

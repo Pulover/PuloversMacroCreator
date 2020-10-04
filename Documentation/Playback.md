@@ -32,7 +32,7 @@ You can make combinations with modifiers such as `Ctrl + X`.
 
 > ::btw
 
-The `X` symbol is necessary and will be inserted automatically if not present, so the resulting hotstring would be `:X:btw` in this case. You can add other [symbols](https://www.autohotkey.com/docs/Hotstrings.htm#Options) between the colons.
+The `X` option is necessary and will be inserted automatically if not present, so the resulting hotstring would be `:X:btw` in this case. You can add other [options](https://www.autohotkey.com/docs/Hotstrings.htm#Options) between the colons.
 
 **Windows Key**: To make combination with the Windows key, check the option *Add the Windows key to "Play" hotkey* in the Options menu or in the Options toolbar.
 

@@ -3600,7 +3600,7 @@ Try
 Catch
 {
 	SplashTextOff
-	MsgBox, 16, %d_Lang007%, %d_Lang102%
+	MsgBox, 16, %d_Lang007%, % d_Lang102 "`n`n" whr.ResponseText
 	return
 }
 SplashTextOff
@@ -3608,7 +3608,7 @@ If (InStr(whr.ResponseText, "Email was sent successfully!"))
 	MsgBox, 64, %t_Lang186%, %d_Lang105%
 Else
 {
-	MsgBox, 16, %d_Lang007%, %d_Lang102%`n`n%LFile%
+	MsgBox, 16, %d_Lang007%, % d_Lang102 "`n`n" LFile "`n`n" whr.ResponseText
 	return
 }
 GuiControl, 4:Choose, TabControl, LangEditor
@@ -11639,6 +11639,7 @@ Else
 return
 
 Capt:
+LVManager[A_List].EnableGroups(false)
 SetTimer, MainLoop, % (Capt := !Capt) ? 100 : "Off"
 ListFocus := 1
 Input
@@ -16003,8 +16004,8 @@ Loop, 5
 	Menu, SpeedDnMenu, Uncheck, %Count%x
 	Count *= 2
 }
-Menu, SpeedUpMenu, Check, %SpeedUp%x
-Menu, SpeedDnMenu, Check, %SpeedDn%x
+Menu, SpeedUpMenu, Check, % (SpeedUp = 1 ? SpeedUp := 2 : SpeedUp) "x"
+Menu, SpeedDnMenu, Check, % (SpeedDn = 1 ? SpeedDn := 2 : SpeedDn) "x"
 return
 
 OnFinish:
