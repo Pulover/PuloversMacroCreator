@@ -373,8 +373,8 @@
 				RowData := "`n" IEComExp(Act2, Step, El1, El2, "", Act3, Act1)
 			,	RowData := Add_CD(RowData, Comment, DelayX)
 				If (!init_ie)
-					RowData := "`nIf !IsObject(ie)"
-					.			"`n`tie := ComObjCreate(""InternetExplorer.Application"")"
+					RowData := "`nIf (!IsObject(ie))"
+					.			"`n" (IndentWith = "Tab" ? "`t" : "    ") "ie := ComObjCreate(""InternetExplorer.Application"")"
 					.			"`nie.Visible := true" RowData
 				init_ie := true
 				If (Window = "LoadWait")
@@ -387,8 +387,8 @@
 				RowData := "`n" IEComExp(Act2, "", El1, El2, Step, Act3, Act1)
 			,	RowData := Add_CD(RowData, Comment, DelayX)
 				If (!init_ie)
-					RowData := "`nIf !IsObject(ie)"
-					.			"`n`tie := ComObjCreate(""InternetExplorer.Application"")"
+					RowData := "`nIf (!IsObject(ie))"
+					.			"`n" (IndentWith = "Tab" ? "`t" : "    ") "ie := ComObjCreate(""InternetExplorer.Application"")"
 					.			"`nie.Visible := true" RowData
 				init_ie := true
 				If (Window = "LoadWait")
@@ -399,7 +399,7 @@
 				RowData := "`n" GetRealLineFeeds(Step)
 			,	RowData := Add_CD(RowData, Comment, DelayX)
 				If ((Target != "") && (!InStr(LVData, Action " := " ComType "(")))
-					RowData := "`nIf !IsObject(" Action ")`n`t" Action " := " ComType "(""" Target """)" RowData
+					RowData := "`nIf (!IsObject(" Action "))`n" (IndentWith = "Tab" ? "`t" : "    ") . Action " := " ComType "(""" Target """)" RowData
 				If (Window = "LoadWait")
 					RowData .= "`nIELoad(" Action ")"
 				If ((TimesX > 1) || InStr(TimesX, "%"))

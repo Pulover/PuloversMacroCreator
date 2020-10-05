@@ -13,7 +13,7 @@ Xl.Range(Xl.Range("A1"), Xl.Range("A1").SpecialCells(xlLastCell)).Copy
 
 ClipWait
 Data := Clipboard, Clipboard := Clip
-If !InStr(Data, "Lang_")=1
+If (!InStr(Data, "Lang_") = 1)
 {
 	MsgBox Error
 	return

@@ -39,7 +39,7 @@ CreateIconsDll(File, Folder)
 ReplaceIcon(re, IcoFile, iconID)
 {
     f := FileOpen(IcoFile, "r")
-    if !IsObject(f)
+    if (!IsObject(f))
         return false
     
     VarSetCapacity(igh, 8), f.RawRead(igh, 6)

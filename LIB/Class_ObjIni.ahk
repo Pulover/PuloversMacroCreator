@@ -141,7 +141,7 @@ Class ObjIni
 		Loop
 		{
 			ItemID := TV_GetNext(ItemID, "Full")
-			If !(ItemID)
+			If (!ItemID)
 				break
 			TV_GetText(ItemText, ItemID)
 			If (!TV_GetParent(ItemID))
