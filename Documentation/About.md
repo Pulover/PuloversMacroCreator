@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.7  
+Version: 5.2.8  
 Release Date: October, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -36,6 +36,9 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.2.8
+* Fixed `A_` variables not working as `InputVar` parameter for commands.
 
 ## Version 5.2.7
 * Added support for `&`, `*`, `~` and `Up` as modifier symbols for Play hotkey.

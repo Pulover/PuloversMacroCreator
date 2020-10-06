@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum Board: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.7
+; Version: 5.2.8
 ; Release Date: October, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.7
+;@Ahk2Exe-SetVersion 5.2.8
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -141,7 +141,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.2.7", ReleaseDate := "October, 2020"
+CurrentVersion := "5.2.8", ReleaseDate := "October, 2020"
 
 ;##### Ini File Read #####
 

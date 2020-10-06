@@ -1408,41 +1408,50 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringGetPos:
-		StringGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringGetPos, %Par1%, DerefInputVar, %Par3%, %Par4%, %Par5%
 		Flow.ErrorLevel := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLeft:
-		StringLeft, %Par1%, %Par2%, %Par3%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringLeft, %Par1%, DerefInputVar, %Par3%
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringRight:
-		StringRight, %Par1%, %Par2%, %Par3%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringRight, %Par1%, DerefInputVar, %Par3%
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLen:
-		StringLen, %Par1%, %Par2%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringLen, %Par1%, DerefInputVar
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringLower:
-		StringLower, %Par1%, %Par2%, %Par3%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringLower, %Par1%, DerefInputVar, %Par3%
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringUpper:
-		StringUpper, %Par1%, %Par2%, %Par3%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringUpper, %Par1%, DerefInputVar, %Par3%
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringMid:
-		StringMid, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringMid, %Par1%, DerefInputVar, %Par3%, %Par4%, %Par5%
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringReplace:
-		StringReplace, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringReplace, %Par1%, DerefInputVar, %Par3%, %Par4%, %Par5%
 		Flow.ErrorLevel := ErrorLevel
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringSplit:
-		StringSplit, %Par1%, %Par2%, %Par3%, %Par4%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringSplit, %Par1%, DerefInputVar, %Par3%, %Par4%
 		CGN := Par1 . "0"
 		Loop, % %CGN%
 		{
@@ -1451,11 +1460,13 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		}
 	return
 	pb_StringTrimLeft:
-		StringTrimLeft, %Par1%, %Par2%, %Par3%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringTrimLeft, %Par1%, DerefInputVar, %Par3%
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_StringTrimRight:
-		StringTrimRight, %Par1%, %Par2%, %Par3%
+		DerefInputVar := Eval(Par2, CustomVars)[1]
+		StringTrimRight, %Par1%, DerefInputVar, %Par3%
 		Try SavedVars(Par1,,, RunningFunction)
 	return
 	pb_SplitPath:
@@ -1464,7 +1475,8 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 			If (Par%A_Index% = "")
 				Par%A_Index% := "_null"
 		}
-		SplitPath, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
+		DerefInputVar := Eval(Par1, CustomVars)[1]
+		SplitPath, DerefInputVar, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%
 		_null := ""
 		Loop, 5
 		{
@@ -1503,7 +1515,7 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 	pb_RegWrite:
 		If (Par5 != "")
 			RegWrite, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
-		If (Par4 != "")
+		Else If (Par4 != "")
 			RegWrite, %Par1%, %Par2%, %Par3%, %Par4%
 		Else
 			RegWrite, %Par1%, %Par2%, %Par3%
