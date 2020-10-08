@@ -153,6 +153,7 @@
 	v_Lang036 =	&Konwertuj podziały wierszy
 	v_Lang037 =	Ko&mentarz do niezaznaczonych wierszy
 	v_Lang038 =	Zaw&ijanie lini
+	v_Lang039 =	Poka&ż grupy jako komentarze
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -311,6 +312,7 @@
 	w_Lang111 =	Szukaj... (Naciśnij klawisz Enter, aby uruchomić)
 	w_Lang112 =	Nowy (Ctrl+N)
 	w_Lang113 =	Iść do...
+	w_Lang114 =	Pokaż grupy jako komentarze
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz

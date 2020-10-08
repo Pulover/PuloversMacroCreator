@@ -153,6 +153,7 @@
 	v_Lang036 =	K&onvertuoti eilučių
 	v_Lang037 =	Ko&mentaras iš Nepažymėjus eilučių
 	v_Lang038 =	&Linija įvyniojimas
+	v_Lang039 =	&Rodyti grupes kaip komentarus
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nustatymai
@@ -311,6 +312,7 @@
 	w_Lang111 =	Paieška ... (Paspauskite klavišą Enter eiti)
 	w_Lang112 =	Naujas (Ctrl + N)
 	w_Lang113 =	Eiti į...
+	w_Lang114 =	Rodyti grupes kaip komentarus
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pelė

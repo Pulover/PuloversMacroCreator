@@ -153,6 +153,7 @@
 	v_Lang036 =	C&onverti pauze de linie
 	v_Lang037 =	Co&mentați rânduri nebifate
 	v_Lang038 =	Fo&lie de linie
+	v_Lang039 =	Afi&șați grupurile ca comentarii
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Setările
@@ -311,6 +312,7 @@
 	w_Lang111 =	Căutare ... (Apăsați Enter pentru a merge)
 	w_Lang112 =	Nou (Ctrl + N)
 	w_Lang113 =	Mergi la...
+	w_Lang114 =	Afișați grupurile ca comentarii
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

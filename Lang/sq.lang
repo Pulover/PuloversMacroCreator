@@ -153,6 +153,7 @@
 	v_Lang036 =	&Convert thyen linjë
 	v_Lang037 =	K&oment nga rreshtave pakontrolluar
 	v_Lang038 =	&Përfundojë Line
+	v_Lang039 =	Tr&ego grupet si komente
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Cilësimet
@@ -311,6 +312,7 @@
 	w_Lang111 =	Kërko ... (Shtypni Enter për të shkuar)
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Shkoni në ...
+	w_Lang114 =	Trego grupet si komente
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus

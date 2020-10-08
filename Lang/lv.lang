@@ -153,6 +153,7 @@
 	v_Lang036 =	P&ārvērst rindiņu pārtraukumi
 	v_Lang037 =	K&omentārs out neatzīmētajās rindiņās
 	v_Lang038 =	&Line wrap
+	v_Lang039 =	&Rādīt grupas kā komentārus
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -311,6 +312,7 @@
 	w_Lang111 =	Meklēt ... (Nospiediet Enter, lai iet)
 	w_Lang112 =	Jauns (Ctrl + N)
 	w_Lang113 =	Iet uz...
+	w_Lang114 =	Rādīt grupas kā komentārus
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pele

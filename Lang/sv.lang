@@ -153,6 +153,7 @@
 	v_Lang036 =	K&onvertera radbrytningar
 	v_Lang037 =	Ko&mmentera ut okontrollerade rader
 	v_Lang038 =	Li&nje wrap
+	v_Lang039 =	Vi&sa grupper som kommentarer
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Inställningar
@@ -311,6 +312,7 @@
 	w_Lang111 =	Sök... (Tryck Enter för att gå)
 	w_Lang112 =	Ny (Ctrl+N)
 	w_Lang113 =	Gå till...
+	w_Lang114 =	Visa grupper som kommentarer
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus

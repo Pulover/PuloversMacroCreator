@@ -153,6 +153,7 @@
 	v_Lang036 =	Sa&tır aralıklarını dönüştür
 	v_Lang037 =	D&enetlenmeyen satırları açıklama
 	v_Lang038 =	&Hat şal
+	v_Lang039 =	G&rupları yorum olarak göster
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ayarlar
@@ -311,6 +312,7 @@
 	w_Lang111 =	Arama... (Basın gitmek için Enter)
 	w_Lang112 =	Yeni (Ctrl+N)
 	w_Lang113 =	Git ...
+	w_Lang114 =	Grupları yorum olarak göster
 		
 ; 15. Command Windows		
 	c_Lang001 =	Fare

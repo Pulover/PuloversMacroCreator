@@ -153,6 +153,7 @@
 	v_Lang036 =	&Convert reavahetused
 	v_Lang037 =	K&ommentaar välja märkimata rida
 	v_Lang038 =	L&ine wrap
+	v_Lang039 =	K&uva rühmad kommentaaridena
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Seaded
@@ -311,6 +312,7 @@
 	w_Lang111 =	Otsi ... (liikumiseks vajutage sisestusklahvi)
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Minema...
+	w_Lang114 =	Kuva rühmad kommentaaridena
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiir

@@ -153,6 +153,7 @@
 	v_Lang036 =	&Chuyển đổi ngắt dòng
 	v_Lang037 =	Th&ảo luận ra các hàng không được kiểm soát
 	v_Lang038 =	&Dòng bọc
+	v_Lang039 =	H&iển thị các nhóm dưới dạng nhận xét
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Cài đặt
@@ -311,6 +312,7 @@
 	w_Lang111 =	Tìm kiếm... (Nhấn Enter để đi)
 	w_Lang112 =	Mới (Ctrl+N)
 	w_Lang113 =	Đi đến...
+	w_Lang114 =	Hiển thị các nhóm dưới dạng nhận xét
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột

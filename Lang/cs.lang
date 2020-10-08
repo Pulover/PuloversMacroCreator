@@ -153,6 +153,7 @@
 	v_Lang036 =	P&řevod řádků
 	v_Lang037 =	Ko&mentář mimo nezkontrolované řádků
 	v_Lang038 =	&Zalamovat
+	v_Lang039 =	Zo&brazit skupiny jako komentáře
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavení
@@ -311,6 +312,7 @@
 	w_Lang111 =	Vyhledávání... (Klávesou Enter prejdete)
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Jít do...
+	w_Lang114 =	Zobrazit skupiny jako komentáře
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš

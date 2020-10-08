@@ -281,6 +281,7 @@ IniRead, Send_Loop, %IniFilePath%, ExportOptions, Send_Loop, 0
 IniRead, TabIndent, %IniFilePath%, ExportOptions, TabIndent, 1
 IniRead, IndentWith, %IniFilePath%, ExportOptions, IndentWith, Space
 IniRead, ConvertBreaks, %IniFilePath%, ExportOptions, ConvertBreaks, 1
+IniRead, ShowGroupNames, %IniFilePath%, ExportOptions, ShowGroupNames, 0
 IniRead, IncPmc, %IniFilePath%, ExportOptions, IncPmc, 0
 IniRead, Exe_Exp, %IniFilePath%, ExportOptions, Exe_Exp, 0
 IniRead, MainWinSize, %IniFilePath%, WindowOptions, MainWinSize, W930 H630
@@ -1480,7 +1481,7 @@ sciPrev.SetCaretLineVisibleAlways(true)
 sciPrev.SetLexer(0xC8)
 sciPrev.StyleClearAll()
 
-sciPrev.StyleSetFore(0x1, 0x969896) ; Line comment
+sciPrev.StyleSetFore(0x1, 0x2C974B) ; Line comment
 sciPrev.StyleSetFore(0x2, 0x969896) ; Block comment
 sciPrev.StyleSetFore(0x3, 0x183691) ; Escaped Char
 sciPrev.StyleSetFore(0x4, 0xA71D5D) ; Operator
@@ -1530,7 +1531,7 @@ sciPrevF.SetCaretLineVisibleAlways(true)
 sciPrevF.SetLexer(0xC8)
 sciPrevF.StyleClearAll()
 
-sciPrevF.StyleSetFore(0x1, 0x969896) ; Line comment
+sciPrevF.StyleSetFore(0x1, 0x2C974B) ; Line comment
 sciPrevF.StyleSetFore(0x2, 0x969896) ; Block comment
 sciPrevF.StyleSetFore(0x3, 0x183691) ; Escaped Char
 sciPrevF.StyleSetFore(0x4, 0xA71D5D) ; Operator
@@ -1621,6 +1622,7 @@ sciPrev.StyleSetSize(0xF, PrevFontSize)
 sciPrev.StyleSetSize(0x10, PrevFontSize)
 sciPrev.StyleSetSize(0x11, PrevFontSize)
 sciPrev.StyleSetSize(0x12, PrevFontSize)
+sciPrev.StyleSetSize(0x13, PrevFontSize)
 sciPrev.StyleSetSize(0x14, PrevFontSize)
 
 sciPrevF.StyleSetSize(0x0, PrevFontSize)
@@ -1642,7 +1644,9 @@ sciPrevF.StyleSetSize(0xF, PrevFontSize)
 sciPrevF.StyleSetSize(0x10, PrevFontSize)
 sciPrevF.StyleSetSize(0x11, PrevFontSize)
 sciPrevF.StyleSetSize(0x12, PrevFontSize)
+sciPrevF.StyleSetSize(0x13, PrevFontSize)
 sciPrevF.StyleSetSize(0x14, PrevFontSize)
+sciPrevF.StyleSetSize(0x19, PrevFontSize)
 return
 
 OnTop:
@@ -1733,6 +1737,7 @@ TextWrap:
 ConvertBreaks:
 TabIndent:
 CommentUnchecked:
+ShowGroupNames:
 TB_Edit(tbPrev, A_ThisLabel, %A_ThisLabel% := !%A_ThisLabel%)
 TB_Edit(tbPrevF, A_ThisLabel, %A_ThisLabel%)
 sciPrev.SetWrapMode(TextWrap ? 0x1 : 0x0), sciPrevF.SetWrapMode(TextWrap ? 0x1 : 0x0)
@@ -1741,6 +1746,7 @@ Menu, PreviewMenu, % (TabIndent) ? "Check" : "Uncheck", %v_Lang033%
 Menu, PreviewMenu, % (ConvertBreaks) ? "Check" : "Uncheck", %v_Lang036%
 Menu, PreviewMenu, % (CommentUnchecked) ? "Check" : "Uncheck", %v_Lang037%
 Menu, PreviewMenu, % (TextWrap) ? "Check" : "Uncheck", %v_Lang038%
+Menu, PreviewMenu, % (ShowGroupNames) ? "Check" : "Uncheck", %v_Lang039%
 return
 
 PrevFontShow:
@@ -5042,6 +5048,7 @@ Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
+Sleep, 100
 WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
@@ -5078,6 +5085,7 @@ Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
+Sleep, 100
 WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
@@ -5125,6 +5133,7 @@ If (!IsObject(ie))
 }
 SetTimer, WatchCursorIE, 100
 StopIt := 0
+Sleep, 100
 WaitFor.Key("RButton")
 SetTimer, WatchCursorIE, Off
 ToolTip
@@ -5205,6 +5214,7 @@ Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
+Sleep, 100
 WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
@@ -5279,6 +5289,7 @@ Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
+Sleep, 100
 WaitFor.Key("RButton")
 SetTimer, WatchCursor, off
 ToolTip
@@ -5319,6 +5330,7 @@ Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
+Sleep, 100
 WaitFor.Key("RButton")
 WinGetPos, X, Y, W, H, ahk_id %id%
 SetTimer, WatchCursor, off
@@ -5344,6 +5356,7 @@ Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 100
 StopIt := 0
+Sleep, 100
 WaitFor.Key("RButton")
 ControlGetPos, X, Y, W, H, %control%, ahk_id %id%
 SetTimer, WatchCursor, off
@@ -5450,6 +5463,7 @@ Hotkey, Esc, EscNoKey, On
 WinMinimize, ahk_id %CmdWin%
 SetTimer, WatchCursor, 10
 StopIt := 0
+Sleep, 100
 WaitFor.Key("RButton")
 SetRegionNow := GetKeyState("Alt", "P")
 SetTimer, WatchCursor, off
@@ -10405,6 +10419,7 @@ If (ComCLSID = "InternetExplorer.Application")
 	WinMinimize, ahk_id %CmdWin%
 	SetTimer, WatchCursorIE, 100
 	StopIt := 0
+	Sleep, 100
 	WaitFor.Key("RButton")
 	SetTimer, WatchCursorIE, off
 	ToolTip
@@ -10434,6 +10449,7 @@ Else If (ComCLSID = "Excel.Application")
 	WinMinimize, ahk_id %CmdWin%
 	SetTimer, WatchCursorXL, 100
 	StopIt := 0
+	Sleep, 100
 	WaitFor.Key("RButton")
 	SetTimer, WatchCursorXL, off
 	ToolTip
@@ -12935,14 +12951,14 @@ Gui, 33:Add, Text, -Wrap yp+3 x+10 W100, %t_Lang004%
 Gui, 33:Add, Text, -Wrap yp-28 x+0 W100, # = Win`n! = Alt`n^ = Ctrl`n+ = Shift
 Gui, 33:Add, Groupbox, Section xs y+20 W450 H75
 Gui, 33:Add, Text, -Wrap R1 ys+20 xs+10 W40 cBlue, #If
-Gui, 33:Add, DDL, yp-3 x+5 W100 vIfDirectContext, None%_x%WinActive%_x%WinNotActive%_x%WinExist%_x%WinNotExist%_x%Expression
+Gui, 33:Add, DDL, yp-3 x+5 W100 vIfMacroContext, None%_x%WinActive%_x%WinNotActive%_x%WinExist%_x%WinNotExist%_x%Expression
 Gui, 33:Add, Button, yp x+210 W75 vIdent gWinTitle, WinTitle
 Gui, 33:Add, Edit, y+5 xs+10 W400 vTitle R1 -Multi, % MContext[2]
 Gui, 33:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin, ...
 Gui, 33:Add, Button, Section Default -Wrap xm W75 H23 gEditMacroOK, %c_Lang020%
 Gui, 33:Add, Button, Wrap ys W75 H23 gEditMacroCancel, %c_Lang021%
 Gui, 33:Add, Updown, ys x+90 W50 H20 Horz vEditSel gSelList Range0-1
-GuiControl, 33:ChooseString, IfDirectContext, % MContext[1]
+GuiControl, 33:ChooseString, IfMacroContext, % MContext[1]
 If (InStr(KeybdList, AutoKey _x))
 	GuiControl, 33:ChooseString, AutoKeyL, %AutoKey%
 Else
@@ -12955,7 +12971,7 @@ If (InStr(Macro, "()"))
 	GuiControl, 33:Disable, ManKey
 	GuiControl, 33:Disable, TE
 	GuiControl, 33:Disable, TimesX
-	GuiControl, 33:Disable, IfDirectContext
+	GuiControl, 33:Disable, IfMacroContext
 	GuiControl, 33:Disable, Ident
 	GuiControl, 33:Disable, Title
 	GuiControl, 33:Disable, GetWin
@@ -12996,7 +13012,7 @@ Else If (!InStr(Macro, "()"))
 }
 Gui, 32:-Disabled
 Gui, 33:Destroy
-LV_Modify(RowNumber,, Macro, AutoKeyL != "" ? AutoKeyL : AutoKey, ManKey, TimesX, IfDirectContext " " Title)
+LV_Modify(RowNumber,, Macro, AutoKeyL != "" ? AutoKeyL : AutoKey, ManKey, TimesX, IfMacroContext " " Title)
 return
 
 SelList:
@@ -13021,7 +13037,7 @@ Else If (!InStr(Macro, "()"))
 		}
 	}
 }
-LV_Modify(RowNumber,, Macro, AutoKeyL != "" ? AutoKeyL : AutoKey, ManKey, TimesX, IfDirectContext " " Title)
+LV_Modify(RowNumber,, Macro, AutoKeyL != "" ? AutoKeyL : AutoKey, ManKey, TimesX, IfMacroContext " " Title)
 RowNumber := NewRow
 If (RowNumber > LV_GetCount())
 	RowNumber := 1
@@ -13038,7 +13054,7 @@ GuiControl, 33:, Macro, %Macro%
 GuiControl, 33:, AutoKey, %AutoKey%
 GuiControl, 33:, ManKey, %ManKey%
 GuiControl, 33:, TimesX, %TimesX%
-GuiControl, 33:ChooseString, IfDirectContext, % MContext[1]
+GuiControl, 33:ChooseString, IfMacroContext, % MContext[1]
 GuiControl, 33:, Title, % MContext[2]
 If (InStr(KeybdList, AutoKey _x))
 	GuiControl, 33:ChooseString, AutoKeyL, %AutoKey%
@@ -13052,7 +13068,7 @@ If (InStr(Macro, "()"))
 	GuiControl, 33:Disable, ManKey
 	GuiControl, 33:Disable, TE
 	GuiControl, 33:Disable, TimesX
-	GuiControl, 33:Disable, IfDirectContext
+	GuiControl, 33:Disable, IfMacroContext
 	GuiControl, 33:Disable, Ident
 	GuiControl, 33:Disable, Title
 	GuiControl, 33:Disable, GetWin
@@ -13064,7 +13080,7 @@ Else
 	GuiControl, 33:Enable, ManKey
 	GuiControl, 33:Enable, TE
 	GuiControl, 33:Enable, TimesX
-	GuiControl, 33:Enable, IfDirectContext
+	GuiControl, 33:Enable, IfMacroContext
 	GuiControl, 33:Enable, Ident
 	GuiControl, 33:Enable, Title
 	GuiControl, 33:Enable, GetWin
@@ -14735,6 +14751,7 @@ Send_Loop := 0
 TabIndent := 1
 IndentWith := "Space"
 ConvertBreaks := 1
+ShowGroupNames := 0
 TextWrap := 0
 MacroFontSize := 8
 PrevFontSize := 8
@@ -15114,6 +15131,7 @@ IniWrite, %Send_Loop%, %IniFilePath%, ExportOptions, Send_Loop
 IniWrite, %TabIndent%, %IniFilePath%, ExportOptions, TabIndent
 IniWrite, %IndentWith%, %IniFilePath%, ExportOptions, IndentWith
 IniWrite, %ConvertBreaks%, %IniFilePath%, ExportOptions, ConvertBreaks
+IniWrite, %ShowGroupNames%, %IniFilePath%, ExportOptions, ShowGroupNames
 IniWrite, %IncPmc%, %IniFilePath%, ExportOptions, IncPmc
 IniWrite, %Exe_Exp%, %IniFilePath%, ExportOptions, Exe_Exp
 IniWrite, %MainWinSize%, %IniFilePath%, WindowOptions, MainWinSize
@@ -15581,6 +15599,7 @@ Menu, PreviewMenu, Add
 Menu, PreviewMenu, Add, %v_Lang036%, ConvertBreaks
 Menu, PreviewMenu, Add, %v_Lang037%, CommentUnchecked
 Menu, PreviewMenu, Add, %v_Lang038%, TextWrap
+Menu, PreviewMenu, Add, %v_Lang039%, ShowGroupNames
 
 Menu, ToolbarsMenu, Add, %v_Lang014%, ShowHideBand
 Menu, ToolbarsMenu, Add, %v_Lang015%, ShowHideBand
@@ -15845,6 +15864,7 @@ Menu, PreviewMenu, % (IndentWith = "Space") ? "Check" : "Uncheck", %v_Lang034%
 Menu, PreviewMenu, % (ConvertBreaks) ? "Check" : "Uncheck", %v_Lang036%
 Menu, PreviewMenu, % (CommentUnchecked) ? "Check" : "Uncheck", %v_Lang037%
 Menu, PreviewMenu, % (TextWrap) ? "Check" : "Uncheck", %v_Lang038%
+Menu, PreviewMenu, % (ShowGroupNames) ? "Check" : "Uncheck", %v_Lang039%
 
 Menu, MacroFontMenu, Check, %MacroFontSize%
 
@@ -16109,6 +16129,7 @@ If (!ShowGroups)
 LVManager[A_List].InsertGroup(, GrName)
 LVManager[A_List].Add()
 SavePrompt(true, A_ThisLabel)
+GoSub, PrevRefresh
 return
 
 GrCancel:
@@ -16142,6 +16163,7 @@ If (ShowGroups)
 	Menu, GroupMenu, Check, %e_Lang018%`t%_s%Ctrl+Shift+G
 Else
 	Menu, GroupMenu, Uncheck, %e_Lang018%`t%_s%Ctrl+Shift+G
+GoSub, PrevRefresh
 return
 
 RemoveGroup:
@@ -16156,6 +16178,7 @@ If (!LV_GetNext())
 LVManager[A_List].RemoveGroup()
 LVManager[A_List].Add()
 SavePrompt(true, A_ThisLabel)
+GoSub, PrevRefresh
 return
 
 RemoveAllGroups:
@@ -16164,6 +16187,7 @@ Gui, chMacro:Listview, InputList%A_List%
 LVManager[A_List].RemoveAllGroups(c_Lang061)
 LVManager[A_List].Add()
 SavePrompt(true, A_ThisLabel)
+GoSub, PrevRefresh
 return
 
 CollapseGroups:

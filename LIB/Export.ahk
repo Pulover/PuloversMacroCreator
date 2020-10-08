@@ -5,15 +5,18 @@
 	, PAction, PType, PDelayX, PComment, Act, iCount, init_ie, ComExp
 	, VarsScope, FuncParams, IsFunction := false, CommentOut := false
 	, CDO_To, CDO_Sub, CDO_Msg, CDO_Att, CDO_Html, CDO_CC, CDO_BCC, SelAcc
-	, _each, _Section, _CodeLine
+	, _each, _Section, _CodeLine, _Groups, _NextGroup := 1
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%ListID%
 	ComType := ComCr ? "ComObjCreate" : "ComObjActive"
+	_Groups := LVManager[ListID].GetGroups(true)
 	Critical
 	Loop, % LV_GetCount()
 	{
 		LV_GetTexts(A_Index, Action, Step, TimesX, DelayX, Type, Target, Window, Comment)
 	,	IsChecked := LV_GetNext(A_Index-1, "Checked")
+		If ((ShowGroupNames) && (_Groups[_NextGroup].Row = A_Index))
+			LVData .= "`n`; " _Groups[_NextGroup].Name, _NextGroup++
 		If (CodeLines) {
 			StrReplace(LVData, "`n", "", _CodeLine)
 		,	CodeLines.Push(_CodeLine + 1)
@@ -541,11 +544,10 @@
 				}
 		}
 		If ((IsChecked = A_Index) && (CommentOut))
-			LVData .= "`n*/" RowData, CommentOut := false
+			RowData := "`n*/" RowData, CommentOut := false
 		Else If ((IsChecked != A_Index) && (!CommentOut) && (Type != cType42))
-			LVData .= "`n/*" RowData, CommentOut := true
-		Else
-			LVData .= RowData
+			RowData := "`n/*" RowData, CommentOut := true
+		LVData .= RowData
 	}
 	If (CommentOut)
 		LVData .= "`n*/"

@@ -153,6 +153,7 @@
 	v_Lang036 =	&Guqulela ilayini ukopuka
 	v_Lang037 =	G&qabaza imiqolo ingakhangelwa
 	v_Lang038 =	U&rhangqo lwemigca
+	v_Lang039 =	&Bonisa amaqela njengamazwana
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Izicwangciso
@@ -311,6 +312,7 @@
 	w_Lang111 =	Ukufuna ... (Cofa u-Enter ukuya)
 	w_Lang112 =	Entsha (Ctrl + N)
 	w_Lang113 =	Yiya e...
+	w_Lang114 =	Bonisa amaqela njengamazwana
 		
 ; 15. Command Windows		
 	c_Lang001 =	Impuku

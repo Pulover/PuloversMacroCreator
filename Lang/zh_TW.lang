@@ -153,6 +153,7 @@
 	v_Lang036 =	換行符(&O)
 	v_Lang037 =	註釋掉選中的行(&M)
 	v_Lang038 =	換行(&L)
+	v_Lang039 =	將群組顯示為評論(&H)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	設置(&S)
@@ -311,6 +312,7 @@
 	w_Lang111 =	搜索... (按Enter鍵進入)
 	w_Lang112 =	開啟新檔（按Ctrl+N）
 	w_Lang113 =	去...
+	w_Lang114 =	將群組顯示為評論
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標

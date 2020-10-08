@@ -153,6 +153,7 @@
 	v_Lang036 =	改行を変換します(&O)
 	v_Lang037 =	未チェックの行をコメントアウト(&M)
 	v_Lang038 =	ラインラップ(&L)
+	v_Lang039 =	グループをコメントとして表示(&H)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	設定(&S)
@@ -311,6 +312,7 @@
 	w_Lang111 =	検索... (押して移動します)
 	w_Lang112 =	新規作成（Ctrl+Nキー）
 	w_Lang113 =	移動...
+	w_Lang114 =	グループをコメントとして表示
 		
 ; 15. Command Windows		
 	c_Lang001 =	マウス

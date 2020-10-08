@@ -153,6 +153,7 @@
 	v_Lang036 =	&Bihurtu lerro-jauziak
 	v_Lang037 =	K&omentatu Deshautatzen errenkadak
 	v_Lang038 =	&Line wrap
+	v_Lang039 =	E&rakutsi taldeak iruzkin gisa
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ezarpenak
@@ -311,6 +312,7 @@
 	w_Lang111 =	Search ... (Sakatu Sartu joan)
 	w_Lang112 =	Berria (Ctrl + N)
 	w_Lang113 =	Joan...
+	w_Lang114 =	Erakutsi taldeak iruzkin gisa
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

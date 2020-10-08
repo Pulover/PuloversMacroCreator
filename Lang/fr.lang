@@ -153,6 +153,7 @@
 	v_Lang036 =	Co&nvertir les sauts de ligne
 	v_Lang037 =	Co&mmentaire sur les lignes non contrôlées
 	v_Lang038 =	&Wrap ligne
+	v_Lang039 =	A&fficher les groupes sous forme de commentaires
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Réglages
@@ -311,6 +312,7 @@
 	w_Lang111 =	Rechercher... (Appuyez sur Entrée pour aller)
 	w_Lang112 =	Nouveau (Ctrl+N)
 	w_Lang113 =	Aller à...
+	w_Lang114 =	Afficher les groupes sous forme de commentaires
 		
 ; 15. Command Windows		
 	c_Lang001 =	Souris

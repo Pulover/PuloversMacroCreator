@@ -38,9 +38,12 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 # Change Log
 
 ## Version 5.2.8
+* Added option to show Group names as comments in *View menu* > *Preview Script* and Preview toolbar.
 * Fixed `A_` variables not working as `InputVar` parameter for commands.
-* Fixed some hotkeys not updating Play hotkey.
+* Fixed *Expand all groups* not working.
+* Fixed some hotkeys not updating the Play hotkey.
 * Fixed problem with subtraction in expressions.
+* Fixed global context condition being set to macro context.
 
 ## Version 5.2.7
 * Added support for `&`, `*`, `~` and `Up` as modifier symbols for Play hotkey.

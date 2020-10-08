@@ -153,6 +153,7 @@
 	v_Lang036 =	C&onvertir saltos de línea
 	v_Lang037 =	Co&mente filas sin marcar
 	v_Lang038 =	A&juste de línea
+	v_Lang039 =	Most&rar grupos como comentarios
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -310,7 +311,8 @@
 	w_Lang110 =	Utilizar un botón del joystick como tecla de acceso directo
 	w_Lang111 =	Buscar... (Pulse Intro para ir)
 	w_Lang112 =	Nuevo (Ctrl+N)
-	w_Lang113 =	Akṣara
+	w_Lang113 =	Ir...
+	w_Lang114 =	Mostrar grupos como comentarios
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratón

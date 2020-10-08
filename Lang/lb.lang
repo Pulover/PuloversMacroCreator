@@ -153,6 +153,7 @@
 	v_Lang036 =	K&onvertéieren Linn Break
 	v_Lang037 =	Ko&mmentéieren aus unchecked Zeile
 	v_Lang038 =	&Linn geschenkt
+	v_Lang039 =	W&eisen Gruppen als Kommentaren
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Parameteren
@@ -311,6 +312,7 @@
 	w_Lang111 =	Sich ... (Press Gitt ze goen)
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Géi op...
+	w_Lang114 =	Weisen Gruppen als Kommentaren
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

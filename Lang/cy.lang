@@ -153,6 +153,7 @@
 	v_Lang036 =	Tr&osi toriadau llinell
 	v_Lang037 =	&Sylw allan rhesi ddirwystr
 	v_Lang038 =	Amla&pio llinell
+	v_Lang039 =	Da&ngos grwpiau fel sylwadau
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Gosodiadau
@@ -311,6 +312,7 @@
 	w_Lang111 =	Chwilio ... (Gwasg Enter i fynd)
 	w_Lang112 =	Newydd (Ctrl + D)
 	w_Lang113 =	Mynd i...
+	w_Lang114 =	Dangos grwpiau fel sylwadau
 		
 ; 15. Command Windows		
 	c_Lang001 =	Llygoden

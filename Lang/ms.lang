@@ -153,6 +153,7 @@
 	v_Lang036 =	M&enukar rehat talian
 	v_Lang037 =	&Komen daripada baris tidak dikawal
 	v_Lang038 =	&Line bungkus
+	v_Lang039 =	T&unjukkan kumpulan sebagai komen
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Tetapan
@@ -311,6 +312,7 @@
 	w_Lang111 =	Carian... (Tekan Enter untuk pergi)
 	w_Lang112 =	Baru (Ctrl+N)
 	w_Lang113 =	Pergi ke...
+	w_Lang114 =	Tunjukkan kumpulan sebagai komen
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

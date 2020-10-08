@@ -153,6 +153,7 @@
 	v_Lang036 =	&Zeilenumbrüche konvertieren
 	v_Lang037 =	&Nicht markiert Zeilen kommentieren
 	v_Lang038 =	Ze&ilenumbruch
+	v_Lang039 =	&Gruppen als Kommentare anzeigen
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Einstellungen
@@ -311,6 +312,7 @@
 	w_Lang111 =	Suchen... (Drücken Sie die Eingabetaste zu gehen)
 	w_Lang112 =	Neu (Strg+N)
 	w_Lang113 =	Gehe zu...
+	w_Lang114 =	Gruppen als Kommentare anzeigen
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus

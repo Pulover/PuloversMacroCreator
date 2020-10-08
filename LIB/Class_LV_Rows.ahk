@@ -966,10 +966,11 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;                            automatically in from other functions, usually it's not
 ;                            necessary to use it in your script.
 ;    Parameters:
-;        Collapsed:      If true collapses all groups in the selected ListView.
+;        Collapsed:      If true collapses all groups in the selected ListView. If false
+;                            expands all groups in selected ListView.
 ;    Return:             No return value.
 ;=======================================================================================
-    RefreshGroups(Collapsed := false)
+    RefreshGroups(Collapsed := "")
     {
         GroupStates := []
         Gui, Listview, % this.LVHwnd
@@ -985,7 +986,10 @@ Class LV_Rows extends LV_Rows.LV_EX
             If (this.Handle.GroupsArray[GrNum].Row = A_Index)
             {
                 this.GroupInsert(GrNum + 9, this.Handle.GroupsArray[GrNum].Name)
-            ,   Styles := Collapsed ? ["Collapsible", "Collapsed"] : this.Collapsible ? ["Collapsible", GroupStates[GrNum]] : []
+            ,   Styles := !this.Collapsible ? []
+                                        : Collapsed = "" ? ["Collapsible", GroupStates[GrNum]]
+                                        : Collapsed ? ["Collapsible", "Collapsed"]
+                                        : ["Collapsible", ""]
             ,   this.GroupSetState(GrNum + 9, Styles*)
             ,   GrNum++
             }

@@ -153,6 +153,7 @@
 	v_Lang036 =	&Converteren regeleinden
 	v_Lang037 =	C&ommentaar uit ongecontroleerd rijen
 	v_Lang038 =	&Lijn wrap
+	v_Lang039 =	&Geef groepen weer als opmerkingen
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -311,6 +312,7 @@
 	w_Lang111 =	Zoeken... (Druk op Enter om te gaan)
 	w_Lang112 =	Nieuw (Ctrl+N)
 	w_Lang113 =	Ga naar...
+	w_Lang114 =	Geef groepen weer als opmerkingen
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis

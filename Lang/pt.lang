@@ -153,6 +153,7 @@
 	v_Lang036 =	C&onverter quebra de linhas
 	v_Lang037 =	Come&ntar linhas desmarcadas
 	v_Lang038 =	&Quebra de linha
+	v_Lang039 =	Most&rar grupos como comentários
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configurações
@@ -311,6 +312,7 @@
 	w_Lang111 =	Pesquisar... (Pressione Enter para ir)
 	w_Lang112 =	Novo (Ctrl+N)
 	w_Lang113 =	Ir para...
+	w_Lang114 =	Mostrar grupos como comentários
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

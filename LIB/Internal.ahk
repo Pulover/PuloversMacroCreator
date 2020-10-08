@@ -1143,6 +1143,12 @@ ShowMenu(Menu, mX, mY)
 				Menu, TbMenu, Check, %t_Lang211%
 			Menu, TbMenu, Show, %mX%, %mY%
 			Menu, TbMenu, DeleteAll
+		Case "CommentUnchecked":
+			Menu, TbMenu, Add, %w_Lang114%, ShowGroupNames
+			If (ShowGroupNames)
+				Menu, TbMenu, Check, %w_Lang114%
+			Menu, TbMenu, Show, %mX%, %mY%
+			Menu, TbMenu, DeleteAll
 		Case "PrevFontShow":
 			Menu, PrevFontMenu, Add, 6, PrevFontSet, Radio
 			Menu, PrevFontMenu, Add, 7, PrevFontSet, Radio

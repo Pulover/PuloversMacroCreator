@@ -153,6 +153,7 @@
 	v_Lang036 =	&Mengkonversi line break
 	v_Lang037 =	K&omentar dari baris dicentang
 	v_Lang038 =	&Jalur wrap
+	v_Lang039 =	P&erlihatkan grup sebagai komentar
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Pengaturan
@@ -311,6 +312,7 @@
 	w_Lang111 =	Cari... (Tekan Enter untuk pergi)
 	w_Lang112 =	Baru (Ctrl+N)
 	w_Lang113 =	Pergi ke...
+	w_Lang114 =	Perlihatkan grup sebagai komentar
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

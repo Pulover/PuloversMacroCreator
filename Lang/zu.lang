@@ -153,6 +153,7 @@
 	v_Lang036 =	&Ukuguqula kunqamuke umugqa
 	v_Lang037 =	&Comment out imigqa uma kunganqandwa
 	v_Lang038 =	Uku&goqa umbhalo
+	v_Lang039 =	Kh&ombisa amaqembu njengamazwana
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Amasethingi
@@ -311,6 +312,7 @@
 	w_Lang111 =	Ukucinga ... (Cindezela u-Enter ukuze ahambe)
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Iya ku...
+	w_Lang114 =	Khombisa amaqembu njengamazwana
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

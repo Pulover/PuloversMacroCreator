@@ -153,6 +153,7 @@
 	v_Lang036 =	&Muuta rivinvaihdot
 	v_Lang037 =	K&ommentoi pois valitsematta riviä
 	v_Lang038 =	L&ine wrap
+	v_Lang039 =	&Näytä ryhmät kommentteina
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Asetukset
@@ -311,6 +312,7 @@
 	w_Lang111 =	Etsi... (Paina Enter päästäksesi)
 	w_Lang112 =	Uusi (Ctrl+N)
 	w_Lang113 =	Mene...
+	w_Lang114 =	Näytä ryhmät kommentteina
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiiri

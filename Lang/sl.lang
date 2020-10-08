@@ -153,6 +153,7 @@
 	v_Lang036 =	Pr&etvarjanje prelome vrstic
 	v_Lang037 =	Zak&omentirajte nepreverjene vrstice
 	v_Lang038 =	&Line wrap
+	v_Lang039 =	Sk&upine prikaži kot komentarje
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavitve
@@ -311,6 +312,7 @@
 	w_Lang111 =	Iskanje... (Pritisnite Enter, da gredo)
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Pojdi do...
+	w_Lang114 =	Skupine prikaži kot komentarje
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška

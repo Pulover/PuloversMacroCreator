@@ -153,6 +153,7 @@
 	v_Lang036 =	המר שורות חדשות(&O)
 	v_Lang037 =	תגובה מתוך שורות מסומנות(&M)
 	v_Lang038 =	לעטוף Line(&L)
+	v_Lang039 =	הראה קבוצות כהערות(&H)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	הגדרות(&S)
@@ -311,6 +312,7 @@
 	w_Lang111 =	חיפוש ... (הקש Enter כדי לעבור)
 	w_Lang112 =	חדש (Ctrl + N)
 	w_Lang113 =	לך ל...
+	w_Lang114 =	הראה קבוצות כהערות
 		
 ; 15. Command Windows		
 	c_Lang001 =	עכבר

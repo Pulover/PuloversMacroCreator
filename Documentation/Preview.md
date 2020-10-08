@@ -45,6 +45,10 @@ Converts line break symbols (\`n) in command parameters to real line breaks.
 
 Keeps unchecked rows in the macro as commented out script, instead of not exporting them.
 
+### Show groups as comments
+
+Adds group names as single-line comments in the preview/exported script.
+
 ### Line Wrap
 
 Automatically add a line break to long lines.

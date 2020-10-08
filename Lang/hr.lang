@@ -153,6 +153,7 @@
 	v_Lang036 =	Pr&etvori prijelome redaka
 	v_Lang037 =	K&omentar iz označenim redaka
 	v_Lang038 =	&Line folijom
+	v_Lang039 =	Pr&ikaži grupe kao komentare
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Postavke
@@ -311,6 +312,7 @@
 	w_Lang111 =	Traži... (Pritisnite Enter kako)
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Ići...
+	w_Lang114 =	Prikaži grupe kao komentare
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miš

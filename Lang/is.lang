@@ -153,6 +153,7 @@
 	v_Lang036 =	&Umbreyta línuskiptingum
 	v_Lang037 =	A&thugasemd út óheft raðir
 	v_Lang038 =	&Línuskrið
+	v_Lang039 =	&Sýna hópa sem athugasemdir
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Stillingar
@@ -311,6 +312,7 @@
 	w_Lang111 =	Leita ... (Ýttu á Enter til að fara)
 	w_Lang112 =	Ný (Ctrl + N)
 	w_Lang113 =	Fara til...
+	w_Lang114 =	Sýna hópa sem athugasemdir
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mús
