@@ -2,7 +2,7 @@
 *The Complete Automation Tool*
 
 [www.macrocreator.com](https://www.macrocreator.com)  
-[Forum Board](https://www.autohotkey.com/boards/viewforum.php?f=63)  
+[Forum](https://www.autohotkey.com/boards/viewforum.php?f=63)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
@@ -39,6 +39,8 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 ## Version 5.2.8
 * Fixed `A_` variables not working as `InputVar` parameter for commands.
+* Fixed some hotkeys not updating Play hotkey.
+* Fixed problem with subtraction in expressions.
 
 ## Version 5.2.7
 * Added support for `&`, `*`, `~` and `Up` as modifier symbols for Play hotkey.

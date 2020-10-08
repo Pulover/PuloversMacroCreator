@@ -4,7 +4,7 @@
 ; "The Complete Automation Tool"
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
-; Forum Board: https://www.autohotkey.com/boards/viewforum.php?f=63
+; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
 ; Version: 5.2.8
 ; Release Date: October, 2020
 ; AutoHotkey Version: 1.1.32.00
@@ -12237,7 +12237,7 @@ Else
 	GuiControlGet, HK_AutoKey, 1:, AutoKey
 GuiControlGet, ManKey, 1:, ManKey
 GuiControlGet, TimesO, chTimes:, TimesG
-If (HK_AutoKey = "")
+If ((HK_AutoKey = "") && (!HotkeyCtrlHasFocus()))
 	HK_AutoKey := StrReplace(o_AutoKey[A_List], "#")
 o_AutoKey[A_List] := (WinKey = 1) ? "#" HK_AutoKey : HK_AutoKey
 If (o_AutoKey[A_List] = "#")
@@ -12961,6 +12961,8 @@ If (InStr(Macro, "()"))
 	GuiControl, 33:Disable, GetWin
 }
 Gui, 33:Show,, %w_Lang019%
+If (AutoKey = "")
+	GuiControl, 33:Enable, AutoKey
 return
 
 33GuiClose:
@@ -15177,6 +15179,7 @@ If (A_ThisHotkey == "*BackSpace" && %ctrl% && !modifier)
 Else
 	GuiControl, %GuiA%:,%ctrl%, % modifier SubStr(A_ThisHotkey,2)
 SavePrompt(true, A_ThisHotkey)
+GoSub, SaveData
 return
 #If
 

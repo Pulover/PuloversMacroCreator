@@ -541,6 +541,8 @@ ExprCompile(e)
 ExprEval(e,lp,eo,el)
 {
 	c1:=Chr(1)
+	While (RegExMatch(e,c1 "l-[\d\.]++(?!" c1 "o)"))
+	e:=RegExReplace(e,c1 "l-([\d\.]+)",c1 "l$1" c1 "o-")
 	Loop,Parse,e,%c1%
 	{
 		lf:=A_LoopField,tt:=SubStr(lf,1,1),t:=SubStr(lf,2)
