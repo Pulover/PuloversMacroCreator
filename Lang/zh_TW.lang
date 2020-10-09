@@ -313,6 +313,8 @@
 	w_Lang112 =	開啟新檔（按Ctrl+N）
 	w_Lang113 =	去...
 	w_Lang114 =	將群組顯示為評論
+	w_Lang115 =	切換到樹狀視圖
+	w_Lang116 =	切換到列表視圖
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標

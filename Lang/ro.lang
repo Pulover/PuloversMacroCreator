@@ -313,6 +313,8 @@
 	w_Lang112 =	Nou (Ctrl + N)
 	w_Lang113 =	Mergi la...
 	w_Lang114 =	Afișați grupurile ca comentarii
+	w_Lang115 =	Treceți la vizualizarea arborescentă
+	w_Lang116 =	Comutați la vizualizarea listă
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

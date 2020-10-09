@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	ໄປ​ຫາ...
 	w_Lang114 =	ສະແດງກຸ່ມເປັນ ຄຳ ເຫັນ
+	w_Lang115 =	ປ່ຽນໄປເບິ່ງຕົ້ນໄມ້
+	w_Lang116 =	ປ່ຽນໄປເບິ່ງລາຍການ
 		
 ; 15. Command Windows		
 	c_Lang001 =	ຫນູ

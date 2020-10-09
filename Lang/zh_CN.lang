@@ -313,6 +313,8 @@
 	w_Lang112 =	新建(Ctrl+N)
 	w_Lang113 =	去...
 	w_Lang114 =	将群组显示为评论
+	w_Lang115 =	切换到树状视图
+	w_Lang116 =	切换到列表视图
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠标

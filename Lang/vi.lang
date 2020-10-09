@@ -313,6 +313,8 @@
 	w_Lang112 =	Mới (Ctrl+N)
 	w_Lang113 =	Đi đến...
 	w_Lang114 =	Hiển thị các nhóm dưới dạng nhận xét
+	w_Lang115 =	Chuyển sang chế độ xem dạng cây
+	w_Lang116 =	Chuyển sang chế độ xem danh sách
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột

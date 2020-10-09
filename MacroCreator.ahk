@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.8
+; Version: 6.0.0-Beta
 ; Release Date: October, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.8
+;@Ahk2Exe-SetVersion 6.0.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -141,7 +141,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.2.8", ReleaseDate := "October, 2020"
+CurrentVersion := "6.0.0", ReleaseDate := "October, 2020"
 
 ;##### Ini File Read #####
 
@@ -290,6 +290,7 @@ IniRead, WinState, %IniFilePath%, WindowOptions, WinState, 1
 IniRead, ColSizes, %IniFilePath%, WindowOptions, ColSizes, 70,185,335,60,60,100,150,225,85,50,60
 IniRead, ColOrder, %IniFilePath%, WindowOptions, ColOrder, 1,2,3,4,5,6,7,8,9,10,11
 IniRead, PrevWinSize, %IniFilePath%, WindowOptions, PrevWinSize, W450 H500
+IniRead, MacroView, %IniFilePath%, WindowOptions, MacroView, List
 IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 1
 IniRead, TextWrap, %IniFilePath%, WindowOptions, TextWrap, 0
 IniRead, MacroFontSize, %IniFilePath%, WindowOptions, MacroFontSize, 8
@@ -314,6 +315,11 @@ IniRead, CommandLayout, %IniFilePath%, ToolbarOptions, CommandLayout
 IniRead, EditLayout, %IniFilePath%, ToolbarOptions, EditLayout
 IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1,1,1
 
+If (Version < "6.0.0")
+{
+	MacroLayout := "ERROR"
+	EditLayout := "SwitchView=" w_Lang115 ":114(16), , " EditLayout
+}
 If (Version < "5.1.2")
 	EvalDefault := 1
 If (Version < "5.0.0")
@@ -1388,15 +1394,19 @@ return
 
 DefineControls:
 GoSub, BuildMacroWin
+GoSub, BuildTreeViewMacroWin
 GoSub, BuildPrevWin
 GoSub, BuildMixedControls
 GoSub, BuildOSCWin
 RbMacro := New Rebar(hRbMacro)
-RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 30, "", A_ScreenWidth/2, 0, "", "", 10, 10)
-RbMacro.InsertBand(hPrevCh, 0, "", 31, "", A_ScreenWidth/2, 0, "", "", 0)
+RbMacro.InsertBand(hMacroTv, 0, "NoGripper", 30, "", A_ScreenWidth/3, 0, "", "", 0)
+RbMacro.InsertBand(hMacroCh, 0, "NoGripper", 31, "", A_ScreenWidth/3, 0, "", "", 10, 10)
+RbMacro.InsertBand(hPrevCh, 0, "", 32, "", A_ScreenWidth/3, 0, "", "", 0)
 RbMacro.SetMaxRows(1)
 (MacroLayout = "ERROR") ? "" : RbMacro.SetLayout(MacroLayout)
-!ShowPrev ? RbMacro.ModifyBand(2, "Style", "Hidden")
+(MacroView = "List") ? RbMacro.ModifyBand(1, "Style", "Hidden") : RbMacro.ModifyBand(2, "Style", "Hidden")
+!ShowPrev ? RbMacro.ModifyBand(3, "Style", "Hidden")
+TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang115 : w_Lang116, (MacroView = "List") ? 114 : 115)
 return
 
 BuildMacroWin:
@@ -1417,6 +1427,19 @@ GuiControl, chMacro:Focus, InputList%A_List%
 Gui, 1:Default
 return
 
+BuildTreeViewMacroWin:
+Gui, tvMacro:+LastFound
+Gui, tvMacro:+hwndhMacroTv -Caption +Parent1
+Gui, tvMacro:Font, s%MacroFontSize%
+Gui, tvMacro:Add, TreeView, AltSubmit Checked xs+0 y+0 hwndTreeID vInputTree gInputTree
+Gui, tvMacro:Default
+TV_SetImageList(hIL_Icons)
+Gui, tvMacro:Submit
+GuiControl, tvMacro:Focus, InputTree
+CreateTreeView("`tMacro1`tIcon42 Check1`n`t`tStart`tIcon104 Check1")
+Gui, 1:Default
+return
+
 BuildMixedControls:
 Gui, chTimes:+LastFound
 Gui, chTimes:+hwndhTimesCh -Caption +Parent1
@@ -1430,8 +1453,8 @@ If (FloatPrev)
 Else
 {
 	TB_Edit(TbFile, "Preview", ShowPrev := !ShowPrev)
-	RbMacro.ModifyBand(2, "Style", "Hidden", false)
-	RbMacro.ModifyBand(2, "MinWidth", 0)
+	RbMacro.ModifyBand(3, "Style", "Hidden", false)
+	RbMacro.ModifyBand(3, "MinWidth", 0)
 	GoSub, PrevRefresh
 }
 If (ShowPrev)
@@ -1445,7 +1468,7 @@ Input
 FloatPrev := !FloatPrev
 If (FloatPrev)
 {
-	RbMacro.ModifyBand(2, "Style", "Hidden")
+	RbMacro.ModifyBand(3, "Style", "Hidden")
 	If (InStr(PrevWinSize, "H0"))
 		PrevWinSize := "W450 H500"
 	Gui, 2:Show, %PrevWinSize%, %c_Lang072% - %AppName%
@@ -1454,7 +1477,7 @@ Else
 {
 	Gui, 2:Hide
 	GuiGetSize(pGuiWidth, pGuiHeight, 2), PrevWinSize := "W" pGuiWidth " H" pGuiHeight
-	RbMacro.ModifyBand(2, "Style", "Hidden", false)
+	RbMacro.ModifyBand(3, "Style", "Hidden", false)
 }
 lastCalcMargin := ""
 GoSub, PrevRefresh
@@ -1597,6 +1620,8 @@ Loop, %TabCount%
 	GuiControl, chMacro:Font, InputList%A_Index%
 Loop, 13
 	Menu, MacroFontMenu, Uncheck, % A_Index + 5
+Gui, tvMacro:Font, s%MacroFontSize%
+GuiControl, tvMacro:Font, InputTree
 Menu, MacroFontMenu, Check, %MacroFontSize%
 return
 
@@ -1652,6 +1677,15 @@ return
 OnTop:
 TB_Edit(tbPrevF, "OnTop", OnTop := !OnTop)
 Gui, % (OnTop) ? "2:+AlwaysOnTop" : "2:-AlwaysOnTop"
+return
+
+SwitchView:
+MacroView := (MacroView = "List") ? "Tree" : "List"
+If (MacroView = "List")
+	RbMacro.ShowBand(1, false), RbMacro.ShowBand(2)
+Else
+	RbMacro.ShowBand(2, false), RbMacro.ShowBand(1)
+TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang115 : w_Lang116, (MacroView = "List") ? 114 : 115)
 return
 
 PrevCopy:
@@ -11776,6 +11810,9 @@ GoSub, Edit
 Tooltip
 return
 
+InputTree:
+return
+
 GuiContextMenu:
 If (Dest_Row)
 	return
@@ -15140,6 +15177,7 @@ IniWrite, %WinState%, %IniFilePath%, WindowOptions, WinState
 IniWrite, %ColSizes%, %IniFilePath%, WindowOptions, ColSizes
 IniWrite, %ColOrder%, %IniFilePath%, WindowOptions, ColOrder
 IniWrite, %PrevWinSize%, %IniFilePath%, WindowOptions, PrevWinSize
+IniWrite, %MacroView%, %IniFilePath%, WindowOptions, MacroView
 IniWrite, %ShowPrev%, %IniFilePath%, WindowOptions, ShowPrev
 IniWrite, %TextWrap%, %IniFilePath%, WindowOptions, TextWrap
 IniWrite, %MacroFontSize%, %IniFilePath%, WindowOptions, MacroFontSize
@@ -15344,6 +15382,11 @@ GuiControl, chMacro:Move, A_List, % "W" GuiWidth-40
 GuiControl, chMacro:Move, MacrosMenu, % "X" GuiWidth-29
 return
 
+tvMacroGuiSize:
+GuiGetSize(GuiWidth, GuiHeight, "tvMacro")
+GuiControl, tvMacro:Move, InputTree, % "W" GuiWidth-15 "H" GuiHeight
+return
+
 GuiSize:
 If (A_EventInfo = 1)
 	return
@@ -15355,6 +15398,7 @@ If (!ShowBand11)
 	RbMain.ShowBand(RbMain.IDToIndex(11), false)
 RbMacro.ModifyBand(1, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 RbMacro.ModifyBand(2, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
+RbMacro.ModifyBand(3, "MinHeight", (GuiHeight-MacroOffset)*(A_ScreenDPI/96))
 GuiControl, 1:Move, cRbMacro, % "W" GuiWidth+5
 GuiControl, 1:Move, Repeat, % "y" GuiHeight-23
 GuiControl, 1:Move, Rept, % "y" GuiHeight-27

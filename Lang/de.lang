@@ -313,6 +313,8 @@
 	w_Lang112 =	Neu (Strg+N)
 	w_Lang113 =	Gehe zu...
 	w_Lang114 =	Gruppen als Kommentare anzeigen
+	w_Lang115 =	Wechseln Sie zur Baumansicht
+	w_Lang116 =	Wechseln Sie zur Listenansicht
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus

@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Gå til...
 	w_Lang114 =	Vis grupper som kommentarer
+	w_Lang115 =	Bytt til trevisning
+	w_Lang116 =	Bytt til listevisning
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus

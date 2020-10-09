@@ -313,6 +313,8 @@
 	w_Lang112 =	新規作成（Ctrl+Nキー）
 	w_Lang113 =	移動...
 	w_Lang114 =	グループをコメントとして表示
+	w_Lang115 =	ツリービューに切り替えます
+	w_Lang116 =	リストビューに切り替えます
 		
 ; 15. Command Windows		
 	c_Lang001 =	マウス

@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Pojdi do...
 	w_Lang114 =	Skupine prikaži kot komentarje
+	w_Lang115 =	Preklopite na drevesni pogled
+	w_Lang116 =	Preklopite na pogled seznama
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška

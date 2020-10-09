@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Shkoni në ...
 	w_Lang114 =	Trego grupet si komente
+	w_Lang115 =	Kaloni në pamjen e pemës
+	w_Lang116 =	Kaloni në pamjen e listës
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus

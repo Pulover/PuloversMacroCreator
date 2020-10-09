@@ -313,6 +313,8 @@
 	w_Lang112 =	새 (Ctrl 키+N)
 	w_Lang113 =	이동...
 	w_Lang114 =	그룹을 댓글로 표시
+	w_Lang115 =	트리보기로 전환
+	w_Lang116 =	목록보기로 전환
 		
 ; 15. Command Windows		
 	c_Lang001 =	마우스

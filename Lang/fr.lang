@@ -313,6 +313,8 @@
 	w_Lang112 =	Nouveau (Ctrl+N)
 	w_Lang113 =	Aller à...
 	w_Lang114 =	Afficher les groupes sous forme de commentaires
+	w_Lang115 =	Passer à l'arborescence
+	w_Lang116 =	Passer à la vue de liste
 		
 ; 15. Command Windows		
 	c_Lang001 =	Souris

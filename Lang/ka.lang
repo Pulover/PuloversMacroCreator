@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Წადი...
 	w_Lang114 =	ჯგუფების ჩვენება კომენტარად
+	w_Lang115 =	ხეზე გადასვლა
+	w_Lang116 =	სიის ხედზე გადართვა
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

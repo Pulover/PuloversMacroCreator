@@ -313,6 +313,8 @@
 	w_Lang112 =	Nowy (Ctrl+N)
 	w_Lang113 =	Iść do...
 	w_Lang114 =	Pokaż grupy jako komentarze
+	w_Lang115 =	Przełącz do widoku drzewa
+	w_Lang116 =	Przełącz do widoku listy
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz

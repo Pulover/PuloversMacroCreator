@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Ir a...
 	w_Lang114 =	Mostrar grupos como comentarios
+	w_Lang115 =	Cambia á vista en árbore
+	w_Lang116 =	Cambia á vista de lista
 		
 ; 15. Command Windows		
 	c_Lang001 =	Rato

@@ -313,6 +313,8 @@
 	w_Lang112 =	Novo (Ctrl+N)
 	w_Lang113 =	Ir para...
 	w_Lang114 =	Mostrar grupos como comentários
+	w_Lang115 =	Mudar para visão em árvore
+	w_Lang116 =	Mudar para visão em lista
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

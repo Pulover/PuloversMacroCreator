@@ -313,6 +313,8 @@
 	w_Lang112 =	Nou (Ctrl+N)
 	w_Lang113 =	Anar a...
 	w_Lang114 =	Mostra els grups com a comentaris
+	w_Lang115 =	Canvieu a la visualització d'arbre
+	w_Lang116 =	Canvia a la visualització de llista
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratolí

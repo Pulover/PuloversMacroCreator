@@ -313,6 +313,8 @@
 	w_Lang112 =	Új (Ctrl+N)
 	w_Lang113 =	Menj...
 	w_Lang114 =	Csoportok megjelenítése megjegyzésként
+	w_Lang115 =	Váltson fa nézetre
+	w_Lang116 =	Váltás listanézetre
 		
 ; 15. Command Windows		
 	c_Lang001 =	Egér

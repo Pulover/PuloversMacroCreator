@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Jít do...
 	w_Lang114 =	Zobrazit skupiny jako komentáře
+	w_Lang115 =	Přepnout do stromového zobrazení
+	w_Lang116 =	Přepnout na zobrazení seznamu
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš

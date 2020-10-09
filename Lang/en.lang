@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Go to...
 	w_Lang114 =	Show groups as comments
+	w_Lang115 =	Switch to tree view
+	w_Lang116 =	Switch to list view
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

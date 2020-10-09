@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Minema...
 	w_Lang114 =	Kuva rühmad kommentaaridena
+	w_Lang115 =	Lülitu puuvaatele
+	w_Lang116 =	Lülituge loendivaatele
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiir

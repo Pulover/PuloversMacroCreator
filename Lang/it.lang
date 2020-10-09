@@ -313,6 +313,8 @@
 	w_Lang112 =	Nuovo (Ctrl+N)
 	w_Lang113 =	Vai a...
 	w_Lang114 =	Mostra i gruppi come commenti
+	w_Lang115 =	Passa alla visualizzazione struttura
+	w_Lang116 =	Passa alla visualizzazione elenco
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

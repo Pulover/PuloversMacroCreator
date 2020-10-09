@@ -313,6 +313,8 @@
 	w_Lang112 =	Nieuw (Ctrl+N)
 	w_Lang113 =	Ga naar...
 	w_Lang114 =	Geef groepen weer als opmerkingen
+	w_Lang115 =	Schakel over naar de boomstructuur
+	w_Lang116 =	Overschakelen naar lijstweergave
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis

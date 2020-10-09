@@ -313,6 +313,8 @@
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Ići...
 	w_Lang114 =	Prikaži grupe kao komentare
+	w_Lang115 =	Prebacite se na prikaz stabla
+	w_Lang116 =	Prebacite se na prikaz popisa
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miš

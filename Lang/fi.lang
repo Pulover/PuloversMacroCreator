@@ -313,6 +313,8 @@
 	w_Lang112 =	Uusi (Ctrl+N)
 	w_Lang113 =	Mene...
 	w_Lang114 =	Näytä ryhmät kommentteina
+	w_Lang115 =	Vaihda puunäkymään
+	w_Lang116 =	Vaihda luettelonäkymään
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiiri

@@ -313,6 +313,8 @@
 	w_Lang112 =	Ný (Ctrl + N)
 	w_Lang113 =	Fara til...
 	w_Lang114 =	Sýna hópa sem athugasemdir
+	w_Lang115 =	Skiptu yfir í trjásýn
+	w_Lang116 =	Skiptu yfir í listaskjá
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mús

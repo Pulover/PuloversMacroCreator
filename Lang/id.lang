@@ -313,6 +313,8 @@
 	w_Lang112 =	Baru (Ctrl+N)
 	w_Lang113 =	Pergi ke...
 	w_Lang114 =	Perlihatkan grup sebagai komentar
+	w_Lang115 =	Beralih ke tampilan hierarki
+	w_Lang116 =	Beralih ke tampilan daftar
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

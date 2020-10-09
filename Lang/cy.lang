@@ -313,6 +313,8 @@
 	w_Lang112 =	Newydd (Ctrl + D)
 	w_Lang113 =	Mynd i...
 	w_Lang114 =	Dangos grwpiau fel sylwadau
+	w_Lang115 =	Newid i olygfa coeden
+	w_Lang116 =	Newid i weld y rhestr
 		
 ; 15. Command Windows		
 	c_Lang001 =	Llygoden

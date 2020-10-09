@@ -313,6 +313,8 @@
 	w_Lang112 =	Nuevo (Ctrl+N)
 	w_Lang113 =	Ir...
 	w_Lang114 =	Mostrar grupos como comentarios
+	w_Lang115 =	Cambiar a la vista de árbol
+	w_Lang116 =	Cambiar a la vista de lista
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratón

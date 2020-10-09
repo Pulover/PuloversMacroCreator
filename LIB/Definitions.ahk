@@ -251,7 +251,9 @@ IconsNames := { "apply": 1
 			,	"sort": 110
 			,	"zip": 111
 			,	"email": 112
-			,	"ocr": 113 }
+			,	"ocr": 113
+			,	"treeview": 114
+			,	"listview": 115 }
 
 KeyNameRep := "
 (Join,
@@ -1112,7 +1114,8 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang112 ":41", "Open
 														, "", "Capt=" w_Lang012 ":83", "CheckHkOn=" w_Lang014 ":82"
 														, "", "OnFinish=" w_Lang020 ":20(Enabled WholeDropdown)", "SetWin=" t_Lang009 ":101"
 														, "", "WinKey=" w_Lang109 ":88", "SetJoyButton=" w_Lang110 ":32"]
-			, EditOpt: "Enabled AutoSize", Edit: ["EditButton=" w_Lang093 ":14", "CutRows=" w_Lang081 ":9", "CopyRows=" w_Lang082 ":8", "PasteRows=" w_Lang083 ":44", "Remove=" w_Lang084 ":10"
+			, EditOpt: "Enabled AutoSize", Edit: ["SwitchView=" w_Lang115 ":114"
+														, "", "EditButton=" w_Lang093 ":14", "CutRows=" w_Lang081 ":9", "CopyRows=" w_Lang082 ":8", "PasteRows=" w_Lang083 ":44", "Remove=" w_Lang084 ":10"
 														, "", "Duplicate=" w_Lang080 ":13", "SelectMenu=" t_Lang139 ":99(Enabled WholeDropdown)", "CopyTo=" w_Lang087 ":8(Enabled WholeDropdown)"
 														, "", "GroupsMode=" w_Lang097 ":104(Enabled AutoSize Dropdown)"
 														, "", "MoveUp=" w_Lang078 ":40", "MoveDn=" w_Lang079 ":39"

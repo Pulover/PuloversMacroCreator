@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.8  
+Version: 6.0.0-Beta  
 Release Date: October, 2020  
 AutoHotkey Version: 1.1.32.00  
 

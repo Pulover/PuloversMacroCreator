@@ -313,6 +313,8 @@
 	w_Lang112 =	Ny (Ctrl+N)
 	w_Lang113 =	Gå till...
 	w_Lang114 =	Visa grupper som kommentarer
+	w_Lang115 =	Byt till trädvy
+	w_Lang116 =	Byt till listvy
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
