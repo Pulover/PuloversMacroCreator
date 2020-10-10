@@ -142,7 +142,6 @@
 
 	LVLoad(List, Code)
 	{
-		global UserDefFunctions
 		static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
 		
 		Gui, chMacro:Default
@@ -151,90 +150,7 @@
 		LV_Delete()
 		For each, Col in Code.Row
 		{
-			Loop, % Col.Length()
-				Col[A_Index] := RegExReplace(Col[A_Index], (Code.Version = "") ? "¢" : _x, "|")
-			chk := SubStr(Col[1], 1, 1)
-			((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
-			((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
-			((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
-			((Col[6] = "Variable") && (!InStr(Col[2], " Variable]"))) ? (Col[6] := "Function") : ""
-			Col[6] := RegExReplace(Col[6], "\s", "_")
-			If (Col[6] = "UserFunction")
-			{
-				If (!InStr(UserDefFunctions, " " Col[3] " "))
-				{
-					StringLower, UserDefFunc, % Col[3]
-					UserDefFunctions .= UserDefFunc " "
-				,	SetUserWords(UserDefFunctions)
-				}
-			}
-			If (Code.Version < "5.0.2")
-			{
-				If (Col[6] = "SendEmail")
-				{
-					Action := Col[2]
-					StringSplit, Act, Action, :
-					Action := SubStr(Col[2], StrLen(Act1) + 2)
-				,	Col[2] := Act1, Col[3] := Action "=" Col[3]
-				}
-				If ((Col[6] = "DownloadFiles") || (Col[6] = "Zip") || (Col[6] = "Unzip"))
-					Col[8] := Col[7], Col[7] := Col[2], Col[2] := "[" StrReplace(Col[6], "Files") "]"
-				If ((InStr(Col[6], "Search")) || (Col[6] = "Variable") || (Col[6] = "Function"))
-					Col[3] := StrReplace(Col[3], "``,", ","), Col[7] := StrReplace(Col[7], "``,", ","), Col[8] := StrReplace(Col[8], "``,", ",")
-			}
-			If (Code.Version = "")
-			{
-				Col[3] := CheckForExp(Col[3])
-				Col[4] := CheckForExp(Col[4])
-				Col[5] := CheckForExp(Col[5])
-				Col[7] := CheckForExp(Col[7])
-				Col[8] := CheckForExp(Col[8])
-				If ((Col[2] = "[Assign Variable]") && (Col[7] = "Expression"))
-					Col[3] := CheckComExp(Col[3])
-				If (Col[6] = "Function")
-				{
-					RegExMatch(Col[3], "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
-					Col[3] := Out1 " " Out2 " " CheckExp(Out3)
-				}
-				If (Col[6] = "COMInterface")
-				{
-					Action := Col[2]
-					StringSplit, Act, Action, :
-					If (Act2 != "")
-						Details := Act2 " := " Act1 "." CheckComExp(Col[3],,, Act1)
-					Else
-					{
-						Details := "", Step := StrReplace(Col[3], "``n", "`n")
-						Loop, Parse, Step, `n, %A_Space%%A_Tab%
-						{
-							If (A_LoopField = "")
-								continue
-							ComExp := CheckComExp(A_LoopField,,, Act1)
-							Details .= Act1 "." ComExp "``n"
-						}
-					}
-					Col[2] := Act1, Col[3] := Details
-				}
-				If ((Col[6] = "VBScript") || (Col[6] = "JScript"))
-				{
-					Act := SubStr(Col[2], 1, 2)
-					LV_Add("Check" chk, 1, "[Assign Variable]", Act "Code := " Col[3], 1, 0, "Variable")
-					Details := Act ".Language := """ Col[6] """"
-					Details .= "`n" Act ".ExecuteStatement(" Act "Code)"
-					Col[2] := Act, Col[3] := Details, Col[6] := "COMInterface"
-				}
-				If (InStr(Col[6], "Search"))
-				{
-					If (Col[7] = "Break")
-						Col[7] := "UntilFound"
-					If (Col[7] = "Continue")
-						Col[7] := "UntilNotFound"
-				}
-				If (InStr(Col[6], "Win") = 1)
-					Col[3] := StrReplace(Col[3], "``,", ",")
-				If ((Col[6] != "MsgBox") && (Col[6] != "PixelSearch") && (Col[6] != "ImageSearch"))
-					Col[8] := StrReplace(Col[8], "``,", ",")
-			}
+			this.CompileRow(chk, Col)
 			LV_Add("Check" chk, Col*)
 		}
 		GuiControl, chMacro:+Redraw, %List%
@@ -269,18 +185,15 @@
 
 	TVLoad(Labels)
 	{
-		local TVDataString := "", CodeGroups := [], NextGroup := 1, Pars
+		local TVData := [], CodeGroups := [], NextGroup := 1, Pars, LevelDepth
 		static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
-		OutputDebug, % "Loading... " this.PmcCode.Length()
-		
 		Gui, tvMacro:Default
+		GuiControl, tvMacro:-Redraw, InputTree
 		TV_Delete()
 		For Idx, Code in this.PmcCode
 		{
-			OutputDebug, % "Name: " Labels[Idx]
-			OutputDebug, % "Rows: " Code.Row.Length()
-			OutputDebug, % "Groups: " this.PmcGroups[Idx]
-			TVDataString .= "`t" Labels[Idx] "`tIcon42 Check1`n"
+			LevelDepth := GpConfig ? 2 : 1
+		,	TVData.Push({Content: Labels[Idx], Level: 0, Options: "Icon46 Check1"})
 			Loop, Parse, % this.PmcGroups[Idx], `,, %A_Space%
 			{
 				Pars := StrSplit(A_LoopField, ":", A_Space)
@@ -288,102 +201,123 @@
 			}
 			For each, Col in Code.Row
 			{
-				If (CodeGroups[NextGroup].Row = each)
-					TVDataString .= "`t`t" CodeGroups[NextGroup].Name "`tIcon104 Check1`n", NextGroup++
-				Loop, % Col.Length()
-					Col[A_Index] := RegExReplace(Col[A_Index], (Code.Version = "") ? "¢" : _x, "|")
-				chk := SubStr(Col[1], 1, 1)
-				((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
-				((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
-				((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
-				((Col[6] = "Variable") && (!InStr(Col[2], " Variable]"))) ? (Col[6] := "Function") : ""
-				Col[6] := RegExReplace(Col[6], "\s", "_")
-				If (Col[6] = "UserFunction")
+				If ((GpConfig) && (CodeGroups[NextGroup].Row = each))
+					TVData.Push({Content: CodeGroups[NextGroup].Name, Level: 1, Options: "Icon104 Check1"}), NextGroup++
+				this.CompileRow(chk, Col)
+				Type := Col[6], Action := Col[2]
+				If (Action = "[Else]")
+					LevelDepth--
+				TVData.Push({Content: each ":" _w . Col[2] ", " Col[3], Level: LevelDepth, Options: "Icon" GetIconForType(Col[6], Col[2]) " Check" chk})
+				If ((Type = cType17) || (Action = "[LoopStart]"))
+					LevelDepth++
+				Else
 				{
-					If (!InStr(UserDefFunctions, " " Col[3] " "))
-					{
-						StringLower, UserDefFunc, % Col[3]
-						UserDefFunctions .= UserDefFunc " "
-					,	SetUserWords(UserDefFunctions)
-					}
+					TVData.Push({Content: _w . w_Lang033 ": "  Col[4], Level: LevelDepth + 1, Options: "Icon36", HideCheck: true}
+							,	{Content: _w . w_Lang034 ": "  Col[5], Level: LevelDepth + 1, Options: "Icon45", HideCheck: true}
+							,	{Content: _w . w_Lang035 ": "  Col[6], Level: LevelDepth + 1, Options: "Icon29", HideCheck: true})
+					If (Col[7] != "")
+						TVData.Push({Content: _w . w_Lang036 ": " Col[7], Level: LevelDepth + 1, Options: "Icon7", HideCheck: true})
+					If (Col[8] != "")
+						TVData.Push({Content: _w . w_Lang037 ": " Col[8], Level: LevelDepth + 1, Options: "Icon79", HideCheck: true})
+					If (Col[9] != "")
+						TVData.Push({Content: _w . w_Lang038 ": " Col[9], Level: LevelDepth + 1, Options: "Icon5", HideCheck: true})
 				}
-				If (Code.Version < "5.0.2")
-				{
-					If (Col[6] = "SendEmail")
-					{
-						Action := Col[2]
-						StringSplit, Act, Action, :
-						Action := SubStr(Col[2], StrLen(Act1) + 2)
-					,	Col[2] := Act1, Col[3] := Action "=" Col[3]
-					}
-					If ((Col[6] = "DownloadFiles") || (Col[6] = "Zip") || (Col[6] = "Unzip"))
-						Col[8] := Col[7], Col[7] := Col[2], Col[2] := "[" StrReplace(Col[6], "Files") "]"
-					If ((InStr(Col[6], "Search")) || (Col[6] = "Variable") || (Col[6] = "Function"))
-						Col[3] := StrReplace(Col[3], "``,", ","), Col[7] := StrReplace(Col[7], "``,", ","), Col[8] := StrReplace(Col[8], "``,", ",")
-				}
-				If (Code.Version = "")
-				{
-					Col[3] := CheckForExp(Col[3])
-					Col[4] := CheckForExp(Col[4])
-					Col[5] := CheckForExp(Col[5])
-					Col[7] := CheckForExp(Col[7])
-					Col[8] := CheckForExp(Col[8])
-					If ((Col[2] = "[Assign Variable]") && (Col[7] = "Expression"))
-						Col[3] := CheckComExp(Col[3])
-					If (Col[6] = "Function")
-					{
-						RegExMatch(Col[3], "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
-						Col[3] := Out1 " " Out2 " " CheckExp(Out3)
-					}
-					If (Col[6] = "COMInterface")
-					{
-						Action := Col[2]
-						StringSplit, Act, Action, :
-						If (Act2 != "")
-							Details := Act2 " := " Act1 "." CheckComExp(Col[3],,, Act1)
-						Else
-						{
-							Details := "", Step := StrReplace(Col[3], "``n", "`n")
-							Loop, Parse, Step, `n, %A_Space%%A_Tab%
-							{
-								If (A_LoopField = "")
-									continue
-								ComExp := CheckComExp(A_LoopField,,, Act1)
-								Details .= Act1 "." ComExp "``n"
-							}
-						}
-						Col[2] := Act1, Col[3] := Details
-					}
-					If ((Col[6] = "VBScript") || (Col[6] = "JScript"))
-					{
-						Act := SubStr(Col[2], 1, 2)
-						LV_Add("Check" chk, 1, "[Assign Variable]", Act "Code := " Col[3], 1, 0, "Variable")
-						Details := Act ".Language := """ Col[6] """"
-						Details .= "`n" Act ".ExecuteStatement(" Act "Code)"
-						Col[2] := Act, Col[3] := Details, Col[6] := "COMInterface"
-					}
-					If (InStr(Col[6], "Search"))
-					{
-						If (Col[7] = "Break")
-							Col[7] := "UntilFound"
-						If (Col[7] = "Continue")
-							Col[7] := "UntilNotFound"
-					}
-					If (InStr(Col[6], "Win") = 1)
-						Col[3] := StrReplace(Col[3], "``,", ",")
-					If ((Col[6] != "MsgBox") && (Col[6] != "PixelSearch") && (Col[6] != "ImageSearch"))
-						Col[8] := StrReplace(Col[8], "``,", ",")
-				}
-				TVDataString .= "`t`t`t" Col[1] ": " Col[2] ", " Col[3] "`tIcon" GetIconForType(Col[6], Col[2]) " Check" chk "`n"
-							.	"`t`t`t`t" w_Lang033 ": " Col[4] "`tIcon36`t*`n"
-							.	"`t`t`t`t" w_Lang034 ": " Col[5] "`tIcon45`t*`n"
-							.	"`t`t`t`t" w_Lang035 ": " Col[6] "`tIcon29`t*`n"
-							.	"`t`t`t`t" w_Lang036 ": " Col[7] "`tIcon7`t*`n"
-							.	"`t`t`t`t" w_Lang037 ": " Col[8] "`tIcon79`t*`n"
-							.	"`t`t`t`t" w_Lang038 ": " Col[9] "`tIcon5`t*`n"
+				If (Action = "[End If]") || (Action = "[LoopEnd]")
+					LevelDepth--
 			}
 		}
-		CreateTreeView(TVDataString, hMacroTv)
+		CreateTreeView(TVData, hMacroTv)
+		GuiControl, tvMacro:+Redraw, InputTree
+	}
+
+	CompileRow(ByRef chk, ByRef Col)
+	{
+		global UserDefFunctions
+
+		Loop, % Col.Length()
+			Col[A_Index] := RegExReplace(Col[A_Index], (Code.Version = "") ? "¢" : _x, "|")
+		chk := SubStr(Col[1], 1, 1)
+		((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
+		((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
+		((Col[6] = "LoopRegistry") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Reg")) : ""
+		((Col[6] = "Variable") && (!InStr(Col[2], " Variable]"))) ? (Col[6] := "Function") : ""
+		Col[6] := RegExReplace(Col[6], "\s", "_")
+		If (Col[6] = "UserFunction")
+		{
+			If (!InStr(UserDefFunctions, " " Col[3] " "))
+			{
+				StringLower, UserDefFunc, % Col[3]
+				UserDefFunctions .= UserDefFunc " "
+			,	SetUserWords(UserDefFunctions)
+			}
+		}
+		If (Code.Version < "5.0.2")
+		{
+			If (Col[6] = "SendEmail")
+			{
+				Action := Col[2]
+				StringSplit, Act, Action, :
+				Action := SubStr(Col[2], StrLen(Act1) + 2)
+			,	Col[2] := Act1, Col[3] := Action "=" Col[3]
+			}
+			If ((Col[6] = "DownloadFiles") || (Col[6] = "Zip") || (Col[6] = "Unzip"))
+				Col[8] := Col[7], Col[7] := Col[2], Col[2] := "[" StrReplace(Col[6], "Files") "]"
+			If ((InStr(Col[6], "Search")) || (Col[6] = "Variable") || (Col[6] = "Function"))
+				Col[3] := StrReplace(Col[3], "``,", ","), Col[7] := StrReplace(Col[7], "``,", ","), Col[8] := StrReplace(Col[8], "``,", ",")
+		}
+		If (Code.Version = "")
+		{
+			Col[3] := CheckForExp(Col[3])
+			Col[4] := CheckForExp(Col[4])
+			Col[5] := CheckForExp(Col[5])
+			Col[7] := CheckForExp(Col[7])
+			Col[8] := CheckForExp(Col[8])
+			If ((Col[2] = "[Assign Variable]") && (Col[7] = "Expression"))
+				Col[3] := CheckComExp(Col[3])
+			If (Col[6] = "Function")
+			{
+				RegExMatch(Col[3], "sU)(.+)\s(\W?\W\W?)(?-U)\s(.*)", Out)
+				Col[3] := Out1 " " Out2 " " CheckExp(Out3)
+			}
+			If (Col[6] = "COMInterface")
+			{
+				Action := Col[2]
+				StringSplit, Act, Action, :
+				If (Act2 != "")
+					Details := Act2 " := " Act1 "." CheckComExp(Col[3],,, Act1)
+				Else
+				{
+					Details := "", Step := StrReplace(Col[3], "``n", "`n")
+					Loop, Parse, Step, `n, %A_Space%%A_Tab%
+					{
+						If (A_LoopField = "")
+							continue
+						ComExp := CheckComExp(A_LoopField,,, Act1)
+						Details .= Act1 "." ComExp "``n"
+					}
+				}
+				Col[2] := Act1, Col[3] := Details
+			}
+			If ((Col[6] = "VBScript") || (Col[6] = "JScript"))
+			{
+				Act := SubStr(Col[2], 1, 2)
+				LV_Add("Check" chk, 1, "[Assign Variable]", Act "Code := " Col[3], 1, 0, "Variable")
+				Details := Act ".Language := """ Col[6] """"
+				Details .= "`n" Act ".ExecuteStatement(" Act "Code)"
+				Col[2] := Act, Col[3] := Details, Col[6] := "COMInterface"
+			}
+			If (InStr(Col[6], "Search"))
+			{
+				If (Col[7] = "Break")
+					Col[7] := "UntilFound"
+				If (Col[7] = "Continue")
+					Col[7] := "UntilNotFound"
+			}
+			If (InStr(Col[6], "Win") = 1)
+				Col[3] := StrReplace(Col[3], "``,", ",")
+			If ((Col[6] != "MsgBox") && (Col[6] != "PixelSearch") && (Col[6] != "ImageSearch"))
+				Col[8] := StrReplace(Col[8], "``,", ",")
+		}
 	}
 	
 	FormatCmd(ColTxt, Type)

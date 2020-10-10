@@ -11811,6 +11811,43 @@ Tooltip
 return
 
 InputTree:
+_w := Chr(2)
+If (RowCheckInProgress)
+	return
+Critical
+If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
+{
+	If ((InStr(ErrorLevel, "c")) || (Chr(A_EventInfo) = " "))
+	{
+		NodeID := TV_GetSelection()
+		TV_GetText(NodeText, NodeID)
+		If (InStr(NodeText, _w) = 1)
+		{
+			VarSetCapacity(TvItem, 28)
+			Info := A_PtrSize = 4 ? {0:8,4:NodeID,12:0xf000} : {0:8,8:NodeID,20:0xf000}
+			For Offset, Value in Info
+				NumPut(Value, TvItem, Offset)
+			SendMessage, 4415, 0, &TvItem, SysTreeView321, ahk_id%hMacroTv%
+		}
+	}
+}
+If (A_GuiEvent != "DoubleClick")
+	return
+TV_GetText(NodeText, A_EventInfo)
+If (RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch))
+	RowNumber := NodeMatch1
+Else
+{
+	ParentNode := TV_GetParent(A_EventInfo)
+	TV_GetText(NodeText, ParentNode)
+	RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch)
+	RowNumber := NodeMatch1
+}
+If (!RowNumber)
+	return
+Critical, Off
+GoSub, Edit
+Tooltip
 return
 
 GuiContextMenu:
@@ -13126,6 +13163,8 @@ return
 
 Edit:
 GoSub, ClearPars
+Gui, chMacro:Default
+Gui, chMacro:Listview, InputList%A_List%
 LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
 If (Action = "[LoopEnd]")
 	return
