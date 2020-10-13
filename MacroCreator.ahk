@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.8
+; Version: 5.2.9
 ; Release Date: October, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.8
+;@Ahk2Exe-SetVersion 5.2.9
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -141,7 +141,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.2.8", ReleaseDate := "October, 2020"
+CurrentVersion := "5.2.9", ReleaseDate := "October, 2020"
 
 ;##### Ini File Read #####
 
@@ -11692,7 +11692,6 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 	}
 	If (InStr(ErrorLevel, "c"))
 	{
-		SavePrompt(true, A_ThisLabel)
 		HistCheck(A_List)
 		If (AutoRefresh = 1)
 			GoSub, PrevRefresh
@@ -11908,6 +11907,9 @@ Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
+RN := 0
+Loop, % LV_GetCount("Selected")
+	RN := LV_GetNext(RN), LVManager[A_List].InsertAtGroup(RN)
 If (LVCopier.Duplicate())
 {
 	GoSub, RowCheck
@@ -11924,7 +11926,7 @@ Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 If (LV_GetCount("Selected") = 0)
 	return
-LVCopier.Copy()
+InMemoryRows := LVCopier.Copy()
 return
 
 CutRows:
@@ -11937,7 +11939,7 @@ If (LV_GetCount("Selected") = 0)
 	GuiControl, chMacro:+gInputList, InputList%A_List%
 	return
 }
-LVCopier.Cut()
+InMemoryRows := LVCopier.Cut()
 GoSub, RowCheck
 GoSub, b_Start
 GuiControl, chMacro:+gInputList, InputList%A_List%
@@ -11950,6 +11952,15 @@ Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
+If (!InMemoryRows)
+	return
+RN := 0
+Loop, % LV_GetCount("Selected")
+{
+	RN := LV_GetNext(RN)
+	Loop, %InMemoryRows%
+		LVManager[A_List].InsertAtGroup(RN)
+}
 If (LVCopier.Paste(, true))
 {
 	GoSub, RowCheck

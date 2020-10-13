@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.8  
+Version: 5.2.9  
 Release Date: October, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -36,6 +36,10 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.2.9
+* Fixed bugs in duplicate and paste in groups.
+* Fixed mixed history when adding slots after using undo.
 
 ## Version 5.2.8
 * Added option to show Group names as comments in *View menu* > *Preview Script* and Preview toolbar.

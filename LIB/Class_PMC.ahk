@@ -120,8 +120,8 @@
 				OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
 				Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
 				LVManager[TabCount] := new LV_Rows(ListID%TabCount%)
-				LVManager[TabCount].Add()
 				LVManager[TabCount].SetGroups(this.PmcGroups[A_Index])
+				LVManager[TabCount].Add()
 				GuiControl, chMacro:+gInputList, InputList%TabCount%
 			}
 		}
