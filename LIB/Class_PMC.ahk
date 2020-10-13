@@ -142,15 +142,13 @@
 
 	LVLoad(List, Code)
 	{
-		static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
-		
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%
 		GuiControl, chMacro:-Redraw, %List%
 		LV_Delete()
 		For each, Col in Code.Row
 		{
-			this.CompileRow(chk, Col)
+			this.CompileRow(Code.Version, chk, Col)
 			LV_Add("Check" chk, Col*)
 		}
 		GuiControl, chMacro:+Redraw, %List%
@@ -158,7 +156,7 @@
 
 	LVGet(List, DL := "|")
 	{
-		static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
+		static _x := Chr(3)
 		
 		Gui, chMacro:Default
 		Gui, chMacro:ListView, %List%
@@ -186,14 +184,14 @@
 	TVLoad(Labels)
 	{
 		local TVData := [], CodeGroups := [], NextGroup := 1, Pars, LevelDepth
-		static _w := Chr(2), _x := Chr(3), _y := Chr(4), _z := Chr(5)
+		static _w := Chr(2)
 		Gui, tvMacro:Default
 		GuiControl, tvMacro:-Redraw, InputTree
 		TV_Delete()
 		For Idx, Code in this.PmcCode
 		{
 			LevelDepth := GpConfig ? 2 : 1
-		,	TVData.Push({Content: Labels[Idx], Level: 0, Options: "Icon46 Check1"})
+		,	TVData.Push({Content: _w . Labels[Idx], Level: 0, Options: "Icon42 Check1", HideCheck: true})
 			Loop, Parse, % this.PmcGroups[Idx], `,, %A_Space%
 			{
 				Pars := StrSplit(A_LoopField, ":", A_Space)
@@ -202,8 +200,8 @@
 			For each, Col in Code.Row
 			{
 				If ((GpConfig) && (CodeGroups[NextGroup].Row = each))
-					TVData.Push({Content: CodeGroups[NextGroup].Name, Level: 1, Options: "Icon104 Check1"}), NextGroup++
-				this.CompileRow(chk, Col)
+					TVData.Push({Content: _w . CodeGroups[NextGroup].Name, Level: 1, Options: "Icon104 Check1", HideCheck: true}), NextGroup++
+				this.CompileRow(Code.Version, chk, Col)
 				Type := Col[6], Action := Col[2]
 				If (Action = "[Else]")
 					LevelDepth--
@@ -230,12 +228,13 @@
 		GuiControl, tvMacro:+Redraw, InputTree
 	}
 
-	CompileRow(ByRef chk, ByRef Col)
+	CompileRow(Version, ByRef chk, ByRef Col)
 	{
 		global UserDefFunctions
+		static _x := Chr(3)
 
 		Loop, % Col.Length()
-			Col[A_Index] := RegExReplace(Col[A_Index], (Code.Version = "") ? "¢" : _x, "|")
+			Col[A_Index] := RegExReplace(Col[A_Index], (Version = "") ? "¢" : _x, "|")
 		chk := SubStr(Col[1], 1, 1)
 		((Col[2] = "[Pause]") && (Col[6] != "Sleep")) ? (Col[2] := "[" Col[6] "]") : ""
 		((Col[6] = "LoopFilePattern") && (RegExMatch(Col[3], "```, \d```, \d"))) ? (Col[3] := this.FormatCmd(Col[3], "Files")) : ""
@@ -251,7 +250,7 @@
 			,	SetUserWords(UserDefFunctions)
 			}
 		}
-		If (Code.Version < "5.0.2")
+		If (Version < "5.0.2")
 		{
 			If (Col[6] = "SendEmail")
 			{
@@ -265,7 +264,7 @@
 			If ((InStr(Col[6], "Search")) || (Col[6] = "Variable") || (Col[6] = "Function"))
 				Col[3] := StrReplace(Col[3], "``,", ","), Col[7] := StrReplace(Col[7], "``,", ","), Col[8] := StrReplace(Col[8], "``,", ",")
 		}
-		If (Code.Version = "")
+		If (Version = "")
 		{
 			Col[3] := CheckForExp(Col[3])
 			Col[4] := CheckForExp(Col[4])

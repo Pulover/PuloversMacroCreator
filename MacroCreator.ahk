@@ -1682,9 +1682,15 @@ return
 SwitchView:
 MacroView := (MacroView = "List") ? "Tree" : "List"
 If (MacroView = "List")
+{
 	RbMacro.ShowBand(1, false), RbMacro.ShowBand(2)
+	GuiControl, chMacro:Focus, InputList%A_List%
+}
 Else
+{
 	RbMacro.ShowBand(2, false), RbMacro.ShowBand(1)
+	GuiControl, tvMacro:Focus, InputTree
+}
 TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang115 : w_Lang116, (MacroView = "List") ? 114 : 115)
 return
 
@@ -4740,7 +4746,7 @@ If (A_ThisLabel = "MouseApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -5919,7 +5925,7 @@ If (A_ThisLabel = "TextApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -6427,7 +6433,7 @@ If (A_ThisLabel = "PauseApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -6856,7 +6862,7 @@ If (A_ThisLabel = "LoopApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -6949,7 +6955,7 @@ If (A_ThisLabel = "GotoApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -7035,7 +7041,7 @@ If (A_ThisLabel = "TimedLabelApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -7078,7 +7084,7 @@ Else
 }
 GoSub, RowCheck
 GoSub, b_Start
-GuiControl, Focus, InputList%A_List%
+GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 return
 
 LUntil:
@@ -7377,7 +7383,7 @@ If (A_ThisLabel = "WinApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -7856,7 +7862,7 @@ If (A_ThisLabel = "ImageApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -8304,7 +8310,7 @@ If (A_ThisLabel = "RunApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -8809,7 +8815,7 @@ If (A_ThisLabel = "IfApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -8924,7 +8930,7 @@ If (A_ThisLabel = "VarApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -8960,7 +8966,7 @@ Else
 }
 GoSub, RowCheck
 GoSub, b_Start
-GuiControl, Focus, InputList%A_List%
+GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 return
 
 VarCopy:
@@ -9294,7 +9300,7 @@ If (A_ThisLabel = "SendMsgApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -9504,7 +9510,7 @@ If (A_ThisLabel = "ControlApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -9719,7 +9725,7 @@ If (A_ThisLabel = "EmailApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -9963,7 +9969,7 @@ If (A_ThisLabel = "DownloadApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -10338,7 +10344,7 @@ If (A_ThisLabel = "ComApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -10982,7 +10988,7 @@ If (A_ThisLabel = "UDFApply")
 Else
 {
 	s_Caller := ""
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 }
 return
 
@@ -11815,11 +11821,40 @@ _w := Chr(2)
 If (RowCheckInProgress)
 	return
 Critical
+If ((A_GuiEvent = "Normal") || (A_GuiEvent = "f") || (A_GuiEvent = "+") || (A_GuiEvent = "-"))
+	return
+NodeID := TV_GetSelection(), Node := NodeID, TopNode := ""
+While (Node != 0)
+	Node := TV_GetParent(Node), TopNode := Node = 0 ? TopNode : Node
+TV_GetText(TopText, TopNode), SelectedMacro := ""
+If (TopNode = "")
+	TV_GetText(TopText, NodeID)
+For Index, Label in CopyMenuLabels
+{
+	If (Label = TopText)
+	{
+		SelectedMacro := Index
+		break
+	}
+}
+TV_GetText(NodeText, NodeID)
+chk := TV_Get(NodeID, "C") = NodeID
+RowNumber := 0
+If (RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch))
+	RowNumber := NodeMatch1
+GuiControl, chMacro:Choose, A_List, %SelectedMacro%
+Gui, chMacro:Default
+Gui, chMacro:Submit, NoHide
+Gui, chMacro:ListView, InputList%A_List%
+If (RowNumber)
+	LV_Modify(0, "-Select"), LV_Modify(RowNumber, "Check" chk " Select Vis")
+GoSub, TabSel
+Gui, tvMacro:Default
+Gui, tvMacro:Submit, NoHide
 If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 {
-	If ((InStr(ErrorLevel, "c")) || (Chr(A_EventInfo) = " "))
+	If (Chr(A_EventInfo) = " ")
 	{
-		NodeID := TV_GetSelection()
 		TV_GetText(NodeText, NodeID)
 		If (InStr(NodeText, _w) = 1)
 		{
@@ -11833,12 +11868,16 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 }
 If (A_GuiEvent != "DoubleClick")
 	return
-TV_GetText(NodeText, A_EventInfo)
-If (RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch))
-	RowNumber := NodeMatch1
-Else
+If (!RowNumber)
 {
 	ParentNode := TV_GetParent(A_EventInfo)
+	If (ParentNode = 0)
+	{
+		GoSub, EditSelectedMacro
+		return
+	}
+	If (ParentNode = TopNode)
+		return
 	TV_GetText(NodeText, ParentNode)
 	RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch)
 	RowNumber := NodeMatch1
@@ -11974,7 +12013,7 @@ ListCount%d_List% := LV_GetCount()
 HistCheck(d_List)
 GoSub, RowCheck
 Gui, chMacro:ListView, InputList%s_List%
-GuiControl, Focus, InputList%A_List%
+GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 return
 
 Duplicate:
@@ -12193,7 +12232,8 @@ GoSub, RowCheck
 GuiControl, 28:, OSHK, %A_List%
 GoSub, PrevRefresh
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
-GuiControl, chMacro:Focus, InputList%A_List%
+If (MacroView = "List")
+	GuiControl, chMacro:Focus, InputList%A_List%
 If (InStr(CopyMenuLabels[A_List], "()"))
 	GoSub, FuncTab
 Else
@@ -13435,7 +13475,7 @@ If (A_ThisLabel = "EditApply")
 	Gui, 15:Default
 }
 Else
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 return
 
 EditCancel:
@@ -13604,7 +13644,7 @@ Else
 If (A_ThisLabel = "MultiApply")
 	Gui, 6:Default
 Else
-	GuiControl, Focus, InputList%A_List%
+	GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 GoSub, RowCheck
 GoSub, b_Start
 return
@@ -13806,7 +13846,7 @@ Else
 }
 GoSub, RowCheck
 GoSub, b_Start
-GuiControl, Focus, InputList%A_List%
+GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 s_Caller := ""
 return
 
@@ -13829,7 +13869,7 @@ Else
 }
 GoSub, RowCheck
 GoSub, b_Start
-GuiControl, Focus, InputList%A_List%
+GuiControl, Focus, % (MacroView = "List") ? "InputList" A_List : "InputTree"
 return
 
 CommCancel:
