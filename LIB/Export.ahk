@@ -590,8 +590,9 @@ IfStReplace(ByRef Action, ByRef Step)
 	If Action in %c_If14%,%c_If15%
 	{
 		Action := "If"
-		StringReplace, Step, Step, `%,, All
-		Step := "(" Step ")"
+		CompareParse(Trim(Step, "()"), VarName, Oper, VarValue)
+		If Oper not in in,not in,contains,not contains,is,is not,between,not between
+			Step := "(" Step ")"
 	}
 	Else If Action in %c_If7%,%c_If8%
 	{
