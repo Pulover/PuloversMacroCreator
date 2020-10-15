@@ -689,7 +689,9 @@ Class LV_Rows extends LV_Rows.LV_EX
         For e, g in this.Handle.GroupsArray
             Groups[e] := {Name: g.Name, Row: g.Row}
         
-        this.Handle.Slot.Push({Rows: Rows, Groups: Groups})
+        SlotsAhead := this.Handle.Slot.Length() - this.Handle.ActiveSlot
+    ,   SlotsAhead > 0 ? this.Handle.Slot.RemoveAt(this.Handle.ActiveSlot + 1, SlotsAhead) : ""
+    ,   this.Handle.Slot.Push({Rows: Rows, Groups: Groups})
     ,   this.Handle.ActiveSlot := this.Handle.Slot.Length()
         return this.Handle.Slot.Length()
     }

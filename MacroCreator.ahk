@@ -1680,6 +1680,7 @@ Gui, % (OnTop) ? "2:+AlwaysOnTop" : "2:-AlwaysOnTop"
 return
 
 SwitchView:
+_w := Chr(2)
 MacroView := (MacroView = "List") ? "Tree" : "List"
 If (MacroView = "List")
 {
@@ -1688,7 +1689,14 @@ If (MacroView = "List")
 }
 Else
 {
+	Gui, chMacro:Default
+	Gui, chMacro:Submit, NoHide
+	Gui, chMacro:ListView, InputList%A_List%
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups)
 	RbMacro.ShowBand(2, false), RbMacro.ShowBand(1)
+	If (SelectedRow)
+		TVSelectRow(SelectedRow, CopyMenuLabels[A_List], TVData)
 	GuiControl, tvMacro:Focus, InputTree
 }
 TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang115 : w_Lang116, (MacroView = "List") ? 114 : 115)
@@ -11732,7 +11740,6 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 	}
 	If (InStr(ErrorLevel, "c"))
 	{
-		SavePrompt(true, A_ThisLabel)
 		HistCheck(A_List)
 		If (AutoRefresh = 1)
 			GoSub, PrevRefresh
@@ -11821,14 +11828,19 @@ _w := Chr(2)
 If (RowCheckInProgress)
 	return
 Critical
-If ((A_GuiEvent = "Normal") || (A_GuiEvent = "f") || (A_GuiEvent = "+") || (A_GuiEvent = "-"))
+If ((A_GuiEvent = "f") || (A_GuiEvent = "+") || (A_GuiEvent = "-"))
 	return
-NodeID := TV_GetSelection(), Node := NodeID, TopNode := ""
+If (A_GuiEvent = "Normal")
+	NodeID := A_EventInfo
+Else
+	NodeID := TV_GetSelection()
+Node := NodeID, TopNode := ""
 While (Node != 0)
 	Node := TV_GetParent(Node), TopNode := Node = 0 ? TopNode : Node
 TV_GetText(TopText, TopNode), SelectedMacro := ""
 If (TopNode = "")
 	TV_GetText(TopText, NodeID)
+TopText := SubStr(TopText, 2)
 For Index, Label in CopyMenuLabels
 {
 	If (Label = TopText)
@@ -11851,6 +11863,12 @@ If (RowNumber)
 GoSub, TabSel
 Gui, tvMacro:Default
 Gui, tvMacro:Submit, NoHide
+If (RowNumber)
+{
+	Gui, tvMacro:Default
+	Gui, tvMacro:Submit, NoHide
+	TV_Modify(NodeID, "Select Vis")
+}
 If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 {
 	If (Chr(A_EventInfo) = " ")
@@ -12021,6 +12039,9 @@ Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
+RN := 0
+Loop, % LV_GetCount("Selected")
+	RN := LV_GetNext(RN), LVManager[A_List].InsertAtGroup(RN)
 If (LVCopier.Duplicate())
 {
 	GoSub, RowCheck
@@ -12037,7 +12058,7 @@ Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 If (LV_GetCount("Selected") = 0)
 	return
-LVCopier.Copy()
+InMemoryRows := LVCopier.Copy()
 return
 
 CutRows:
@@ -12050,7 +12071,7 @@ If (LV_GetCount("Selected") = 0)
 	GuiControl, chMacro:+gInputList, InputList%A_List%
 	return
 }
-LVCopier.Cut()
+InMemoryRows := LVCopier.Cut()
 GoSub, RowCheck
 GoSub, b_Start
 GuiControl, chMacro:+gInputList, InputList%A_List%
@@ -12063,6 +12084,15 @@ Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
+If (!InMemoryRows)
+	return
+RN := 0
+Loop, % LV_GetCount("Selected")
+{
+	RN := LV_GetNext(RN)
+	Loop, %InMemoryRows%
+		LVManager[A_List].InsertAtGroup(RN)
+}
 If (LVCopier.Paste(, true))
 {
 	GoSub, RowCheck
@@ -12158,12 +12188,22 @@ Gui, chMacro:Submit, NoHide
 Gui, chMacro:Listview, InputList%A_List%
 GuiControl, chMacro:-Redraw, InputList%A_List%
 GuiControl, chMacro:-g, InputList%A_List%
-SelRow := LV_GetNext(0, "Focused")
+SelRow := LV_GetNext(0, "Focused"), SelectedRow := LV_GetNext()
 If (LVManager[A_List].Undo())
 {
 	SelRow ? LV_Modify(SelRow, "Select Focus Vis") : ""
 	GoSub, RowCheck
 	GoSub, b_Enable
+	If (MacroView = "Tree")
+	{
+		Gui, chMacro:Default
+		Gui, chMacro:Submit, NoHide
+		Gui, chMacro:ListView, InputList%A_List%
+		TVData := PMC.TVLoad(ShowGroups)
+		If (SelectedRow)
+			TVSelectRow(SelectedRow, CopyMenuLabels[A_List], TVData)
+		GuiControl, tvMacro:Focus, InputTree
+	}
 }
 GuiControl, chMacro:+gInputList, InputList%A_List%
 GuiControl, chMacro:+Redraw, InputList%A_List%
@@ -12179,12 +12219,22 @@ Gui, chMacro:Submit, NoHide
 Gui, chMacro:Listview, InputList%A_List%
 GuiControl, chMacro:-Redraw, InputList%A_List%
 GuiControl, chMacro:-g, InputList%A_List%
-SelRow := LV_GetNext(0, "Focused")
+SelRow := LV_GetNext(0, "Focused"), SelectedRow := LV_GetNext()
 If (LVManager[A_List].Redo())
 {
 	SelRow ? LV_Modify(SelRow, "Select Focus Vis")
 	GoSub, RowCheck
 	GoSub, b_Enable
+	If (MacroView = "Tree")
+	{
+		Gui, chMacro:Default
+		Gui, chMacro:Submit, NoHide
+		Gui, chMacro:ListView, InputList%A_List%
+		TVData := PMC.TVLoad(ShowGroups)
+		If (SelectedRow)
+			TVSelectRow(SelectedRow, CopyMenuLabels[A_List], TVData)
+		GuiControl, tvMacro:Focus, InputTree
+	}
 }
 GuiControl, chMacro:+gInputList, InputList%A_List%
 GuiControl, chMacro:+Redraw, InputList%A_List%
@@ -12218,6 +12268,7 @@ GoSub, chMacroGuiSize
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, 28:+Range1-%TabCount%, OSHK
+GoSub, tv_Update
 
 TabSel:
 GoSub, SaveData
@@ -12306,6 +12357,7 @@ Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:, A_List, |%s_List%
 GuiControl, chMacro:Choose, A_List, % (A_List < TabCount) ? A_List : TabCount
 Gui, chMacro:Submit, NoHide
+GoSub, tv_Update
 GoSub, LoadData
 GoSub, TabSel
 SavePrompt(true, A_ThisLabel)
@@ -12481,6 +12533,8 @@ Menu, CopyTo, Add, % CopyMenuLabels[1], CopyList, Radio
 Menu, CopyTo, Check, % CopyMenuLabels[1]
 Gosub, ResetHotkeys
 Gosub, ClearTimers
+Gui, tvMacro:Default
+TV_Delete()
 UserDefFunctions := SyHi_UserDef " ", SetUserWords(UserDefFunctions)
 return
 
@@ -15326,7 +15380,10 @@ b_Start:
 Gui, 1:Submit, NoHide
 GoSub, b_Enable
 If (!Record)
+{
 	HistCheck()
+	GoSub, tv_Update
+}
 return
 
 b_Enable:
@@ -15361,6 +15418,20 @@ Gui, chMacro:ListView, InputList%A_List%
 GuiControl, chMacro:+Redraw, InputList%A_List%
 If (ShowGroups)
 	GoSub, EnableGroups
+return
+
+tv_Update:
+If (MacroView = "Tree")
+{
+	Gui, chMacro:Default
+	Gui, chMacro:Submit, NoHide
+	Gui, chMacro:ListView, InputList%A_List%
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups)
+	If (SelectedRow)
+		TVSelectRow(SelectedRow, CopyMenuLabels[A_List], TVData)
+	GuiControl, tvMacro:Focus, InputTree
+}
 return
 
 WinCheck:
@@ -16287,6 +16358,8 @@ If (ShowGroups)
 Else
 	Menu, GroupMenu, Uncheck, %e_Lang018%`t%_s%Ctrl+Shift+G
 GoSub, PrevRefresh
+If (MacroView = "Tree")
+	PMC.TVLoad(ShowGroups)
 return
 
 RemoveGroup:

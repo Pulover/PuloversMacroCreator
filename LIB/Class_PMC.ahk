@@ -50,13 +50,13 @@
 		return ID
 	}
 
-	Import(SelectedFile, DL := "`n", New := "1")
+	Import(SelectedFile, DL := "`n", IsNew := "1")
 	{
 		local FoundC, Labels, TabText, AutoRefreshState
 		
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(11, ListID%A_List%)
-		If (New)
+		If (IsNew)
 		{
 			GoSub, DelLists
 			GuiControl, chMacro:Choose, A_List, 1
@@ -120,8 +120,8 @@
 				OnFinishCode := (Opt[6] != "") ? Opt[6] : 1
 				Labels .= ((Opt[7] != "") ? Opt[7] : "Macro" TabCount) "|"
 				LVManager[TabCount] := new LV_Rows(ListID%TabCount%)
-				LVManager[TabCount].Add()
 				LVManager[TabCount].SetGroups(this.PmcGroups[A_Index])
+				LVManager[TabCount].Add()
 				GuiControl, chMacro:+gInputList, InputList%TabCount%
 			}
 		}
@@ -137,7 +137,7 @@
 		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 		GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
 		Gui, 1:-Disabled
-		this.TVLoad(CopyMenuLabels)
+		this.TVLoad(GpConfig)
 	}
 
 	LVLoad(List, Code)
@@ -181,44 +181,43 @@
 		return Data
 	}
 
-	TVLoad(Labels)
+	TVLoad(Groups)
 	{
-		local TVData := [], CodeGroups := [], NextGroup := 1, Pars, LevelDepth
+		local Lists := [], TVData := [], NextGroup, Pars, LevelDepth
 		static _w := Chr(2)
+		
+		Loop, %TabCount%
+			Lists.Push(LVManager[A_Index].Handle.Slot[LVManager[A_Index].Handle.ActiveSlot])
+
 		Gui, tvMacro:Default
 		GuiControl, tvMacro:-Redraw, InputTree
 		TV_Delete()
-		For Idx, Code in this.PmcCode
+		For Idx, Code in Lists
 		{
-			LevelDepth := GpConfig ? 2 : 1
-		,	TVData.Push({Content: _w . Labels[Idx], Level: 0, Options: "Icon42 Check1", HideCheck: true})
-			Loop, Parse, % this.PmcGroups[Idx], `,, %A_Space%
+			LevelDepth := Groups ? 2 : 1, NextGroup := 1
+		,	TVData.Push({Content: _w . CopyMenuLabels[Idx], Level: 0, Options: "Icon42 Check1", HideCheck: true})
+			For each, Col in Code.Rows
 			{
-				Pars := StrSplit(A_LoopField, ":", A_Space)
-			,   CodeGroups.Push({Name: Pars[1], Row: Pars[2]})
-			}
-			For each, Col in Code.Row
-			{
-				If ((GpConfig) && (CodeGroups[NextGroup].Row = each))
-					TVData.Push({Content: _w . CodeGroups[NextGroup].Name, Level: 1, Options: "Icon104 Check1", HideCheck: true}), NextGroup++
-				this.CompileRow(Code.Version, chk, Col)
-				Type := Col[6], Action := Col[2]
+				If ((Groups) && (Code.Groups[NextGroup].Row = each))
+					TVData.Push({Content: _w . Code.Groups[NextGroup].Name, Level: 1, Options: "Icon104 Check1", HideCheck: true}), NextGroup++
+				chk := InStr(Col[1], "Check1")
+				Type := Col[7], Action := LTrim(Col[3])
 				If (Action = "[Else]")
 					LevelDepth--
-				TVData.Push({Content: each ":" _w . Col[2] ", " Col[3], Level: LevelDepth, Options: "Icon" GetIconForType(Col[6], Col[2]) " Check" chk})
+				TVData.Push({Content: each ":" _w . Action ", " Col[4], Level: LevelDepth, Options: "Icon" GetIconForType(Type, Action) " Check" chk})
 				If ((Type = cType17) || (Action = "[LoopStart]"))
 					LevelDepth++
 				Else
 				{
-					TVData.Push({Content: _w . w_Lang033 ": "  Col[4], Level: LevelDepth + 1, Options: "Icon36", HideCheck: true}
-							,	{Content: _w . w_Lang034 ": "  Col[5], Level: LevelDepth + 1, Options: "Icon45", HideCheck: true}
-							,	{Content: _w . w_Lang035 ": "  Col[6], Level: LevelDepth + 1, Options: "Icon29", HideCheck: true})
-					If (Col[7] != "")
-						TVData.Push({Content: _w . w_Lang036 ": " Col[7], Level: LevelDepth + 1, Options: "Icon7", HideCheck: true})
+					TVData.Push({Content: _w . w_Lang033 ": "  Col[5], Level: LevelDepth + 1, Options: "Icon36", HideCheck: true}
+							,	{Content: _w . w_Lang034 ": "  Col[6], Level: LevelDepth + 1, Options: "Icon45", HideCheck: true}
+							,	{Content: _w . w_Lang035 ": "  Col[7], Level: LevelDepth + 1, Options: "Icon29", HideCheck: true})
 					If (Col[8] != "")
-						TVData.Push({Content: _w . w_Lang037 ": " Col[8], Level: LevelDepth + 1, Options: "Icon79", HideCheck: true})
+						TVData.Push({Content: _w . w_Lang036 ": " Col[8], Level: LevelDepth + 1, Options: "Icon7", HideCheck: true})
 					If (Col[9] != "")
-						TVData.Push({Content: _w . w_Lang038 ": " Col[9], Level: LevelDepth + 1, Options: "Icon5", HideCheck: true})
+						TVData.Push({Content: _w . w_Lang037 ": " Col[9], Level: LevelDepth + 1, Options: "Icon79", HideCheck: true})
+					If (Col[10] != "")
+						TVData.Push({Content: _w . w_Lang038 ": " Col[10], Level: LevelDepth + 1, Options: "Icon5", HideCheck: true})
 				}
 				If (Action = "[End If]") || (Action = "[LoopEnd]")
 					LevelDepth--
@@ -226,6 +225,7 @@
 		}
 		CreateTreeView(TVData, hMacroTv)
 		GuiControl, tvMacro:+Redraw, InputTree
+		return TVData
 	}
 
 	CompileRow(Version, ByRef chk, ByRef Col)

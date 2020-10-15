@@ -1226,6 +1226,28 @@ LVCallback(Func, Hwnd)
 	return true
 }
 
+TVSelectRow(SelectedRow, MacroLabel, TVData)
+{
+	local CurrentMacro
+	static _w := Chr(2)
+
+	For Key, Item in TVData
+	{
+		If (Item.Level = 0)
+		{
+			CurrentMacro := SubStr(Item.Content, 2)
+				continue
+		}
+		If (CurrentMacro != MacroLabel)
+			continue
+		If (RegExMatch(Item.Content, "^" SelectedRow ":" _w ".*"))
+		{
+			TV_Modify(Item.ID, "Select Vis")
+			return
+		}
+	}
+}
+
 RowCheckFunc()
 {
 	local LvData, RowData, Rows := []

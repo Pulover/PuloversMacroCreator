@@ -12,9 +12,9 @@ CreateTreeView(TreeViewDefinition, hwnd := "")
 	For Key, Item in TreeViewDefinition
 	{
 		If (Item.Level = 0)
-			IDs["Level0"] := TV_Add(Item.Content, 0, Item.Options)
+			IDs["Level0"] := Item.ID := TV_Add(Item.Content, 0, Item.Options)
 		Else
-			IDs["Level" Item.Level] := TV_Add(Item.Content, IDs["Level" Item.Level-1], Item.Options)
+			IDs["Level" Item.Level] := Item.ID := TV_Add(Item.Content, IDs["Level" Item.Level-1], Item.Options)
 		If (Item.HideCheck)
 		{
 			VarSetCapacity(TvItem, 28)
