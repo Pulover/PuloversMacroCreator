@@ -8717,6 +8717,15 @@ If (InStr(Statement, "Compare"))
 		return
 	}
 	TestVar := TestVar " " IfOper " " TestVar2
+	If IfOper in =,==,!=,>,<,>=,<=
+	{
+		If (RegExMatch(TestVar2, "%\w+%"))
+		{
+			MsgBox, 52, %d_Lang011%, %d_Lang097%`n`n%d_Lang035%
+			IfMsgBox, No
+				return
+		}
+	}
 }
 Else If (InStr(Statement, "String"))
 {
@@ -8899,6 +8908,17 @@ GuiControl, 21:+AltSubmit, IfOper
 Gui, 21:Submit, NoHide
 GuiControl, 21:, CoOper, % IfOper < 10 ? Co_Oper_0%IfOper% : Co_Oper_%IfOper%
 GuiControl, 21:-AltSubmit, IfOper
+Gui, 21:Submit, NoHide
+If IfOper in =,==,!=,>,<,>=,<=
+{
+	GuiControl, 21:Hide, VarTxt
+	GuiControl, 21:Show, ExprLink1
+}
+Else
+{
+	GuiControl, 21:Hide, ExprLink1
+	GuiControl, 21:Show, VarTxt
+}
 return
 
 AsOper:
@@ -9129,6 +9149,23 @@ If (Statement = If15)
 	GuiControl, 21:Hide, VarTxt
 	GuiControl, 21:Show, ExpTxt
 	GuiControl, 21:Show, ExprLink1
+}
+Else If (Statement = If14)
+{
+	If IfOper in =,==,!=,>,<,>=,<=
+	{
+		GuiControl, 21:Hide, VarTxt
+		GuiControl, 21:Show, ExprLink1
+	}
+	Else
+	{
+		GuiControl, 21:Hide, ExprLink1
+		GuiControl, 21:Show, VarTxt
+	}
+	GuiControl, 21:Hide, ExpTxt
+	GuiControl, 21:Show, CoOper
+	GuiControl, 21:Show, IfOper
+	GuiControl, 21:Show, TestVar2
 }
 Else
 {

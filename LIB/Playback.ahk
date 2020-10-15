@@ -2088,7 +2088,7 @@ SplitStep(CustomVars, Step)
 ,	Step := StrReplace(Step, "``r", "`r")
 ,	Step := StrReplace(Step, "``t", "`t")
 ,	Step := StrReplace(Step, "``v", "`v")
-,	Step := StrReplace(Step, "``%", "%")
+; ,	Step := StrReplace(Step, "``%", "%")
 ,	Step := StrReplace(Step, "``;", ";")
 ,	Step := StrReplace(Step, "``::", "::")
 ,	Step := StrReplace(Step, "````", "``")
@@ -2526,7 +2526,7 @@ AssignVar(_Name, _Operator, _Value, CustomVars, RunningFunction)
 CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckVar3 := "", ByRef CheckVar4 := "")
 {
 	global d_Lang007, d_Lang035, d_Lang065, d_Lang066, d_Lang088, StopIt
-	Loop, 5
+	Loop, 4
 	{
 		If (!IsByRef(CheckVar%A_Index%))
 			continue
@@ -2538,7 +2538,7 @@ CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckV
 	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``r", "`r")
 	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``t", "`t")
 	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``v", "`v")
-	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``%", "%")
+	; ,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``%", "%")
 	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``;", ";")
 	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "``::", "::")
 	,	CheckVar%A_Index% := StrReplace(CheckVar%A_Index%, "````", "``")
@@ -2575,7 +2575,7 @@ CheckVars(CustomVars, ByRef CheckVar1 := "", ByRef CheckVar2 := "", ByRef CheckV
 	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``r", "`r")
 	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``t", "`t")
 	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``v", "`v")
-	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``%", "%")
+	; ,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``%", "%")
 	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``;", ";")
 	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "``::", "::")
 	,	CheckVar%_i% := StrReplace(CheckVar%_i%, "````", "``")
@@ -2586,6 +2586,7 @@ DerefVars(v_String)
 {
 	global
 	
+	OutputDebug, % v_String
 	v_String := StrReplace(v_String, "%A_Space%", "%_z%")
 ,	v_String := StrReplace(v_String, "``%", _w)
 	While (RegExMatch(v_String, "%(\w+)%", rMatch))

@@ -601,9 +601,10 @@
 
 	Parameters:
 		Options DropdownList - Selects the statement to evaluate. If the statement resolves to true the commands inside below the If Statement will be executed, otherwise they will be skipped until *EndIf* or an *Else* is reached.  
-			For *Compare Variables* the VarName to the left of the operator should NOT be enclosed in percent signs, only the variables to the right of it must use them.  
-			The operators accepted are:  
+			For *Compare Variables* the Variable (left of the operator) should NOT be enclosed in percent signs. The Value (right of operator) can be any valid expression when the operator is one of the ones below:  
 			> =, ==, <>, !=, >, <, >=, <=.  
+			Strings must be enclosed in quotes.  
+			For the other operators you can use variables enclosed in percent signs or literal strings without quotes.  
 			*Evaluate Expression* can evaluate any valid expression as true or false. Variables must NOT be enclosed in percent signs. For more information see [Expressions](../Variables.html#expressions).
 		Add Else - Add an *Else* Statement. If the If Statement above it resolves to false the commands below it will be executed instead, otherwise they will be skipped until *EndIf* is reached. This should be placed before the *EndIf*.
 		Else If - Creates an *Else If* statement, which means that the statement must be inside another If block and will be evaluated only if the If before it evaluates to false. When this option is checked the *EndIf* row will not be created.
