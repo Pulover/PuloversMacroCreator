@@ -2113,20 +2113,8 @@ IfEval(_Name, _Operator, _Value)
 {
 	Switch _Operator
 	{
-		Case "=":
-			result := (_Name = _Value) ? true : false
-		Case "==":
-			result := (_Name == _Value) ? true : false
-		Case "!=", "<>":
-			result := (_Name != _Value) ? true : false
-		Case ">":
-			result := (_Name > _Value) ? true : false
-		Case "<":
-			result := (_Name < _Value) ? true : false
-		Case ">=":
-			result := (_Name >= _Value) ? true : false
-		Case "<=":
-			result := (_Name <= _Value) ? true : false
+		Case "=", "==","!=", "<>", ">", "<", ">=", "<=":
+			result := Eval(_Name " " _Operator " " _Value)[1]
 		Case "in":
 			If _Name in %_Value%
 				result := true
@@ -2586,7 +2574,6 @@ DerefVars(v_String)
 {
 	global
 	
-	OutputDebug, % v_String
 	v_String := StrReplace(v_String, "%A_Space%", "%_z%")
 ,	v_String := StrReplace(v_String, "``%", _w)
 	While (RegExMatch(v_String, "%(\w+)%", rMatch))
