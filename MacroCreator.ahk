@@ -1192,7 +1192,7 @@ IfExist, %DefaultMacro%
 	AutoRefreshState := AutoRefresh, AutoRefresh := 0
 	GpConfig := ShowGroups, ShowGroups := false
 	LVManager[A_List].EnableGroups(false)
-	PMC.Import(DefaultMacro)
+	TVData := PMC.Import(DefaultMacro)
 	GoSub, UpdateCopyTo
 	GoSub, SetFinishButton
 	CurrentFileName := LoadedFileName
@@ -2055,7 +2055,7 @@ If (SavePrompt, A_ThisLabel)
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
 GpConfig := ShowGroups, ShowGroups := false
 LVManager[A_List].EnableGroups(false)
-PMC.Import(A_GuiEvent)
+TVData := PMC.Import(A_GuiEvent)
 GoSub, UpdateCopyTo
 GoSub, SetFinishButton
 CurrentFileName := LoadedFileName
@@ -2092,7 +2092,7 @@ GpConfig := ShowGroups, ShowGroups := false
 LVManager[A_List].EnableGroups(false)
 GoSub, ClearHistory
 Sleep, 100
-PMC.Import(Files)
+TVData := PMC.Import(Files)
 GoSub, UpdateCopyTo
 GoSub, SetFinishButton
 CurrentFileName := LoadedFileName, Files := ""
@@ -2147,7 +2147,7 @@ Files := RTrim(Files, "`n")
 AutoRefreshState := AutoRefresh, AutoRefresh := 0
 GpConfig := ShowGroups, ShowGroups := false
 LVManager[A_List].EnableGroups(false)
-PMC.Import(Files,, 0)
+TVData := PMC.Import(Files,, 0)
 GoSub, UpdateCopyTo
 GoSub, SetFinishButton
 Files := ""
@@ -2305,7 +2305,7 @@ GpConfig := ShowGroups, ShowGroups := false
 LVManager[A_List].EnableGroups(false)
 GoSub, ClearHistory
 Sleep, 100
-PMC.Import(File)
+TVData := PMC.Import(File)
 GoSub, UpdateCopyTo
 GoSub, SetFinishButton
 CurrentFileName := LoadedFileName, Files := ""
@@ -11862,12 +11862,23 @@ return
 
 InputTree:
 _w := Chr(2)
+c_List := A_List
 If (RowCheckInProgress)
 	return
 Critical
-If ((A_GuiEvent = "f") || (A_GuiEvent = "+") || (A_GuiEvent = "-"))
+If (A_GuiEvent == "F")
+{
+	TreeFocus := 1
 	return
-If (A_GuiEvent = "Normal")
+}
+If (A_GuiEvent == "f")
+{
+	TreeFocus := 0
+	return
+}
+If ((A_GuiEvent = "+") || (A_GuiEvent = "-"))
+	return
+If ((A_GuiEvent = "Normal") || (A_GuiEvent = "RightClick"))
 	NodeID := A_EventInfo
 Else
 	NodeID := TV_GetSelection()
@@ -11897,15 +11908,11 @@ Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
 If (RowNumber)
 	LV_Modify(0, "-Select"), LV_Modify(RowNumber, "Check" chk " Select Vis")
-GoSub, TabSel
+If (A_List != c_List)
+	GoSub, TabSel
 Gui, tvMacro:Default
 Gui, tvMacro:Submit, NoHide
-If (RowNumber)
-{
-	Gui, tvMacro:Default
-	Gui, tvMacro:Submit, NoHide
-	TV_Modify(NodeID, "Select Vis")
-}
+TV_Modify(NodeID, "Select Vis")
 If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 {
 	If (Chr(A_EventInfo) = " ")
@@ -11947,9 +11954,28 @@ return
 GuiContextMenu:
 If (Dest_Row)
 	return
+IsTopNode := false
 MouseGetPos,,,, cHwnd, 2
 If (cHwnd = ListID%A_List%)
 	Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
+Else If (cHwnd = TreeID)
+{
+	If (!RowNumber)
+	{
+		ParentNode := TV_GetParent(A_EventInfo)
+		If ((!ParentNode) && (!TopNode))
+		{
+			IsTopNode := true
+			Menu, EditMacroMenu, Show, %A_GuiX%, %A_GuiY%
+			return
+		}
+		TV_GetText(NodeText, ParentNode)
+		RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch)
+		RowNumber := NodeMatch1
+	}
+	If (RowNumber)
+		Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
+}
 Else If (cHwnd = TabSel)
 {
 	If (ClickedTab := TabGet())
@@ -12965,6 +12991,24 @@ return
 
 EditButton:
 Gui, 1:Submit, NoHide
+If (MacroView = "Tree")
+{
+	Gui, tvMacro:Default
+	Gui, tvMacro:Submit, NoHide
+	TV_GetText(ItemText, TV_GetSelection())
+	For Key, Item in TVData
+	{
+		OutputDebug, % ItemText
+		If (Item.Level = 0)
+		{
+			If (Item.Content == ItemText)
+			{
+				GoSub, EditSelectedMacro
+				return
+			}
+		}
+	}
+}
 Gui, chMacro:Default
 RowSelection := LV_GetCount("Selected"), RowNumber := LV_GetNext()
 If (RowSelection = 1)
@@ -15811,6 +15855,12 @@ Menu, EditMenu, Add, %e_Lang014%`t%_s%Insert, ApplyL
 Menu, EditMenu, Add, %e_Lang015%`t%_s%Ctrl+Insert, InsertKey
 Menu, EditMenu, Default, %m_Lang005%`t%_s%Enter
 
+Menu, EditMacroMenu, Add, %m_Lang005%`t%_s%Enter, EditButton
+Menu, EditMacroMenu, Add
+Menu, EditMacroMenu, Add, %e_Lang023%, ExpandMacro
+Menu, EditMacroMenu, Add, %e_Lang022%, CollapseMacro
+Menu, EditMacroMenu, Default, %m_Lang005%`t%_s%Enter
+
 Menu, CustomMenu, Add, %v_Lang014%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang015%, TbCustomize
 Menu, CustomMenu, Add, %v_Lang016%, TbCustomize
@@ -16430,6 +16480,14 @@ Gui, chMacro:Listview, InputList%A_List%
 LVManager[A_List].CollapseAll(A_ThisLabel = "CollapseGroups")
 return
 
+CollapseMacro:
+TVCollapse(CopyMenuLabels[A_List], TVData)
+return
+
+ExpandMacro:
+ControlSend,, {NumpadMult}, ahk_id %TreeID%
+return
+
 ;##### Languages: #####
 
 LangChange:
@@ -16472,6 +16530,7 @@ Menu, SelectMenu, DeleteAll
 Menu, SelCmdMenu, DeleteAll
 Menu, GroupMenu, DeleteAll
 Menu, EditMenu, DeleteAll
+Menu, EditMacroMenu, DeleteAll
 Menu, CustomMenu, DeleteAll
 Menu, ToolbarsMenu, DeleteAll
 Menu, HotkeyMenu, DeleteAll

@@ -1236,7 +1236,7 @@ TVSelectRow(SelectedRow, MacroLabel, TVData)
 		If (Item.Level = 0)
 		{
 			CurrentMacro := SubStr(Item.Content, 2)
-				continue
+			continue
 		}
 		If (CurrentMacro != MacroLabel)
 			continue
@@ -1245,6 +1245,28 @@ TVSelectRow(SelectedRow, MacroLabel, TVData)
 			TV_Modify(Item.ID, "Select Vis")
 			return
 		}
+	}
+}
+
+TVCollapse(MacroLabel, TVData)
+{
+	local CurrentMacro
+	static _w := Chr(2)
+
+	Gui, tvMacro:Default
+	Gui, tvMacro:Submit, NoHide
+	For Key, Item in TVData
+	{
+		If (Item.Level = 0)
+		{
+			CurrentMacro := SubStr(Item.Content, 2)
+			If (CurrentMacro = MacroLabel)
+				TV_Modify(Item.ID, "-Expand")
+			continue
+		}
+		If (CurrentMacro != MacroLabel)
+			continue
+		TV_Modify(Item.ID, "-Expand")
 	}
 }
 

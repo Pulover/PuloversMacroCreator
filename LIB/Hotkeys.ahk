@@ -1,4 +1,4 @@
-﻿#If ListFocus && !HotkeyCtrlHasFocus()
+﻿#If (ListFocus || TreeFocus) && !HotkeyCtrlHasFocus()
 && WinActive("ahk_id" PMCWinID) && !Capt
 
 Delete::GoSub, h_Del

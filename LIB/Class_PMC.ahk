@@ -137,7 +137,7 @@
 		GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 		GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
 		Gui, 1:-Disabled
-		this.TVLoad(GpConfig)
+		return this.TVLoad(GpConfig)
 	}
 
 	LVLoad(List, Code)
@@ -205,7 +205,7 @@
 				If (Action = "[Else]")
 					LevelDepth--
 				TVData.Push({Content: each ":" _w . Action ", " Col[4], Level: LevelDepth, Options: "Icon" GetIconForType(Type, Action) " Check" chk})
-				If ((Type = cType17) || (Action = "[LoopStart]"))
+				If (((Type = cType17) && (!InStr(Action, "["))) || (Action = "[LoopStart]"))
 					LevelDepth++
 				Else
 				{
