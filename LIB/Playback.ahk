@@ -6,7 +6,7 @@
 	, NextStep, NStep, NTimesX, NType, NTarget, NWindow, _each, _value, _key, _depth, _pair, _index, _point
 	, pbParams, VarName, VarValue, Oper, RowData, ActiveRows, Increment := 0, TabIdx, RowIdx, LabelFound, Row_Type, TargetLabel, TargetFunc
 	, ScopedParams := [], UserGlobals, GlobalList, VarsList, CursorX, CursorY, TakeAction, PbCoordModes
-	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult, IsUserFunc := false
+	, Func_Result, SVRef, FuncPars, ParamIdx := 1, EvalResult, IsUserFunc := false, ProgressTip
 
 	Gui, 1:-OwnDialogs
 	
@@ -118,15 +118,17 @@
 			
 			If ((ShowProgBar = 1) && (RunningFunction = "") && (FlowControl.Break = 0) && (FlowControl.Continue = 0) && (FlowControl.If = 0))
 			{
+				ProgressTip := "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
+				Menu, Tray, Tip, %ProgressTip%
 				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType42%
 				{
 					GuiControl, 28:, OSCProg, %mListRow%
-					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
+					GuiControl, 28:, OSCProgTip, %ProgressTip%
 				}
 				Else If (ManualKey)
 				{
 					GuiControl, 28:, OSCProg, %mListRow%
-					GuiControl, 28:, OSCProgTip, % "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
+					GuiControl, 28:, OSCProgTip, %ProgressTip%
 				}
 			}
 			
@@ -936,6 +938,7 @@
 				If (StopIt)
 				{
 					Try Menu, Tray, Icon, %DefaultIcon%, 1
+					Menu, Tray, Tip, Pulovers's Macro Creator
 					Menu, Tray, Default, %w_Lang005%
 					break 3
 				}
@@ -1058,6 +1061,7 @@
 	If (!aHK_Timer0)
 	{
 		Try Menu, Tray, Icon, %DefaultIcon%, 1
+		Menu, Tray, Tip, Pulovers's Macro Creator
 		Menu, Tray, Default, %w_Lang005%
 		PlayOSOn := 0
 		tbOSC.ModifyButtonInfo(1, "Image", 48)
@@ -2109,12 +2113,12 @@ SplitStep(CustomVars, Step)
 	return Pars
 }
 
-IfEval(_Name, _Operator, _Value)
+IfEval(_Name, _Operator, _Value, _Step)
 {
 	Switch _Operator
 	{
 		Case "=", "==","!=", "<>", ">", "<", ">=", "<=":
-			result := Eval(_Name " " _Operator " " _Value)[1]
+			result := Eval(_Step)[1]
 		Case "in":
 			If _Name in %_Value%
 				result := true
@@ -2270,7 +2274,6 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 		Case If1:
 			IfWinActive, % Win[1], % Win[2], % Win[3], % Win[4]
 				return 0
-		
 		Case If2:
 			IfWinNotActive, % Win[1], % Win[2], % Win[3], % Win[4]
 				return 0
@@ -2339,7 +2342,7 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 			Else
 				VarName := %VarName%
 			VarValue := StrReplace(VarValue, "``n", "`n")
-			If (IfEval(VarName, Oper, VarValue))
+			If (IfEval(VarName, Oper, VarValue, Step))
 				return 0
 		Case If15:
 			EvalResult := Eval(Step, CustomVars)

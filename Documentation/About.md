@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.2.9  
+Version: 5.3.0  
 Release Date: October, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -36,6 +36,9 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.3.0
+* Fixed bug in *Compare variables* of *If Statements* window.
 
 ## Version 5.2.9
 * Updated *Compare variables* in *If Statements* window to use expressions with symbols operators only.

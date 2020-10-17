@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.2.9
+; Version: 5.3.0
 ; Release Date: October, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.2.9
+;@Ahk2Exe-SetVersion 5.3.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -141,7 +141,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.2.9", ReleaseDate := "October, 2020"
+CurrentVersion := "5.3.0", ReleaseDate := "October, 2020"
 
 ;##### Ini File Read #####
 
@@ -11555,6 +11555,10 @@ Gui, 28:Font
 Gui, 28:Font, s6 Bold
 Gui, 28:Add, Text, -Wrap yp x+0 W180 r1 vOSCProgTip
 Gui, 28:Add, Slider, yp-2 x+0 W65 H10 vOSTrans gTrans NoTicks Thick20 ToolTip Range25-255, %OSTrans%
+OSCPos := StrSplit(OSCPos, " ")
+OSCPos[1] := (SubStr(OSCPos[1], 2) > A_ScreenWidth || SubStr(OSCPos[1], 2) < 400) ? "X0" : OSCPos[1]
+OSCPos[2] := (SubStr(OSCPos[2], 2) > A_ScreenHeight || SubStr(OSCPos[2], 2) < 25) ? "Y0" : OSCPos[1]
+OSCPos := OSCPos[1] " " OSCPos[2]
 Gui, 28:Show, % OSCPos (ShowProgBar ? " H40" : " H30") " W380 NoActivate Hide", %AppName%
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 return
@@ -14405,6 +14409,7 @@ If (Record)
 }
 GoSub, RowCheck
 Try Menu, Tray, Icon, %DefaultIcon%, 1
+Menu, Tray, Tip, Pulovers's Macro Creator
 tbOSC.ModifyButtonInfo(1, "Image", 48)
 Tooltip
 return
@@ -14851,7 +14856,13 @@ WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
 GuiControl, 28:, OSTrans, 255
 Gui, 28:-Caption
 If (WinExist("ahk_id " PMCOSC))
+{
+	OSCPos := StrSplit(OSCPos, " ")
+	OSCPos[1] := (SubStr(OSCPos[1], 2) > A_ScreenWidth || SubStr(OSCPos[1], 2) < 400) ? "X0" : OSCPos[1]
+	OSCPos[2] := (SubStr(OSCPos[2], 2) > A_ScreenHeight || SubStr(OSCPos[2], 2) < 25) ? "Y0" : OSCPos[1]
+	OSCPos := OSCPos[1] " " OSCPos[2]
 	Gui, 28:Show, % OSCPos (ShowProgBar ? "H40" : "H30") " W415 NoActivate", %AppName%
+}
 GuiControl, 1:, CoordTip, <a>CoordMode</a>: %CoordMouse%
 GuiControl, 1:, TModeTip, <a>TitleMatchMode</a>: %TitleMatch%
 GuiControl, 1:, TSendModeTip, <a>SendMode</a>: %KeyMode%
