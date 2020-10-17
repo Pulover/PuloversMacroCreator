@@ -37,6 +37,9 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 # Change Log
 
+## Version 5.3.0
+* Fixed bug in *Compare variables* of *If Statements* window.
+
 ## Version 5.2.9
 * Updated *Compare variables* in *If Statements* window to use expressions with symbols operators only.
 * Fixed bugs in duplicate and paste in groups.
