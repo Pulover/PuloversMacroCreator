@@ -15868,8 +15868,8 @@ Menu, EditMenu, Default, %m_Lang005%`t%_s%Enter
 
 Menu, EditMacroMenu, Add, %m_Lang005%`t%_s%Enter, EditButton
 Menu, EditMacroMenu, Add
-Menu, EditMacroMenu, Add, %e_Lang023%, ExpandMacro
-Menu, EditMacroMenu, Add, %e_Lang022%, CollapseMacro
+Menu, EditMacroMenu, Add, %e_Lang023%`t%_s%*, ExpandMacro
+Menu, EditMacroMenu, Add, %e_Lang022%`t%_s%/, CollapseMacro
 Menu, EditMacroMenu, Default, %m_Lang005%`t%_s%Enter
 
 Menu, CustomMenu, Add, %v_Lang014%, TbCustomize

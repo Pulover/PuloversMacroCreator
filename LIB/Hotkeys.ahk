@@ -28,6 +28,7 @@ return
 Send {WheelRight}
 return
 
+NumpadDiv::GoSub, CollapseMacro
 ^c::GoSub, CopyRows
 ^x::GoSub, CutRows
 ^v::GoSub, PasteRows

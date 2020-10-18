@@ -202,9 +202,11 @@
 					TVData.Push({Content: _w . Code.Groups[NextGroup].Name, Level: 1, Options: "Icon104 Check1", HideCheck: true}), NextGroup++
 				chk := InStr(Col[1], "Check1")
 				Type := Col[7], Action := LTrim(Col[3])
-				If (Action = "[Else]")
+				If (InStr(Action, "[Else")=1)
 					LevelDepth--
 				TVData.Push({Content: each ":" _w . Action ", " Col[4], Level: LevelDepth, Options: "Icon" GetIconForType(Type, Action) " Check" chk})
+				If (InStr(Action, "[Else")=1)
+					LevelDepth++
 				If (((Type = cType17) && (!InStr(Action, "["))) || (Action = "[LoopStart]"))
 					LevelDepth++
 				Else
