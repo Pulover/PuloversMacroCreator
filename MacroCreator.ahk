@@ -1407,6 +1407,8 @@ RbMacro.SetMaxRows(1)
 (MacroView = "List") ? RbMacro.ModifyBand(1, "Style", "Hidden") : RbMacro.ModifyBand(2, "Style", "Hidden")
 !ShowPrev ? RbMacro.ModifyBand(3, "Style", "Hidden")
 TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang115 : w_Lang116, (MacroView = "List") ? 114 : 115)
+If (MacroView = "Tree")
+	TVData := PMC.TVLoad(ShowGroups)
 return
 
 BuildMacroWin:
@@ -1436,7 +1438,6 @@ Gui, tvMacro:Default
 TV_SetImageList(hIL_Icons)
 Gui, tvMacro:Submit
 GuiControl, tvMacro:Focus, InputTree
-CreateTreeView("`tMacro1`tIcon42 Check1`n`t`tStart`tIcon104 Check1")
 Gui, 1:Default
 return
 
@@ -1680,7 +1681,6 @@ Gui, % (OnTop) ? "2:+AlwaysOnTop" : "2:-AlwaysOnTop"
 return
 
 SwitchView:
-_w := Chr(2)
 MacroView := (MacroView = "List") ? "Tree" : "List"
 If (MacroView = "List")
 {
@@ -11865,7 +11865,6 @@ Tooltip
 return
 
 InputTree:
-_w := Chr(2)
 c_List := A_List
 If (RowCheckInProgress)
 	return
@@ -11889,10 +11888,9 @@ Else
 Node := NodeID, TopNode := ""
 While (Node != 0)
 	Node := TV_GetParent(Node), TopNode := Node = 0 ? TopNode : Node
-TV_GetText(TopText, TopNode), SelectedMacro := ""
+TopText := TVData[TopNode].Content, SelectedMacro := ""
 If (TopNode = "")
-	TV_GetText(TopText, NodeID)
-TopText := SubStr(TopText, 2)
+	TopText := TVData[NodeID].Content
 For Index, Label in CopyMenuLabels
 {
 	If (Label = TopText)
@@ -11901,11 +11899,10 @@ For Index, Label in CopyMenuLabels
 		break
 	}
 }
-TV_GetText(NodeText, NodeID)
 chk := TV_Get(NodeID, "C") = NodeID
 RowNumber := 0
-If (RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch))
-	RowNumber := NodeMatch1
+If (TVData[NodeID].Row)
+	RowNumber := TVData[NodeID].Row
 GuiControl, chMacro:Choose, A_List, %SelectedMacro%
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
@@ -11921,16 +11918,28 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 {
 	If (Chr(A_EventInfo) = " ")
 	{
-		TV_GetText(NodeText, NodeID)
-		If (InStr(NodeText, _w) = 1)
-		{
-			VarSetCapacity(TvItem, 28)
-			Info := A_PtrSize = 4 ? {0:8,4:NodeID,12:0xf000} : {0:8,8:NodeID,20:0xf000}
-			For Offset, Value in Info
-				NumPut(Value, TvItem, Offset)
-			SendMessage, 4415, 0, &TvItem, SysTreeView321, ahk_id%hMacroTv%
-		}
+		If (TVData[NodeID].HideCheck)
+			HideTVCheck(NodeID, TreeID)
 	}
+}
+If (A_GuiEvent = "D")
+{
+	If (TVData[A_EventInfo].Row = 0)
+		return
+	TargetNode := TV_Drag(A_EventInfo)
+	If (TargetNode < 0) ; Dropping as sibling
+	{
+		If (TVData[TargetNode * -1].Row = 0)
+			return
+	}
+	Else If (TargetNode > 0) ; Dropping as child
+	{
+		If ((TVData[TargetNode].Type != "If_Statement") && ((TVData[TargetNode].Type != "Loop") || (InStr(TVData[TargetNode].Content, "LoopEnd"))))
+			return
+	}
+	GuiControl, -Redraw, TreeView
+	TV_Drop(A_EventInfo, TargetNode)
+	GuiControl, +Redraw, TreeView
 }
 If (A_GuiEvent != "DoubleClick")
 	return
@@ -11944,9 +11953,8 @@ If (!RowNumber)
 	}
 	If (ParentNode = TopNode)
 		return
-	TV_GetText(NodeText, ParentNode)
-	RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch)
-	RowNumber := NodeMatch1
+	If (TVData[ParentNode].Row)
+		RowNumber := TVData[ParentNode].Row
 }
 If (!RowNumber)
 	return
@@ -11973,9 +11981,8 @@ Else If (cHwnd = TreeID)
 			Menu, EditMacroMenu, Show, %A_GuiX%, %A_GuiY%
 			return
 		}
-		TV_GetText(NodeText, ParentNode)
-		RegExMatch(NodeText, "(^\d+):" _w ".*", NodeMatch)
-		RowNumber := NodeMatch1
+		If (TVData[ParentNode].Row)
+		RowNumber := TVData[ParentNode].Row
 	}
 	If (RowNumber)
 		Menu, EditMenu, Show, %A_GuiX%, %A_GuiY%
@@ -12601,7 +12608,8 @@ Menu, CopyTo, Check, % CopyMenuLabels[1]
 Gosub, ResetHotkeys
 Gosub, ClearTimers
 Gui, tvMacro:Default
-TV_Delete()
+If (MacroView = "Tree")
+	TVData := PMC.TVLoad(ShowGroups)
 UserDefFunctions := SyHi_UserDef " ", SetUserWords(UserDefFunctions)
 return
 
@@ -12999,18 +13007,10 @@ If (MacroView = "Tree")
 {
 	Gui, tvMacro:Default
 	Gui, tvMacro:Submit, NoHide
-	TV_GetText(ItemText, TV_GetSelection())
-	For Key, Item in TVData
+	If (TVData[TV_GetSelection()].Level = 0)
 	{
-		OutputDebug, % ItemText
-		If (Item.Level = 0)
-		{
-			If (Item.Content == ItemText)
-			{
-				GoSub, EditSelectedMacro
-				return
-			}
-		}
+		GoSub, EditSelectedMacro
+		return
 	}
 }
 Gui, chMacro:Default
@@ -16457,7 +16457,7 @@ Else
 	Menu, GroupMenu, Uncheck, %e_Lang018%`t%_s%Ctrl+Shift+G
 GoSub, PrevRefresh
 If (MacroView = "Tree")
-	PMC.TVLoad(ShowGroups)
+	TVData := PMC.TVLoad(ShowGroups)
 return
 
 RemoveGroup:
@@ -17006,12 +17006,14 @@ return
 #Include <Playback>
 #Include <Export>
 #Include <TabDrag>
+#Include <CreateTreeView>
 #Include <Class_PMC>
 #Include <Class_Toolbar>
 #Include <Class_Rebar>
 #Include <Class_LV_Rows>
 #Include <Class_ObjIni>
 #Include <Class_LV_Colors>
+#Include <TV_DragAndDrop>
 #Include <IL_EX>
 #Include <Gdip_All>
 #Include <Vis2>

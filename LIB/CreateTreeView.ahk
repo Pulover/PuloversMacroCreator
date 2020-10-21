@@ -7,7 +7,7 @@
 ;###########################################################
 CreateTreeView(TreeViewDefinition, hwnd := "")
 {
-	IDs := {}
+	IDs := {}, UpdatedDefinition := {}
 
 	For Key, Item in TreeViewDefinition
 	{
@@ -15,13 +15,18 @@ CreateTreeView(TreeViewDefinition, hwnd := "")
 			IDs["Level0"] := Item.ID := TV_Add(Item.Content, 0, Item.Options)
 		Else
 			IDs["Level" Item.Level] := Item.ID := TV_Add(Item.Content, IDs["Level" Item.Level-1], Item.Options)
+		UpdatedDefinition[Item.ID] := Item
 		If (Item.HideCheck)
-		{
-			VarSetCapacity(TvItem, 28)
-			Info := A_PtrSize = 4 ? {0:8,4:IDs["Level" Item.Level],12:0xf000} : {0:8,8:IDs["Level" Item.Level],20:0xf000}
-			For Offset, Value in Info
-				NumPut(Value, TvItem, Offset)
-			SendMessage, 4415, 0, &TvItem, SysTreeView321, ahk_id%hwnd%
-		}
+			HideTVCheck(IDs["Level" Item.Level], hwnd)
 	}
+	return UpdatedDefinition
+}
+
+HideTVCheck(ItemId, hwnd)
+{
+	VarSetCapacity(TvItem, 28)
+	Info := A_PtrSize = 4 ? {0:8,4:ItemId,12:0xf000} : {0:8,8:ItemId,20:0xf000}
+	For Offset, Value in Info
+		NumPut(Value, TvItem, Offset)
+	SendMessage, 4415, 0, &TvItem, SysTreeView321, ahk_id%hwnd%
 }

@@ -564,7 +564,7 @@ Class LV_Rows extends LV_Rows.LV_EX
         MouseGetPos,,, LV_Win, LV_LView, 2
         WinGetPos, Win_X, Win_Y, Win_W, Win_H, ahk_id %LV_Win%
         ControlGetPos, LV_lx, LV_ly, LV_lw, LV_lh, , ahk_id %LV_LView%
-        LV_lw := LV_lw * 96 / A_ScreenDPI
+        LV_lw := LV_lw * 96 // A_ScreenDPI
     ,   VarSetCapacity(LV_XYstruct, 16, 0)
 
         While (GetKeyState(DragButton, "P"))
