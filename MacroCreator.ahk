@@ -11781,7 +11781,7 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 	}
 	If (InStr(ErrorLevel, "c"))
 	{
-		HistCheck(A_List)
+		; HistCheck(A_List) ; Programmatically pasting rows casues this event to be triggered!
 		If (AutoRefresh = 1)
 			GoSub, PrevRefresh
 	}
@@ -11919,7 +11919,7 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 	If (Chr(A_EventInfo) = " ")
 	{
 		If (TVData[NodeID].HideCheck)
-			HideTVCheck(NodeID, TreeID)
+			HideTVCheck(NodeID, hMacroTv)
 	}
 }
 If (A_GuiEvent = "D")
@@ -11937,8 +11937,40 @@ If (A_GuiEvent = "D")
 		If ((TVData[TargetNode].Type != "If_Statement") && ((TVData[TargetNode].Type != "Loop") || (InStr(TVData[TargetNode].Content, "LoopEnd"))))
 			return
 	}
+	NodeIDs := [A_EventInfo], TID := A_EventInfo, MovedRows := []
+	Loop
+	{
+		TID := TV_GetNext(TID, "Full")
+		If (TVData[TID].Level <= TVData[A_EventInfo].Level)
+			break
+		NodeIDs.Push(TID)
+	}
 	GuiControl, -Redraw, TreeView
-	TV_Drop(A_EventInfo, TargetNode)
+	If (TID := TV_Drop(A_EventInfo, TargetNode))
+	{
+		GuiControl, +Redraw, TreeView
+		For key, value in NodeIDs
+		{
+			TVData[TID] := TVData[value].Clone()
+			TVData[TID].ID := TID
+			If (TVData[TID].HideCheck)
+				HideTVCheck(TID, hMacroTv)
+			TVData.Delete(value)
+			If (TVData[TID].Row)
+				MovedRows.Push(TVData[TID].Row)
+			TID := TV_GetNext(TID, "Full")
+		}
+		Gui, chMacro:Default
+		Gui, chMacro:Submit, NoHide
+		Gui, chMacro:ListView, InputList%A_List%
+		LV_Modify(0, "-Select")
+		For key, value in MovedRows
+			LV_Modify(value, "Select")
+		LVCopier.Cut()
+		LVCopier.Paste(TVData[TID].Row)
+		GoSub, RowCheck
+		HistCheck()
+	}
 	GuiControl, +Redraw, TreeView
 }
 If (A_GuiEvent != "DoubleClick")
@@ -17016,6 +17048,7 @@ return
 #Include <TV_DragAndDrop>
 #Include <IL_EX>
 #Include <Gdip_All>
+#Include <JSON>
 #Include <Vis2>
 #Include <Eval>
 #Include <SCI>

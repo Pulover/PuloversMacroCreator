@@ -10,7 +10,7 @@
 ;
 ; Usage:
 ;
-;    Call TV_Drag() from the TreeView's G-Label when A_GuiEvent contains "D".
+;    Call TV_Drag() from the TreeView's G-Label when A_GuiEvent contains "D" or "d".
 ;    A line will show across the TreeView while holding the button to indicate the
 ;        destination where the selected node will be dropped with its children. If you
 ;        point the mouse cursor to the half bottom part of the node text it will be
@@ -20,8 +20,12 @@
 ;    TV_Drag() returns the target node id (if valid) which you can use to call TV_Drop()
 ;        and effectively move the selection. Alternatively you can set AutoDrop option
 ;        on as a shorthand.
+;
+;    TV_Drop() may be called directly to move or copy nodes programmatically. You may
+;        pass the TreeView control's hwnd to keep icons and set Copy parameter to true
+;        if you want to copy nodes instead of moving.
 ;=======================================================================================
-TV_Drag(Origin, AutoDrop := False, LineThick := 2, Color := "Black")
+TV_Drag(Origin, DragButton := "D", AutoDrop := False, LineThick := 2, Color := "Black")
 {
     Static TVM_HITTEST     := 0x1111
     Static TVM_SELECTITEM  := 0x110B
@@ -30,13 +34,18 @@ TV_Drag(Origin, AutoDrop := False, LineThick := 2, Color := "Black")
 
     BlockedIds := []
 
+    If (InStr(DragButton, "d", true))
+        DragButton := "RButton"
+    Else
+        DragButton := "LButton"
+
     CoordMode, Mouse, Window
     MouseGetPos,,, TV_Win, TV_TView, 2
     WinGetPos, Win_X, Win_Y, Win_W, Win_H, ahk_id %TV_Win%
     ControlGetPos, TV_lx, TV_ly, TV_lw, TV_lh, , ahk_id %TV_TView%
     TV_lw := TV_lw * 96 // A_ScreenDPI
 
-    While (GetKeyState("LButton", "P"))
+    While (GetKeyState(DragButton, "P"))
     {
         MouseGetPos, TV_mx, TV_my,, CurrCtrl, 2
 
@@ -92,15 +101,17 @@ TV_Drag(Origin, AutoDrop := False, LineThick := 2, Color := "Black")
     return Line_P = "Child" ? HitTarget : -HitTarget
 }
 ;=======================================================================================
-TV_Drop(Origin, Target)
+TV_Drop(Origin, Target, Hwnd := "", Copy := False)
 {
-    MouseGetPos,,,, TV_TView, 2
+    If (!Hwnd)
+        MouseGetPos,,,, Hwnd, 2
     TargetID := Target < 0 ? Target * -1 : Target
     If ((Target) && (Origin != TargetID))
     {
-        NewNodeId := MoveNodes(Origin, Target, TV_TView)
+        NewNodeId := MoveNodes(Origin, Target, Hwnd)
         TV_Modify(Target, "Expand")
-        TV_Delete(Origin)
+        If (!Copy)
+            TV_Delete(Origin)
     }
     return NewNodeId
 }
