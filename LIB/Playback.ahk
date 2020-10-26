@@ -1029,9 +1029,12 @@
 		
 		For _each, _value in SVRef
 		{
-			If (Static_Vars[RunningFunction].HasKey(_each))
-				Static_Vars[RunningFunction][_each] := %_each%
-			%_each% := _value
+			try
+			{
+				If (Static_Vars[RunningFunction].HasKey(_each))
+					Static_Vars[RunningFunction][_each] := %_each%
+				%_each% := _value
+			}
 		}
 		
 		For _each, _value in ScopedParams
@@ -1231,6 +1234,9 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		MouseGetPos, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%
 		_null := ""
 		Try SavedVars(Par1,,, RunningFunction)
+		Try SavedVars(Par2,,, RunningFunction)
+		Try SavedVars(Par3,,, RunningFunction)
+		Try SavedVars(Par4,,, RunningFunction)
 	return
 	pb_PixelGetColor:
 		PixelGetColor, %Par1%, %Par2%, %Par3%, %Par4%
@@ -1632,7 +1638,14 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		ExitApp
 	return
 	pb_ListVars:
-		GoSub, ListVars
+		SavedVars(, UserVars,, RunningFunction)
+		FilteredVars := ""
+		Loop, Parse, UserVars, `n
+			FilteredVars .= RegExMatch(A_LoopField, ":\s$") ? "" : A_LoopField "`n"
+		FilteredVars := RTrim(FilteredVars, "`n")
+		FileDelete, %SettingsFolder%\ListOfVars.txt
+		FileAppend, %FilteredVars%, %SettingsFolder%\ListOfVars.txt
+		Run, %DefaultEditor% %SettingsFolder%\ListOfVars.txt
 	return
 	pb_StatusBarGetText:
 		StatusBarGetText, %Par1%, %Par2%, %Par3%, %Par4%, %Par5%, %Par6%

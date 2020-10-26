@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.3.0  
+Version: 5.3.1  
 Release Date: October, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -36,6 +36,12 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.3.1
+* Fixed bugs in subraction operations in expressions.
+* Fixed bug in scoped variables in functions.
+* Fixed **ListVars** not showing local variables inside functions.
+* Fixed OutputVars of **MouseGetPos** not showing in **ListVars**.
 
 ## Version 5.3.0
 * Fixed bug in *Compare variables* of *If Statements* window.

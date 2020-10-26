@@ -541,8 +541,6 @@ ExprCompile(e)
 ExprEval(e,lp,eo,el)
 {
 	c1:=Chr(1)
-	While (RegExMatch(e,c1 "l-[\d\.]++(?!" c1 "o)"))
-	e:=RegExReplace(e,c1 "l-([\d\.]+)",c1 "l$1" c1 "o-")
 	Loop,Parse,e,%c1%
 	{
 		lf:=A_LoopField,tt:=SubStr(lf,1,1),t:=SubStr(lf,2)
@@ -770,7 +768,7 @@ Exprt(e)
 		m2:=StrReplace(m2,".","'2E",,1)
 		e1.=SubStr(e,f1,f-f1) . m1 . c1 . "n" . m2 . c1,f+=StrLen(m),f1:=f
 	}
-	e:=e1 . SubStr(e,f1),e1:="",e:=RegExReplace(e,"S)(^|\(|[^" . c1 . "-])-" . c1 . "n","$1" . c1 . "n'2D")
+	e:=e1 . SubStr(e,f1),e1:="" ; ,e:=RegExReplace(e,"S)(^|\(|[^" . c1 . "-])-" . c1 . "n","$1" . c1 . "n'2D")
 ,	e:=StrReplace(e,c1 "n",c1 "l")
 ,	e:=RegExReplace(e,"\\\.(\d+)\.(\d+)",c1 . "l$1'2E$2" . c1)
 ,	e:=RegExReplace(RegExReplace(e,"S)(%[\w#@\$]{1,253})%","$1"),"S)(?:^|[^\w#@\$'" . c1 . "])\K[\w#@\$]{1,253}(?=[^\(\w#@\$]|$)",c1 . "v$0" . c1),f:=1,f1:=1

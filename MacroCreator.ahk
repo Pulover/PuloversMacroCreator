@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.3.0
+; Version: 5.3.1
 ; Release Date: October, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -74,7 +74,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.3.0
+;@Ahk2Exe-SetVersion 5.3.1
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -141,7 +141,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.3.0", ReleaseDate := "October, 2020"
+CurrentVersion := "5.3.1", ReleaseDate := "October, 2020"
 
 ;##### Ini File Read #####
 
@@ -14532,8 +14532,12 @@ return
 
 ListVars:
 SavedVars(, UserVars)
+FilteredVars := ""
+Loop, Parse, UserVars, `n
+	FilteredVars .= RegExMatch(A_LoopField, ":\s$") ? "" : A_LoopField "`n"
+FilteredVars := RTrim(FilteredVars, "`n")
 FileDelete, %SettingsFolder%\ListOfVars.txt
-FileAppend, %UserVars%, %SettingsFolder%\ListOfVars.txt
+FileAppend, %FilteredVars%, %SettingsFolder%\ListOfVars.txt
 Run, %DefaultEditor% %SettingsFolder%\ListOfVars.txt
 return
 
