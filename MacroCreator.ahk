@@ -716,7 +716,7 @@ If (KeepDefKeys = 1)
 GoSub, LoadLang
 
 If (InStr(FileLayout, "(Ctrl+G)"))
-	FileLayout := RegExReplace("=\w+\s*Ctrl+G", "=" w_Lang046)
+	FileLayout := RegExReplace(FileLayout, "=\w+\s*\(Ctrl\s*\+\s*G\)", "=" w_Lang046)
 
 #Include <Definitions>
 #Include <WordList>
