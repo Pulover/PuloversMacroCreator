@@ -41,7 +41,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 * Added **Random coordinates** option in *Mouse* command window.
 * Added **Custom icon** option for exported EXE in *Export* window.
 * Fixed bug in *Compare variables* of *If Statements* window with built-in variables.
-* Fixed bugs in subraction operations in expressions.
+* Fixed bugs in subtraction operations in expressions.
 * Fixed bug in scoped variables in functions.
 * Fixed **ListVars** not showing local variables inside functions.
 * Fixed OutputVars of **MouseGetPos** not showing in **ListVars**.
