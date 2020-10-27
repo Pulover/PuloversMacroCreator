@@ -244,7 +244,7 @@
 	w_Lang043 =	इस रूप में सहेजें (Ctrl + Shift + S)
 	w_Lang044 =	Ahk करने के लिए निर्यात (Ctrl + ई)
 	w_Lang045 =	पूर्वावलोकन स्क्रिप्ट (Ctrl + P)
-	w_Lang046 =	सेटिंग्स (Ctrl + G)
+	w_Lang046 =	सेटिंग्स (Ctrl + Comma)
 	w_Lang047 =	रिकार्ड मैक्रो (Ctrl + R)
 	w_Lang048 =	सक्रिय करें मैक्रोज़ (Ctrl + Enter)
 	w_Lang049 =	खेलने के लिए वर्तमान मैक्रो (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	नई (Ctrl + N)
 	w_Lang113 =	के लिए जाओ...
 	w_Lang114 =	टिप्पणियों के रूप में समूह दिखाएं
+	w_Lang115 =	अंतिम सक्रिय मैक्रो
 		
 ; 15. Command Windows		
 	c_Lang001 =	माउस
@@ -576,6 +577,9 @@
 	c_Lang260 =	पाठ के लिए छवि
 	c_Lang261 =	बोली
 	c_Lang262 =	और भाषाएं डाउनलोड करें ...
+	c_Lang263 =	यादृच्छिक निर्देशांक
+	c_Lang264 =	ओफ़्सेट
+	c_Lang265 =	पिक्सल
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey करने के लिए निर्यात
@@ -798,6 +802,7 @@
 	t_Lang218 =	चयनित लाइन पर जाएं
 	t_Lang219 =	स्वचालित रूप से कोड का चयन करें
 	t_Lang220 =	लाइन
+	t_Lang221 =	कस्टम आइकन
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	खुला

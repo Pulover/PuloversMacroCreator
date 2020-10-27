@@ -244,7 +244,7 @@
 	w_Lang043 =	Mentés másként (Ctrl+Shift+S)
 	w_Lang044 =	Exportálás AHK (Ctrl+E)
 	w_Lang045 =	Preview Script (Ctrl+P)
-	w_Lang046 =	Settings (Ctrl+G)
+	w_Lang046 =	Beállítások (Ctrl + vessző)
 	w_Lang047 =	Makró rögzítése (Ctrl+R)
 	w_Lang048 =	Activate makrók (Ctrl+Enter)
 	w_Lang049 =	Játssz Current Macro (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Új (Ctrl+N)
 	w_Lang113 =	Menj...
 	w_Lang114 =	Csoportok megjelenítése megjegyzésként
+	w_Lang115 =	Utolsó aktív makró
 		
 ; 15. Command Windows		
 	c_Lang001 =	Egér
@@ -576,6 +577,9 @@
 	c_Lang260 =	Kép a szövegbe
 	c_Lang261 =	Nyelvek
 	c_Lang262 =	További nyelvek letöltése ...
+	c_Lang263 =	Véletlenszerű koordináták
+	c_Lang264 =	Eltolás
+	c_Lang265 =	Képpontok
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportálás AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Ugrás a kijelölt sorra
 	t_Lang219 =	Kód automatikus kiválasztása
 	t_Lang220 =	Vonal
+	t_Lang221 =	Egyéni ikonra
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva

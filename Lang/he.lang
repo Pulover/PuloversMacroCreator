@@ -244,7 +244,7 @@
 	w_Lang043 =	שמירה בשם (Ctrl + Shift + S)
 	w_Lang044 =	ייצוא כדי AHK (Ctrl + E)
 	w_Lang045 =	תצוגה מקדימה סקריפט (Ctrl + P)
-	w_Lang046 =	הגדרות (Ctrl + G)
+	w_Lang046 =	הגדרות (Ctrl + פסיק)
 	w_Lang047 =	הקלטת מאקרו (Ctrl + R)
 	w_Lang048 =	הפעל פקודות מאקרו (Ctrl + Enter)
 	w_Lang049 =	לשחק מאקרו הנוכחי (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	חדש (Ctrl + N)
 	w_Lang113 =	לך ל...
 	w_Lang114 =	הראה קבוצות כהערות
+	w_Lang115 =	מאקרו פעיל אחרון
 		
 ; 15. Command Windows		
 	c_Lang001 =	עכבר
@@ -576,6 +577,9 @@
 	c_Lang260 =	תמונה לטקסט
 	c_Lang261 =	שפות
 	c_Lang262 =	הורד עוד שפות ...
+	c_Lang263 =	קואורדינטות אקראיות
+	c_Lang264 =	לְקַזֵז
+	c_Lang265 =	פיקסלים
 		
 ; 16. Other Windows		
 	t_Lang001 =	ייצוא כדי AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	עבור לשורה שנבחרה
 	t_Lang219 =	בחר קוד באופן אוטומטי
 	t_Lang220 =	קַו
+	t_Lang221 =	סמל מותאם אישית
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	לִפְתוֹחַ

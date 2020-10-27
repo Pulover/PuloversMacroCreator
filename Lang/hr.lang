@@ -244,7 +244,7 @@
 	w_Lang043 =	Spremi (Ctrl+Shift+S)
 	w_Lang044 =	Izvoz u AHK (Ctrl+E)
 	w_Lang045 =	Prikaz Skripta (Ctrl+P)
-	w_Lang046 =	Postavke (Ctrl+G)
+	w_Lang046 =	Postavke (Ctrl + Zarez)
 	w_Lang047 =	Zapis Makro (Ctrl+R)
 	w_Lang048 =	Aktivirajte Makro (Ctrl+Enter)
 	w_Lang049 =	Igrajte Trenutna Macro (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Ići...
 	w_Lang114 =	Prikaži grupe kao komentare
+	w_Lang115 =	Posljednja aktivna makronaredba
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miš
@@ -576,6 +577,9 @@
 	c_Lang260 =	Slika u tekst
 	c_Lang261 =	Jezici
 	c_Lang262 =	Preuzmi još jezika ...
+	c_Lang263 =	Slučajne koordinate
+	c_Lang264 =	Pomak
+	c_Lang265 =	Piksela
 		
 ; 16. Other Windows		
 	t_Lang001 =	Izvoz u AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Idite na odabrani redak
 	t_Lang219 =	Automatski odaberite kod
 	t_Lang220 =	Crta
+	t_Lang221 =	Prilagođena ikona
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno

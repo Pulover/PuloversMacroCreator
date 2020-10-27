@@ -244,7 +244,7 @@
 	w_Lang043 =	Save As (Ctrl + Shift + S)
 	w_Lang044 =	Útflutningur til Ahk (Ctrl + E)
 	w_Lang045 =	Preview Script (Ctrl + P)
-	w_Lang046 =	Stillingar (Ctrl + G)
+	w_Lang046 =	Stillingar (Ctrl + komma)
 	w_Lang047 =	Record Macro (Ctrl + R)
 	w_Lang048 =	Virkja Fjölvi (Ctrl + Enter)
 	w_Lang049 =	Spila Núverandi Macro (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Ný (Ctrl + N)
 	w_Lang113 =	Fara til...
 	w_Lang114 =	Sýna hópa sem athugasemdir
+	w_Lang115 =	Síðasti virki fjölvi
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mús
@@ -576,6 +577,9 @@
 	c_Lang260 =	Mynd til texta
 	c_Lang261 =	Tungumál
 	c_Lang262 =	Sæktu fleiri tungumál ...
+	c_Lang263 =	Handahófskennd hnit
+	c_Lang264 =	Jöfnun
+	c_Lang265 =	Pixlar
 		
 ; 16. Other Windows		
 	t_Lang001 =	Flytja út í AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Farðu í valda línu
 	t_Lang219 =	Veldu sjálfkrafa kóða
 	t_Lang220 =	Lína
+	t_Lang221 =	Sérsniðið tákn
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

@@ -244,7 +244,7 @@
 	w_Lang043 =	Londoloza As (Ctrl + Shift + S)
 	w_Lang044 =	Export to AHK (Ctrl + E)
 	w_Lang045 =	Buka kuqala Script (Ctrl + P)
-	w_Lang046 =	Izilungiselelo (Ctrl + G)
+	w_Lang046 =	Amasethingi (Ctrl + Ukhefana)
 	w_Lang047 =	Record Macro (Ctrl + R)
 	w_Lang048 =	Cupha Macros (Ctrl + Enter)
 	w_Lang049 =	Play Macro yamanje (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Iya ku...
 	w_Lang114 =	Khombisa amaqembu njengamazwana
+	w_Lang115 =	I-macro yokugcina esebenzayo
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -576,6 +577,9 @@
 	c_Lang260 =	Image kuya Umbhalo
 	c_Lang261 =	Izilimi
 	c_Lang262 =	Landa izilimi eziningi ...
+	c_Lang263 =	Izixhumanisi ezingahleliwe
+	c_Lang264 =	I-Offset
+	c_Lang265 =	Amaphikseli
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Iya kulayini okhethiwe
 	t_Lang219 =	Khetha ikhodi ngokuzenzakalela
 	t_Lang220 =	Ulayini
+	t_Lang221 =	Isithonjana sangokwezifiso
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

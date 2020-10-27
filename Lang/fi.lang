@@ -244,7 +244,7 @@
 	w_Lang043 =	Tallenna Koska (Ctrl+Shift+S)
 	w_Lang044 =	Vie AHK (Ctrl+E)
 	w_Lang045 =	Esikatselu Script (Ctrl+P)
-	w_Lang046 =	Asetukset (Ctrl+G)
+	w_Lang046 =	Asetukset (Ctrl + pilkku)
 	w_Lang047 =	Nauhoita makro (Ctrl+R)
 	w_Lang048 =	Aktivoi Makrot (Ctrl+Enter)
 	w_Lang049 =	Pelaa Nykyinen Makro (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Uusi (Ctrl+N)
 	w_Lang113 =	Mene...
 	w_Lang114 =	Näytä ryhmät kommentteina
+	w_Lang115 =	Viimeinen aktiivinen makro
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiiri
@@ -576,6 +577,9 @@
 	c_Lang260 =	Kuva tekstiksi
 	c_Lang261 =	Kieli (kielet
 	c_Lang262 =	Lataa lisää kieliä ...
+	c_Lang263 =	Satunnaiset koordinaatit
+	c_Lang264 =	Offset
+	c_Lang265 =	Pikselit
 		
 ; 16. Other Windows		
 	t_Lang001 =	Vie AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Siirry valitulle riville
 	t_Lang219 =	Valitse koodi automaattisesti
 	t_Lang220 =	Linja
+	t_Lang221 =	Mukautettu kuvake
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avata

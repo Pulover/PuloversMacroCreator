@@ -244,7 +244,7 @@
 	w_Lang043 =	Save As (Ctrl + Shift + S)
 	w_Lang044 =	ສົ່ງອອກໄປ AHK (Ctrl + E)
 	w_Lang045 =	ສະແດງ Script (Ctrl + P)
-	w_Lang046 =	ການຕັ້ງຄ່າ (Ctrl + G)
+	w_Lang046 =	ການຕັ້ງຄ່າ (Ctrl + Comma)
 	w_Lang047 =	ບັນທຶກ Macro (Ctrl + R)
 	w_Lang048 =	ເປີດໃຊ້ວຽກແມໂຄ (Ctrl + ກະລຸນາໃສ່)
 	w_Lang049 =	ຫຼິ້ນ Macro ປັດຈຸບັນ (Ctrl + Shift + ກະລຸນາໃສ່)
@@ -313,6 +313,7 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	ໄປ​ຫາ...
 	w_Lang114 =	ສະແດງກຸ່ມເປັນ ຄຳ ເຫັນ
+	w_Lang115 =	ມະຫາພາກສຸດທ້າຍທີ່ເຄື່ອນໄຫວ
 		
 ; 15. Command Windows		
 	c_Lang001 =	ຫນູ
@@ -576,6 +577,9 @@
 	c_Lang260 =	ຮູບພາບເຖິງຂໍ້ຄວາມ
 	c_Lang261 =	ພາສາຕ່າງໆ
 	c_Lang262 =	ດາວໂຫລດຫລາຍພາສາ ...
+	c_Lang263 =	ການປະສານງານແບບສຸ່ມ
+	c_Lang264 =	ຊົດເຊີຍ
+	c_Lang265 =	ພິກະເຊນ
 		
 ; 16. Other Windows		
 	t_Lang001 =	ສົ່ງອອກໄປ AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	ໄປທີ່ເສັ້ນທີ່ທ່ານເລືອກ
 	t_Lang219 =	ເລືອກລະຫັດໂດຍອັດຕະໂນມັດ
 	t_Lang220 =	ສາຍ
+	t_Lang221 =	ໄອຄອນທີ່ ກຳ ຫນົດເອງ
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	ເປີດ

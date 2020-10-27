@@ -244,7 +244,7 @@
 	w_Lang043 =	Save As (Ctrl + Shift + S)
 	w_Lang044 =	Eksporti në AHK (Ctrl + E)
 	w_Lang045 =	Preview Script (Ctrl + P)
-	w_Lang046 =	Settings (Ctrl + G)
+	w_Lang046 =	Cilësimet (Ctrl + presje)
 	w_Lang047 =	Macro Record (Ctrl + R)
 	w_Lang048 =	Aktivizo Macros (Ctrl + Enter)
 	w_Lang049 =	Luaj Macro aktuale (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Shkoni në ...
 	w_Lang114 =	Trego grupet si komente
+	w_Lang115 =	Makroja e fundit aktive
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus
@@ -576,6 +577,9 @@
 	c_Lang260 =	Imazhi në Tekst
 	c_Lang261 =	Gjuhët
 	c_Lang262 =	Shkarkoni më shumë gjuhë ...
+	c_Lang263 =	Koordinatat e rastësishme
+	c_Lang264 =	Kompensimi
+	c_Lang265 =	Pixel
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksporti në AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Shko te rreshti i zgjedhur
 	t_Lang219 =	Zgjidhni automatikisht kodin
 	t_Lang220 =	Linjë
+	t_Lang221 =	Ikona e personalizuar
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Hapur

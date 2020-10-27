@@ -244,7 +244,7 @@
 	w_Lang043 =	Պահել որպես (Ctrl + Shift + S)
 	w_Lang044 =	Արտահանել AHK (Ctrl + E)
 	w_Lang045 =	Preview Script (Ctrl + P)
-	w_Lang046 =	Կառավարում (Ctrl + G)
+	w_Lang046 =	Կարգավորումներ (Ctrl + ստորակետ)
 	w_Lang047 =	Ձայնագրեք Մակրո (Ctrl + R)
 	w_Lang048 =	Ակտիվացրեք մակրո (Ctrl + Enter)
 	w_Lang049 =	Խաղալ Միջին Մակրո (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Նոր (Ctrl + N)
 	w_Lang113 =	Գնալ...
 	w_Lang114 =	Groupsույց տալ խմբերը որպես մեկնաբանություն
+	w_Lang115 =	Վերջին ակտիվ մակրոը
 		
 ; 15. Command Windows		
 	c_Lang001 =	Մուկ
@@ -576,6 +577,9 @@
 	c_Lang260 =	Պատկերը տեքստից
 	c_Lang261 =	Լեզուներ
 	c_Lang262 =	Ներբեռնեք ավելի շատ լեզուներ ...
+	c_Lang263 =	Պատահական կոորդինատներ
+	c_Lang264 =	Օֆսեթ
+	c_Lang265 =	Պիքսել
 		
 ; 16. Other Windows		
 	t_Lang001 =	Արտահանել AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Գնալ ընտրված տող
 	t_Lang219 =	Ավտոմատ ընտրեք ծածկագիրը
 	t_Lang220 =	Տող
+	t_Lang221 =	Պատվերով պատկերակ
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Բաց

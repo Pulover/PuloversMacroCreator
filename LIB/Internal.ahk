@@ -447,6 +447,22 @@ SleepRandom(Delay := 0, Min := "", Max := "", Percent := "")
 	Sleep, %RandTime%
 }
 
+ClickRandom(Options, Offset, SendCmd := False)
+{
+	RegExMatch(Options, "(-?\d+),\s(-?\d+)", Coord)
+	MinX := Coord1 - Offset, MaxX := Coord1 + Offset
+	MinY := Coord2 - Offset, MaxY := Coord2 + Offset
+	Random, RandCoordX, %MinX%, %MaxX%
+	Random, RandCoordY, %MinY%, %MaxY%
+	Options := RegExReplace(Options, "-?\d+,\s-?\d+", RandCoordX ", " RandCoordY)
+
+	OutputDebug, %Options%
+	If (SendCmd)
+		SendEvent, %Options%
+	Else
+		Click, %Options%
+}
+
 EditCtrlHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))

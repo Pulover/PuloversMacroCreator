@@ -244,7 +244,7 @@
 	w_Lang043 =	Salvar Como (Ctrl+Shift+S)
 	w_Lang044 =	Exportar para AHK (Ctrl+E)
 	w_Lang045 =	Visualizar Script (Ctrl+P)
-	w_Lang046 =	Configurações (Ctrl+G)
+	w_Lang046 =	Configurações (Ctrl+Vírgula)
 	w_Lang047 =	Gravar Macro (Ctrl+R)
 	w_Lang048 =	Ativar Macros (Ctrl+Enter)
 	w_Lang049 =	Executar Macro Atual (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Novo (Ctrl+N)
 	w_Lang113 =	Ir para...
 	w_Lang114 =	Mostrar grupos como comentários
+	w_Lang115 =	Última macro ativa
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -576,6 +577,9 @@
 	c_Lang260 =	Imagem para Texto
 	c_Lang261 =	Idiomas
 	c_Lang262 =	Baixar mais idiomas...
+	c_Lang263 =	Coordenadas aleatóreas
+	c_Lang264 =	Deslocamento
+	c_Lang265 =	Pixels
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportar para AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Ir para linha selecionada
 	t_Lang219 =	Selecionar código automaticamente
 	t_Lang220 =	Linha
+	t_Lang221 =	Ícone personalizado
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir

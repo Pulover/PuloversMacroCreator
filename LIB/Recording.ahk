@@ -34,11 +34,11 @@ If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, 
 	Hotkey, If
 	#If
 	If (sKey = "/")
-		HotKey, ~*VKC1SC730 Up, RecKeyUp, On
+		Try HotKey, ~*VKC1SC730 Up, RecKeyUp, On
 	Else
 		HotKey, ~*%sKey% Up, RecKeyUp, On
 	If (sKey = ".")
-		HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
+		Try HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
 	Hotkey, If
 	#If
 	Hold%ScK% := 1, sKey .= " Down"
@@ -97,11 +97,11 @@ If (Asc(sKey) < 192) && ((CaptKDn = 1) || InStr(sKey, "Control") || InStr(sKey, 
 	Hotkey, If
 	#If
 	If (sKey = "/")
-		HotKey, ~*VKC1SC730 Up, RecKeyUp, On
+		Try HotKey, ~*VKC1SC730 Up, RecKeyUp, On
 	Else
 		HotKey, ~*%sKey% Up, RecKeyUp, On
 	If (sKey = ".")
-		HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
+		Try HotKey, ~*VKC2SC7E0 Up, RecKeyUp, On
 	Hotkey, If
 	#If
 	Hold%ScK% := 1, sKey .= " Down"

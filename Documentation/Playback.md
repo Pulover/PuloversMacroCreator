@@ -182,5 +182,5 @@ If checked the Controls Toolbar will be automatically shown when a Playback hotk
 
 ### Random Sleeps
 
-If checked all delays during playback will be a random value for more or less of the defined percentage, e.g.: if percentage is set to 50, a command with a delay of 300ms will be set to any value between 150ms and 450ms. Percentage can be set in the counter.
+If checked all delays during playback will be a random value of more or less of the defined percentage, e.g.: if percentage is set to 50, a command with a delay of 300ms will be set to any value between 150ms and 450ms. Percentage can be set in the counter.
 

@@ -244,7 +244,7 @@
 	w_Lang043 =	Opslaan als (Ctrl+Shift+S)
 	w_Lang044 =	Exporteren naar AHK (Ctrl+E)
 	w_Lang045 =	Voorbeeld Script (Ctrl+P)
-	w_Lang046 =	Instellingen (Ctrl+G)
+	w_Lang046 =	Instellingen (Ctrl + komma)
 	w_Lang047 =	Macro opnemen (Ctrl+R)
 	w_Lang048 =	Macro's activeren (Ctrl+Enter)
 	w_Lang049 =	Speel huidige macro (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Nieuw (Ctrl+N)
 	w_Lang113 =	Ga naar...
 	w_Lang114 =	Geef groepen weer als opmerkingen
+	w_Lang115 =	Laatste actieve macro
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis
@@ -576,6 +577,9 @@
 	c_Lang260 =	Afbeelding naar tekst
 	c_Lang261 =	Talen
 	c_Lang262 =	Meer talen downloaden ...
+	c_Lang263 =	Willekeurige coördinaten
+	c_Lang264 =	Offset
+	c_Lang265 =	Pixels
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporteren naar AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Ga naar de geselecteerde regel
 	t_Lang219 =	Automatisch code selecteren
 	t_Lang220 =	Lijn
+	t_Lang221 =	Aangepast pictogram
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

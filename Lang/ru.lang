@@ -244,7 +244,7 @@
 	w_Lang043 =	Сохранить как (Ctrl+Shift+S)
 	w_Lang044 =	Экспорт в AHK (Ctrl+E)
 	w_Lang045 =	Предварительный просмотр Script (Ctrl+P)
-	w_Lang046 =	Настройки (Ctrl+G)
+	w_Lang046 =	Настройки (Ctrl + запятая)
 	w_Lang047 =	Запись макроса (Ctrl+R)
 	w_Lang048 =	Включить макросы (Ctrl+Enter)
 	w_Lang049 =	Играть текущего макроса (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Новый (Ctrl+N)
 	w_Lang113 =	Pereyti
 	w_Lang114 =	Показывать группы как комментарии
+	w_Lang115 =	Последний активный макрос
 		
 ; 15. Command Windows		
 	c_Lang001 =	Мышь
@@ -576,6 +577,9 @@
 	c_Lang260 =	Изображение в текст
 	c_Lang261 =	Языки
 	c_Lang262 =	Скачать другие языки ...
+	c_Lang263 =	Случайные координаты
+	c_Lang264 =	Смещение
+	c_Lang265 =	Пикселей
 		
 ; 16. Other Windows		
 	t_Lang001 =	Экспорт в AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Перейти к выбранной строке
 	t_Lang219 =	Автоматический выбор кода
 	t_Lang220 =	Линия
+	t_Lang221 =	Пользовательский значок
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Открыто

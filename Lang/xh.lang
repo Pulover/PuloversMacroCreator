@@ -244,7 +244,7 @@
 	w_Lang043 =	Gcina Njenge (Ctrl + Shift + S)
 	w_Lang044 =	Rhweba AHK (Ctrl + E)
 	w_Lang045 =	Imboniso Eshicilelweyo (Ctrl + P)
-	w_Lang046 =	Izicwangciso (Ctrl + G)
+	w_Lang046 =	Useto (Ctrl + ikoma)
 	w_Lang047 =	Record Macro (Ctrl + R)
 	w_Lang048 =	Sebenzisa zesikocan (Ctrl + Ngena)
 	w_Lang049 =	Dlala Macro Current (Ctrl + Shift + Ngena)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Entsha (Ctrl + N)
 	w_Lang113 =	Yiya e...
 	w_Lang114 =	Bonisa amaqela njengamazwana
+	w_Lang115 =	Imakro yokugqibela esebenzayo
 		
 ; 15. Command Windows		
 	c_Lang001 =	Impuku
@@ -576,6 +577,9 @@
 	c_Lang260 =	Umfuziselo wokubhaliweyo
 	c_Lang261 =	Iilwimi
 	c_Lang262 =	Khuphela iilwimi ezininzi ...
+	c_Lang263 =	Ukulungelelanisa okungahleliwe
+	c_Lang264 =	Ukulinganisa
+	c_Lang265 =	Iipekseli
 		
 ; 16. Other Windows		
 	t_Lang001 =	Rhweba AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Yiya kumgca okhethiweyo
 	t_Lang219 =	Ngokuzenzekelayo khetha ikhowudi
 	t_Lang220 =	Umgca
+	t_Lang221 =	Icon yesiqhelo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

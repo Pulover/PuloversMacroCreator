@@ -244,7 +244,7 @@
 	w_Lang043 =	Spara som (Ctrl+Skift+S)
 	w_Lang044 =	Exportera till AHK (Ctrl+E)
 	w_Lang045 =	Förhandsgranska Script (Ctrl+P)
-	w_Lang046 =	Inställningar (Ctrl+G)
+	w_Lang046 =	Inställningar (Ctrl + Komma)
 	w_Lang047 =	Spela in makro (Ctrl+R)
 	w_Lang048 =	Aktivera makron (Ctrl+Enter)
 	w_Lang049 =	Spela Aktuell Makro (Ctrl+Skift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Ny (Ctrl+N)
 	w_Lang113 =	Gå till...
 	w_Lang114 =	Visa grupper som kommentarer
+	w_Lang115 =	Senast aktiva makro
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -576,6 +577,9 @@
 	c_Lang260 =	Bild till text
 	c_Lang261 =	språk
 	c_Lang262 =	Ladda ner fler språk ...
+	c_Lang263 =	Slumpmässiga koordinater
+	c_Lang264 =	Offset
+	c_Lang265 =	Pixlar
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportera till AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Gå till vald rad
 	t_Lang219 =	Välj kod automatiskt
 	t_Lang220 =	Linje
+	t_Lang221 =	Anpassad ikon
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet

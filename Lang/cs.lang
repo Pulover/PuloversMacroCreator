@@ -244,7 +244,7 @@
 	w_Lang043 =	Uložit jako (Ctrl+Shift+S)
 	w_Lang044 =	Export do AHK (Ctrl+E)
 	w_Lang045 =	Náhled Scriptu (Ctrl+P)
-	w_Lang046 =	Nastavení (Ctrl+G)
+	w_Lang046 =	Nastavení (Ctrl + čárka)
 	w_Lang047 =	Záznam makra (Ctrl+R)
 	w_Lang048 =	Aktivace Makra (Ctrl+Enter)
 	w_Lang049 =	Přehrát aktuální makro (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Jít do...
 	w_Lang114 =	Zobrazit skupiny jako komentáře
+	w_Lang115 =	Poslední aktivní makro
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš
@@ -576,6 +577,9 @@
 	c_Lang260 =	Obrázek na text
 	c_Lang261 =	Jazyky
 	c_Lang262 =	Stáhnout více jazyků ...
+	c_Lang263 =	Náhodné souřadnice
+	c_Lang264 =	Ofset
+	c_Lang265 =	Pixely
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exportovat do AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Přejít na vybraný řádek
 	t_Lang219 =	Automaticky vybrat kód
 	t_Lang220 =	Čára
+	t_Lang221 =	Vlastní ikona
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít

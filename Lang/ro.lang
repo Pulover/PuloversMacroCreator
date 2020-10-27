@@ -244,7 +244,7 @@
 	w_Lang043 =	Save As (Ctrl + Shift + S)
 	w_Lang044 =	Export pentru a AHK (Ctrl + E)
 	w_Lang045 =	Previzualizare Script (Ctrl + P)
-	w_Lang046 =	Setări (Ctrl + G)
+	w_Lang046 =	Setări (Ctrl + virgulă)
 	w_Lang047 =	Înregistrare Macro (Ctrl + R)
 	w_Lang048 =	Activati ​​Macrocomenzi (Ctrl + Enter)
 	w_Lang049 =	Macro juca curent (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Nou (Ctrl + N)
 	w_Lang113 =	Mergi la...
 	w_Lang114 =	Afișați grupurile ca comentarii
+	w_Lang115 =	Ultima macrocomandă activă
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -576,6 +577,9 @@
 	c_Lang260 =	Imagine către text
 	c_Lang261 =	Limbi
 	c_Lang262 =	Descărcați mai multe limbi ...
+	c_Lang263 =	Coordonate aleatorii
+	c_Lang264 =	Decalaj
+	c_Lang265 =	Pixeli
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export către AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Mergeți la linia selectată
 	t_Lang219 =	Selectați automat codul
 	t_Lang220 =	Linia
+	t_Lang221 =	Pictogramă personalizată
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Deschis

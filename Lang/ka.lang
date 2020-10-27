@@ -244,7 +244,7 @@
 	w_Lang043 =	შენახვა როგორც (Ctrl + Shift + S)
 	w_Lang044 =	ექსპორტი AHK (Ctrl + E)
 	w_Lang045 =	Preview Script (Ctrl + P)
-	w_Lang046 =	პარამეტრები (Ctrl + G)
+	w_Lang046 =	პარამეტრები (Ctrl + მძიმით)
 	w_Lang047 =	ჩანაწერების მაკრო (Ctrl + R)
 	w_Lang048 =	გააქტიურება მაკრო (Ctrl + Enter)
 	w_Lang049 =	ითამაშოთ აქტუალური მაკრო (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Წადი...
 	w_Lang114 =	ჯგუფების ჩვენება კომენტარად
+	w_Lang115 =	ბოლო აქტიური მაკრო
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -576,6 +577,9 @@
 	c_Lang260 =	სურათი ტექსტში
 	c_Lang261 =	ენები
 	c_Lang262 =	ჩამოტვირთეთ მეტი ენა ...
+	c_Lang263 =	შემთხვევითი კოორდინატები
+	c_Lang264 =	კომპენსაცია
+	c_Lang265 =	პიქსელები
 		
 ; 16. Other Windows		
 	t_Lang001 =	ექსპორტი AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	გადადით არჩეულ სტრიქონზე
 	t_Lang219 =	ავტომატურად შეარჩიეთ კოდი
 	t_Lang220 =	ხაზი
+	t_Lang221 =	მორგებული ხატი
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	ღია

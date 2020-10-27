@@ -244,7 +244,7 @@
 	w_Lang043 =	Save As (Ctrl + Shift + S)
 	w_Lang044 =	Allforio i AHK (Ctrl + D)
 	w_Lang045 =	Rhagolwg Script (Ctrl + P)
-	w_Lang046 =	Gosodiadau (Ctrl + G)
+	w_Lang046 =	Gosodiadau (Ctrl + Comma)
 	w_Lang047 =	Macro Cofnod (Ctrl + R)
 	w_Lang048 =	Activate Macros (Ctrl + Enter)
 	w_Lang049 =	Chwarae Macro cyfredol (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Newydd (Ctrl + D)
 	w_Lang113 =	Mynd i...
 	w_Lang114 =	Dangos grwpiau fel sylwadau
+	w_Lang115 =	Micro gweithredol olaf
 		
 ; 15. Command Windows		
 	c_Lang001 =	Llygoden
@@ -576,6 +577,9 @@
 	c_Lang260 =	Delwedd i'r Testun
 	c_Lang261 =	Ieithoedd
 	c_Lang262 =	Dadlwythwch fwy o ieithoedd ...
+	c_Lang263 =	Cyfesurynnau ar hap
+	c_Lang264 =	Gwrthbwyso
+	c_Lang265 =	Picseli
 		
 ; 16. Other Windows		
 	t_Lang001 =	Allforio i AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Ewch i'r llinell a ddewiswyd
 	t_Lang219 =	Dewis cod yn awtomatig
 	t_Lang220 =	Llinell
+	t_Lang221 =	Eicon personol
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Agored

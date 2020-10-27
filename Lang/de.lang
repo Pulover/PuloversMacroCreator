@@ -244,7 +244,7 @@
 	w_Lang043 =	Speichern unter (Strg+Umschalt+S)
 	w_Lang044 =	Export nach AHK (Strg+E)
 	w_Lang045 =	Vorschau Script (Strg+P)
-	w_Lang046 =	Einstellungen (Strg+G)
+	w_Lang046 =	Einstellungen (Strg + Komma)
 	w_Lang047 =	Makro aufzeichnen (Strg+R)
 	w_Lang048 =	Makros aktivieren (Strg+Eingabe)
 	w_Lang049 =	Aktuelles Makro wiedergeben (Strg+Umschalt+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Neu (Strg+N)
 	w_Lang113 =	Gehe zu...
 	w_Lang114 =	Gruppen als Kommentare anzeigen
+	w_Lang115 =	Letztes aktives Makro
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus
@@ -576,6 +577,9 @@
 	c_Lang260 =	Bild zu Text
 	c_Lang261 =	Sprachen
 	c_Lang262 =	Weitere Sprachen herunterladen ...
+	c_Lang263 =	Zufällige Koordinaten
+	c_Lang264 =	Offset
+	c_Lang265 =	Pixel
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export nach AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Gehen Sie zur ausgewählten Zeile
 	t_Lang219 =	Code automatisch auswählen
 	t_Lang220 =	Linie
+	t_Lang221 =	Benutzerdefiniertes Symbol
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öffnen

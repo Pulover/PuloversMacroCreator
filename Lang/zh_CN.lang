@@ -244,7 +244,7 @@
 	w_Lang043 =	另存为 (Ctrl+Shift+S)
 	w_Lang044 =	导出为AHK (Ctrl+E)
 	w_Lang045 =	预览脚本(Ctrl+P)
-	w_Lang046 =	设置(Ctrl+G)
+	w_Lang046 =	设置（Ctrl +逗号）
 	w_Lang047 =	录制宏(Ctrl+R)
 	w_Lang048 =	激活宏(Ctrl+Enter)
 	w_Lang049 =	回放当前宏(Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	新建(Ctrl+N)
 	w_Lang113 =	去...
 	w_Lang114 =	将群组显示为评论
+	w_Lang115 =	最后一个活动宏
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠标
@@ -576,6 +577,9 @@
 	c_Lang260 =	图片到文字
 	c_Lang261 =	语言能力
 	c_Lang262 =	下载更多语言...
+	c_Lang263 =	随机坐标
+	c_Lang264 =	抵消
+	c_Lang265 =	像素
 		
 ; 16. Other Windows		
 	t_Lang001 =	导出为AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	转到选定的行
 	t_Lang219 =	自动选择代码
 	t_Lang220 =	线
+	t_Lang221 =	自定义图标
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开

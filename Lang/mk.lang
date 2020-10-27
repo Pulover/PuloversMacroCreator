@@ -244,7 +244,7 @@
 	w_Lang043 =	Зачувај како (Ctrl + Shift + S)
 	w_Lang044 =	Извоз на AHK (Ctrl + E)
 	w_Lang045 =	Преглед Script (Ctrl + P)
-	w_Lang046 =	Поставки (Ctrl + G)
+	w_Lang046 =	Поставки (Ctrl + запирка)
 	w_Lang047 =	Рекорд Макро (Ctrl + R)
 	w_Lang048 =	Активирајте макроа (Ctrl + Enter)
 	w_Lang049 =	Игра Тековни Макро (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Нови (Ctrl + N)
 	w_Lang113 =	Odi
 	w_Lang114 =	Покажете ги групите како коментари
+	w_Lang115 =	Последна активна макро
 		
 ; 15. Command Windows		
 	c_Lang001 =	Глувчето
@@ -576,6 +577,9 @@
 	c_Lang260 =	Слика во текст
 	c_Lang261 =	Јазици
 	c_Lang262 =	Преземете повеќе јазици ...
+	c_Lang263 =	Случајни координати
+	c_Lang264 =	Офсет
+	c_Lang265 =	Пиксели
 		
 ; 16. Other Windows		
 	t_Lang001 =	Извоз во AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Одете во избраната линија
 	t_Lang219 =	Автоматски изберете код
 	t_Lang220 =	Линија
+	t_Lang221 =	Прилагодена икона
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Отворено

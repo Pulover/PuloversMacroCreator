@@ -512,7 +512,7 @@ __sendEditor(hwnd, msg:=0, wParam:=0, lParam:=0){
                   ,"UInt" ,dp_%hwnd%    ; DIRECT POINTER
                   ,"UInt" ,!(msg+0) ? %msg% : msg
                   ,"Int"  ,inStr(wParam, "-") ? wParam : (%wParam%+0 ? %wParam% : wParam) ; handles negative ints
-                  ,"Int"  ,%lParam%+0 ? %lParam% : lParam)
+                  ,"Int"  ,inStr(lParam, "-") ? lParam : (%lParam%+0 ? %lParam% : lParam))
 }
 
 /*

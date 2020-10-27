@@ -244,7 +244,7 @@
 	w_Lang043 =	Save As (Ctrl+Shift+S)
 	w_Lang044 =	Xuất khẩu sang AHK (Ctrl+E)
 	w_Lang045 =	Xem trước Script (Ctrl+P)
-	w_Lang046 =	Thiết lập (Ctrl+G)
+	w_Lang046 =	Cài đặt (Ctrl + Dấu phẩy)
 	w_Lang047 =	Record Macro (Ctrl+R)
 	w_Lang048 =	Kích hoạt Macro (Ctrl+Enter)
 	w_Lang049 =	Chơi vĩ mô hiện tại (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Mới (Ctrl+N)
 	w_Lang113 =	Đi đến...
 	w_Lang114 =	Hiển thị các nhóm dưới dạng nhận xét
+	w_Lang115 =	Macro hoạt động cuối cùng
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột
@@ -576,6 +577,9 @@
 	c_Lang260 =	Hình ảnh thành Văn bản
 	c_Lang261 =	Ngôn ngữ
 	c_Lang262 =	Tải xuống các ngôn ngữ khác ...
+	c_Lang263 =	Tọa độ ngẫu nhiên
+	c_Lang264 =	Bù lại
+	c_Lang265 =	Điểm ảnh
 		
 ; 16. Other Windows		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Chuyển đến dòng đã chọn
 	t_Lang219 =	Tự động chọn mã
 	t_Lang220 =	Hàng
+	t_Lang221 =	Biểu tượng tùy chỉnh
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở

@@ -98,6 +98,8 @@
 			**Note**: Mouse Actions are affected by [Mouse Coordinates Settings](Settings.html#defaults).
 		Click - Uses the *Click*. This usually works for most cases.
 		Send - Uses *SendEvent*. Use this in case the Click Command doesn't work.
+		Random coordinates - If checked coordinates of X and Y during playback will be a random value of more or less of the defined offset in pixels.
+		Offset - Set the offset for the random coordinates in pixels.
 		Relative - **If not used with Control**: Coordinates will be treated as an offset from mouse current position.  
 			**If used with Control**: *Unchecked*: Click coordinates relative to the target window. *Checked*: Click coordinates relative to Control's position.
 		Button - Selects the Mouse Button to send and the event type.  

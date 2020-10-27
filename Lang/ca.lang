@@ -244,7 +244,7 @@
 	w_Lang043 =	Desa (Ctrl+Shift+S)
 	w_Lang044 =	Exporta a AHK (Ctrl+I)
 	w_Lang045 =	Vista prèvia de script (Ctrl+P)
-	w_Lang046 =	Settings (Ctrl+G)
+	w_Lang046 =	Configuració (Ctrl + coma)
 	w_Lang047 =	Gravar macro (Ctrl+R)
 	w_Lang048 =	Activar Macros (Ctrl+Enter)
 	w_Lang049 =	Jugar Macro actual (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Nou (Ctrl+N)
 	w_Lang113 =	Anar a...
 	w_Lang114 =	Mostra els grups com a comentaris
+	w_Lang115 =	Darrera macro activa
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratolí
@@ -576,6 +577,9 @@
 	c_Lang260 =	Imatge a text
 	c_Lang261 =	Idiomes
 	c_Lang262 =	Baixa més idiomes ...
+	c_Lang263 =	Coordenades aleatòries
+	c_Lang264 =	Desplaçament
+	c_Lang265 =	Píxels
 		
 ; 16. Other Windows		
 	t_Lang001 =	Exporta a AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Aneu a la línia seleccionada
 	t_Lang219 =	Seleccioneu automàticament el codi
 	t_Lang220 =	Línia
+	t_Lang221 =	Icona personalitzada
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert

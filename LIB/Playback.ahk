@@ -63,6 +63,8 @@
 	CurrentRange := m_ListCount, ChangeProgBarColor("20D000", "OSCProg", 28)
 	Gui, chMacro:Default
 	Gui, chMacro:ListView, InputList%Macro_On%
+	LastMacroRun := CopyMenuLabels[Macro_On]
+	GuiControl, 1:, TLastMacroTip, %w_Lang115%: <a>%LastMacroRun%</a>
 	Loop, %m_ListCount%
 	{
 		RowData := LVManager[Macro_On].RowText(A_Index)
@@ -116,10 +118,10 @@
 			
 			Data_GetTexts(LVData, mListRow, Action, Step, TimesX, DelayX, Type, Target, Window)
 			
+			ProgressTip := "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
+			Menu, Tray, Tip, %ProgressTip%
 			If ((ShowProgBar = 1) && (RunningFunction = "") && (FlowControl.Break = 0) && (FlowControl.Continue = 0) && (FlowControl.If = 0))
 			{
-				ProgressTip := "M" Macro_On " [Loop: " (iLoopIndex ? 1 "/" (LoopCount[LoopDepth][1] + 1) : mLoopIndex "/" mLoopSize) " | Row: " A_Index "/" m_ListCount "]"
-				Menu, Tray, Tip, %ProgressTip%
 				If Type not in %cType7%,%cType17%,%cType21%,%cType35%,%cType38%,%cType39%,%cType40%,%cType41%,%cType44%,%cType45%,%cType46%,%cType47%,%cType48%,%cType49%,%cType42%
 				{
 					GuiControl, 28:, OSCProg, %mListRow%
@@ -370,6 +372,8 @@
 				If (Type = cType37)
 				{
 					_Label := Playback(TabIdx, RowIdx, ManualKey)
+					LastMacroRun := CopyMenuLabels[Macro_On]
+					GuiControl, 1:, TLastMacroTip, %w_Lang115%: <a>%LastMacroRun%</a>
 					If (IsObject(_Label))
 						return _Label
 					Else If (_Label)
@@ -1121,7 +1125,10 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 			StopIt := 1
 			return
 		}
-		Click, %Step%
+		If (Target = "Random")
+			ClickRandom(Step, Window)
+		Else
+			Click, %Step%
 	return
 	pb_ControlClick:
 		Win := SplitWin(Window)
@@ -1136,7 +1143,10 @@ PlayCommand(Type, Action, Step, TimesX, DelayX, Target, Window, Pars, Flow, Cust
 		}
 		If (Action = "[Text]")
 			SetKeyDelay, %DelayX%
-		SendEvent, %Step%
+		If (Target = "Random")
+			ClickRandom(Step, Window, True)
+		Else
+			SendEvent, %Step%
 	return
 	pb_Sleep:
 		If ((Type = cType5) && (Step = "Random"))
@@ -2126,12 +2136,12 @@ SplitStep(CustomVars, Step)
 	return Pars
 }
 
-IfEval(_Name, _Operator, _Value, _Step)
+IfEval(_Name, _Operator, _Value, _Step, CustomVars)
 {
 	Switch _Operator
 	{
 		Case "=", "==","!=", "<>", ">", "<", ">=", "<=":
-			result := Eval(_Step)[1]
+			result := Eval(_Step, CustomVars)[1]
 		Case "in":
 			If _Name in %_Value%
 				result := true
@@ -2355,7 +2365,7 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 			Else
 				VarName := %VarName%
 			VarValue := StrReplace(VarValue, "``n", "`n")
-			If (IfEval(VarName, Oper, VarValue, Step))
+			If (IfEval(VarName, Oper, VarValue, Step, CustomVars))
 				return 0
 		Case If15:
 			EvalResult := Eval(Step, CustomVars)

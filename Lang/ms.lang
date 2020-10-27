@@ -244,7 +244,7 @@
 	w_Lang043 =	Simpan Sebagai (Ctrl+Shift+S)
 	w_Lang044 =	Eksport ke AHK (Ctrl+E)
 	w_Lang045 =	Preview Skrip (Ctrl+P)
-	w_Lang046 =	Tetapan (Ctrl+G)
+	w_Lang046 =	Tetapan (Ctrl + Koma)
 	w_Lang047 =	Rekod Macro (Ctrl+R)
 	w_Lang048 =	Makro Aktifkan (Ctrl+Enter)
 	w_Lang049 =	Main Makro Semasa (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Baru (Ctrl+N)
 	w_Lang113 =	Pergi ke...
 	w_Lang114 =	Tunjukkan kumpulan sebagai komen
+	w_Lang115 =	Makro aktif terakhir
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -576,6 +577,9 @@
 	c_Lang260 =	Imej ke Teks
 	c_Lang261 =	Bahasa
 	c_Lang262 =	Muat turun lebih banyak bahasa ...
+	c_Lang263 =	Koordinat rawak
+	c_Lang264 =	Mengimbangi
+	c_Lang265 =	Piksel
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport ke AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Pergi ke baris terpilih
 	t_Lang219 =	Pilih kod secara automatik
 	t_Lang220 =	Garisan
+	t_Lang221 =	Ikon tersuai
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka

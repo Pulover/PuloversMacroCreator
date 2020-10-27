@@ -244,7 +244,7 @@
 	w_Lang043 =	Save As (Ctrl + Shift + S)
 	w_Lang044 =	AHK to Export (Ctrl + E)
 	w_Lang045 =	Aurreikusi Script (Ctrl + P)
-	w_Lang046 =	Ezarpenak (Ctrl + G)
+	w_Lang046 =	Ezarpenak (Ktrl + Koma)
 	w_Lang047 =	Grabatu Macro (Ctrl + R)
 	w_Lang048 =	Aktibatu makroak (Ctrl + Enter)
 	w_Lang049 =	Play uneko makro (Ctrl + Shift + Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Berria (Ctrl + N)
 	w_Lang113 =	Joan...
 	w_Lang114 =	Erakutsi taldeak iruzkin gisa
+	w_Lang115 =	Azken makro aktiboa
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -576,6 +577,9 @@
 	c_Lang260 =	Irudia Testura
 	c_Lang261 =	Hizkuntzak
 	c_Lang262 =	Deskargatu hizkuntza gehiago ...
+	c_Lang263 =	Ausazko koordenatuak
+	c_Lang264 =	Desplazamendua
+	c_Lang265 =	Pixelak
 		
 ; 16. Other Windows		
 	t_Lang001 =	Export to AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Joan hautatutako lerrora
 	t_Lang219 =	Aukeratu kodea automatikoki
 	t_Lang220 =	Lerroa
+	t_Lang221 =	Ikono pertsonalizatua
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

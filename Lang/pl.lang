@@ -244,7 +244,7 @@
 	w_Lang043 =	Zapisz jako (Ctrl+Shift+S)
 	w_Lang044 =	Eksportuj do AHK (Ctrl+E)
 	w_Lang045 =	Podgląd skrytpu (Ctrl+P)
-	w_Lang046 =	Ustawienia (Ctrl+G)
+	w_Lang046 =	Ustawienia (Ctrl + przecinek)
 	w_Lang047 =	Nagraj makro (Ctrl+R)
 	w_Lang048 =	Aktywuj makro (Ctrl+Enter)
 	w_Lang049 =	Odtwórz bieżące makro (Ctrl+Shift+Enter)
@@ -313,6 +313,7 @@
 	w_Lang112 =	Nowy (Ctrl+N)
 	w_Lang113 =	Iść do...
 	w_Lang114 =	Pokaż grupy jako komentarze
+	w_Lang115 =	Ostatnie aktywne makro
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz
@@ -576,6 +577,9 @@
 	c_Lang260 =	Obraz na tekst
 	c_Lang261 =	Języki
 	c_Lang262 =	Pobierz więcej języków ...
+	c_Lang263 =	Losowe współrzędne
+	c_Lang264 =	Offsetowy
+	c_Lang265 =	Piksele
 		
 ; 16. Other Windows		
 	t_Lang001 =	Eksport do AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	Przejdź do wybranej linii
 	t_Lang219 =	Automatycznie wybierz kod
 	t_Lang220 =	Linia
+	t_Lang221 =	Ikona niestandardowa
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwórz

@@ -244,7 +244,7 @@
 	w_Lang043 =	名前を付けて保存 （Ctrl+Shift+S）
 	w_Lang044 =	AHKにエクスポート（CTRL+E）
 	w_Lang045 =	プレビュースクリプト（Ctrl+P）を
-	w_Lang046 =	設定（Ctrl+Gキー）
+	w_Lang046 =	設定（Ctrl +カンマ）
 	w_Lang047 =	マクロの記録（CTRL+R）
 	w_Lang048 =	アクティベートマクロ（Ctrl+Enterキー）
 	w_Lang049 =	現在のマクロを再生します（Ctrl+Shift+Enter）
@@ -313,6 +313,7 @@
 	w_Lang112 =	新規作成（Ctrl+Nキー）
 	w_Lang113 =	移動...
 	w_Lang114 =	グループをコメントとして表示
+	w_Lang115 =	最後にアクティブなマクロ
 		
 ; 15. Command Windows		
 	c_Lang001 =	マウス
@@ -576,6 +577,9 @@
 	c_Lang260 =	画像からテキストへ
 	c_Lang261 =	言語
 	c_Lang262 =	他の言語をダウンロード...
+	c_Lang263 =	ランダム座標
+	c_Lang264 =	オフセット
+	c_Lang265 =	ピクセル
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkeyにエクスポート
@@ -798,6 +802,7 @@
 	t_Lang218 =	選択した行に移動
 	t_Lang219 =	コードを自動的に選択
 	t_Lang220 =	ライン
+	t_Lang221 =	カスタムアイコン
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	開く

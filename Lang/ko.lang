@@ -244,7 +244,7 @@
 	w_Lang043 =	다른 이름으로 저장 (Ctrl+Shift+S)
 	w_Lang044 =	AHK (Ctrl 키+E)로 내보내기
 	w_Lang045 =	미리보기 스크립트 (Ctrl 키+P)
-	w_Lang046 =	설정 (Ctrl 키를+G)
+	w_Lang046 =	설정 (Ctrl + 쉼표)
 	w_Lang047 =	기록 매크로 (Ctrl 키+R)
 	w_Lang048 =	활성화 매크로 (Ctrl 키를+입력)
 	w_Lang049 =	현재 매크로를 재생 (Ctrl+Shift+입력)
@@ -313,6 +313,7 @@
 	w_Lang112 =	새 (Ctrl 키+N)
 	w_Lang113 =	이동...
 	w_Lang114 =	그룹을 댓글로 표시
+	w_Lang115 =	마지막 활성 매크로
 		
 ; 15. Command Windows		
 	c_Lang001 =	마우스
@@ -576,6 +577,9 @@
 	c_Lang260 =	이미지를 텍스트로
 	c_Lang261 =	언어
 	c_Lang262 =	더 많은 언어 다운로드 ...
+	c_Lang263 =	임의의 좌표
+	c_Lang264 =	오프셋
+	c_Lang265 =	픽셀
 		
 ; 16. Other Windows		
 	t_Lang001 =	AutoHotkey로 내보내기
@@ -798,6 +802,7 @@
 	t_Lang218 =	선택한 라인으로 이동
 	t_Lang219 =	코드 자동 선택
 	t_Lang220 =	선
+	t_Lang221 =	맞춤 아이콘
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기

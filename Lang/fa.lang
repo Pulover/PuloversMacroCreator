@@ -244,7 +244,7 @@
 	w_Lang043 =	ذخیره به عنوان (CTRL + SHIFT + S)
 	w_Lang044 =	صادرات به AHK دهید (Ctrl + E)
 	w_Lang045 =	پیش نمایش اسکریپت (کلیدهای Ctrl + P)
-	w_Lang046 =	تنظیمات انجام دهید (Ctrl + G)
+	w_Lang046 =	تنظیمات (Ctrl + کاما)
 	w_Lang047 =	ضبط ماکرو انجام دهید (Ctrl + R)
 	w_Lang048 =	فعال شدن ماکرو انجام دهید (Ctrl + Enter را)
 	w_Lang049 =	بازی ماکرو کنونی (CTRL + SHIFT + ENTER)
@@ -313,6 +313,7 @@
 	w_Lang112 =	جدید (Ctrl + N)
 	w_Lang113 =	قابل اعتماد و متخصص...
 	w_Lang114 =	نمایش گروه ها به عنوان نظر
+	w_Lang115 =	آخرین ماکرو فعال
 		
 ; 15. Command Windows		
 	c_Lang001 =	ماوس
@@ -576,6 +577,9 @@
 	c_Lang260 =	تصویر به متن
 	c_Lang261 =	زبان ها
 	c_Lang262 =	بارگیری زبانهای بیشتر ...
+	c_Lang263 =	مختصات تصادفی
+	c_Lang264 =	انحراف
+	c_Lang265 =	پیکسل
 		
 ; 16. Other Windows		
 	t_Lang001 =	صادرات به به AutoHotkey
@@ -798,6 +802,7 @@
 	t_Lang218 =	به خط انتخاب شده بروید
 	t_Lang219 =	کد را به صورت خودکار انتخاب کنید
 	t_Lang220 =	خط
+	t_Lang221 =	نماد سفارشی
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	باز کن
