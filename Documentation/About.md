@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.3.1  
+Version: 5.3.2  
 Release Date: October, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -36,6 +36,9 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.3.2
+* Fixed bug in Function Return.
 
 ## Version 5.3.1
 * Added **Random coordinates** option in *Mouse* command window.

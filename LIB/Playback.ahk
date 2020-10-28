@@ -309,8 +309,8 @@
 				For _each, _value in SVRef
 				{
 					If (Static_Vars[RunningFunction].HasKey(_each))
-						Static_Vars[RunningFunction][_each] := %_each%
-					%_each% := _value
+						Try Static_Vars[RunningFunction][_each] := %_each%
+					Try %_each% := _value
 				}
 				
 				For _each, _value in ScopedParams
