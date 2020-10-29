@@ -447,6 +447,22 @@ SleepRandom(Delay := 0, Min := "", Max := "", Percent := "")
 	Sleep, %RandTime%
 }
 
+ClickRandom(Options, Offset, SendCmd := False)
+{
+	RegExMatch(Options, "(-?\d+),\s(-?\d+)", Coord)
+	MinX := Coord1 - Offset, MaxX := Coord1 + Offset
+	MinY := Coord2 - Offset, MaxY := Coord2 + Offset
+	Random, RandCoordX, %MinX%, %MaxX%
+	Random, RandCoordY, %MinY%, %MaxY%
+	Options := RegExReplace(Options, "-?\d+,\s-?\d+", RandCoordX ", " RandCoordY)
+
+	OutputDebug, %Options%
+	If (SendCmd)
+		SendEvent, %Options%
+	Else
+		Click, %Options%
+}
+
 EditCtrlHasFocus()
 {
 	global GuiA := ActiveGui(WinActive("A"))
@@ -1226,24 +1242,25 @@ LVCallback(Func, Hwnd)
 	return true
 }
 
-TVSelectRow(SelectedRow, MacroLabel, TVData)
+TVUpdateRows()
 {
-	local CurrentMacro
-	static _w := Chr(2)
+	local Lists := [], ItemID := 0
 
-	For Key, Item in TVData
+	Loop, %TabCount%
+		Lists.Push(LVManager[A_Index].Handle.Slot[LVManager[A_Index].Handle.ActiveSlot])
+
+	For Idx, Code in Lists
 	{
-		If (Item.Level = 0)
+		For each, Col in Code.Rows
 		{
-			CurrentMacro := SubStr(Item.Content, 2)
-			continue
-		}
-		If (CurrentMacro != MacroLabel)
-			continue
-		If (RegExMatch(Item.Content, "^" SelectedRow ":" _w ".*"))
-		{
-			TV_Modify(Item.ID, "Select Vis")
-			return
+			ItemID := TV_GetNext(ItemID, "Full")
+			While (!TVData[ItemID].Row)
+			{
+				If (!TVData.HasKey(ItemId))
+					break 3
+				ItemID := TV_GetNext(ItemID, "Full")
+			}
+			TVData[ItemID].Row := each
 		}
 	}
 }
@@ -1690,6 +1707,12 @@ SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "
 	{
 		LocalRecord[RunningFunction] := ""
 		return
+	}
+
+	If (RunningFunction != "")
+	{
+		If (!VarsRecord.HasKey(_Var))
+			VarsRecord[_Var] := []
 	}
 	
 	If _Var in %BuiltinVars%,TabCount,Record,Action,Step,Details,TimesX,DelayX,Type,Target,Window,Win,IfError,VarName,VarValue,Oper,Par,Param,Version,Lang,AutoKey,ManKey,AbortKey,PauseKey,RecKey,RecNewKey,RelKey,FastKey,SlowKey,ClearNewList,DelayG,OnScCtrl,ShowStep,HideMainWin,DontShowPb,DontShowRec,DontShowEdt,ConfirmDelete,ShowTips,NextTip,IfDirectContext,IfDirectWindow,KeepHkOn,Mouse,Moves,TimedI,Strokes,CaptKDn,MScroll,WClass,WTitle,MDelay,DelayM,DelayW,MaxHistory,TDelay,ToggleC,RecKeybdCtrl,RecMouseCtrl,CoordMouse,SpeedUp,SpeedDn,MouseReturn,ShowProgBar,ShowBarOnStart,AutoHideBar,RandomSleeps,RandPercent,DrawButton,OnRelease,OnEnter,LineW,ScreenDir,DefaultEditor,DefaultMacro,StdLibFile,KeepDefKeys,TbNoTheme,AutoBackup,MultInst,EvalDefault,CloseAction,ShowLoopIfMark,ShowActIdent,SearchAreaColor,LoopLVColor,IfLVColor,VirtualKeys,AutoUpdate,Ex_AbortKey,Ex_PauseKey,Ex_SM,SM,Ex_SI,SI,Ex_ST,ST,Ex_DH,Ex_AF,Ex_HK,Ex_PT,Ex_NT,Ex_SC,SC,Ex_SW,SW,Ex_SK,SK,Ex_MD,MD,Ex_SB,SB,Ex_MT,MT,Ex_IN,Ex_UV,Ex_Speed,ComCr,ComAc,Send_Loop,TabIndent,IncPmc,Exe_Exp,ShowExpOpt,MainWinSize,MainWinPos,WinState,ColSizes,ColOrder,PrevWinSize,ShowPrev,TextWrap,CommentUnchecked,CustomColors,OSCPos,OSTrans,OSCaption,AutoRefresh,ShowGroups,IconSize,UserLayout,MainLayout,MacroLayout,FileLayout,RecPlayLayout,SettingsLayout,CommandLayout,EditLayout,ShowBands

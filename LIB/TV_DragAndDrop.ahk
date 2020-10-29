@@ -101,14 +101,14 @@ TV_Drag(Origin, DragButton := "D", AutoDrop := False, LineThick := 2, Color := "
     return Line_P = "Child" ? HitTarget : -HitTarget
 }
 ;=======================================================================================
-TV_Drop(Origin, Target, Hwnd := "", Copy := False)
+TV_Drop(Origin, Target, Hwnd := "", Copy := False, FirstChild := False)
 {
     If (!Hwnd)
         MouseGetPos,,,, Hwnd, 2
     TargetID := Target < 0 ? Target * -1 : Target
     If ((Target) && (Origin != TargetID))
     {
-        NewNodeId := MoveNodes(Origin, Target, Hwnd)
+        NewNodeId := MoveNodes(Origin, Target, Hwnd, FirstChild ? "First " : "")
         TV_Modify(Target, "Expand")
         If (!Copy)
             TV_Delete(Origin)
@@ -130,7 +130,7 @@ IsTargetChild(Origin, Target)
     return False
 }
 ;=======================================================================================
-MoveNodes(Node, Target, TreeViewId)
+MoveNodes(Node, Target, TreeViewId, FirstChild := "")
 {
     IsSibling := Target < 0
 ,   TV_GetText(NodeText, Node)
@@ -150,7 +150,7 @@ MoveNodes(Node, Target, TreeViewId)
         NodeId := TV_Add(NodeText, ParentId, SiblingId " Expand Vis Icon" iIcon " Check" chk)
     }
     Else
-        NodeId := TV_Add(NodeText, Target, "Expand Vis Icon" iIcon " Check" chk)
+        NodeId := TV_Add(NodeText, Target, FirstChild "Expand Vis Icon" iIcon " Check" chk)
     If (Child := TV_GetChild(Node))
     {
         MoveNodes(Child, NodeId, TreeViewId)

@@ -181,9 +181,9 @@
 		return Data
 	}
 
-	TVLoad(Groups)
+	TVLoad(Groups, SelectedRow := "")
 	{
-		local Lists := [], TVData := {}, CountId := 0, NextGroup, Pars, LevelDepth
+		local Lists := [], TVData := {}, CountId := 0, SelectNode := "", NextGroup, Pars, LevelDepth
 		
 		Loop, %TabCount%
 			Lists.Push(LVManager[A_Index].Handle.Slot[LVManager[A_Index].Handle.ActiveSlot])
@@ -195,6 +195,8 @@
 		{
 			LevelDepth := Groups ? 2 : 1, NextGroup := 1
 		,	TVData[++CountId] := {Content: CopyMenuLabels[Idx], Level: 0, Options: "Icon42 Check1", HideCheck: true}
+			If ((SelectedRow = 0) && (Idx = A_List))
+				SelectNode := CountId
 			For each, Col in Code.Rows
 			{
 				If ((Groups) && (Code.Groups[NextGroup].Row = each))
@@ -204,6 +206,11 @@
 				If (InStr(Action, "[Else")=1)
 					LevelDepth--
 				TVData[++CountId] := {Row: each, Content: each ": " Action ", " Col[4], Level: LevelDepth, Options: "Icon" GetIconForType(Type, Action) " Check" chk, Type: Col[7]}
+				If ((Idx = A_List) && (each = SelectedRow))
+				{
+					OutputDebug, % "select row " CountId " / " SelectedRow
+					SelectNode := CountId
+				}
 				If (InStr(Action, "[Else")=1)
 					LevelDepth++
 				If (((Type = cType17) && (!InStr(Action, "["))) || (Action = "[LoopStart]"))
@@ -224,7 +231,10 @@
 					LevelDepth--
 			}
 		}
-		TVData := CreateTreeView(TVData, hMacroTv)
+		TVData := CreateTreeView(TVData, hMacroTv, SelectNode)
+		OutputDebug, % ">> " SelectNode
+		If (SelectNode)
+			TV_Modify(SelectNode, "Select Vis")
 		GuiControl, tvMacro:+Redraw, InputTree
 		return TVData
 	}

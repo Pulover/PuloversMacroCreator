@@ -313,8 +313,9 @@
 	w_Lang112 =	Nuovo (Ctrl+N)
 	w_Lang113 =	Vai a...
 	w_Lang114 =	Mostra i gruppi come commenti
-	w_Lang115 =	Passa alla visualizzazione struttura
-	w_Lang116 =	Passa alla visualizzazione elenco
+	w_Lang115 =	Ultima macro attiva
+	w_Lang116 =	Passa alla visualizzazione struttura
+	w_Lang117 =	Passa alla visualizzazione elenco
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -578,8 +579,11 @@
 	c_Lang260 =	Immagine in testo
 	c_Lang261 =	Le lingue
 	c_Lang262 =	Scarica più lingue ...
+	c_Lang263 =	Coordinate casuali
+; 16. Other Windows	c_Lang264 =	Compensare
+	c_Lang265 =	Pixel
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Esporta in AutoHotkey
 	t_Lang002 =	Macro
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Vai alla riga selezionata
 	t_Lang219 =	Seleziona automaticamente il codice
 	t_Lang220 =	Linea
+	t_Lang221 =	Icona personalizzata
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aperto

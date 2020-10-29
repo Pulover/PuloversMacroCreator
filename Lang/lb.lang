@@ -313,8 +313,9 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Géi op...
 	w_Lang114 =	Weisen Gruppen als Kommentaren
-	w_Lang115 =	Wiesselen op Bam Vue
-	w_Lang116 =	Wiesselen op d'Lëschtvisioun
+	w_Lang115 =	Leschten aktive Makro
+	w_Lang116 =	Wiesselen op Bam Vue
+	w_Lang117 =	Wiesselen op d'Lëschtvisioun
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -578,8 +579,11 @@
 	c_Lang260 =	Bild op Text
 	c_Lang261 =	Sproochen
 	c_Lang262 =	Luet méi Sproochen erof ...
+	c_Lang263 =	Zoufälleg Koordinaten
+; 16. Other Windows	c_Lang264 =	Offset
+	c_Lang265 =	Pixel
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Export ze AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Persounen
@@ -800,6 +804,7 @@
 	t_Lang218 =	Gitt op gewielte Linn
 	t_Lang219 =	Wielt automatesch de Code
 	t_Lang220 =	Linn
+	t_Lang221 =	Benotzerdefinéiert Ikon
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

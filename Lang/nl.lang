@@ -313,8 +313,9 @@
 	w_Lang112 =	Nieuw (Ctrl+N)
 	w_Lang113 =	Ga naar...
 	w_Lang114 =	Geef groepen weer als opmerkingen
-	w_Lang115 =	Schakel over naar de boomstructuur
-	w_Lang116 =	Overschakelen naar lijstweergave
+	w_Lang115 =	Laatste actieve macro
+	w_Lang116 =	Schakel over naar de boomstructuur
+	w_Lang117 =	Overschakelen naar lijstweergave
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis
@@ -578,8 +579,11 @@
 	c_Lang260 =	Afbeelding naar tekst
 	c_Lang261 =	Talen
 	c_Lang262 =	Meer talen downloaden ...
+	c_Lang263 =	Willekeurige coördinaten
+; 16. Other Windows	c_Lang264 =	Offset
+	c_Lang265 =	Pixels
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Exporteren naar AutoHotkey
 	t_Lang002 =	Macro's
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Ga naar de geselecteerde regel
 	t_Lang219 =	Automatisch code selecteren
 	t_Lang220 =	Lijn
+	t_Lang221 =	Aangepast pictogram
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

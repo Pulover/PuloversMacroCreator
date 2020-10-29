@@ -72,6 +72,10 @@ Runs Ahk2Exe Compiler after exporting the script to create an Executable File. T
 Once a script is compiled, it becomes a standalone executable; that is, it can be used even on machines where AutoHotkey is not installed (and such EXEs can be distributed or sold with no restrictions).  
 *Note*: This feature requires the latest version of [AutoHotkey](https://www.autohotkey.com/) installed. The Ahk2Exe file must be present in the Compiler folder inside AutoHotkey installation folder, if the file is not found the EXE will not be created (no error will be shown).
 
+### Custom icon
+
+Optional *.ico file to be used as the exported EXE file custom icon.
+
 ## Context Sensitive Hotkeys
 
 Makes hotkeys and hotstrings work depending on the type of window that is active or exists, or if an expression evaluates to true. For more information see [Playback](Playback.html#context-sensitive-hotkeys).

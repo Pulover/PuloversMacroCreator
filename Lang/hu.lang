@@ -313,8 +313,9 @@
 	w_Lang112 =	Új (Ctrl+N)
 	w_Lang113 =	Menj...
 	w_Lang114 =	Csoportok megjelenítése megjegyzésként
-	w_Lang115 =	Váltson fa nézetre
-	w_Lang116 =	Váltás listanézetre
+	w_Lang115 =	Utolsó aktív makró
+	w_Lang116 =	Váltson fa nézetre
+	w_Lang117 =	Váltás listanézetre
 		
 ; 15. Command Windows		
 	c_Lang001 =	Egér
@@ -578,8 +579,11 @@
 	c_Lang260 =	Kép a szövegbe
 	c_Lang261 =	Nyelvek
 	c_Lang262 =	További nyelvek letöltése ...
+	c_Lang263 =	Véletlenszerű koordináták
+; 16. Other Windows	c_Lang264 =	Eltolás
+	c_Lang265 =	Képpontok
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Exportálás AutoHotkey
 	t_Lang002 =	Makrók
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Ugrás a kijelölt sorra
 	t_Lang219 =	Kód automatikus kiválasztása
 	t_Lang220 =	Vonal
+	t_Lang221 =	Egyéni ikonra
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva

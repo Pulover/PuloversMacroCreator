@@ -313,8 +313,9 @@
 	w_Lang112 =	Mới (Ctrl+N)
 	w_Lang113 =	Đi đến...
 	w_Lang114 =	Hiển thị các nhóm dưới dạng nhận xét
-	w_Lang115 =	Chuyển sang chế độ xem dạng cây
-	w_Lang116 =	Chuyển sang chế độ xem danh sách
+	w_Lang115 =	Macro hoạt động cuối cùng
+	w_Lang116 =	Chuyển sang chế độ xem dạng cây
+	w_Lang117 =	Chuyển sang chế độ xem danh sách
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột
@@ -578,8 +579,11 @@
 	c_Lang260 =	Hình ảnh thành Văn bản
 	c_Lang261 =	Ngôn ngữ
 	c_Lang262 =	Tải xuống các ngôn ngữ khác ...
+	c_Lang263 =	Tọa độ ngẫu nhiên
+; 16. Other Windows	c_Lang264 =	Bù lại
+	c_Lang265 =	Điểm ảnh
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Xuất khẩu sang AutoHotkey
 	t_Lang002 =	Macro
 	t_Lang003 =	Vòng
@@ -800,6 +804,7 @@
 	t_Lang218 =	Chuyển đến dòng đã chọn
 	t_Lang219 =	Tự động chọn mã
 	t_Lang220 =	Hàng
+	t_Lang221 =	Biểu tượng tùy chỉnh
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở

@@ -313,8 +313,9 @@
 	w_Lang112 =	Jauns (Ctrl + N)
 	w_Lang113 =	Iet uz...
 	w_Lang114 =	Rādīt grupas kā komentārus
-	w_Lang115 =	Pārslēdzieties uz koka skatu
-	w_Lang116 =	Pārslēdzieties uz saraksta skatu
+	w_Lang115 =	Pēdējais aktīvais makro
+	w_Lang116 =	Pārslēdzieties uz koka skatu
+	w_Lang117 =	Pārslēdzieties uz saraksta skatu
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pele
@@ -578,8 +579,11 @@
 	c_Lang260 =	Attēls uz tekstu
 	c_Lang261 =	Valodas
 	c_Lang262 =	Lejupielādēt citas valodas ...
+	c_Lang263 =	Nejaušas koordinātas
+; 16. Other Windows	c_Lang264 =	Kompensācija
+	c_Lang265 =	Pikseļi
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Eksports uz AutoHotkey
 	t_Lang002 =	Makro
 	t_Lang003 =	Cilpas
@@ -800,6 +804,7 @@
 	t_Lang218 =	Pārejiet uz izvēlēto rindu
 	t_Lang219 =	Automātiski atlasīt kodu
 	t_Lang220 =	Līnija
+	t_Lang221 =	Pielāgota ikona
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atvērts

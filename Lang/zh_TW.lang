@@ -313,8 +313,9 @@
 	w_Lang112 =	開啟新檔（按Ctrl+N）
 	w_Lang113 =	去...
 	w_Lang114 =	將群組顯示為評論
-	w_Lang115 =	切換到樹狀視圖
-	w_Lang116 =	切換到列表視圖
+	w_Lang115 =	最後一個活動宏
+	w_Lang116 =	切換到樹狀視圖
+	w_Lang117 =	切換到列表視圖
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標
@@ -578,8 +579,11 @@
 	c_Lang260 =	圖片到文字
 	c_Lang261 =	語言能力
 	c_Lang262 =	下載更多語言...
+	c_Lang263 =	隨機坐標
+; 16. Other Windows	c_Lang264 =	抵消
+	c_Lang265 =	像素
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	導出到華民航空
 	t_Lang002 =	宏
 	t_Lang003 =	循環
@@ -800,6 +804,7 @@
 	t_Lang218 =	轉到選定的行
 	t_Lang219 =	自動選擇代碼
 	t_Lang220 =	線
+	t_Lang221 =	自定義圖標
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打開

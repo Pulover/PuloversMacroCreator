@@ -313,8 +313,9 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Ir a...
 	w_Lang114 =	Mostrar grupos como comentarios
-	w_Lang115 =	Cambia á vista en árbore
-	w_Lang116 =	Cambia á vista de lista
+	w_Lang115 =	Última macro activa
+	w_Lang116 =	Cambia á vista en árbore
+	w_Lang117 =	Cambia á vista de lista
 		
 ; 15. Command Windows		
 	c_Lang001 =	Rato
@@ -578,8 +579,11 @@
 	c_Lang260 =	Imaxe a texto
 	c_Lang261 =	Idiomas
 	c_Lang262 =	Descargar máis idiomas ...
+	c_Lang263 =	Coordenadas aleatorias
+; 16. Other Windows	c_Lang264 =	Desprazamento
+	c_Lang265 =	Píxeles
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Exportar AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Ir á liña seleccionada
 	t_Lang219 =	Selecciona automaticamente o código
 	t_Lang220 =	Liña
+	t_Lang221 =	Icona personalizada
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Aberto

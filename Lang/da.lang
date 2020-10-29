@@ -313,8 +313,9 @@
 	w_Lang112 =	Ny (Ctrl+N)
 	w_Lang113 =	Gå til...
 	w_Lang114 =	Vis grupper som kommentarer
-	w_Lang115 =	Skift til trævisning
-	w_Lang116 =	Skift til listevisning
+	w_Lang115 =	Sidste aktive makro
+	w_Lang116 =	Skift til trævisning
+	w_Lang117 =	Skift til listevisning
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -578,8 +579,11 @@
 	c_Lang260 =	Billede til tekst
 	c_Lang261 =	Sprog
 	c_Lang262 =	Download flere sprog ...
+	c_Lang263 =	Tilfældige koordinater
+; 16. Other Windows	c_Lang264 =	Offset
+	c_Lang265 =	Pixels
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Eksporter til AutoHotkey
 	t_Lang002 =	Makroer
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Gå til den valgte linje
 	t_Lang219 =	Vælg automatisk kode
 	t_Lang220 =	Linie
+	t_Lang221 =	Brugerdefineret ikon
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åbent

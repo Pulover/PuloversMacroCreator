@@ -5,7 +5,7 @@
 ; checkboxes in a TreeView
 ; https://autohotkey.com/board/topic/96840-ahk-11-hide-individual-checkboxes-in-a-treeview-x32x64/
 ;###########################################################
-CreateTreeView(TreeViewDefinition, hwnd := "")
+CreateTreeView(TreeViewDefinition, hwnd := "", ByRef SelectNode := "")
 {
 	IDs := {}, UpdatedDefinition := {}
 
@@ -18,6 +18,8 @@ CreateTreeView(TreeViewDefinition, hwnd := "")
 		UpdatedDefinition[Item.ID] := Item
 		If (Item.HideCheck)
 			HideTVCheck(IDs["Level" Item.Level], hwnd)
+		If (IsByRef(SelectNode) && Key = SelectNode)
+			SelectNode := Item.ID
 	}
 	return UpdatedDefinition
 }

@@ -313,8 +313,9 @@
 	w_Lang112 =	Ný (Ctrl + N)
 	w_Lang113 =	Fara til...
 	w_Lang114 =	Sýna hópa sem athugasemdir
-	w_Lang115 =	Skiptu yfir í trjásýn
-	w_Lang116 =	Skiptu yfir í listaskjá
+	w_Lang115 =	Síðasti virki fjölvi
+	w_Lang116 =	Skiptu yfir í trjásýn
+	w_Lang117 =	Skiptu yfir í listaskjá
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mús
@@ -578,8 +579,11 @@
 	c_Lang260 =	Mynd til texta
 	c_Lang261 =	Tungumál
 	c_Lang262 =	Sæktu fleiri tungumál ...
+	c_Lang263 =	Handahófskennd hnit
+; 16. Other Windows	c_Lang264 =	Jöfnun
+	c_Lang265 =	Pixlar
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Flytja út í AutoHotkey
 	t_Lang002 =	Fjölvi
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Farðu í valda línu
 	t_Lang219 =	Veldu sjálfkrafa kóða
 	t_Lang220 =	Lína
+	t_Lang221 =	Sérsniðið tákn
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

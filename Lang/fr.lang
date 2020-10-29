@@ -313,8 +313,9 @@
 	w_Lang112 =	Nouveau (Ctrl+N)
 	w_Lang113 =	Aller à...
 	w_Lang114 =	Afficher les groupes sous forme de commentaires
-	w_Lang115 =	Passer à l'arborescence
-	w_Lang116 =	Passer à la vue de liste
+	w_Lang115 =	Dernière macro active
+	w_Lang116 =	Passer à l'arborescence
+	w_Lang117 =	Passer à la vue de liste
 		
 ; 15. Command Windows		
 	c_Lang001 =	Souris
@@ -578,8 +579,11 @@
 	c_Lang260 =	Image en texte
 	c_Lang261 =	Langues
 	c_Lang262 =	Télécharger plus de langues ...
+	c_Lang263 =	Coordonnées aléatoires
+; 16. Other Windows	c_Lang264 =	Décalage
+	c_Lang265 =	Pixels
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Exporter vers AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Boucles
@@ -800,6 +804,7 @@
 	t_Lang218 =	Aller à la ligne sélectionnée
 	t_Lang219 =	Sélectionner automatiquement le code
 	t_Lang220 =	Ligne
+	t_Lang221 =	Icône personnalisée
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert

@@ -313,8 +313,9 @@
 	w_Lang112 =	Berria (Ctrl + N)
 	w_Lang113 =	Joan...
 	w_Lang114 =	Erakutsi taldeak iruzkin gisa
-	w_Lang115 =	Zuhaitz ikuspegira aldatu
-	w_Lang116 =	Aldatu zerrenda ikuspegira
+	w_Lang115 =	Azken makro aktiboa
+	w_Lang116 =	Zuhaitz ikuspegira aldatu
+	w_Lang117 =	Aldatu zerrenda ikuspegira
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -578,8 +579,11 @@
 	c_Lang260 =	Irudia Testura
 	c_Lang261 =	Hizkuntzak
 	c_Lang262 =	Deskargatu hizkuntza gehiago ...
+	c_Lang263 =	Ausazko koordenatuak
+; 16. Other Windows	c_Lang264 =	Desplazamendua
+	c_Lang265 =	Pixelak
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Export to AutoHotkey
 	t_Lang002 =	Makroak
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Joan hautatutako lerrora
 	t_Lang219 =	Aukeratu kodea automatikoki
 	t_Lang220 =	Lerroa
+	t_Lang221 =	Ikono pertsonalizatua
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

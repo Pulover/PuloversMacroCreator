@@ -313,8 +313,9 @@
 	w_Lang112 =	New (Ctrl+N)
 	w_Lang113 =	Pojdi do...
 	w_Lang114 =	Skupine prikaži kot komentarje
-	w_Lang115 =	Preklopite na drevesni pogled
-	w_Lang116 =	Preklopite na pogled seznama
+	w_Lang115 =	Zadnji aktivni makro
+	w_Lang116 =	Preklopite na drevesni pogled
+	w_Lang117 =	Preklopite na pogled seznama
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška
@@ -578,8 +579,11 @@
 	c_Lang260 =	Slika v besedilo
 	c_Lang261 =	Jeziki
 	c_Lang262 =	Prenos več jezikov ...
+	c_Lang263 =	Naključne koordinate
+; 16. Other Windows	c_Lang264 =	Odmik
+	c_Lang265 =	Slikovnih pik
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Izvoz v AutoHotkey
 	t_Lang002 =	Makri
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Pojdi na izbrano vrstico
 	t_Lang219 =	Samodejno izberite kodo
 	t_Lang220 =	Vrstica
+	t_Lang221 =	Ikona po meri
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Odprite

@@ -313,8 +313,9 @@
 	w_Lang112 =	Ny (Ctrl+N)
 	w_Lang113 =	Gå till...
 	w_Lang114 =	Visa grupper som kommentarer
-	w_Lang115 =	Byt till trädvy
-	w_Lang116 =	Byt till listvy
+	w_Lang115 =	Senast aktiva makro
+	w_Lang116 =	Byt till trädvy
+	w_Lang117 =	Byt till listvy
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus
@@ -578,8 +579,11 @@
 	c_Lang260 =	Bild till text
 	c_Lang261 =	språk
 	c_Lang262 =	Ladda ner fler språk ...
+	c_Lang263 =	Slumpmässiga koordinater
+; 16. Other Windows	c_Lang264 =	Offset
+	c_Lang265 =	Pixlar
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Exportera till AutoHotkey
 	t_Lang002 =	Makron
 	t_Lang003 =	Loopar
@@ -800,6 +804,7 @@
 	t_Lang218 =	Gå till vald rad
 	t_Lang219 =	Välj kod automatiskt
 	t_Lang220 =	Linje
+	t_Lang221 =	Anpassad ikon
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet

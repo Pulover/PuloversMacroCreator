@@ -313,8 +313,9 @@
 	w_Lang112 =	새 (Ctrl 키+N)
 	w_Lang113 =	이동...
 	w_Lang114 =	그룹을 댓글로 표시
-	w_Lang115 =	트리보기로 전환
-	w_Lang116 =	목록보기로 전환
+	w_Lang115 =	마지막 활성 매크로
+	w_Lang116 =	트리보기로 전환
+	w_Lang117 =	목록보기로 전환
 		
 ; 15. Command Windows		
 	c_Lang001 =	마우스
@@ -578,8 +579,11 @@
 	c_Lang260 =	이미지를 텍스트로
 	c_Lang261 =	언어
 	c_Lang262 =	더 많은 언어 다운로드 ...
+	c_Lang263 =	임의의 좌표
+; 16. Other Windows	c_Lang264 =	오프셋
+	c_Lang265 =	픽셀
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	AutoHotkey로 내보내기
 	t_Lang002 =	매크로
 	t_Lang003 =	루프
@@ -800,6 +804,7 @@
 	t_Lang218 =	선택한 라인으로 이동
 	t_Lang219 =	코드 자동 선택
 	t_Lang220 =	선
+	t_Lang221 =	맞춤 아이콘
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기

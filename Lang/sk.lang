@@ -313,8 +313,9 @@
 	w_Lang112 =	Nový (Ctrl+N)
 	w_Lang113 =	Ísť do...
 	w_Lang114 =	Zobraziť skupiny ako komentáre
-	w_Lang115 =	Prepnúť na stromové zobrazenie
-	w_Lang116 =	Prepnite na zobrazenie zoznamu
+	w_Lang115 =	Posledné aktívne makro
+	w_Lang116 =	Prepnúť na stromové zobrazenie
+	w_Lang117 =	Prepnite na zobrazenie zoznamu
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš
@@ -578,8 +579,11 @@
 	c_Lang260 =	Obrázok na text
 	c_Lang261 =	Jazyky
 	c_Lang262 =	Stiahnite si viac jazykov ...
+	c_Lang263 =	Náhodné súradnice
+; 16. Other Windows	c_Lang264 =	Ofset
+	c_Lang265 =	Pixely
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Export do AutoHotkey
 	t_Lang002 =	Makrá
 	t_Lang003 =	Slučky
@@ -800,6 +804,7 @@
 	t_Lang218 =	Prejdite na vybraný riadok
 	t_Lang219 =	Automaticky zvoliť kód
 	t_Lang220 =	Riadok
+	t_Lang221 =	Vlastná ikona
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené

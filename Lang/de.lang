@@ -313,8 +313,9 @@
 	w_Lang112 =	Neu (Strg+N)
 	w_Lang113 =	Gehe zu...
 	w_Lang114 =	Gruppen als Kommentare anzeigen
-	w_Lang115 =	Wechseln Sie zur Baumansicht
-	w_Lang116 =	Wechseln Sie zur Listenansicht
+	w_Lang115 =	Letztes aktives Makro
+	w_Lang116 =	Wechseln Sie zur Baumansicht
+	w_Lang117 =	Wechseln Sie zur Listenansicht
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus
@@ -578,8 +579,11 @@
 	c_Lang260 =	Bild zu Text
 	c_Lang261 =	Sprachen
 	c_Lang262 =	Weitere Sprachen herunterladen ...
+	c_Lang263 =	Zufällige Koordinaten
+; 16. Other Windows	c_Lang264 =	Offset
+	c_Lang265 =	Pixel
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Export nach AutoHotkey
 	t_Lang002 =	Makros
 	t_Lang003 =	Schleifen
@@ -800,6 +804,7 @@
 	t_Lang218 =	Gehen Sie zur ausgewählten Zeile
 	t_Lang219 =	Code automatisch auswählen
 	t_Lang220 =	Linie
+	t_Lang221 =	Benutzerdefiniertes Symbol
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öffnen

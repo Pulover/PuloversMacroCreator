@@ -313,8 +313,9 @@
 	w_Lang112 =	Yeni (Ctrl+N)
 	w_Lang113 =	Git ...
 	w_Lang114 =	Grupları yorum olarak göster
-	w_Lang115 =	Ağaç görünümüne geç
-	w_Lang116 =	Liste görünümüne geç
+	w_Lang115 =	Son etkin makro
+	w_Lang116 =	Ağaç görünümüne geç
+	w_Lang117 =	Liste görünümüne geç
 		
 ; 15. Command Windows		
 	c_Lang001 =	Fare
@@ -578,8 +579,11 @@
 	c_Lang260 =	Metne Görüntü
 	c_Lang261 =	Diller
 	c_Lang262 =	Daha fazla dil indirin ...
+	c_Lang263 =	Rastgele koordinatlar
+; 16. Other Windows	c_Lang264 =	Ofset
+	c_Lang265 =	Piksel
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	AutoHotkey Aktar
 	t_Lang002 =	Makrolar
 	t_Lang003 =	Döngüler
@@ -800,6 +804,7 @@
 	t_Lang218 =	Seçili satıra git
 	t_Lang219 =	Kodu otomatik olarak seçin
 	t_Lang220 =	Hat
+	t_Lang221 =	Özel simge
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık

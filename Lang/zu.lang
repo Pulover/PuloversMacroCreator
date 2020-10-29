@@ -313,8 +313,9 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Iya ku...
 	w_Lang114 =	Khombisa amaqembu njengamazwana
-	w_Lang115 =	Shintshela ekubukeni kwesihlahla
-	w_Lang116 =	Shintshela ekubukweni kohlu
+	w_Lang115 =	I-macro yokugcina esebenzayo
+	w_Lang116 =	Shintshela ekubukeni kwesihlahla
+	w_Lang117 =	Shintshela ekubukweni kohlu
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -578,8 +579,11 @@
 	c_Lang260 =	Image kuya Umbhalo
 	c_Lang261 =	Izilimi
 	c_Lang262 =	Landa izilimi eziningi ...
+	c_Lang263 =	Izixhumanisi ezingahleliwe
+; 16. Other Windows	c_Lang264 =	I-Offset
+	c_Lang265 =	Amaphikseli
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Export to AutoHotkey
 	t_Lang002 =	Amamakhro
 	t_Lang003 =	Izihibe
@@ -800,6 +804,7 @@
 	t_Lang218 =	Iya kulayini okhethiwe
 	t_Lang219 =	Khetha ikhodi ngokuzenzakalela
 	t_Lang220 =	Ulayini
+	t_Lang221 =	Isithonjana sangokwezifiso
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

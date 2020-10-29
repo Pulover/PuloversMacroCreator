@@ -313,8 +313,9 @@
 	w_Lang112 =	Entsha (Ctrl + N)
 	w_Lang113 =	Yiya e...
 	w_Lang114 =	Bonisa amaqela njengamazwana
-	w_Lang115 =	Tshintshela kumbono womthi
-	w_Lang116 =	Tshintshela kuluhlu lokujonga
+	w_Lang115 =	Imakro yokugqibela esebenzayo
+	w_Lang116 =	Tshintshela kumbono womthi
+	w_Lang117 =	Tshintshela kuluhlu lokujonga
 		
 ; 15. Command Windows		
 	c_Lang001 =	Impuku
@@ -578,8 +579,11 @@
 	c_Lang260 =	Umfuziselo wokubhaliweyo
 	c_Lang261 =	Iilwimi
 	c_Lang262 =	Khuphela iilwimi ezininzi ...
+	c_Lang263 =	Ukulungelelanisa okungahleliwe
+; 16. Other Windows	c_Lang264 =	Ukulinganisa
+	c_Lang265 =	Iipekseli
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Rhweba AutoHotkey
 	t_Lang002 =	Zesikocan
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Yiya kumgca okhethiweyo
 	t_Lang219 =	Ngokuzenzekelayo khetha ikhowudi
 	t_Lang220 =	Umgca
+	t_Lang221 =	Icon yesiqhelo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

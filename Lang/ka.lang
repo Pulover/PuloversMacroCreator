@@ -313,8 +313,9 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Წადი...
 	w_Lang114 =	ჯგუფების ჩვენება კომენტარად
-	w_Lang115 =	ხეზე გადასვლა
-	w_Lang116 =	სიის ხედზე გადართვა
+	w_Lang115 =	ბოლო აქტიური მაკრო
+	w_Lang116 =	ხეზე გადასვლა
+	w_Lang117 =	სიის ხედზე გადართვა
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -578,8 +579,11 @@
 	c_Lang260 =	სურათი ტექსტში
 	c_Lang261 =	ენები
 	c_Lang262 =	ჩამოტვირთეთ მეტი ენა ...
+	c_Lang263 =	შემთხვევითი კოორდინატები
+; 16. Other Windows	c_Lang264 =	კომპენსაცია
+	c_Lang265 =	პიქსელები
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	ექსპორტი AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	გადადით არჩეულ სტრიქონზე
 	t_Lang219 =	ავტომატურად შეარჩიეთ კოდი
 	t_Lang220 =	ხაზი
+	t_Lang221 =	მორგებული ხატი
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	ღია

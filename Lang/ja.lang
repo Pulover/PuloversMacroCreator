@@ -313,8 +313,9 @@
 	w_Lang112 =	新規作成（Ctrl+Nキー）
 	w_Lang113 =	移動...
 	w_Lang114 =	グループをコメントとして表示
-	w_Lang115 =	ツリービューに切り替えます
-	w_Lang116 =	リストビューに切り替えます
+	w_Lang115 =	最後にアクティブなマクロ
+	w_Lang116 =	ツリービューに切り替えます
+	w_Lang117 =	リストビューに切り替えます
 		
 ; 15. Command Windows		
 	c_Lang001 =	マウス
@@ -578,8 +579,11 @@
 	c_Lang260 =	画像からテキストへ
 	c_Lang261 =	言語
 	c_Lang262 =	他の言語をダウンロード...
+	c_Lang263 =	ランダム座標
+; 16. Other Windows	c_Lang264 =	オフセット
+	c_Lang265 =	ピクセル
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	AutoHotkeyにエクスポート
 	t_Lang002 =	マクロ
 	t_Lang003 =	ループ
@@ -800,6 +804,7 @@
 	t_Lang218 =	選択した行に移動
 	t_Lang219 =	コードを自動的に選択
 	t_Lang220 =	ライン
+	t_Lang221 =	カスタムアイコン
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	開く

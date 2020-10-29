@@ -63,7 +63,7 @@
 	i_Lang007 =	&Langas
 	i_Lang008 =	&Vaizdo / pikselių Paieška / Vaizdas į tekstą
 	i_Lang009 =	V&ykdyti / Failų / Styginių / Įvairūs.
-	i_Lang010 =	K&ilpa
+	i_Lang010 =	C&ikas
 	i_Lang011 =	&Eiti į / Label
 	i_Lang012 =	&Nustatyti laikmatį
 	i_Lang013 =	&Jei atskaitomybės
@@ -122,7 +122,7 @@
 	v_Lang005 =	P&eržiūrėti scenarijus
 	v_Lang006 =	Į&rankių juostos
 	v_Lang007 =	K&lavišai
-	v_Lang008 =	K&ilpa
+	v_Lang008 =	C&iklas
 	v_Lang009 =	P&aieška Baras
 	v_Lang010 =	A&tstatyti stulpelių dydį
 	v_Lang011 =	&Šrifto dydis
@@ -196,7 +196,7 @@
 	b_Lang004 =	Vartotojas prastovą
 	b_Lang005 =	Sistema ir Vartotojas
 	b_Lang006 =	Įvairūs.
-	b_Lang007 =	Kilpa
+	b_Lang007 =	Ciklas
 		
 ; 14. Main Window		
 	w_Lang001 =	Eksportas
@@ -209,7 +209,7 @@
 	w_Lang008 =	Stop
 	w_Lang009 =	Display kontrolės įrankių juosta
 	w_Lang010 =	Pauzė
-	w_Lang011 =	Kilpa
+	w_Lang011 =	Ciklas
 	w_Lang012 =	Fiksavimo mygtuką presai Šiame lange
 	w_Lang013 =	Sumažinti, kad dėklas
 	w_Lang014 =	Spartieji klavišai visada aktyvus,
@@ -244,7 +244,7 @@
 	w_Lang043 =	Įrašyti kaip (Ctrl + Shift + P)
 	w_Lang044 =	Eksportas į AHK (Ctrl + E)
 	w_Lang045 =	Peržiūrėti scenarijus (Ctrl + P)
-	w_Lang046 =	Nustatymai (Ctrl + G)
+	w_Lang046 =	Nustatymai („Ctrl“ + kablelis)
 	w_Lang047 =	Įrašų Makro (Ctrl + R)
 	w_Lang048 =	Aktyvuok Makrokomandos (Ctrl + Enter)
 	w_Lang049 =	Žaisti Dabartinis Macro (Ctrl + Shift + Enter)
@@ -313,8 +313,9 @@
 	w_Lang112 =	Naujas (Ctrl + N)
 	w_Lang113 =	Eiti į...
 	w_Lang114 =	Rodyti grupes kaip komentarus
-	w_Lang115 =	Perjungti į medžio vaizdą
-	w_Lang116 =	Perjungti į sąrašo rodinį
+	w_Lang115 =	Paskutinis aktyvus makrokomanda
+	w_Lang116 =	Perjungti į medžio vaizdą
+	w_Lang117 =	Perjungti į sąrašo rodinį
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pelė
@@ -389,7 +390,7 @@
 	c_Lang070 =	Koord
 	c_Lang071 =	Variacijos
 	c_Lang072 =	Peržiūrėti
-	c_Lang073 =	Kilpa
+	c_Lang073 =	Ciklas
 	c_Lang074 =	Automatiškai sukurti COM objektą
 	c_Lang075 =	Pertrauka
 	c_Lang076 =	Tęsti
@@ -447,7 +448,7 @@
 	c_Lang128 =	Naudokite funkciją iš išorinio failo
 	c_Lang130 =	Kartokite, kol
 	c_Lang131 =	Taikyti
-	c_Lang132 =	Kilpa
+	c_Lang132 =	Ciklas
 	c_Lang133 =	Byla
 	c_Lang134 =	Išnagrinėti
 	c_Lang135 =	Skaityti
@@ -512,7 +513,7 @@
 	c_Lang194 =	Jei failas egzistuoja
 	c_Lang195 =	Jei failas neegzistuoja
 	c_Lang196 =	Jei iškarpinę tekstą
-	c_Lang197 =	Jei kilpa puslapis
+	c_Lang197 =	Jei ciklas puslapis
 	c_Lang198 =	Jei vaizdą / pikselių rasti
 	c_Lang199 =	Jei vaizdą / pikselių nerastas
 	c_Lang200 =	Jei eilutė yra
@@ -578,8 +579,11 @@
 	c_Lang260 =	Vaizdas į tekstą
 	c_Lang261 =	Kalbos
 	c_Lang262 =	Atsisiųsti daugiau kalbų ...
+	c_Lang263 =	Atsitiktinės koordinatės
+; 16. Other Windows	c_Lang264 =	Įskaitymas
+	c_Lang265 =	Pikseliai
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Eksportas į AutoHotkey
 	t_Lang002 =	Makrokomandos
 	t_Lang003 =	Kilpos
@@ -800,6 +804,7 @@
 	t_Lang218 =	Eikite į pasirinktą eilutę
 	t_Lang219 =	Automatiškai pasirinkti kodą
 	t_Lang220 =	Linija
+	t_Lang221 =	Pasirinktinė piktograma
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atviras

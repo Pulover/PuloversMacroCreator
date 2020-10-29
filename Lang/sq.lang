@@ -313,8 +313,9 @@
 	w_Lang112 =	New (Ctrl + N)
 	w_Lang113 =	Shkoni në ...
 	w_Lang114 =	Trego grupet si komente
-	w_Lang115 =	Kaloni në pamjen e pemës
-	w_Lang116 =	Kaloni në pamjen e listës
+	w_Lang115 =	Makroja e fundit aktive
+	w_Lang116 =	Kaloni në pamjen e pemës
+	w_Lang117 =	Kaloni në pamjen e listës
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus
@@ -578,8 +579,11 @@
 	c_Lang260 =	Imazhi në Tekst
 	c_Lang261 =	Gjuhët
 	c_Lang262 =	Shkarkoni më shumë gjuhë ...
+	c_Lang263 =	Koordinatat e rastësishme
+; 16. Other Windows	c_Lang264 =	Kompensimi
+	c_Lang265 =	Pixel
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Eksporti në AutoHotkey
 	t_Lang002 =	Macros
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Shko te rreshti i zgjedhur
 	t_Lang219 =	Zgjidhni automatikisht kodin
 	t_Lang220 =	Linjë
+	t_Lang221 =	Ikona e personalizuar
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Hapur

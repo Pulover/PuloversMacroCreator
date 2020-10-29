@@ -170,7 +170,7 @@ IniRead, ClearNewList, %IniFilePath%, Options, ClearNewList, 0
 IniRead, DelayG, %IniFilePath%, Options, DelayG, 0
 IniRead, OnScCtrl, %IniFilePath%, Options, OnScCtrl, 1
 IniRead, ShowStep, %IniFilePath%, Options, ShowStep, 1
-IniRead, HideMainWin, %IniFilePath%, Options, HideMainWin, 1
+IniRead, HideMainWin, %IniFilePath%, Options, HideMainWin, 0
 IniRead, DontShowAdm, %IniFilePath%, Options, DontShowAdm, 0
 IniRead, DontShowPb, %IniFilePath%, Options, DontShowPb, 0
 IniRead, DontShowRec, %IniFilePath%, Options, DontShowRec, 0
@@ -318,7 +318,7 @@ IniRead, ShowBands, %IniFilePath%, ToolbarOptions, ShowBands, 1,1,1,1,1,1,1,1,1,
 If (Version < "6.0.0")
 {
 	MacroLayout := "ERROR"
-	EditLayout := "SwitchView=" w_Lang115 ":114(16), , " EditLayout
+	EditLayout := "SwitchView=" w_Lang116 ":114(16), , " EditLayout
 }
 If (Version < "5.1.2")
 	EvalDefault := 1
@@ -721,6 +721,9 @@ If (KeepDefKeys = 1)
 
 GoSub, LoadLang
 
+If (RegExMatch(FileLayout, "\(Ctrl\s*\+\s*G\)"))
+	FileLayout := RegExReplace(FileLayout, "=\w+\s*\(Ctrl\s*\+\s*G\)", "=" w_Lang046)
+
 #Include <Definitions>
 #Include <WordList>
 UserDefFunctions := SyHi_UserDef " "
@@ -1085,7 +1088,9 @@ Gui, Add, Link, -Wrap ys x+5 W115 R1 vCoordTip gOptions, <a>CoordMode</a>: %Coor
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator6
 Gui, Add, Link, -Wrap ys x+5 W115 R1 vTModeTip gOptions, <a>TitleMatchMode</a>: %TitleMatch%
 Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator7
-Gui, Add, Link, -Wrap ys x+5 W230 R1 vTSendModeTip gOptions, <a>SendMode</a>: %KeyMode%
+Gui, Add, Link, -Wrap ys x+5 W145 R1 vTSendModeTip gOptions, <a>SendMode</a>: %KeyMode%
+Gui, Add, Text, W2 H25 ys-3 x+5 0x11 vSeparator8
+Gui, Add, Link, -Wrap ys x+5 W350 R1 vTLastMacroTip gGoToLastMacro, %w_Lang115%: <a>%LastMacroRun%</a>
 GuiControl,, WinKey, % (InStr(o_AutoKey[1], "#")) ? 1 : 0
 Gui, Submit
 If (MainWinSize = "W H")
@@ -1406,7 +1411,7 @@ RbMacro.SetMaxRows(1)
 (MacroLayout = "ERROR") ? "" : RbMacro.SetLayout(MacroLayout)
 (MacroView = "List") ? RbMacro.ModifyBand(1, "Style", "Hidden") : RbMacro.ModifyBand(2, "Style", "Hidden")
 !ShowPrev ? RbMacro.ModifyBand(3, "Style", "Hidden")
-TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang115 : w_Lang116, (MacroView = "List") ? 114 : 115)
+TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang116 : w_Lang117, (MacroView = "List") ? 114 : 115)
 If (MacroView = "Tree")
 	TVData := PMC.TVLoad(ShowGroups)
 return
@@ -1692,14 +1697,11 @@ Else
 	Gui, chMacro:Default
 	Gui, chMacro:Submit, NoHide
 	Gui, chMacro:ListView, InputList%A_List%
-	SelectedRow := LV_GetNext()
-	TVData := PMC.TVLoad(ShowGroups)
+	TVData := PMC.TVLoad(ShowGroups, LV_GetNext())
 	RbMacro.ShowBand(2, false), RbMacro.ShowBand(1)
-	If (SelectedRow)
-		TVSelectRow(SelectedRow, CopyMenuLabels[A_List], TVData)
 	GuiControl, tvMacro:Focus, InputTree
 }
-TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang115 : w_Lang116, (MacroView = "List") ? 114 : 115)
+TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang116 : w_Lang117, (MacroView = "List") ? 114 : 115)
 return
 
 PrevCopy:
@@ -2032,6 +2034,7 @@ GoSub, PrevRefresh
 SetTimer, FinishIcon, -1
 SavePrompt(false, A_ThisLabel)
 GoSub, MacroTab
+GoSub, tv_Update
 return
 
 GuiDropFiles:
@@ -2126,6 +2129,7 @@ If (InStr(CopyMenuLabels[A_List], "()"))
 	GoSub, FuncTab
 Else
 	GoSub, MacroTab
+GoSub, tv_Update
 return
 
 Import:
@@ -2167,6 +2171,7 @@ If (InStr(CopyMenuLabels[A_List], "()"))
 	GoSub, FuncTab
 Else
 	GoSub, MacroTab
+GoSub, tv_Update
 return
 
 SaveAs:
@@ -2330,7 +2335,7 @@ UserVarsList := User_Vars.Get(,, true, true, "global "), CheckedVars := []
 Gui, 14:+owner1 -MinimizeBox +E0x00000400 +Delimiter%_x% +HwndCmdWin
 Gui, 14:Default
 Gui, 1:+Disabled
-Gui, 14:Add, Tab3, W475 H430 vTabControl AltSubmit, %w_Lang001%%_x%%w_Lang003%
+Gui, 14:Add, Tab3, W475 H460 vTabControl AltSubmit, %w_Lang001%%_x%%w_Lang003%
 ; Macros
 Gui, 14:Add, GroupBox, Section W450 H190, %t_Lang002%:
 Gui, 14:Add, ListView, ys+20 xs+10 AltSubmit Checked W430 r5 vExpList gExpEdit NoSort -ReadOnly LV0x4000, %t_Lang147%%_x%%w_Lang005%%_x%%t_Lang003%%_x%%t_Lang006%%_x%%w_Lang030%
@@ -2350,8 +2355,8 @@ Gui, 14:Add, Button, yp x+250 W75 vIdent gWinTitle Disabled, WinTitle
 Gui, 14:Add, Edit, -Wrap R1 xs+10 W400 vTitle Disabled
 Gui, 14:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetWin gGetWin Disabled, ...
 ; Location and Style
-Gui, 14:Add, GroupBox, Section y+16 xs W450 H110, %t_Lang010%:
-Gui, 14:Add, Edit, -Wrap R1 ys+20 xs+10 W340 R1 vExpFile -Multi, %dir%\%name_no_ext%.ahk
+Gui, 14:Add, GroupBox, Section y+16 xs W450 H140, %t_Lang010%:
+Gui, 14:Add, Edit, -Wrap R1 ys+20 xs+10 W340 vExpFile -Multi, %dir%\%name_no_ext%.ahk
 Gui, 14:Add, Button, -Wrap W30 H23 yp-1 x+0 gExpSearch, ...
 Gui, 14:Add, Button, yp x+5 H23 W25 hwndEx_EdScript vEx_EdScript gExEditScript
 	ILButton(Ex_EdScript, ResDllPath ":" 109)
@@ -2362,10 +2367,18 @@ Gui, 14:Add, Checkbox, -Wrap Checked%CommentUnchecked% y+5 xs+10 W230 vCommentUn
 Gui, 14:Add, Checkbox, -Wrap Checked%Send_Loop% y+5 xs+10 W230 vSend_Loop R1, %t_Lang013%
 Gui, 14:Add, Checkbox, -Wrap Checked%ConvertBreaks% ys+50 x+5 W190 vConvertBreaks R1, %t_Lang190%
 Gui, 14:Add, Checkbox, -Wrap Checked%IncPmc% y+5 xp W190 vIncPmc R1, %t_Lang012%
-Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% y+5 xp W190 vExe_Exp gExe_Exp R1,%t_Lang088%
+Gui, 14:Add, Checkbox, -Wrap Checked%Exe_Exp% y+5 xp W190 vExe_Exp gExeExp R1,%t_Lang088%
+Gui, 14:Add, Text, -Wrap R1 y+5 xs+10 W155, %t_Lang221%:
+Gui, 14:Add, Edit, -Wrap R1 yp x+5 W240 vExpIcon -Multi Disabled, %ExpIcon%
+Gui, 14:Add, Button, -Wrap W30 H23 yp-1 x+0 vExpIconSearch gExpIconSearch Disabled, ...
+If (Exe_Exp)
+{
+	GuiControl, 14:Enable, ExpIcon
+	GuiControl, 14:Enable, ExpIconSearch
+}
 Gui, 14:Tab, 2
 ; Options
-Gui, 14:Add, GroupBox, Section ym+28 xm+12 W450 H390, %w_Lang003%:
+Gui, 14:Add, GroupBox, Section ym+28 xm+12 W450 H420, %w_Lang003%:
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_SI% yS+30 xs+10 W140 vEx_SI R1, #SingleInstance
 Gui, 14:Add, DDL, yp-3 x+5 vSI w75, Force%_x%Ignore%_x%%_x%Off
 Gui, 14:Add, Checkbox, -Wrap Checked%Ex_ST% y+5 xs+10 W140 vEx_ST R1, SetTitleMatchMode
@@ -2831,7 +2844,7 @@ If (AutoRefresh = 1)
 	GoSub, PrevRefresh
 return
 
-Exe_Exp:
+ExeExp:
 Gui, 14:+OwnDialogs
 If (!A_AhkPath)
 {
@@ -2840,6 +2853,17 @@ If (!A_AhkPath)
 	IfMsgBox, OK
 		Run, https://www.autohotkey.com/
 	return
+}
+Gui, 14:Submit, NoHide
+If (Exe_Exp)
+{
+	GuiControl, 14:Enable, ExpIcon
+	GuiControl, 14:Enable, ExpIconSearch
+}
+Else
+{
+	GuiControl, 14:Disable, ExpIcon
+	GuiControl, 14:Disable, ExpIconSearch
 }
 return
 
@@ -2855,6 +2879,18 @@ SplitPath, SelectedFileName, name, dir, ext, name_no_ext, drive
 If (ext != "ahk")
 	SelectedFileName := SelectedFileName ".ahk"
 GuiControl,, ExpFile, %SelectedFileName%
+return
+
+ExpIconSearch:
+Gui, 14:+OwnDialogs
+Gui, 14:Submit, NoHide
+SplitPath, ExpIcon, ExpName
+FileSelectFile, SelectedFileName, 3, %ExpName%, %d_Lang013%, Icon files (*.ico)
+FreeMemory()
+If (SelectedFileName = "")
+	return
+SplitPath, SelectedFileName, name, dir, ext, name_no_ext, drive
+GuiControl,, ExpIcon, %SelectedFileName%
 return
 
 ExpButton:
@@ -3021,14 +3057,15 @@ If (IncPmc)
 If (Exe_Exp)
 {
 	SplitPath, A_AhkPath,, AhkDir
-	Compress := ""
+	Compress := "", CustomIcon := ""
 
 	If (FileExist(AhkDir "\Compiler\mpress.exe"))
 		Compress := RegExReplace(A_AhkVersion, "\D") > 113200 ? "/compress 1" : "/mpress 1"
 	Else If (FileExist(AhkDir "\Compiler\upx.exe"))
 		Compress := RegExReplace(A_AhkVersion, "\D") > 113200 ? "/compress 2" : ""
-	Else
-		RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" %Compress%,, UseErrorLevel
+	If ((ExpIcon != "") && (FileExist(ExpIcon)))
+		CustomIcon := "/icon """ ExpIcon """"
+	RunWait, "%AhkDir%\Compiler\Ahk2Exe.exe" /in "%SelectedFileName%" %CustomIcon% /bin "%AhkDir%\Compiler\Unicode 32-bit.bin" %Compress%,, UseErrorLevel
 }
 PmcCode := ""
 MsgBox, 64, %d_Lang014%, % d_Lang015 . (HasEmailFunc.GetCapacity() ? "`n`n`n>>>>>>>>>>[" RegExReplace(d_Lang011, "(*UCP).*", "$u0") "]<<<<<<<<<<`n`n" d_Lang114 : "")
@@ -4306,15 +4343,15 @@ Mouse:
 Gui, 5:+owner1 -MinimizeBox +E0x00000400 +HwndCmdWin
 Gui, 1:+Disabled
 ; Action
-Gui, 5:Add, GroupBox, Section W250 H100, %c_Lang026%:
-Gui, 5:Add, Radio, -Wrap ys+20 xs+10 Checked W115 vClick gClick R1, %c_Lang027%
-Gui, 5:Add, Radio, -Wrap y+10 xp W115 vPoint gPoint R1, %c_Lang028%
-Gui, 5:Add, Radio, -Wrap y+10 xp W115 vPClick gPClick R1, %c_Lang029%
-Gui, 5:Add, Radio, -Wrap ys+20 xp+120 W115 vWUp gWUp R1, %c_Lang030%
-Gui, 5:Add, Radio, -Wrap y+10 xp W115 vWDn gWDn R1, %c_Lang031%
-Gui, 5:Add, Radio, -Wrap y+10 xp W115 vDrag gDrag R1, %c_Lang032%
+Gui, 5:Add, GroupBox, Section W250 H135, %c_Lang026%:
+Gui, 5:Add, Radio, -Wrap ys+30 xs+10 Checked W115 vClick gClick R1, %c_Lang027%
+Gui, 5:Add, Radio, -Wrap y+20 xp W115 vPoint gPoint R1, %c_Lang028%
+Gui, 5:Add, Radio, -Wrap y+20 xp W115 vPClick gPClick R1, %c_Lang029%
+Gui, 5:Add, Radio, -Wrap ys+30 xp+120 W115 vWUp gWUp R1, %c_Lang030%
+Gui, 5:Add, Radio, -Wrap y+20 xp W115 vWDn gWDn R1, %c_Lang031%
+Gui, 5:Add, Radio, -Wrap y+20 xp W115 vDrag gDrag R1, %c_Lang032%
 ; Coordinates
-Gui, 5:Add, GroupBox, Section ys x+10 W250 H100, %c_Lang033%:
+Gui, 5:Add, GroupBox, Section ys x+10 W250 H135, %c_Lang033%:
 Gui, 5:Add, Text, -Wrap R1 Section ys+25 xs+10 W20 Right viX, X:
 Gui, 5:Add, Edit, ys-3 x+5 vIniX W70 Disabled
 Gui, 5:Add, Text, -Wrap R1 ys x+5 W20 Right viY, Y:
@@ -4328,6 +4365,11 @@ Gui, 5:Add, Button, -Wrap ys-4 x+5 W30 H23 vMouseGetE gMouseGetE Disabled, ...
 Gui, 5:Add, Radio, -Wrap Checked y+5 xs W65 vCL gCL R1, Click
 Gui, 5:Add, Radio, -Wrap yp x+5 W65 vSE gSE R1, Send
 Gui, 5:Add, Checkbox, -Wrap yp x+5 vMRel gMRel Disabled W95 R1, %c_Lang036%
+Gui, 5:Add, Checkbox, -Wrap y+5 xs vMRand gMRand W225 R1 Disabled, %c_Lang263%
+Gui, 5:Add, Text, -Wrap R1 y+5 xs W95, %c_Lang264%:
+Gui, 5:Add, Edit, yp-2 x+10 W55 R1 vRandOffsetE Disabled
+Gui, 5:Add, UpDown, vRandOffset 0x80 Range1-5000, 5
+Gui, 5:Add, Text, -Wrap R1 yp+2 x+5 W60, %c_Lang265%
 ; Button
 Gui, 5:Add, GroupBox, Section xm W505 H70, %c_Lang037%:
 Gui, 5:Add, Radio, -Wrap ys+20 xs+10 Checked W90 vLB R1, %c_Lang038%
@@ -4550,6 +4592,13 @@ If (s_Caller = "Edit")
 	}
 	If (InStr(Details, "Rel"))
 		GuiControl, 5:, MRel, 1
+	If (Target = "Random")
+	{
+		GuiControl, 5:Enable, MRand
+		GuiControl, 5:, MRand, 1
+		GuiControl, 5:Enable, RandOffsetE
+		GuiControl, 5:, RandOffsetE, %Window%
+	}
 	If ((Action = MAction2) || (Action = MAction3))
 	{
 		If (Type = cType13)
@@ -4720,6 +4769,8 @@ Else
 	Else
 		Target := "", Window := ""
 }
+If (MRand)
+	Target := "Random", Window := RandOffsetE
 If (A_ThisLabel != "MouseApply")
 {
 	Gui, 1:-Disabled
@@ -4849,6 +4900,9 @@ GuiControl, 5:Disable, EndX
 GuiControl, 5:Disable, EndY
 GuiControl, 5:Disable, MouseGetE
 GuiControl, 5:Disable, MRel
+GuiControl, 5:Disable, MRand
+GuiControl, 5:, MRand, 0
+GuiControl, 5:Disable, RandOffsetE
 GuiControl, 5:Enable, LB
 GuiControl, 5:Enable, RB
 GuiControl, 5:Enable, MB
@@ -4881,6 +4935,7 @@ GuiControl, 5:Enable, IniX
 GuiControl, 5:Enable, IniY
 GuiControl, 5:Enable, MouseGetI
 GuiControl, 5:Enable, MRel
+GuiControl, 5:Enable, MRand
 GuiControl, 5:Disable, LB
 GuiControl, 5:Disable, RB
 GuiControl, 5:Disable, MB
@@ -4913,6 +4968,7 @@ GuiControl, 5:Enable, IniX
 GuiControl, 5:Enable, IniY
 GuiControl, 5:Enable, MouseGetI
 GuiControl, 5:Enable, MRel
+GuiControl, 5:Enable, MRand
 GuiControl, 5:Enable, LB
 GuiControl, 5:Enable, RB
 GuiControl, 5:Enable, MB
@@ -4944,6 +5000,9 @@ GuiControl, 5:Enable, EndX
 GuiControl, 5:Enable, EndY
 GuiControl, 5:Enable, MouseGetE
 GuiControl, 5:Enable, MRel
+GuiControl, 5:Disable, MRand
+GuiControl, 5:, MRand, 0
+GuiControl, 5:Disable, RandOffsetE
 GuiControl, 5:Enable, LB
 GuiControl, 5:Enable, RB
 GuiControl, 5:Enable, MB
@@ -4976,6 +5035,9 @@ GuiControl, 5:Disable, EndX
 GuiControl, 5:Disable, EndY
 GuiControl, 5:Disable, MouseGetE
 GuiControl, 5:Disable, MRel
+GuiControl, 5:Disable, MRand
+GuiControl, 5:, MRand, 0
+GuiControl, 5:Disable, RandOffsetE
 GuiControl, 5:Disable, LB
 GuiControl, 5:Disable, RB
 GuiControl, 5:Disable, MB
@@ -5008,6 +5070,9 @@ GuiControl, 5:Disable, EndX
 GuiControl, 5:Disable, EndY
 GuiControl, 5:Disable, MouseGetE
 GuiControl, 5:Disable, MRel
+GuiControl, 5:Disable, MRand
+GuiControl, 5:, MRand, 0
+GuiControl, 5:Disable, RandOffsetE
 GuiControl, 5:Disable, LB
 GuiControl, 5:Disable, RB
 GuiControl, 5:Disable, MB
@@ -5070,6 +5135,14 @@ If ((Click = 1) || (WUp = 1) || (WDn = 1))
 	GuiControl, 5:Enable%MRel%, DefCt
 	GuiControl, 5:Enable%MRel%, GetCtrl
 }
+return
+
+MRand:
+Gui, 5:Submit, NoHide
+If (MRand)
+	GuiControl, 5:Enable, RandOffsetE
+Else
+	GuiControl, 5:Disable, RandOffsetE
 return
 
 MHold:
@@ -6631,6 +6704,13 @@ If (s_Caller = "Edit")
 						GuiControl, 12:, TimesL, %TimesX%
 					Par1 := ""
 					GoSub, LoopType
+					If (Target != "")
+					{
+						GuiControl, 12:, LUntil, 1
+						GoSub, LoopType
+						GuiControl, 12:Enable, UntilExpr
+						GuiControl, 12:, UntilExpr, %Target%
+					}
 				Case cType38:
 					GuiControl, 12:, LRead, 1
 					GoSub, LoopType
@@ -6665,14 +6745,6 @@ If (s_Caller = "Edit")
 					GuiControl, 12:, LWhile, 1
 					GoSub, LoopType
 					GuiControl, 12:, LParamsFile, %Details%
-				Default:
-					If (Target != "")
-					{
-						GuiControl, 12:, LUntil, 1
-						GoSub, LoopType
-						GuiControl, 12:Enable, UntilExpr
-						GuiControl, 12:, UntilExpr, %Target%
-					}
 			}
 			GoSub, ClearPars
 	}
@@ -11781,7 +11853,7 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 	}
 	If (InStr(ErrorLevel, "c"))
 	{
-		; HistCheck(A_List) ; Programmatically pasting rows casues this event to be triggered!
+		HistCheck(A_List) ; Programmatically pasting rows causes this event to be triggered!
 		If (AutoRefresh = 1)
 			GoSub, PrevRefresh
 	}
@@ -11881,7 +11953,7 @@ If (A_GuiEvent == "f")
 }
 If ((A_GuiEvent = "+") || (A_GuiEvent = "-"))
 	return
-If ((A_GuiEvent = "Normal") || (A_GuiEvent = "RightClick"))
+If ((A_GuiEvent = "Normal") || (A_GuiEvent = "RightClick") || (A_GuiEvent = "D"))
 	NodeID := A_EventInfo
 Else
 	NodeID := TV_GetSelection()
@@ -11934,7 +12006,12 @@ If (A_GuiEvent = "D")
 	}
 	Else If (TargetNode > 0) ; Dropping as child
 	{
-		If ((TVData[TargetNode].Type != "If_Statement") && ((TVData[TargetNode].Type != "Loop") || (InStr(TVData[TargetNode].Content, "LoopEnd"))))
+		If (((TVData[TargetNode].Type != "If_Statement")
+		&& (!InStr(TVData[TargetNode].Type, "Loop"))
+		&& (TVData[TargetNode].Type != "For")
+		&& (TVData[TargetNode].Type != "While"))
+		|| (InStr(TVData[TargetNode].Content, "LoopEnd"))
+		|| (InStr(TVData[TargetNode].Content, "[End If]")))
 			return
 	}
 	NodeIDs := [A_EventInfo], TID := A_EventInfo, MovedRows := []
@@ -11946,30 +12023,49 @@ If (A_GuiEvent = "D")
 		NodeIDs.Push(TID)
 	}
 	GuiControl, -Redraw, TreeView
-	If (TID := TV_Drop(A_EventInfo, TargetNode))
+	If (TID := TV_Drop(A_EventInfo, TargetNode,,, True))
 	{
 		GuiControl, +Redraw, TreeView
-		For key, value in NodeIDs
+		TV_GetText(TargetText, TID)
+		TV_GetText(NextText, TV_GetNext(TID))
+		OutputDebug, % TargetText
+		OutputDebug, % NextText
+		TargetRow := TVData[TargetNode < 0 ? TargetNode * -1 : TargetNode].Row + 1, RowCount := TargetRow
+		For Key, Value in NodeIDs
 		{
-			TVData[TID] := TVData[value].Clone()
+			TVData[TID] := TVData[Value].Clone()
 			TVData[TID].ID := TID
 			If (TVData[TID].HideCheck)
 				HideTVCheck(TID, hMacroTv)
-			TVData.Delete(value)
+			TVData.Delete(Value)
 			If (TVData[TID].Row)
 				MovedRows.Push(TVData[TID].Row)
 			TID := TV_GetNext(TID, "Full")
 		}
+		OutputDebug, % JSON.Dump(MovedRows)
+		OutputDebug, % "into row " TargetRow
 		Gui, chMacro:Default
 		Gui, chMacro:Submit, NoHide
 		Gui, chMacro:ListView, InputList%A_List%
+		GuiControl, chMacro:-g, InputList%A_List%
 		LV_Modify(0, "-Select")
-		For key, value in MovedRows
-			LV_Modify(value, "Select")
+		For Key, Value in MovedRows
+			LV_Modify(Value, "Select")
+		If (TargetRow > Value)
+			TargetRow := TargetRow - Value
 		LVCopier.Cut()
-		LVCopier.Paste(TVData[TID].Row)
+		LVCopier.Paste(TargetRow)
 		GoSub, RowCheck
 		HistCheck()
+		Gui, tvMacro:Default
+		TVUpdateRows()
+		Gui, chMacro:Default
+		Gui, chMacro:Submit, NoHide
+		Gui, chMacro:ListView, InputList%A_List%
+		GuiControl, tvMacro:Focus, InputTree
+		GuiControl, chMacro:+gInputList, InputList%A_List%
+		If (AutoRefresh = 1)
+			GoSub, PrevRefresh
 	}
 	GuiControl, +Redraw, TreeView
 }
@@ -12305,9 +12401,7 @@ If (LVManager[A_List].Undo())
 		Gui, chMacro:Default
 		Gui, chMacro:Submit, NoHide
 		Gui, chMacro:ListView, InputList%A_List%
-		TVData := PMC.TVLoad(ShowGroups)
-		If (SelectedRow)
-			TVSelectRow(SelectedRow, CopyMenuLabels[A_List], TVData)
+		TVData := PMC.TVLoad(ShowGroups, SelectedRow)
 		GuiControl, tvMacro:Focus, InputTree
 	}
 }
@@ -12336,9 +12430,7 @@ If (LVManager[A_List].Redo())
 		Gui, chMacro:Default
 		Gui, chMacro:Submit, NoHide
 		Gui, chMacro:ListView, InputList%A_List%
-		TVData := PMC.TVLoad(ShowGroups)
-		If (SelectedRow)
-			TVSelectRow(SelectedRow, CopyMenuLabels[A_List], TVData)
+		TVData := PMC.TVLoad(ShowGroups, SelectedRow)
 		GuiControl, tvMacro:Focus, InputTree
 	}
 }
@@ -12790,6 +12882,8 @@ GuiControl, 1:Show, Separator6
 GuiControl, 1:Show, TModeTip
 GuiControl, 1:Show, Separator7
 GuiControl, 1:Show, TSendModeTip
+GuiControl, 1:Show, Separator8
+GuiControl, 1:Show, TLastMacroTip
 GuiControl, 1:, BarEdit, 0
 GuiControl, 1:, BarInfo, 1
 Gui, 1:Submit, NoHide
@@ -12820,6 +12914,8 @@ GuiControl, 1:Hide, Separator6
 GuiControl, 1:Hide, TModeTip
 GuiControl, 1:Hide, Separator7
 GuiControl, 1:Hide, TSendModeTip
+GuiControl, 1:Hide, Separator8
+GuiControl, 1:Hide, TLastMacroTip
 GuiControl, 1:, BarInfo, 0
 GuiControl, 1:, BarEdit, 1
 Gui, 1:Submit, NoHide
@@ -13051,6 +13147,25 @@ If (RowSelection = 1)
 	GoSub, Edit
 Else
 	GoSub, MultiEdit
+return
+
+GoToLastMacro:
+GuiControl, chMacro:Choose, A_List, %LastMacroRun%
+GoSub, TabSel
+If (MacroView = "Tree")
+{
+	Gui, tvMacro:Default
+	For Key, Item in TVData
+	{
+		If (Item.Level != 0)
+			continue 
+		If (Item.Content = LastMacroRun)
+		{
+			TV_Modify(Key, "Select Expand Vis")
+			break
+		}
+	}
+}
 return
 
 EditSelectedMacro:
@@ -14767,8 +14882,12 @@ return
 
 ListVars:
 SavedVars(, UserVars)
+FilteredVars := ""
+Loop, Parse, UserVars, `n
+	FilteredVars .= RegExMatch(A_LoopField, ":\s$") ? "" : A_LoopField "`n"
+FilteredVars := RTrim(FilteredVars, "`n")
 FileDelete, %SettingsFolder%\ListOfVars.txt
-FileAppend, %UserVars%, %SettingsFolder%\ListOfVars.txt
+FileAppend, %FilteredVars%, %SettingsFolder%\ListOfVars.txt
 Run, %DefaultEditor% %SettingsFolder%\ListOfVars.txt
 return
 
@@ -14948,7 +15067,7 @@ RelKey := "CapsLock"
 DelayG := 0
 OnScCtrl := 1
 ShowStep := 1
-HideMainWin := 1
+HideMainWin := 0
 DontShowAdm := 0
 DontShowPb := 0
 DontShowRec := 0
@@ -15550,10 +15669,7 @@ If (MacroView = "Tree")
 	Gui, chMacro:Default
 	Gui, chMacro:Submit, NoHide
 	Gui, chMacro:ListView, InputList%A_List%
-	SelectedRow := LV_GetNext()
 	TVData := PMC.TVLoad(ShowGroups)
-	If (SelectedRow)
-		TVSelectRow(SelectedRow, CopyMenuLabels[A_List], TVData)
 	GuiControl, tvMacro:Focus, InputTree
 }
 return
@@ -15694,12 +15810,14 @@ GuiControl, 1:Move, Separator4, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator5, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator6, % "y" GuiHeight-27
 GuiControl, 1:Move, Separator7, % "y" GuiHeight-27
+GuiControl, 1:Move, Separator8, % "y" GuiHeight-27
 GuiControl, 1:MoveDraw, THotkeyTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, ContextTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, MacroContextTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, CoordTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, TModeTip, % "y" GuiHeight-23
 GuiControl, 1:MoveDraw, TSendModeTip, % "y" GuiHeight-23
+GuiControl, 1:MoveDraw, TLastMacroTip, % "y" GuiHeight-23
 return
 
 ;##### MenuBar: #####
@@ -16489,7 +16607,7 @@ Else
 	Menu, GroupMenu, Uncheck, %e_Lang018%`t%_s%Ctrl+Shift+G
 GoSub, PrevRefresh
 If (MacroView = "Tree")
-	TVData := PMC.TVLoad(ShowGroups)
+	TVData := PMC.TVLoad(ShowGroups, LV_GetNext())
 return
 
 RemoveGroup:
@@ -16613,12 +16731,13 @@ Loop, %TabCount%
 {
 	Gui, chMacro:ListView, InputList%A_Index%
 	Loop, % LV_GetCount("Col")
-		colTx := "w_Lang0" 29 + A_Index, LV_ModifyCol(A_Index,, %colTx%)
+		colTx := "w_Lang0"  29 + A_Index, LV_ModifyCol(A_Index,, %colTx%)
 }
 Gui, chMacro:ListView, InputList%A_List%
 
 GuiControl, 1:, Repeat, %w_Lang015%:
 GuiControl, 1:, DelayT, %w_Lang016%:
+GuiControl, 1:, TLastMacroTip, %w_Lang115%: <a>%LastMacroRun%</a>
 GuiControl, 1:-Redraw, cRbMain
 RbMain.ModifyBand(RbMain.IDToIndex(7), "Text", w_Lang005)
 , RbMain.ModifyBand(RbMain.IDToIndex(8), "Text", w_Lang007)
@@ -16646,7 +16765,8 @@ TB_Edit(tbSettings, "HideMainWin", "", "", w_Lang013), TB_Edit(tbSettings, "OnSc
 , TB_Edit(tbSettings, "OnFinish", "", "", w_Lang020) , TB_Edit(tbSettings, "SetWin", "", "", t_Lang009)
 , TB_Edit(tbSettings, "WinKey", "", "", w_Lang109), TB_Edit(tbSettings, "SetJoyButton", "", "", w_Lang110)
 ; Edit
-TB_Edit(tbEdit, "EditButton", "", "", w_Lang093), TB_Edit(tbEdit, "CutRows", "", "", w_Lang081), TB_Edit(tbEdit, "CopyRows", "", "", w_Lang082), TB_Edit(tbEdit, "PasteRows", "", "", w_Lang083), TB_Edit(tbEdit, "Remove", "", "", w_Lang084)
+TB_Edit(tbEdit, "SwitchView", "", "", w_Lang116)
+, TB_Edit(tbEdit, "EditButton", "", "", w_Lang093), TB_Edit(tbEdit, "CutRows", "", "", w_Lang081), TB_Edit(tbEdit, "CopyRows", "", "", w_Lang082), TB_Edit(tbEdit, "PasteRows", "", "", w_Lang083), TB_Edit(tbEdit, "Remove", "", "", w_Lang084)
 , TB_Edit(tbEdit, "Duplicate", "", "", w_Lang080), TB_Edit(tbEdit, "SelectMenu", "", "", t_Lang139), TB_Edit(tbEdit, "CopyTo", "", "", w_Lang087)
 , TB_Edit(tbEdit, "GroupsMode", "", "", w_Lang097)
 , TB_Edit(tbEdit, "MoveUp", "", "", w_Lang078), TB_Edit(tbEdit, "MoveDn", "", "", w_Lang079)

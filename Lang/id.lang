@@ -313,8 +313,9 @@
 	w_Lang112 =	Baru (Ctrl+N)
 	w_Lang113 =	Pergi ke...
 	w_Lang114 =	Perlihatkan grup sebagai komentar
-	w_Lang115 =	Beralih ke tampilan hierarki
-	w_Lang116 =	Beralih ke tampilan daftar
+	w_Lang115 =	Makro aktif terakhir
+	w_Lang116 =	Beralih ke tampilan hierarki
+	w_Lang117 =	Beralih ke tampilan daftar
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse
@@ -578,8 +579,11 @@
 	c_Lang260 =	Gambar ke Teks
 	c_Lang261 =	Bahasa
 	c_Lang262 =	Unduh lebih banyak bahasa ...
+	c_Lang263 =	Koordinat acak
+; 16. Other Windows	c_Lang264 =	Mengimbangi
+	c_Lang265 =	Piksel
 		
-; 16. Other Windows		
+		
 	t_Lang001 =	Ekspor ke AutoHotkey
 	t_Lang002 =	Macro
 	t_Lang003 =	Loops
@@ -800,6 +804,7 @@
 	t_Lang218 =	Pergi ke baris yang dipilih
 	t_Lang219 =	Pilih kode secara otomatis
 	t_Lang220 =	Baris
+	t_Lang221 =	Ikon khusus
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka
