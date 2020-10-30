@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.3.2
+; Version: 5.3.3
 ; Release Date: October, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -63,6 +63,9 @@ https://www.autohotkey.com/boards/viewtopic.php?f=6&t=7647
 iseahound (Edison Hua) for the Vis2 function used for OCR.
 https://www.autohotkey.com/boards/viewtopic.php?f=6&t=36047
 
+Coco for JSON class.
+https://www.autohotkey.com/boards/viewtopic.php?f=6&t=627
+
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 
 chosen1ft for fixing the mixing rows bug when saving a project.
@@ -74,7 +77,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.3.2
+;@Ahk2Exe-SetVersion 5.3.3
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -141,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.3.2", ReleaseDate := "October, 2020"
+CurrentVersion := "5.3.3", ReleaseDate := "October, 2020"
 
 ;##### Ini File Read #####
 
@@ -4261,7 +4264,8 @@ rbrtryn for the ChooseColor function.
 PhiLho and skwire for the function to Get/Set the order of columns.
 fincs for GenDocs and SciLexer.dll custom builds.
 tmplinshi for the CreateFormData function.
-iseahound (Edison Hua) for the Vis2 function used for OCR.  
+iseahound (Edison Hua) for the Vis2 function used for OCR.
+Coco for JSON class.
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 chosen1ft for fixing the mixing rows bug when saving a project.
 )
@@ -7152,7 +7156,7 @@ Else
 If (LFor)
 {
 	GuiControl, 12:Enable, Omit
-	GuiControl, 12:, Field1, %c_Lang207% / %c_Lang087%
+	GuiControl, 12:, Field1, %c_Lang207% / %c_Lang211% / %c_Lang087%
 	GuiControl, 12:, Field2, %c_Lang208%
 	GuiControl, 12:, Field3, %c_Lang209%
 	GuiControl, 12:, Delim, % Par2 ? Par2 : "key"
@@ -8564,12 +8568,12 @@ Gui, 21:Tab, 3
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
 Gui, 21:Add, Text, -Wrap R1 ys+20 xs+10 W200, %c_Lang057%:
 Gui, 21:Add, Edit, W200 R1 -Multi vVarNameF
-Gui, 21:Add, Checkbox, -Wrap R1 ys+20 x+5 W200 vIsArray gIsArray, %c_Lang207%:
+Gui, 21:Add, Checkbox, -Wrap R1 ys+20 x+5 W200 vIsArray gIsArray, %c_Lang207% / %c_Lang211%:
 Gui, 21:Add, Edit, W200 R1 -Multi vArrayName Disabled
 Gui, 21:Add, Checkbox, -Wrap R1 y+10 xs+10 W430 vUseExtFunc gUseExtFunc, %c_Lang128%
 Gui, 21:Add, Edit, W400 R1 -Multi vFileNameEx Disabled, %StdLibFile%
 Gui, 21:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchFEX gSearchAHK Disabled, ...
-Gui, 21:Add, Text, -Wrap R1 y+10 xs+10 W130 vFuncNameT, %c_Lang089%:
+Gui, 21:Add, Text, -Wrap R1 y+10 xs+10 W130 vFuncNameT, %c_Lang089% / %c_Lang095%:
 Gui, 21:Add, Combobox, W400 -Multi vFuncName gFuncName, %Proj_Funcs%%BuiltinFuncList%
 Gui, 21:Add, Button, -Wrap W25 yp-1 x+5 hwndFuncHelp vFuncHelp gFuncHelp Disabled
 	ILButton(FuncHelp, ResDllPath ":" 24)
@@ -8582,7 +8586,7 @@ Gui, 21:Add, Button, -Wrap x+10 yp W75 H23 gReset, %c_Lang088%
 Gui, 21:Add, Button, -Wrap Section xm y+14 W75 H23 vFuncOK gVarOK, %c_Lang020%
 Gui, 21:Add, Button, -Wrap ys W75 H23 gIfCancel, %c_Lang021%
 Gui, 21:Add, Button, -Wrap ys W75 H23 vVarApplyB gVarApply Disabled, %c_Lang131%
-Gui, 21:Add, Link, -Wrap R1 x+10 yp-3 W190 vExprLink3 gExprLink, <a>%c_Lang091%</a>
+Gui, 21:Add, Link, -Wrap R1 x+10 yp+3 W190 vExprLink3 gExprLink, <a>%c_Lang091%</a>
 Gui, 21:Add, StatusBar, gStatusBarHelp
 Gui, 21:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
@@ -8679,7 +8683,10 @@ If (s_Caller = "Edit")
 			GuiControl, 21:Enable, ArrayName
 			GuiControl, 21:, FuncName, $%ArrayMethodsList%
 			GuiControl, 21:, ArrayName, %ArrayName%
-			GuiControl, 21:ChooseString, FuncName, %FuncName%
+			If (InStr(ArrayMethodsList, FuncName))
+				GuiControl, 21:ChooseString, FuncName, %FuncName%
+			Else
+				GuiControl, 21:, FuncName, %FuncName%$$
 		}
 		Else
 		{
@@ -8815,6 +8822,7 @@ Else If (Statement = "If Message Box")
 If (ElseIf)
 	Statement := "[ElseIf] " Statement
 StringReplace, TestVar, TestVar, `n, ``n, All
+Target := ""
 If (A_ThisLabel != "IfApply")
 {
 	Gui, 1:-Disabled
@@ -14214,7 +14222,7 @@ If (RepAllRows = 1)
 		}
 	}
 	If (Replaces > 0)
-		HistCheck()
+		HistCheck(A_List)
 }
 Else If (RepAllMacros = 1)
 {
@@ -14260,7 +14268,7 @@ Else If (RepAllMacros = 1)
 			}
 		}
 		If (Replaces > 0)
-			HistCheck()
+			HistCheck(A_List)
 	}
 	Gui, chMacro:Listview, InputList%A_List%
 }
@@ -14308,9 +14316,10 @@ Else
 		}
 	}
 	If (Replaces > 0)
-		HistCheck()
+		HistCheck(A_List)
 }
 GuiControl, 18:, Replaced, %t_Lang072%: %Replaces%
+
 return
 
 RegExSearch:
@@ -15677,8 +15686,8 @@ Menu, SelectMenu, Add, %s_Lang004%`t%_s%Ctrl+Q, CheckSel
 Menu, SelectMenu, Add, %s_Lang005%`t%_s%Ctrl+Shift+Q, UnCheckSel
 Menu, SelectMenu, Add, %s_Lang006%`t%_s%Ctrl+Alt+Q, InvertCheck
 Menu, SelectMenu, Add
-Menu, SelectMenu, Add, %s_Lang007%`t%_s%Ctrl+[, MoveSelUp
-Menu, SelectMenu, Add, %s_Lang008%`t%_s%Ctrl+], MoveSelDn
+Menu, SelectMenu, Add, %s_Lang007%`t%_s%Ctrl+Up, MoveSelUp
+Menu, SelectMenu, Add, %s_Lang008%`t%_s%Ctrl+Down, MoveSelDn
 Menu, SelectMenu, Add
 Menu, SelectMenu, Add, %s_Lang009%, SelType
 Menu, SelectMenu, Add, %s_Lang010%, :SelCmdMenu
@@ -16858,6 +16867,7 @@ return
 #Include <Class_LV_Colors>
 #Include <IL_EX>
 #Include <Gdip_All>
+#Include <JSON>
 #Include <Vis2>
 #Include <Eval>
 #Include <SCI>

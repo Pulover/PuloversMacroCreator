@@ -15,10 +15,10 @@ MButton & WheelDown::
 ^+Down::
 GoSub, MoveDn
 return
-^[::
+^Up::
 GoSub, MoveSelUp
 return
-^]::
+^Down::
 GoSub, MoveSelDn
 return
 +WheelUp::

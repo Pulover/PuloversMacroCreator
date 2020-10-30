@@ -26,5 +26,6 @@ Although the recorder is a good choice for quick tasks, **Pulover's Macro Creato
 * [Random Function](Examples/RandomFunction.pmc)
 * [User-Defined Functions](Examples/UserFunctions.pmc)
 * [Variables](Examples/Variables.pmc)
+* [Save PNG screenshots](Examples/SaveScreenshot.pmc)
 
 Check out the video tutorials at [www.macrocreator.com/help](https://www.macrocreator.com/help) to learn more.

@@ -521,7 +521,7 @@
 	c_Lang204 =	Evaluate expression
 	c_Lang205 =	Region
 	c_Lang206 =	(Use [] to create arrays, e.g.: [10, 20, aVariable, "aString"])
-	c_Lang207 =	Array Object
+	c_Lang207 =	Object
 	c_Lang208 =	Key Name
 	c_Lang209 =	Value Name
 	c_Lang210 =	Values

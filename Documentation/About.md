@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.3.2  
+Version: 5.3.3  
 Release Date: October, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -30,12 +30,17 @@ PhiLho and skwire for the [function](http://autohotkey.com/board/topic/11926-can
 fincs for [GenDocs](http://autohotkey.com/board/topic/71751-gendocs-v30-alpha002) and [SciLexer.dll custom builds](http://autohotkey.com/board/topic/54431-scite4autohotkey-v3004-updated-aug-14-2013/page-58#entry566139).  
 tmplinshi for the [CreateFormData function](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=7647).  
 iseahound (Edison Hua) for the [Vis2 function](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=36047) used for OCR.  
+Coco for [JSON class](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=627).  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
 chosen1ft for fixing the mixing rows bug when saving a project.  
 [Translation revisions](https://www.macrocreator.com/project/).  
 
 
 # Change Log
+
+## Version 5.3.3
+* Fixed bug in *Else If* statements nested in other statements.
+* Fixed empty return value from **Object/Array** method call from *Function* window.
 
 ## Version 5.3.2
 * Fixed bug in Function Return.

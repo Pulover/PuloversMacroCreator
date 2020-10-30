@@ -739,7 +739,7 @@
 					pbParams := Target "." Action "(" VarValue ")"
 					Try
 					{
-						VarValue := Eval(pbParams, PlaybackVars[LoopDepth][mLoopIndex])
+						VarValue := Eval(pbParams, PlaybackVars[LoopDepth][mLoopIndex])[1]
 					,	AssignVar(VarName, ":=", VarValue, PlaybackVars[LoopDepth][mLoopIndex], RunningFunction)
 					}
 					Catch e
@@ -2268,8 +2268,8 @@ IfStatement(ThisError, CustomVars, Action, Step, TimesX, DelayX, Type, Target, W
 	{
 		If ((ThisError = 0) || (ThisError = -1))
 			return -1
-		If (ThisError = 1)
-			ThisError := 0
+		If (ThisError > 0)
+			ThisError--
 		Action := SubStr(Action, 10)
 	}
 	If (ThisError > 0)

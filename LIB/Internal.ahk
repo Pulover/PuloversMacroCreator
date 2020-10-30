@@ -1709,28 +1709,14 @@ SavedVars(_Var := "", ByRef _Saved := "", AsArray := false, RunningFunction := "
 		If (!IsObject(LocalRecord[RunningFunction]))
 			LocalRecord[RunningFunction] := {}
 		If (IsObject(%_Var%))
-		{
-			ListOfVars := "["
-			For i, v in %_Var%
-			{
-				ListOfVars .= IsObject(v) ? "[Array](" v.Length() "), " : v ", "
-			}
-			LocalRecord[RunningFunction][_Var] := "[Array](" %_Var%.Length() ") " SubStr(RTrim(ListOfVars, ", "), 1, 60) "]"
-		}
+			LocalRecord[RunningFunction][_Var] := SubStr(JSON.Dump(%_Var%), 1, 60)
 		Else
 			LocalRecord[RunningFunction][_Var] := SubStr(%_Var%, 1, 60)
 	}
 	Else
 	{
 		If (IsObject(%_Var%))
-		{
-			ListOfVars := "["
-			For i, v in %_Var%
-			{
-				ListOfVars .= IsObject(v) ? "[Array](" v.Length() "), " : v ", "
-			}
-			VarsRecord[_Var] := "[Array](" %_Var%.Length() ") " SubStr(RTrim(ListOfVars, ", "), 1, 60) "]"
-		}
+			VarsRecord[_Var] := SubStr(JSON.Dump(%_Var%), 1, 60)
 		Else
 			VarsRecord[_Var] := SubStr(%_Var%, 1, 60)
 	}
