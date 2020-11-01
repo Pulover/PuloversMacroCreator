@@ -337,13 +337,6 @@ Eval($x, _CustomVars := "", _Init := true)
 		}
 	}
 	
-	; Check if there are still math operations inside the resulting string
-	For _i, _v in $z
-	{
-		If (RegExMatch(_v, "^\s*\b\d+\b\s*[+\-/<>&^|``%!~*]+\s*\b\d+\b\s*$"))
-			$z[_i] := Eval($z[_i], _CustomVars, false)[1]
-	}
-	
 	return $z
 }
 

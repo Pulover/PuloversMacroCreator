@@ -1261,8 +1261,24 @@ TVUpdateRows()
 				ItemID := TV_GetNext(ItemID, "Full")
 			}
 			TVData[ItemID].Row := each
+		,	TVData[ItemID].Content := RegExReplace(TVData[ItemID].Content, "^\d+:", each ":")
+		,	TV_Modify(ItemID,, TVData[ItemID].Content)
 		}
 	}
+}
+
+TVCountChildren(Node)
+{
+	global TVData
+
+	NextSibling := TV_GetNext(Node), Children := 0
+	While (Node != NextSibling)
+	{
+		If (TVData[Node].Row)
+			Children++
+		Node := TV_GetNext(Node, "Full")
+	}
+	return Children
 }
 
 TVCollapse(MacroLabel, TVData)

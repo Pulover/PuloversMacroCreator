@@ -12007,12 +12007,13 @@ If (A_GuiEvent = "D")
 	If (TVData[A_EventInfo].Row = 0)
 		return
 	TargetNode := TV_Drag(A_EventInfo)
-	If (TargetNode < 0) ; Dropping as sibling
+	IsTargetChild := TargetNode > 0
+	If (!IsTargetChild) ; Dropping as sibling
 	{
 		If (TVData[TargetNode * -1].Row = 0)
 			return
 	}
-	Else If (TargetNode > 0) ; Dropping as child
+	Else If (IsTargetChild) ; Dropping as child
 	{
 		If (((TVData[TargetNode].Type != "If_Statement")
 		&& (!InStr(TVData[TargetNode].Type, "Loop"))
@@ -12034,11 +12035,9 @@ If (A_GuiEvent = "D")
 	If (TID := TV_Drop(A_EventInfo, TargetNode,,, True))
 	{
 		GuiControl, +Redraw, TreeView
-		TV_GetText(TargetText, TID)
-		TV_GetText(NextText, TV_GetNext(TID))
-		OutputDebug, % TargetText
-		OutputDebug, % NextText
-		TargetRow := TVData[TargetNode < 0 ? TargetNode * -1 : TargetNode].Row + 1, RowCount := TargetRow
+		TargetNode := IsTargetChild ? TargetNode : TargetNode * -1
+		TargetRow := TVData[TargetNode].Row, RowCount := TargetRow
+		TargetRowChildren := TVCountChildren(TargetNode)
 		For Key, Value in NodeIDs
 		{
 			TVData[TID] := TVData[Value].Clone()
@@ -12050,8 +12049,6 @@ If (A_GuiEvent = "D")
 				MovedRows.Push(TVData[TID].Row)
 			TID := TV_GetNext(TID, "Full")
 		}
-		OutputDebug, % JSON.Dump(MovedRows)
-		OutputDebug, % "into row " TargetRow
 		Gui, chMacro:Default
 		Gui, chMacro:Submit, NoHide
 		Gui, chMacro:ListView, InputList%A_List%
@@ -12061,6 +12058,10 @@ If (A_GuiEvent = "D")
 			LV_Modify(Value, "Select")
 		If (TargetRow > Value)
 			TargetRow := TargetRow - Value
+		If (IsTargetChild)
+			TargetRow++
+		Else
+			TargetRow += TargetRowChildren
 		LVCopier.Cut()
 		LVCopier.Paste(TargetRow)
 		GoSub, RowCheck

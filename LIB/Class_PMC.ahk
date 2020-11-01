@@ -232,7 +232,6 @@
 			}
 		}
 		TVData := CreateTreeView(TVData, hMacroTv, SelectNode)
-		OutputDebug, % ">> " SelectNode
 		If (SelectNode)
 			TV_Modify(SelectNode, "Select Vis")
 		GuiControl, tvMacro:+Redraw, InputTree
