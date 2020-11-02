@@ -5,8 +5,8 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.3.3
-; Release Date: October, 2020
+; Version: 5.3.4
+; Release Date: November, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
@@ -77,7 +77,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.3.3
+;@Ahk2Exe-SetVersion 5.3.4
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.3.3", ReleaseDate := "October, 2020"
+CurrentVersion := "5.3.4", ReleaseDate := "November, 2020"
 
 ;##### Ini File Read #####
 
@@ -10683,10 +10683,11 @@ Gui, 1:+Disabled
 Gui, 38:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
 ; Function
 Gui, 38:Add, GroupBox, Section xm ym W450 H70
-Gui, 38:Add, Text, -Wrap R1 ys+15 xs+10 W320 vFuncNameT, %c_Lang089%:
+Gui, 38:Add, Text, -Wrap R1 ys+15 xs+10 W210 vFuncNameT, %c_Lang089%:
 Gui, 38:Add, Text, -Wrap R1 yp x+5 W105, %c_Lang218%:
-Gui, 38:Add, Edit, y+5 xs+10 W320 vFuncName, MyFunc
-Gui, 38:Add, DDL, yp x+5 W105 vFuncScope gFuncScope AltSubmit, %c_Lang219%||%c_Lang220%
+Gui, 38:Add, Edit, y+5 xs+10 W210 vFuncName, MyFunc
+Gui, 38:Add, Radio, -Wrap R1 yp+5 x+5 W105 vLocalScope gFuncScope Checked, %c_Lang219%
+Gui, 38:Add, Radio, -Wrap R1 yp x+5 W105 vGlobalScope gFuncScope, %c_Lang220%
 Gui, 38:Add, GroupBox, Section xm ys+75 W450 H155, %c_Lang215%:
 Gui, 38:Add, Text, -Wrap R1 ys+20 xs+25 W210, %c_Lang221%:
 Gui, 38:Add, Text, -Wrap R1 yp x+5 W150, %c_Lang217%:
@@ -10740,7 +10741,8 @@ If (s_Caller = "Edit")
 	If (A_ThisLabel = "EditUserFunc")
 	{
 		GuiControl, 38:, FuncName, %Details%
-		GuiControl, 38:Choose, FuncScope, % (Target = "Global") ? 2 : 1
+		If (Target = "Global")
+			GuiControl, 38:, GlobalScope, 1
 		StringSplit, FuncVariables, Window, /, %A_Space%
 		GuiControl, 38:, FuncScoped, % StrReplace(FuncVariables1, """")
 		GuiControl, 38:, FuncStatic, % StrReplace(FuncVariables2, """")
@@ -10844,7 +10846,7 @@ If (TabControl = 1)
 	FuncVariables := ""
 	Loop, Parse, FuncScoped, `,, %A_Space%
 	{
-		If (FuncScope = 1)
+		If (LocalScope = 1)
 		{
 			Try
 				z_Check := VarSetCapacity(%A_LoopField%)
@@ -10973,7 +10975,7 @@ If (TabControl = 1)
 			LV_Add("Check", ListCount%A_List%+1, Action, Details, 1, 0, Type, Target)
 		RowIdx++
 	}
-	FuncScope := (FuncScope = 2) ? "Global" : "Local"
+	FuncScope := (GlobalScope = 1) ? "Global" : "Local"
 	If (s_Caller = "Conv")
 		LV_Insert(RowIdx, "Check", ListCount%A_List%+1, "[FunctionStart]", FuncName, 1, 0, cType47, FuncScope, FuncVariables)
 	Else If (s_Caller = "Edit")
@@ -11086,7 +11088,7 @@ return
 
 FuncScope:
 Gui, 38:Submit, NoHide
-If (FuncScope = 2)
+If (GlobalScope = 1)
 	GuiControl, 38:, VarsGroup, %c_Lang224% (VarName1 [:= VarValue1], VarName2 [:= VarValue2]...):
 Else
 	GuiControl, 38:, VarsGroup, %c_Lang223% (VarName1, VarName2, VarName3...):
@@ -14229,6 +14231,7 @@ Else If (RepAllMacros = 1)
 	Tmp_List := A_List
 	Loop, %TabCount%
 	{
+		Replaces := 0
 		Gui, chMacro:Listview, InputList%A_Index%
 		Loop,  % ListCount%A_Index%
 		{
@@ -14268,7 +14271,7 @@ Else If (RepAllMacros = 1)
 			}
 		}
 		If (Replaces > 0)
-			HistCheck(A_List)
+			HistCheck(A_Index)
 	}
 	Gui, chMacro:Listview, InputList%A_List%
 }

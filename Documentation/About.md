@@ -7,8 +7,8 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.3.3  
-Release Date: October, 2020  
+Version: 5.3.4  
+Release Date: November, 2020  
 AutoHotkey Version: 1.1.32.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -37,6 +37,9 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.3.4
+* Fixed strings being evaluated as math operations in expressions.
 
 ## Version 5.3.3
 * Fixed bug in *Else If* statements nested in other statements.
