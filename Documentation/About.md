@@ -38,6 +38,9 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 # Change Log
 
+## Version 5.3.4
+* Fixed strings being evaluated as math operations in expressions.
+
 ## Version 5.3.3
 * Fixed bug in *Else If* statements nested in other statements.
 * Fixed empty return value from **Object/Array** method call from *Function* window.
