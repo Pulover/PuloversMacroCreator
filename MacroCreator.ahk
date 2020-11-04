@@ -12012,7 +12012,7 @@ If (A_GuiEvent = "D")
 	IsTargetChild := TargetNode > 0
 	If (!IsTargetChild) ; Dropping as sibling
 	{
-		If (TVData[TargetNode * -1].Row = 0)
+		If (!TVData[TargetNode * -1].Row)
 			return
 	}
 	Else If (IsTargetChild) ; Dropping as child
@@ -12075,6 +12075,8 @@ If (A_GuiEvent = "D")
 		Gui, chMacro:ListView, InputList%A_List%
 		GuiControl, tvMacro:Focus, InputTree
 		GuiControl, chMacro:+gInputList, InputList%A_List%
+		Gui, tvMacro:Default
+		TV_Modify(IsTargetChild ? TV_GetNext(TargetNode, "Full") : TV_GetNext(TargetNode))
 		If (AutoRefresh = 1)
 			GoSub, PrevRefresh
 	}
@@ -16655,7 +16657,9 @@ LVManager[A_List].CollapseAll(A_ThisLabel = "CollapseGroups")
 return
 
 CollapseMacro:
-TVCollapse(CopyMenuLabels[A_List], TVData)
+Gui, tvMacro:Default
+Gui, tvMacro:Submit, NoHide
+TVCollapse(TV_GetSelection())
 return
 
 ExpandMacro:

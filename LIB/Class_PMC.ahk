@@ -207,10 +207,7 @@
 					LevelDepth--
 				TVData[++CountId] := {Row: each, Content: each ": " Action ", " Col[4], Level: LevelDepth, Options: "Icon" GetIconForType(Type, Action) " Check" chk, Type: Col[7]}
 				If ((Idx = A_List) && (each = SelectedRow))
-				{
-					OutputDebug, % "select row " CountId " / " SelectedRow
 					SelectNode := CountId
-				}
 				If (InStr(Action, "[Else")=1)
 					LevelDepth++
 				If (((Type = cType17) && (!InStr(Action, "["))) || (Action = "[LoopStart]"))

@@ -1281,25 +1281,18 @@ TVCountChildren(Node)
 	return Children
 }
 
-TVCollapse(MacroLabel, TVData)
+TVCollapse(Node)
 {
-	local CurrentMacro
-	static _w := Chr(2)
+	global TVData
 
-	Gui, tvMacro:Default
-	Gui, tvMacro:Submit, NoHide
-	For Key, Item in TVData
+	TV_Modify(Node, "-Expand")
+	NextSibling := TV_GetNext(Node)
+	While (Node != NextSibling)
 	{
-		If (Item.Level = 0)
-		{
-			CurrentMacro := SubStr(Item.Content, 2)
-			If (CurrentMacro = MacroLabel)
-				TV_Modify(Item.ID, "-Expand")
-			continue
-		}
-		If (CurrentMacro != MacroLabel)
-			continue
-		TV_Modify(Item.ID, "-Expand")
+		OutputDebug, % TVData[Node].Row
+		If (TVData[Node].Row)
+			TV_Modify(Node, "-Expand")
+		Node := TV_GetNext(Node, "Full")
 	}
 }
 
