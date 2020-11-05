@@ -12365,7 +12365,9 @@ return
 CutRows:
 Critical
 Gui, tvMacro:Default
+Gui, tvMacro:Submit, NoHide
 Node := TV_GetPrev(TV_GetSelection())
+Node := Node ? Node : TV_GetParent(TV_GetSelection())
 PrevRow := TVData[Node].Row
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
@@ -12420,7 +12422,9 @@ If ((InMemoryRows) && (MacroView = "Tree"))
 			break
 		If (TVData[Node].Content = CopyMenuLabels[A_List])
 		{
-			TV_Modify(Node)
+			TV_Modify(Node, "Select Vis")
+			If (!PrevRow)
+				break
 			Loop
 			{
 				Node := TV_GetNext(Node, "Full")
@@ -12494,10 +12498,15 @@ return
 
 Remove:
 Critical
+Gui, tvMacro:Default
+Gui, tvMacro:Submit, NoHide
+Node := TV_GetPrev(TV_GetSelection())
+Node := Node ? Node : TV_GetParent(TV_GetSelection())
+PrevRow := TVData[Node].Row
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), DeletedRows := 0
 If (RowSelection = 0)
 {
 	LV_GetText(Type, 1, 6)
@@ -12508,17 +12517,47 @@ If (RowSelection = 0)
 	}
 	LV_Delete()
 	LVManager[A_List].RemoveAllGroups(c_Lang061)
+	DeletedRows := 1
 }
 Else
 {
 	PrevState := AutoRefresh
 	AutoRefresh := 0
-	LVManager[A_List].Delete()
+	DeletedRows := LVManager[A_List].Delete()
 	AutoRefresh := PrevState
 }
 LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
 GoSub, b_Start
+
+If ((DeletedRows) && (MacroView = "Tree"))
+{
+	GuiControl, tvMacro:-Redraw, TreeView
+	Node := 0
+	Loop
+	{
+		Node := TV_GetNext(Node)
+		If (!TVData.HasKey(Node))
+			break
+		If (TVData[Node].Content = CopyMenuLabels[A_List])
+		{
+			TV_Modify(Node, "Select Vis")
+			If (!PrevRow)
+				break
+			Loop
+			{
+				Node := TV_GetNext(Node, "Full")
+				If (TVData[Node].Row = PrevRow)
+				{
+					TV_Modify(Node, "Select Vis")
+					break 2
+				}
+			}
+		}
+	}
+	GuiControl, tvMacro:+Redraw, TreeView
+}
+
 GuiControl, chMacro:+gInputList, InputList%A_List%
 If (AutoRefresh)
 	GoSub, PrevRefresh
@@ -15049,23 +15088,9 @@ return
 h_Del:
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
-PrevState := AutoRefresh
-AutoRefresh := 0
-LVManager[A_List].Delete()
-AutoRefresh := PrevState
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
-GoSub, RowCheck
-GoSub, b_Start
-return
-
-h_NumDel:
-PrevState := AutoRefresh
-AutoRefresh := 0
-LVManager[A_List].Delete()
-AutoRefresh := PrevState
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
-GoSub, RowCheck
-GoSub, b_Start
+RowSelection := LV_GetCount("Selected")
+If (RowSelection > 0)
+	GoSub, Remove
 return
 
 ClearPars:
