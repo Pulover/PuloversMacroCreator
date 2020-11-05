@@ -102,6 +102,7 @@ return
 ^h::GoSub, SetWin
 ^g::GoSub, GoToMacro
 ^b::GoSub, OnScControls
+^k::GoSub, SwitchView
 ^Enter::GoSub, PlayStart
 ^+Enter::GoSub, TestRun
 !1::GoSub, PlayFrom

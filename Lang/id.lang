@@ -154,6 +154,7 @@
 	v_Lang037 =	K&omentar dari baris dicentang
 	v_Lang038 =	&Jalur wrap
 	v_Lang039 =	P&erlihatkan grup sebagai komentar
+	v_Lang040 =	Ganti &mode tampilan
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Pengaturan
@@ -314,8 +315,8 @@
 	w_Lang113 =	Pergi ke...
 	w_Lang114 =	Perlihatkan grup sebagai komentar
 	w_Lang115 =	Makro aktif terakhir
-	w_Lang116 =	Beralih ke tampilan hierarki
-	w_Lang117 =	Beralih ke tampilan daftar
+	w_Lang116 =	Beralih ke tampilan hierarki (Ctrl + K)
+	w_Lang117 =	Beralih ke tampilan daftar (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

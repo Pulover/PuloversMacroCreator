@@ -154,6 +154,7 @@
 	v_Lang037 =	&Udkommentere ukontrolleret rækker
 	v_Lang038 =	&Linje wrap
 	v_Lang039 =	Vi&s grupper som kommentarer
+	v_Lang040 =	Skift visningstilstan&d
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Indstillinger
@@ -314,8 +315,8 @@
 	w_Lang113 =	Gå til...
 	w_Lang114 =	Vis grupper som kommentarer
 	w_Lang115 =	Sidste aktive makro
-	w_Lang116 =	Skift til trævisning
-	w_Lang117 =	Skift til listevisning
+	w_Lang116 =	Skift til trævisning (Ctrl + K)
+	w_Lang117 =	Skift til listevisning (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus

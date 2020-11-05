@@ -154,6 +154,7 @@
 	v_Lang037 =	Ko&mmentéieren aus unchecked Zeile
 	v_Lang038 =	&Linn geschenkt
 	v_Lang039 =	W&eisen Gruppen als Kommentaren
+	v_Lang040 =	Schalt &View Mode
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Parameteren
@@ -314,8 +315,8 @@
 	w_Lang113 =	Géi op...
 	w_Lang114 =	Weisen Gruppen als Kommentaren
 	w_Lang115 =	Leschten aktive Makro
-	w_Lang116 =	Wiesselen op Bam Vue
-	w_Lang117 =	Wiesselen op d'Lëschtvisioun
+	w_Lang116 =	Wiesselen op d'Bamvisioun (Ctrl + K)
+	w_Lang117 =	Wiesselen op d'Lëschtvisioun (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

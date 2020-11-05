@@ -154,6 +154,7 @@
 	v_Lang037 =	Co&menteu files sense marcar
 	v_Lang038 =	En&rotlleu
 	v_Lang039 =	Mostra e&ls grups com a comentaris
+	v_Lang040 =	&Canvia el mode de visualització
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuració
@@ -314,8 +315,8 @@
 	w_Lang113 =	Anar a...
 	w_Lang114 =	Mostra els grups com a comentaris
 	w_Lang115 =	Darrera macro activa
-	w_Lang116 =	Canvieu a la visualització d'arbre
-	w_Lang117 =	Canvia a la visualització de llista
+	w_Lang116 =	Canvia a la visualització d'arbre (Ctrl + K)
+	w_Lang117 =	Canvia a la visualització de llista (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratolí

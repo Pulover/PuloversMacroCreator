@@ -154,6 +154,7 @@
 	v_Lang037 =	&Comment out imigqa uma kunganqandwa
 	v_Lang038 =	Uku&goqa umbhalo
 	v_Lang039 =	Kh&ombisa amaqembu njengamazwana
+	v_Lang040 =	Shin&tsha imodi yokubuka
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Amasethingi
@@ -314,8 +315,8 @@
 	w_Lang113 =	Iya ku...
 	w_Lang114 =	Khombisa amaqembu njengamazwana
 	w_Lang115 =	I-macro yokugcina esebenzayo
-	w_Lang116 =	Shintshela ekubukeni kwesihlahla
-	w_Lang117 =	Shintshela ekubukweni kohlu
+	w_Lang116 =	Shintshela ekubukeni kwesihlahla (Ctrl + K)
+	w_Lang117 =	Shintshela ekubukweni kohlu (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

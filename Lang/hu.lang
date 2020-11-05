@@ -154,6 +154,7 @@
 	v_Lang037 =	&Hozzászólás ki ellenőrizetlenül sorok
 	v_Lang038 =	&Sortörés
 	v_Lang039 =	&Csoportok megjelenítése megjegyzésként
+	v_Lang040 =	&Nézet mód váltása
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Beállítások
@@ -314,8 +315,8 @@
 	w_Lang113 =	Menj...
 	w_Lang114 =	Csoportok megjelenítése megjegyzésként
 	w_Lang115 =	Utolsó aktív makró
-	w_Lang116 =	Váltson fa nézetre
-	w_Lang117 =	Váltás listanézetre
+	w_Lang116 =	Váltás fa nézetre (Ctrl + K)
+	w_Lang117 =	Váltás listanézetre (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Egér

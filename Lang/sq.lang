@@ -154,6 +154,7 @@
 	v_Lang037 =	K&oment nga rreshtave pakontrolluar
 	v_Lang038 =	&Përfundojë Line
 	v_Lang039 =	Tr&ego grupet si komente
+	v_Lang040 =	&Ndërro mënyrën e shikimit
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Cilësimet
@@ -314,8 +315,8 @@
 	w_Lang113 =	Shkoni në ...
 	w_Lang114 =	Trego grupet si komente
 	w_Lang115 =	Makroja e fundit aktive
-	w_Lang116 =	Kaloni në pamjen e pemës
-	w_Lang117 =	Kaloni në pamjen e listës
+	w_Lang116 =	Kaloni në pamjen e pemës (Ctrl + K)
+	w_Lang117 =	Kaloni në pamjen e listës (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus

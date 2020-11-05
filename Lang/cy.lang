@@ -154,6 +154,7 @@
 	v_Lang037 =	&Sylw allan rhesi ddirwystr
 	v_Lang038 =	Amla&pio llinell
 	v_Lang039 =	Da&ngos grwpiau fel sylwadau
+	v_Lang040 =	&Newid modd gweld
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Gosodiadau
@@ -314,8 +315,8 @@
 	w_Lang113 =	Mynd i...
 	w_Lang114 =	Dangos grwpiau fel sylwadau
 	w_Lang115 =	Micro gweithredol olaf
-	w_Lang116 =	Newid i olygfa coeden
-	w_Lang117 =	Newid i weld y rhestr
+	w_Lang116 =	Newid i olygfa coeden (Ctrl + K)
+	w_Lang117 =	Newid i weld y rhestr (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Llygoden

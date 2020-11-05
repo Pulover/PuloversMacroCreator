@@ -154,6 +154,7 @@
 	v_Lang037 =	C&ommentaar uit ongecontroleerd rijen
 	v_Lang038 =	&Lijn wrap
 	v_Lang039 =	&Geef groepen weer als opmerkingen
+	v_Lang040 =	Van weer&gavemodus wisselen
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Instellingen
@@ -314,8 +315,8 @@
 	w_Lang113 =	Ga naar...
 	w_Lang114 =	Geef groepen weer als opmerkingen
 	w_Lang115 =	Laatste actieve macro
-	w_Lang116 =	Schakel over naar de boomstructuur
-	w_Lang117 =	Overschakelen naar lijstweergave
+	w_Lang116 =	Overschakelen naar boomstructuur (Ctrl + K)
+	w_Lang117 =	Overschakelen naar lijstweergave (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Muis

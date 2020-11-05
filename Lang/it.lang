@@ -154,6 +154,7 @@
 	v_Lang037 =	Co&mmentare le righe non controllati
 	v_Lang038 =	&Linea avvolgente
 	v_Lang039 =	Mos&tra i gruppi come commenti
+	v_Lang040 =	Cambia m&odalità di visualizzazione
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Impostazioni
@@ -314,8 +315,8 @@
 	w_Lang113 =	Vai a...
 	w_Lang114 =	Mostra i gruppi come commenti
 	w_Lang115 =	Ultima macro attiva
-	w_Lang116 =	Passa alla visualizzazione struttura
-	w_Lang117 =	Passa alla visualizzazione elenco
+	w_Lang116 =	Passa alla visualizzazione albero (Ctrl + K)
+	w_Lang117 =	Passa alla visualizzazione elenco (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

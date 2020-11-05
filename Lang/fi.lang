@@ -154,6 +154,7 @@
 	v_Lang037 =	K&ommentoi pois valitsematta riviä
 	v_Lang038 =	L&ine wrap
 	v_Lang039 =	&Näytä ryhmät kommentteina
+	v_Lang040 =	Vaih&da näkymän tilaa
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Asetukset
@@ -314,8 +315,8 @@
 	w_Lang113 =	Mene...
 	w_Lang114 =	Näytä ryhmät kommentteina
 	w_Lang115 =	Viimeinen aktiivinen makro
-	w_Lang116 =	Vaihda puunäkymään
-	w_Lang117 =	Vaihda luettelonäkymään
+	w_Lang116 =	Vaihda puunäkymään (Ctrl + K)
+	w_Lang117 =	Vaihda luettelonäkymään (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiiri

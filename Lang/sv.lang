@@ -154,6 +154,7 @@
 	v_Lang037 =	Ko&mmentera ut okontrollerade rader
 	v_Lang038 =	Li&nje wrap
 	v_Lang039 =	Vi&sa grupper som kommentarer
+	v_Lang040 =	&Byt visningsläge
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Inställningar
@@ -314,8 +315,8 @@
 	w_Lang113 =	Gå till...
 	w_Lang114 =	Visa grupper som kommentarer
 	w_Lang115 =	Senast aktiva makro
-	w_Lang116 =	Byt till trädvy
-	w_Lang117 =	Byt till listvy
+	w_Lang116 =	Byt till trädvy (Ctrl + K)
+	w_Lang117 =	Byt till listvy (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mus

@@ -154,6 +154,7 @@
 	v_Lang037 =	Ko&mentarz do niezaznaczonych wierszy
 	v_Lang038 =	Zaw&ijanie lini
 	v_Lang039 =	Poka&ż grupy jako komentarze
+	v_Lang040 =	Prze&łącz tryb widoku
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ustawienia
@@ -314,8 +315,8 @@
 	w_Lang113 =	Iść do...
 	w_Lang114 =	Pokaż grupy jako komentarze
 	w_Lang115 =	Ostatnie aktywne makro
-	w_Lang116 =	Przełącz do widoku drzewa
-	w_Lang117 =	Przełącz do widoku listy
+	w_Lang116 =	Przełącz do widoku drzewa (Ctrl + K)
+	w_Lang117 =	Przełącz do widoku listy (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mysz

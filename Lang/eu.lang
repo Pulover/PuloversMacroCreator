@@ -115,19 +115,19 @@
 	s_Lang010 =	&Komando mota
 		
 ; 08. View Sub Menu		
-	v_Lang001 =	&Beti aurrealdean
-	v_Lang002 =	&Nabarmendu Ilarak
-	v_Lang003 =	&Koska
-	v_Lang004 =	K&ontrolak Toolbar
-	v_Lang005 =	&Aurreikusi Script
-	v_Lang006 =	&Tresna-barrak
-	v_Lang007 =	&Hotkeys
-	v_Lang008 =	&Loop
-	v_Lang009 =	&Search Bar
-	v_Lang010 =	&Reset zutabeak neurria
-	v_Lang011 =	L&etra-tamaina
-	v_Lang012 =	&Icons neurria
-	v_Lang013 =	Berre&zartzeko diseinu
+	v_Lang001 =	&Завжди зверху
+	v_Lang002 =	&Підсвічування Рядків
+	v_Lang003 =	&Відступ
+	v_Lang004 =	П&анель Управління
+	v_Lang005 =	П&опередній перегляд сценарію
+	v_Lang006 =	Па&нелі Інструментів
+	v_Lang007 =	&Гарячі Клавіші
+	v_Lang008 =	&петля
+	v_Lang009 =	Пан&ель Пошуку
+	v_Lang010 =	&Скинути стовпці Розмір
+	v_Lang011 =	&Rozmir
+	v_Lang012 =	&Розмір ікони
+	v_Lang013 =	С&кинути Налаштування
 	v_Lang014 =	&File
 	v_Lang015 =	&Grabatu Play
 	v_Lang016 =	Ko&mandoak
@@ -154,6 +154,7 @@
 	v_Lang037 =	K&omentatu Deshautatzen errenkadak
 	v_Lang038 =	&Line wrap
 	v_Lang039 =	E&rakutsi taldeak iruzkin gisa
+	v_Lang040 =	Пе&реключіть режим перегляду
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ezarpenak
@@ -314,8 +315,8 @@
 	w_Lang113 =	Joan...
 	w_Lang114 =	Erakutsi taldeak iruzkin gisa
 	w_Lang115 =	Azken makro aktiboa
-	w_Lang116 =	Zuhaitz ikuspegira aldatu
-	w_Lang117 =	Aldatu zerrenda ikuspegira
+	w_Lang116 =	Aldatu zuhaitz ikuspegira (Ktrl + K)
+	w_Lang117 =	Aldatu zerrenda ikuspegira (Ktrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

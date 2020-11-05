@@ -154,6 +154,7 @@
 	v_Lang037 =	Co&mentar as liñas marcar
 	v_Lang038 =	&Quebra automática de liña
 	v_Lang039 =	Most&rar grupos como comentarios
+	v_Lang040 =	Cambia o mo&do de vista
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -314,8 +315,8 @@
 	w_Lang113 =	Ir a...
 	w_Lang114 =	Mostrar grupos como comentarios
 	w_Lang115 =	Última macro activa
-	w_Lang116 =	Cambia á vista en árbore
-	w_Lang117 =	Cambia á vista de lista
+	w_Lang116 =	Cambiar á vista en árbore (Ctrl + K)
+	w_Lang117 =	Cambiar á vista de lista (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Rato

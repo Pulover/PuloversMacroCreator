@@ -154,6 +154,7 @@
 	v_Lang037 =	D&enetlenmeyen satırları açıklama
 	v_Lang038 =	&Hat şal
 	v_Lang039 =	G&rupları yorum olarak göster
+	v_Lang040 =	G&örünüm modunu değiştir
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Ayarlar
@@ -314,8 +315,8 @@
 	w_Lang113 =	Git ...
 	w_Lang114 =	Grupları yorum olarak göster
 	w_Lang115 =	Son etkin makro
-	w_Lang116 =	Ağaç görünümüne geç
-	w_Lang117 =	Liste görünümüne geç
+	w_Lang116 =	Ağaç görünümüne geç (Ctrl + K)
+	w_Lang117 =	Liste görünümüne geç (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Fare

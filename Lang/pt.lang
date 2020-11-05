@@ -154,6 +154,7 @@
 	v_Lang037 =	Come&ntar linhas desmarcadas
 	v_Lang038 =	&Quebra de linha
 	v_Lang039 =	Most&rar grupos como comentários
+	v_Lang040 =	Alternar m&odo de visualização
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configurações
@@ -314,8 +315,8 @@
 	w_Lang113 =	Ir para...
 	w_Lang114 =	Mostrar grupos como comentários
 	w_Lang115 =	Última macro ativa
-	w_Lang116 =	Mudar para visão em árvore
-	w_Lang117 =	Mudar para visão em lista
+	w_Lang116 =	Mudar para a visualização em árvore (Ctrl + K)
+	w_Lang117 =	Mudar para a visualização de lista (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

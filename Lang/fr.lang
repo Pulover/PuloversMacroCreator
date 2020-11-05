@@ -154,6 +154,7 @@
 	v_Lang037 =	Co&mmentaire sur les lignes non contrôlées
 	v_Lang038 =	&Wrap ligne
 	v_Lang039 =	A&fficher les groupes sous forme de commentaires
+	v_Lang040 =	C&hanger de mode d'affichage
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Réglages
@@ -314,8 +315,8 @@
 	w_Lang113 =	Aller à...
 	w_Lang114 =	Afficher les groupes sous forme de commentaires
 	w_Lang115 =	Dernière macro active
-	w_Lang116 =	Passer à l'arborescence
-	w_Lang117 =	Passer à la vue de liste
+	w_Lang116 =	Passer à l'arborescence (Ctrl + K)
+	w_Lang117 =	Passer en vue liste (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Souris

@@ -128,7 +128,7 @@
 	v_Lang011 =	Zìtǐ (&F)
 	v_Lang012 =	图标尺寸(&N)
 	v_Lang013 =	复位布局(&E)
-	v_Lang014 =	文件(&F)
+	v_Lang014 =	(&F)
 	v_Lang015 =	录制回放(&R)
 	v_Lang016 =	命令(&C)
 	v_Lang017 =	编辑(&E)
@@ -154,6 +154,7 @@
 	v_Lang037 =	注释掉选中的行(&M)
 	v_Lang038 =	换行(&L)
 	v_Lang039 =	将群组显示为评论(&H)
+	v_Lang040 =	切换检视模式(&W)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	设置(&S)
@@ -314,8 +315,8 @@
 	w_Lang113 =	去...
 	w_Lang114 =	将群组显示为评论
 	w_Lang115 =	最后一个活动宏
-	w_Lang116 =	切换到树状视图
-	w_Lang117 =	切换到列表视图
+	w_Lang116 =	切换到树状视图（Ctrl + K）
+	w_Lang117 =	切换到列表视图（Ctrl + K）
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠标

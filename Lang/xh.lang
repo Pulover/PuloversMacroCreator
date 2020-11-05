@@ -154,6 +154,7 @@
 	v_Lang037 =	G&qabaza imiqolo ingakhangelwa
 	v_Lang038 =	U&rhangqo lwemigca
 	v_Lang039 =	&Bonisa amaqela njengamazwana
+	v_Lang040 =	&Guqula imo yokujonga
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Izicwangciso
@@ -314,8 +315,8 @@
 	w_Lang113 =	Yiya e...
 	w_Lang114 =	Bonisa amaqela njengamazwana
 	w_Lang115 =	Imakro yokugqibela esebenzayo
-	w_Lang116 =	Tshintshela kumbono womthi
-	w_Lang117 =	Tshintshela kuluhlu lokujonga
+	w_Lang116 =	Tshintshela kumbono womthi (Ctrl + K)
+	w_Lang117 =	Tshintshela kuluhlu lokujonga (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Impuku

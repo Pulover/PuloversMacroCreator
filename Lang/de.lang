@@ -154,6 +154,7 @@
 	v_Lang037 =	&Nicht markiert Zeilen kommentieren
 	v_Lang038 =	Ze&ilenumbruch
 	v_Lang039 =	&Gruppen als Kommentare anzeigen
+	v_Lang040 =	A&nsichtsmodus wechseln
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Einstellungen
@@ -314,8 +315,8 @@
 	w_Lang113 =	Gehe zu...
 	w_Lang114 =	Gruppen als Kommentare anzeigen
 	w_Lang115 =	Letztes aktives Makro
-	w_Lang116 =	Wechseln Sie zur Baumansicht
-	w_Lang117 =	Wechseln Sie zur Listenansicht
+	w_Lang116 =	Zur Baumansicht wechseln (Strg + K)
+	w_Lang117 =	Zur Listenansicht wechseln (Strg + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Maus

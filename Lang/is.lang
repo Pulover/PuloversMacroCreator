@@ -154,6 +154,7 @@
 	v_Lang037 =	A&thugasemd út óheft raðir
 	v_Lang038 =	&Línuskrið
 	v_Lang039 =	&Sýna hópa sem athugasemdir
+	v_Lang040 =	S&kiptu um útsýnisstillingu
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Stillingar
@@ -314,8 +315,8 @@
 	w_Lang113 =	Fara til...
 	w_Lang114 =	Sýna hópa sem athugasemdir
 	w_Lang115 =	Síðasti virki fjölvi
-	w_Lang116 =	Skiptu yfir í trjásýn
-	w_Lang117 =	Skiptu yfir í listaskjá
+	w_Lang116 =	Skiptu yfir í trjásýn (Ctrl + K)
+	w_Lang117 =	Skiptu yfir í listaskjá (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mús

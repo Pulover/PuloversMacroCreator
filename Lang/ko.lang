@@ -154,6 +154,7 @@
 	v_Lang037 =	선택하지 않은 행을 주석(&M)
 	v_Lang038 =	줄 바꿈(&L)
 	v_Lang039 =	그룹을 댓글로 표시(&H)
+	v_Lang040 =	보기 모드 전환(&W)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	설정(&S)
@@ -314,8 +315,8 @@
 	w_Lang113 =	이동...
 	w_Lang114 =	그룹을 댓글로 표시
 	w_Lang115 =	마지막 활성 매크로
-	w_Lang116 =	트리보기로 전환
-	w_Lang117 =	목록보기로 전환
+	w_Lang116 =	트리보기로 전환 (Ctrl + K)
+	w_Lang117 =	목록보기로 전환 (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	마우스

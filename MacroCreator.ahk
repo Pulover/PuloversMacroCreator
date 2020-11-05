@@ -12329,14 +12329,44 @@ Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 If (LV_GetCount("Selected") = 0)
 	return
+If (MacroView = "Tree")
+{
+	Gui, tvMacro:Default
+	Gui, tvMacro:Submit, NoHide
+	Node := TV_GetSelection(), SelectRows := []
+	If (((TVData[Node].Type = "If_Statement")
+	|| (InStr(TVData[Node].Type, "Loop"))
+	|| (TVData[Node].Type = "For")
+	|| (TVData[Node].Type = "While"))
+	&& (!InStr(TVData[Node].Content, "LoopEnd"))
+	&& (!InStr(TVData[Node].Content, "[End If]")))
+	{
+		RowLevel := TVData[Node].Level
+		Loop
+		{
+			If (TVData[Node].Row)
+				SelectRows.Push(TVData[Node].Row)
+			Node := TV_GetNext(Node, "Full")
+			If ((!TVData.HasKey(Node)) || (TVData[Node].Level <= RowLevel))
+				break
+		}
+		Gui, chMacro:Default
+		Gui, chMacro:Submit, NoHide
+		LV_Modify(0, "-Select")
+		For Key, Value in SelectRows
+			LV_Modify(Value, "Select")
+	}
+}
+Gui, chMacro:Default
+Gui, chMacro:Submit, NoHide
 InMemoryRows := LVCopier.Copy()
 return
 
 CutRows:
 Critical
 Gui, tvMacro:Default
-Node := TV_GetSelection()
-PasteRow := TVData[Node].Row
+Node := TV_GetPrev(TV_GetSelection())
+PrevRow := TVData[Node].Row
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
@@ -12345,11 +12375,41 @@ If (LV_GetCount("Selected") = 0)
 	GuiControl, chMacro:+gInputList, InputList%A_List%
 	return
 }
+If (MacroView = "Tree")
+{
+	Gui, tvMacro:Default
+	Gui, tvMacro:Submit, NoHide
+	Node := TV_GetSelection(), SelectRows := []
+	If (((TVData[Node].Type = "If_Statement")
+	|| (InStr(TVData[Node].Type, "Loop"))
+	|| (TVData[Node].Type = "For")
+	|| (TVData[Node].Type = "While"))
+	&& (!InStr(TVData[Node].Content, "LoopEnd"))
+	&& (!InStr(TVData[Node].Content, "[End If]")))
+	{
+		RowLevel := TVData[Node].Level
+		Loop
+		{
+			If (TVData[Node].Row)
+				SelectRows.Push(TVData[Node].Row)
+			Node := TV_GetNext(Node, "Full")
+			If ((!TVData.HasKey(Node)) || (TVData[Node].Level <= RowLevel))
+				break
+		}
+		Gui, chMacro:Default
+		Gui, chMacro:Submit, NoHide
+		LV_Modify(0, "-Select")
+		For Key, Value in SelectRows
+			LV_Modify(Value, "Select")
+	}
+}
+Gui, chMacro:Default
+Gui, chMacro:Submit, NoHide
 InMemoryRows := LVCopier.Cut()
 GoSub, RowCheck
 GoSub, b_Start
 
-If (MacroView = "Tree")
+If ((InMemoryRows) && (MacroView = "Tree"))
 {
 	GuiControl, tvMacro:-Redraw, TreeView
 	Node := 0
@@ -12364,9 +12424,9 @@ If (MacroView = "Tree")
 			Loop
 			{
 				Node := TV_GetNext(Node, "Full")
-				If (TVData[Node].Row = PasteRow)
+				If (TVData[Node].Row = PrevRow)
 				{
-					TV_Modify(Node, "Vis")
+					TV_Modify(Node, "Select Vis")
 					break 2
 				}
 			}
@@ -16229,6 +16289,8 @@ Menu, ViewMenu, Add, %v_Lang010%`t%_s%Alt+F5, SetColSizes
 Menu, ViewMenu, Add, %v_Lang011%, :MacroFontMenu
 Menu, ViewMenu, Add, %v_Lang012%, :SetIconSizeMenu
 Menu, ViewMenu, Add, %v_Lang013%, :SetLayoutMenu
+Menu, ViewMenu, Add
+Menu, ViewMenu, Add, %v_Lang040%`t%_s%Ctrl+K, SwitchView
 
 GoSub, BuildOnFinishMenu
 Menu, OptionsMenu, Add, %o_Lang001%`t%_s%Ctrl+`,, Options

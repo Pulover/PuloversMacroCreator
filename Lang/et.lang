@@ -154,6 +154,7 @@
 	v_Lang037 =	K&ommentaar välja märkimata rida
 	v_Lang038 =	L&ine wrap
 	v_Lang039 =	K&uva rühmad kommentaaridena
+	v_Lang040 =	&Vaaterežiimi vahetamine
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Seaded
@@ -314,8 +315,8 @@
 	w_Lang113 =	Minema...
 	w_Lang114 =	Kuva rühmad kommentaaridena
 	w_Lang115 =	Viimane aktiivne makro
-	w_Lang116 =	Lülitu puuvaatele
-	w_Lang117 =	Lülituge loendivaatele
+	w_Lang116 =	Lülitu puuvaatele (Ctrl + K)
+	w_Lang117 =	Lülitumine loendivaatele (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Hiir

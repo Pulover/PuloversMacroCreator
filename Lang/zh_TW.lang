@@ -153,7 +153,8 @@
 	v_Lang036 =	換行符(&O)
 	v_Lang037 =	註釋掉選中的行(&M)
 	v_Lang038 =	換行(&L)
-	v_Lang039 =	將群組顯示為評論(&H)
+	v_Lang039 =	文件(&F)
+	v_Lang040 =	切換檢視模式(&W)
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	設置(&S)
@@ -314,8 +315,8 @@
 	w_Lang113 =	去...
 	w_Lang114 =	將群組顯示為評論
 	w_Lang115 =	最後一個活動宏
-	w_Lang116 =	切換到樹狀視圖
-	w_Lang117 =	切換到列表視圖
+	w_Lang116 =	切換到樹狀視圖（Ctrl + K）
+	w_Lang117 =	切換到列表視圖（Ctrl + K）
 		
 ; 15. Command Windows		
 	c_Lang001 =	鼠標

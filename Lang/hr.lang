@@ -154,6 +154,7 @@
 	v_Lang037 =	K&omentar iz označenim redaka
 	v_Lang038 =	&Line folijom
 	v_Lang039 =	Pr&ikaži grupe kao komentare
+	v_Lang040 =	Pre&bacite način prikaza
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Postavke
@@ -314,8 +315,8 @@
 	w_Lang113 =	Ići...
 	w_Lang114 =	Prikaži grupe kao komentare
 	w_Lang115 =	Posljednja aktivna makronaredba
-	w_Lang116 =	Prebacite se na prikaz stabla
-	w_Lang117 =	Prebacite se na prikaz popisa
+	w_Lang116 =	Prebacivanje na prikaz stabla (Ctrl + K)
+	w_Lang117 =	Prebacivanje na prikaz popisa (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miš

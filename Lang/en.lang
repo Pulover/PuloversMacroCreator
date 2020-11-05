@@ -154,6 +154,7 @@
 	v_Lang037 =	Co&mment out unchecked rows
 	v_Lang038 =	&Line wrap
 	v_Lang039 =	S&how groups as comments
+	v_Lang040 =	S&witch view mode
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -314,8 +315,8 @@
 	w_Lang113 =	Go to...
 	w_Lang114 =	Show groups as comments
 	w_Lang115 =	Last active macro
-	w_Lang116 =	Switch to tree view
-	w_Lang117 =	Switch to list view
+	w_Lang116 =	Switch to tree view (Ctrl+K)
+	w_Lang117 =	Switch to list view (Ctrl+K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Mouse

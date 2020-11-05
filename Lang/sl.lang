@@ -154,6 +154,7 @@
 	v_Lang037 =	Zak&omentirajte nepreverjene vrstice
 	v_Lang038 =	&Line wrap
 	v_Lang039 =	Sk&upine prikaži kot komentarje
+	v_Lang040 =	Preklopite na&čin pogleda
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavitve
@@ -314,8 +315,8 @@
 	w_Lang113 =	Pojdi do...
 	w_Lang114 =	Skupine prikaži kot komentarje
 	w_Lang115 =	Zadnji aktivni makro
-	w_Lang116 =	Preklopite na drevesni pogled
-	w_Lang117 =	Preklopite na pogled seznama
+	w_Lang116 =	Preklopi na drevesni pogled (Ctrl + K)
+	w_Lang117 =	Preklop na pogled seznama (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Miška

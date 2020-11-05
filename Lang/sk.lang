@@ -154,6 +154,7 @@
 	v_Lang037 =	Ko&mentár mimo neskontrolované riadkov
 	v_Lang038 =	&Zalamovať
 	v_Lang039 =	Zo&braziť skupiny ako komentáre
+	v_Lang040 =	&Prepnúť režim zobrazenia
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nastavenie
@@ -314,8 +315,8 @@
 	w_Lang113 =	Ísť do...
 	w_Lang114 =	Zobraziť skupiny ako komentáre
 	w_Lang115 =	Posledné aktívne makro
-	w_Lang116 =	Prepnúť na stromové zobrazenie
-	w_Lang117 =	Prepnite na zobrazenie zoznamu
+	w_Lang116 =	Prepnúť na stromové zobrazenie (Ctrl + K)
+	w_Lang117 =	Prepnúť na zobrazenie zoznamu (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Myš

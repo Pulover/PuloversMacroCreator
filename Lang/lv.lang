@@ -154,6 +154,7 @@
 	v_Lang037 =	K&omentārs out neatzīmētajās rindiņās
 	v_Lang038 =	&Line wrap
 	v_Lang039 =	&Rādīt grupas kā komentārus
+	v_Lang040 =	P&ārslēgt skata režīmu
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Settings
@@ -314,8 +315,8 @@
 	w_Lang113 =	Iet uz...
 	w_Lang114 =	Rādīt grupas kā komentārus
 	w_Lang115 =	Pēdējais aktīvais makro
-	w_Lang116 =	Pārslēdzieties uz koka skatu
-	w_Lang117 =	Pārslēdzieties uz saraksta skatu
+	w_Lang116 =	Pārslēgties uz koka skatu (Ctrl + K)
+	w_Lang117 =	Pārslēgties uz saraksta skatu (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pele

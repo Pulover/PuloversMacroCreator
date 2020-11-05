@@ -122,11 +122,11 @@
 	v_Lang005 =	P&eržiūrėti scenarijus
 	v_Lang006 =	Į&rankių juostos
 	v_Lang007 =	K&lavišai
-	v_Lang008 =	C&iklas
+	v_Lang008 =	&Ciklas
 	v_Lang009 =	P&aieška Baras
 	v_Lang010 =	A&tstatyti stulpelių dydį
 	v_Lang011 =	&Šrifto dydis
-	v_Lang012 =	Pikt&ogramos dydis
+	v_Lang012 =	P&iktogramos dydis
 	v_Lang013 =	At&statyti išdėstymą
 	v_Lang014 =	&Byla
 	v_Lang015 =	Įra&šų Groti
@@ -154,6 +154,7 @@
 	v_Lang037 =	Ko&mentaras iš Nepažymėjus eilučių
 	v_Lang038 =	&Linija įvyniojimas
 	v_Lang039 =	&Rodyti grupes kaip komentarus
+	v_Lang040 =	Per&jungti rodymo režimą
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Nustatymai
@@ -314,8 +315,8 @@
 	w_Lang113 =	Eiti į...
 	w_Lang114 =	Rodyti grupes kaip komentarus
 	w_Lang115 =	Paskutinis aktyvus makrokomanda
-	w_Lang116 =	Perjungti į medžio vaizdą
-	w_Lang117 =	Perjungti į sąrašo rodinį
+	w_Lang116 =	Perjungti į medžio rodinį („Ctrl“ + K)
+	w_Lang117 =	Perjungti į sąrašo rodinį („Ctrl“ + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Pelė

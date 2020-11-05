@@ -463,7 +463,6 @@ ClickRandom(Options, Offset, SendCmd := False)
 	Random, RandCoordY, %MinY%, %MaxY%
 	Options := RegExReplace(Options, "-?\d+,\s-?\d+", RandCoordX ", " RandCoordY)
 
-	OutputDebug, %Options%
 	If (SendCmd)
 		SendEvent, %Options%
 	Else
@@ -1296,7 +1295,6 @@ TVCollapse(Node)
 	NextSibling := TV_GetNext(Node)
 	While (Node != NextSibling)
 	{
-		OutputDebug, % TVData[Node].Row
 		If (TVData[Node].Row)
 			TV_Modify(Node, "-Expand")
 		Node := TV_GetNext(Node, "Full")

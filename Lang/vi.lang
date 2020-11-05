@@ -154,6 +154,7 @@
 	v_Lang037 =	Th&ảo luận ra các hàng không được kiểm soát
 	v_Lang038 =	&Dòng bọc
 	v_Lang039 =	H&iển thị các nhóm dưới dạng nhận xét
+	v_Lang040 =	Ch&uyển chế độ xem
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Cài đặt
@@ -314,8 +315,8 @@
 	w_Lang113 =	Đi đến...
 	w_Lang114 =	Hiển thị các nhóm dưới dạng nhận xét
 	w_Lang115 =	Macro hoạt động cuối cùng
-	w_Lang116 =	Chuyển sang chế độ xem dạng cây
-	w_Lang117 =	Chuyển sang chế độ xem danh sách
+	w_Lang116 =	Chuyển sang chế độ xem dạng cây (Ctrl + K)
+	w_Lang117 =	Chuyển sang chế độ xem danh sách (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Chuột

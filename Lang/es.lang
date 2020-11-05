@@ -123,11 +123,11 @@
 	v_Lang006 =	Ba&rras de Herramientas
 	v_Lang007 =	&Teclas de Acceso Rápido
 	v_Lang008 =	B&ucle
-	v_Lang009 =	Barra De Bús&queda
+	v_Lang009 =	Barra D&e Búsqueda
 	v_Lang010 =	&Cambiar Tamaño de Columnas
 	v_Lang011 =	Ta&maño de fuente
-	v_Lang012 =	Tamaño de &Iconos
-	v_Lang013 =	R&establecer Diseño
+	v_Lang012 =	Tama&ño de Iconos
+	v_Lang013 =	Restab&lecer Diseño
 	v_Lang014 =	&Fichero
 	v_Lang015 =	&Grabar y Reproducir
 	v_Lang016 =	&Comandos
@@ -154,6 +154,7 @@
 	v_Lang037 =	Co&mentar Filas sin Marcar
 	v_Lang038 =	A&juste de Línea
 	v_Lang039 =	Most&rar grupos como comentarios
+	v_Lang040 =	Camb&iar modo de vista
 		
 ; 09. Options Sub Menu		
 	o_Lang001 =	&Configuración
@@ -314,8 +315,8 @@
 	w_Lang113 =	Ir...
 	w_Lang114 =	Mostrar grupos como comentarios
 	w_Lang115 =	Última macro activa
-	w_Lang116 =	Cambiar a la vista de árbol
-	w_Lang117 =	Cambiar a la vista de lista
+	w_Lang116 =	Cambiar a la vista de árbol (Ctrl + K)
+	w_Lang117 =	Cambiar a la vista de lista (Ctrl + K)
 		
 ; 15. Command Windows		
 	c_Lang001 =	Ratón
