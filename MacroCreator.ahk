@@ -6206,7 +6206,7 @@ Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1%_x%CmdTab2%_x%CmdTab3
 Gui, 3:Add, GroupBox, Section xm ym W450 H125
 Gui, 3:Add, Text, -Wrap R1 ys+20 xs+10 W180 Right, %c_Lang050%:
 Gui, 3:Add, Edit, yp-2 x+10 W100 vDelayC
-Gui, 3:Add, UpDown, vDelayX 0x80 Range0-9999999, 300
+Gui, 3:Add, UpDown, vDelayX 0x80 Range0-2147483647, 300
 Gui, 3:Add, Radio, -Wrap Checked y+12 W170 vMsc R1, %c_Lang018%
 Gui, 3:Add, Radio, -Wrap W170 vSec R1, %c_Lang019%
 Gui, 3:Add, Radio, -Wrap W170 vMin R1, %c_Lang154%
@@ -6214,10 +6214,10 @@ Gui, 3:Add, GroupBox, Section xs y+30 W450 H130
 Gui, 3:Add, Checkbox, -Wrap R1 ys+20 xs+10 W100 vRandom gRandomSleep, %c_Lang180%
 Gui, 3:Add, Text, Section -Wrap yp x+5 W75 R1 Right, %c_Lang181%:
 Gui, 3:Add, Edit, yp-2 x+10 W100 R1 vRandMin Disabled
-Gui, 3:Add, UpDown, vRandMinimum 0x80 Range0-100000, 0
+Gui, 3:Add, UpDown, vRandMinimum 0x80 Range0-2147483647, 0
 Gui, 3:Add, Text, -Wrap y+10 xs W75 R1 Right, %c_Lang182%:
 Gui, 3:Add, Edit, yp-2 x+10 W100 R1 vRandMax Disabled
-Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-100000, 500
+Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-2147483647, 500
 Gui, 3:Add, Checkbox, -Wrap y+20 xm+10 W400 vNoRandom gNoRandom, %c_Lang183%
 Gui, 3:Tab, 2
 ; MsgBox
@@ -12006,18 +12006,21 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 }
 If (A_GuiEvent = "D")
 {
-	If (TVData[A_EventInfo].Row = 0)
-		return
+	MovingTab := TVData[A_EventInfo].Level = 0
 	TargetNode := TV_Drag(A_EventInfo)
 	IsTargetChild := TargetNode > 0
 	If (!IsTargetChild) ; Dropping as sibling
 	{
-		If (!TVData[TargetNode * -1].Row)
+		If (MovingTab && TVData[TargetNode * -1].Level > 0)
+			return
+		Else If (!MovingTab && !TVData[TargetNode * -1].Row)
 			return
 	}
 	Else If (IsTargetChild) ; Dropping as child
 	{
-		If (((TVData[TargetNode].Type != "If_Statement")
+		If (MovingTab)
+			return
+		Else If (((TVData[TargetNode].Type != "If_Statement")
 		&& (!InStr(TVData[TargetNode].Type, "Loop"))
 		&& (TVData[TargetNode].Type != "For")
 		&& (TVData[TargetNode].Type != "While"))
@@ -12033,11 +12036,23 @@ If (A_GuiEvent = "D")
 			break
 		NodeIDs.Push(TID)
 	}
-	GuiControl, -Redraw, TreeView
+	GuiControl, tvMacro:-Redraw, TreeView
 	If (TID := TV_Drop(A_EventInfo, TargetNode,,, True))
 	{
-		GuiControl, +Redraw, TreeView
+		GuiControl, tvMacro:+Redraw, TreeView
 		TargetNode := IsTargetChild ? TargetNode : TargetNode * -1
+		Node := TargetNode, TargetMacro := ""
+		While (Node != 0)
+			Node := TV_GetParent(Node), TargetMacro := Node = 0 ? TargetMacro : Node
+		TargetMacro := TVData[TargetMacro].Content
+		For Index, Label in CopyMenuLabels
+		{
+			If (Label = TargetMacro)
+			{
+				TargetMacro := Index
+				break
+			}
+		}
 		TargetRow := TVData[TargetNode].Row, RowCount := TargetRow
 		TargetRowChildren := TVCountChildren(TargetNode)
 		For Key, Value in NodeIDs
@@ -12051,6 +12066,37 @@ If (A_GuiEvent = "D")
 				MovedRows.Push(TVData[TID].Row)
 			TID := TV_GetNext(TID, "Full")
 		}
+
+		If (MovingTab)
+		{
+			Node := 0, mOrder := [], mLabels := "|"
+			Loop
+			{
+				Node := TV_GetNext(Node)
+				If (!TVData.HasKey(Node))
+					break
+				If (TVData[Node].Level = 0)
+				{
+					mOrder.Push(HasVal(CopyMenuLabels, TVData[Node].Content))
+					mLabels .= TVData[Node].Content "|"
+				}
+			}
+			NewOrder := {"Order": mOrder, "Tabs": mLabels}
+			If (IsObject(NewOrder))
+			{
+				Gui, chMacro:Default
+				Gui, chMacro:Submit, NoHide
+				Gui, chMacro:ListView, InputList%A_List%
+				MoveTabs(NewOrder)
+				Gui, tvMacro:Default
+				TVUpdateRows()
+				GuiControl, tvMacro:Focus, InputTree
+				If (AutoRefresh = 1)
+					GoSub, PrevRefresh
+			}
+			return
+		}
+
 		Gui, chMacro:Default
 		Gui, chMacro:Submit, NoHide
 		Gui, chMacro:ListView, InputList%A_List%
@@ -12058,16 +12104,26 @@ If (A_GuiEvent = "D")
 		LV_Modify(0, "-Select")
 		For Key, Value in MovedRows
 			LV_Modify(Value, "Select")
-		If (TargetRow > Value)
-			TargetRow := TargetRow - Value
+		If (TargetMacro != SelectedMacro)
+		{
+			LVCopier.Cut()
+			GoSub, RowCheck
+			HistCheck()
+			Gui, chMacro:Default
+			GuiControl, chMacro:Choose, A_List, %TargetMacro%
+			Gui, chMacro:Submit, NoHide
+			Gui, chMacro:ListView, InputList%TargetMacro%
+		}
+		Else
+			LVCopier.Copy()
 		If (IsTargetChild)
 			TargetRow++
 		Else
 			TargetRow += TargetRowChildren
-		LVCopier.Cut()
 		LVCopier.Paste(TargetRow)
+		LVCopier.Delete()
 		GoSub, RowCheck
-		HistCheck()
+		Sleep, 100
 		Gui, tvMacro:Default
 		TVUpdateRows()
 		Gui, chMacro:Default
@@ -12080,7 +12136,7 @@ If (A_GuiEvent = "D")
 		If (AutoRefresh = 1)
 			GoSub, PrevRefresh
 	}
-	GuiControl, +Redraw, TreeView
+	GuiControl, tvMacro:+Redraw, TreeView
 }
 If (A_GuiEvent != "DoubleClick")
 	return
@@ -12278,6 +12334,9 @@ return
 
 CutRows:
 Critical
+Gui, tvMacro:Default
+Node := TV_GetSelection()
+PasteRow := TVData[Node].Row
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
@@ -12289,6 +12348,33 @@ If (LV_GetCount("Selected") = 0)
 InMemoryRows := LVCopier.Cut()
 GoSub, RowCheck
 GoSub, b_Start
+
+If (MacroView = "Tree")
+{
+	GuiControl, tvMacro:-Redraw, TreeView
+	Node := 0
+	Loop
+	{
+		Node := TV_GetNext(Node)
+		If (!TVData.HasKey(Node))
+			break
+		If (TVData[Node].Content = CopyMenuLabels[A_List])
+		{
+			TV_Modify(Node)
+			Loop
+			{
+				Node := TV_GetNext(Node, "Full")
+				If (TVData[Node].Row = PasteRow)
+				{
+					TV_Modify(Node, "Vis")
+					break 2
+				}
+			}
+		}
+	}
+	GuiControl, tvMacro:+Redraw, TreeView
+}
+
 GuiControl, chMacro:+gInputList, InputList%A_List%
 If (AutoRefresh)
 	GoSub, PrevRefresh
@@ -12296,6 +12382,9 @@ return
 
 PasteRows:
 Critical
+Gui, tvMacro:Default
+Node := TV_GetSelection()
+PasteRow := TVData[Node].Row
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
@@ -12312,6 +12401,31 @@ If (LVCopier.Paste(, true))
 {
 	GoSub, RowCheck
 	GoSub, b_Start
+
+	If (MacroView = "Tree")
+	{
+		GuiControl, tvMacro:-Redraw, TreeView
+		Node := 0
+		Loop
+		{
+			Node := TV_GetNext(Node)
+			If (!TVData.HasKey(Node))
+				break
+			If (TVData[Node].Content = CopyMenuLabels[A_List])
+			{
+				Loop
+				{
+					Node := TV_GetNext(Node, "Full")
+					If (TVData[Node].Row = PasteRow)
+					{
+						TV_Modify(Node, "Select Vis")
+						break 2
+					}
+				}
+			}
+		}
+		GuiControl, tvMacro:+Redraw, TreeView
+	}
 }
 GuiControl, chMacro:+gInputList, InputList%A_List%
 If (AutoRefresh)
@@ -12748,6 +12862,13 @@ Gui, tvMacro:Default
 If (MacroView = "Tree")
 	TVData := PMC.TVLoad(ShowGroups)
 UserDefFunctions := SyHi_UserDef " ", SetUserWords(UserDefFunctions)
+DebugCheckError := False
+While (DebugCheckLoop%A_Index%)
+	DebugCheckLoop%A_Index% := 0
+While (DebugCheckIf%A_Index%)
+	DebugCheckIf%A_Index% := 0
+While (DebugDefault%A_Index%)
+	DebugDefault%A_Index% := 0
 return
 
 SelectAll:
@@ -13381,6 +13502,7 @@ If (InStr(Macro, "()"))
 {
 	GuiControl, 33:Disable, Macro
 	GuiControl, 33:Disable, AutoKey
+	GuiControl, 33:Disable, AutoKeyL
 	GuiControl, 33:Disable, ManKey
 	GuiControl, 33:Disable, TE
 	GuiControl, 33:Disable, TimesX

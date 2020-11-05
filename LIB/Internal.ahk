@@ -207,46 +207,7 @@ DragTab()
 			NewOrder := TabDrag()
 			If (IsObject(NewOrder))
 			{
-				Proj_Opts := [], ActiveList := A_List
-				For each, Index in NewOrder.Order
-					Proj_Opts.Push({Auto: o_AutoKey[Index], Man: o_ManKey[Index], ID: ListID%Index%
-									, Times: o_TimesG[Index], Context: o_MacroContext[Index], Hist: LVManager[Index].GetData()})
-				For each, Index in NewOrder.Order
-				{
-					o_AutoKey[A_Index] := Proj_Opts[A_Index].Auto
-					o_ManKey[A_Index] := Proj_Opts[A_Index].Man
-					o_TimesG[A_Index] := Proj_Opts[A_Index].Times
-					o_MacroContext[A_Index] := Proj_Opts[A_Index].Context
-					If (Index = ActiveList)
-						NewActive := A_Index
-				}
-				ActiveList := NewActive
-				GpConfig := ShowGroups, ShowGroups := false
-				Loop, %TabCount%
-					GuiControl, chMacro:-g, InputList%A_Index%
-				Loop, %TabCount%
-					If (Proj_Opts[A_Index].ID != ListID%A_Index%)
-						LVManager[A_Index].SetData(, Proj_Opts[A_Index].Hist)
-				Loop, %TabCount%
-					GuiControl, chMacro:+gInputList, InputList%A_Index%
-				GuiControl, chMacro:, A_List, |
-				CopyMenuLabels := StrSplit(Trim(NewOrder.Tabs, "|"), "|")
-				GuiControl, chMacro:, A_List, % NewOrder.Tabs
-				Loop, %TabCount%
-				{
-					Gui, chMacro:ListView, InputList%A_Index%
-					A_List := A_Index
-					GoSub, RowCheck
-					GoSub, b_Enable
-				}
-				GuiControl, chMacro:Choose, A_List, %ActiveList%
-				Gui, chMacro:Submit, NoHide
-				ShowGroups := GpConfig
-				GoSub, chMacroGuiSize
-				GoSub, LoadData
-				GoSub, UpdateCopyTo
-				Proj_Opts := ""
-				SavePrompt(true, A_ThisFunc)
+				MoveTabs(NewOrder)
 				SetTimer, HitFix, -10
 			}
 			Else
@@ -254,6 +215,52 @@ DragTab()
 		}
 	}
 	Critical, Off
+}
+
+MoveTabs(NewOrder)
+{
+	local Proj_Opts := []
+	
+	ActiveList := A_List
+	For each, Index in NewOrder.Order
+		Proj_Opts.Push({Auto: o_AutoKey[Index], Man: o_ManKey[Index], ID: ListID%Index%
+						, Times: o_TimesG[Index], Context: o_MacroContext[Index], Hist: LVManager[Index].GetData()})
+	For each, Index in NewOrder.Order
+	{
+		o_AutoKey[A_Index] := Proj_Opts[A_Index].Auto
+		o_ManKey[A_Index] := Proj_Opts[A_Index].Man
+		o_TimesG[A_Index] := Proj_Opts[A_Index].Times
+		o_MacroContext[A_Index] := Proj_Opts[A_Index].Context
+		If (Index = ActiveList)
+			NewActive := A_Index
+	}
+	ActiveList := NewActive
+	GpConfig := ShowGroups, ShowGroups := false
+	Loop, %TabCount%
+		GuiControl, chMacro:-g, InputList%A_Index%
+	Loop, %TabCount%
+		If (Proj_Opts[A_Index].ID != ListID%A_Index%)
+			LVManager[A_Index].SetData(, Proj_Opts[A_Index].Hist)
+	Loop, %TabCount%
+		GuiControl, chMacro:+gInputList, InputList%A_Index%
+	GuiControl, chMacro:, A_List, |
+	CopyMenuLabels := StrSplit(Trim(NewOrder.Tabs, "|"), "|")
+	GuiControl, chMacro:, A_List, % NewOrder.Tabs
+	Loop, %TabCount%
+	{
+		Gui, chMacro:ListView, InputList%A_Index%
+		A_List := A_Index
+		GoSub, RowCheck
+		GoSub, b_Enable
+	}
+	GuiControl, chMacro:Choose, A_List, %ActiveList%
+	Gui, chMacro:Submit, NoHide
+	ShowGroups := GpConfig
+	GoSub, chMacroGuiSize
+	GoSub, LoadData
+	GoSub, UpdateCopyTo
+	Proj_Opts := ""
+	SavePrompt(true, A_ThisFunc)
 }
 
 HitFix:
