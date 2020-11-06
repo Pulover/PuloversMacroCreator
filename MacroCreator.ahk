@@ -6,7 +6,7 @@
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
 ; Version: 6.0.0-Beta
-; Release Date: November, 2020
+; Release Date: Unreleased
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "6.0.0", ReleaseDate := "November, 2020"
+CurrentVersion := "6.0.0", ReleaseDate := "Unreleased"
 
 ;##### Ini File Read #####
 
@@ -4329,7 +4329,7 @@ Gui, 34:Add, Text, -Wrap R1 y+0,
 (
 Copyright © 2012-2020 Rodolfo U. Batista
 
-Version: %CurrentVersion% (%OsBit%)
+Version: %CurrentVersion%-Beta (%OsBit%)
 Release Date: %ReleaseDate%
 AutoHotkey Version: %A_AhkVersion%
 )
@@ -12670,9 +12670,6 @@ If (LVManager[A_List].Undo())
 	GoSub, b_Enable
 	If (MacroView = "Tree")
 	{
-		Gui, chMacro:Default
-		Gui, chMacro:Submit, NoHide
-		Gui, chMacro:ListView, InputList%A_List%
 		TVData := PMC.TVLoad(ShowGroups, SelectedRow)
 		GuiControl, tvMacro:Focus, InputTree
 	}
@@ -12699,9 +12696,6 @@ If (LVManager[A_List].Redo())
 	GoSub, b_Enable
 	If (MacroView = "Tree")
 	{
-		Gui, chMacro:Default
-		Gui, chMacro:Submit, NoHide
-		Gui, chMacro:ListView, InputList%A_List%
 		TVData := PMC.TVLoad(ShowGroups, SelectedRow)
 		GuiControl, tvMacro:Focus, InputTree
 	}
@@ -12966,20 +12960,36 @@ return
 MoveUp:
 Gui, chMacro:Default
 GuiControl, chMacro:-Redraw, InputList%A_List%
+GuiControl, chMacro:-g, InputList%A_List%
 LVManager[A_List].Move(1)
 GoSub, RowCheck
 GoSub, b_Enable
 HistCheck()
+If (MacroView = "Tree")
+{
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
+	GuiControl, tvMacro:Focus, InputTree
+}
+GuiControl, chMacro:+gInputList, InputList%A_List%
 GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
 MoveDn:
 Gui, chMacro:Default
 GuiControl, chMacro:-Redraw, InputList%A_List%
+GuiControl, chMacro:-g, InputList%A_List%
 LVManager[A_List].Move()
 GoSub, RowCheck
 GoSub, b_Enable
 HistCheck()
+If (MacroView = "Tree")
+{
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
+	GuiControl, tvMacro:Focus, InputTree
+}
+GuiControl, chMacro:+gInputList, InputList%A_List%
 GuiControl, chMacro:+Redraw, InputList%A_List%
 return
 
@@ -12990,7 +13000,6 @@ Gui, chMacro:Default
 Loop, %TabCount%
 {
 	Gui, chMacro:ListView, InputList%A_Index%
-	; LVManager.SetHwnd(ListID%A_Index%)
 	LV_Delete()
 	LVManager[A_Index].RemoveAllGroups(c_Lang061)
 	LVManager[A_Index].ClearHistory()

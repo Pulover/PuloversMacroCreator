@@ -8,7 +8,7 @@ Author: Pulover \[Rodolfo U. Batista\]
 Copyright © 2012-2020 Rodolfo U. Batista  
 
 Version: 6.0.0-Beta  
-Release Date: October, 2020  
+Release Date: Unreleased  
 AutoHotkey Version: 1.1.32.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -37,6 +37,10 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 6.0.0
+* Added Tree View Mode for macros editor.
+* Added customize colors and font settings for preview in options. 
 
 ## Version 5.3.4
 * Fixed strings being evaluated as math operations in expressions.
