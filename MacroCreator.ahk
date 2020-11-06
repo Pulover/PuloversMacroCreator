@@ -3479,6 +3479,11 @@ GoSub, UpdateRecPlayMenus
 If (InEditLang != "")
 	GoSub, UpdateLang
 GoSub, WriteSettings
+If (MacroView = "Tree")
+{
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
+}
 Gui, 1:-Disabled
 return
 
