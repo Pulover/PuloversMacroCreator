@@ -806,6 +806,31 @@
 	t_Lang219 =	Khetha ikhodi ngokuzenzakalela
 	t_Lang220 =	Ulayini
 	t_Lang221 =	Isithonjana sangokwezifiso
+	t_Lang222 =	Imibala
+	t_Lang223 =	Ifonti
+	t_Lang224 =	Ubuso befonti
+	t_Lang225 =	Usayizi wefonti
+	t_Lang226 =	Ukukhethwa
+	t_Lang227 =	Ulayini okhethiwe
+	t_Lang228 =	Ukuphawula komugqa
+	t_Lang229 =	Vimba ukuphawula
+	t_Lang230 =	Uphunyukile uChar
+	t_Lang231 =	Umhlinzeki
+	t_Lang232 =	Ama-Delimiters
+	t_Lang233 =	Intambo
+	t_Lang234 =	Inombolo
+	t_Lang235 =	Okuguqukayo
+	t_Lang236 =	Ilebuli ne-Hotkey
+	t_Lang237 =	Ukugeleza Kokulawula
+	t_Lang238 =	Yala
+	t_Lang239 =	Umsebenzi owakhelwe ngaphakathi
+	t_Lang240 =	Isiqondisi
+	t_Lang241 =	Ukhiye nenkinobho
+	t_Lang242 =	Okuguqukayo okwakhelwe ngaphakathi
+	t_Lang243 =	Igama elingukhiye
+	t_Lang244 =	Umsebenzi ochazwe ngumsebenzisi
+	t_Lang245 =	Iphutha le-syntax
+	t_Lang246 =	Inombolo yomugqa
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Vula

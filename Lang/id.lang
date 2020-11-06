@@ -806,6 +806,31 @@
 	t_Lang219 =	Pilih kode secara otomatis
 	t_Lang220 =	Baris
 	t_Lang221 =	Ikon khusus
+	t_Lang222 =	Warna
+	t_Lang223 =	Font
+	t_Lang224 =	Bentuk font
+	t_Lang225 =	Ukuran huruf
+	t_Lang226 =	Pilihan
+	t_Lang227 =	Garis terpilih
+	t_Lang228 =	Komentar baris
+	t_Lang229 =	Blokir komentar
+	t_Lang230 =	Lolos Char
+	t_Lang231 =	Operator
+	t_Lang232 =	Pembatas
+	t_Lang233 =	Tali
+	t_Lang234 =	Jumlah
+	t_Lang235 =	Variabel
+	t_Lang236 =	Label dan Hotkey
+	t_Lang237 =	Aliran Kontrol
+	t_Lang238 =	Perintah
+	t_Lang239 =	Fungsi Bawaan
+	t_Lang240 =	Pengarahan
+	t_Lang241 =	Kunci dan Tombol
+	t_Lang242 =	Variabel Bawaan
+	t_Lang243 =	Kata kunci
+	t_Lang244 =	Fungsi yang ditentukan pengguna
+	t_Lang245 =	Kesalahan sintaks
+	t_Lang246 =	Nomor baris
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka

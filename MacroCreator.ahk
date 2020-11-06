@@ -250,6 +250,7 @@ IniRead, VirtualKeys, %IniFilePath%, Options, VirtualKeys, % "
 {Media_Stop}{Media_Play_Pause}{Launch_Mail}{Launch_Media}{Launch_App1}{Launch_App2}
 )"
 IniRead, AutoUpdate, %IniFilePath%, Options, AutoUpdate, 1
+IniRead, PrevColors, %IniFilePath%, Options, PrevColors, 0xFFFF80,0xFFFF80,0x2C974B,0x969896,0x183691,0xA71D5D,0xA71D5D,0x183691,0x009999,0x008080,0x8066A8,0x0086B3,0x0086B3,0xBB5046,0x0086B3,0x009B4E,0xCF00CF,0xDD1144,0xF04020,0xFFC0C0,0x808080
 IniRead, Ex_AbortKey, %IniFilePath%, ExportOptions, Ex_AbortKey, 0
 IniRead, Ex_PauseKey, %IniFilePath%, ExportOptions, Ex_PauseKey, 0
 IniRead, Ex_SM, %IniFilePath%, ExportOptions, Ex_SM, 1
@@ -297,6 +298,7 @@ IniRead, MacroView, %IniFilePath%, WindowOptions, MacroView, List
 IniRead, ShowPrev, %IniFilePath%, WindowOptions, ShowPrev, 1
 IniRead, TextWrap, %IniFilePath%, WindowOptions, TextWrap, 0
 IniRead, MacroFontSize, %IniFilePath%, WindowOptions, MacroFontSize, 8
+IniRead, PrevFontFace, %IniFilePath%, WindowOptions, PrevFontFace, Verdana
 IniRead, PrevFontSize, %IniFilePath%, WindowOptions, PrevFontSize, 8
 IniRead, CommentUnchecked, %IniFilePath%, WindowOptions, CommentUnchecked, 1
 IniRead, CustomColors, %IniFilePath%, WindowOptions, CustomColors, 0
@@ -731,6 +733,8 @@ If (RegExMatch(FileLayout, "\(Ctrl\s*\+\s*G\)"))
 #Include <WordList>
 UserDefFunctions := SyHi_UserDef " "
 
+Loop, Parse, PrevColors, `,
+	PrevColor%A_Index% := A_LoopField
 GoSub, ObjCreate
 ToggleMode := ToggleC ? "T" : "P"
 If (ColSizes = "0,0,0,0,0,0,0,0,0,0,0")
@@ -1506,33 +1510,10 @@ sciPrev.SetMarginWidthN(0x0, 0xA)
 sciPrev.SetMarginWidthN(0x1, 0x5)
 sciPrev.SetMarginTypeN(0x1, 0x2)
 sciPrev.SetWrapMode(TextWrap ? 0x1 : 0x0)
-sciPrev.SetSelBack(true, 0xFFFF80)
-sciPrev.SetCaretLineBack(0xFFFF80)
 sciPrev.SetCaretLineVisible(true)
 sciPrev.SetCaretLineVisibleAlways(true)
 sciPrev.SetLexer(0xC8)
 sciPrev.StyleClearAll()
-
-sciPrev.StyleSetFore(0x1, 0x2C974B) ; Line comment
-sciPrev.StyleSetFore(0x2, 0x969896) ; Block comment
-sciPrev.StyleSetFore(0x3, 0x183691) ; Escaped Char
-sciPrev.StyleSetFore(0x4, 0xA71D5D) ; Operator
-sciPrev.StyleSetFore(0x5, 0xA71D5D) ; Delimiters
-sciPrev.StyleSetFore(0x6, 0x183691) ; String
-sciPrev.StyleSetFore(0x7, 0x009999) ; Number
-sciPrev.StyleSetFore(0x8, 0x008080) ; Variable
-sciPrev.StyleSetFore(0x9, 0x008080) ; Variable
-sciPrev.StyleSetFore(0xA, 0x8066A8), sciPrev.StyleSetBold(0xA, 0x1) ; Label && Hotkey
-sciPrev.StyleSetFore(0xB, 0x0086B3), sciPrev.StyleSetBold(0xB, 0x1) ; Flow of Control
-sciPrev.StyleSetFore(0xC, 0x0086B3) ; Command
-sciPrev.StyleSetFore(0xD, 0xBB5046), sciPrev.StyleSetBold(0xD, 0x1) ; Built-in Function
-sciPrev.StyleSetFore(0xE, 0x0086B3) ; Directive
-sciPrev.StyleSetFore(0xF, 0x009B4E), sciPrev.StyleSetBold(0xF, 0x1) ; Key && Button
-sciPrev.StyleSetFore(0x10, 0xCF00CF) ; Built-in Variable
-sciPrev.StyleSetFore(0x11, 0xDD1144) ; Keyword
-sciPrev.StyleSetFore(0x12, 0xF04020), sciPrev.StyleSetBold(0x12, 0x1) ; User defined
-sciPrev.StyleSetBack(0x14, 0xFFC0C0) ; Syntax Error
-sciPrev.StyleSetFore(0x21, 0x808080), sciPrev.StyleSetSize(0x21, 0x7) ; Line number
 
 sciPrev.SetKeywords(0x0, SyHi_Flow)
 sciPrev.SetKeywords(0x1, SyHi_Com)
@@ -1542,6 +1523,7 @@ sciPrev.SetKeywords(0x4, SyHi_Keys)
 sciPrev.SetKeywords(0x5, SyHi_BIVar)
 sciPrev.SetKeywords(0x6, SyHi_Keyw)
 sciPrev.SetKeywords(0x7, SyHi_UserDef)
+
 sciPrev.SetText("", Preview)
 sciPrev.SetReadOnly(0x1)
 
@@ -1556,33 +1538,10 @@ sciPrevF.SetMarginWidthN(0x0, 0xA)
 sciPrevF.SetMarginWidthN(0x1, 0x5)
 sciPrevF.SetMarginTypeN(0x1, 0x2)
 sciPrevF.SetWrapMode(TextWrap ? 0x1 : 0x0)
-sciPrevF.SetSelBack(true, 0xFFFF80)
-sciPrevF.SetCaretLineBack(0xFFFF80)
 sciPrevF.SetCaretLineVisible(true)
 sciPrevF.SetCaretLineVisibleAlways(true)
 sciPrevF.SetLexer(0xC8)
 sciPrevF.StyleClearAll()
-
-sciPrevF.StyleSetFore(0x1, 0x2C974B) ; Line comment
-sciPrevF.StyleSetFore(0x2, 0x969896) ; Block comment
-sciPrevF.StyleSetFore(0x3, 0x183691) ; Escaped Char
-sciPrevF.StyleSetFore(0x4, 0xA71D5D) ; Operator
-sciPrevF.StyleSetFore(0x5, 0xA71D5D) ; Delimiters
-sciPrevF.StyleSetFore(0x6, 0x183691) ; String
-sciPrevF.StyleSetFore(0x7, 0x009999) ; Number
-sciPrevF.StyleSetFore(0x8, 0x008080) ; Variable
-sciPrevF.StyleSetFore(0x9, 0x008080) ; Variable
-sciPrevF.StyleSetFore(0xA, 0x8066A8), sciPrevF.StyleSetBold(0xA, 0x1) ; Label && Hotkey
-sciPrevF.StyleSetFore(0xB, 0x0086B3), sciPrevF.StyleSetBold(0xB, 0x1) ; Flow of Control
-sciPrevF.StyleSetFore(0xC, 0x0086B3) ; Command
-sciPrevF.StyleSetFore(0xD, 0xBB5046), sciPrevF.StyleSetBold(0xD, 0x1) ; Built-in Function
-sciPrevF.StyleSetFore(0xE, 0x0086B3) ; Directive
-sciPrevF.StyleSetFore(0xF, 0x009B4E), sciPrevF.StyleSetBold(0xF, 0x1) ; Key && Button
-sciPrevF.StyleSetFore(0x10, 0xCF00CF) ; Built-in Variable
-sciPrevF.StyleSetFore(0x11, 0xDD1144) ; Keyword
-sciPrevF.StyleSetFore(0x12, 0xF04020), sciPrevF.StyleSetBold(0x12, 0x1) ; User defined
-sciPrevF.StyleSetBack(0x14, 0xFFC0C0) ; Syntax Error
-sciPrevF.StyleSetFore(0x21, 0x808080), sciPrevF.StyleSetSize(0x21, 0x7) ; Line number
 
 sciPrevF.SetKeywords(0x0, SyHi_Flow)
 sciPrevF.SetKeywords(0x1, SyHi_Com)
@@ -1592,10 +1551,12 @@ sciPrevF.SetKeywords(0x4, SyHi_Keys)
 sciPrevF.SetKeywords(0x5, SyHi_BIVar)
 sciPrevF.SetKeywords(0x6, SyHi_Keyw)
 sciPrevF.SetKeywords(0x7, SyHi_UserDef)
+
 sciPrevF.SetText("", Preview)
 ControlSetText,, %Preview%, ahk_id %hSciPrevF%
 sciPrevF.SetReadOnly(0x1)
 
+GoSub, PrevColor
 GoSub, PrevFont
 
 Gui, 2:Default
@@ -1634,53 +1595,64 @@ GuiControl, tvMacro:Font, InputTree
 Menu, MacroFontMenu, Check, %MacroFontSize%
 return
 
+PrevColor:
+sciPrev.SetSelBack(true, PrevColor1) ; Selection
+sciPrev.SetCaretLineBack(PrevColor2) ; Selected line
+
+sciPrev.StyleSetFore(0x1, PrevColor3) ; Line comment
+sciPrev.StyleSetFore(0x2, PrevColor4) ; Block comment
+sciPrev.StyleSetFore(0x3, PrevColor5) ; Escaped Char
+sciPrev.StyleSetFore(0x4, PrevColor6) ; Operator
+sciPrev.StyleSetFore(0x5, PrevColor7) ; Delimiters
+sciPrev.StyleSetFore(0x6, PrevColor8) ; String
+sciPrev.StyleSetFore(0x7, PrevColor9) ; Number
+sciPrev.StyleSetFore(0x8, PrevColor10) ; Variable
+sciPrev.StyleSetFore(0x9, PrevColor10) ; Variable
+sciPrev.StyleSetFore(0xA, PrevColor11), sciPrev.StyleSetBold(0xA, 0x1) ; Label and Hotkey
+sciPrev.StyleSetFore(0xB, PrevColor12), sciPrev.StyleSetBold(0xB, 0x1) ; Flow of Control
+sciPrev.StyleSetFore(0xC, PrevColor13) ; Command
+sciPrev.StyleSetFore(0xD, PrevColor14), sciPrev.StyleSetBold(0xD, 0x1) ; Built-in Function
+sciPrev.StyleSetFore(0xE, PrevColor15) ; Directive
+sciPrev.StyleSetFore(0xF, PrevColor16), sciPrev.StyleSetBold(0xF, 0x1) ; Key and Button
+sciPrev.StyleSetFore(0x10, PrevColor17) ; Built-in Variable
+sciPrev.StyleSetFore(0x11, PrevColor18) ; Keyword
+sciPrev.StyleSetFore(0x12, PrevColor19), sciPrev.StyleSetBold(0x12, 0x1) ; User defined function
+sciPrev.StyleSetBack(0x14, PrevColor20) ; Syntax Error
+sciPrev.StyleSetFore(0x21, PrevColor21), sciPrev.StyleSetSize(0x21, 0x7) ; Line number
+
+sciPrevF.SetSelBack(true, PrevColor1) ; Selection
+sciPrevF.SetCaretLineBack(PrevColor2) ; Selected line
+
+sciPrevF.StyleSetFore(0x1, PrevColor3) ; Line comment
+sciPrevF.StyleSetFore(0x2, PrevColor4) ; Block comment
+sciPrevF.StyleSetFore(0x3, PrevColor5) ; Escaped Char
+sciPrevF.StyleSetFore(0x4, PrevColor6) ; Operator
+sciPrevF.StyleSetFore(0x5, PrevColor7) ; Delimiters
+sciPrevF.StyleSetFore(0x6, PrevColor8) ; String
+sciPrevF.StyleSetFore(0x7, PrevColor9) ; Number
+sciPrevF.StyleSetFore(0x8, PrevColor10) ; Variable
+sciPrevF.StyleSetFore(0x9, PrevColor10) ; Variable
+sciPrevF.StyleSetFore(0xA, PrevColor11), sciPrevF.StyleSetBold(0xA, 0x1) ; Label and Hotkey
+sciPrevF.StyleSetFore(0xB, PrevColor12), sciPrevF.StyleSetBold(0xB, 0x1) ; Flow of Control
+sciPrevF.StyleSetFore(0xC, PrevColor13) ; Command
+sciPrevF.StyleSetFore(0xD, PrevColor14), sciPrevF.StyleSetBold(0xD, 0x1) ; Built-in Function
+sciPrevF.StyleSetFore(0xE, PrevColor15) ; Directive
+sciPrevF.StyleSetFore(0xF, PrevColor16), sciPrevF.StyleSetBold(0xF, 0x1) ; Key and Button
+sciPrevF.StyleSetFore(0x10, PrevColor17) ; Built-in Variable
+sciPrevF.StyleSetFore(0x11, PrevColor18) ; Keyword
+sciPrevF.StyleSetFore(0x12, PrevColor19), sciPrevF.StyleSetBold(0x12, 0x1) ; User defined function
+sciPrevF.StyleSetBack(0x14, PrevColor20) ; Syntax Error
+sciPrevF.StyleSetFore(0x21, PrevColor21), sciPrevF.StyleSetSize(0x21, 0x7) ; Line number
+return
+
 PrevFontSet:
 PrevFontSize := A_ThisMenuItem
 PrevFont:
-sciPrev.StyleSetSize(0x0, PrevFontSize)
-sciPrev.StyleSetSize(0x1, PrevFontSize)
-sciPrev.StyleSetSize(0x2, PrevFontSize)
-sciPrev.StyleSetSize(0x3, PrevFontSize)
-sciPrev.StyleSetSize(0x4, PrevFontSize)
-sciPrev.StyleSetSize(0x5, PrevFontSize)
-sciPrev.StyleSetSize(0x6, PrevFontSize)
-sciPrev.StyleSetSize(0x7, PrevFontSize)
-sciPrev.StyleSetSize(0x8, PrevFontSize)
-sciPrev.StyleSetSize(0x9, PrevFontSize)
-sciPrev.StyleSetSize(0xA, PrevFontSize)
-sciPrev.StyleSetSize(0xB, PrevFontSize)
-sciPrev.StyleSetSize(0xC, PrevFontSize)
-sciPrev.StyleSetSize(0xD, PrevFontSize)
-sciPrev.StyleSetSize(0xE, PrevFontSize)
-sciPrev.StyleSetSize(0xF, PrevFontSize)
-sciPrev.StyleSetSize(0x10, PrevFontSize)
-sciPrev.StyleSetSize(0x11, PrevFontSize)
-sciPrev.StyleSetSize(0x12, PrevFontSize)
-sciPrev.StyleSetSize(0x13, PrevFontSize)
-sciPrev.StyleSetSize(0x14, PrevFontSize)
-
-sciPrevF.StyleSetSize(0x0, PrevFontSize)
-sciPrevF.StyleSetSize(0x1, PrevFontSize)
-sciPrevF.StyleSetSize(0x2, PrevFontSize)
-sciPrevF.StyleSetSize(0x3, PrevFontSize)
-sciPrevF.StyleSetSize(0x4, PrevFontSize)
-sciPrevF.StyleSetSize(0x5, PrevFontSize)
-sciPrevF.StyleSetSize(0x6, PrevFontSize)
-sciPrevF.StyleSetSize(0x7, PrevFontSize)
-sciPrevF.StyleSetSize(0x8, PrevFontSize)
-sciPrevF.StyleSetSize(0x9, PrevFontSize)
-sciPrevF.StyleSetSize(0xA, PrevFontSize)
-sciPrevF.StyleSetSize(0xB, PrevFontSize)
-sciPrevF.StyleSetSize(0xC, PrevFontSize)
-sciPrevF.StyleSetSize(0xD, PrevFontSize)
-sciPrevF.StyleSetSize(0xE, PrevFontSize)
-sciPrevF.StyleSetSize(0xF, PrevFontSize)
-sciPrevF.StyleSetSize(0x10, PrevFontSize)
-sciPrevF.StyleSetSize(0x11, PrevFontSize)
-sciPrevF.StyleSetSize(0x12, PrevFontSize)
-sciPrevF.StyleSetSize(0x13, PrevFontSize)
-sciPrevF.StyleSetSize(0x14, PrevFontSize)
-sciPrevF.StyleSetSize(0x19, PrevFontSize)
+Style := 0x0
+Loop, 21
+	sciPrev.StyleSetSize(Style, PrevFontSize), sciPrevF.StyleSetSize(Style, PrevFontSize)
+,	sciPrev.StyleSetFont(Style, PrevFontFace), sciPrevF.StyleSetFont(Style, PrevFontFace)
+,	Style++
 return
 
 OnTop:
@@ -3096,6 +3068,7 @@ If ((o_MacroContext[Ex_Idx].Condition != "") && (o_MacroContext[Ex_Idx].Conditio
 }
 return
 
+PrevOptions:
 Options:
 Gui, 4:+LastFoundExist
 IfWinExist
@@ -3110,12 +3083,14 @@ GoSub, GetHotkeys
 GoSub, ResetHotkeys
 OldSpeedUp := SpeedUp, OldSpeedDn := SpeedDn,OldAreaColor := SearchAreaColor, OldLoopColor := LoopLVColor
 , OldIfColor := IfLVColor, OldMoves := Moves, OldTimed := TimedI, OldRandM := RandomSleeps, OldRandP := RandPercent
+While (PrevColor%A_Index%)
+	OldPrevColor%A_Index% := PrevColor%A_Index%
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
 UserVars := User_Vars.Get(true)
 UserVarsList := User_Vars.Get(,, true)
-Gui, 4:Add, Listbox, W160 H310 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang191%|%t_Lang189%|%t_Lang178%|%t_Lang096%
-Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, General|Recording|Playback|Defaults|Screenshots|Email|Language|LangEditor|UserVars|SubmitRev
+Gui, 4:Add, Listbox, W160 H310 vAltTab gAltTabControl AltSubmit, %t_Lang018%||%c_Lang072%|%t_Lang022%|%t_Lang035%|%t_Lang090%|%t_Lang046%|%t_Lang191%|%t_Lang189%|%t_Lang178%|%t_Lang096%
+Gui, 4:Add, Tab2, yp x+0 W400 H0 vTabControl gAltTabControl AltSubmit, General|Preview|Recording|Playback|Defaults|Screenshots|Email|Language|LangEditor|UserVars|SubmitRev
 ; General
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H175, %t_Lang018%:
 Gui, 4:Add, Checkbox, -Wrap Checked%AutoBackup% vAutoBackup W380 ys+20 xs+10 R1, %t_Lang152%
@@ -3141,6 +3116,61 @@ Gui, 4:Add, Edit, ys+20 xs+10 W380 r2 vEditMod, %VirtualKeys%
 Gui, 4:Add, Button, -Wrap y+0 W75 H23 gConfigRestore, %t_Lang063%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gKeyHistory, %c_Lang124%
 Gui, 4:Tab, 2
+; Preview
+Gui, 4:Add, GroupBox, Section ym xm+170 W400 H225, %t_Lang222%:
+Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W125, %t_Lang226%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor1 gEditColor c%PrevColor1%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang227%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor2 gEditColor c%PrevColor2%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang228%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor3 gEditColor c%PrevColor3%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang229%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor4 gEditColor c%PrevColor4%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang230%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor5 gEditColor c%PrevColor5%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang231%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor6 gEditColor c%PrevColor6%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang232%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor7 gEditColor c%PrevColor7%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang233%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor8 gEditColor c%PrevColor8%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang234%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor9 gEditColor c%PrevColor9%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang235%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor10 gEditColor c%PrevColor10%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W125, %t_Lang236%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor11 gEditColor c%PrevColor11%, ██████
+Gui, 4:Add, Text, -Wrap R1 ys+20 x+30 W125 Section, %t_Lang237%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor12 gEditColor c%PrevColor12%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang238%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor13 gEditColor c%PrevColor13%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang239%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor14 gEditColor c%PrevColor14%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang240%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor15 gEditColor c%PrevColor15%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang241%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor16 gEditColor c%PrevColor16%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang242%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor17 gEditColor c%PrevColor17%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang243%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor18 gEditColor c%PrevColor18%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang244%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor19 gEditColor c%PrevColor19%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang245%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor20 gEditColor c%PrevColor20%, ██████
+Gui, 4:Add, Text, -Wrap R1 y+5 xs W125, %t_Lang246%:
+Gui, 4:Add, Text, -Wrap R1 yp x+10 W40 vPrevColor21 gEditColor c%PrevColor21%, ██████
+Gui, 4:Add, GroupBox, Section y+34 xm+170 W400 H81, %t_Lang223%:
+Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W200, %t_Lang224%:
+Gui, 4:Add, Combobox, yp x+5 vPrevFontFace gAutoComplete W175, %SysFontFaces%
+Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W200, %t_Lang225%:
+Gui, 4:Add, DDL, yp x+5 vPrevFontSize W75, 6|7|8|9|10|11|12|13|14|15|16|17|18
+If (InStr(SysFontFaces, PrevFontFace))
+	GuiControl, 4:ChooseString, PrevFontFace, %PrevFontFace%
+Else
+	GuiControl, 4:, PrevFontFace, %PrevFontFace%||
+GuiControl, 4:ChooseString, PrevFontSize, %PrevFontSize%
+Gui, 4:Tab, 3
 ; Recording
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H85, %t_Lang053%:
 Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W380, %t_Lang019%:
@@ -3170,7 +3200,7 @@ Gui, 4:Add, Edit, Limit Number yp-2 x+0 W40 R1 vTDelayT
 Gui, 4:Add, UpDown, vTDelay 0x80 Range0-999999999, %TDelay%
 Gui, 4:Add, Checkbox, -Wrap Checked%WClass% y+0 xs+10 vWClass W380 R1, %t_Lang029%
 Gui, 4:Add, Checkbox, -Wrap Checked%WTitle% vWTitle W380 R1, %t_Lang030%
-Gui, 4:Tab, 3
+Gui, 4:Tab, 4
 ; Playback
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H75, %t_Lang202%:
 Gui, 4:Add, Text, -Wrap R1 yp+20 xs+10 W200, %t_Lang205%:
@@ -3208,7 +3238,7 @@ Gui, 4:Add, Checkbox, -Wrap R1 Checked%RandomSleeps% W200 vRandomSleeps gOptions
 Gui, 4:Add, Edit, Limit Number yp-2 x+0 W50 R1 vRandPer
 Gui, 4:Add, UpDown, vRandPercent 0x80 Range0-1000, %RandPercent%
 Gui, 4:Add, Text, -Wrap R1 yp+5 x+5, `%
-Gui, 4:Tab, 4
+Gui, 4:Tab, 5
 ; Defaults
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H180, %t_Lang090%:
 Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W380, %t_Lang039%:
@@ -3234,7 +3264,7 @@ Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 gSearchFile, ...
 Gui, 4:Add, GroupBox, Section y+20 xs W400 H55, %t_Lang058%:
 Gui, 4:Add, Edit, ys+20 xs+10 vStdLibFile W350 R1 -Multi, %StdLibFile%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vStdLib gSearchAHK, ...
-Gui, 4:Tab, 5
+Gui, 4:Tab, 6
 ; Screenshots
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H175, %t_Lang046%:
 Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W200, %t_Lang047%:
@@ -3249,7 +3279,7 @@ Gui, 4:Add, Radio, -Wrap yp x+10 W180 vOnEnter R1, %t_Lang050%
 Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W380, %t_Lang051%:
 Gui, 4:Add, Edit, vScreenDir W350 R1 -Multi, %ScreenDir%
 Gui, 4:Add, Button, -Wrap yp-1 x+0 W30 H23 vSearchScreen gSearchDir, ...
-Gui, 4:Tab, 6
+Gui, 4:Tab, 7
 ; Email accounts
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang191%:
 Gui, 4:Add, Text, -Wrap R1 ys+20 xs+10 W80 vAccEmailT, %c_Lang227%*:
@@ -3273,11 +3303,11 @@ Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gAccDel, %c_Lang024%
 Gui, 4:Add, Link, -Wrap yp+2 x+10 W130 R1 gEmailTest, <a>%t_Lang201%</a>
 Gui, 4:Add, Text, -Wrap R1 y+12 xs+10 W380 cGray, %t_Lang193%
 Gui, 4:Add, ListView, y+8 xs+10 W380 R10 vAccList gAccSub LV0x4000, %c_Lang227%|%t_Lang194%|%t_Lang195%|%t_Lang197%|%t_Lang198%|%t_Lang196%|%t_Lang199%|%c_Lang177%|%t_Lang200%
-Gui, 4:Tab, 7
+Gui, 4:Tab, 8
 ; Language select
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang189%:
 Gui, 4:Add, Listbox, ys+20 xs+10 W380 H355 vSelLang Sort, %Lang_List%
-Gui, 4:Tab, 8
+Gui, 4:Tab, 9
 ; Language Editor
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang178%:
 Gui, 4:Add, DDL, ys+20 xs+10 W185 vEditLang gUpdateEditList, %Lang_List%
@@ -3291,14 +3321,14 @@ Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCreateLangFile, %t_Lang179%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gSubmitTrans, %t_Lang181%
 Gui, 4:Add, Button, -Wrap yp-25 x+20 W115 H23 gColGroups, %t_Lang187%
 Gui, 4:Add, Button, -Wrap yp+25 xp W115 H23 gExpGroups, %t_Lang188%
-Gui, 4:Tab, 9
+Gui, 4:Tab, 10
 ; User Variables
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang096%:
 Gui, 4:Add, Text, ys+20 xs+10 -Wrap W150 R1, %t_Lang093%:
 Gui, 4:Add, Text, -Wrap W200 R1 yp xs+155 cRed, %t_Lang094%
 Gui, 4:Add, Text, -Wrap W380 R1 y+5 xs+10, %t_Lang095%
 Gui, 4:Add, Edit, W380 r24 vUserVarsList, %UserVarsList%
-Gui, 4:Tab, 10
+Gui, 4:Tab, 11
 ; Send Revision
 Gui, 4:Add, GroupBox, Section ym xm+170 W400 H395, %t_Lang186%
 Gui, 4:Add, Text, -Wrap R1 ys+30 xs+10 W75, %c_Lang230%:
@@ -3370,6 +3400,11 @@ If ((A_GuiControl = "TModeTip") || (A_GuiControl = "TSendModeTip"))
 	GuiControl, 4:Choose, AltTab, %t_Lang035%
 	GoSub, AltTabControl
 }
+If (A_ThisLabel = "PrevOptions")
+{
+	GuiControl, 4:Choose, AltTab, %c_Lang072%
+	GoSub, AltTabControl
+}
 Gui, 4:Show,, %t_Lang017%
 OldMods := VirtualKeys
 Input
@@ -3413,7 +3448,12 @@ For _each, _Section in UserVars
 		Try SavedVars(_key)
 FileDelete, %UserVarsPath%
 User_Vars.Write(UserVarsPath)
-
+PrevColors := ""
+While (PrevColor%A_Index%)
+	PrevColors .= PrevColor%A_Index% ","
+PrevColors := SubStr(PrevColors, 1, -1)
+GoSub, PrevColor
+GoSub, PrevFont
 Gui, 4:ListView, AccList
 UpdateMailAccounts()
 
@@ -3447,6 +3487,8 @@ ConfigCancel:
 4GuiEscape:
 SpeedUp := OldSpeedUp, SpeedDn := OldSpeedDn, VirtualKeys := OldMods, SearchAreaColor := OldAreaColor, LoopLVColor := OldLoopColor
 , IfLVColor := OldIfColor, Moves := OldMoves, TimedI := OldTimed, RandomSleeps := OldRandM, RandPercent := OldRandP
+While (OldPrevColor%A_Index%)
+	PrevColor%A_Index% := OldPrevColor%A_Index%
 LangMan := ""
 Gui, 1:-Disabled
 Gui, 4:Destroy
@@ -8546,7 +8588,7 @@ Loop, %TabCount%
 		}
 	}
 }
-Statement := "
+Statements := "
 (Join$
 " c_Lang190 "$
 " c_Lang191 "
@@ -8570,7 +8612,7 @@ Gui, 1:+Disabled
 Gui, 21:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1$CmdTab2$CmdTab3
 ; Statements
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
-Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit, %Statement%
+Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit, %Statements%
 Gui, 21:Add, Text, yp x+5 h25 0x11
 Gui, 21:Add, DDL, yp x+0 W105 vIfMsgB AltSubmit Disabled, %c_Lang168%$$%c_Lang169%$%c_Lang170%$%c_Lang171%$%c_Lang172%$%c_Lang173%$%c_Lang174%$%c_Lang175%$%c_Lang176%$%c_Lang177%
 Gui, 21:Add, Text, yp x+5 h25 0x11
@@ -9037,15 +9079,19 @@ Gui, 21:Submit, NoHide
 GuiControl, 21:, CoOper, % IfOper < 10 ? Co_Oper_0%IfOper% : Co_Oper_%IfOper%
 GuiControl, 21:-AltSubmit, IfOper
 Gui, 21:Submit, NoHide
-If IfOper in =,==,!=,>,<,>=,<=
+If (IfList%Statement% = If14)
 {
-	GuiControl, 21:Hide, VarTxt
-	GuiControl, 21:Show, ExprLink1
-}
-Else
-{
-	GuiControl, 21:Hide, ExprLink1
-	GuiControl, 21:Show, VarTxt
+	OutputDebug, % IfOper
+	If IfOper in =,==,!=,>,<,>=,<=
+	{
+		GuiControl, 21:Hide, VarTxt
+		GuiControl, 21:Show, ExprLink1
+	}
+	Else
+	{
+		GuiControl, 21:Hide, ExprLink1
+		GuiControl, 21:Show, VarTxt
+	}
 }
 return
 
@@ -12962,12 +13008,9 @@ If (MacroView = "Tree")
 	TVData := PMC.TVLoad(ShowGroups)
 UserDefFunctions := SyHi_UserDef " ", SetUserWords(UserDefFunctions)
 DebugCheckError := False
-While (DebugCheckLoop%A_Index%)
-	DebugCheckLoop%A_Index% := 0
-While (DebugCheckIf%A_Index%)
-	DebugCheckIf%A_Index% := 0
-While (DebugDefault%A_Index%)
-	DebugDefault%A_Index% := 0
+DebugCheckLoop := []
+DebugCheckIf := []
+DebugDefault := []
 return
 
 SelectAll:
@@ -14505,7 +14548,7 @@ Gui, 19:Submit, NoHide
 rColor := ""
 If (A_GuiControl = "SearchImg")
 	rColor := ImgFile, OwnerID := CmdWin
-Else If (InStr(A_GuiControl, "LVColor") || (A_GuiControl = "SearchAreaColor"))
+Else If (InStr(A_GuiControl, "LVColor") || (A_GuiControl = "SearchAreaColor") || (InStr(A_GuiControl, "PrevColor")))
 	rColor := %A_GuiControl%, OwnerID := CmdWin
 Else
 {
@@ -14525,7 +14568,7 @@ If (Dlg_Color(rColor, OwnerID, CustomColors))
 		GuiControl,, ImgFile, %rColor%
 		GuiControl, +Background%rColor%, ColorPrev
 	}
-	Else If (InStr(A_GuiControl, "LVColor") || (A_GuiControl = "SearchAreaColor"))
+	Else If (InStr(A_GuiControl, "LVColor") || (A_GuiControl = "SearchAreaColor") || (InStr(A_GuiControl, "PrevColor")))
 	{
 		%A_GuiControl% := rColor
 		Gui, Font, c%rColor%
@@ -15383,6 +15426,7 @@ ConvertBreaks := 1
 ShowGroupNames := 0
 TextWrap := 0
 MacroFontSize := 8
+PrevFontFace := "Verdana"
 PrevFontSize := 8
 CommentUnchecked := 1
 IncPmc := 0
@@ -15452,6 +15496,10 @@ GoSub, CheckMenuItems
 GoSub, DefaultMod
 GoSub, ObjCreate
 GoSub, LoadData
+PrevColors := "0xFFFF80,0xFFFF80,0x2C974B,0x969896,0x183691,0xA71D5D,0xA71D5D,0x183691,0x009999,0x008080,0x8066A8,0x0086B3,0x0086B3,0xBB5046,0x0086B3,0x009B4E,0xCF00CF,0xDD1144,0xF04020,0xFFC0C0,0x808080"
+Loop, Parse, PrevColors, `,
+	PrevColor%A_Index% := A_LoopField
+GoSub, PrevColor
 TB_Edit(tbPrev, "PrevRefreshButton", AutoRefresh)
 TB_Edit(tbPrevF, "PrevRefreshButton", AutoRefresh)
 TB_Edit(tbPrev, "GoToLine", AutoSelectLine)
@@ -15729,6 +15777,7 @@ IniWrite, %LoopLVColor%, %IniFilePath%, Options, LoopLVColor
 IniWrite, %IfLVColor%, %IniFilePath%, Options, IfLVColor
 IniWrite, %VirtualKeys%, %IniFilePath%, Options, VirtualKeys
 IniWrite, %AutoUpdate%, %IniFilePath%, Options, AutoUpdate
+IniWrite, %PrevColors%, %IniFilePath%, Options, PrevColors
 IniWrite, %Ex_AbortKey%, %IniFilePath%, ExportOptions, Ex_AbortKey
 IniWrite, %Ex_PauseKey%, %IniFilePath%, ExportOptions, Ex_PauseKey
 IniWrite, %Ex_SM%, %IniFilePath%, ExportOptions, Ex_SM
@@ -15779,6 +15828,7 @@ IniWrite, %MacroView%, %IniFilePath%, WindowOptions, MacroView
 IniWrite, %ShowPrev%, %IniFilePath%, WindowOptions, ShowPrev
 IniWrite, %TextWrap%, %IniFilePath%, WindowOptions, TextWrap
 IniWrite, %MacroFontSize%, %IniFilePath%, WindowOptions, MacroFontSize
+IniWrite, %PrevFontFace%, %IniFilePath%, WindowOptions, PrevFontFace
 IniWrite, %PrevFontSize%, %IniFilePath%, WindowOptions, PrevFontSize
 IniWrite, %CommentUnchecked%, %IniFilePath%, WindowOptions, CommentUnchecked
 IniWrite, %CustomColors%, %IniFilePath%, WindowOptions, CustomColors
@@ -15862,17 +15912,17 @@ DebugCheckError := false
 Loop, %TabCount%
 {
 	ListCount += ListCount%A_Index%
-	If (DebugCheckLoop%A_Index%)
+	If (DebugCheckLoop[A_Index])
 	{
 		DebugCheckError := true
 		MsgBox, 16, %d_Lang007%, % d_Lang085 A_Index " (" CopyMenuLabels[A_Index] ")"
 	}
-	Else If (DebugCheckIf%A_Index%)
+	Else If (DebugCheckIf[A_Index])
 	{
 		DebugCheckError := true
 		MsgBox, 16, %d_Lang007%, % d_Lang086 A_Index " (" CopyMenuLabels[A_Index] ")"
 	}
-	If (DebugDefault%A_Index%)
+	If (DebugDefault[A_Index])
 	{
 		DebugCheckError := true
 		MsgBox, 16, %d_Lang007%, % CopyMenuLabels[A_Index] "`n`n" d_Lang098
@@ -15950,11 +16000,11 @@ GuiControl, chMacro:-Redraw, InputList%A_List%
 ListCount%A_List% := LV_GetCount()
 IdxLv := "", ActLv := "", IsInIf := 0, IsInLoop := 0, RowColorLoop := 0, RowColorIf := 0
 IsUserFunc := InStr(CopyMenuLabels[A_List], "()")
-BadCmd := false, BadPos := false, FuncLn := false, MustDefault := false, DebugDefault%A_List% := false
+BadCmd := false, BadPos := false, FuncLn := false, MustDefault := false, DebugDefault[A_List] := false
 HistData := RowCheckFunc()
 GuiControl, chMacro:+Redraw, InputList%A_List%
-DebugCheckLoop%A_List% := RowColorLoop
-DebugCheckIf%A_List% := RowColorIf
+DebugCheckLoop[A_List] := RowColorLoop
+DebugCheckIf[A_List] := RowColorIf
 If (BadPos)
 	SetTimer, RowCheck, -100, 1
 If (BadCmd)
@@ -17003,11 +17053,11 @@ TB_Edit(tbEdit, "SwitchView", "", "", w_Lang116)
 , TB_Edit(tbEdit, "UserFunction", "", "", w_Lang104), TB_Edit(tbEdit, "FuncParameter", "", "", w_Lang105), TB_Edit(tbEdit, "FuncReturn", "", "", w_Lang106)
 ; Preview
 TB_Edit(tbPrev, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrev, "PrevRefreshButton", "", "", t_Lang014), TB_Edit(tbPrev, "GoToLine", "", "", t_Lang218)
-, TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrev, "CommentUnchecked", "", "", w_Lang108), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "PrevFontShow", "", "", v_Lang011)
+, TB_Edit(tbPrev, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrev, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrev, "CommentUnchecked", "", "", w_Lang108), TB_Edit(tbPrev, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "PrevFontShow", "", "", v_Lang011), TB_Edit(tbPrev, "PrevOptions", "", "", w_Lang091)
 , TB_Edit(tbPrev, "EditScript", "", "", t_Lang138), TB_Edit(tbPrev, "PrevDock", "", "", t_Lang124), TB_Edit(tbPrev, "Preview", "", "", c_Lang022)
 
 , TB_Edit(tbPrevF, "PrevCopy", "", "", c_Lang023), TB_Edit(tbPrevF, "PrevRefreshButton", "", "", t_Lang014), TB_Edit(tbPrevF, "GoToLine", "", "", t_Lang218)
-, TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrevF, "CommentUnchecked", "", "", w_Lang108), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "PrevFontShow", "", "", v_Lang011), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
+, TB_Edit(tbPrevF, "TabIndent", "", "", t_Lang011), TB_Edit(tbPrevF, "ConvertBreaks", "", "", t_Lang190), TB_Edit(tbPrevF, "CommentUnchecked", "", "", w_Lang108), TB_Edit(tbPrevF, "TextWrap", "", "", t_Lang052), TB_Edit(tbPrev, "PrevFontShow", "", "", v_Lang011), TB_Edit(tbPrev, "PrevOptions", "", "", w_Lang091), TB_Edit(tbPrevF, "OnTop", "", "", t_Lang016)
 , TB_Edit(tbPrevF, "EditScript", "", "", t_Lang138), TB_Edit(tbPrevF, "PrevDock", "", "", t_Lang125)
 ; OSC
 TB_Edit(tbOSC, "OSPlay", "", "", t_Lang112), TB_Edit(tbOSC, "OSStop", "", "", t_Lang113), TB_Edit(tbOSC, "ShowPlayMenu", "", "", t_Lang114)

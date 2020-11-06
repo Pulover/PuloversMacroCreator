@@ -806,6 +806,31 @@
 	t_Lang219 =	Valige kood automaatselt
 	t_Lang220 =	Rida
 	t_Lang221 =	Kohandatud ikoon
+	t_Lang222 =	Värvid
+	t_Lang223 =	Font
+	t_Lang224 =	Fontinägu
+	t_Lang225 =	Fondi suurus
+	t_Lang226 =	Valik
+	t_Lang227 =	Valitud rida
+	t_Lang228 =	Rida kommentaar
+	t_Lang229 =	Blokeeri kommentaar
+	t_Lang230 =	Põgenenud Char
+	t_Lang231 =	Operaator
+	t_Lang232 =	Eraldajad
+	t_Lang233 =	String
+	t_Lang234 =	Arv
+	t_Lang235 =	Muutuv
+	t_Lang236 =	Silt ja kiirklahv
+	t_Lang237 =	Juhtimise voog
+	t_Lang238 =	Käsk
+	t_Lang239 =	Sisseehitatud funktsioon
+	t_Lang240 =	Direktiiv
+	t_Lang241 =	Klahv ja nupp
+	t_Lang242 =	Sisseehitatud muutuja
+	t_Lang243 =	Märksõna
+	t_Lang244 =	Kasutaja määratud funktsioon
+	t_Lang245 =	Süntaksiviga
+	t_Lang246 =	Rea number
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Avatud

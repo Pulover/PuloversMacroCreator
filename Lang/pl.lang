@@ -806,6 +806,31 @@
 	t_Lang219 =	Automatycznie wybierz kod
 	t_Lang220 =	Linia
 	t_Lang221 =	Ikona niestandardowa
+	t_Lang222 =	Zabarwienie
+	t_Lang223 =	Czcionka
+	t_Lang224 =	Krój czcionki
+	t_Lang225 =	Rozmiar czcionki
+	t_Lang226 =	Wybór
+	t_Lang227 =	Wybrana linia
+	t_Lang228 =	Komentarz do linii
+	t_Lang229 =	Zablokuj komentarz
+	t_Lang230 =	Uciekł Char
+	t_Lang231 =	Operator
+	t_Lang232 =	Ograniczniki
+	t_Lang233 =	Strunowy
+	t_Lang234 =	Numer
+	t_Lang235 =	Zmienna
+	t_Lang236 =	Etykieta i klawisz skrótu
+	t_Lang237 =	Przepływ kontroli
+	t_Lang238 =	Komenda
+	t_Lang239 =	Wbudowana funkcja
+	t_Lang240 =	Dyrektywa
+	t_Lang241 =	Klucz i przycisk
+	t_Lang242 =	Wbudowana zmienna
+	t_Lang243 =	Słowo kluczowe
+	t_Lang244 =	Funkcja zdefiniowana przez użytkownika
+	t_Lang245 =	Błąd składni
+	t_Lang246 =	Numer linii
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otwórz

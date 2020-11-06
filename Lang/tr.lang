@@ -806,6 +806,31 @@
 	t_Lang219 =	Kodu otomatik olarak seçin
 	t_Lang220 =	Hat
 	t_Lang221 =	Özel simge
+	t_Lang222 =	Renkler
+	t_Lang223 =	Yazı tipi
+	t_Lang224 =	Yazı tipi yüzü
+	t_Lang225 =	Yazı Boyutu
+	t_Lang226 =	Seçimi
+	t_Lang227 =	Seçili satır
+	t_Lang228 =	Satır yorumu
+	t_Lang229 =	Yorumu engelle
+	t_Lang230 =	Kaçan Karakter
+	t_Lang231 =	Şebeke
+	t_Lang232 =	Sınırlayıcılar
+	t_Lang233 =	Dize
+	t_Lang234 =	Numara
+	t_Lang235 =	Değişken
+	t_Lang236 =	Etiket ve Kısayol Tuşu
+	t_Lang237 =	Kontrol Akışı
+	t_Lang238 =	Komut
+	t_Lang239 =	Yerleşik İşlev
+	t_Lang240 =	Direktif
+	t_Lang241 =	Anahtar ve Düğme
+	t_Lang242 =	Yerleşik Değişken
+	t_Lang243 =	Anahtar kelime
+	t_Lang244 =	Kullanıcı tanımlı işlev
+	t_Lang245 =	Sözdizimi hatası
+	t_Lang246 =	Satır numarası
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Açık

@@ -806,6 +806,31 @@
 	t_Lang219 =	Auto-select code
 	t_Lang220 =	Line
 	t_Lang221 =	Custom icon
+	t_Lang222 =	Colors
+	t_Lang223 =	Font
+	t_Lang224 =	Font face
+	t_Lang225 =	Font size
+	t_Lang226 =	Selection
+	t_Lang227 =	Selected line
+	t_Lang228 =	Line comment
+	t_Lang229 =	Block comment
+	t_Lang230 =	Escaped Char
+	t_Lang231 =	Operator
+	t_Lang232 =	Delimiters
+	t_Lang233 =	String
+	t_Lang234 =	Number
+	t_Lang235 =	Variable
+	t_Lang236 =	Label and Hotkey
+	t_Lang237 =	Flow of Control
+	t_Lang238 =	Command
+	t_Lang239 =	Built-in Function
+	t_Lang240 =	Directive
+	t_Lang241 =	Key and Button
+	t_Lang242 =	Built-in Variable
+	t_Lang243 =	Keyword
+	t_Lang244 =	User defined function
+	t_Lang245 =	Syntax Error
+	t_Lang246 =	Line number
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

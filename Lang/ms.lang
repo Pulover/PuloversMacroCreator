@@ -806,6 +806,31 @@
 	t_Lang219 =	Pilih kod secara automatik
 	t_Lang220 =	Garisan
 	t_Lang221 =	Ikon tersuai
+	t_Lang222 =	Warna
+	t_Lang223 =	Fon
+	t_Lang224 =	Muka fon
+	t_Lang225 =	Saiz huruf
+	t_Lang226 =	Pemilihan
+	t_Lang227 =	Talian terpilih
+	t_Lang228 =	Komen baris
+	t_Lang229 =	Sekat komen
+	t_Lang230 =	Melarikan diri dari Char
+	t_Lang231 =	Pengendali
+	t_Lang232 =	Pembatas
+	t_Lang233 =	Tali
+	t_Lang234 =	Nombor
+	t_Lang235 =	Pembolehubah
+	t_Lang236 =	Label dan Hotkey
+	t_Lang237 =	Aliran Kawalan
+	t_Lang238 =	Perintah
+	t_Lang239 =	Fungsi terbina dalam
+	t_Lang240 =	Arahan
+	t_Lang241 =	Kekunci dan Butang
+	t_Lang242 =	Pemboleh ubah terbina dalam
+	t_Lang243 =	Kata kunci
+	t_Lang244 =	Fungsi yang ditentukan pengguna
+	t_Lang245 =	Ralat Sintaks
+	t_Lang246 =	Nombor garisan
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Buka

@@ -806,6 +806,31 @@
 	t_Lang219 =	Dewis cod yn awtomatig
 	t_Lang220 =	Llinell
 	t_Lang221 =	Eicon personol
+	t_Lang222 =	Lliwiau
+	t_Lang223 =	Ffont
+	t_Lang224 =	Wyneb ffont
+	t_Lang225 =	Maint y ffont
+	t_Lang226 =	Dewis
+	t_Lang227 =	Llinell ddethol
+	t_Lang228 =	Sylw llinell
+	t_Lang229 =	Sylw bloc
+	t_Lang230 =	Torgoch wedi dianc
+	t_Lang231 =	Gweithredwr
+	t_Lang232 =	Delimiters
+	t_Lang233 =	Llinyn
+	t_Lang234 =	Rhif
+	t_Lang235 =	Amrywiol
+	t_Lang236 =	Label a Hotkey
+	t_Lang237 =	Llif Rheolaeth
+	t_Lang238 =	Gorchymyn
+	t_Lang239 =	Swyddogaeth Adeiledig
+	t_Lang240 =	Cyfarwyddeb
+	t_Lang241 =	Allwedd a Botwm
+	t_Lang242 =	Amrywiol Adeiledig
+	t_Lang243 =	Allweddair
+	t_Lang244 =	Swyddogaeth wedi'i diffinio gan y defnyddiwr
+	t_Lang245 =	Gwall Cystrawen
+	t_Lang246 =	Rhif llinell
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Agored

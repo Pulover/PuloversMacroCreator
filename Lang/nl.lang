@@ -806,6 +806,31 @@
 	t_Lang219 =	Automatisch code selecteren
 	t_Lang220 =	Lijn
 	t_Lang221 =	Aangepast pictogram
+	t_Lang222 =	Kleuren
+	t_Lang223 =	Lettertype
+	t_Lang224 =	Lettertype
+	t_Lang225 =	Lettertypegrootte
+	t_Lang226 =	Selectie
+	t_Lang227 =	Geselecteerde lijn
+	t_Lang228 =	Lijnopmerking
+	t_Lang229 =	Reactie blokkeren
+	t_Lang230 =	Ontsnapte Char
+	t_Lang231 =	Operator
+	t_Lang232 =	Scheidingstekens
+	t_Lang233 =	Draad
+	t_Lang234 =	Aantal
+	t_Lang235 =	Variabel
+	t_Lang236 =	Label en sneltoets
+	t_Lang237 =	Stroom van controle
+	t_Lang238 =	Opdracht
+	t_Lang239 =	Ingebouwde functie
+	t_Lang240 =	Richtlijn
+	t_Lang241 =	Sleutel en knop
+	t_Lang242 =	Ingebouwde variabele
+	t_Lang243 =	Trefwoord
+	t_Lang244 =	Door de gebruiker gedefinieerde functie
+	t_Lang245 =	Syntax error
+	t_Lang246 =	Regelnummer
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

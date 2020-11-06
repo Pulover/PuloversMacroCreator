@@ -806,6 +806,31 @@
 	t_Lang219 =	Sélectionner automatiquement le code
 	t_Lang220 =	Ligne
 	t_Lang221 =	Icône personnalisée
+	t_Lang222 =	Couleurs
+	t_Lang223 =	Police de caractère
+	t_Lang224 =	Face de police
+	t_Lang225 =	Taille de police
+	t_Lang226 =	Sélection
+	t_Lang227 =	Ligne sélectionnée
+	t_Lang228 =	Commentaire de ligne
+	t_Lang229 =	Bloquer le commentaire
+	t_Lang230 =	Omble échappé
+	t_Lang231 =	Opérateur
+	t_Lang232 =	Délimiteurs
+	t_Lang233 =	Chaîne
+	t_Lang234 =	Nombre
+	t_Lang235 =	Variable
+	t_Lang236 =	Étiquette et raccourci clavier
+	t_Lang237 =	Flux de contrôle
+	t_Lang238 =	Commander
+	t_Lang239 =	Fonction intégrée
+	t_Lang240 =	Directif
+	t_Lang241 =	Clé et bouton
+	t_Lang242 =	Variable intégrée
+	t_Lang243 =	Mot-clé
+	t_Lang244 =	Fonction définie par l'utilisateur
+	t_Lang245 =	Erreur de syntaxe
+	t_Lang246 =	Numéro de ligne
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Ouvert

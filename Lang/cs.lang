@@ -806,6 +806,31 @@
 	t_Lang219 =	Automaticky vybrat kód
 	t_Lang220 =	Čára
 	t_Lang221 =	Vlastní ikona
+	t_Lang222 =	Barvy
+	t_Lang223 =	Písmo
+	t_Lang224 =	Tvar písma
+	t_Lang225 =	Velikost písma
+	t_Lang226 =	Výběr
+	t_Lang227 =	Vybraný řádek
+	t_Lang228 =	Řádkový komentář
+	t_Lang229 =	Blokovat komentář
+	t_Lang230 =	Unikl Char
+	t_Lang231 =	Operátor
+	t_Lang232 =	Oddělovače
+	t_Lang233 =	Tětiva
+	t_Lang234 =	Číslo
+	t_Lang235 =	Variabilní
+	t_Lang236 =	Štítek a horká klávesa
+	t_Lang237 =	Tok kontroly
+	t_Lang238 =	Příkaz
+	t_Lang239 =	Integrovaná funkce
+	t_Lang240 =	Směrnice
+	t_Lang241 =	Klíč a tlačítko
+	t_Lang242 =	Integrovaná proměnná
+	t_Lang243 =	Klíčové slovo
+	t_Lang244 =	Uživatelem definovaná funkce
+	t_Lang245 =	Chyba syntaxe
+	t_Lang246 =	Číslo řádku
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otevřít

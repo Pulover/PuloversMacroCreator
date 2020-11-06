@@ -806,6 +806,31 @@
 	t_Lang219 =	Välj kod automatiskt
 	t_Lang220 =	Linje
 	t_Lang221 =	Anpassad ikon
+	t_Lang222 =	Färger
+	t_Lang223 =	Font
+	t_Lang224 =	Font ansikte
+	t_Lang225 =	Textstorlek
+	t_Lang226 =	Urval
+	t_Lang227 =	Vald rad
+	t_Lang228 =	Radkommentar
+	t_Lang229 =	Blockera kommentar
+	t_Lang230 =	Flyr Char
+	t_Lang231 =	Operatör
+	t_Lang232 =	Avgränsare
+	t_Lang233 =	Sträng
+	t_Lang234 =	siffra
+	t_Lang235 =	Variabel
+	t_Lang236 =	Etikett och snabbtangent
+	t_Lang237 =	Flödet av kontroll
+	t_Lang238 =	Kommando
+	t_Lang239 =	Inbyggd funktion
+	t_Lang240 =	Direktiv
+	t_Lang241 =	Nyckel och knapp
+	t_Lang242 =	Inbyggd variabel
+	t_Lang243 =	Nyckelord
+	t_Lang244 =	Användardefinierad funktion
+	t_Lang245 =	Syntaxfel
+	t_Lang246 =	Linje nummer
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öppet

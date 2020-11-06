@@ -806,6 +806,31 @@
 	t_Lang219 =	ເລືອກລະຫັດໂດຍອັດຕະໂນມັດ
 	t_Lang220 =	ສາຍ
 	t_Lang221 =	ໄອຄອນທີ່ ກຳ ຫນົດເອງ
+	t_Lang222 =	ສີສັນ
+	t_Lang223 =	ຕົວອັກສອນ
+	t_Lang224 =	ໃບຫນ້າຕົວອັກສອນ
+	t_Lang225 =	ຂະ ໜາດ ຕົວອັກສອນ
+	t_Lang226 =	ການຄັດເລືອກ
+	t_Lang227 =	ເສັ້ນທີ່ເລືອກ
+	t_Lang228 =	ຄໍາເຫັນເສັ້ນ
+	t_Lang229 =	ບລັອກ ຄຳ ເຫັນ
+	t_Lang230 =	Char ທີ່ຫລົບ ໜີ
+	t_Lang231 =	ຜູ້ປະຕິບັດງານ
+	t_Lang232 =	ຜູ້ ຈຳ ກັດ
+	t_Lang233 =	ຊ່ອຍແນ່
+	t_Lang234 =	ເລກ
+	t_Lang235 =	ຕົວປ່ຽນແປງ
+	t_Lang236 =	ປ້າຍຊື່ແລະ Hotkey
+	t_Lang237 =	ກະແສການຄວບຄຸມ
+	t_Lang238 =	ຄຳ ສັ່ງ
+	t_Lang239 =	Built-in Function
+	t_Lang240 =	ທິດທາງ
+	t_Lang241 =	ປຸ່ມແລະປຸ່ມ
+	t_Lang242 =	Built-in Variable
+	t_Lang243 =	ຄຳ ສຳ ຄັນ
+	t_Lang244 =	ໜ້າ ທີ່ທີ່ ກຳ ນົດໂດຍຜູ້ໃຊ້
+	t_Lang245 =	ຂໍ້ຜິດພາດ Syntax
+	t_Lang246 =	ເບີໂທ
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	ເປີດ

@@ -806,6 +806,31 @@
 	t_Lang219 =	Veldu sjálfkrafa kóða
 	t_Lang220 =	Lína
 	t_Lang221 =	Sérsniðið tákn
+	t_Lang222 =	Litir
+	t_Lang223 =	Leturgerð
+	t_Lang224 =	Leturlit
+	t_Lang225 =	Leturstærð
+	t_Lang226 =	Val
+	t_Lang227 =	Valin lína
+	t_Lang228 =	Línulýsing
+	t_Lang229 =	Loka fyrir athugasemd
+	t_Lang230 =	Slöpp bleikja
+	t_Lang231 =	Rekstraraðili
+	t_Lang232 =	Afmörkun
+	t_Lang233 =	Strengur
+	t_Lang234 =	Fjöldi
+	t_Lang235 =	Breytilegt
+	t_Lang236 =	Merkimiði og flýtilykill
+	t_Lang237 =	Flæði stjórnunar
+	t_Lang238 =	Skipun
+	t_Lang239 =	Innbyggð aðgerð
+	t_Lang240 =	Tilskipun
+	t_Lang241 =	Lykill og hnappur
+	t_Lang242 =	Innbyggður breytur
+	t_Lang243 =	Lykilorð
+	t_Lang244 =	Notendaskilgreind aðgerð
+	t_Lang245 =	Setningafræði Villa
+	t_Lang246 =	Línunúmer
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

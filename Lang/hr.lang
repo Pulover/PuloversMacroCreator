@@ -806,6 +806,31 @@
 	t_Lang219 =	Automatski odaberite kod
 	t_Lang220 =	Crta
 	t_Lang221 =	Prilagođena ikona
+	t_Lang222 =	Boje
+	t_Lang223 =	Font
+	t_Lang224 =	Krstionica
+	t_Lang225 =	Veličina fonta
+	t_Lang226 =	Izbor
+	t_Lang227 =	Odabrani redak
+	t_Lang228 =	Redni komentar
+	t_Lang229 =	Blokiraj komentar
+	t_Lang230 =	Pobjegao Char
+	t_Lang231 =	Operater
+	t_Lang232 =	Razdjelnici
+	t_Lang233 =	Niz
+	t_Lang234 =	Broj
+	t_Lang235 =	Promjenjiva
+	t_Lang236 =	Oznaka i prečac
+	t_Lang237 =	Tijek kontrole
+	t_Lang238 =	Naredba
+	t_Lang239 =	Ugrađena funkcija
+	t_Lang240 =	Direktiva
+	t_Lang241 =	Tipka i gumb
+	t_Lang242 =	Ugrađena varijabla
+	t_Lang243 =	Ključna riječ
+	t_Lang244 =	Korisnički definirana funkcija
+	t_Lang245 =	Sintaktička pogreška
+	t_Lang246 =	Broj retka
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvoreno

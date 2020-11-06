@@ -806,6 +806,31 @@
 	t_Lang219 =	Code automatisch auswählen
 	t_Lang220 =	Linie
 	t_Lang221 =	Benutzerdefiniertes Symbol
+	t_Lang222 =	Farben
+	t_Lang223 =	Schriftart
+	t_Lang224 =	Schriftart
+	t_Lang225 =	Schriftgröße
+	t_Lang226 =	Auswahl
+	t_Lang227 =	Ausgewählte Zeile
+	t_Lang228 =	Zeilenkommentar
+	t_Lang229 =	Kommentar blockieren
+	t_Lang230 =	Entkommener Char
+	t_Lang231 =	Operator
+	t_Lang232 =	Trennzeichen
+	t_Lang233 =	String
+	t_Lang234 =	Nummer
+	t_Lang235 =	Variable
+	t_Lang236 =	Label und Hotkey
+	t_Lang237 =	Kontrollfluss
+	t_Lang238 =	Befehl
+	t_Lang239 =	Eingebaute Funktion
+	t_Lang240 =	Richtlinie
+	t_Lang241 =	Schlüssel und Knopf
+	t_Lang242 =	Eingebaute Variable
+	t_Lang243 =	Stichwort
+	t_Lang244 =	Benutzerdefinierte Funktion
+	t_Lang245 =	Syntax-Fehler
+	t_Lang246 =	Zeilennummer
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Öffnen

@@ -806,6 +806,31 @@
 	t_Lang219 =	Wielt automatesch de Code
 	t_Lang220 =	Linn
 	t_Lang221 =	Benotzerdefinéiert Ikon
+	t_Lang222 =	Faarwen
+	t_Lang223 =	Schrëft
+	t_Lang224 =	Schrëft Gesiicht
+	t_Lang225 =	Schrëftgréisst
+	t_Lang226 =	Auswiel
+	t_Lang227 =	Ausgewielter Linn
+	t_Lang228 =	Linn Kommentar
+	t_Lang229 =	Kommentar blockéieren
+	t_Lang230 =	Flucht Char
+	t_Lang231 =	Bedreiwer
+	t_Lang232 =	Ofgrenzung
+	t_Lang233 =	String
+	t_Lang234 =	Zuel
+	t_Lang235 =	Variabel
+	t_Lang236 =	Label an Hotkey
+	t_Lang237 =	Flow of Control
+	t_Lang238 =	Kommando
+	t_Lang239 =	Gebaut-an Funktioun
+	t_Lang240 =	Direktiv
+	t_Lang241 =	Schlëssel a Knäppchen
+	t_Lang242 =	Gebaut-an Variabel
+	t_Lang243 =	Schlësselwuert
+	t_Lang244 =	Benotzerdefinéiert Funktioun
+	t_Lang245 =	Syntax Feeler
+	t_Lang246 =	Linn Nummer
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

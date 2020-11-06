@@ -806,6 +806,31 @@
 	t_Lang219 =	Velg kode automatisk
 	t_Lang220 =	Linje
 	t_Lang221 =	Egendefinert ikon
+	t_Lang222 =	Farger
+	t_Lang223 =	Skrift
+	t_Lang224 =	Font ansikt
+	t_Lang225 =	Skriftstørrelse
+	t_Lang226 =	Utvalg
+	t_Lang227 =	Valgt linje
+	t_Lang228 =	Linjekommentar
+	t_Lang229 =	Blokker kommentar
+	t_Lang230 =	Rømte Char
+	t_Lang231 =	Operatør
+	t_Lang232 =	Avgrensere
+	t_Lang233 =	String
+	t_Lang234 =	Nummer
+	t_Lang235 =	Variabel
+	t_Lang236 =	Etikett og hurtigtast
+	t_Lang237 =	Flyt av kontroll
+	t_Lang238 =	Kommando
+	t_Lang239 =	Innebygd funksjon
+	t_Lang240 =	Direktiv
+	t_Lang241 =	Tast og knapp
+	t_Lang242 =	Innebygd variabel
+	t_Lang243 =	Nøkkelord
+	t_Lang244 =	Brukerdefinert funksjon
+	t_Lang245 =	Syntaksfeil
+	t_Lang246 =	Linjenummer
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Åpent

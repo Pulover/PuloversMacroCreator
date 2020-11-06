@@ -806,6 +806,31 @@
 	t_Lang219 =	코드 자동 선택
 	t_Lang220 =	선
 	t_Lang221 =	맞춤 아이콘
+	t_Lang222 =	그림 물감
+	t_Lang223 =	폰트
+	t_Lang224 =	글꼴
+	t_Lang225 =	글꼴 크기
+	t_Lang226 =	선택
+	t_Lang227 =	선택한 라인
+	t_Lang228 =	라인 주석
+	t_Lang229 =	댓글 차단
+	t_Lang230 =	이스케이프 된 문자
+	t_Lang231 =	운영자
+	t_Lang232 =	구분자
+	t_Lang233 =	끈
+	t_Lang234 =	번호
+	t_Lang235 =	변하기 쉬운
+	t_Lang236 =	라벨 및 단축키
+	t_Lang237 =	제어 흐름
+	t_Lang238 =	명령
+	t_Lang239 =	내장 기능
+	t_Lang240 =	지령
+	t_Lang241 =	키와 버튼
+	t_Lang242 =	내장 변수
+	t_Lang243 =	예어
+	t_Lang244 =	사용자 정의 기능
+	t_Lang245 =	구문 오류
+	t_Lang246 =	줄 번호
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	열기

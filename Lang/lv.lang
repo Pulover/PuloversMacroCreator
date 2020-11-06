@@ -806,6 +806,31 @@
 	t_Lang219 =	Automātiski atlasīt kodu
 	t_Lang220 =	Līnija
 	t_Lang221 =	Pielāgota ikona
+	t_Lang222 =	Krāsas
+	t_Lang223 =	Fonts
+	t_Lang224 =	Fonta seja
+	t_Lang225 =	Fonta izmērs
+	t_Lang226 =	Atlase
+	t_Lang227 =	Atlasītā līnija
+	t_Lang228 =	Līnijas komentārs
+	t_Lang229 =	Bloķēt komentāru
+	t_Lang230 =	Aizbēdzis Char
+	t_Lang231 =	Operators
+	t_Lang232 =	Atdalītāji
+	t_Lang233 =	Stīga
+	t_Lang234 =	Skaits
+	t_Lang235 =	Mainīgs
+	t_Lang236 =	Label un Hotkey
+	t_Lang237 =	Kontroles plūsma
+	t_Lang238 =	Komanda
+	t_Lang239 =	Iebūvēta funkcija
+	t_Lang240 =	Direktīva
+	t_Lang241 =	Atslēga un poga
+	t_Lang242 =	Iebūvēts mainīgais
+	t_Lang243 =	Atslēgvārds
+	t_Lang244 =	Lietotāja definēta funkcija
+	t_Lang245 =	Sintakses kļūda
+	t_Lang246 =	Līnijas numurs
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Atvērts

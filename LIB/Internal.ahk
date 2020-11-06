@@ -1396,7 +1396,7 @@ RowCheckFunc()
 				break
 			}
 			If ((MustDefault) && (Type = cType48) && (!InStr(Details, " := ")))
-				DebugDefault%A_List% := true
+				DebugDefault[A_List] := true
 			If ((Type = cType48) && (InStr(Details, " := ")))
 				MustDefault := true
 		}

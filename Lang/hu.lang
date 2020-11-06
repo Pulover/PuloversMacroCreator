@@ -806,6 +806,31 @@
 	t_Lang219 =	Kód automatikus kiválasztása
 	t_Lang220 =	Vonal
 	t_Lang221 =	Egyéni ikonra
+	t_Lang222 =	Színek
+	t_Lang223 =	Betűtípus
+	t_Lang224 =	Betűtípus
+	t_Lang225 =	Betűméret
+	t_Lang226 =	Kiválasztás
+	t_Lang227 =	Kiválasztott sor
+	t_Lang228 =	Vonal megjegyzés
+	t_Lang229 =	Megjegyzés letiltása
+	t_Lang230 =	Megszökött Char
+	t_Lang231 =	Operátor
+	t_Lang232 =	Elhatárolók
+	t_Lang233 =	Húr
+	t_Lang234 =	Szám
+	t_Lang235 =	Változó
+	t_Lang236 =	Címke és gyorsbillentyű
+	t_Lang237 =	A vezérlés folyamata
+	t_Lang238 =	Parancs
+	t_Lang239 =	Beépített funkció
+	t_Lang240 =	Irányelv
+	t_Lang241 =	Kulcs és gomb
+	t_Lang242 =	Beépített változó
+	t_Lang243 =	Kulcsszó
+	t_Lang244 =	Felhasználó által definiált függvény
+	t_Lang245 =	Szintaktikai hiba
+	t_Lang246 =	Sorszám
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Nyitva

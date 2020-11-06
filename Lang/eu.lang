@@ -806,6 +806,31 @@
 	t_Lang219 =	Aukeratu kodea automatikoki
 	t_Lang220 =	Lerroa
 	t_Lang221 =	Ikono pertsonalizatua
+	t_Lang222 =	Koloreak
+	t_Lang223 =	Letra tipo
+	t_Lang224 =	Letra-tipoa
+	t_Lang225 =	Letra tamaina
+	t_Lang226 =	Aukeraketa
+	t_Lang227 =	Aukeratutako lerroa
+	t_Lang228 =	Lerro iruzkina
+	t_Lang229 =	Blokeatu iruzkina
+	t_Lang230 =	Ihes egindako Char
+	t_Lang231 =	Operadorea
+	t_Lang232 =	Mugatzaileak
+	t_Lang233 =	Soka
+	t_Lang234 =	Zenbakia
+	t_Lang235 =	Aldakorra
+	t_Lang236 =	Etiketa eta laster tekla
+	t_Lang237 =	Kontrol Fluxua
+	t_Lang238 =	Agindua
+	t_Lang239 =	Funtzio integratua
+	t_Lang240 =	Zuzentaraua
+	t_Lang241 =	Gakoa eta botoia
+	t_Lang242 =	Aldagai integratua
+	t_Lang243 =	Hitz gakoa
+	t_Lang244 =	Erabiltzaileak definitutako funtzioa
+	t_Lang245 =	Sintaxi errorea
+	t_Lang246 =	Lerro zenbakia
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Open

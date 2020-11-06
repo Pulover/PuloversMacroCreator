@@ -806,6 +806,31 @@
 	t_Lang219 =	自动选择代码
 	t_Lang220 =	线
 	t_Lang221 =	自定义图标
+	t_Lang222 =	色彩
+	t_Lang223 =	字形
+	t_Lang224 =	字型
+	t_Lang225 =	字体大小
+	t_Lang226 =	选拔
+	t_Lang227 =	选定线
+	t_Lang228 =	行注释
+	t_Lang229 =	阻止评论
+	t_Lang230 =	转义符
+	t_Lang231 =	操作员
+	t_Lang232 =	定界符
+	t_Lang233 =	串
+	t_Lang234 =	数
+	t_Lang235 =	变量
+	t_Lang236 =	标签和热键
+	t_Lang237 =	控制流程
+	t_Lang238 =	命令
+	t_Lang239 =	内建功能
+	t_Lang240 =	指示
+	t_Lang241 =	按键和按钮
+	t_Lang242 =	内置变量
+	t_Lang243 =	关键词
+	t_Lang244 =	用户自定义功能
+	t_Lang245 =	语法错误
+	t_Lang246 =	电话号码
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	打开

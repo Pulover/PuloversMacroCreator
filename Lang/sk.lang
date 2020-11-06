@@ -806,6 +806,31 @@
 	t_Lang219 =	Automaticky zvoliť kód
 	t_Lang220 =	Riadok
 	t_Lang221 =	Vlastná ikona
+	t_Lang222 =	Farby
+	t_Lang223 =	Písmo
+	t_Lang224 =	Tvár písma
+	t_Lang225 =	Veľkosť písma
+	t_Lang226 =	Výber
+	t_Lang227 =	Vybraný riadok
+	t_Lang228 =	Riadkový komentár
+	t_Lang229 =	Blokovať komentár
+	t_Lang230 =	Uniknutý Char
+	t_Lang231 =	Prevádzkovateľ
+	t_Lang232 =	Oddeľovače
+	t_Lang233 =	String
+	t_Lang234 =	Číslo
+	t_Lang235 =	Variabilné
+	t_Lang236 =	Štítok a klávesová skratka
+	t_Lang237 =	Tok kontroly
+	t_Lang238 =	Velenie
+	t_Lang239 =	Zabudovaná funkcia
+	t_Lang240 =	Smernice
+	t_Lang241 =	Kľúč a gombík
+	t_Lang242 =	Vstavaná premenná
+	t_Lang243 =	Kľúčové slovo
+	t_Lang244 =	Užívateľom definovaná funkcia
+	t_Lang245 =	Chyba syntaxe
+	t_Lang246 =	Poradové číslo
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Otvorené

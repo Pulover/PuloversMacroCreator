@@ -806,6 +806,31 @@
 	t_Lang219 =	Zgjidhni automatikisht kodin
 	t_Lang220 =	Linjë
 	t_Lang221 =	Ikona e personalizuar
+	t_Lang222 =	Ngjyrat
+	t_Lang223 =	Shkronja
+	t_Lang224 =	Fytyra e shkronjave
+	t_Lang225 =	Përmasa e germave
+	t_Lang226 =	Përzgjedhja
+	t_Lang227 =	Linja e zgjedhur
+	t_Lang228 =	Komenti i linjës
+	t_Lang229 =	Blloko komentin
+	t_Lang230 =	Char i ikur
+	t_Lang231 =	Operatori
+	t_Lang232 =	Ndarësit
+	t_Lang233 =	Varg
+	t_Lang234 =	Numrin
+	t_Lang235 =	Ndryshore
+	t_Lang236 =	Etiketa dhe Hotkey
+	t_Lang237 =	Rrjedha e Kontrollit
+	t_Lang238 =	Komanda
+	t_Lang239 =	Funksioni i integruar
+	t_Lang240 =	Direktiva
+	t_Lang241 =	Çelësi dhe Butoni
+	t_Lang242 =	Ndryshorja e integruar
+	t_Lang243 =	Fjalen
+	t_Lang244 =	Funksioni i përcaktuar nga përdoruesi
+	t_Lang245 =	Gabim sintakse
+	t_Lang246 =	Numri i linjes
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Hapur

@@ -806,6 +806,31 @@
 	t_Lang219 =	Seleccioneu automàticament el codi
 	t_Lang220 =	Línia
 	t_Lang221 =	Icona personalitzada
+	t_Lang222 =	Colors
+	t_Lang223 =	Font
+	t_Lang224 =	Cara de tipus de lletra
+	t_Lang225 =	Mida de la font
+	t_Lang226 =	Selecció
+	t_Lang227 =	Línia seleccionada
+	t_Lang228 =	Comentari de línia
+	t_Lang229 =	Bloqueja el comentari
+	t_Lang230 =	Char escapat
+	t_Lang231 =	Operador
+	t_Lang232 =	Delimitadors
+	t_Lang233 =	Corda
+	t_Lang234 =	Número
+	t_Lang235 =	Variable
+	t_Lang236 =	Etiqueta i tecla d'accés directe
+	t_Lang237 =	Flux de control
+	t_Lang238 =	Comandament
+	t_Lang239 =	Funció incorporada
+	t_Lang240 =	Directiva
+	t_Lang241 =	Tecla i botó
+	t_Lang242 =	Variable incorporada
+	t_Lang243 =	Paraula clau
+	t_Lang244 =	Funció definida per l'usuari
+	t_Lang245 =	Error de sintaxi
+	t_Lang246 =	Número de línia
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Obert

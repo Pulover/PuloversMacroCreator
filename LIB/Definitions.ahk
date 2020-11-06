@@ -1098,10 +1098,192 @@ Loop, Parse, MsgList, `n
 
 Sort, WM_Msgs, D|
 
+SysFontFaces := "
+(Join|
+Aharoni
+Aldhabi
+Andalus
+Angsana New
+AngsanaUPC
+Aparajita
+Arabic Typesetting
+Arial
+Arial Black
+Arial Nova
+Bahnschrift
+Batang
+BatangChe
+Browallia New
+BrowalliaUPC
+Calibri
+Calibri Light
+Cambria
+Cambria Math
+Candara
+Comic Sans MS
+Consolas
+Constantia
+Corbel
+Cordia New
+CordiaUPC
+Courier
+Courier New
+DaunPenh
+David
+DengXian
+DFKai-SB
+DilleniaUPC
+DokChampa
+Dotum
+DotumChe
+Ebrima
+Estrangelo Edessa
+EucrosiaUPC
+Euphemia
+FangSong
+Fixedsys
+Franklin Gothic Medium
+FrankRuehl
+FreesiaUPC
+Gabriola
+Gadugi
+Gautami
+Georgia
+Georgia Pro
+Gill Sans Nova
+Gisha
+Gulim
+GulimChe
+Gungsuh
+GungsuhChe
+HoloLens MDL2 Assets
+Impact
+IrisUPC
+Iskoola Pota
+JasmineUPC
+Javanese Text
+KaiTi
+Kalinga
+Kartika
+Khmer UI
+KodchiangUPC
+Kokila
+Lao UI
+Latha
+Leelawadee
+Leelawadee UI
+Levenim MT
+LilyUPC
+Lucida Console
+Lucida Sans
+Lucida Sans Unicode
+Malgun Gothic
+Mangal
+Marlett
+Meiryo
+Meiryo UI
+Microsoft Himalaya
+Microsoft JhengHei
+Microsoft JhengHei UI
+Microsoft New Tai Lue
+Microsoft PhagsPa
+Microsoft Sans Serif
+Microsoft Tai Le
+Microsoft Uighur
+Microsoft YaHei
+Microsoft YaHei UI
+Microsoft Yi Baiti
+MingLiU
+MingLiU_HKSCS
+MingLiU_HKSCS-ExtB
+MingLiU-ExtB
+Miriam
+Miriam Fixed
+Modern
+Mongolian Baiti
+MoolBoran
+MS Gothic
+MS Mincho
+MS PGothic
+MS PMincho
+MS Serif
+MS Sans Serif
+MS UI Gothic
+MV Boli
+Myanmar Text
+Narkisim
+Neue Haas Grotesk Text Pro
+Nirmala UI
+NSimSun
+Nyala
+Palatino Linotype
+Plantagenet Cherokee
+PMingLiU
+PMingLiU-ExtB
+Raavi
+Rockwell Nova
+Rod
+Roman
+Sakkal Majalla
+Sanskrit Text
+Script
+Segoe MDL2 Assets
+Segoe Print
+Segoe Script
+Segoe UI
+Segoe UI Emoji
+Segoe UI Historic
+Segoe UI Light
+Segoe UI Semibold
+Segoe UI Semilight
+Segoe UI Symbol
+Shonar Bangla
+Shruti
+SimHei
+Simplified Arabic
+Simplified Arabic Fixed
+SimSun
+SimSun-ExtB
+Sitka Banner
+Sitka Display
+Sitka Heading
+Sitka Small
+Sitka Subheading
+Sitka Text
+Small Fonts
+Sylfaen
+Symbol
+System
+Tahoma
+Terminal
+Times New Roman
+Traditional Arabic
+Trebuchet MS
+Tunga
+UD Digi Kyokasho N-B
+UD Digi Kyokasho NK-B
+UD Digi Kyokasho NK-R
+UD Digi Kyokasho NP-B
+UD Digi Kyokasho NP-R
+UD Digi Kyokasho N-R
+Urdu Typesetting
+Utsaah
+Vani
+Verdana
+Verdana Pro
+Vijaya
+Vrinda
+Webdings
+Wingdings
+Yu Gothic
+Yu Gothic UI
+Yu Mincho
+)"
+
 DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang112 ":41", "Open=" w_Lang041 ":42(Enabled Dropdown)", "Save=" w_Lang042 ":59", "SaveAs=" w_Lang043 ":86"
 													, "", "Export=" w_Lang044 ":16", "Preview=" w_Lang045 ":49", "Options=" w_Lang046 ":43"]
 			, RecPlayOpt: "Enabled AutoSize", RecPlay: ["Record=" w_Lang047 ":54(Enabled AutoSize Dropdown)"
-																, "", "PlayStart=" w_Lang048 ":46(Enabled AutoSize Dropdown)", "TestRun=" w_Lang049 ":48", "RunTimer=" w_Lang050 ":71"]
+														, "", "PlayStart=" w_Lang048 ":46(Enabled AutoSize Dropdown)", "TestRun=" w_Lang049 ":48", "RunTimer=" w_Lang050 ":71"]
 			, CommandOpt: "Enabled AutoSize", Command: ["Mouse=" w_Lang051 ":38", "Text=" w_Lang052 ":70", "ControlCmd=" w_Lang054 ":7"
 														, "", "Sleep=" w_Lang055 ":45", "MsgBox=" w_Lang056 ":11", "KeyWait=" w_Lang057 ":77"
 														, "", "Window=" w_Lang058 ":79", "Image=" w_Lang059 ":27", "Run=" w_Lang060 ":58"
@@ -1125,10 +1307,10 @@ DefaultBar := {FileOpt: "Enabled AutoSize", File: ["New=" w_Lang112 ":41", "Open
 														, "", "Import=" w_Lang076 ":28", "SaveCurrentList=" w_Lang077 ":67"
 														, "", "UserFunction=" w_Lang104 ":35", "FuncParameter=" w_Lang105 ":107", "FuncReturn=" w_Lang106 ":105"]}
 FixedBar :=	{PrevOpt: "Enabled AutoSize", Preview: ["PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)", "GoToLine=" t_Lang218 ":22(Enabled Dropdown)"
-														, "", "TabIndent=" t_Lang011 ":85(Enabled Dropdown)", "ConvertBreaks=" t_Lang190 ":76", "CommentUnchecked=" w_Lang108 ":5(Enabled Dropdown)", "TextWrap=" t_Lang052 ":96", "PrevFontShow=" v_Lang011 ":70(Enabled Dropdown)"
+														, "", "TabIndent=" t_Lang011 ":85(Enabled Dropdown)", "ConvertBreaks=" t_Lang190 ":76", "CommentUnchecked=" w_Lang108 ":5(Enabled Dropdown)", "TextWrap=" t_Lang052 ":96", "PrevFontShow=" v_Lang011 ":70(Enabled Dropdown)", "PrevOptions=" w_Lang091 ":43"
 														, "", "EditScript=" t_Lang138 ":109", "PrevDock=" t_Lang124 ":106", "Preview=" c_Lang022 ":108"]
 			, PreviewF: ["PrevCopy=" c_Lang023 ":8", "PrevRefreshButton=" t_Lang014 ":90(Enabled Dropdown)", "GoToLine=" t_Lang218 ":22(Enabled Dropdown)"
-														, "", "TabIndent=" t_Lang011 ":85(Enabled Dropdown)", "ConvertBreaks=" t_Lang190 ":76", "CommentUnchecked=" w_Lang108 ":5(Enabled Dropdown)", "TextWrap=" t_Lang052 ":96", "PrevFontShow=" v_Lang011 ":70(Enabled Dropdown)", "OnTop=" t_Lang016 ":81"
+														, "", "TabIndent=" t_Lang011 ":85(Enabled Dropdown)", "ConvertBreaks=" t_Lang190 ":76", "CommentUnchecked=" w_Lang108 ":5(Enabled Dropdown)", "TextWrap=" t_Lang052 ":96", "PrevFontShow=" v_Lang011 ":70(Enabled Dropdown)", "PrevOptions=" w_Lang091 ":43", "OnTop=" t_Lang016 ":81"
 														, "", "EditScript=" t_Lang138 ":109", "PrevDock=" t_Lang125 ":93"]
 			, TextOpt: "Enabled AutoSize", Text: ["OpenT=" t_Lang126 ":42", "SaveT=" t_Lang127 ":59"
 														, "", "CutT=" t_Lang128 ":9", "CopyT=" t_Lang129 ":8", "PasteT=" t_Lang130 ":44"

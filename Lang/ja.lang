@@ -806,6 +806,31 @@
 	t_Lang219 =	コードを自動的に選択
 	t_Lang220 =	ライン
 	t_Lang221 =	カスタムアイコン
+	t_Lang222 =	色
+	t_Lang223 =	フォント
+	t_Lang224 =	フォントフェイス
+	t_Lang225 =	フォントサイズ
+	t_Lang226 =	選択
+	t_Lang227 =	選択した行
+	t_Lang228 =	行コメント
+	t_Lang229 =	コメントをブロックする
+	t_Lang230 =	エスケープ文字
+	t_Lang231 =	オペレーター
+	t_Lang232 =	区切り文字
+	t_Lang233 =	ストリング
+	t_Lang234 =	数
+	t_Lang235 =	変数
+	t_Lang236 =	ラベルとホットキー
+	t_Lang237 =	制御の流れ
+	t_Lang238 =	コマンド
+	t_Lang239 =	内蔵機能
+	t_Lang240 =	指令
+	t_Lang241 =	キーとボタン
+	t_Lang242 =	組み込み変数
+	t_Lang243 =	キーワード
+	t_Lang244 =	ユーザー定義関数
+	t_Lang245 =	構文エラー
+	t_Lang246 =	行番号
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	開く

@@ -806,6 +806,31 @@
 	t_Lang219 =	Selectați automat codul
 	t_Lang220 =	Linia
 	t_Lang221 =	Pictogramă personalizată
+	t_Lang222 =	Culori
+	t_Lang223 =	Font
+	t_Lang224 =	Fața fontului
+	t_Lang225 =	Marimea fontului
+	t_Lang226 =	Selecţie
+	t_Lang227 =	Linia selectată
+	t_Lang228 =	Comentariu de linie
+	t_Lang229 =	Blochează comentariul
+	t_Lang230 =	Char scăpat
+	t_Lang231 =	Operator
+	t_Lang232 =	Delimitatori
+	t_Lang233 =	Şir
+	t_Lang234 =	Număr
+	t_Lang235 =	Variabil
+	t_Lang236 =	Etichetă și tastă rapidă
+	t_Lang237 =	Fluxul de control
+	t_Lang238 =	Comanda
+	t_Lang239 =	Funcție încorporată
+	t_Lang240 =	Directivă
+	t_Lang241 =	Tasta și butonul
+	t_Lang242 =	Variabilă încorporată
+	t_Lang243 =	Cuvânt cheie
+	t_Lang244 =	Funcție definită de utilizator
+	t_Lang245 =	Eroare de sintaxă
+	t_Lang246 =	Numărul de linie
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Deschis

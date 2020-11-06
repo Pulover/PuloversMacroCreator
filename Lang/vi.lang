@@ -806,6 +806,31 @@
 	t_Lang219 =	Tự động chọn mã
 	t_Lang220 =	Hàng
 	t_Lang221 =	Biểu tượng tùy chỉnh
+	t_Lang222 =	Màu sắc
+	t_Lang223 =	Nét chữ
+	t_Lang224 =	Mặt chữ
+	t_Lang225 =	Cỡ chữ
+	t_Lang226 =	Lựa chọn
+	t_Lang227 =	Dòng đã chọn
+	t_Lang228 =	Bình luận dòng
+	t_Lang229 =	Chặn bình luận
+	t_Lang230 =	Char đã thoát
+	t_Lang231 =	Nhà điều hành
+	t_Lang232 =	Dấu phân cách
+	t_Lang233 =	Chuỗi
+	t_Lang234 =	Con số
+	t_Lang235 =	Biến đổi
+	t_Lang236 =	Nhãn và phím nóng
+	t_Lang237 =	Luồng kiểm soát
+	t_Lang238 =	Chỉ huy
+	t_Lang239 =	Chức năng tích hợp
+	t_Lang240 =	Chỉ thị
+	t_Lang241 =	Phím và Nút
+	t_Lang242 =	Biến tích hợp
+	t_Lang243 =	Từ khóa
+	t_Lang244 =	Người dùng xác định chức năng
+	t_Lang245 =	Lỗi cú pháp
+	t_Lang246 =	Số dòng
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Mở

@@ -806,6 +806,31 @@
 	t_Lang219 =	Seleccionar código automáticamente
 	t_Lang220 =	Línea
 	t_Lang221 =	Icono personalizado
+	t_Lang222 =	Colores
+	t_Lang223 =	Fuente
+	t_Lang224 =	Perfil delantero
+	t_Lang225 =	Tamaño de fuente
+	t_Lang226 =	Selección
+	t_Lang227 =	Línea seleccionada
+	t_Lang228 =	Comentario de línea
+	t_Lang229 =	Bloquear comentario
+	t_Lang230 =	Char escapado
+	t_Lang231 =	Operador
+	t_Lang232 =	Delimitadores
+	t_Lang233 =	Cuerda
+	t_Lang234 =	Número
+	t_Lang235 =	Variable
+	t_Lang236 =	Etiqueta y tecla de acceso rápido
+	t_Lang237 =	Flujo de control
+	t_Lang238 =	Mando
+	t_Lang239 =	Función incorporada
+	t_Lang240 =	Directiva
+	t_Lang241 =	Llave y botón
+	t_Lang242 =	Variable incorporada
+	t_Lang243 =	Palabra clave
+	t_Lang244 =	Función definida por el usuario
+	t_Lang245 =	Error de sintaxis
+	t_Lang246 =	Número de línea
 		
 ; 17. Messages & Dialogs		
 	d_Lang001 =	Abrir
