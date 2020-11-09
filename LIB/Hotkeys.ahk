@@ -1,8 +1,9 @@
 ﻿#If ListFocus && !HotkeyCtrlHasFocus()
 && WinActive("ahk_id" PMCWinID) && !Capt
 
-Delete::GoSub, h_Del
-NumpadDel::GoSub, h_Numdel
+Delete::
+NumpadDel::
+GoSub, h_Del
 MButton & WheelUp::
 ^WheelUp::
 ^PgUp::

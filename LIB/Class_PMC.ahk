@@ -50,13 +50,13 @@
 		return ID
 	}
 
-	Import(SelectedFile, DL := "`n", New := "1")
+	Import(SelectedFile, DL := "`n", IsNew := "1")
 	{
 		local FoundC, Labels, TabText, AutoRefreshState
 		
 		Gui, chMacro:Submit, NoHide
 		ColOrder := LVOrder_Get(11, ListID%A_List%)
-		If (New)
+		If (IsNew)
 		{
 			GoSub, DelLists
 			GuiControl, chMacro:Choose, A_List, 1

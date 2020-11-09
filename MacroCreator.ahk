@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.3.4
+; Version: 5.3.5
 ; Release Date: November, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -77,7 +77,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.3.4
+;@Ahk2Exe-SetVersion 5.3.5
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.3.4", ReleaseDate := "November, 2020"
+CurrentVersion := "5.3.5", ReleaseDate := "November, 2020"
 
 ;##### Ini File Read #####
 
@@ -6158,7 +6158,7 @@ Gui, 3:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1%_x%CmdTab2%_x%CmdTab3
 Gui, 3:Add, GroupBox, Section xm ym W450 H125
 Gui, 3:Add, Text, -Wrap R1 ys+20 xs+10 W180 Right, %c_Lang050%:
 Gui, 3:Add, Edit, yp-2 x+10 W100 vDelayC
-Gui, 3:Add, UpDown, vDelayX 0x80 Range0-9999999, 300
+Gui, 3:Add, UpDown, vDelayX 0x80 Range0-2147483647, 300
 Gui, 3:Add, Radio, -Wrap Checked y+12 W170 vMsc R1, %c_Lang018%
 Gui, 3:Add, Radio, -Wrap W170 vSec R1, %c_Lang019%
 Gui, 3:Add, Radio, -Wrap W170 vMin R1, %c_Lang154%
@@ -6166,10 +6166,10 @@ Gui, 3:Add, GroupBox, Section xs y+30 W450 H130
 Gui, 3:Add, Checkbox, -Wrap R1 ys+20 xs+10 W100 vRandom gRandomSleep, %c_Lang180%
 Gui, 3:Add, Text, Section -Wrap yp x+5 W75 R1 Right, %c_Lang181%:
 Gui, 3:Add, Edit, yp-2 x+10 W100 R1 vRandMin Disabled
-Gui, 3:Add, UpDown, vRandMinimum 0x80 Range0-100000, 0
+Gui, 3:Add, UpDown, vRandMinimum 0x80 Range0-2147483647, 0
 Gui, 3:Add, Text, -Wrap y+10 xs W75 R1 Right, %c_Lang182%:
 Gui, 3:Add, Edit, yp-2 x+10 W100 R1 vRandMax Disabled
-Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-100000, 500
+Gui, 3:Add, UpDown, vRandMaximum 0x80 Range0-2147483647, 500
 Gui, 3:Add, Checkbox, -Wrap y+20 xm+10 W400 vNoRandom gNoRandom, %c_Lang183%
 Gui, 3:Tab, 2
 ; MsgBox
@@ -8498,7 +8498,7 @@ Loop, %TabCount%
 		}
 	}
 }
-Statement := "
+Statements := "
 (Join$
 " c_Lang190 "$
 " c_Lang191 "
@@ -8522,7 +8522,7 @@ Gui, 1:+Disabled
 Gui, 21:Add, Tab2, W450 H0 vTabControl AltSubmit, CmdTab1$CmdTab2$CmdTab3
 ; Statements
 Gui, 21:Add, GroupBox, Section xm ym W450 H240
-Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit, %Statement%
+Gui, 21:Add, DDL, ys+15 xs+10 W190 vStatement gStatement AltSubmit, %Statements%
 Gui, 21:Add, Text, yp x+5 h25 0x11
 Gui, 21:Add, DDL, yp x+0 W105 vIfMsgB AltSubmit Disabled, %c_Lang168%$$%c_Lang169%$%c_Lang170%$%c_Lang171%$%c_Lang172%$%c_Lang173%$%c_Lang174%$%c_Lang175%$%c_Lang176%$%c_Lang177%
 Gui, 21:Add, Text, yp x+5 h25 0x11
@@ -8989,15 +8989,18 @@ Gui, 21:Submit, NoHide
 GuiControl, 21:, CoOper, % IfOper < 10 ? Co_Oper_0%IfOper% : Co_Oper_%IfOper%
 GuiControl, 21:-AltSubmit, IfOper
 Gui, 21:Submit, NoHide
-If IfOper in =,==,!=,>,<,>=,<=
+If (IfList%Statement% = If14)
 {
-	GuiControl, 21:Hide, VarTxt
-	GuiControl, 21:Show, ExprLink1
-}
-Else
-{
-	GuiControl, 21:Hide, ExprLink1
-	GuiControl, 21:Show, VarTxt
+	If IfOper in =,==,!=,>,<,>=,<=
+	{
+		GuiControl, 21:Hide, VarTxt
+		GuiControl, 21:Show, ExprLink1
+	}
+	Else
+	{
+		GuiControl, 21:Hide, ExprLink1
+		GuiControl, 21:Show, VarTxt
+	}
 }
 return
 
@@ -11815,7 +11818,7 @@ If ((A_GuiEvent == "I") || (A_GuiEvent == "K"))
 	}
 	If (InStr(ErrorLevel, "c"))
 	{
-		HistCheck(A_List)
+		HistCheck(A_List) ; Programmatically pasting rows causes this event to be triggered!
 		If (AutoRefresh = 1)
 			GoSub, PrevRefresh
 	}
@@ -12118,12 +12121,19 @@ Else
 	LVManager[A_List].Delete()
 	AutoRefresh := PrevState
 }
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
+Critical, Off
 GoSub, RowCheck
-GoSub, b_Start
+GoSub, b_Enable
 GuiControl, chMacro:+gInputList, InputList%A_List%
 If (AutoRefresh)
 	GoSub, PrevRefresh
+SetTimer, SelectFix, -1
+return
+
+SelectFix:
+Gui, chMacro:Default
+Gui, chMacro:Submit, NoHide
+LV_Modify(LV_GetNext(0, "Focused"), "Select")
 return
 
 MoveCopy:
@@ -12218,6 +12228,8 @@ Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Font, s%MacroFontSize%
 Gui, chMacro:Submit, NoHide
+If (TabCount = 256)
+	return
 Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 ColOrder := LVOrder_Get(11, ListID%A_List%), AllTabs := "", TabName := ""
 Loop, %TabCount%
@@ -12239,6 +12251,7 @@ GoSub, chMacroGuiSize
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, 28:+Range1-%TabCount%, OSHK
+SavePrompt(true, A_ThisLabel)
 
 TabSel:
 GoSub, SaveData
@@ -12488,7 +12501,6 @@ Gui, chMacro:Default
 Loop, %TabCount%
 {
 	Gui, chMacro:ListView, InputList%A_Index%
-	; LVManager.SetHwnd(ListID%A_Index%)
 	LV_Delete()
 	LVManager[A_Index].RemoveAllGroups(c_Lang061)
 	LVManager[A_Index].ClearHistory()
@@ -12502,6 +12514,10 @@ Menu, CopyTo, Check, % CopyMenuLabels[1]
 Gosub, ResetHotkeys
 Gosub, ClearTimers
 UserDefFunctions := SyHi_UserDef " ", SetUserWords(UserDefFunctions)
+DebugCheckError := False
+DebugCheckLoop := []
+DebugCheckIf := []
+DebugDefault := []
 return
 
 SelectAll:
@@ -13111,6 +13127,7 @@ If (InStr(Macro, "()"))
 {
 	GuiControl, 33:Disable, Macro
 	GuiControl, 33:Disable, AutoKey
+	GuiControl, 33:Disable, AutoKeyL
 	GuiControl, 33:Disable, ManKey
 	GuiControl, 33:Disable, TE
 	GuiControl, 33:Disable, TimesX
@@ -13232,6 +13249,8 @@ return
 
 Edit:
 GoSub, ClearPars
+Gui, chMacro:Default
+Gui, chMacro:Listview, InputList%A_List%
 LV_GetTexts(RowNumber, Action, Details, TimesX, DelayX, Type, Target, Window, Comment)
 If (Action = "[LoopEnd]")
 	return
@@ -14595,23 +14614,9 @@ return
 h_Del:
 Gui, chMacro:Default
 Gui, chMacro:ListView, InputList%A_List%
-PrevState := AutoRefresh
-AutoRefresh := 0
-LVManager[A_List].Delete()
-AutoRefresh := PrevState
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
-GoSub, RowCheck
-GoSub, b_Start
-return
-
-h_NumDel:
-PrevState := AutoRefresh
-AutoRefresh := 0
-LVManager[A_List].Delete()
-AutoRefresh := PrevState
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
-GoSub, RowCheck
-GoSub, b_Start
+RowSelection := LV_GetCount("Selected")
+If (RowSelection > 0)
+	GoSub, Remove
 return
 
 ClearPars:
@@ -15379,17 +15384,17 @@ DebugCheckError := false
 Loop, %TabCount%
 {
 	ListCount += ListCount%A_Index%
-	If (DebugCheckLoop%A_Index%)
+	If (DebugCheckLoop[A_Index])
 	{
 		DebugCheckError := true
 		MsgBox, 16, %d_Lang007%, % d_Lang085 A_Index " (" CopyMenuLabels[A_Index] ")"
 	}
-	Else If (DebugCheckIf%A_Index%)
+	Else If (DebugCheckIf[A_Index])
 	{
 		DebugCheckError := true
 		MsgBox, 16, %d_Lang007%, % d_Lang086 A_Index " (" CopyMenuLabels[A_Index] ")"
 	}
-	If (DebugDefault%A_Index%)
+	If (DebugDefault[A_Index])
 	{
 		DebugCheckError := true
 		MsgBox, 16, %d_Lang007%, % CopyMenuLabels[A_Index] "`n`n" d_Lang098
@@ -15456,11 +15461,11 @@ GuiControl, chMacro:-Redraw, InputList%A_List%
 ListCount%A_List% := LV_GetCount()
 IdxLv := "", ActLv := "", IsInIf := 0, IsInLoop := 0, RowColorLoop := 0, RowColorIf := 0
 IsUserFunc := InStr(CopyMenuLabels[A_List], "()")
-BadCmd := false, BadPos := false, FuncLn := false, MustDefault := false, DebugDefault%A_List% := false
+BadCmd := false, BadPos := false, FuncLn := false, MustDefault := false, DebugDefault[A_List] := false
 HistData := RowCheckFunc()
 GuiControl, chMacro:+Redraw, InputList%A_List%
-DebugCheckLoop%A_List% := RowColorLoop
-DebugCheckIf%A_List% := RowColorIf
+DebugCheckLoop[A_List] := RowColorLoop
+DebugCheckIf[A_List] := RowColorIf
 If (BadPos)
 	SetTimer, RowCheck, -100, 1
 If (BadCmd)

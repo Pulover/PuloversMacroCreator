@@ -217,6 +217,15 @@ Eval($x, _CustomVars := "", _Init := true)
 			}
 		}
 		
+		; Check for {} object assignment
+		If (RegExMatch($z[$i], "\{\s*\}", _Match))
+		{
+			$y := Object()
+		,	ObjName := "_emptyObj"
+		,	_Objects[ObjName] := $y
+		,	$z[$i] := StrReplace($z[$i], _Match, """<~#" ObjName "#~>""")
+		}
+		
 		; Check for Functions
 		While (RegExMatch($z[$i], "s)([\w%]+)\((.*?)\)", _Match))
 		{
@@ -291,10 +300,20 @@ Eval($x, _CustomVars := "", _Init := true)
 		
 		; ExprEval() cannot parse Unicode strings, so the "real" strings are "hidden" from ExprCompile() and restored later
 		$z[$i] := RestoreElements($z[$i], _Elements)
-	,	__Elements := {}
-		While (RegExMatch($z[$i], "sU)""(.*)""", _String))
-			__Elements["&_String" A_Index "_&"] := _String1
-		,	$z[$i] := RegExReplace($z[$i], "sU)"".*""", "&_String" A_Index "_&",, 1)
+	,	__Elements := {}, _Pos := 1
+		While (RegExMatch($z[$i], "sU)""(.*)""", _String, _Pos))
+		{
+			If (RegExMatch($z[$i], "sU)^""({.*})""$", _Brace))
+				__Elements["&_String" A_Index "_&"] := _Brace1
+			,	$z[$i] := RegExReplace($z[$i], "sU)^""{.*}""$", "&_String" A_Index "_&",, 1)
+			Else If (RegExMatch($z[$i], "sU)^""([.*])""$", _Bracket))
+				__Elements["&_String" A_Index "_&"] := _Bracket1
+			,	$z[$i] := RegExReplace($z[$i], "sU)^""[.*]""$", "&_String" A_Index "_&",, 1)
+			Else If (!RegExMatch(_String1, "^<~#.*#~>$"))
+				__Elements["&_String" A_Index "_&"] := _String1
+			,	$z[$i] := RegExReplace($z[$i], "sU)"".*""", "&_String" A_Index "_&",, 1)
+			_Pos += StrLen(_String1)
+		}
 		$z[$i] := RegExReplace($z[$i], "&_String\d+_&", """$0""")
 		
 		; Add concatenate operator after strings where necessary
@@ -307,7 +326,7 @@ Eval($x, _CustomVars := "", _Init := true)
 		
 		; Evaluate right hand of assignments
 		AssignParse($z[$i], _InVar, _OnOper, _OutValue)
-		If ((!InStr(_OutValue, "&_String")) && (_InVar && _OnOper && _OutValue))
+		If ((!InStr(_OutValue, "&_String")) && (!RegExMatch(_OutValue, "^""<~#.*#~>""$")) && (_InVar && _OnOper && _OutValue))
 			$z[$i] := _InVar . _OnOper . Eval(_OutValue, _CustomVars, false)[1]
 
 		; Evaluate parsed expression with ExprEval()
@@ -323,7 +342,7 @@ Eval($x, _CustomVars := "", _Init := true)
 				$Result[_i] := _Objects[$pd1]
 		}
 		
-		$z[$i] := StrJoin($Result,, false, _Init)
+		$z[$i] := StrJoin($Result,, false, _Init, _Init)
 	}
 	
 	; If returning to the original call, remove missing expressions from the array
@@ -336,7 +355,7 @@ Eval($x, _CustomVars := "", _Init := true)
 				$z.Delete(_i)
 		}
 	}
-
+	
 	return $z
 }
 
@@ -444,7 +463,7 @@ AssignParse(String, ByRef VarName, ByRef Oper, ByRef VarValue)
 ,	VarName := Trim(Out1), Oper := Out2, VarValue := Trim(Out4)
 }
 
-StrJoin(InputArray, JChr := "", Quote := false, Init := true)
+StrJoin(InputArray, JChr := "", Quote := false, Init := true, Unquote := false)
 {
 	For i, v in InputArray
 	{
@@ -456,6 +475,9 @@ StrJoin(InputArray, JChr := "", Quote := false, Init := true)
 				v := RegExReplace(v, """{1,2}", """""")
 			If (Quote)
 				v := """" v """"
+			If (Unquote)
+				While (RegExMatch(v, """{2}"))
+					v := RegExReplace(v, """{2}", """")
 		}
 		JoinedStr .= v . JChr
 	}
