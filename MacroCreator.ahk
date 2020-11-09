@@ -2201,7 +2201,7 @@ IfExist %ThisListFile%
 PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_List]
 . "|" o_ManKey[A_List] "|" o_TimesG[A_List]
 . "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" CopyMenuLabels[A_List] "`n"
-IfContext := "Context=" o_MacroContext[A_List].Condition "|" o_MacroContext[A_List].Context "|" IfDirectContext "|" IfDirectWindow "`n"
+IfContext := "Context=" o_MacroContext[A_List].Condition "|" o_MacroContext[A_List].Context "`n"
 TabGroups := "Groups=" LVManager[A_List].GetGroups() "`n"
 LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_List).Text . "`n"
 FileAppend, %LV_Data%, %ThisListFile%
@@ -2886,6 +2886,7 @@ Header := Script_Header()
 If (Ex_UV = 1)
 	Header .= UserVarsList "`n"
 RowNumber := 0, AutoKey := "", IncList := "", ProgRatio := 100 / LV_GetCount(), HasEmailFunc := {}
+PmcCode := "[PMC Globals]|" IfDirectContext "|" IfDirectWindow "|" ExpIcon "`n"
 Loop, % LV_GetCount()
 {
 	GuiControl, 14:, ExpProgress, +%ProgRatio%
@@ -2915,7 +2916,7 @@ Loop, % LV_GetCount()
 	PMCSet := "[PMC Code v" CurrentVersion "]|" Ex_AutoKey
 	. "|" o_ManKey[Ex_Idx] "|" Ex_TimesX
 	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" CopyMenuLabels[Ex_Idx] "`n"
-	IfContext := "Context=" o_MacroContext[Ex_Idx].Condition "|" o_MacroContext[Ex_Idx].Context "|" IfDirectContext "|" IfDirectWindow "`n"
+	IfContext := "Context=" o_MacroContext[Ex_Idx].Condition "|" o_MacroContext[Ex_Idx].Context "`n"
 	TabGroups := "Groups=" LVManager[Ex_Idx].GetGroups() "`n"
 	PmcCode .= PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" Ex_Idx).Text . "`n"
 	If (Ex_IN)

@@ -1464,12 +1464,13 @@ SaveProject(FileName)
 {
 	local All_Data
 
+	All_Data := "[PMC Globals]|" IfDirectContext "|" IfDirectWindow "|" ExpIcon "`n"
 	Loop, %TabCount%
 	{
 		PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
 		. "|" o_ManKey[A_Index] "|" o_TimesG[A_Index]
 		. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" CopyMenuLabels[A_Index] "`n"
-		IfContext := "Context=" o_MacroContext[A_Index].Condition "|" o_MacroContext[A_Index].Context "|" IfDirectContext "|" IfDirectWindow "`n"
+		IfContext := "Context=" o_MacroContext[A_Index].Condition "|" o_MacroContext[A_Index].Context "`n"
 		TabGroups := "Groups=" LVManager[A_Index].GetGroups() "`n"
 		LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
 		All_Data .= LV_Data

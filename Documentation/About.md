@@ -40,6 +40,7 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 ## Version 5.3.5
 * Updated max value for *Pause (Sleep)* command.
+* Project's exe custom icon path is now saved to PMC file.
 * Fixed bugs with objects and strings inside objects.
 * Fixed small bugs.
 
