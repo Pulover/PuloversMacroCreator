@@ -919,7 +919,6 @@ HistCheck(ListID := "")
 {
 	global
 
-	OutputDebug, % "HistCheck"
 	If (Record || Capt)
 		return
 

@@ -9086,7 +9086,6 @@ GuiControl, 21:-AltSubmit, IfOper
 Gui, 21:Submit, NoHide
 If (IfList%Statement% = If14)
 {
-	OutputDebug, % IfOper
 	If IfOper in =,==,!=,>,<,>=,<=
 	{
 		GuiControl, 21:Hide, VarTxt
@@ -12042,6 +12041,8 @@ Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
 If (RowNumber)
 	LV_Modify(0, "-Select"), LV_Modify(RowNumber, "Check" chk " Select Vis")
+Else If (!NodeID)
+	LV_Modify(0, "-Select")
 If (A_List != c_List)
 	GoSub, TabSel
 Gui, tvMacro:Default
@@ -15955,7 +15956,8 @@ If (MacroView = "Tree")
 	Gui, chMacro:Default
 	Gui, chMacro:Submit, NoHide
 	Gui, chMacro:ListView, InputList%A_List%
-	TVData := PMC.TVLoad(ShowGroups)
+	SelectedRow := LV_GetNext(), SelectedRow := SelectedRow ? SelectedRow : LV_GetCount()
+	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
 	GuiControl, tvMacro:Focus, InputTree
 }
 return
