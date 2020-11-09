@@ -4,6 +4,7 @@
 Delete::
 NumpadDel::
 GoSub, h_Del
+return
 MButton & WheelUp::
 ^WheelUp::
 ^PgUp::

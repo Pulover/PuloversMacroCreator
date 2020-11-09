@@ -12121,19 +12121,12 @@ Else
 	LVManager[A_List].Delete()
 	AutoRefresh := PrevState
 }
-Critical, Off
+LV_Modify(LV_GetNext(0, "Focused"), "Select")
 GoSub, RowCheck
-GoSub, b_Enable
+GoSub, b_Start
 GuiControl, chMacro:+gInputList, InputList%A_List%
 If (AutoRefresh)
 	GoSub, PrevRefresh
-SetTimer, SelectFix, -1
-return
-
-SelectFix:
-Gui, chMacro:Default
-Gui, chMacro:Submit, NoHide
-LV_Modify(LV_GetNext(0, "Focused"), "Select")
 return
 
 MoveCopy:
