@@ -1417,7 +1417,7 @@ RbMacro.InsertBand(hPrevCh, 0, "", 32, "", A_ScreenWidth/3, 0, "", "", 0)
 RbMacro.SetMaxRows(1)
 (MacroLayout = "ERROR") ? "" : RbMacro.SetLayout(MacroLayout)
 (MacroView = "List") ? RbMacro.ModifyBand(1, "Style", "Hidden") : RbMacro.ModifyBand(2, "Style", "Hidden")
-!ShowPrev ? RbMacro.ModifyBand(3, "Style", "Hidden")
+!ShowPrev ? RbMacro.ModifyBand(3, "Style", "Hidden") : ""
 TB_Edit(TbEdit, "SwitchView",,, (MacroView = "List") ? w_Lang116 : w_Lang117, (MacroView = "List") ? 114 : 115)
 If (MacroView = "Tree")
 	TVData := PMC.TVLoad(ShowGroups)
@@ -1553,7 +1553,6 @@ sciPrevF.SetKeywords(0x6, SyHi_Keyw)
 sciPrevF.SetKeywords(0x7, SyHi_UserDef)
 
 sciPrevF.SetText("", Preview)
-ControlSetText,, %Preview%, ahk_id %hSciPrevF%
 sciPrevF.SetReadOnly(0x1)
 
 GoSub, PrevColor
@@ -2221,7 +2220,7 @@ IfExist %ThisListFile%
 PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_List]
 . "|" o_ManKey[A_List] "|" o_TimesG[A_List]
 . "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" CopyMenuLabels[A_List] "`n"
-IfContext := "Context=" o_MacroContext[A_List].Condition "|" o_MacroContext[A_List].Context "|" IfDirectContext "|" IfDirectWindow "`n"
+IfContext := "Context=" o_MacroContext[A_List].Condition "|" o_MacroContext[A_List].Context "`n"
 TabGroups := "Groups=" LVManager[A_List].GetGroups() "`n"
 LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_List).Text . "`n"
 FileAppend, %LV_Data%, %ThisListFile%
@@ -2906,6 +2905,7 @@ Header := Script_Header()
 If (Ex_UV = 1)
 	Header .= UserVarsList "`n"
 RowNumber := 0, AutoKey := "", IncList := "", ProgRatio := 100 / LV_GetCount(), HasEmailFunc := {}
+PmcCode := "[PMC Globals]|" IfDirectContext "|" IfDirectWindow "|" ExpIcon "`n"
 Loop, % LV_GetCount()
 {
 	GuiControl, 14:, ExpProgress, +%ProgRatio%
@@ -2935,7 +2935,7 @@ Loop, % LV_GetCount()
 	PMCSet := "[PMC Code v" CurrentVersion "]|" Ex_AutoKey
 	. "|" o_ManKey[Ex_Idx] "|" Ex_TimesX
 	. "|" CoordMouse "," TitleMatch "," TitleSpeed "," HiddenWin "," HiddenText "," KeyMode "," KeyDelay "," MouseDelay "," ControlDelay "|" OnFinishCode "|" CopyMenuLabels[Ex_Idx] "`n"
-	IfContext := "Context=" o_MacroContext[Ex_Idx].Condition "|" o_MacroContext[Ex_Idx].Context "|" IfDirectContext "|" IfDirectWindow "`n"
+	IfContext := "Context=" o_MacroContext[Ex_Idx].Condition "|" o_MacroContext[Ex_Idx].Context "`n"
 	TabGroups := "Groups=" LVManager[Ex_Idx].GetGroups() "`n"
 	PmcCode .= PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" Ex_Idx).Text . "`n"
 	If (Ex_IN)
@@ -7669,7 +7669,7 @@ Gui, 19:Add, Edit, y+5 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 hwndhSearchImg vSearchImg gSearchImg, ...
 Gui, 19:Add, Text, Section -Wrap R1 y+5 xs+10 W163 Right vIfFoundT, %c_Lang067%:
 Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click|Play Sound
-Gui, 19:Add, Text, -Wrap R1 y+5 xs+10 W163 Right vIfNotFoundT, %c_Lang068%:
+Gui, 19:Add, Text, -Wrap R1 y+5 xs W163 Right vIfNotFoundT, %c_Lang068%:
 Gui, 19:Add, DDL, yp-2 x+10 W80 vIfNotFound, Continue||Break|Stop|Prompt|Play Sound
 Gui, 19:Add, CheckBox, Checked -Wrap y+0 xs+10 W180 vAddIf, %c_Lang162%
 Gui, 19:Add, CheckBox, -Wrap ys xs+10 W180 vFileOCR gFileOCR Hidden, %c_Lang133%
@@ -12717,6 +12717,8 @@ Gui, 1:Submit, NoHide
 Gui, chMacro:Default
 Gui, chMacro:Font, s%MacroFontSize%
 Gui, chMacro:Submit, NoHide
+If (TabCount = 256)
+	return
 Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 ColOrder := LVOrder_Get(11, ListID%A_List%), AllTabs := "", TabName := ""
 Loop, %TabCount%
@@ -12738,6 +12740,7 @@ GoSub, chMacroGuiSize
 Menu, CopyTo, Add, % CopyMenuLabels[TabCount], CopyList, Radio
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, 28:+Range1-%TabCount%, OSHK
+SavePrompt(true, A_ThisLabel)
 GoSub, tv_Update
 
 TabSel:

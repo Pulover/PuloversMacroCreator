@@ -8,9 +8,16 @@
 		local ID := 0, Col, Row := [], Opt := []
 
 		this.PmcCode := [], this.PmcGroups := [], this.PmcContexts := []
+		IfDirectContext := "None", IfDirectWindow := ""
 		Loop, Read, %FileName%
 		{
-			If (RegExMatch(A_LoopReadLine, "\[PMC Code(\sv)*(.*)\]", v)=1)
+			If (InStr(A_LoopReadLine, "[PMC Globals]")=1)
+			{
+				RegExMatch(SubStr(A_LoopReadLine, 14), "O)\|([^\|]*)\|?([^\|]*)\|?(.*)", MGlobals)
+			,	IfDirectContext := MGlobals[1], IfDirectWindow := MGlobals[2]
+			,	ExpIcon := MGlobals[3]
+			}
+			Else If (RegExMatch(A_LoopReadLine, "\[PMC Code(\sv)*(.*)\]", v)=1)
 			{
 				ID++, Row := [], Opt := [], Version := v2
 				Loop, Parse, A_LoopReadLine, |
@@ -19,12 +26,9 @@
 			Else If (InStr(A_LoopReadLine, "Context=")=1)
 			{
 				RegExMatch(SubStr(A_LoopReadLine, 9), "O)(\w+)\|([^\|]*)\|?([^\|]*)\|?([^\|]*)", MContext)
-				this.PmcContexts.Push({"Condition": MContext[1] != "" ? MContext[1] : "None", "Context": MContext[2]})
+			,	this.PmcContexts.Push({"Condition": MContext[1] != "" ? MContext[1] : "None", "Context": MContext[2]})
 				If (MContext[3] != "")
-				{
 					IfDirectContext := MContext[3], IfDirectWindow := MContext[4]
-					GuiControl, 1:, ContextTip, Global <a>#If</a>: %IfDirectContext%
-				}
 			}
 			Else If (InStr(A_LoopReadLine, "Groups=")=1)
 				this.PmcGroups[ID] := SubStr(A_LoopReadLine, 8)
@@ -38,6 +42,7 @@
 			Else If (Trim(A_LoopReadLine) = "")
 				this.PmcCode[ID] := {Opt: Opt, Row: Row, Version: Version}
 		}
+		GuiControl, 1:, ContextTip, Global <a>#If</a>: %IfDirectContext%
 		If (!IsObject(this.PmcCode[ID].opt))
 			this.PmcCode[ID] := {Opt: Opt, Row: Row, Version: Version}
 		If (ID = 0)

@@ -42,6 +42,12 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 * Added Tree View Mode for macros editor.
 * Added customize colors and font settings for preview in options. 
 
+## Version 5.3.5
+* Updated max value for *Pause (Sleep)* command.
+* Project's exe custom icon path is now saved to PMC file.
+* Fixed bugs with objects and strings inside objects.
+* Fixed small bugs.
+
 ## Version 5.3.4
 * Fixed strings being evaluated as math operations in expressions.
 

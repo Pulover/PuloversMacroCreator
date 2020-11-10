@@ -4,7 +4,7 @@ Pulover's Macro Creator is a Free Automation Tool and Script Generator based on 
 
 [www.macrocreator.com](https://www.macrocreator.com)
 
-**Current Version:** 5.3.4
+**Current Version:** 5.3.5
 
 ### Supported platforms
 
