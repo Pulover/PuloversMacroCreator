@@ -14,7 +14,7 @@
 			If (InStr(A_LoopReadLine, "[PMC Globals]")=1)
 			{
 				RegExMatch(SubStr(A_LoopReadLine, 14), "O)\|([^\|]*)\|?([^\|]*)\|?(.*)", MGlobals)
-				IfDirectContext := MGlobals[1], IfDirectWindow := MGlobals[2]
+			,	IfDirectContext := MGlobals[1], IfDirectWindow := MGlobals[2]
 			,	ExpIcon := MGlobals[3]
 			}
 			Else If (RegExMatch(A_LoopReadLine, "\[PMC Code(\sv)*(.*)\]", v)=1)
@@ -26,7 +26,7 @@
 			Else If (InStr(A_LoopReadLine, "Context=")=1)
 			{
 				RegExMatch(SubStr(A_LoopReadLine, 9), "O)(\w+)\|([^\|]*)\|?([^\|]*)\|?([^\|]*)", MContext)
-				this.PmcContexts.Push({"Condition": MContext[1] != "" ? MContext[1] : "None", "Context": MContext[2]})
+			,	this.PmcContexts.Push({"Condition": MContext[1] != "" ? MContext[1] : "None", "Context": MContext[2]})
 				If (MContext[3] != "")
 					IfDirectContext := MContext[3], IfDirectWindow := MContext[4]
 			}

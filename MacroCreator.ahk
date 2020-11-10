@@ -12103,7 +12103,7 @@ Critical
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
-RowSelection := LV_GetCount("Selected")
+RowSelection := LV_GetCount("Selected"), TotalRows := LV_GetCount()
 If (RowSelection = 0)
 {
 	LV_GetText(Type, 1, 6)
@@ -12114,6 +12114,10 @@ If (RowSelection = 0)
 	}
 	LV_Delete()
 	LVManager[A_List].RemoveAllGroups(c_Lang061)
+}
+Else If (RowSelection = TotalRows)
+{
+	LV_Delete()
 }
 Else
 {
