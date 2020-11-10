@@ -7575,7 +7575,7 @@ Gui, 19:Add, Edit, y+5 xs+10 vImgFile W225 R1 -Multi
 Gui, 19:Add, Button, -Wrap yp-1 x+0 W30 H23 hwndhSearchImg vSearchImg gSearchImg, ...
 Gui, 19:Add, Text, Section -Wrap R1 y+5 xs+10 W163 Right vIfFoundT, %c_Lang067%:
 Gui, 19:Add, DDL, yp-2 x+10 W80 vIfFound gIfFound, Continue||Break|Stop|Prompt|Move|Left Click|Right Click|Middle Click|Play Sound
-Gui, 19:Add, Text, -Wrap R1 y+5 xs+10 W163 Right vIfNotFoundT, %c_Lang068%:
+Gui, 19:Add, Text, -Wrap R1 y+5 xs W163 Right vIfNotFoundT, %c_Lang068%:
 Gui, 19:Add, DDL, yp-2 x+10 W80 vIfNotFound, Continue||Break|Stop|Prompt|Play Sound
 Gui, 19:Add, CheckBox, Checked -Wrap y+0 xs+10 W180 vAddIf, %c_Lang162%
 Gui, 19:Add, CheckBox, -Wrap ys xs+10 W180 vFileOCR gFileOCR Hidden, %c_Lang133%
