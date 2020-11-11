@@ -12558,7 +12558,7 @@ PrevRow := TVData[Node].Row
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 GuiControl, chMacro:-g, InputList%A_List%
-RowSelection := LV_GetCount("Selected"), DeletedRows := 0
+RowSelection := LV_GetCount("Selected"), TotalRows := LV_GetCount(), DeletedRows := 0
 If (RowSelection = 0)
 {
 	LV_GetText(Type, 1, 6)
@@ -12570,6 +12570,11 @@ If (RowSelection = 0)
 	LV_Delete()
 	LVManager[A_List].RemoveAllGroups(c_Lang061)
 	DeletedRows := 1
+}
+Else If (RowSelection = TotalRows)
+{
+	LV_Delete()
+	DeletedRows := TotalRows
 }
 Else
 {
