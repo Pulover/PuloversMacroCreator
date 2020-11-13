@@ -10225,7 +10225,8 @@ IEWindows := ListIEWindows()
 Gui, 24:+owner1 -MinimizeBox +E0x00000400 +hwndCmdWin
 Gui, 1:+Disabled
 Gui, 24:Add, Tab2, W410 H0 vTabControl gTabControl AltSubmit, CmdTab1|CmdTab2|CmdTab3
-Gui, 24:Add, GroupBox, Section xm ym W450 H265
+; Chrome
+Gui, 24:Add, GroupBox, Section xm ym W720 H265
 Gui, 24:Add, Combobox, ys+15 xs+10 W160 vIECmd gIECmd, %IECmdList%
 Gui, 24:Add, Radio, Section -Wrap Checked ys+20 x+20 W90 vSet gIECmd R1, %c_Lang093%
 Gui, 24:Add, Radio, -Wrap x+0 W90 vGet gIECmd Disabled R1, %c_Lang094%
@@ -10241,8 +10242,15 @@ Gui, 24:Add, Button, -Wrap Section Default ym+270 xm W75 H23 gIEComOK, %c_Lang02
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vIEComApply gIEComApply Disabled, %c_Lang131%
 Gui, 24:Add, Text, x+10 yp-3 W190 H25 cGray, %c_Lang025%
 Gui, 24:Tab, 2
-; COM Interface
-Gui, 24:Add, GroupBox, Section xm ym W450 H75
+; Excel
+Gui, 24:Add, GroupBox, Section xm ym W720 H75
+Gui, 24:Add, Text, -Wrap R1 ys+15 xs+10 W55 Right vXLHwndT, %c_Lang100%:
+Gui, 24:Add, Edit, yp x+10 W80 vXLHwnd, % XLHwnd = "" ? "XL" : XLHwnd
+Gui, 24:Add, Button, -Wrap yp-1 x+0 W75 H23 vActiveXLObj gActiveXLObj, %c_Lang099%
+Gui, 24:Add, TreeView, Section xm y+20 H500 W300 vExcelClasses AltSubmit
+Gui, 24:Tab, 3
+; Expression / COM Interface
+Gui, 24:Add, GroupBox, Section xm ym W720 H75
 Gui, 24:Add, Checkbox, -Wrap R1 ys+15 xs+10 W400 vCreateComObj gCreateComObj, %c_Lang074%
 Gui, 24:Add, Text, -Wrap R1 y+10 xs+10 W55 Right vComHwndT, %c_Lang100%:
 Gui, 24:Add, Edit, yp x+10 W80 vComHwnd Disabled, %ComHwnd%
@@ -10259,13 +10267,13 @@ Gui, 24:Add, Button, -Wrap Section ym+270 xm W75 H23 vComOK gComOK, %c_Lang020%
 Gui, 24:Add, Button, -Wrap ys xs+170 W75 H23 vComApply gComApply Disabled, %c_Lang131%
 Gui, 24:Add, Link, -Wrap x+10 yp-3 W190 R1 vExprLink2 gExprLink, <a>%c_Lang091%</a>
 Gui, 24:Tab
-Gui, 24:Add, Text, -Wrap R1 Section ym+192 xm+12 vPgTxt, %c_Lang092%:
-Gui, 24:Add, DDL, W80 vIdent, Name||ID|ClassName|TagName|Links
-Gui, 24:Add, Edit, yp x+0 vDefEl W235
-Gui, 24:Add, Edit, yp x+0 vDefElInd W85
-Gui, 24:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetEl gGetEl, ...
-Gui, 24:Add, Checkbox, -Wrap Checked y+10 xs W300 vLoadWait R1 Disabled, %c_Lang097%
-Gui, 24:Add, Button, -Wrap Section ym+270 xs+72 W75 H23 gIEComCancel, %c_Lang021%
+; Gui, 24:Add, Text, -Wrap R1 Section ym+192 xm+12 vPgTxt, %c_Lang092%:
+; Gui, 24:Add, DDL, W80 vIdent, Name||ID|ClassName|TagName|Links
+; Gui, 24:Add, Edit, yp x+0 vDefEl W235
+; Gui, 24:Add, Edit, yp x+0 vDefElInd W85
+; Gui, 24:Add, Button, -Wrap yp-1 x+0 W30 H23 vGetEl gGetEl, ...
+; Gui, 24:Add, Checkbox, -Wrap Checked y+10 xs W300 vLoadWait R1 Disabled, %c_Lang097%
+Gui, 24:Add, Button, -Wrap Section ym+570 xs+72 W75 H23 gIEComCancel, %c_Lang021%
 Gui, 24:Add, StatusBar, gStatusBarHelp
 Gui, 24:Default
 SB_SetIcon(ResDllPath, IconsNames["help"])
@@ -10347,6 +10355,8 @@ GuiControl, 24:Choose, IEWindows, %SelIEWin%
 Gui, 24:Show, , %GuiTitle%
 ChangeIcon(hIL_Icons, CmdWin, InStr(A_ThisLabel, "ComInt") ? IconsNames["com"] : IconsNames["ie"])
 Tooltip
+MsgBox, % IsObject(xl_globals)
+MsgBox, % SubStr(JSON.Dump(xl_globals), 1, 100)
 return
 
 IEComCancel:
@@ -10609,9 +10619,12 @@ Catch
 	SB_SetText("")
 return
 
+ActiveXLObj:
 ActiveObj:
 Gui, 24:Submit, NoHide
 Gui, 24:+OwnDialogs
+If (A_GuiControl = "ActiveXLObj")
+	ComHwnd := XLHwnd, ComCLSID := "Excel.Application"
 If ((ComHwnd = "") || (ComCLSID = ""))
 {
 	MsgBox, 16, %d_Lang007%, %d_Lang048%
