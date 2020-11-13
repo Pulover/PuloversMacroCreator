@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.3.5  
+Version: 5.3.6  
 Release Date: November, 2020  
 AutoHotkey Version: 1.1.32.00  
 
@@ -37,6 +37,10 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 
 # Change Log
+
+## Version 5.3.6
+* Fixed bug with multiple compare operators.
+* Fixed other groups expanding when inserting new group.
 
 ## Version 5.3.5
 * Updated max value for *Pause (Sleep)* command.

@@ -317,8 +317,8 @@ Eval($x, _CustomVars := "", _Init := true)
 		$z[$i] := RegExReplace($z[$i], "&_String\d+_&", """$0""")
 		
 		; Add concatenate operator after strings where necessary
-		While (RegExMatch($z[$i], "(""&_String\d+_&""\s+)([^\d\.,\s:\?])"))
-			$z[$i] := RegExReplace($z[$i], "(""&_String\d+_&""\s+)([^\d\.,\s:\?])", "$1. $2")
+		While (RegExMatch($z[$i], "(""&_String\d+_&""\s+)([^\d\.,\s:\+-=*/&|^><\?])"))
+			$z[$i] := RegExReplace($z[$i], "(""&_String\d+_&""\s+)([^\d\.,\s:\+-=*/&|^><\?])", "$1. $2")
 		
 		; Remove remaining parenthesis to allow math operations
 		While (RegExMatch($z[$i], "\(([^()]++|(?R))*\)"))
