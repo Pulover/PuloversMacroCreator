@@ -68,7 +68,7 @@ https://www.autohotkey.com/boards/viewtopic.php?f=6&t=627
 
 Thiago Talma for some improvements to the code, debugging and many suggestions.
 
-chosen1ft for fixing the mixing rows bug when saving a project.
+chosen1ft for suggestions and testing.
 
 Translation revisions:
 https://www.macrocreator.com/project/
@@ -4268,7 +4268,7 @@ tmplinshi for the CreateFormData function.
 iseahound (Edison Hua) for the Vis2 function used for OCR.
 Coco for JSON class.
 Thiago Talma for some improvements to the code, debugging and many suggestions.
-chosen1ft for fixing the mixing rows bug when saving a project.
+chosen1ft for suggestions and testing.
 )
 Gui, 34:Add, Link, y+10 W340 r1, <a href="https://www.macrocreator.com/project/">Translation revisions.</a>
 Gui, 34:Add, Groupbox, Section xm+58 W360 H130 Center, GNU General Public License
@@ -12258,11 +12258,11 @@ Try Menu, CopyTo, Uncheck, % CopyMenuLabels[A_List]
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
+GoSub, PrevRefresh
 GoSub, chMacroGuiSize
 GoSub, LoadData
 GoSub, RowCheck
 GuiControl, 28:, OSHK, %A_List%
-GoSub, PrevRefresh
 Try Menu, CopyTo, Check, % CopyMenuLabels[A_List]
 GuiControl, chMacro:Focus, InputList%A_List%
 If (InStr(CopyMenuLabels[A_List], "()"))
@@ -12946,7 +12946,7 @@ LV_ModifyCol(3, 100)	; Manual
 LV_ModifyCol(4, 60)		; Loop
 LV_ModifyCol(5, 200)	; Context
 LV_ModifyCol(6, 45)		; Index
-Gui, 32:Show,, %t_Lang145%
+Gui, 32:Show, W690 H500, %t_Lang145%
 
 If (A_ThisLabel = "EditSelectedMacro")
 	Goto, MacroListEdit
@@ -12968,7 +12968,7 @@ GuiControl, 32:Disable, EditMacrosCancel
 Critical
 Gui, 32:Submit, NoHide
 Project := [], Labels := "", ActiveList := A_List
-Sleep, 100
+Sleep, 10
 Gui, 32:Default
 Loop, %TabCount%
 {
@@ -12990,7 +12990,7 @@ Loop, %TabCount%
 	Project.Push(LVData := LVManager[IndexN].GetData())
 	If (IndexN = ActiveList)
 		NewActive := A_Index
-	Sleep, 100
+	Sleep, 10
 }
 ActiveList := NewActive
 Gui, chMacro:Default

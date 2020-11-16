@@ -1465,6 +1465,7 @@ SaveProject(FileName)
 	local All_Data
 
 	All_Data := "[PMC Globals]|" IfDirectContext "|" IfDirectWindow "|" ExpIcon "`n"
+	Sleep, 100
 	Loop, %TabCount%
 	{
 		PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]

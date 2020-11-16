@@ -32,7 +32,7 @@ tmplinshi for the [CreateFormData function](https://www.autohotkey.com/boards/vi
 iseahound (Edison Hua) for the [Vis2 function](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=36047) used for OCR.  
 Coco for [JSON class](https://www.autohotkey.com/boards/viewtopic.php?f=6&t=627).  
 Thiago Talma for some improvements to the code, debugging and many suggestions.  
-chosen1ft for fixing the mixing rows bug when saving a project.  
+chosen1ft for suggestions and testing.  
 [Translation revisions](https://www.macrocreator.com/project/).  
 
 
@@ -40,7 +40,9 @@ chosen1ft for fixing the mixing rows bug when saving a project.
 
 ## Version 5.3.6
 * Fixed bug with multiple compare operators.
+* Fixed issue with variables and strings in expressions.
 * Fixed other groups expanding when inserting new group.
+* Small bug fixes.
 
 ## Version 5.3.5
 * Updated max value for *Pause (Sleep)* command.
