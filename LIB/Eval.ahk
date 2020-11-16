@@ -312,7 +312,7 @@ Eval($x, _CustomVars := "", _Init := true)
 			Else If (!RegExMatch(_String1, "^<~#.*#~>$"))
 				__Elements["&_String" A_Index "_&"] := _String1
 			,	$z[$i] := RegExReplace($z[$i], "sU)"".*""", "&_String" A_Index "_&",, 1)
-			_Pos += StrLen(_String1)
+			_Pos++
 		}
 		$z[$i] := RegExReplace($z[$i], "&_String\d+_&", """$0""")
 		
