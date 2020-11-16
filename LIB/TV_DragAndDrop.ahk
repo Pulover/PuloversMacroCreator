@@ -101,15 +101,18 @@ TV_Drag(Origin, DragButton := "D", AutoDrop := False, LineThick := 2, Color := "
     return Line_P = "Child" ? HitTarget : -HitTarget
 }
 ;=======================================================================================
-TV_Drop(Origin, Target, Hwnd := "", Copy := False, FirstChild := False)
+TV_Drop(Origin, Target, Hwnd := "", Copy := False, ExpandNodes := true, FirstChild := False)
 {
     If (!Hwnd)
         MouseGetPos,,,, Hwnd, 2
     TargetID := Target < 0 ? Target * -1 : Target
     If ((Target) && (Origin != TargetID))
     {
-        NewNodeId := MoveNodes(Origin, Target, Hwnd, FirstChild ? "First " : "")
-        TV_Modify(Target, "Expand")
+        NewNodeId := MoveNodes(Origin, Target, Hwnd, ExpandNodes ? "Expand Vis " : "", FirstChild ? "First " : "")
+        If (ExpandNodes)
+            TV_Modify(Target, "Expand")
+        Else
+            TV_Modify(Target)
         If (!Copy)
             TV_Delete(Origin)
     }
@@ -130,7 +133,7 @@ IsTargetChild(Origin, Target)
     return False
 }
 ;=======================================================================================
-MoveNodes(Node, Target, TreeViewId, FirstChild := "")
+MoveNodes(Node, Target, TreeViewId, ExpandNodes := "Expand Vis ", FirstChild := "")
 {
     IsSibling := Target < 0
 ,   TV_GetText(NodeText, Node)
@@ -147,15 +150,15 @@ MoveNodes(Node, Target, TreeViewId, FirstChild := "")
         }
         If (!SiblingId)
             SiblingId := Target
-        NodeId := TV_Add(NodeText, ParentId, SiblingId " Expand Vis Icon" iIcon " Check" chk)
+        NodeId := TV_Add(NodeText, ParentId, SiblingId " " ExpandNodes "Icon" iIcon " Check" chk)
     }
     Else
-        NodeId := TV_Add(NodeText, Target, FirstChild "Expand Vis Icon" iIcon " Check" chk)
+        NodeId := TV_Add(NodeText, Target, ExpandNodes . FirstChild "Icon" iIcon " Check" chk)
     If (Child := TV_GetChild(Node))
     {
-        MoveNodes(Child, NodeId, TreeViewId)
+        MoveNodes(Child, NodeId, TreeViewId, ExpandNodes)
         While (Child := TV_GetNext(Child))
-            MoveNodes(Child, NodeId, TreeViewId)
+            MoveNodes(Child, NodeId, TreeViewId, ExpandNodes)
     }
     return NodeId
 }

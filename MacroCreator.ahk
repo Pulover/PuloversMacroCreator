@@ -12048,14 +12048,19 @@ chk := TV_Get(NodeID, "C") = NodeID
 RowNumber := 0
 If (TVData[NodeID].Row)
 	RowNumber := TVData[NodeID].Row
+ChildID := TV_GetChild(NodeID)
 GuiControl, chMacro:Choose, A_List, %SelectedMacro%
 Gui, chMacro:Default
 Gui, chMacro:Submit, NoHide
 Gui, chMacro:ListView, InputList%A_List%
+LV_Modify(0, "-Select")
 If (RowNumber)
-	LV_Modify(0, "-Select"), LV_Modify(RowNumber, "Check" chk " Select Vis")
-Else If (!NodeID)
-	LV_Modify(0, "-Select")
+	LV_Modify(RowNumber, "Check" chk " Select Vis")
+Else If (TVData[NodeID].Row = 0)
+{
+	NextRow := TVData[ChildID].Row
+	LV_Modify(NextRow, "Select Vis")
+}
 If (A_List != c_List)
 	GoSub, TabSel
 Gui, tvMacro:Default
@@ -12102,7 +12107,7 @@ If (A_GuiEvent = "D")
 		NodeIDs.Push(TID)
 	}
 	GuiControl, tvMacro:-Redraw, TreeView
-	If (TID := TV_Drop(A_EventInfo, TargetNode,,, True))
+	If (TID := TV_Drop(A_EventInfo, TargetNode,,, False, True))
 	{
 		GuiControl, tvMacro:+Redraw, TreeView
 		TargetNode := IsTargetChild ? TargetNode : TargetNode * -1
@@ -15977,7 +15982,7 @@ If (MacroView = "Tree")
 	Gui, chMacro:Default
 	Gui, chMacro:Submit, NoHide
 	Gui, chMacro:ListView, InputList%A_List%
-	SelectedRow := LV_GetNext(), SelectedRow := SelectedRow ? SelectedRow : LV_GetCount()
+	SelectedRow := LV_GetNext(), SelectedRow := SelectedRow ? SelectedRow : 0
 	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
 	GuiControl, tvMacro:Focus, InputTree
 }
@@ -16881,6 +16886,12 @@ If (!ShowGroups)
 	GoSub, GroupsMode
 LVManager[A_List].InsertGroup(, GrName)
 LVManager[A_List].Add()
+If (MacroView = "Tree")
+{
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
+	GuiControl, tvMacro:Focus, InputTree
+}
 SavePrompt(true, A_ThisLabel)
 GoSub, PrevRefresh
 return
@@ -16918,7 +16929,11 @@ Else
 	Menu, GroupMenu, Uncheck, %e_Lang018%`t%_s%Ctrl+Shift+G
 GoSub, PrevRefresh
 If (MacroView = "Tree")
-	TVData := PMC.TVLoad(ShowGroups, LV_GetNext())
+{
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
+	GuiControl, tvMacro:Focus, InputTree
+}
 return
 
 RemoveGroup:
@@ -16932,6 +16947,12 @@ If (!LV_GetNext())
 }
 LVManager[A_List].RemoveGroup()
 LVManager[A_List].Add()
+If (MacroView = "Tree")
+{
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
+	GuiControl, tvMacro:Focus, InputTree
+}
 SavePrompt(true, A_ThisLabel)
 GoSub, PrevRefresh
 return
@@ -16941,6 +16962,12 @@ Gui, chMacro:Default
 Gui, chMacro:Listview, InputList%A_List%
 LVManager[A_List].RemoveAllGroups(c_Lang061)
 LVManager[A_List].Add()
+If (MacroView = "Tree")
+{
+	SelectedRow := LV_GetNext()
+	TVData := PMC.TVLoad(ShowGroups, SelectedRow)
+	GuiControl, tvMacro:Focus, InputTree
+}
 SavePrompt(true, A_ThisLabel)
 GoSub, PrevRefresh
 return
