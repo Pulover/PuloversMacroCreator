@@ -919,6 +919,7 @@ HistCheck(ListID := "")
 {
 	global
 
+
 	If (Record || Capt)
 		return
 
@@ -1248,10 +1249,9 @@ LVCallback(Func, Hwnd)
 	return true
 }
 
-TVUpdateRows()
+TVUpdateRows(MovedID)
 {
 	local Lists := [], ItemID := 0
-
 	Loop, %TabCount%
 		Lists.Push(LVManager[A_Index].Handle.Slot[LVManager[A_Index].Handle.ActiveSlot])
 
@@ -1262,11 +1262,20 @@ TVUpdateRows()
 			ItemID := TV_GetNext(ItemID, "Full")
 			While (!TVData[ItemID].Row)
 			{
-				If (!TVData.HasKey(ItemId))
-					break 3
+				If (!TVData.HasKey(ItemID))
+				{
+					If (!ItemID)
+						break 3
+					TVData[ItemID] = TVData[MovedID]
+				,	TVData.Delete(MovedID)
+				}
 				ItemID := TV_GetNext(ItemID, "Full")
 			}
-			TVData[ItemID].Row := each
+			Level := 0, ParentID := ItemID
+			While (ParentID := TV_GetParent(ParentID))
+				Level++
+			TVData[ItemID].Level := Level
+		,	TVData[ItemID].Row := each
 		,	TVData[ItemID].Content := RegExReplace(TVData[ItemID].Content, "^\d+:", each ":")
 		,	TV_Modify(ItemID,, TVData[ItemID].Content)
 		}

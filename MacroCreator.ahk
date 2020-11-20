@@ -12059,7 +12059,8 @@ If (RowNumber)
 Else If (TVData[NodeID].Row = 0)
 {
 	NextRow := TVData[ChildID].Row
-	LV_Modify(NextRow, "Select Vis")
+	If (NextRow)
+		LV_Modify(NextRow, "Select Vis")
 }
 If (A_List != c_List)
 	GoSub, TabSel
@@ -12159,7 +12160,7 @@ If (A_GuiEvent = "D")
 				Gui, chMacro:ListView, InputList%A_List%
 				MoveTabs(NewOrder)
 				Gui, tvMacro:Default
-				TVUpdateRows()
+				TVUpdateRows(A_EventInfo)
 				GuiControl, tvMacro:Focus, InputTree
 				If (AutoRefresh = 1)
 					GoSub, PrevRefresh
@@ -12193,9 +12194,10 @@ If (A_GuiEvent = "D")
 		LVCopier.Paste(TargetRow)
 		LVCopier.Delete()
 		GoSub, RowCheck
+		HistCheck()
 		Sleep, 100
 		Gui, tvMacro:Default
-		TVUpdateRows()
+		TVUpdateRows(A_EventInfo)
 		Gui, chMacro:Default
 		Gui, chMacro:Submit, NoHide
 		Gui, chMacro:ListView, InputList%A_List%

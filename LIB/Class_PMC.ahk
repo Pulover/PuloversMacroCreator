@@ -217,7 +217,7 @@
 					LevelDepth++
 				If (((Type = cType17) && (!InStr(Action, "["))) || (Action = "[LoopStart]"))
 					LevelDepth++
-				Else If ((Type != cType17) && (Action != "[LoopEnd]"))
+				Else If ((Type != cType17) && (Action != "[LoopEnd]") && (Action != "[End If]"))
 				{
 					TVData[++CountId] := {Row: 0, Content: w_Lang033 ": "  Col[5], Level: LevelDepth + 1, Options: "Icon36", HideCheck: true}
 				,	TVData[++CountId] := {Row: 0, Content: w_Lang034 ": "  Col[6], Level: LevelDepth + 1, Options: "Icon45", HideCheck: true}

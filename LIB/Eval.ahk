@@ -26,7 +26,7 @@ Eval($x, _CustomVars := "", _Init := true)
 	local $y, $z, $i, $v, _Elements, o_Elements, __Elements, HidString, RepString, $o
 	, _Match, _Match1, _Match2, _Match3, _Match4, $pd, $pd1, EvalResult
 	, ObjName, VarName, Oper, VarValue, _Pos, _i, _v, $Result
-	Static _Objects
+	Static _Objects, $Quote := Chr(2)
 	_Elements := {}
 	If (_Init)
 		_Objects := {}
@@ -114,7 +114,7 @@ Eval($x, _CustomVars := "", _Init := true)
 				_Objects[ObjName] := $y
 			Else If $y is not Number
 			{
-				$y := """" StrReplace($y, """", """""") """"
+				$y := """" StrReplace($y, """", $Quote) """"
 			,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
 			,	_Elements[HidString] := $y
 			,	$y := HidString
@@ -184,7 +184,7 @@ Eval($x, _CustomVars := "", _Init := true)
 				{
 					If (_oMatch[_i] != "")
 					{
-						_v := """" _v """"
+						_v := """" StrReplace(_v, """", $Quote) """"
 					,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
 					,	_Elements[HidString] := _v
 					,	_v := HidString
@@ -255,7 +255,7 @@ Eval($x, _CustomVars := "", _Init := true)
 								_Objects[ObjName] := $y
 							Else If $y is not Number
 							{
-								$y := """" $y """"
+								$y := """" StrReplace($y, """", $Quote) """"
 							,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
 							,	_Elements[HidString] := $y
 							,	$y := HidString
@@ -465,6 +465,7 @@ AssignParse(String, ByRef VarName, ByRef Oper, ByRef VarValue)
 
 StrJoin(InputArray, JChr := "", Quote := false, Init := true, Unquote := false)
 {
+	static $Quote := Chr(2)
 	For i, v in InputArray
 	{
 		If (IsObject(v))
@@ -478,6 +479,7 @@ StrJoin(InputArray, JChr := "", Quote := false, Init := true, Unquote := false)
 			If (Unquote)
 				While (RegExMatch(v, """{2}"))
 					v := RegExReplace(v, """{2}", """")
+			v := StrReplace(v, $Quote, """")
 		}
 		JoinedStr .= v . JChr
 	}
