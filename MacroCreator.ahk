@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.3.6
+; Version: 5.3.7
 ; Release Date: November, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
@@ -77,7 +77,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.3.6
+;@Ahk2Exe-SetVersion 5.3.7
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.3.6", ReleaseDate := "November, 2020"
+CurrentVersion := "5.3.7", ReleaseDate := "November, 2020"
 
 ;##### Ini File Read #####
 
@@ -321,8 +321,8 @@ If (Version < "5.1.2")
 	EvalDefault := 1
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
-If (LangVersion < 5)
-	LangVersion := 5, LangLastCheck := 5
+If (LangVersion < 6)
+	LangVersion := 6, LangLastCheck := 6
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -6403,8 +6403,10 @@ Else If (TabControl = 3)
 	DelayX := InStr(TimeoutC, "%") ? TimeoutC : Timeout
 }
 Else
+{
 	Type := cType5, Title := "", Details := (NoRandom) ? "NoRandom" : ((Random) ? "Random" : "")
-	, Target := (Random) ? (InStr(RandMax, "%") ? RandMax : RandMaximum) : ""
+	Target := (Random) ? (InStr(RandMax, "%") ? RandMax : RandMaximum) : ""
+}
 If (A_ThisLabel != "PauseApply")
 {
 	Gui, 1:-Disabled
@@ -11643,7 +11645,7 @@ Gui, 28:Add, Text, -Wrap yp x+0 W180 r1 vOSCProgTip
 Gui, 28:Add, Slider, yp-2 x+0 W65 H10 vOSTrans gTrans NoTicks Thick20 ToolTip Range25-255, %OSTrans%
 OSCPos := StrSplit(OSCPos, " ")
 OSCPos[1] := (SubStr(OSCPos[1], 2) > A_ScreenWidth || SubStr(OSCPos[1], 2) < 400) ? "X0" : OSCPos[1]
-OSCPos[2] := (SubStr(OSCPos[2], 2) > A_ScreenHeight || SubStr(OSCPos[2], 2) < 25) ? "Y0" : OSCPos[1]
+OSCPos[2] := (SubStr(OSCPos[2], 2) > A_ScreenHeight || SubStr(OSCPos[2], 2) < 25) ? "Y0" : OSCPos[2]
 OSCPos := OSCPos[1] " " OSCPos[2]
 Gui, 28:Show, % OSCPos (ShowProgBar ? " H40" : " H30") " W380 NoActivate Hide", %AppName%
 WinSet, Transparent, %OSTrans%, ahk_id %PMCOSC%
