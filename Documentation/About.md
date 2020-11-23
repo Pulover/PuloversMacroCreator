@@ -42,6 +42,10 @@ chosen1ft for suggestions and testing.
 * Added Tree View Mode for macros editor.
 * Added customize colors and font settings for preview in options. 
 
+## Version 5.3.7
+* Fixed *A_* variables not accessible in nested Loop commands.
+* Fixed bugs with quotes in expressions.
+
 ## Version 5.3.6
 * Fixed bug with multiple compare operators.
 * Fixed issue with variables and strings in expressions.

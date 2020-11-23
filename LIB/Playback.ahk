@@ -492,15 +492,6 @@
 				,	PlaybackVars[LoopDepth][mLoopIndex, "ErrorLevel"] := FlowControl.ErrorLevel
 				,	LoopCount[LoopDepth] := ""
 				
-					If Type not in %cType45%,%cType51%
-					{
-						For _each, _value in Pars
-						{
-							CheckVars(CustomVars, _value)
-						,	Pars[_each] := _value
-						}
-					}
-					
 					For _depth, _pair in PlaybackVars
 					{
 						If (_depth = LoopDepth)
@@ -509,7 +500,16 @@
 							For _each, _value in PlaybackVars[LoopDepth - 1]
 								PlaybackVars[LoopDepth][_each, _index] := _point
 					}
-					
+
+					If Type not in %cType45%,%cType51%
+					{
+						For _each, _value in Pars
+						{
+							CheckVars(PlaybackVars[LoopDepth][mLoopIndex], _value)
+						,	Pars[_each] := _value
+						}
+					}
+
 					Switch Type
 					{
 						Case cType38:
