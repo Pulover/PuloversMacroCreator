@@ -5,8 +5,8 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.3.7
-; Release Date: November, 2020
+; Version: 5.3.8
+; Release Date: December, 2020
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2020 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
@@ -77,7 +77,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.3.7
+;@Ahk2Exe-SetVersion 5.3.8
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.3.7", ReleaseDate := "November, 2020"
+CurrentVersion := "5.3.8", ReleaseDate := "December, 2020"
 
 ;##### Ini File Read #####
 
@@ -321,8 +321,8 @@ If (Version < "5.1.2")
 	EvalDefault := 1
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
-If (LangVersion < 6)
-	LangVersion := 6, LangLastCheck := 6
+If (LangVersion < 7)
+	LangVersion := 7, LangLastCheck := 7
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()

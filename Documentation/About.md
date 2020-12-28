@@ -7,8 +7,8 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2020 Rodolfo U. Batista  
 
-Version: 5.3.7  
-Release Date: November, 2020  
+Version: 5.3.8  
+Release Date: December, 2020  
 AutoHotkey Version: 1.1.32.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -37,6 +37,10 @@ chosen1ft for suggestions and testing.
 
 
 # Change Log
+
+## Version 5.3.8
+* Fixing bug with named operators.
+* Fixed scroll bug during operations with groups enabled.
 
 ## Version 5.3.7
 * Fixed *A_* variables not accessible in nested Loop commands.

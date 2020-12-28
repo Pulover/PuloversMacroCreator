@@ -534,9 +534,10 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;        ScrollDelay:    Delay in miliseconds for AutoScroll. Default is 100ms.
 ;        LineThick:      Thickness of the destination bar in pixels. Default is 2px.
 ;        Color:          Color of destination bar. Default is "Black".
+;        Drop:           Set to False to disable automatically dropping selected rows.
 ;    Return:             The destination row number.
 ;=======================================================================================
-    Drag(DragButton := "D", AutoScroll := true, ScrollDelay := 100, LineThick := 2, Color := "Black")
+    Drag(DragButton := "D", AutoScroll := true, ScrollDelay := 100, LineThick := 2, Color := "Black", Drop := true)
     {
         Static LVIR_LABEL          := 0x0002
         Static LVM_GETITEMCOUNT    := 0x1004
@@ -633,9 +634,9 @@ Class LV_Rows extends LV_Rows.LV_EX
             }
         }
 
-        If (DragButton = "LButton" && LV_currRow)
+        Gui, MarkLine:Cancel
+        If (Drop && DragButton = "LButton" && LV_currRow)
         {
-            Gui, MarkLine:Cancel
             CopyData := this.CopyData.Clone()
             Lines := this.Copy()
         ,   this.Paste(LV_currRow)
@@ -975,7 +976,10 @@ Class LV_Rows extends LV_Rows.LV_EX
 ;=======================================================================================
     RefreshGroups(Collapsed := "")
     {
-        GroupStates := []
+        GroupsEnabled := this.IsGroupViewEnabled()
+    ,   this.EnableGroupView(false)
+
+    ,   GroupStates := []
         Gui, Listview, % this.LVHwnd
         For e, g in this.Handle.GroupsArray
         {
@@ -989,7 +993,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             If (this.Handle.GroupsArray[GrNum].Row = A_Index)
             {
                 Group := this.Handle.GroupsArray[GrNum]
-                this.GroupInsert(Group.ID, Group.Name)
+            ,   this.GroupInsert(Group.ID, Group.Name)
             ,   Styles := !this.Collapsible ? []
                                         : Collapsed = "" ? ["Collapsible", GroupStates[GrNum]]
                                         : Collapsed ? ["Collapsible", "Collapsed"]
@@ -999,6 +1003,7 @@ Class LV_Rows extends LV_Rows.LV_EX
             }
             this.SetGroup(A_Index, Group.ID)
         }
+        this.EnableGroupView(GroupsEnabled)
     }
 ;=======================================================================================
 ;    Internal Functions: These functions are meant for internal use but can also
