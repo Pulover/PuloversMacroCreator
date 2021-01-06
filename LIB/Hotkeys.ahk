@@ -209,56 +209,60 @@ MButton::GoSub, DrawStart
 ^Up::
 ^NumpadUp::
 MoveRectangle("y", 0, LineW)
-iX := "", iY := ""
+; iX := "", iY := ""
+iY--
 GoSub, ShowAreaTip
 return
 
 +Up::
 +NumpadUp::
 MoveRectangle("h", 0, LineW)
-iX := "", iY := ""
+; iX := "", iY := ""
 GoSub, ShowAreaTip
 return
 
 ^Down::
 ^NumpadDown::
 MoveRectangle("y", 1, LineW)
-iX := "", iY := ""
+; iX := "", iY := ""
+iY++
 GoSub, ShowAreaTip
 return
 
 +Down::
 +NumpadDown::
 MoveRectangle("h", 1, LineW)
-iX := "", iY := ""
+; iX := "", iY := ""
 GoSub, ShowAreaTip
 return
 
 ^Left::
 ^NumpadLeft::
 MoveRectangle("x", 0, LineW)
-iX := "", iY := ""
+; iX := "", iY := ""
+iX--
 GoSub, ShowAreaTip
 return
 
 +Left::
 +NumpadLeft::
 MoveRectangle("w", 0, LineW)
-iX := "", iY := ""
+; iX := "", iY := ""
 GoSub, ShowAreaTip
 return
 
 ^Right::
 ^NumpadRight::
 MoveRectangle("x", 1, LineW)
-iX := "", iY := ""
+; iX := "", iY := ""
+iX++
 GoSub, ShowAreaTip
 return
 
 +Right::
 +NumpadRight::
 MoveRectangle("w", 1, LineW)
-iX := "", iY := ""
+; iX := "", iY := ""
 GoSub, ShowAreaTip
 return
 

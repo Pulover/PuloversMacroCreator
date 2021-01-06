@@ -479,7 +479,7 @@ SCI_NOTIFY(wParam, lParam, msg, hwnd, sciObj)
 
 MarkArea(LineW)
 {
-	global c_Lang004, c_Lang059, d_Lang057
+	global c_Lang004, c_Lang059, d_Lang057, AreaSet
 	
 	MouseGetPos,,, id, control
 	ControlGetPos, cX, cY, cW, cH, %control%, ahk_id %id%
@@ -519,10 +519,13 @@ MarkArea(LineW)
 	WinSet, Region, 0-0 %W1%-0 %W1%-%H1% 0-%H1% 0-0  %LineW%-%LineW% %W2%-%LineW% %W2%-%H2% %LineW%-%H2% %LineW%-%LineW%
 	Gui, 20:Show, NA x%X1% y%Y1% w%W1% h%H1%
 	WinMove, , , X1, Y1, W1, H1
+	AreaSet := True
 }
 
 MoveRectangle(o, p, LineW)
 {
+	global AreaSet
+
 	Gui, 20:+LastFound
 	WinGetPos, wX, wY, wW, wH
 	w%o% := (p) ? w%o%+1 : w%o%-1
@@ -531,6 +534,7 @@ MoveRectangle(o, p, LineW)
 ,	W2 := W1 - LineW, H2 := H1 - LineW
 	WinSet, Region, 0-0 %W1%-0 %W1%-%H1% 0-%H1% 0-0  %LineW%-%LineW% %W2%-%LineW% %W2%-%H2% %LineW%-%H2% %LineW%-%LineW%
 	WinMove,,, %wX%, %wY%, %wW%, %wH%
+	AreaSet := True
 }
 
 Screenshot(outfile, screen)

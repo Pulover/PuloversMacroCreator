@@ -5,10 +5,10 @@
 [Forum](https://www.autohotkey.com/boards/viewforum.php?f=63)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
-Copyright © 2012-2020 Rodolfo U. Batista  
+Copyright © 2012-2021 Rodolfo U. Batista  
 
-Version: 5.3.8  
-Release Date: December, 2020  
+Version: 5.3.9  
+Release Date: January, 2021  
 AutoHotkey Version: 1.1.32.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -38,8 +38,11 @@ chosen1ft for suggestions and testing.
 
 # Change Log
 
+## Version 5.3.9
+* Fixed bug in Get-Area button in Image/Pixel Search window.
+
 ## Version 5.3.8
-* Fixing bug with named operators.
+* Fixed bug with named operators.
 * Fixed scroll bug during operations with groups enabled.
 
 ## Version 5.3.7

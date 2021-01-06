@@ -5,10 +5,10 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.3.8
-; Release Date: December, 2020
+; Version: 5.3.9
+; Release Date: January, 2021
 ; AutoHotkey Version: 1.1.32.00
-; Copyright © 2012-2020 Rodolfo U. Batista
+; Copyright © 2012-2021 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
 ; under the terms of the UNLICENSE here: <https://unlicense.org/UNLICENSE>
 ; For everyone else, the GPL below applies.
@@ -77,8 +77,8 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.3.8
-;@Ahk2Exe-SetCopyright Copyright © 2012-2020 Rodolfo U. Batista
+;@Ahk2Exe-SetVersion 5.3.9
+;@Ahk2Exe-SetCopyright Copyright © 2012-2021 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
 ; AutoHotkey settings:
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.3.8", ReleaseDate := "December, 2020"
+CurrentVersion := "5.3.9", ReleaseDate := "January, 2021"
 
 ;##### Ini File Read #####
 
@@ -4238,7 +4238,7 @@ Gui, 34:Add, Link,, <a href="https://www.macrocreator.com">www.macrocreator.com<
 Gui, 34:Add, Text,, Author: Pulover [Rodolfo U. Batista]
 Gui, 34:Add, Text, -Wrap R1 y+0,
 (
-Copyright © 2012-2020 Rodolfo U. Batista
+Copyright © 2012-2021 Rodolfo U. Batista
 
 Version: %CurrentVersion% (%OsBit%)
 Release Date: %ReleaseDate%
@@ -5467,6 +5467,7 @@ SetTimer, WatchCursor, 100
 return
 
 DrawStart:
+AreaSet := False
 SetTimer, WatchCursor, Off
 CoordMode, Mouse, %CoordPixel%
 MouseGetPos, iX, iY
@@ -5521,7 +5522,9 @@ If (SS = 1)
 		return
 	}
 }
-If ((iX = eX) || (iY = eY)) && (control != "")
+If (AreaSet)
+	iX := wX, iY := wY, eX := wX + wW, eY := wY + wH
+Else If ((iX = eX) || (iY = eY)) && (control != "")
 	GuiControl, 19:ChooseString, CoordPixel, Window
 Else If (CoordPixel = "Screen")
 	iX := wX, iY := wY, eX := wX + wW, eY := wY + wH
@@ -12948,6 +12951,7 @@ LV_ModifyCol(3, 100)	; Manual
 LV_ModifyCol(4, 60)		; Loop
 LV_ModifyCol(5, 200)	; Context
 LV_ModifyCol(6, 45)		; Index
+LV_Modify(A_List, "Select Vis")
 Gui, 32:Show, W690 H500, %t_Lang145%
 
 If (A_ThisLabel = "EditSelectedMacro")
