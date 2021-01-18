@@ -1,6 +1,6 @@
 ﻿Lang_de
 		
-		; German [Revised by Jörg Schmalenberger]
+		; German [Revised by Jörg Schmalenberger and Thilo Wunderlich]
 		
 ; 01. Main Menu		
 	m_Lang001 =	&Datei
@@ -398,7 +398,7 @@
 	c_Lang080 =	Sprungmarke hinzufügen
 	c_Lang081 =	String (InputVar)
 	c_Lang082 =	Variable
-	c_Lang083 =	Lang Files
+	c_Lang083 =	Else
 	c_Lang084 =	Variable zuweisen
 	c_Lang085 =	Inhalt
 	c_Lang086 =	Operator
@@ -542,9 +542,9 @@
 	c_Lang225 =	Statische Variablen
 	c_Lang226 =	Von
 	c_Lang227 =	Email
-	c_Lang228 =	Gegenstand
+	c_Lang228 =	Betreff
 	c_Lang229 =	Nachricht
-	c_Lang230 =	Zu
+	c_Lang230 =	An
 	c_Lang231 =	CC
 	c_Lang232 =	BCC
 	c_Lang233 =	F2 zu bearbeiten
@@ -765,7 +765,7 @@
 	t_Lang181 =	Einreichen
 	t_Lang182 =	Name
 	t_Lang183 =	Änderungen speichern?
-	t_Lang184 =	Sprache Datei
+	t_Lang184 =	Sprachdatei
 	t_Lang185 =	Referenzdatei
 	t_Lang186 =	Revision oder Neue Übersetzung einreichen
 	t_Lang187 =	Alle einklappen
