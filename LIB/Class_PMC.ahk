@@ -76,6 +76,8 @@
 		Gui, 1:+Disabled
 		Gui, chMacro:Default
 		StringSplit, SelectedFile, SelectedFile, %DL%, `r
+		GuiControl, chMacro:Choose, A_List, 1
+		Gui, chMacro:Submit, NoHide
 		Critical, 800
 		Loop, %SelectedFile0%
 		{

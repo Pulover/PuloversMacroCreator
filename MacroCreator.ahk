@@ -5,7 +5,7 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.3.9
+; Version: 5.4.0
 ; Release Date: January, 2021
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2021 Rodolfo U. Batista
@@ -77,7 +77,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.3.9
+;@Ahk2Exe-SetVersion 5.4.0
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2021 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.3.9", ReleaseDate := "January, 2021"
+CurrentVersion := "5.4.0", ReleaseDate := "January, 2021"
 
 ;##### Ini File Read #####
 
@@ -321,8 +321,8 @@ If (Version < "5.1.2")
 	EvalDefault := 1
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
-If (LangVersion < 7)
-	LangVersion := 7, LangLastCheck := 7
+If (LangVersion < 8)
+	LangVersion := 8, LangLastCheck := 8
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()
@@ -4194,7 +4194,7 @@ SplashTextOn, 300, 25, %AppName%, %d_Lang091%
 WinHttpDownloadToFile(VerChk.DlUrl, A_Temp)
 SplashTextOff
 File := A_Temp "\" RegExReplace(VerChk.DlUrl, ".*/")
-Run, %File% /SILENT /FORCECLOSEAPPLICATIONS, %A_Temp%
+Run, %File% /FORCECLOSEAPPLICATIONS, %A_Temp%
 GoSub, Exit
 return
 
@@ -6788,6 +6788,14 @@ Else If (LParse = 1)
 		return
 	}
 	EscCom(false, Delim), EscCom(false, Omit)
+	If (InStr(Delim, ";") && !InStr(Delim, "``;"))
+		Delim := RegExReplace(Delim, ";", "``;")
+	If (InStr(Delim, "%") && !InStr(Delim, "``%"))
+		Delim := RegExReplace(Delim, "%", "``%")
+	If (InStr(Omit, ";") && !InStr(Omit, "``;"))
+		Omit := RegExReplace(Omit, ";", "``;")
+	If (InStr(Omit, "%") && !InStr(Omit, "``%"))
+		Omit := RegExReplace(Omit, "%", "``%")
 	Details := LParamsFile ", " Delim ", " Omit
 	TimesL := 1, Type := cType39
 }

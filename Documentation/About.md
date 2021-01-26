@@ -7,7 +7,7 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2021 Rodolfo U. Batista  
 
-Version: 5.3.9  
+Version: 5.4.0  
 Release Date: January, 2021  
 AutoHotkey Version: 1.1.32.00  
 
@@ -37,6 +37,10 @@ chosen1ft for suggestions and testing.
 
 
 # Change Log
+
+## Version 5.4.0
+* Fixed missing or mixed rows when importing files.
+* Automatically adding escape char in delimiter em omit chars in Loop window.
 
 ## Version 5.3.9
 * Fixed bug in Get-Area button in Image/Pixel Search window.
