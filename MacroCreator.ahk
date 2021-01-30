@@ -321,8 +321,8 @@ If (Version < "5.1.2")
 	EvalDefault := 1
 If (Version < "5.0.0")
 	ShowTips := 1, NextTip := 1, MainLayout := "ERROR", UserLayout := "ERROR"
-If (LangVersion < 8)
-	LangVersion := 8, LangLastCheck := 8
+If (LangVersion < 9)
+	LangVersion := 9, LangLastCheck := 9
 
 User_Vars := new ObjIni(UserVarsPath)
 User_Vars.Read()

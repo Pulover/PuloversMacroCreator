@@ -999,18 +999,18 @@
 	ApplyL_TT =	Insérer depuis la case (Insert)
 	ApplyT_TT =	Appliquer
 	AutoKey_TT =	Raccourci clavier pour lancer une macro
-	Client_TT =	Les coordonnées sont relatives à la zone cliente de la fenêtre active, ce qui exclut la barre de titre de la fenêtre, le menu (si elle a une norme un) et les frontières.
+	Client_TT =	Les coordonnées sont relatives à la zone cliente de la fenêtre active, ce qui exclut la barre de titre de la fenêtre, le menu (si elle en a un standard) et les bords.
 	Clip_TT =	Utilise temporairement le Presse-papiers pour envoyer le texte.
 		Lorsque l'opération est terminée, le script
 		restaure le contenu du presse-papiers d'origine.
 		(Laisser vide pour coller du texte contenu actuel)
-	CM_TT =	Screen: Les coordonnées sont relatives au poste de travail (écran).
+	CM_TT =	Écran : Les coordonnées sont relatives au bureau (écran entier).
 		Window: Les coordonnées sont relatives à la fenêtre active.
 		Client: Les coordonnées sont relatives à la zone cliente de la fenêtre active, ce qui exclut la barre de titre de la fenêtre, le menu (si elle a une norme un) et les frontières.
 	CmdFilter_TT =	Filtrer par type
 	CmdSort_TT =	Classer par ordre alphabétique
 	ColorPick_TT =	Obtenir le pixel à l'écran
-	ComEvent_TT =	La vitesse à laquelle les frappes sont envoyés est déterminé par le retard de clé.
+	ComEvent_TT =	La vitesse à laquelle les frappes sont envoyés est déterminée par le retard de clé.
 	ComText_TT =	Quand il n'est pas en mode brut, les caractères suivants
 		sont traités comme des modificateurs (ces modificateurs n'affectent
 		que la toute prochaine clé):, +, ^, #
@@ -1023,9 +1023,9 @@
 	Ex_AF_TT =	Ignore la méthode douce de l'activation d'une fenêtre
 		et va directement à la méthode énergique.
 	Ex_CM_TT =	Définit le mode de coordonnées pour les fonctions de la souris par rapport à la fenêtre active ou à l'écran.
-	Ex_DH_TT =	Détermine si les fenêtres sont invisibles "vu" par le script.
+	Ex_DH_TT =	Détermine si les fenêtres invisibles sont "vu" par le script.
 	Ex_DT_TT =	Détermine si le texte invisible dans une fenêtre est «vu» dans le but de trouver la fenêtre. Cela affecte des commandes telles que IfWinExist et WinActivate.
-	Ex_EdScript_TT =	Ouvrir dans l'éditeur externe
+	Ex_EdScript_TT =	Ouvrir dans un éditeur externe
 	Ex_EdVars_TT =	Sélectionner des variables globales à exporter.
 	Ex_ExecScript_TT =	Exécuter le script
 	Ex_HK_TT =	Force l'utilisation du crochet pour tout implémenter
@@ -1041,12 +1041,12 @@
 	Ex_MT_TT =	Définit le nombre maximum de simultanés
 		par raccourci clavier ou par chaine.
 	Ex_NT_TT =	Désactive la projection d'une icône de la barre.
-	Ex_PT_TT =	Conserve un script qui s'exécute en permanence
-		(c'est-à-dire, jusqu'à ce que l'utilisateur ferme le ou ExitApp est rencontrée).
+	Ex_PT_TT =	Maintien l'éxécution d'un script en permanence
+		(c'est-à-dire, jusqu'à ce que l'utilisateur le ferme ou ExitApp soit trouvé).
 	Ex_SB_TT =	Détermine la vitesse à laquelle un script sera exécuté (affecte l'utilisation du processeur).
 	Ex_SC_TT =	Définit le retard qui se produira après
 		chaque contrôle-commande modifier.
-	Ex_SI_TT =	Détermine si un script est autorisé à courir quand il est déjà en cours d'exécution.
+	Ex_SI_TT =	Détermine si un script peut être exécuté quand il est déjà en cours d'exécution.
 	Ex_SK_TT =	Définit le délai qui aura lieu après chaque
 		frappe envoyée par envoi ou ControlSend.
 	Ex_SM_TT =	Rend la fonction 'Envoyer' identique à SendInput ou SendPlay plutôt que
@@ -1057,29 +1057,29 @@
 		chaque commande de fenêtrage, comme WinActivate.
 	Ex_UV_TT =	Exporter des variables globales.
 	Ex_WN_TT =	Active ou désactive les avertissements pour des conditions spécifiques qui peuvent indiquer une erreur, comme une faute de frappe ou manquante déclaration «globale».
-	ExpList_TT =	Double-cliquez dessus pour modifier
-	ExprLink2_TT =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+	ExpList_TT =	Double-cliquer dessus pour modifier
+	ExprLink2_TT =	- NE PAS AJOUTER LES VARIABLES AVEC SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
-		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
+		- Vous pouvez utiliser des chaînes, variables, tableaux et fonctions.
 		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var  "a".
-		- Déclarations multiples sont pris en charge, par exemple: var  "a" || InStr (var, "b").
-	ExprLink3_TT =	- NE JOIGNEZ PAS VARIABLES SIGNES DE POURCENTAGE ICI.
+		- Les déclarations multiples sont pris en charge. Exemple: var  "a" || InStr (var, "b").
+	ExprLink3_TT =	- NE PAS AJOUTER LES VARIABLES AVEC SIGNES DE POURCENTAGE ICI.
 		- La plupart des expressions de AHK sont pris en charge.
-		- Vous pouvez utiliser chaînes, variables, des tableaux et des fonctions.
-		- Pour utiliser des chaînes, le placer entre guillemets, par exemple: var = "a".
-		- Déclarations multiples sont pris en charge, par exemple: var = "a" || InStr (var, "b").
-	ExpView2_TT =	Éditeur Avancé
-	ExpView_TT =	Éditeur Avancé
+		- Vous pouvez utiliser des chaînes, variables, tableaux et fonctions.
+		- Pour utiliser des chaînes, mettez-les entre guillemets, par exemple: var = "a".
+		- Les déclarations multiples sont pris en charge. Exemple: var = "a" || InStr (var, "b").
+	ExpView2_TT =	Éditeur avancé
+	ExpView_TT =	Éditeur avancé
 	Fast_TT =	Utilise une méthode de recherche rapide (recommandé)
 	HiddenText_TT =	Détermine si le texte invisible dans une fenêtre est «vu» dans le but de trouver la fenêtre. Cela affecte des commandes telles que IfWinExist et WinActivate.
-	HiddenWin_TT =	Détermine si les fenêtres sont invisibles "vu" par le script.
-	HScale_TT =	Échelle de la hauteur
+	HiddenWin_TT =	Détermine si les fenêtres invisibles sont "vu" par le script.
+	HScale_TT =	Échelle de hauteur
 	IconN_TT =	Numéro du groupe icône
 	IfLVColor_TT =	Cliquer pour choisir une couleur
 	IncFiles_TT =	Inclure les fichiers/Valeurs
 	IncFolders_TT =	Inclure les répertoires (dossiers) /Touches
-	InsertKey_TT =	Insérer Frappe (Ctrl+Insert)
-	InsertKeyT_TT =	Insérer Frappe
+	InsertKey_TT =	Insérer une Frappe (Ctrl+Insert)
+	InsertKeyT_TT =	Insérer une Frappe
 	JoyKey_TT =	Appuyer sur un bouton de la manette
 	KeyDelayE_TT =	Définit le délai qui aura lieu après chaque frappe envoyée par Send et ControlSend.
 	LoopLVColor_TT =	Cliquer pour choisir une couleur
@@ -1095,22 +1095,22 @@
 	PauseKey_TT =	Raccourci clavier pour interrompre la lecture
 	PicPrev_TT =	Double-cliquer sur l'image pour l'ouvrir
 	Raw_TT =	La commande SendRaw interprète littéralement tous les caractères
-		plutôt que de traduire {Enter} à une touche ENTREE,
+		plutôt que de traduire {Enter} en tant que touche ENTREE,
 		^c pour Control-C, etc
 	RecKey_TT =	Retour arrière pour effacer
 	RecNewKey_TT =	Retour arrière pour effacer
-	Recurse_TT =	Récursifs dans les sous-répertoires (sous-dossiers) / subkeys
+	Recurse_TT =	Récursifs dans les sous-répertoires (sous-dossiers)/Sous-clés
 	RefreshIEW_TT =	Actualiser la liste
 	Relative_TT =	Les coordonnées sont relatives à la fenêtre active.
-	RelKey_TT =	Enregistre les mouvements de souris et de clics que les
-		compensations de la position précédente tenu.
+	RelKey_TT =	Enregistre les mouvements de la souris et les clics comme des décalages
+		par rapport à la position précédente lorsqu'ils sont maintenus actifs.
 	ReptC_TT =	0 = infini
 	Reset_TT =	Effacer le contenu des variables
 	RGB_TT =	Fait qu'une couleur est interprétée comme une valeur RVB au lieu de BGR
-	Screen_TT =	Les coordonnées sont relatives au poste de travail (écran).
+	Screen_TT =	Les coordonnées sont relatives au bureau (écran entier).
 	Screenshot_TT =	Faire une capture d'écran
 	SetText_TT =	Modifie le texte d'un contrôle.
-	SI_TT =	Le mot force saute la boîte de dialogue et remplace automatiquement l'ancienne instance,
+	SI_TT =	Le mot FORCE ignore la boîte de dialogue et remplace automatiquement l'ancienne instance,
 		qui est similaire à l'effet de la commande Recharger.
 		Le mot IGNORE ignore la boîte de dialogue et laisse l'ancienne instance en cours d'exécution.
 		En d'autres termes, les tentatives d'exécution d'un script déjà lancé sont ignorées.
@@ -1118,7 +1118,7 @@
 	SM_TT =	Évènement: C'est la configuration par défaut utilisée par tous les scripts.
 		Il utilise la méthode de SendEvent pour Envoyer, SendRaw, Cliquer, et Mouvement/cliquer/glisser de la souris.
 		Entrée: Passe à la méthode de SendInput Envoyer, SendRaw, Cliquez, et Movement/cliquer/glisser de la souris
-		EntréePuisLecture: Idem que ci-dessus sauf que plutôt que de retomber sur le mode de l'événement
+		EntréePuisLecture: Idem que ci-dessus sauf que, plutôt que de retomber sur le mode de l'événement,
 		quand SendInput n'est pas disponible, il revient au mode de lecture (ci-dessous). Cela provoque également
 		la commande SendInput elle-même pour revenir en mode Lecture lorsque SendInput n'est pas disponible.
 		Jouer: Passe à la méthode de SendPlay pour Envoyer, SendRaw, Cliquer, et Movement/cliquer/glisser de la souris.
@@ -1135,7 +1135,7 @@
 		RegEx: Modifie les propriétés WinTitle, WinText, Exclure Titre et Exclure texte en expressions régulières.
 	TitleSpeed_TT =	Rapide: Les performances peuvent être sensiblement mieux que lente, mais certains éléments de WinText ne peut pas être «vu».
 		Lente: Peut être beaucoup plus lent, mais tout WinText possible est récupéré de chaque fenêtre.
-	ToggleC_TT =	Activer l'enregistrement relative lorsque l'état touche est activée.
+	ToggleC_TT =	Activer l'enregistrement relatif lorsque la touche d'état est activée.
 	TransC_TT =	Couleur transparente
 	VarCopyA_TT =	Copier le contenu des variables actuelles
 	VarCopyB_TT =	Copier le contenu des variables actuelles
@@ -1148,13 +1148,13 @@
 	As_Oper_03 =	Soustraire
 	As_Oper_04 =	Multiplier
 	As_Oper_05 =	Diviser
-	As_Oper_06 =	Répartition par étage
+	As_Oper_06 =	Répartition par palier
 	As_Oper_07 =	Concaténer
 	As_Oper_08 =	Bitwise inclusive OR
 	As_Oper_09 =	Bitwise AND
 	As_Oper_10 =	Bitwise exclusive OR
-	As_Oper_11 =	MAJ Droite ET
-	As_Oper_12 =	MAJ Gauche ET
+	As_Oper_11 =	Déplacement à droite ET
+	As_Oper_12 =	Déplacement à gauche ET
 	Co_Oper_01 =	Est égal à
 	Co_Oper_02 =	Est égal à (sensible à la casse)
 	Co_Oper_03 =	Différent de
@@ -1165,33 +1165,33 @@
 	Co_Oper_08 =	Dans (liste)
 	Co_Oper_09 =	Pas dans (liste)
 	Co_Oper_10 =	Contient (liste)
-	Co_Oper_11 =	Non contient pas (liste)
+	Co_Oper_11 =	Ne contient pas (liste)
 	Co_Oper_12 =	Entre (ligne 1) et (ligne 2)
 	Co_Oper_13 =	Pas entre (ligne 1) et (ligne 2)
 	Co_Oper_14 =	Est (type)
-	Co_Oper_15 =	Est pas (type)
+	Co_Oper_15 =	N'est pas (type)
 		
 ; 21. IE Commands Tips		
 	IE_Cmd_Index =	
 	Checked	Définit ou récupère l'état de la case à cocher ou d'un bouton radio.
 	Click	Simule un clic sur l'objet.
 	Focus	Attribue le focus à l'objet.
-	GoBack	Navigue en arrière d'un élément dans la liste d'historique.
-	GoForward	Navigue en avant un élément dans la liste d'historique.
-	GoHome	Accède à la maison ou la page de démarrage.
+	GoBack	Permet de revenir en arrière sur un élément de la liste historique.
+	GoForward	Permet d'avancer d'un élément dans la liste de l'historique.
+	GoHome	Accède à la page d'accueil ou page de démarrage.
 	GoSearch	Accède à la page de recherche en cours.
 	Height	Définit ou récupère la hauteur de l'objet.
 	Href	Définit ou récupère une URL de destination ou un point d'ancrage.
 	InnerHTML	Définit ou récupère le code HTML de l'objet.
 	InnerText	Définit ou obtient le texte de l'objet.
 	Length	Définit ou récupère le nombre d'objets dans une collection.
-	LocationName	Obtient le chemin ou la page de titre actuel.
+	LocationName	Permet d'obtenir le chemin d'accès ou le titre de la page en cours.
 	LocationURL	Obtient l'URL de la page actuelle.
 	Navigate	Navigue vers une URL ou un chemin.
-	OuterHTML	Définit ou récupère l'objet et son contenu en HTML.
+	OuterHTML	Définit ou récupère l'objet et son contenu en langage HTML.
 	Quit	Ferme la page.
 	Refresh	Recharge la page actuellement affichée.
-	SelectedIndex	Définit ou récupère l'index de l'option choisie dans un objet select.
+	SelectedIndex	Définit ou récupère l'index de l'option choisie dans un objet défini.
 	Src	Définit ou récupère une URL à charger par l'objet.
 	Stop	Annule une navigation en attente ou un téléchargement.
 	Submit	Envoie le formulaire.
@@ -1202,8 +1202,8 @@
 ; 22. COM Objects Tips		
 	COM_CLSID_Index =	
 	Excel.Application	Manipule les feuilles Excel.
-	HTMLfile	Peut être utilisé pour lire, écrire et interagir avec HTML.
-	InternetExplorer.Application	Explorer les sites.
+	HTMLfile	Peut être utilisé pour lire, écrire et interagir avec le langage HTML.
+	InternetExplorer.Application	Explorer les sites internet.
 	MSXML2.DOMDocument.6.0	Analyseur XML.
 	MSXML2.XMLHTTP	Représente une requête XML via HTTP.
 	Outlook.Application	Manipule les tâches et éléments Outlook.
@@ -1213,7 +1213,7 @@
 	Scripting.Dictionary	Objet stockant les clés de données,ou paires d'objets.
 	Scripting.FileSystemObject	Accés aux fichiers et dossiers
 	Shell.Application	Accès aux fenêtres/onglets de l'explorateur et IE; ouvre et manipule les fenêtres.
-	Shell.Explorer	Intégrer un contrôle Explorer / Browser dans une interface graphique (Internet Explorer - navigateur trident).
+	Shell.Explorer	Intégrer un contrôle Explorer/Navigateur dans une interface graphique utilisateur (Internet Explorer - Navigateur trident).
 	SAPI.SpVoice	Text-to-Speech (TTS).
 	VBScript.RegExp	Expressions régulières VBS (y compris correspondance globale).
 	WMPlayer.OCX	Lire des fichiers multimédia; Intégre le contrôle WMPlayer dans une interface graphique.
@@ -1227,39 +1227,39 @@
 	Abs	Retourne la valeur absolue d'un nombre.
 	ACos	Retourne le cosinus (le nombre dont le cosinus est un nombre) en radians.
 	Array	Crée un tableau associatif scriptable avec des clés entières.
-	Asc	Retourne le code de caractères (un nombre entre 1 et 255 (ANSI builds) ou 65535 (dans les versions Unicode)) pour le premier caractère de la chaîne .
+	Asc	Retourne le code de caractères (un nombre entre 1 et 255 (ANSI builds) ou 65535 (dans les versions Unicode)) pour le premier caractère de la chaîne.
 	ASin	Renvoie l' arc sinus (le nombre dont le sinus est un nombre) en radians.
 	ATan	Renvoie l'arctangente (le nombre dont la tangente est un nombre) en radians.
 	BlockInput	Active ou désactive la faculté de l'utilisateur d'interagir avec l'ordinateur via le clavier et la souris.
-	Break	Quitte (ferme) une boucle. Valable dans n'importe quelle sorte de boucle .
-	CDO	Envoie des emails en utilisant un compte défini par l'utilisateur.
+	Break	Quitte (ferme) une boucle. Valable dans n'importe quel type de boucle.
+	CDO	Envoie des courriels en utilisant un compte défini par l'utilisateur.
 	Ceil	Retourne le nombre arrondi à l'entier le plus proche (sans suffixe .00) .
 	Chr	Renvoie le caractère unique correspondant au code de caractère indiqué par le numéro.
-	Click	Clique sur un bouton de la souris aux coordonnées indiquées. Il peut également maintenir une touche enfoncée, tourner la roue, ou bouger la souris.
+	Click	Clique sur un bouton de la souris aux coordonnées indiquées. Il peut également maintenir une touche enfoncée, tourner la molette, ou déplacer la souris.
 	Clipboard	Colle le texte du presse-papiers.
 	ClipWait	Attend que le presse-papiers contienne des données.
 	ComObjActive	Récupère un objet COM enregistré.
-	ComObjArray	Crée un SAFEARRAY pour une utilisation avec COM .
-	ComObjConnect	Connecte les sources d'événements d'un objet COM à des fonctions avec un préfixe donné .
-	ComObjCreate	Crée un objet COM .
-	ComObjEnwrap / ComObjUnwrap	Wraps / déballe un objet COM .
+	ComObjArray	Crée un SAFEARRAY pour une utilisation avec COM.
+	ComObjConnect	Relie les sources d'événements d'un objet COM aux fonctions ayant un préfixe donné.
+	ComObjCreate	Crée un objet COM.
+	ComObjEnwrap / ComObjUnwrap	Encapsule/Libère un objet COM.
 	ComObjError	Active ou désactive la notification des erreurs COM .
 	ComObjFlags	Récupère ou change les marqueurs qui contrôlent le comportement d'un objet wrapper COM.
-	ComObjGet	Renvoie une référence à un objet fourni par un composant COM .
-	ComObjMissing	Crée un objet "paramètre manquant" pour passer à une méthode COM.
-	ComObjParameter	Encapsule une valeur et un type à passer comme paramètre à une méthode COM .
-	ComObjQuery	Interroge un objet COM pour une interface ou d'un service.
-	ComObjType	Récupère les informations du type d'un objet COM .
-	ComObjValue	Extrait la valeur ou le pointeur stockés dans un objet de wrapper COM .
-	Continue	Ignore le reste de l'itération de la boucle courante et commence un nouveau. Valable dans une sorte de boucle .
-	Control	Fait divers changements sur un contrôle.
-	ControlClick	Envoie un bouton de la souris ou un événement de roue de la souris à un contrôle.
-	ControlEditPaste	Colle la chaîne à la position du curseur/d'insertion dans un contrôle Edit (cela n'affecte pas le contenu du presse-papiers) .
+	ComObjGet	Renvoie une référence à un objet fournie par un composant COM .
+	ComObjMissing	Crée un objet "paramètre manquant" à transmettre à une méthode COM.
+	ComObjParameter	Encapsule une valeur et un type à transmettre comme paramètre à une méthode COM .
+	ComObjQuery	Interroge un objet de type COM pour une interface ou un service.
+	ComObjType	Récupère les informations d'un objet de type COM .
+	ComObjValue	Extrait la valeur ou le pointeur stockés dans un objet de type COM wrapper.
+	Continue	Ignore le reste de l'itération de la boucle courante et en démarre une nouvelle. Valable sur n'importe quel type de boucle .
+	Control	Effectue divers changements sur un contrôle.
+	ControlClick	Envoie un événement d'un bouton ou de la roue de la souris à un contrôle.
+	ControlEditPaste	Colle la chaîne à la position du curseur ou d'insertion dans un contrôle Edit (cela n'affecte pas le contenu du presse-papiers) .
 	ControlFocus	Définit le focus d'entrée sur un contrôle donné dans une fenêtre.
 	ControlGet	Récupère différents types d'informations sur un contrôle
 	ControlGetFocus	Récupère quel contrôle de la fenêtre cible a le focus d'entrée, le cas échéant.
 	ControlGetPos	Récupère la position et la taille d'un contrôle.
-	ControlGetText	Extrait texte à partir d'une commande .
+	ControlGetText	Extrait texte à partir d'une commande.
 	ControlMove	Déplace ou redimensionne un contrôle.
 	ControlSend / ControlSendRaw	Envoie des frappes simulées à une fenêtre ou à un contrôle.
 	ControlSetText	Modifie le texte d'un contrôle.
@@ -1267,28 +1267,28 @@
 	Cos	Retourne le cosinus trigonométrique du nombre.
 	Delete	Supprime les paires clé-valeur d'un objet.
 	DllCall	Appelle une fonction dans une DLL, telle une fonction de l'API Windows standard.
-	Drive	Éjecte/rétracte le plateau dans un lecteur de CD ou de DVD, ou définit le nom de volume d'un lecteur.
-	DriveGet	Récupère différents types d'informations sur le lecteur de l'ordinateur (s) .
+	Drive	Éjecte/rétracte le plateau d'un lecteur de CD ou DVD, ou définit le nom de volume d'un lecteur.
+	DriveGet	Récupère différents types d'informations sur le(s) lecteur(s) de l'ordinateur.
 	DriveSpaceFree	Récupère l'espace libre sur une lecteur en mégaoctets.
-	Else	Indique la commande (s) à exécuter si une instruction if évalue à FALSE . Lorsque plus d'une commande est présente , mettez-les dans un bloc (accolades) .
-	EnvAdd	Définit une variable à la somme elle-même , plus la valeur donnée (on peut aussi ajouter ou soustraire le temps à partir d'une valeur date-heure) . Synonyme de : Var+= valeur.
-	EnvDiv	Définit une variable d' elle-même divisée par la valeur donnée. Synonyme de : Var / = Valeur .
+	Else	Indique la(les) commande(s) à exécuter si une condition SI évalue à FALSE . Lorsque plus d'une commande est présente, mettez-les dans un bloc (accolades).
+	EnvAdd	Définit une variable ajoutée à elle-même, en y ajoutant la valeur donnée (on peut aussi ajouter ou soustraire le temps à partir d'une valeur date-heure) . Synonyme de : Var+= valeur.
+	EnvDiv	Définit une variable elle-même divisée par la valeur donnée. Synonyme de : Var / = Valeur .
 	EnvGet	Récupère une variable d'environnement.
-	EnvMult	Définit une variable d' elle-même fois la valeur donnée. Synonyme de : Var * = valeur.
+	EnvMult	Définit une variable elle-même n fois la valeur donnée. Synonyme de : Var * = valeur.
 	EnvSet	Écrit une valeur dans une variable contenu dans l'environnement.
-	EnvSub	Définit une variable d' elle-même diminuée de la valeur donnée (on peut aussi comparer les valeurs date-heure) . Synonyme de : Var - = valeur.
-	EnvUpdate	Avertit le système d'exploitation et toutes les applications en cours d'exécution que la variable d'environnement (s) ont changé.
+	EnvSub	Définit une variable elle-même diminuée de la valeur donnée (on peut aussi comparer les valeurs date-heure) . Synonyme de : Var - = valeur.
+	EnvUpdate	Avertit le système d'exploitation et toutes les applications en cours d'exécution que la (les) variable(s) d'environnement a (ont) changé.
 	ExitApp	Termine le script sans condition.
 	Exp	Renvoie e (qui est d'environ 2.71828182845905) élevé à la puissance n .
-	Expression	Effectue une ou plusieurs opérations sur une série de variables, les chaînes littérales, et / ou numéros littérales.
-	FileAppend	Ecrit un texte à la fin d'un fichier (première création du fichier, si nécessaire).
+	Expression	Effectue une ou plusieurs opérations sur une série de variables, les chaînes littérales, et/ou numéros littérales.
+	FileAppend	Ecrit un texte à la fin d'un fichier (en créant le fiichier au préalable, si nécessaire).
 	FileCopy	Copie un ou plusieurs fichiers.
-	FileCopyDir	Copie d'un dossier avec tous ses sous-dossiers et fichiers (similaire à XCOPY) .
+	FileCopyDir	Copie un dossier avec tous ses sous-dossiers et fichiers (similaire à XCOPY) .
 	FileCreateDir	Crée un dossier.
-	FileCreateShortcut	Crée un raccourci (. Lnk) .
+	FileCreateShortcut	Crée un raccourci (.Lnk) .
 	FileDelete	Supprime un ou plusieurs fichiers.
-	FileGetAttrib	Indique si un fichier ou un dossier est en lecture seule , caché, etc
-	FileGetShortcut	Récupère les informations relatives à un fichier raccourci (.Lnk) , tels que le fichier cible.
+	FileGetAttrib	Indique si un fichier ou un dossier est en lecture seule, caché, etc...
+	FileGetShortcut	Récupère les informations relatives à un fichier raccourci (.Lnk) , tel que son fichier cible.
 	FileGetSize	Récupère la taille d'un fichier.
 	FileGetTime	Récupère le marqueur datetime d'un fichier ou d'un dossier.
 	FileGetVersion	Récupère la version d'un fichier.
@@ -1305,7 +1305,7 @@
 	FileSetAttrib	Modifie les attributs d'un ou plusieurs fichiers ou dossiers. Les caractères génériques sont pris en charge.
 	FileSetTime	Modifie le timbre datetime d'un ou plusieurs fichiers ou dossiers. Les caractères génériques sont pris en charge.
 	Floor	Retourne le nombre arrondi à l'entier le plus proche (sans suffixe .00) .
-	For	Répéter une série de commandes une fois pour chaque paire clé-valeur dans un objet.
+	For	Répéte une série de commandes une fois pour chaque paire clé-valeur dans un objet.
 	Format	Formate un nombre variable de valeurs d'entrée selon une chaîne de format.
 	FormatTime	Transforme un horodatage YYYYMMDDHH24MISS dans le format de date / heure spécifiée .
 	Func	Récupère une référence à une fonction .
