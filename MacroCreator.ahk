@@ -16196,7 +16196,7 @@ Else
 	Menu, PlayOptMenu, Uncheck, %t_Lang107%
 
 Count := 2
-Loop, 5
+Loop, 8
 {
 	Menu, SpeedUpMenu, Uncheck, %Count%x
 	Menu, SpeedDnMenu, Uncheck, %Count%x
