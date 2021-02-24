@@ -5,8 +5,8 @@
 ; Author: Pulover [Rodolfo U. Batista]
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
-; Version: 5.4.0
-; Release Date: January, 2021
+; Version: 5.4.1
+; Release Date: February, 2021
 ; AutoHotkey Version: 1.1.32.00
 ; Copyright © 2012-2021 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
@@ -77,7 +77,7 @@ https://www.macrocreator.com/project/
 ; Compiler Settings
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
-;@Ahk2Exe-SetVersion 5.4.0
+;@Ahk2Exe-SetVersion 5.4.1
 ;@Ahk2Exe-SetCopyright Copyright © 2012-2021 Rodolfo U. Batista
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.4.0", ReleaseDate := "January, 2021"
+CurrentVersion := "5.4.1", ReleaseDate := "February, 2021"
 
 ;##### Ini File Read #####
 
@@ -4125,8 +4125,7 @@ If (IsObject(VerChk))
 		Gui, Update:+owner1 +ToolWindow
 		Gui, 1:+Disabled
 		Gui, Update:Add, ActiveX, W600 H400 vWB, about:<!DOCTYPE html><meta http-equiv="X-UA-Compatible" content="IE=edge">
-		Gui, Update:Add, Button, -Wrap Section Default xm W290 H23 gTransferUpdate, %d_Lang116%
-		Gui, Update:Add, Button, -Wrap yp x+20 W290 H23 gDownloadPage, %d_Lang117%
+		Gui, Update:Add, Button, -Wrap Section Default xm W600 H23 gDownloadPage, %d_Lang117%
 		Gui, Update:Add, Button, -Wrap xm W290 H23 gUpdateCancel, %d_Lang061%
 		Gui, Update:Add, Button, -Wrap yp x+20 W290 H23 gUpdateDisable, % SubStr(d_Lang053, 1, -1)
 
@@ -6666,13 +6665,6 @@ If (s_Caller = "Edit")
 						GuiControl, 12:, TimesL, %TimesX%
 					Par1 := ""
 					GoSub, LoopType
-					If (Target != "")
-					{
-						GuiControl, 12:, LUntil, 1
-						GoSub, LoopType
-						GuiControl, 12:Enable, UntilExpr
-						GuiControl, 12:, UntilExpr, %Target%
-					}
 				Case cType38:
 					GuiControl, 12:, LRead, 1
 					GoSub, LoopType
@@ -6707,6 +6699,13 @@ If (s_Caller = "Edit")
 					GuiControl, 12:, LWhile, 1
 					GoSub, LoopType
 					GuiControl, 12:, LParamsFile, %Details%
+			}
+			If (Target != "")
+			{
+				GuiControl, 12:, LUntil, 1
+				GoSub, LoopType
+				GuiControl, 12:Enable, UntilExpr
+				GuiControl, 12:, UntilExpr, %Target%
 			}
 			GoSub, ClearPars
 	}

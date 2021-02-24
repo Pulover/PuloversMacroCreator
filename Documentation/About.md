@@ -7,8 +7,8 @@
 Author: Pulover \[Rodolfo U. Batista\]  
 Copyright © 2012-2021 Rodolfo U. Batista  
 
-Version: 5.4.0  
-Release Date: January, 2021  
+Version: 5.4.1  
+Release Date: February, 2021  
 AutoHotkey Version: 1.1.32.00  
 
 Software License: [GNU General Public License](License.html)  
@@ -37,6 +37,10 @@ chosen1ft for suggestions and testing.
 
 
 # Change Log
+
+## Version 5.4.1
+* Fixed *Until* option unchecked when editting a loop command.
+* Fixed bug when selecting some options in the Speed Up/Down menus.
 
 ## Version 5.4.0
 * Fixed missing or mixed rows when importing files.
