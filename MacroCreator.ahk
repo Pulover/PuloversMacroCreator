@@ -6,8 +6,8 @@
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
 ; Version: 5.4.1
-; Release Date: February, 2021
-; AutoHotkey Version: 1.1.32.00
+; Release Date: March, 2021
+; AutoHotkey Version: 1.1.33.06
 ; Copyright © 2012-2021 Rodolfo U. Batista
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
 ; under the terms of the UNLICENSE here: <https://unlicense.org/UNLICENSE>
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.4.1", ReleaseDate := "February, 2021"
+CurrentVersion := "5.4.1", ReleaseDate := "March, 2021"
 
 ;##### Ini File Read #####
 

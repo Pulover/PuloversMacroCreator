@@ -8,8 +8,8 @@ Author: Pulover \[Rodolfo U. Batista\]
 Copyright © 2012-2021 Rodolfo U. Batista  
 
 Version: 5.4.1  
-Release Date: February, 2021  
-AutoHotkey Version: 1.1.32.00  
+Release Date: March, 2021  
+AutoHotkey Version: 1.1.33.06  
 
 Software License: [GNU General Public License](License.html)  
 
