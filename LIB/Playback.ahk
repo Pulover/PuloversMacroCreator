@@ -301,7 +301,8 @@
 					{
 						If _value in %GlobalList%
 							continue
-						%_value% := SVRef[_value]
+						If (%_value% != "")
+							%_value% := SVRef[_value]
 					}
 					SavedVars(,,, RunningFunction, true)
 				}
@@ -1026,7 +1027,8 @@
 			{
 				If _value in %GlobalList%
 					continue
-				%_value% := SVRef[_value]
+				If (%_value% != "")
+					%_value% := SVRef[_value]
 			}
 			SavedVars(,,, RunningFunction, true)
 		}
