@@ -35,6 +35,7 @@ Eval($x, _CustomVars := "", _Init := true)
 	$x := RegExReplace($x, "U)/\*.*\*/"), $x := RegExReplace($x, "U)\s;.*(\v|$)")
 	
 	; Replace brackets, braces, parenthesis and literal strings
+	
 	While (RegExMatch($x, "sU)"".*""", _String))
 		_Elements["&_String" A_Index "_&"] := _String
 	,	$x := RegExReplace($x, "sU)"".*""", "&_String" A_Index "_&",, 1)
@@ -216,7 +217,7 @@ Eval($x, _CustomVars := "", _Init := true)
 			,	$z[$i] := """<~#" ObjName "#~>"""
 			}
 		}
-		
+
 		; Check for {} object assignment
 		If (RegExMatch($z[$i], "\{\s*\}", _Match))
 		{
@@ -285,7 +286,7 @@ Eval($x, _CustomVars := "", _Init := true)
 				_Objects[ObjName] := $y
 			Else If $y is not Number
 			{
-				$y := """" $y """"
+				$y := """" StrReplace($y, """", $Quote) """"
 			,	HidString := "&_String" (ObjCount(_Elements) + 1) "_&"
 			,	_Elements[HidString] := $y
 			,	$y := HidString
@@ -355,7 +356,7 @@ Eval($x, _CustomVars := "", _Init := true)
 				$z.Delete(_i)
 		}
 	}
-	
+
 	return $z
 }
 
@@ -561,8 +562,16 @@ ExprEval(e,lp,eo,el)
 	Loop,Parse,e,%c1%
 	{
 		lf:=A_LoopField,tt:=SubStr(lf,1,1),t:=SubStr(lf,2)
-		While (RegExMatch(lf,"&_String\d+_&",rm))
+		While (RegExMatch(lf,"&_String\d+_&",rm)){
 		lf:=StrReplace(lf,rm,el[rm])
+	,	lf:=StrReplace(lf,"``n","`n")
+	,	lf:=StrReplace(lf,"``r","`r")
+	,	lf:=StrReplace(lf,"``b","`b")
+	,	lf:=StrReplace(lf,"``t","`t")
+	,	lf:=StrReplace(lf,"``v","`v")
+	,	lf:=StrReplace(lf,"``a","`a")
+	,	lf:=StrReplace(lf,"``f","`f")
+		}
 		If tt In l,v
 		lf:=Exprp1(s,lf)
 		Else{
