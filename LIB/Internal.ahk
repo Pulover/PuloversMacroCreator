@@ -1464,12 +1464,17 @@ SavePrompt(State, _Caller)
 		Menu, FileMenu, Disable, %f_Lang003%`t%_s%Ctrl+S
 }
 
-SaveProject(FileName)
+SaveProject(FileName, ShowSplash := True)
 {
 	local All_Data
 
 	All_Data := "[PMC Globals]|" IfDirectContext "|" IfDirectWindow "|" ExpIcon "`n"
 	Sleep, 100
+	If (ShowSplash)
+	{
+		Gui, 1:+Disabled
+		SplashTextOn, 300, 25, %AppName%, %d_Lang121%
+	}
 	Loop, %TabCount%
 	{
 		PMCSet := "[PMC Code v" CurrentVersion "]|" o_AutoKey[A_Index]
@@ -1479,8 +1484,14 @@ SaveProject(FileName)
 		TabGroups := "Groups=" LVManager[A_Index].GetGroups() "`n"
 		LV_Data := PMCSet . IfContext . TabGroups . PMC.LVGet("InputList" A_Index).Text . "`n"
 		All_Data .= LV_Data
+		Sleep, 10
 	}
 	FileAppend, %All_Data%, %FileName%
+	If (ShowSplash)
+	{
+		Gui, 1:-Disabled
+		SplashTextOff
+	}
 }
 
 TreeGetChecked()

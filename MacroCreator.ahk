@@ -2215,7 +2215,7 @@ If ((Record) || (BackupFound))
 	return
 BackupFileName := SettingsFolder "\~ActiveProject.pmc"
 FileDelete, %BackupFileName%
-SaveProject(BackupFileName)
+SaveProject(BackupFileName, False)
 return
 
 RecentFiles:

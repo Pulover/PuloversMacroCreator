@@ -39,6 +39,7 @@ chosen1ft for suggestions and testing.
 # Change Log
 
 ## Version 5.4.1
+* Added a sleep when collecting data to save project to improve reliability.
 * Fixed bug with escaped characters in expressions.
 * Fixed *Until* option unchecked when editting a loop command.
 * Fixed bug when selecting some options in the Speed Up/Down menus.
