@@ -45,13 +45,20 @@ If (ErrorLevel = "ERROR")
 	MsgBox, 0x40000, Error, % "Error code: " A_LastError " at line " A_LineNumber - 3
 	ExitApp
 }
-
+While (!FileExist("Compiled\MacroCreator.exe"))
+	Sleep, 100
 RunWait, %AhkDir%\Compiler\Ahk2Exe.exe /in MacroCreator.ahk /out Compiled\MacroCreator-x64.exe /icon Resources\PMC4_Mult.ico /bin "%AhkDir%\Compiler\Unicode 64-bit.bin" /compress 2,, UseErrorLevel
 If (ErrorLevel = "ERROR")
 {
 	MsgBox, 0x40000, Error, % "Error code: " A_LastError " at line " A_LineNumber - 3
 	ExitApp
 }
+While (!FileExist("Compiled\MacroCreator-x64.exe"))
+	Sleep, 100
+
+MsgBox, 262209, Sign executables, Sign executables with a valid certificate and click OK to continue.
+IfMsgBox, Cancel
+	ExitApp
 
 RunWait, %ProgramFiles%\Inno Setup 6\iscc.exe  %A_ScriptDir%\Installer.iss,, UseErrorLevel
 If (ErrorLevel = "ERROR")
