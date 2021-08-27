@@ -22,9 +22,9 @@ Script =
 (
 #define PmcName "Pulover's Macro Creator"
 #define PmcVersion "%PMCVer%"
-#define PmcCompany "Rodolfo U. Batista"
+#define PmcCompany "Cloversoft Serviços de Informática Ltda"
 #define PmcURL "https://www.macrocreator.com"
-#define PmcCopyright "Copyright (C) 2012-2021 Rodolfo U. Batista"
+#define PmcCopyright "Copyright (C) 2012-2021 Cloversoft Serviços de Informática Ltda"
 #define PmcExeName "MacroCreator.exe"
 #define PmcExt "pmc"
 #define WorkDir "%A_ScriptDir%"

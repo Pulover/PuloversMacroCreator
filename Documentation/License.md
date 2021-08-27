@@ -2,7 +2,7 @@
 
 ## License for Pulover's Macro Creator
 
-Copyright 2012-2021 by Rodolfo U. Batista  
+Copyright 2012-2021 by Cloversoft Serviços de Informática Ltda  
 
 > I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
 > under the terms of the UNLICENSE here: <http://unlicense.org/UNLICENSE>

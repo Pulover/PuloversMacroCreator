@@ -6,9 +6,9 @@
 ; Home: https://www.macrocreator.com
 ; Forum: https://www.autohotkey.com/boards/viewforum.php?f=63
 ; Version: 5.4.1
-; Release Date: March, 2021
-; AutoHotkey Version: 1.1.33.06
-; Copyright © 2012-2021 Rodolfo U. Batista
+; Release Date: September, 2021
+; AutoHotkey Version: 1.1.33.09
+; Copyright © 2012-2021 Cloversoft Serviços de Informática Ltda
 ; I specifically grant Michael Wong (user guest3456 on AHK forums) use of this code
 ; under the terms of the UNLICENSE here: <https://unlicense.org/UNLICENSE>
 ; For everyone else, the GPL below applies.
@@ -78,7 +78,7 @@ https://www.macrocreator.com/project/
 ;@Ahk2Exe-SetName Pulover's Macro Creator
 ;@Ahk2Exe-SetDescription Pulover's Macro Creator
 ;@Ahk2Exe-SetVersion 5.4.1
-;@Ahk2Exe-SetCopyright Copyright © 2012-2021 Rodolfo U. Batista
+;@Ahk2Exe-SetCopyright Copyright © 2012-2021 Cloversoft Serviços de Informática Ltda
 ;@Ahk2Exe-SetOrigFilename MacroCreator.exe
 
 ; AutoHotkey settings:
@@ -144,7 +144,7 @@ Loop
 		break
 }
 
-CurrentVersion := "5.4.1", ReleaseDate := "March, 2021"
+CurrentVersion := "5.4.1", ReleaseDate := "September, 2021"
 
 ;##### Ini File Read #####
 
@@ -4103,6 +4103,7 @@ ComObjError(false)
 VerChk := ""
 url := "https://www.macrocreator.com/lang"
 whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+whr.SetTimeouts(0, 5000, 5000, 5000)
 whr.open("GET", url, false)
 Try
 {
@@ -4237,7 +4238,7 @@ Gui, 34:Add, Link,, <a href="https://www.macrocreator.com">www.macrocreator.com<
 Gui, 34:Add, Text,, Author: Pulover [Rodolfo U. Batista]
 Gui, 34:Add, Text, -Wrap R1 y+0,
 (
-Copyright © 2012-2021 Rodolfo U. Batista
+Copyright © 2012-2021 Cloversoft Serviços de Informática Ltda
 
 Version: %CurrentVersion% (%OsBit%)
 Release Date: %ReleaseDate%
@@ -8759,6 +8760,12 @@ Else If (A_ThisLabel = "AsVar")
 	GuiControl, 21:Choose, TabControl, 2
 	GuiTitle := c_Lang010
 	SBShowTip("Variable")
+	If (EvalDefault)
+	{
+		GuiControl, 21:Hide, VarTip
+		GuiControl, 21:Show, ArrayTip
+		GuiControl, 21:Show, ExprLink2
+	}
 }
 Else If (A_ThisLabel = "AsFunc")
 {

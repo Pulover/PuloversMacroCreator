@@ -5,11 +5,11 @@
 [Forum](https://www.autohotkey.com/boards/viewforum.php?f=63)  
 
 Author: Pulover \[Rodolfo U. Batista\]  
-Copyright © 2012-2021 Rodolfo U. Batista  
+Copyright © 2012-2021 Cloversoft Serviços de Informática Ltda  
 
 Version: 5.4.1  
-Release Date: March, 2021  
-AutoHotkey Version: 1.1.33.06  
+Release Date: September, 2021  
+AutoHotkey Version: 1.1.33.09  
 
 Software License: [GNU General Public License](License.html)  
 

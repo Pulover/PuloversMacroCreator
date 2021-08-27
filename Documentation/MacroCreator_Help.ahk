@@ -6,7 +6,7 @@
 		[Forum](https://www.autohotkey.com/boards/viewforum.php?f=63)
 		
 		Author: Pulover [Rodolfo U. Batista]  
-		©2012-2021 Rodolfo U. Batista
+		©2012-2021 Cloversoft Serviços de Informática Ltda
 		
 		Software License: [GNU General Public License](License.html)
 		
