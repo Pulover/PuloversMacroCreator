@@ -32,7 +32,7 @@ The source for SciLexer.dll can be found at [fincs/SciTE4AutoHotkey](https://git
 
 The source for tesseract.exe can be found at [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract).
 
-Installer is created with [Inno Setup](https://jrsoftware.org/).
+Installer is created with [Inno Setup 6](https://jrsoftware.org/).
 
 If you need to compile you may run the *Compile.ahk* script which generates the necessary files locally to create *MacroCreator.exe*, *MacroCreator-x64.exe*, *MacroCreator_Help.chm* and *MacroCreator-setup.exe*.
 

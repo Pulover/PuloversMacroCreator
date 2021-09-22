@@ -669,18 +669,12 @@ If (!LangFiles.HasKey(Lang))
 		ExitApp
 	VerChk := ""
 	url := "https://www.macrocreator.com/lang"
-	whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-	whr.open("GET", url, false)
-	; whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
-	; whr.SetRequestHeader("Referer", url)
-	; whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 	Try
 	{
-		whr.Send()
-		ResponseText := whr.ResponseText
-		document := ComObjCreate("HTMLfile")
-		document.write(ResponseText)
-		VerChk := Eval(document.body.InnerText)[1]
+		UrlDownloadToFile, %url%, %A_Temp%\lang.json
+		FileRead, ResponseText, %A_Temp%\lang.json
+		ResponseText := RegExReplace(ResponseText, "ms).*(\{.*\}).*", "$1")
+		VerChk := Eval(ResponseText)[1]
 	}
 	If (!IsObject(VerChk))
 		MsgBox, 16, Pulover's Macro Creator, An error occurred.
@@ -3241,8 +3235,7 @@ Gui, 4:Add, Edit, y+5 xs+10 W380 R3 vRowRef -WantReturn ReadOnly
 Gui, 4:Add, Text, -Wrap R1 y+5 xs+10 W260, %t_Lang180%
 Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 Disabled vSaveLang gSaveLang, %t_Lang127%
 Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCreateLangFile, %t_Lang179%
-Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gSubmitTrans, %t_Lang181%
-Gui, 4:Add, Button, -Wrap yp-25 x+20 W115 H23 gColGroups, %t_Lang187%
+Gui, 4:Add, Button, -Wrap yp-25 x+95 W115 H23 gColGroups, %t_Lang187%
 Gui, 4:Add, Button, -Wrap yp+25 xp W115 H23 gExpGroups, %t_Lang188%
 Gui, 4:Tab, 9
 ; User Variables
@@ -3266,8 +3259,6 @@ Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W75, %c_Lang229%:
 Gui, 4:Add, Edit, y+5 xs+10 W380 R10 vMessage Limit2000
 Gui, 4:Add, Text, -Wrap R1 y+10 xs+10 W180, %t_Lang184%:
 Gui, 4:Add, Edit, y+5 xs+10 W380 R1 vLFile Disabled
-Gui, 4:Add, Button, -Wrap y+10 xs+10 W75 H23 gSendRevision, %t_Lang181%
-Gui, 4:Add, Button, -Wrap yp x+10 W75 H23 gCancelSubmit, %c_Lang021%
 Gui, 4:Tab
 Gui, 4:Add, Button, -Wrap Default Section xm ym+315 W160 H23 gConfigOK, %c_Lang020%
 Gui, 4:Add, Button, -Wrap xp y+5 W160 H23 gConfigCancel, %c_Lang021%
@@ -3608,57 +3599,6 @@ Loop, Parse, LangInfo, `n, `r
 }
 GuiControl, 4:, LFile, %FilePath%
 GuiControl, 4:Choose, TabControl, SubmitRev
-return
-
-CancelSubmit:
-Gui, 4:Submit, NoHide
-GuiControl, 4:Choose, TabControl, LangEditor
-return
-
-SendRevision:
-Gui, 4:Submit, NoHide
-Gui, 4:+OwnDialogs
-IfNotExist, %LFile%
-{
-	MsgBox, 16, %d_Lang007%, %d_Lang102%`n`n%LFile%
-	return
-}
-url := "https://www.macrocreator.com/sendemail.php"
-whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-whr.open("POST", url, true)
-
-objParam := { name		: Name
-			, email		: FromMail
-			, subject	: Subject
-			, message	: Name "\nEmail: " FromMail "\nMessage:\n" Message
-			, file		: [LFile] }
-CreateFormData(PostData, hdr_ContentType, objParam)
-
-whr.SetRequestHeader("Content-Type", hdr_ContentType)
-; whr.SetRequestHeader("Referer", url)
-; whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko")
-; whr.Option(6) := false ; No auto redirect
-SplashTextOn, 300, 25, %AppName%, %d_Lang039%
-Try
-{
-	whr.Send(PostData)
-	whr.WaitForResponse()
-}
-Catch
-{
-	SplashTextOff
-	MsgBox, 16, %d_Lang007%, % d_Lang102 "`n`n" whr.ResponseText
-	return
-}
-SplashTextOff
-If (InStr(whr.ResponseText, "Email was sent successfully!"))
-	MsgBox, 64, %t_Lang186%, %d_Lang105%
-Else
-{
-	MsgBox, 16, %d_Lang007%, % d_Lang102 "`n`n" LFile "`n`n" whr.ResponseText
-	return
-}
-GuiControl, 4:Choose, TabControl, LangEditor
 return
 
 GoNextLine:
@@ -4102,26 +4042,19 @@ Gui, 1:+OwnDialogs
 ComObjError(false)
 VerChk := ""
 url := "https://www.macrocreator.com/lang"
-whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-whr.SetTimeouts(0, 5000, 5000, 5000)
-whr.open("GET", url, false)
 Try
 {
-	whr.Send()
-	ResponseText := whr.ResponseText
-	document := ComObjCreate("HTMLfile")
-	document.write(ResponseText)
-	VerChk := Eval(document.body.InnerText)[1]
+	UrlDownloadToFile, %url%, %A_Temp%\lang.json
+	FileRead, ResponseText, %A_Temp%\lang.json
+	ResponseText := RegExReplace(ResponseText, "ms).*(\{.*\}).*", "$1")
+	VerChk := Eval(ResponseText)[1]
 }
 If (IsObject(VerChk))
 {
 	If (VerChk.AppVersion > CurrentVersion)
 	{
-		whr.open("GET", VerChk.Url, false)
-		whr.SetRequestHeader("User-Agent", "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)")
-		whr.SetRequestHeader("Referer", VerChk.Url)
-		whr.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
-		whr.Send()
+		UrlDownloadToFile, % VerChk.Url, %A_Temp%\VerChk
+		FileRead, ResponseText, %A_Temp%\VerChk
 
 		Gui, Update:+owner1 +ToolWindow
 		Gui, 1:+Disabled
@@ -4132,7 +4065,7 @@ If (IsObject(VerChk))
 
 		document := WB.Document
 		document.open()
-		document.write(whr.ResponseText)
+		document.write(ResponseText)
 		changes := document.getElementsByClassName(VerChk.ChangesEl)[0].InnerHTML
 		document.close()
 		document.open()
@@ -13974,13 +13907,12 @@ Gui, 19:+OwnDialogs
 ComObjError(false)
 AvailableLangs := []
 url := "https://github.com/tesseract-ocr/tessdata_fast"
-whr := ComObjCreate("WinHttp.WinHttpRequest.5.1")
-whr.open("GET", url, false)
+UrlDownloadToFile, %url%, %A_Temp%\tessdata_fast.html
+FileRead, ResponseText, %A_Temp%\tessdata_fast.html
 Try
 {
-	whr.Send()
 	Pos := 1
-	While (Pos := RegExMatch(whr.ResponseText, "title=\""(\w+).traineddata\""", FoundLang, Pos + StrLen(FoundLang)))
+	While (Pos := RegExMatch(ResponseText, "title=\""(\w+).traineddata\""", FoundLang, Pos + StrLen(FoundLang)))
 		AvailableLangs.Push(FoundLang1)
 	Gui, Tess:+owner1 +ToolWindow
 	Gui, 19:+Disabled
